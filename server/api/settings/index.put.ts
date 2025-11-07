@@ -4,14 +4,14 @@ import type { D1Database } from '@cloudflare/workers-types';
 const JWT_SECRET = process.env.JWT_SECRET;
 class DatabaseService {
     constructor(private db: D1Database) {}
-    async getUserSettings(userId: string): Promise<any> {
+    async getUserSettings(userId: string): Promise<{ id: string; user_id: string } | null> {
         return await this.db
             .prepare('SELECT * FROM user_settings WHERE user_id = ?')
             .bind(userId)
             .first();
     }
 
-    async upsertUserSettings(userId: string, settings: any): Promise<void> {
+    async upsertUserSettings(userId: string, settings: unknown): Promise<void> {
         const existingSettings = await this.getUserSettings(userId);
         if (existingSettings) {
             await this.db
@@ -44,7 +44,7 @@ export default defineEventHandler(async (event) => {
         });
     }
     const decoded = jwt.decode(token);
-    const payload = decoded.payload as any;
+    const payload = decoded.payload as { sub: string };
     const userId = payload.sub;
     const body = await readBody(event);
     const { settings } = body;

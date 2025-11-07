@@ -12,7 +12,14 @@ class DatabaseService {
         return result?.count || 0;
     }
 
-    async upsertResume(userId: string, resumeData: any): Promise<string> {
+    async upsertResume(userId: string, resumeData: {
+        serverId?: string;
+        name: string;
+        data: unknown;
+        template?: string;
+        settings?: unknown;
+        id: string;
+    }): Promise<string> {
         let existingResume = null;
         if (resumeData.serverId) {
             existingResume = await this.db
@@ -51,7 +58,10 @@ class DatabaseService {
         }
     }
 
-    async getResumeById(resumeId: string, userId: string): Promise<any> {
+    async getResumeById(resumeId: string, userId: string): Promise<{
+        id: string;
+        updated_at: string;
+    } | null> {
         return await this.db
             .prepare('SELECT * FROM resumes WHERE id = ? AND user_id = ?')
             .bind(resumeId, userId)
@@ -74,7 +84,7 @@ export default defineEventHandler(async (event) => {
         });
     }
     const decoded = jwt.decode(token);
-    const payload = decoded.payload as any;
+    const payload = decoded.payload as { sub: string };
     const userId = payload.sub;
     const body = await readBody(event);
     const { resumes } = body;

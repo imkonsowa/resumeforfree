@@ -14,7 +14,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@cloudflare/workers-types": "^4.20250830.0",
+    "@cloudflare/workers-types": "^4.20250906.0",
     "@myriaddreamin/typst-ts-renderer": "^0.6.0",
     "@myriaddreamin/typst-ts-web-compiler": "^0.6.0",
     "@myriaddreamin/typst.ts": "^0.6.0",
@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.6.0",
+    "@types/bcryptjs": "^2.4.6",
     "eslint": "^9.0.0",
     "typescript": "^5.8.3",
     "wrangler": "^4.25.0"

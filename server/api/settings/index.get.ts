@@ -5,7 +5,7 @@ const JWT_SECRET = process.env.JWT_SECRET;
 interface UserSettings {
     id: string;
     user_id: string;
-    settings: any;
+    settings: string | unknown;
     created_at: string;
     updated_at: string;
 }
@@ -34,7 +34,7 @@ export default defineEventHandler(async (event) => {
         });
     }
     const decoded = jwt.decode(token);
-    const payload = decoded.payload as any;
+    const payload = decoded.payload as { sub: string };
     const userId = payload.sub;
     const db = event.context.cloudflare?.env?.DB;
     if (!db) {

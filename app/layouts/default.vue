@@ -64,10 +64,13 @@ onMounted(async () => {
                             </NuxtLink>
                         </template>
                         <template v-else>
-                            <div class="flex items-center space-x-2 text-sm text-gray-600">
+                            <NuxtLink
+                                to="/profile"
+                                class="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                            >
                                 <User class="w-4 h-4" />
                                 <span class="hidden sm:inline">{{ authStore.currentUser?.name || authStore.currentUser?.email }}</span>
-                            </div>
+                            </NuxtLink>
                             <Button
                                 variant="ghost"
                                 size="sm"

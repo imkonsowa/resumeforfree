@@ -12,7 +12,7 @@ class DatabaseService {
         return result.changes !== undefined ? result.changes > 0 : result.success;
     }
 
-    async getResumeById(resumeId: string, userId: string): Promise<any> {
+    async getResumeById(resumeId: string, userId: string): Promise<{ id: string; user_id: string } | null> {
         return await this.db
             .prepare('SELECT * FROM resumes WHERE id = ? AND user_id = ?')
             .bind(resumeId, userId)
@@ -35,7 +35,7 @@ export default defineEventHandler(async (event) => {
         });
     }
     const decoded = jwt.decode(token);
-    const payload = decoded.payload as any;
+    const payload = decoded.payload as { sub: string };
     const userId = payload.sub;
     const resumeId = getRouterParam(event, 'id');
     if (!resumeId) {

@@ -12,7 +12,7 @@ class DatabaseService {
         return result?.count || 0;
     }
 
-    async createResume(userId: string, name: string, data: any, template = 'template1', settings: any = {}): Promise<string> {
+    async createResume(userId: string, name: string, data: unknown, template = 'template1', settings: unknown = {}): Promise<string> {
         const resumeId = crypto.randomUUID().replace(/-/g, '').slice(0, 16);
         await this.db
             .prepare('INSERT INTO resumes (id, user_id, name, is_active, template, data, settings) VALUES (?, ?, ?, 0, ?, ?, ?)')
@@ -21,7 +21,16 @@ class DatabaseService {
         return resumeId;
     }
 
-    async getResumeById(resumeId: string, userId: string): Promise<any> {
+    async getResumeById(resumeId: string, userId: string): Promise<{
+        id: string;
+        name: string;
+        is_active: number;
+        template: string;
+        data: string | unknown;
+        settings: string | unknown;
+        created_at: string;
+        updated_at: string;
+    } | null> {
         return await this.db
             .prepare('SELECT * FROM resumes WHERE id = ? AND user_id = ?')
             .bind(resumeId, userId)
@@ -44,7 +53,7 @@ export default defineEventHandler(async (event) => {
         });
     }
     const decoded = jwt.decode(token);
-    const payload = decoded.payload as any;
+    const payload = decoded.payload as { sub: string };
     const userId = payload.sub;
     const body = await readBody(event);
     const { name, data, template, settings } = body;

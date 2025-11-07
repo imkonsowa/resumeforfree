@@ -890,15 +890,15 @@ export const useResumeStore = defineStore('resume', {
                 const serverResumes = await api.resumes.list();
                 await this.reconcileServerResumes(serverResumes);
             }
-            catch (error: any) {
+            catch (error: unknown) {
                 console.error('Failed to fetch server resumes:', error);
-                this.error = error.message || 'Failed to fetch resumes from server';
+                this.error = (error as Error).message || 'Failed to fetch resumes from server';
             }
             finally {
                 this.isLoading = false;
             }
         },
-        async reconcileServerResumes(serverResumes: any[]) {
+        async reconcileServerResumes(serverResumes: Array<{ id: string; name: string; data: ResumeData; createdAt: string; updatedAt: string }>) {
             for (const serverResume of serverResumes) {
                 const localResumeId = this.findLocalResumeByServerId(serverResume.id);
                 if (localResumeId) {
@@ -960,7 +960,7 @@ export const useResumeStore = defineStore('resume', {
                 }
                 this.resumes[resumeId].updatedAt = new Date().toISOString();
             }
-            catch (error: any) {
+            catch (error: unknown) {
                 console.error('Failed to sync resume to server:', error);
                 throw error;
             }

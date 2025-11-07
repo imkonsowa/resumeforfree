@@ -27,6 +27,12 @@ export const useApi = () => {
             async getSession() {
                 return await $fetch('/api/auth/session').catch(handleError);
             },
+            async changePassword(currentPassword: string, newPassword: string) {
+                return await $fetch('/api/auth/change-password', {
+                    method: 'POST',
+                    body: { currentPassword, newPassword },
+                }).catch(handleError);
+            },
         },
         resumes: {
             async list() {

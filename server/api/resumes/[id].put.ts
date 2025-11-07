@@ -2,11 +2,20 @@ import jwt from '@tsndr/cloudflare-worker-jwt';
 import type { D1Database } from '@cloudflare/workers-types';
 
 const JWT_SECRET = process.env.JWT_SECRET;
+
+interface ResumeUpdates {
+    name?: string;
+    data?: unknown;
+    template?: string;
+    settings?: unknown;
+    isActive?: boolean;
+}
+
 class DatabaseService {
     constructor(private db: D1Database) {}
-    async updateResume(resumeId: string, userId: string, updates: any): Promise<void> {
+    async updateResume(resumeId: string, userId: string, updates: ResumeUpdates): Promise<void> {
         const setParts: string[] = [];
-        const values: any[] = [];
+        const values: unknown[] = [];
         if (updates.name !== undefined) {
             setParts.push('name = ?');
             values.push(updates.name);
@@ -36,7 +45,16 @@ class DatabaseService {
         await this.db.prepare(query).bind(...values).run();
     }
 
-    async getResumeById(resumeId: string, userId: string): Promise<any> {
+    async getResumeById(resumeId: string, userId: string): Promise<{
+        id: string;
+        name: string;
+        is_active: number;
+        template: string;
+        data: string | unknown;
+        settings: string | unknown;
+        created_at: string;
+        updated_at: string;
+    } | null> {
         return await this.db
             .prepare('SELECT * FROM resumes WHERE id = ? AND user_id = ?')
             .bind(resumeId, userId)
@@ -59,7 +77,7 @@ export default defineEventHandler(async (event) => {
         });
     }
     const decoded = jwt.decode(token);
-    const payload = decoded.payload as any;
+    const payload = decoded.payload as { sub: string };
     const userId = payload.sub;
     const resumeId = getRouterParam(event, 'id');
     if (!resumeId) {

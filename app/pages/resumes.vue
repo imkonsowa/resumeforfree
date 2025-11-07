@@ -80,7 +80,7 @@ const handleCreateResume = async (name: string, navigateToBuilder: boolean, save
                 toast.success(`Resume "${resumeName}" created and saved to cloud`);
             }
         }
-        catch (error: any) {
+        catch (error: unknown) {
             console.error('Failed to save resume to cloud:', error);
             const errorMessage = error instanceof Error ? error.message : 'Unknown error';
             toast.warning(`Resume "${resumeName}" created locally, but failed to save to cloud: ${errorMessage}`);
@@ -172,8 +172,8 @@ const syncResume = async (id: string) => {
                 });
                 toast.success(`Resume "${resume.name}" updated in cloud`);
             }
-            catch (error: any) {
-                if (error?.statusCode === 404) {
+            catch (error: unknown) {
+                if (error && typeof error === 'object' && 'statusCode' in error && error.statusCode === 404) {
                     const newResume = await api.resumes.create(resume.name, resume.data);
                     if (resumeStore.resumes[id] && newResume) {
                         resumeStore.resumes[id].serverId = newResume.id;
@@ -195,7 +195,7 @@ const syncResume = async (id: string) => {
             toast.success(`Resume "${resume.name}" synced to cloud`);
         }
     }
-    catch (error: any) {
+    catch (error: unknown) {
         console.error('Failed to sync resume:', error);
         const errorMessage = error instanceof Error ? error.message : 'Unknown error';
         toast.error(`Failed to sync resume: ${errorMessage}`);
@@ -254,7 +254,7 @@ const handleCloudSync = async (resumeIds: string[]) => {
         toast.success(`Successfully synced ${resumeIds.length} resume${resumeIds.length !== 1 ? 's' : ''} to cloud`);
         showCloudSyncModal.value = false;
     }
-    catch (error: any) {
+    catch (error: unknown) {
         console.error('Failed to sync resumes:', error);
         const errorMessage = error instanceof Error ? error.message : 'Unknown error';
         toast.error(`Failed to sync resumes: ${errorMessage}`);
@@ -284,7 +284,7 @@ const disableCloudSync = async (id: string) => {
             }
             toast.success(`"${resumeName}" removed from cloud and cloud sync disabled`);
         }
-        catch (error: any) {
+        catch (error: unknown) {
             console.error('Failed to disable cloud sync:', error);
             const errorMessage = error instanceof Error ? error.message : 'Unknown error';
             toast.error(`Failed to remove from cloud: ${errorMessage}`);
