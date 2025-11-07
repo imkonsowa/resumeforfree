@@ -278,16 +278,18 @@ const disableCloudSync = async (id: string) => {
         try {
             const api = useApi();
             await api.resumes.delete(resume.serverId);
-            if (resumeStore.resumes[id]) {
-                resumeStore.resumes[id].serverId = undefined;
-                resumeStore.resumes[id].updatedAt = new Date().toISOString();
-            }
             toast.success(`"${resumeName}" removed from cloud and cloud sync disabled`);
         }
         catch (error: unknown) {
             console.error('Failed to disable cloud sync:', error);
             const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-            toast.error(`Failed to remove from cloud: ${errorMessage}`);
+            toast.error(`Failed to remove from cloud: ${errorMessage}. Cloud sync disabled locally.`);
+        }
+        finally {
+            if (resumeStore.resumes[id]) {
+                resumeStore.resumes[id].serverId = undefined;
+                resumeStore.resumes[id].updatedAt = new Date().toISOString();
+            }
         }
     }
 };
