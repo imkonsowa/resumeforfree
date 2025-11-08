@@ -5,7 +5,7 @@ export const SECTION_SPACING = '1.6em';
 export const ITEMS_SPACING = '0.8em';
 export const convertEmail = (email: string): string => {
     if (!email) return '';
-    return `#link("mailto:${email}")[#text(fill: blue, "${email}")]`;
+    return `#link("mailto:${email}")[#text(fill: blue, dir: ltr, "${email}")]`;
 };
 export const convertLink = (url: string, text: string): string => {
     if (!url || !text) return '';

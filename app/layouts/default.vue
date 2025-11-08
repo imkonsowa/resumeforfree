@@ -67,7 +67,7 @@ onMounted(async () => {
                                 <select
                                     :value="locale"
                                     class="bg-transparent border-none text-sm font-medium cursor-pointer focus:outline-none"
-                                    @change="switchLanguage($event.target.value)"
+                                    @change="(e) => switchLanguage((e.target as HTMLSelectElement).value)"
                                 >
                                     <option
                                         v-for="loc in localesList"

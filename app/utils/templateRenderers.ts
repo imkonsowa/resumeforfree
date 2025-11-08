@@ -152,7 +152,7 @@ export const generateContactContent = (data: ResumeData): SectionContent[] => {
     if (data?.phone) {
         contactInfo.push({
             title: '',
-            content: escapeTypstText(data.phone),
+            content: `#text(dir: ltr)[${escapeTypstText(data.phone)}]`,
         });
     }
     if (data?.location) {

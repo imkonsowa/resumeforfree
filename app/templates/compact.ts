@@ -61,7 +61,7 @@ const renderHeaderRightColumn = (data: ResumeData, fontSize: number): string[] =
     if (data?.phone) {
         const phone = escapeTypstText(data.phone);
         const phoneSpacing = rows.length > 0 ? '0.8em' : '0em';
-        rows.push(`#block(above: ${phoneSpacing})[#text(size: ${fontSize - 1}pt)[${phone}]]`);
+        rows.push(`#block(above: ${phoneSpacing})[#text(size: ${fontSize - 1}pt, dir: ltr)[${phone}]]`);
     }
     if (data?.location) {
         const location = escapeTypstText(data.location);
