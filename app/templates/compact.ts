@@ -97,7 +97,7 @@ const convertResumeHeader = (data: ResumeData, fontSize: number) => {
     }
     return headerParts.join('\n');
 };
-const parse = (data: ResumeData, font: string, locale: string = 'en', t: (key: string) => string): string => {
+const parse = (data: ResumeData, font: string, locale = 'en', t: (key: string) => string): string => {
     const settings: TemplateSettings = { font };
     const settingsStore = useSettingsStore();
     const fontSize = settingsStore.fontSize;

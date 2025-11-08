@@ -381,5 +381,147 @@
         "accountInfoDescription": "Your account allows you to sync up to 3 resumes to the cloud.",
         "updatePasswordDescription": "Update your password to keep your account secure",
         "pleaseFixErrors": "Please fix the following errors:"
+    },
+    "resumes": {
+        "pageTitle": "Your Resumes - Manage Multiple Professional Resumes | Free Resume Builder",
+        "pageDescription": "Manage unlimited resumes in one place. Create, edit, duplicate, and organize professional resumes for free. No storage limits, complete privacy.",
+        "title": "Your Resumes",
+        "resumeCount": {
+            "total": "total",
+            "of": "of",
+            "resume": "resume",
+            "resumes": "resumes"
+        },
+        "actions": {
+            "new": "New",
+            "import": "Import",
+            "export": "Export",
+            "sync": "Sync",
+            "cloudSync": "Cloud Sync",
+            "createNew": "Create New Resume",
+            "searchPlaceholder": "Search resumes...",
+            "tryAgain": "Try Again"
+        },
+        "banner": {
+            "saveToCloud": "Save Your Resumes to the Cloud",
+            "registerPrompt": "Register for a free account to save up to 3 resumes to the cloud and access them from any browser. Never lose your work again!",
+            "registerFree": "Register Free",
+            "login": "Login",
+            "cloudAvailable": "Cloud Storage Available",
+            "cloudAvailableDescription": "You can now save up to 3 resumes to the cloud and access them from any browser. Use the \"Cloud Sync\" button to sync your resumes."
+        },
+        "status": {
+            "loading": "Loading resumes...",
+            "failed": "Failed to load resumes",
+            "active": "Active",
+            "synced": "Synced",
+            "notSynced": "Not synced",
+            "updated": "Updated"
+        },
+        "card": {
+            "editNameTitle": "Edit resume name",
+            "noName": "No name specified",
+            "noPosition": "No position specified",
+            "noSections": "No sections added",
+            "experience": "experience",
+            "experiences": "experiences",
+            "education": "education",
+            "skill": "skill",
+            "skills": "skills",
+            "build": "Build",
+            "copy": "Copy",
+            "export": "Export",
+            "exportTitle": "Export resume",
+            "disableSync": "Disable Cloud Sync",
+            "delete": "Delete"
+        },
+        "empty": {
+            "noResumes": "No resumes yet",
+            "createFirst": "Create your first resume to get started",
+            "createFirstButton": "Create Your First Resume",
+            "noResults": "No resumes found",
+            "noResultsMessage": "No resumes match your search for",
+            "clearSearch": "Clear Search",
+            "createNew": "Create New Resume"
+        },
+        "modals": {
+            "create": {
+                "title": "Create New Resume",
+                "resumeName": "Resume Name",
+                "enterName": "Enter resume name",
+                "navigateToBuilder": "Navigate to the builder after creating",
+                "saveToCloud": "Save to cloud",
+                "slotsAvailable": "cloud slots available",
+                "noSlotsAvailable": "No cloud slots available",
+                "slotsUsed": "used",
+                "createButton": "Create Resume"
+            },
+            "copy": {
+                "title": "Copy Resume",
+                "resumeName": "Resume Name",
+                "enterName": "Enter resume name",
+                "navigateToBuilder": "Navigate to the builder after copying",
+                "copyButton": "Copy Resume"
+            },
+            "export": {
+                "title": "Export Resumes",
+                "description": "Select resumes to export as JSON",
+                "infoMessage": "This exports resume data as JSON files for backup or transfer purposes. To download PDF resumes, please use the download button in the builder page.",
+                "selectAll": "Select All",
+                "selected": "selected",
+                "exportButton": "Export"
+            },
+            "cloudSync": {
+                "title": "Cloud Sync",
+                "description": "You have {count}/{limit} resumes in the cloud. {remaining} slot{remainingPlural} remaining.",
+                "slot": "slot",
+                "slots": "slots",
+                "allSynced": "All resumes are synced to cloud",
+                "unsyncHint": "Use \"Disable Cloud Sync\" from the resume menu to unsync a resume.",
+                "limitExceeded": "Storage Limit Exceeded",
+                "limitExceededMessage": "You're trying to sync {count} new resume{plural}, but you only have {remaining} slot{remainingPlural} remaining. Please deselect some resumes or delete existing ones from the cloud.",
+                "deselectAll": "Deselect All",
+                "selectAll": "Select All",
+                "syncButton": "Sync {count} Resume{plural}",
+                "exp": "exp",
+                "edu": "edu",
+                "projects": "projects",
+                "noSections": "No sections"
+            },
+            "delete": {
+                "title": "Delete Resume",
+                "message": "Are you sure you want to delete \"{name}\"? This action cannot be undone.",
+                "confirmButton": "Delete"
+            },
+            "disableSync": {
+                "title": "Disable Cloud Sync",
+                "message": "Are you sure you want to remove \"{name}\" from the cloud? The resume will remain on your device but will no longer be synced.",
+                "confirmButton": "Remove from Cloud"
+            },
+            "cancel": "Cancel"
+        },
+        "toast": {
+            "creatingInCloud": "Creating resume in cloud...",
+            "createdAndSaved": "Resume \"{name}\" created and saved to cloud",
+            "createdLocallyFailed": "Resume \"{name}\" created locally, but failed to save to cloud: {error}",
+            "loginToSaveCloud": "Please log in to save resumes to the cloud",
+            "created": "Resume \"{name}\" created",
+            "deletedFromCloud": "Resume \"{name}\" deleted from cloud",
+            "deletedLocallyFailed": "Resume deleted locally, but failed to delete from cloud: {error}",
+            "deleted": "Resume \"{name}\" deleted",
+            "loginToSync": "Please log in to sync resumes",
+            "resumeNotFound": "Resume not found",
+            "syncingToCloud": "Syncing resume to cloud...",
+            "updatedInCloud": "Resume \"{name}\" updated in cloud",
+            "syncedNewCopy": "Resume \"{name}\" synced to cloud (new copy created)",
+            "syncedToCloud": "Resume \"{name}\" synced to cloud",
+            "syncFailed": "Failed to sync resume: {error}",
+            "removedFromCloud": "\"{name}\" removed from cloud and cloud sync disabled",
+            "removeFailed": "Failed to remove from cloud: {error}. Cloud sync disabled locally.",
+            "syncingMultiple": "Syncing {count} resume{plural} to cloud...",
+            "syncedMultiple": "Successfully synced {count} resume{plural} to cloud",
+            "syncMultipleFailed": "Failed to sync resumes: {error}",
+            "resumeNotSynced": "Resume is not synced to cloud"
+        }
     }
 }

@@ -26,7 +26,6 @@ import {
     wrapInSectionBlock,
 } from './layoutFormatters';
 
-
 /**
  * Render experience section using shared logic
  */

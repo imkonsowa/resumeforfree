@@ -3,25 +3,10 @@
         :class="{ 'ring-2 ring-blue-500': isActive }"
         class="hover:shadow-lg transition-shadow relative"
     >
-        <div class="absolute top-3 right-3 sm:top-4 sm:right-4 flex flex-col gap-1 items-end">
-            <Badge
-                v-if="isActive"
-                class="bg-blue-500 text-white text-xs"
-            >
-                Active
-            </Badge>
-            <Badge
-                v-if="resume.serverId"
-                class="bg-green-500 text-white flex items-center gap-1 text-xs"
-            >
-                <Cloud class="w-3 h-3" />
-                Synced
-            </Badge>
-        </div>
         <CardHeader class="pb-4">
             <div
                 v-if="isEditing"
-                class="flex items-center gap-2 pr-20"
+                class="flex items-center gap-2"
             >
                 <input
                     v-model="editingName"
@@ -45,22 +30,39 @@
             </div>
             <div
                 v-else
-                class="flex items-center gap-2 pr-20"
+                class="flex items-center gap-2"
             >
                 <CardTitle class="text-xl font-semibold truncate flex-1">
                     {{ resume.name }}
                 </CardTitle>
                 <button
                     class="p-1 text-gray-400 hover:text-gray-600 transition-colors"
-                    title="Edit resume name"
+                    :title="$t('resumes.card.editNameTitle')"
                     @click="startEdit"
                 >
                     <PencilIcon class="w-4 h-4" />
                 </button>
             </div>
-            <div class="flex items-center gap-2 text-sm text-gray-500">
-                <Calendar class="w-4 h-4" />
-                <span>Updated {{ formatDate(resume.updatedAt) }}</span>
+            <div class="flex items-center justify-between gap-2 text-sm text-gray-500 flex-wrap">
+                <div class="flex items-center gap-2">
+                    <Calendar class="w-4 h-4" />
+                    <span>{{ $t('resumes.status.updated') }} {{ formatDate(resume.updatedAt) }}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <Badge
+                        v-if="isActive"
+                        class="bg-blue-500 text-white text-xs"
+                    >
+                        {{ $t('resumes.status.active') }}
+                    </Badge>
+                    <Badge
+                        v-if="resume.serverId"
+                        class="bg-green-500 text-white flex items-center gap-1 text-xs"
+                    >
+                        <Cloud class="w-3 h-3" />
+                        {{ $t('resumes.status.synced') }}
+                    </Badge>
+                </div>
             </div>
         </CardHeader>
         <CardContent class="pt-0">
@@ -83,7 +85,7 @@
                     @click="$emit('edit', resume.id)"
                 >
                     <Edit class="w-3 h-3" />
-                    Build
+                    {{ $t('resumes.card.build') }}
                 </Button>
                 <Button
                     class="flex items-center gap-1"
@@ -92,17 +94,17 @@
                     @click.stop="$emit('copy', resume.id)"
                 >
                     <Copy class="w-3 h-3" />
-                    Copy
+                    {{ $t('resumes.card.copy') }}
                 </Button>
                 <Button
                     class="flex items-center gap-1"
                     size="sm"
                     variant="outline"
-                    title="Export resume"
+                    :title="$t('resumes.card.exportTitle')"
                     @click.stop="$emit('export', resume.id)"
                 >
                     <Download class="w-3 h-3" />
-                    Export
+                    {{ $t('resumes.card.export') }}
                 </Button>
                 <Popover>
                     <PopoverTrigger as-child>
@@ -125,14 +127,14 @@
                             @click.stop="$emit('disableSync', resume.id)"
                         >
                             <CloudOff class="w-3 h-3" />
-                            Disable Cloud Sync
+                            {{ $t('resumes.card.disableSync') }}
                         </button>
                         <button
                             class="w-full flex items-center gap-2 px-2 py-1.5 text-sm text-red-600 hover:bg-red-50 rounded transition-colors"
                             @click.stop="$emit('delete', resume.id)"
                         >
                             <Trash2 class="w-3 h-3" />
-                            Delete
+                            {{ $t('resumes.card.delete') }}
                         </button>
                     </PopoverContent>
                 </Popover>
@@ -161,11 +163,8 @@ import {
 } from 'lucide-vue-next';
 import type { Resume } from '~/types/resume';
 
-interface Props {
-    resume: Resume;
-    isActive: boolean;
-}
 const props = defineProps<Props>();
+
 defineEmits<{
     edit: [id: string];
     copy: [id: string];
@@ -174,6 +173,13 @@ defineEmits<{
     rename: [id: string, newName: string];
     disableSync: [id: string];
 }>();
+
+const { t } = useI18n();
+
+interface Props {
+    resume: Resume;
+    isActive: boolean;
+}
 const resumeStore = useResumeStore();
 const authStore = useAuthStore();
 const isEditing = ref(false);
@@ -181,15 +187,15 @@ const editingName = ref('');
 const resumePreview = computed(() => {
     const data = props.resume.data;
     const fullName = [data.firstName, data.lastName].filter(Boolean).join(' ');
-    const position = data.position || 'No position specified';
+    const position = data.position || t('resumes.card.noPosition');
     const sections = [];
-    if (data.experiences?.length) sections.push(`${data.experiences.length} experience${data.experiences.length > 1 ? 's' : ''}`);
-    if (data.education?.length) sections.push(`${data.education.length} education${data.education.length > 1 ? 's' : ''}`);
-    if (data.skills?.length) sections.push(`${data.skills.length} skill${data.skills.length > 1 ? 's' : ''}`);
+    if (data.experiences?.length) sections.push(`${data.experiences.length} ${data.experiences.length > 1 ? t('resumes.card.experiences') : t('resumes.card.experience')}`);
+    if (data.education?.length) sections.push(`${data.education.length} ${t('resumes.card.education')}`);
+    if (data.skills?.length) sections.push(`${data.skills.length} ${data.skills.length > 1 ? t('resumes.card.skills') : t('resumes.card.skill')}`);
     return {
-        fullName: fullName || 'No name specified',
+        fullName: fullName || t('resumes.card.noName'),
         position,
-        sections: sections.join(', ') || 'No sections added',
+        sections: sections.join(', ') || t('resumes.card.noSections'),
     };
 });
 const formatDate = (dateString: string) => {

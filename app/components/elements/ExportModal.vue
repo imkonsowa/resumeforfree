@@ -11,10 +11,10 @@
         >
             <div class="mb-4">
                 <h3 class="text-lg font-semibold">
-                    Export Resumes
+                    {{ $t('resumes.modals.export.title') }}
                 </h3>
                 <p class="text-sm text-gray-600 mt-1">
-                    Select resumes to export as JSON
+                    {{ $t('resumes.modals.export.description') }}
                 </p>
             </div>
             <div class="bg-blue-50 border border-blue-200 rounded-md p-3 mb-4">
@@ -22,8 +22,7 @@
                     <Info class="h-5 w-5 text-blue-600 flex-shrink-0" />
                     <div class="ml-3">
                         <p class="text-sm text-blue-800">
-                            This exports resume data as JSON files for backup or transfer purposes.
-                            To download PDF resumes, please use the download button in the builder page.
+                            {{ $t('resumes.modals.export.infoMessage') }}
                         </p>
                     </div>
                 </div>
@@ -36,7 +35,7 @@
                         type="checkbox"
                         @change="handleSelectAll"
                     >
-                    <span class="text-sm font-medium">Select All</span>
+                    <span class="text-sm font-medium">{{ $t('resumes.modals.export.selectAll') }}</span>
                 </label>
             </div>
             <div class="space-y-2 max-h-60 overflow-y-auto mb-6">
@@ -62,20 +61,20 @@
                 </label>
             </div>
             <div class="text-sm text-gray-600 mb-4">
-                {{ selectedResumes.length }} resume{{ selectedResumes.length !== 1 ? 's' : '' }} selected
+                {{ selectedResumes.length }} {{ selectedResumes.length !== 1 ? $t('resumes.resumeCount.resumes') : $t('resumes.resumeCount.resume') }} {{ $t('resumes.modals.export.selected') }}
             </div>
             <div class="flex justify-end gap-3">
                 <Button
                     variant="outline"
                     @click="handleCancel"
                 >
-                    Cancel
+                    {{ $t('resumes.modals.cancel') }}
                 </Button>
                 <Button
                     :disabled="selectedResumes.length === 0"
                     @click="handleExport"
                 >
-                    Export
+                    {{ $t('resumes.modals.export.exportButton') }}
                 </Button>
             </div>
         </div>
@@ -91,7 +90,9 @@ interface Props {
     isOpen: boolean;
     resumes: Resume[];
 }
+
 const props = defineProps<Props>();
+
 const emit = defineEmits<{
     close: [];
     export: [resumeIds: string[]];
