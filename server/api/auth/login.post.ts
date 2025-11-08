@@ -9,6 +9,7 @@ interface User {
     password_hash: string;
     name?: string;
     verified: boolean;
+    role: 'user' | 'admin';
     verification_token?: string;
     verification_sent_at?: string;
     created_at: string;
@@ -51,11 +52,13 @@ export default defineEventHandler(async (event) => {
             email,
             name: email.split('@')[0],
             verified: true,
+            role: 'user' as const, // Default role for all users
         };
         const token = await jwt.sign(
             {
                 sub: mockUser.id,
                 email: mockUser.email,
+                role: mockUser.role,
                 iat: Math.floor(Date.now() / 1000),
                 exp: Math.floor(Date.now() / 1000) + (30 * 24 * 60 * 60),
             },
@@ -116,6 +119,7 @@ export default defineEventHandler(async (event) => {
         {
             sub: user.id,
             email: user.email,
+            role: user.role,
             iat: Math.floor(Date.now() / 1000),
             exp: Math.floor(Date.now() / 1000) + (30 * 24 * 60 * 60),
         },
@@ -139,6 +143,7 @@ export default defineEventHandler(async (event) => {
             email: user.email,
             name: user.name,
             verified: user.verified,
+            role: user.role,
         },
         token,
     };

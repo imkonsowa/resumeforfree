@@ -10,6 +10,7 @@ interface User {
     password_hash: string;
     name?: string;
     verified: boolean;
+    role: 'user' | 'admin';
     created_at: string;
     updated_at: string;
 }

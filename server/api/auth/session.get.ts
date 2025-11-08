@@ -8,6 +8,7 @@ interface User {
     password_hash: string;
     name?: string;
     verified: boolean;
+    role: 'user' | 'admin';
     verification_token?: string;
     verification_sent_at?: string;
     created_at: string;
@@ -39,7 +40,7 @@ export default defineEventHandler(async (event) => {
             });
         }
         const decoded = jwt.decode(token);
-        const payload = decoded.payload as { sub: string };
+        const payload = decoded.payload as { sub: string; role?: 'user' | 'admin' };
         const db = event.context.cloudflare?.env?.DB;
         if (!db) {
             const userEmail = getCookie(event, 'user-email');
@@ -54,6 +55,7 @@ export default defineEventHandler(async (event) => {
                 email: userEmail,
                 name: userEmail.split('@')[0],
                 verified: true,
+                role: payload.role || 'user' as const, // Default role for all users
             };
             return { user: mockUser };
         }
@@ -71,6 +73,7 @@ export default defineEventHandler(async (event) => {
                 email: user.email,
                 name: user.name,
                 verified: user.verified,
+                role: user.role,
             },
         };
     }

@@ -5,6 +5,7 @@ interface AuthUser {
     email: string;
     name?: string;
     verified: boolean;
+    role?: 'user' | 'admin';
 }
 interface AuthState {
     user: AuthUser | null;
