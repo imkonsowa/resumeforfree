@@ -1,7 +1,7 @@
 import tailwindcss from '@tailwindcss/vite';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
-// eslint-disable-next-line no-undef
+
 export default defineNuxtConfig({
     modules: [
         'shadcn-nuxt',
@@ -9,6 +9,7 @@ export default defineNuxtConfig({
         'pinia-plugin-persistedstate/nuxt',
         '@nuxt/eslint',
         '@vite-pwa/nuxt',
+        '@nuxtjs/i18n',
         'nitro-cloudflare-dev',
         '@nuxtjs/turnstile',
     ],
@@ -93,6 +94,34 @@ export default defineNuxtConfig({
                 semi: true,
                 quotes: 'single',
             },
+        },
+    },
+
+    i18n: {
+        defaultLocale: 'en',
+        locales: [
+            {
+                code: 'en',
+                name: 'English',
+                file: 'en.json',
+                iso: 'en-US',
+                dir: 'ltr',
+            },
+            {
+                code: 'ar',
+                name: 'العربية',
+                file: 'ar.json',
+                iso: 'ar-SA',
+                dir: 'rtl',
+            },
+        ],
+        lazy: true,
+        langDir: 'locales',
+        strategy: 'no_prefix',
+        detectBrowserLanguage: {
+            useCookie: true,
+            cookieKey: 'i18n_redirected',
+            redirectOn: 'root',
         },
     },
 

@@ -13,6 +13,7 @@ import type { Resume } from '~/types/resume';
 import { Button } from '~/components/ui/button';
 import { CheckCircle, Cloud, LogIn, UserPlus } from 'lucide-vue-next';
 
+const { t } = useI18n();
 const resumeStore = useResumeStore();
 const authStore = useAuthStore();
 const router = useRouter();
@@ -68,7 +69,7 @@ const handleCreateResume = async (name: string, navigateToBuilder: boolean, save
     showCreateModal.value = false;
     if (saveToCloud && authStore.isLoggedIn) {
         try {
-            toast.info('Creating resume in cloud...');
+            toast.info(t('resumes.toast.creatingInCloud'));
             const api = useApi();
             const resume = resumeStore.resumesList.find(r => r.id === newResumeId);
             if (resume) {
@@ -77,20 +78,20 @@ const handleCreateResume = async (name: string, navigateToBuilder: boolean, save
                     resumeStore.resumes[newResumeId].serverId = newCloudResume.id;
                     resumeStore.resumes[newResumeId].updatedAt = new Date().toISOString();
                 }
-                toast.success(`Resume "${resumeName}" created and saved to cloud`);
+                toast.success(t('resumes.toast.createdAndSaved').replace('{name}', resumeName));
             }
         }
         catch (error: unknown) {
             console.error('Failed to save resume to cloud:', error);
             const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-            toast.warning(`Resume "${resumeName}" created locally, but failed to save to cloud: ${errorMessage}`);
+            toast.warning(t('resumes.toast.createdLocallyFailed').replace('{name}', resumeName).replace('{error}', errorMessage));
         }
     }
     else if (saveToCloud && !authStore.isLoggedIn) {
-        toast.warning('Please log in to save resumes to the cloud');
+        toast.warning(t('resumes.toast.loginToSaveCloud'));
     }
     else {
-        toast.success(`Resume "${resumeName}" created`);
+        toast.success(t('resumes.toast.created').replace('{name}', resumeName));
     }
     if (navigateToBuilder) {
         router.push('/builder');
@@ -126,10 +127,10 @@ const deleteResume = async (id: string) => {
     const resume = resumeStore.resumesList.find(r => r.id === id);
     const resumeName = resume?.name || 'this resume';
     const confirmed = await confirmation.confirm({
-        title: 'Delete Resume',
-        message: `Are you sure you want to delete "${resumeName}"? This action cannot be undone.`,
-        confirmText: 'Delete',
-        cancelText: 'Cancel',
+        title: t('resumes.modals.delete.title'),
+        message: t('resumes.modals.delete.message').replace('{name}', resumeName),
+        confirmText: t('resumes.modals.delete.confirmButton'),
+        cancelText: t('resumes.modals.cancel'),
     });
     if (confirmed) {
         resumeStore.deleteResume(id);
@@ -137,40 +138,40 @@ const deleteResume = async (id: string) => {
             try {
                 const api = useApi();
                 await api.resumes.delete(resume.serverId);
-                toast.success(`Resume "${resumeName}" deleted from cloud`);
+                toast.success(t('resumes.toast.deletedFromCloud').replace('{name}', resumeName));
             }
             catch (error) {
                 console.error('Failed to delete resume from cloud:', error);
                 const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-                toast.warning(`Resume deleted locally, but failed to delete from cloud: ${errorMessage}`);
+                toast.warning(t('resumes.toast.deletedLocallyFailed').replace('{error}', errorMessage));
             }
         }
         else {
-            toast.success(`Resume "${resumeName}" deleted`);
+            toast.success(t('resumes.toast.deleted').replace('{name}', resumeName));
         }
     }
 };
 const syncResume = async (id: string) => {
     const { toast } = await import('vue-sonner');
     if (!authStore.isLoggedIn) {
-        toast.error('Please log in to sync resumes');
+        toast.error(t('resumes.toast.loginToSync'));
         return;
     }
     try {
         const api = useApi();
         const resume = resumeStore.resumesList.find(r => r.id === id);
         if (!resume) {
-            toast.error('Resume not found');
+            toast.error(t('resumes.toast.resumeNotFound'));
             return;
         }
-        toast.info('Syncing resume to cloud...');
+        toast.info(t('resumes.toast.syncingToCloud'));
         if (resume.serverId) {
             try {
                 await api.resumes.update(resume.serverId, {
                     name: resume.name,
                     data: resume.data,
                 });
-                toast.success(`Resume "${resume.name}" updated in cloud`);
+                toast.success(t('resumes.toast.updatedInCloud').replace('{name}', resume.name));
             }
             catch (error: unknown) {
                 if (error && typeof error === 'object' && 'statusCode' in error && error.statusCode === 404) {
@@ -179,7 +180,7 @@ const syncResume = async (id: string) => {
                         resumeStore.resumes[id].serverId = newResume.id;
                         resumeStore.resumes[id].updatedAt = new Date().toISOString();
                     }
-                    toast.success(`Resume "${resume.name}" synced to cloud (new copy created)`);
+                    toast.success(t('resumes.toast.syncedNewCopy').replace('{name}', resume.name));
                 }
                 else {
                     throw error;
@@ -192,13 +193,13 @@ const syncResume = async (id: string) => {
                 resumeStore.resumes[id].serverId = newResume.id;
                 resumeStore.resumes[id].updatedAt = new Date().toISOString();
             }
-            toast.success(`Resume "${resume.name}" synced to cloud`);
+            toast.success(t('resumes.toast.syncedToCloud').replace('{name}', resume.name));
         }
     }
     catch (error: unknown) {
         console.error('Failed to sync resume:', error);
         const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-        toast.error(`Failed to sync resume: ${errorMessage}`);
+        toast.error(t('resumes.toast.syncFailed').replace('{error}', errorMessage));
     }
 };
 const clearSearch = () => {
@@ -247,17 +248,18 @@ const handleCloudSync = async (resumeIds: string[]) => {
         return;
     }
     try {
-        toast.info(`Syncing ${resumeIds.length} resume${resumeIds.length !== 1 ? 's' : ''} to cloud...`);
+        const pluralSuffix = resumeIds.length !== 1 ? t('resumes.resumeCount.resumes') : t('resumes.resumeCount.resume');
+        toast.info(t('resumes.toast.syncingMultiple').replace('{count}', resumeIds.length.toString()).replace('{plural}', pluralSuffix));
         for (const resumeId of resumeIds) {
             await resumeStore.syncResumeToServer(resumeId);
         }
-        toast.success(`Successfully synced ${resumeIds.length} resume${resumeIds.length !== 1 ? 's' : ''} to cloud`);
+        toast.success(t('resumes.toast.syncedMultiple').replace('{count}', resumeIds.length.toString()).replace('{plural}', pluralSuffix));
         showCloudSyncModal.value = false;
     }
     catch (error: unknown) {
         console.error('Failed to sync resumes:', error);
         const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-        toast.error(`Failed to sync resumes: ${errorMessage}`);
+        toast.error(t('resumes.toast.syncMultipleFailed').replace('{error}', errorMessage));
     }
 };
 const disableCloudSync = async (id: string) => {
@@ -265,25 +267,25 @@ const disableCloudSync = async (id: string) => {
     const resume = resumeStore.resumesList.find(r => r.id === id);
     const resumeName = resume?.name || 'this resume';
     if (!resume?.serverId) {
-        toast.error('Resume is not synced to cloud');
+        toast.error(t('resumes.toast.resumeNotSynced'));
         return;
     }
     const confirmed = await confirmation.confirm({
-        title: 'Disable Cloud Sync',
-        message: `Are you sure you want to remove "${resumeName}" from the cloud? The resume will remain on your device but will no longer be synced.`,
-        confirmText: 'Remove from Cloud',
-        cancelText: 'Cancel',
+        title: t('resumes.modals.disableSync.title'),
+        message: t('resumes.modals.disableSync.message').replace('{name}', resumeName),
+        confirmText: t('resumes.modals.disableSync.confirmButton'),
+        cancelText: t('resumes.modals.cancel'),
     });
     if (confirmed) {
         try {
             const api = useApi();
             await api.resumes.delete(resume.serverId);
-            toast.success(`"${resumeName}" removed from cloud and cloud sync disabled`);
+            toast.success(t('resumes.toast.removedFromCloud').replace('{name}', resumeName));
         }
         catch (error: unknown) {
             console.error('Failed to disable cloud sync:', error);
             const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-            toast.error(`Failed to remove from cloud: ${errorMessage}. Cloud sync disabled locally.`);
+            toast.error(t('resumes.toast.removeFailed').replace('{error}', errorMessage));
         }
         finally {
             if (resumeStore.resumes[id]) {
@@ -294,11 +296,11 @@ const disableCloudSync = async (id: string) => {
     }
 };
 useHead({
-    title: 'Your Resumes - Manage Multiple Professional Resumes | Free Resume Builder',
+    title: t('resumes.pageTitle'),
     meta: [
         {
             name: 'description',
-            content: 'Manage unlimited resumes in one place. Create, edit, duplicate, and organize professional resumes for free. No storage limits, complete privacy.',
+            content: t('resumes.pageDescription'),
         },
         {
             name: 'keywords',
@@ -318,11 +320,11 @@ useHead({
         },
         {
             property: 'og:title',
-            content: 'Your Resumes - Manage Multiple Professional Resumes',
+            content: t('resumes.pageTitle'),
         },
         {
             property: 'og:description',
-            content: 'Manage unlimited resumes in one place. Create, edit, duplicate, and organize professional resumes for free.',
+            content: t('resumes.pageDescription'),
         },
         {
             property: 'og:url',
@@ -338,11 +340,11 @@ useHead({
         },
         {
             name: 'twitter:title',
-            content: 'Your Resumes - Manage Multiple Professional Resumes',
+            content: t('resumes.pageTitle'),
         },
         {
             name: 'twitter:description',
-            content: 'Manage unlimited resumes in one place. Create, edit, duplicate, and organize professional resumes for free.',
+            content: t('resumes.pageDescription'),
         },
         {
             name: 'twitter:image',
@@ -370,11 +372,10 @@ useHead({
                         <Cloud class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                         <div class="flex-1">
                             <h3 class="text-sm font-medium text-blue-900 mb-1">
-                                Save Your Resumes to the Cloud
+                                {{ $t('resumes.banner.saveToCloud') }}
                             </h3>
                             <p class="text-sm text-blue-700 mb-3">
-                                Register for a free account to save up to 3 resumes to the cloud and access them from any browser.
-                                Never lose your work again!
+                                {{ $t('resumes.banner.registerPrompt') }}
                             </p>
                             <div class="flex gap-2">
                                 <Button
@@ -383,7 +384,7 @@ useHead({
                                     @click="$router.push('/auth/register')"
                                 >
                                     <UserPlus class="w-4 h-4 mr-1" />
-                                    Register Free
+                                    {{ $t('resumes.banner.registerFree') }}
                                 </Button>
                                 <Button
                                     size="sm"
@@ -392,7 +393,7 @@ useHead({
                                     @click="$router.push('/auth/login')"
                                 >
                                     <LogIn class="w-4 h-4 mr-1" />
-                                    Login
+                                    {{ $t('resumes.banner.login') }}
                                 </Button>
                             </div>
                         </div>
@@ -406,11 +407,10 @@ useHead({
                         <CheckCircle class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                         <div class="flex-1">
                             <h3 class="text-sm font-medium text-green-900 mb-1">
-                                Cloud Storage Available
+                                {{ $t('resumes.banner.cloudAvailable') }}
                             </h3>
                             <p class="text-sm text-green-700">
-                                You can now save up to 3 resumes to the cloud and access them from any browser.
-                                Use the "Cloud Sync" button to sync your resumes.
+                                {{ $t('resumes.banner.cloudAvailableDescription') }}
                             </p>
                         </div>
                     </div>
@@ -433,7 +433,7 @@ useHead({
                     <div class="flex flex-col items-center gap-3">
                         <div class="animate-spin w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full" />
                         <p class="text-gray-600">
-                            Loading resumes...
+                            {{ $t('resumes.status.loading') }}
                         </p>
                     </div>
                 </div>
@@ -447,7 +447,7 @@ useHead({
                         </div>
                         <div>
                             <h3 class="text-sm font-medium text-red-900 mb-1">
-                                Failed to load resumes
+                                {{ $t('resumes.status.failed') }}
                             </h3>
                             <p class="text-sm text-red-700">
                                 {{ resumeStore.error }}
@@ -458,7 +458,7 @@ useHead({
                                 class="mt-2 border-red-300 text-red-700 hover:bg-red-100"
                                 @click="fetchServerResumesIfLoggedIn"
                             >
-                                Try Again
+                                {{ $t('resumes.actions.tryAgain') }}
                             </Button>
                         </div>
                     </div>

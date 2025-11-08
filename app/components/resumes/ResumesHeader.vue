@@ -3,15 +3,15 @@
         <div class="flex items-center justify-between">
             <div>
                 <h1 class="text-2xl sm:text-3xl font-bold text-gray-900">
-                    Your Resumes
+                    {{ $t('resumes.title') }}
                 </h1>
                 <ClientOnly>
                     <p class="text-gray-600 mt-1 sm:mt-2 text-sm sm:text-base">
                         <span v-if="searchQuery && filteredCount !== resumeCount">
-                            {{ filteredCount }} of {{ resumeCount }} resume{{ resumeCount !== 1 ? 's' : '' }}
+                            {{ filteredCount }} {{ $t('resumes.resumeCount.of') }} {{ resumeCount }} {{ resumeCount !== 1 ? $t('resumes.resumeCount.resumes') : $t('resumes.resumeCount.resume') }}
                         </span>
                         <span v-else>
-                            {{ resumeCount }} resume{{ resumeCount !== 1 ? 's' : '' }} total
+                            {{ resumeCount }} {{ resumeCount !== 1 ? $t('resumes.resumeCount.resumes') : $t('resumes.resumeCount.resume') }} {{ $t('resumes.resumeCount.total') }}
                         </span>
                     </p>
                 </ClientOnly>
@@ -22,7 +22,7 @@
                 @click="$emit('create')"
             >
                 <Plus class="w-4 h-4" />
-                <span class="hidden xs:inline">New</span>
+                <span class="hidden xs:inline">{{ $t('resumes.actions.new') }}</span>
             </Button>
         </div>
         <div class="flex flex-col sm:flex-row gap-3 sm:items-center">
@@ -31,7 +31,7 @@
                 <Input
                     :model-value="searchQuery"
                     class="pl-10 w-full sm:w-64"
-                    placeholder="Search resumes..."
+                    :placeholder="$t('resumes.actions.searchPlaceholder')"
                     @update:model-value="$emit('update:searchQuery', $event)"
                 />
             </div>
@@ -43,7 +43,7 @@
                     @click="$emit('import')"
                 >
                     <Upload class="w-4 h-4" />
-                    Import
+                    {{ $t('resumes.actions.import') }}
                 </Button>
                 <Button
                     v-if="resumeCount > 0"
@@ -53,7 +53,7 @@
                     @click="$emit('export')"
                 >
                     <Download class="w-4 h-4" />
-                    Export
+                    {{ $t('resumes.actions.export') }}
                 </Button>
                 <Button
                     v-if="authStore.isLoggedIn && resumeCount > 0"
@@ -63,15 +63,15 @@
                     @click="$emit('cloudSync')"
                 >
                     <Cloud class="w-4 h-4" />
-                    <span class="sm:hidden">Sync</span>
-                    <span class="hidden sm:inline">Cloud Sync</span>
+                    <span class="sm:hidden">{{ $t('resumes.actions.sync') }}</span>
+                    <span class="hidden sm:inline">{{ $t('resumes.actions.cloudSync') }}</span>
                 </Button>
                 <Button
                     class="hidden lg:flex items-center gap-2"
                     @click="$emit('create')"
                 >
                     <Plus class="w-4 h-4" />
-                    Create New Resume
+                    {{ $t('resumes.actions.createNew') }}
                 </Button>
             </div>
         </div>
@@ -88,7 +88,9 @@ interface Props {
     resumeCount: number;
     filteredCount: number;
 }
+
 defineProps<Props>();
+
 defineEmits<{
     'update:searchQuery': [value: string];
     'import': [];
@@ -96,5 +98,6 @@ defineEmits<{
     'create': [];
     'cloudSync': [];
 }>();
+
 const authStore = useAuthStore();
 </script>

@@ -18,12 +18,14 @@ import FirstTimeBuilderModal from '~/components/elements/FirstTimeBuilderModal.v
 import CloudSyncPromptModal from '~/components/elements/CloudSyncPromptModal.vue';
 import SyncIndicator from '~/components/elements/SyncIndicator.vue';
 
+const { t } = useI18n();
+
 useHead({
-    title: 'Resume Builder - Create Professional Resumes Online | Free, Unlimited and Private',
+    title: t('builder.pageTitle'),
     meta: [
         {
             name: 'description',
-            content: 'Build professional resumes online with our free resume builder. Real-time preview, instant PDF generation, unlimited downloads. No registration required, complete privacy.',
+            content: t('builder.pageDescription'),
         },
         {
             name: 'keywords',
@@ -43,11 +45,11 @@ useHead({
         },
         {
             property: 'og:title',
-            content: 'Resume Builder - Create Professional Resumes Online',
+            content: t('builder.pageTitle'),
         },
         {
             property: 'og:description',
-            content: 'Build professional resumes online with our free resume builder. Real-time preview, instant PDF generation, unlimited downloads.',
+            content: t('builder.pageDescription'),
         },
         {
             property: 'og:url',
@@ -63,11 +65,11 @@ useHead({
         },
         {
             name: 'twitter:title',
-            content: 'Resume Builder - Create Professional Resumes Online',
+            content: t('builder.pageTitle'),
         },
         {
             name: 'twitter:description',
-            content: 'Build professional resumes online with our free resume builder. Real-time preview, instant PDF generation.',
+            content: t('builder.pageDescription'),
         },
         {
             name: 'twitter:image',
@@ -266,11 +268,10 @@ const orderedSections = computed(() => {
                         </div>
                         <div>
                             <h2 class="text-2xl font-semibold text-gray-900 mb-2">
-                                No Resume Selected
+                                {{ t('builder.noResumeSelected') }}
                             </h2>
                             <p class="text-gray-600">
-                                To start building your resume, you need to create or select a resume first.
-                                Go to your resumes page to create your first resume.
+                                {{ t('builder.noResumeDescription') }}
                             </p>
                         </div>
                     </div>
@@ -278,7 +279,7 @@ const orderedSections = computed(() => {
                         <NuxtLink to="/resumes">
                             <Button class="w-full">
                                 <FileText class="w-4 h-4 mr-2" />
-                                Go to Resumes Page →
+                                {{ t('builder.goToResumesPage') }} →
                             </Button>
                         </NuxtLink>
                     </div>
@@ -320,7 +321,7 @@ const orderedSections = computed(() => {
                     @click="showMobilePreview = true"
                 >
                     <EyeIcon class="h-5 w-5" />
-                    <span class="text-sm font-medium">Preview</span>
+                    <span class="text-sm font-medium">{{ t('common.preview') }}</span>
                 </Button>
                 <div
                     v-if="showMobilePreview"
@@ -330,7 +331,7 @@ const orderedSections = computed(() => {
                         <div class="bg-white rounded-lg max-w-full w-full max-h-[90vh] flex flex-col">
                             <div class="p-4 border-b border-gray-200 flex justify-between items-center">
                                 <h3 class="text-lg font-medium">
-                                    Resume Preview
+                                    {{ t('builder.resumePreview') }}
                                 </h3>
                                 <div class="flex items-center gap-2">
                                     <ZoomControls

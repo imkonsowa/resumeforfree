@@ -12,8 +12,11 @@ interface Emits {
     (e: 'close'): void;
     (e: 'confirm', name: string, navigateToBuilder: boolean, saveToCloud: boolean): void;
 }
+
 const props = defineProps<Props>();
+
 const emit = defineEmits<Emits>();
+const { t } = useI18n();
 const authStore = useAuthStore();
 const resumeStore = useResumeStore();
 const newResumeName = ref('');
@@ -55,15 +58,15 @@ const handleEnter = (event: KeyboardEvent) => {
         >
             <div class="space-y-4">
                 <h3 class="text-lg font-semibold text-gray-900">
-                    Create New Resume
+                    {{ $t('resumes.modals.create.title') }}
                 </h3>
                 <div class="space-y-2">
-                    <Label for="resume-name">Resume Name</Label>
+                    <Label for="resume-name">{{ $t('resumes.modals.create.resumeName') }}</Label>
                     <Input
                         id="resume-name"
                         v-model="newResumeName"
                         autofocus
-                        placeholder="Enter resume name"
+                        :placeholder="$t('resumes.modals.create.enterName')"
                         @keydown="handleEnter"
                     />
                 </div>
@@ -77,7 +80,7 @@ const handleEnter = (event: KeyboardEvent) => {
                             class="text-sm font-normal"
                             for="navigate-to-builder"
                         >
-                            Navigate to the builder after creating
+                            {{ $t('resumes.modals.create.navigateToBuilder') }}
                         </Label>
                     </div>
                     <div
@@ -97,19 +100,25 @@ const handleEnter = (event: KeyboardEvent) => {
                                 for="save-to-cloud"
                             >
                                 <Cloud class="w-4 h-4 text-blue-600" />
-                                Save to cloud
+                                {{ $t('resumes.modals.create.saveToCloud') }}
                             </Label>
                         </div>
                         <div class="text-xs text-gray-500 flex items-center gap-1">
                             <Cloud class="w-3 h-3" />
                             <span v-if="resumeStore.cloudInfo.remaining > 0">
-                                {{ resumeStore.cloudInfo.remaining }} of {{ resumeStore.cloudInfo.limit }} cloud slots available
+                                {{ t('resumes.modals.create.slotsAvailableMessage', {
+                                    remaining: resumeStore.cloudInfo.remaining,
+                                    limit: resumeStore.cloudInfo.limit,
+                                }) }}
                             </span>
                             <span
                                 v-else
                                 class="text-amber-600"
                             >
-                                No cloud slots available ({{ resumeStore.cloudInfo.count }}/{{ resumeStore.cloudInfo.limit }} used)
+                                {{ t('resumes.modals.create.noSlotsAvailableMessage', {
+                                    count: resumeStore.cloudInfo.count,
+                                    limit: resumeStore.cloudInfo.limit,
+                                }) }}
                             </span>
                         </div>
                     </div>
@@ -119,14 +128,14 @@ const handleEnter = (event: KeyboardEvent) => {
                         class="flex-1"
                         @click="handleConfirm"
                     >
-                        Create Resume
+                        {{ $t('resumes.modals.create.createButton') }}
                     </Button>
                     <Button
                         class="flex-1"
                         variant="outline"
                         @click="handleCancel"
                     >
-                        Cancel
+                        {{ $t('resumes.modals.cancel') }}
                     </Button>
                 </div>
             </div>

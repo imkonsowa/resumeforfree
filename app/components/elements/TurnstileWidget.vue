@@ -1,6 +1,7 @@
 <template>
     <div class="turnstile-wrapper">
         <NuxtTurnstile
+            ref="turnstileRef"
             v-model="token"
             :options="{
                 theme: 'light',
@@ -24,6 +25,7 @@ interface Emits {
 const props = defineProps<Props>();
 const emit = defineEmits<Emits>();
 
+const turnstileRef = ref();
 const token = ref(props.modelValue || null);
 
 const handleTokenUpdate = (newToken: string | null) => {
@@ -32,6 +34,16 @@ const handleTokenUpdate = (newToken: string | null) => {
 
 watch(() => props.modelValue, (newValue) => {
     token.value = newValue;
+});
+
+const reset = () => {
+    if (turnstileRef.value?.reset) {
+        turnstileRef.value.reset();
+    }
+};
+
+defineExpose({
+    reset,
 });
 </script>
 

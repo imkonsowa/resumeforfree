@@ -5,13 +5,15 @@ import { escapeTypstText } from '~/utils/stringUtils';
 import { convertEmail, convertLink, SECTION_SPACING } from '~/utils/typstUtils';
 import { useSettingsStore } from '~/stores/settings';
 import { getSharedSectionRenderers } from '~/utils/sectionRenderers';
+import { RendererContext } from '~/utils/rendererContext';
+import { isRtlLocale } from '~/utils/localeUtils';
 
 export interface Template {
     id: string;
     name: string;
     description: string;
     layoutConfig: TemplateLayoutConfig;
-    parse: (data: ResumeData, font: string) => string;
+    parse: (data: ResumeData, font: string, locale: string, t: (key: string) => string) => string;
 }
 const renderHeaderLeftColumn = (data: ResumeData, fontSize: number): string[] => {
     const rows: string[] = [];
@@ -59,7 +61,7 @@ const renderHeaderRightColumn = (data: ResumeData, fontSize: number): string[] =
     if (data?.phone) {
         const phone = escapeTypstText(data.phone);
         const phoneSpacing = rows.length > 0 ? '0.8em' : '0em';
-        rows.push(`#block(above: ${phoneSpacing})[#text(size: ${fontSize - 1}pt)[${phone}]]`);
+        rows.push(`#block(above: ${phoneSpacing})[#text(size: ${fontSize - 1}pt, dir: ltr)[${phone}]]`);
     }
     if (data?.location) {
         const location = escapeTypstText(data.location);
@@ -69,14 +71,15 @@ const renderHeaderRightColumn = (data: ResumeData, fontSize: number): string[] =
 
     return rows;
 };
-const convertResumeHeader = (data: ResumeData, fontSize: number) => {
+const convertResumeHeader = (data: ResumeData, fontSize: number, isRtl = false) => {
     const leftColumnRows = renderHeaderLeftColumn(data, fontSize);
     const rightColumnRows = renderHeaderRightColumn(data, fontSize);
     const headerParts: string[] = [];
+    const alignment = isRtl ? 'right, right' : 'left, left';
     headerParts.push('#grid(');
     headerParts.push('    columns: (6fr, 4fr),');
     headerParts.push('    column-gutter: 20pt,');
-    headerParts.push('    align: (left, left),');
+    headerParts.push(`    align: (${alignment}),`);
     headerParts.push('    [');
     leftColumnRows.forEach((row) => {
         headerParts.push(`        ${row}`);
@@ -96,21 +99,25 @@ const convertResumeHeader = (data: ResumeData, fontSize: number) => {
     }
     return headerParts.join('\n');
 };
-const parse = (data: ResumeData, font: string): string => {
+const parse = (data: ResumeData, font: string, locale = 'en', t: (key: string) => string): string => {
     const settings: TemplateSettings = { font };
     const settingsStore = useSettingsStore();
     const fontSize = settingsStore.fontSize;
-    const sharedRenderers = getSharedSectionRenderers();
+    const isRtl = isRtlLocale(locale);
+
     const config = COMPACT_LAYOUT_CONFIG;
+    const context = new RendererContext(t, fontSize, config);
+    const sharedRenderers = getSharedSectionRenderers();
+
     const sectionRenderers: Record<string, () => string> = {
-        education: () => sharedRenderers.education(data, fontSize, config),
-        experience: () => sharedRenderers.experience(data, fontSize, config),
-        internships: () => sharedRenderers.internships(data, fontSize, config),
-        skills: () => sharedRenderers.skills(data, fontSize, config),
-        projects: () => sharedRenderers.projects(data, fontSize, config),
-        volunteering: () => sharedRenderers.volunteering(data, fontSize, config),
-        languages: () => sharedRenderers.languages(data, fontSize, config),
-        certificates: () => sharedRenderers.certificates(data, fontSize, config),
+        education: () => sharedRenderers.education(data, context),
+        experience: () => sharedRenderers.experience(data, context),
+        internships: () => sharedRenderers.internships(data, context),
+        skills: () => sharedRenderers.skills(data, context),
+        projects: () => sharedRenderers.projects(data, context),
+        volunteering: () => sharedRenderers.volunteering(data, context),
+        languages: () => sharedRenderers.languages(data, context),
+        certificates: () => sharedRenderers.certificates(data, context),
     };
     const sectionsToRender = Object.keys(sectionRenderers);
     const sortedSections = sectionsToRender.sort((a, b) => {
@@ -122,9 +129,15 @@ const parse = (data: ResumeData, font: string): string => {
         .map(section => sectionRenderers[section]())
         .filter(content => content.trim() !== '');
     const sectionsContent = sections.join('\n\n');
-    const fullContent = `${convertResumeHeader(data, fontSize)}${sectionsContent ? `\n\n${sectionsContent}` : ''}`;
+    const fullContent = `${convertResumeHeader(data, fontSize, isRtl)}${sectionsContent ? `\n\n${sectionsContent}` : ''}`;
+
+    // Configure font and text direction for RTL languages
+    const fontConfig = isRtl
+        ? `#set text(font: ("${settings.font}", "Arial"), size: ${fontSize}pt, dir: rtl)`
+        : `#set text(font: ("${settings.font}"), size: ${fontSize}pt)`;
+
     return `#set page(margin: 1cm)
-#set text(font: ("${settings.font}"), size: ${fontSize}pt)
+${fontConfig}
 #set par(leading: 0.4em)
 ${fullContent}
 #pagebreak(weak: true)`;

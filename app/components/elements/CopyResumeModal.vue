@@ -12,7 +12,9 @@ interface Emits {
     (e: 'close'): void;
     (e: 'confirm', name: string, navigateToBuilder: boolean): void;
 }
+
 const props = defineProps<Props>();
+
 const emit = defineEmits<Emits>();
 const copyResumeName = ref('');
 const navigateToBuilder = ref(true);
@@ -48,15 +50,15 @@ const handleEnter = (event: KeyboardEvent) => {
         >
             <div class="space-y-4">
                 <h3 class="text-lg font-semibold text-gray-900">
-                    Copy Resume
+                    {{ $t('resumes.modals.copy.title') }}
                 </h3>
                 <div class="space-y-2">
-                    <Label for="copy-resume-name">Resume Name</Label>
+                    <Label for="copy-resume-name">{{ $t('resumes.modals.copy.resumeName') }}</Label>
                     <Input
                         id="copy-resume-name"
                         v-model="copyResumeName"
                         autofocus
-                        placeholder="Enter resume name"
+                        :placeholder="$t('resumes.modals.copy.enterName')"
                         @keydown="handleEnter"
                     />
                 </div>
@@ -69,7 +71,7 @@ const handleEnter = (event: KeyboardEvent) => {
                         class="text-sm font-normal"
                         for="copy-navigate-to-builder"
                     >
-                        Navigate to the builder after copying
+                        {{ $t('resumes.modals.copy.navigateToBuilder') }}
                     </Label>
                 </div>
                 <div class="flex gap-3 pt-4">
@@ -77,14 +79,14 @@ const handleEnter = (event: KeyboardEvent) => {
                         class="flex-1"
                         @click="handleConfirm"
                     >
-                        Copy Resume
+                        {{ $t('resumes.modals.copy.copyButton') }}
                     </Button>
                     <Button
                         class="flex-1"
                         variant="outline"
                         @click="handleCancel"
                     >
-                        Cancel
+                        {{ $t('resumes.modals.cancel') }}
                     </Button>
                 </div>
             </div>

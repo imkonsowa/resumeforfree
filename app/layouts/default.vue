@@ -1,13 +1,30 @@
 <script lang="ts" setup>
-import { Edit, FileText, Github, HelpCircle, Mail, LogOut, User } from 'lucide-vue-next';
+import { Edit, FileText, Github, HelpCircle, Languages, LogOut, Mail, Menu, User, X } from 'lucide-vue-next';
 import { Toaster } from '@/components/ui/sonner';
 import { Button } from '@/components/ui/button';
 import 'vue-sonner/style.css';
 
+const { t, locale, locales } = useI18n();
+const { switchLanguage } = useLanguageSwitcher();
+
+const localesList = computed(() => {
+    return locales.value.map(l => ({
+        code: l.code,
+        name: l.name || l.code,
+    }));
+});
+
 const authStore = useAuthStore();
+const isMobileMenuOpen = ref(false);
+
 const handleLogout = async () => {
     await authStore.logout();
 };
+
+const closeMobileMenu = () => {
+    isMobileMenuOpen.value = false;
+};
+
 onMounted(async () => {
     await authStore.initializeAuth();
 });
@@ -23,7 +40,7 @@ onMounted(async () => {
                             <div class="flex items-center">
                                 <span
                                     class="ml-2 text-lg md:text-xl font-semibold text-black"
-                                >Free Resume Builder</span>
+                                >{{ t('homepage.heroTitle').split(' - ')[0] }}</span>
                             </div>
                         </NuxtLink>
                         <div class="flex items-center space-x-4">
@@ -32,62 +49,88 @@ onMounted(async () => {
                                 to="/resumes"
                             >
                                 <FileText class="w-4 h-4" />
-                                <span class="hidden sm:inline text-sm font-medium">Your Resumes</span>
+                                <span class="hidden sm:inline text-sm font-medium">{{
+                                    t('navigation.resumes', 'Your Resumes')
+                                }}</span>
                             </NuxtLink>
                             <NuxtLink
                                 class="flex items-center space-x-1 md:space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
                                 to="/builder"
                             >
                                 <Edit class="w-4 h-4" />
-                                <span class="hidden sm:inline text-sm font-medium">Builder</span>
+                                <span class="hidden sm:inline text-sm font-medium">{{ t('navigation.builder') }}</span>
                             </NuxtLink>
+
+                            <!-- Language Selector -->
+                            <div class="relative flex items-center space-x-1 md:space-x-2 text-gray-600 hover:text-gray-900 transition-colors">
+                                <Languages class="w-4 h-4" />
+                                <select
+                                    :value="locale"
+                                    class="bg-transparent border-none text-sm font-medium cursor-pointer focus:outline-none"
+                                    @change="(e) => switchLanguage((e.target as HTMLSelectElement).value)"
+                                >
+                                    <option
+                                        v-for="loc in localesList"
+                                        :key="loc.code"
+                                        :value="loc.code"
+                                    >
+                                        {{ loc.name }}
+                                    </option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex items-center space-x-2 md:space-x-6">
-                        <template v-if="!authStore.isLoggedIn">
-                            <NuxtLink to="/auth/login">
+                    <div class="hidden md:flex items-center space-x-2 md:space-x-6">
+                        <ClientOnly>
+                            <template v-if="!authStore.isLoggedIn">
+                                <NuxtLink to="/auth/login">
+                                    <Button
+                                        variant="ghost"
+                                        size="sm"
+                                        class="text-gray-600 hover:text-gray-900"
+                                    >
+                                        <User class="w-4 h-4 mr-1" />
+                                        <span class="hidden sm:inline">{{ t('navigation.signIn') }}</span>
+                                    </Button>
+                                </NuxtLink>
+                                <NuxtLink to="/auth/register">
+                                    <Button
+                                        size="sm"
+                                    >
+                                        <span class="text-sm">{{ t('navigation.signUp') }}</span>
+                                    </Button>
+                                </NuxtLink>
+                            </template>
+                            <template v-else>
+                                <NuxtLink
+                                    to="/profile"
+                                    class="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                                >
+                                    <User class="w-4 h-4" />
+                                    <span class="hidden sm:inline">{{
+                                        authStore.currentUser?.name || authStore.currentUser?.email
+                                    }}</span>
+                                </NuxtLink>
                                 <Button
                                     variant="ghost"
                                     size="sm"
                                     class="text-gray-600 hover:text-gray-900"
+                                    @click="handleLogout"
                                 >
-                                    <User class="w-4 h-4 mr-1" />
-                                    <span class="hidden sm:inline">Sign In</span>
+                                    <LogOut class="w-4 h-4 mr-1" />
+                                    <span class="hidden sm:inline">{{ t('navigation.signOut') }}</span>
                                 </Button>
-                            </NuxtLink>
-                            <NuxtLink to="/auth/register">
-                                <Button
-                                    size="sm"
-                                >
-                                    <span class="text-sm">Sign Up</span>
-                                </Button>
-                            </NuxtLink>
-                        </template>
-                        <template v-else>
-                            <NuxtLink
-                                to="/profile"
-                                class="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                            >
-                                <User class="w-4 h-4" />
-                                <span class="hidden sm:inline">{{ authStore.currentUser?.name || authStore.currentUser?.email }}</span>
-                            </NuxtLink>
-                            <Button
-                                variant="ghost"
-                                size="sm"
-                                class="text-gray-600 hover:text-gray-900"
-                                @click="handleLogout"
-                            >
-                                <LogOut class="w-4 h-4 mr-1" />
-                                <span class="hidden sm:inline">Sign Out</span>
-                            </Button>
-                        </template>
+                            </template>
+                        </ClientOnly>
                         <div class="h-4 w-px bg-gray-300 hidden md:block" />
                         <NuxtLink
                             class="flex items-center space-x-1 md:space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
                             to="/contact"
                         >
                             <Mail class="w-4 h-4" />
-                            <span class="hidden sm:inline text-sm font-medium">Contact</span>
+                            <span class="hidden sm:inline text-sm font-medium">{{
+                                t('navigation.contact', 'Contact')
+                            }}</span>
                         </NuxtLink>
                         <NuxtLink
                             class="flex items-center space-x-1 md:space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
@@ -95,7 +138,7 @@ onMounted(async () => {
                             to="/qa"
                         >
                             <HelpCircle class="w-4 h-4" />
-                            <span class="hidden sm:inline text-sm font-medium">Q&A</span>
+                            <span class="hidden sm:inline text-sm font-medium">{{ t('navigation.qa') }}</span>
                         </NuxtLink>
                         <a
                             class="flex items-center space-x-1 md:space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
@@ -104,7 +147,118 @@ onMounted(async () => {
                             target="_blank"
                         >
                             <Github class="w-4 h-4" />
-                            <span class="hidden sm:inline text-sm font-medium">GitHub</span>
+                            <span class="hidden sm:inline text-sm font-medium">{{
+                                t('navigation.github', 'GitHub')
+                            }}</span>
+                        </a>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button
+                        class="md:hidden p-2 text-gray-600 hover:text-gray-900"
+                        @click="isMobileMenuOpen = !isMobileMenuOpen"
+                    >
+                        <Menu
+                            v-if="!isMobileMenuOpen"
+                            class="w-6 h-6"
+                        />
+                        <X
+                            v-else
+                            class="w-6 h-6"
+                        />
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div
+                v-if="isMobileMenuOpen"
+                class="md:hidden border-t border-gray-200 bg-white"
+            >
+                <div class="px-4 py-4 space-y-4">
+                    <!-- Auth Section -->
+                    <ClientOnly>
+                        <div
+                            v-if="!authStore.isLoggedIn"
+                            class="flex flex-col space-y-2"
+                        >
+                            <NuxtLink
+                                to="/auth/login"
+                                @click="closeMobileMenu"
+                            >
+                                <Button
+                                    variant="ghost"
+                                    size="sm"
+                                    class="w-full justify-start text-gray-600 hover:text-gray-900"
+                                >
+                                    <User class="w-4 h-4 mr-2" />
+                                    {{ t('navigation.signIn') }}
+                                </Button>
+                            </NuxtLink>
+                            <NuxtLink
+                                to="/auth/register"
+                                @click="closeMobileMenu"
+                            >
+                                <Button
+                                    size="sm"
+                                    class="w-full"
+                                >
+                                    {{ t('navigation.signUp') }}
+                                </Button>
+                            </NuxtLink>
+                        </div>
+                        <div
+                            v-else
+                            class="flex flex-col space-y-2"
+                        >
+                            <NuxtLink
+                                to="/profile"
+                                class="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900 p-2"
+                                @click="closeMobileMenu"
+                            >
+                                <User class="w-4 h-4" />
+                                <span>{{ authStore.currentUser?.name || authStore.currentUser?.email }}</span>
+                            </NuxtLink>
+                            <Button
+                                variant="ghost"
+                                size="sm"
+                                class="w-full justify-start text-gray-600 hover:text-gray-900"
+                                @click="handleLogout(); closeMobileMenu()"
+                            >
+                                <LogOut class="w-4 h-4 mr-2" />
+                                {{ t('navigation.signOut') }}
+                            </Button>
+                        </div>
+                    </ClientOnly>
+
+                    <div class="h-px bg-gray-200" />
+
+                    <!-- Navigation Links -->
+                    <div class="flex flex-col space-y-2">
+                        <NuxtLink
+                            to="/contact"
+                            class="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900 p-2"
+                            @click="closeMobileMenu"
+                        >
+                            <Mail class="w-4 h-4" />
+                            <span>{{ t('navigation.contact', 'Contact') }}</span>
+                        </NuxtLink>
+                        <NuxtLink
+                            to="/qa"
+                            target="_blank"
+                            class="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900 p-2"
+                            @click="closeMobileMenu"
+                        >
+                            <HelpCircle class="w-4 h-4" />
+                            <span>{{ t('navigation.qa') }}</span>
+                        </NuxtLink>
+                        <a
+                            href="https://github.com/imkonsowa/resume-builder"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900 p-2"
+                            @click="closeMobileMenu"
+                        >
+                            <Github class="w-4 h-4" />
+                            <span>{{ t('navigation.github', 'GitHub') }}</span>
                         </a>
                     </div>
                 </div>
@@ -120,13 +274,21 @@ onMounted(async () => {
             <div class="px-4 lg:px-8 py-6">
                 <div class="text-center space-y-3">
                     <p class="text-sm text-gray-600">
-                        Built by <a
+                        Built by
+                        <a
                             class="font-medium text-gray-900 hover:text-blue-600 transition-colors"
                             href="https://konsowa.com"
                             rel="noopener noreferrer"
                             target="_blank"
-                        >Ibrahim
-                            Konsowa</a>
+                        >
+                            Ibrahim Konsowa
+                        </a>
+                        and <a
+                            class="font-medium text-gray-900 hover:text-blue-600 transition-colors"
+                            href="https://www.claude.com/product/claude-code"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >Claude Code</a>
                     </p>
                     <div class="flex items-center justify-center space-x-2 text-xs text-gray-500">
                         <span>Powered by</span>
