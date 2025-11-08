@@ -70,14 +70,15 @@ const renderHeaderRightColumn = (data: ResumeData, fontSize: number): string[] =
 
     return rows;
 };
-const convertResumeHeader = (data: ResumeData, fontSize: number) => {
+const convertResumeHeader = (data: ResumeData, fontSize: number, isArabic = false) => {
     const leftColumnRows = renderHeaderLeftColumn(data, fontSize);
     const rightColumnRows = renderHeaderRightColumn(data, fontSize);
     const headerParts: string[] = [];
+    const alignment = isArabic ? 'right, right' : 'left, left';
     headerParts.push('#grid(');
     headerParts.push('    columns: (6fr, 4fr),');
     headerParts.push('    column-gutter: 20pt,');
-    headerParts.push('    align: (left, left),');
+    headerParts.push(`    align: (${alignment}),`);
     headerParts.push('    [');
     leftColumnRows.forEach((row) => {
         headerParts.push(`        ${row}`);
@@ -127,7 +128,7 @@ const parse = (data: ResumeData, font: string, locale = 'en', t: (key: string) =
         .map(section => sectionRenderers[section]())
         .filter(content => content.trim() !== '');
     const sectionsContent = sections.join('\n\n');
-    const fullContent = `${convertResumeHeader(data, fontSize)}${sectionsContent ? `\n\n${sectionsContent}` : ''}`;
+    const fullContent = `${convertResumeHeader(data, fontSize, isArabic)}${sectionsContent ? `\n\n${sectionsContent}` : ''}`;
 
     // Configure font and text direction for Arabic support
     const fontConfig = isArabic

@@ -13,7 +13,7 @@
                 v-if="templateConfig.canMoveSection('volunteering')"
                 class="flex items-center gap-2"
             >
-                <span class="text-sm text-gray-600">{{ t('forms.projects.column') }}:</span>
+                <span class="text-sm text-gray-600">{{ t('forms.volunteering.column') }}:</span>
                 <select
                     :value="resumeStore.resumeData.sectionPlacement.volunteering"
                     class="px-2 py-1 text-sm border rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"

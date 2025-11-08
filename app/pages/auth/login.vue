@@ -40,6 +40,7 @@
                     </div>
                 </div>
                 <TurnstileWidget
+                    ref="turnstileWidgetRef"
                     v-model="turnstileToken"
                 />
                 <Button
@@ -88,6 +89,7 @@ const router = useRouter();
 const email = ref('');
 const password = ref('');
 const turnstileToken = ref<string | null>(null);
+const turnstileWidgetRef = ref();
 const loading = ref(false);
 const error = ref('');
 const handleLogin = async () => {
@@ -100,9 +102,9 @@ const handleLogin = async () => {
     }
     else {
         error.value = result.error || t('auth.loginFailed');
-        turnstileToken.value = null;
     }
     loading.value = false;
+    turnstileWidgetRef.value?.reset();
 };
 useHead({
     title: `${t('auth.signIn')} - Resume Builder`,

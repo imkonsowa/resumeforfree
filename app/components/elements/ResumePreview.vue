@@ -3,7 +3,7 @@
         <div>
             <div class="flex justify-between items-center mb-8">
                 <h2 class="text-xl font-semibold">
-                    <span class="hidden md:inline">Preview</span>
+                    <span class="hidden md:inline">{{ t('builder.preview') }}</span>
                     <span class="md:hidden text-base">{{ activeResume?.name }}</span>
                 </h2>
                 <div class="hidden md:flex items-center space-x-3">
@@ -27,8 +27,8 @@
                                 >
                                     <span>{{
                                         (availableTemplates?.find(t => t.id === selectedTemplate).name || 'Default')
-                                    }} Template</span>
-                                    <ChevronDown class="w-4 h-4 ml-2" />
+                                    }} {{ t('builder.template') }}</span>
+                                    <ChevronDown class="w-4 h-4 ms-2" />
                                 </Button>
                             </PopoverTrigger>
                             <PopoverContent class="w-80">
@@ -59,23 +59,23 @@
                         variant="outline"
                         @click="showSettingsModal = true"
                     >
-                        <SlidersHorizontal class="w-4 h-4 mr-2" />
-                        Settings
+                        <SlidersHorizontal class="w-4 h-4 me-2" />
+                        {{ t('builder.settings') }}
                     </Button>
                     <div class="flex items-center">
                         <Button
-                            class="rounded-r-none h-9"
+                            class="rounded-e-none h-9"
                             size="sm"
                             @click="handleDownload"
                         >
-                            <Download class="w-4 h-4 mr-2" />
-                            <span class="download-text">Download</span> PDF
+                            <Download class="w-4 h-4 me-2" />
+                            <span class="download-text">{{ t('builder.download') }}</span> {{ t('builder.downloadPDF') }}
                         </Button>
                         <Menubar class="border-0 p-0 h-auto flex items-center">
                             <MenubarMenu>
                                 <MenubarTrigger as-child>
                                     <Button
-                                        class="rounded-l-none border-l-0 px-2 h-9"
+                                        class="rounded-s-none border-s-0 px-2 h-9"
                                         size="sm"
                                         variant="default"
                                     >
@@ -84,16 +84,16 @@
                                 </MenubarTrigger>
                                 <MenubarContent>
                                     <MenubarItem @click="handleDownloadSVG">
-                                        <Download class="w-4 h-4 mr-2" />
-                                        Download as SVG
+                                        <Download class="w-4 h-4 me-2" />
+                                        {{ t('builder.downloadAsSVG') }}
                                     </MenubarItem>
                                     <MenubarItem @click="handleDownloadTypst">
-                                        <Download class="w-4 h-4 mr-2" />
-                                        Download as Typst
+                                        <Download class="w-4 h-4 me-2" />
+                                        {{ t('builder.downloadAsTypst') }}
                                     </MenubarItem>
                                     <MenubarItem @click="handleDownloadTypstText">
-                                        <Download class="w-4 h-4 mr-2" />
-                                        Download as Text
+                                        <Download class="w-4 h-4 me-2" />
+                                        {{ t('builder.downloadAsText') }}
                                     </MenubarItem>
                                 </MenubarContent>
                             </MenubarMenu>
@@ -111,18 +111,18 @@
                     </Button>
                     <div class="flex items-center">
                         <Button
-                            class="rounded-r-none h-9"
+                            class="rounded-e-none h-9"
                             size="sm"
                             @click="handleDownload"
                         >
-                            <Download class="w-4 h-4 mr-2" />
-                            Download
+                            <Download class="w-4 h-4 me-2" />
+                            {{ t('builder.download') }}
                         </Button>
                         <Menubar class="border-0 p-0 h-auto flex items-center">
                             <MenubarMenu>
                                 <MenubarTrigger as-child>
                                     <Button
-                                        class="rounded-l-none border-l-0 px-2 h-9"
+                                        class="rounded-s-none border-s-0 px-2 h-9"
                                         size="sm"
                                         variant="default"
                                     >
@@ -131,16 +131,16 @@
                                 </MenubarTrigger>
                                 <MenubarContent>
                                     <MenubarItem @click="handleDownloadSVG">
-                                        <Download class="w-4 h-4 mr-2" />
-                                        Download as SVG
+                                        <Download class="w-4 h-4 me-2" />
+                                        {{ t('builder.downloadAsSVG') }}
                                     </MenubarItem>
                                     <MenubarItem @click="handleDownloadTypst">
-                                        <Download class="w-4 h-4 mr-2" />
-                                        Download as Typst
+                                        <Download class="w-4 h-4 me-2" />
+                                        {{ t('builder.downloadAsTypst') }}
                                     </MenubarItem>
                                     <MenubarItem @click="handleDownloadTypstText">
-                                        <Download class="w-4 h-4 mr-2" />
-                                        Download as Text
+                                        <Download class="w-4 h-4 me-2" />
+                                        {{ t('builder.downloadAsText') }}
                                     </MenubarItem>
                                 </MenubarContent>
                             </MenubarMenu>
@@ -161,17 +161,10 @@
                                         class="w-16 h-16 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin mx-auto mb-4"
                                     />
                                     <h3 class="text-xl font-semibold text-gray-800 mb-2">
-                                        Loading Preview
+                                        {{ t('builder.loadingPreview') }}
                                     </h3>
                                     <p class="text-gray-600">
-                                        Please wait as fetching
-                                        <a
-                                            href="https://github.com/Myriad-Dreamin/typst.ts"
-                                            target="_blank"
-                                        >
-                                            Typst
-                                        </a>
-                                        module and compiler takes time on slow networks ...
+                                        {{ t('builder.loadingPreviewDescription') }}
                                     </p>
                                 </div>
                             </div>
@@ -198,7 +191,7 @@
                                         </svg>
                                     </div>
                                     <h3 class="text-xl font-semibold text-red-800 mb-2">
-                                        Preview Error
+                                        {{ t('builder.previewError') }}
                                     </h3>
                                     <p class="text-red-600 mb-4">
                                         {{ error }}
@@ -208,7 +201,7 @@
                                         variant="outline"
                                         @click="generatePreview"
                                     >
-                                        Try Again
+                                        {{ t('builder.tryAgain') }}
                                     </Button>
                                 </div>
                             </div>
@@ -246,10 +239,10 @@
                                         </svg>
                                     </div>
                                     <h3 class="text-xl font-semibold text-gray-800 mb-2">
-                                        Initializing Typst
+                                        {{ t('builder.initializingTypst') }}
                                     </h3>
                                     <p class="text-gray-600">
-                                        Setting up the resume compiler...
+                                        {{ t('builder.settingUpCompiler') }}
                                     </p>
                                 </div>
                             </div>
@@ -277,6 +270,7 @@ import { useSettingsStore } from '~/stores/settings';
 import { useResumeStore } from '~/stores/resume';
 import { storeToRefs } from 'pinia';
 
+const { t } = useI18n();
 const { generatePreview, downloadPDF, downloadSVG, downloadTypst, downloadTypstText } = useResumeGenerator();
 const { isReady: typstReady } = useTypstLoader();
 const settingsStore = useSettingsStore();

@@ -16,6 +16,7 @@ interface Emits {
 const props = defineProps<Props>();
 
 const emit = defineEmits<Emits>();
+const { t } = useI18n();
 const authStore = useAuthStore();
 const resumeStore = useResumeStore();
 const newResumeName = ref('');
@@ -105,13 +106,19 @@ const handleEnter = (event: KeyboardEvent) => {
                         <div class="text-xs text-gray-500 flex items-center gap-1">
                             <Cloud class="w-3 h-3" />
                             <span v-if="resumeStore.cloudInfo.remaining > 0">
-                                {{ resumeStore.cloudInfo.remaining }} {{ $t('resumes.resumeCount.of') }} {{ resumeStore.cloudInfo.limit }} {{ $t('resumes.modals.create.slotsAvailable') }}
+                                {{ t('resumes.modals.create.slotsAvailableMessage', {
+                                    remaining: resumeStore.cloudInfo.remaining,
+                                    limit: resumeStore.cloudInfo.limit,
+                                }) }}
                             </span>
                             <span
                                 v-else
                                 class="text-amber-600"
                             >
-                                {{ $t('resumes.modals.create.noSlotsAvailable') }} ({{ resumeStore.cloudInfo.count }}/{{ resumeStore.cloudInfo.limit }} {{ $t('resumes.modals.create.slotsUsed') }})
+                                {{ t('resumes.modals.create.noSlotsAvailableMessage', {
+                                    count: resumeStore.cloudInfo.count,
+                                    limit: resumeStore.cloudInfo.limit,
+                                }) }}
                             </span>
                         </div>
                     </div>

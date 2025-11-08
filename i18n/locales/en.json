@@ -137,6 +137,35 @@
         "pageDescription": "Build professional resumes online with our free resume builder. Real-time preview, instant PDF generation, unlimited downloads. No registration required, complete privacy.",
         "sections": "Sections",
         "resumePreview": "Resume Preview",
+        "noResumeSelected": "No Resume Selected",
+        "noResumeDescription": "To start building your resume, you need to create or select a resume first. Go to your resumes page to create your first resume.",
+        "goToResumesPage": "Go to Resumes Page",
+        "defaultTitle": "Resume Builder",
+        "expand": "Expand",
+        "collapse": "Collapse",
+        "syncToCloud": "Sync to Cloud",
+        "updateCloud": "Update Cloud",
+        "syncingToCloud": "Syncing to Cloud...",
+        "updatingCloud": "Updating Cloud...",
+        "sync": "Sync",
+        "update": "Update",
+        "syncing": "Syncing...",
+        "updating": "Updating...",
+        "preview": "Preview",
+        "settings": "Settings",
+        "download": "Download",
+        "downloadPDF": "PDF",
+        "downloadAs": "Download as {format}",
+        "downloadAsSVG": "Download as SVG",
+        "downloadAsTypst": "Download as Typst",
+        "downloadAsText": "Download as Text",
+        "template": "Template",
+        "loadingPreview": "Loading Preview",
+        "loadingPreviewDescription": "Please wait as fetching Typst module and compiler takes time on slow networks ...",
+        "previewError": "Preview Error",
+        "tryAgain": "Try Again",
+        "initializingTypst": "Initializing Typst",
+        "settingUpCompiler": "Setting up the resume compiler...",
         "zoomControls": {
             "zoomIn": "Zoom In",
             "zoomOut": "Zoom Out",
@@ -241,6 +270,7 @@
             "emptyMessage": "No skills added yet. Click 'Add Skill' to get started.",
             "skillTitle": "Skill/Category",
             "description": "Description",
+            "column": "Column",
             "deleteConfirm": {
                 "title": "Delete Skill",
                 "message": "Are you sure you want to delete this skill? This action cannot be undone."
@@ -264,6 +294,7 @@
             "emptyMessage": "No languages added yet. Click 'Add Language' to get started.",
             "languageName": "Language",
             "proficiency": "Proficiency Level",
+            "column": "Column",
             "deleteConfirm": {
                 "title": "Delete Language",
                 "message": "Are you sure you want to delete this language? This action cannot be undone."
@@ -282,6 +313,7 @@
             "achievements": "Achievements",
             "addAchievement": "Add Achievement",
             "achievementPlaceholder": "Describe your key achievements and impact",
+            "column": "Column",
             "deleteConfirm": {
                 "title": "Delete Volunteering Experience",
                 "message": "Are you sure you want to delete this volunteering experience? This action cannot be undone."
@@ -296,6 +328,7 @@
             "date": "Date Issued",
             "url": "Certificate URL",
             "description": "Description",
+            "column": "Column",
             "deleteConfirm": {
                 "title": "Delete Certificate",
                 "message": "Are you sure you want to delete this certificate? This action cannot be undone."
@@ -432,6 +465,8 @@
             "copy": "Copy",
             "export": "Export",
             "exportTitle": "Export resume",
+            "sync": "Sync",
+            "syncTitle": "Sync to cloud",
             "disableSync": "Disable Cloud Sync",
             "delete": "Delete"
         },
@@ -451,9 +486,8 @@
                 "enterName": "Enter resume name",
                 "navigateToBuilder": "Navigate to the builder after creating",
                 "saveToCloud": "Save to cloud",
-                "slotsAvailable": "cloud slots available",
-                "noSlotsAvailable": "No cloud slots available",
-                "slotsUsed": "used",
+                "slotsAvailableMessage": "{remaining} of {limit} cloud slots available",
+                "noSlotsAvailableMessage": "No cloud slots available ({count}/{limit} used)",
                 "createButton": "Create Resume"
             },
             "copy": {
@@ -469,20 +503,21 @@
                 "infoMessage": "This exports resume data as JSON files for backup or transfer purposes. To download PDF resumes, please use the download button in the builder page.",
                 "selectAll": "Select All",
                 "selected": "selected",
+                "selectedCount": "{count} {countPlural} selected",
                 "exportButton": "Export"
             },
             "cloudSync": {
                 "title": "Cloud Sync",
-                "description": "You have {count}/{limit} resumes in the cloud. {remaining} slot{remainingPlural} remaining.",
+                "description": "You have {count}/{limit} resumes in the cloud. {remaining} {remainingPlural} remaining.",
                 "slot": "slot",
                 "slots": "slots",
                 "allSynced": "All resumes are synced to cloud",
                 "unsyncHint": "Use \"Disable Cloud Sync\" from the resume menu to unsync a resume.",
                 "limitExceeded": "Storage Limit Exceeded",
-                "limitExceededMessage": "You're trying to sync {count} new resume{plural}, but you only have {remaining} slot{remainingPlural} remaining. Please deselect some resumes or delete existing ones from the cloud.",
+                "limitExceededMessage": "You're trying to sync {count} new {countPlural}, but you only have {remaining} {remainingPlural} remaining. Please deselect some resumes or delete existing ones from the cloud.",
                 "deselectAll": "Deselect All",
                 "selectAll": "Select All",
-                "syncButton": "Sync {count} Resume{plural}",
+                "syncButton": "Sync {count} {countPlural}",
                 "exp": "exp",
                 "edu": "edu",
                 "projects": "projects",

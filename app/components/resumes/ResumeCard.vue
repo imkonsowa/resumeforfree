@@ -106,6 +106,17 @@
                     <Download class="w-3 h-3" />
                     {{ $t('resumes.card.export') }}
                 </Button>
+                <Button
+                    v-if="authStore.isLoggedIn"
+                    class="flex items-center gap-1"
+                    size="sm"
+                    variant="outline"
+                    :title="$t('resumes.card.syncTitle')"
+                    @click.stop="$emit('sync', resume.id)"
+                >
+                    <Cloud class="w-3 h-3" />
+                    {{ $t('resumes.card.sync') }}
+                </Button>
                 <Popover>
                     <PopoverTrigger as-child>
                         <Button
@@ -169,6 +180,7 @@ defineEmits<{
     edit: [id: string];
     copy: [id: string];
     export: [id: string];
+    sync: [id: string];
     delete: [id: string];
     rename: [id: string, newName: string];
     disableSync: [id: string];

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Edit, FileText, Github, HelpCircle, Mail, LogOut, User } from 'lucide-vue-next';
+import { Edit, FileText, Github, HelpCircle, LogOut, Mail, User } from 'lucide-vue-next';
 import { Toaster } from '@/components/ui/sonner';
 import { Button } from '@/components/ui/button';
 import 'vue-sonner/style.css';
@@ -49,7 +49,9 @@ onMounted(async () => {
                                 to="/resumes"
                             >
                                 <FileText class="w-4 h-4" />
-                                <span class="hidden sm:inline text-sm font-medium">{{ t('navigation.resumes', 'Your Resumes') }}</span>
+                                <span class="hidden sm:inline text-sm font-medium">{{
+                                    t('navigation.resumes', 'Your Resumes')
+                                }}</span>
                             </NuxtLink>
                             <NuxtLink
                                 class="flex items-center space-x-1 md:space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
@@ -58,6 +60,22 @@ onMounted(async () => {
                                 <Edit class="w-4 h-4" />
                                 <span class="hidden sm:inline text-sm font-medium">{{ t('navigation.builder') }}</span>
                             </NuxtLink>
+
+                            <!-- Language Selector -->
+                            <div class="relative">
+                                <select
+                                    :value="locale"
+                                    class="flex items-center space-x-1 md:space-x-2 text-gray-600 hover:text-gray-900 transition-colors bg-transparent border-none text-sm font-medium cursor-pointer"
+                                    @change="switchLanguage($event.target.value)"
+                                >
+                                    <option value="en">
+                                        English
+                                    </option>
+                                    <option value="ar">
+                                        العربية
+                                    </option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div class="flex items-center space-x-2 md:space-x-6">
@@ -87,7 +105,9 @@ onMounted(async () => {
                                     class="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
                                 >
                                     <User class="w-4 h-4" />
-                                    <span class="hidden sm:inline">{{ authStore.currentUser?.name || authStore.currentUser?.email }}</span>
+                                    <span class="hidden sm:inline">{{
+                                        authStore.currentUser?.name || authStore.currentUser?.email
+                                    }}</span>
                                 </NuxtLink>
                                 <Button
                                     variant="ghost"
@@ -106,7 +126,9 @@ onMounted(async () => {
                             to="/contact"
                         >
                             <Mail class="w-4 h-4" />
-                            <span class="hidden sm:inline text-sm font-medium">{{ t('navigation.contact', 'Contact') }}</span>
+                            <span class="hidden sm:inline text-sm font-medium">{{
+                                t('navigation.contact', 'Contact')
+                            }}</span>
                         </NuxtLink>
                         <NuxtLink
                             class="flex items-center space-x-1 md:space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
@@ -123,24 +145,10 @@ onMounted(async () => {
                             target="_blank"
                         >
                             <Github class="w-4 h-4" />
-                            <span class="hidden sm:inline text-sm font-medium">{{ t('navigation.github', 'GitHub') }}</span>
+                            <span class="hidden sm:inline text-sm font-medium">{{
+                                t('navigation.github', 'GitHub')
+                            }}</span>
                         </a>
-
-                        <!-- Language Selector -->
-                        <div class="relative">
-                            <select
-                                :value="locale"
-                                class="flex items-center space-x-1 md:space-x-2 text-gray-600 hover:text-gray-900 transition-colors bg-transparent border-none text-sm font-medium cursor-pointer"
-                                @change="switchLanguage($event.target.value)"
-                            >
-                                <option value="en">
-                                    English
-                                </option>
-                                <option value="ar">
-                                    العربية
-                                </option>
-                            </select>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -155,13 +163,21 @@ onMounted(async () => {
             <div class="px-4 lg:px-8 py-6">
                 <div class="text-center space-y-3">
                     <p class="text-sm text-gray-600">
-                        Built by <a
+                        Built by
+                        <a
                             class="font-medium text-gray-900 hover:text-blue-600 transition-colors"
                             href="https://konsowa.com"
                             rel="noopener noreferrer"
                             target="_blank"
-                        >Ibrahim
-                            Konsowa</a>
+                        >
+                            Ibrahim Konsowa
+                        </a>
+                        and <a
+                            class="font-medium text-gray-900 hover:text-blue-600 transition-colors"
+                            href="https://www.claude.com/product/claude-code"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >Claude Code</a>
                     </p>
                     <div class="flex items-center justify-center space-x-2 text-xs text-gray-500">
                         <span>Powered by</span>

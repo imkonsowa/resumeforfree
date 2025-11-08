@@ -9,31 +9,6 @@
             </DialogHeader>
 
             <div class="space-y-6 py-4">
-                <!-- Language Selection -->
-                <div class="space-y-2">
-                    <Label for="language">{{ t('common.language') }}</Label>
-                    <Select
-                        v-model="selectedLanguage"
-                        @update:model-value="updateLanguage"
-                    >
-                        <SelectTrigger id="language">
-                            <SelectValue :placeholder="t('common.language')" />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectItem
-                                v-for="lang in availableLanguages"
-                                :key="lang.code"
-                                :value="lang.code"
-                            >
-                                {{ lang.name }}
-                            </SelectItem>
-                        </SelectContent>
-                    </Select>
-                    <p class="text-sm text-muted-foreground">
-                        {{ t('common.language') }}
-                    </p>
-                </div>
-
                 <!-- Template Selection -->
                 <div class="space-y-2">
                     <Label for="template">{{ t('settings.template.label') }}</Label>
@@ -166,7 +141,6 @@ const settingsStore = useSettingsStore();
 const fontSize = ref([settingsStore.fontSize]);
 const selectedFont = ref(settingsStore.selectedFont);
 const selectedTemplate = ref(settingsStore.selectedTemplate);
-const selectedLanguage = ref(settingsStore.selectedLanguage);
 
 // Computed
 const isOpen = computed({
@@ -183,11 +157,6 @@ const availableFonts = computed(() => {
     return settingsStore.availableFontsForCurrentLanguage;
 });
 
-const availableLanguages = [
-    { code: 'en', name: 'English' },
-    { code: 'ar', name: 'العربية' },
-];
-
 // Watch for external changes
 watch(() => settingsStore.fontSize, (newSize) => {
     fontSize.value = [newSize];
@@ -199,15 +168,6 @@ watch(() => settingsStore.selectedFont, (newFont) => {
 
 watch(() => settingsStore.selectedTemplate, (newTemplate) => {
     selectedTemplate.value = newTemplate;
-});
-
-watch(() => settingsStore.selectedLanguage, (newLanguage) => {
-    selectedLanguage.value = newLanguage;
-});
-
-// Watch for language changes to update font
-watch(selectedLanguage, () => {
-    selectedFont.value = settingsStore.selectedFont;
 });
 
 // Methods
@@ -223,17 +183,11 @@ const updateTemplate = (value: string) => {
     settingsStore.setSelectedTemplate(value);
 };
 
-const updateLanguage = (value: string) => {
-    settingsStore.setSelectedLanguage(value);
-};
-
 const resetToDefaults = () => {
     fontSize.value = [14];
     selectedFont.value = 'Calibri';
     selectedTemplate.value = 'default';
-    selectedLanguage.value = 'en';
     settingsStore.setFontSize(14);
-    settingsStore.setSelectedLanguage('en');
     settingsStore.setSelectedTemplate('default');
 };
 

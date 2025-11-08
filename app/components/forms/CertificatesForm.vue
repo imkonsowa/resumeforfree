@@ -14,7 +14,7 @@
                 v-if="templateConfig.canMoveSection('certificates')"
                 class="flex items-center gap-2"
             >
-                <span class="text-sm text-gray-600">{{ t('forms.projects.column') }}:</span>
+                <span class="text-sm text-gray-600">{{ t('forms.certificates.column') }}:</span>
                 <select
                     :value="resumeStore.resumeData.sectionPlacement.certificates"
                     class="px-2 py-1 text-sm border rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"

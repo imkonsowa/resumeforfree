@@ -3,7 +3,7 @@
         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 sm:gap-0">
             <div class="flex items-center space-x-3">
                 <h1 class="text-2xl font-bold text-gray-900">
-                    {{ resumeStore.activeResume?.name || 'Resume Builder' }}
+                    {{ resumeStore.activeResume?.name || t('builder.defaultTitle') }}
                 </h1>
             </div>
             <div class="flex items-center space-x-2">
@@ -24,7 +24,7 @@
                         class="h-4 w-4"
                     />
                     <span class="hidden sm:inline whitespace-nowrap">{{ isAnySyncing ? syncingText : syncButtonText }}</span>
-                    <span class="sm:hidden whitespace-nowrap">{{ isAnySyncing ? (activeResume.serverId ? 'Updating...' : 'Syncing...') : (activeResume.serverId ? 'Update' : 'Sync') }}</span>
+                    <span class="sm:hidden whitespace-nowrap">{{ isAnySyncing ? (activeResume.serverId ? t('builder.updating') : t('builder.syncing')) : (activeResume.serverId ? t('builder.update') : t('builder.sync')) }}</span>
                 </Button>
                 <Button
                     size="sm"
@@ -32,7 +32,7 @@
                     @click="settingsStore.expandAllSections()"
                 >
                     <ChevronDown class="h-4 w-4" />
-                    <span class="ml-1 sm:hidden">Expand</span>
+                    <span class="ml-1 sm:hidden">{{ t('builder.expand') }}</span>
                 </Button>
                 <Button
                     size="sm"
@@ -40,7 +40,7 @@
                     @click="settingsStore.collapseAllSections()"
                 >
                     <ChevronUp class="h-4 w-4" />
-                    <span class="ml-1 sm:hidden">Collapse</span>
+                    <span class="ml-1 sm:hidden">{{ t('builder.collapse') }}</span>
                 </Button>
                 <Button
                     class="flex items-center gap-2"
@@ -49,7 +49,7 @@
                     @click="showStepper = true"
                 >
                     <ListIcon class="h-4 w-4" />
-                    Sections
+                    {{ t('builder.sections') }}
                 </Button>
             </div>
         </div>
@@ -65,6 +65,7 @@ import ResumeStepper from '~/components/elements/ResumeStepper.vue';
 const resumeStore = useResumeStore();
 const settingsStore = useSettingsStore();
 const authStore = useAuthStore();
+const { t } = useI18n();
 const showStepper = ref<boolean>(false);
 const isSyncing = ref<boolean>(false);
 const { isSyncing: isAutoSyncing } = useAutoSync();
@@ -76,21 +77,21 @@ const canSyncToCloud = computed(() => {
     return cloudInfo.remaining > 0;
 });
 const syncButtonText = computed(() => {
-    if (!activeResume.value) return 'Sync to Cloud';
+    if (!activeResume.value) return t('builder.syncToCloud');
     if (activeResume.value.serverId) {
-        return 'Update Cloud';
+        return t('builder.updateCloud');
     }
     else {
-        return 'Sync to Cloud';
+        return t('builder.syncToCloud');
     }
 });
 const syncingText = computed(() => {
-    if (!activeResume.value) return 'Syncing to Cloud...';
+    if (!activeResume.value) return t('builder.syncingToCloud');
     if (activeResume.value.serverId) {
-        return 'Updating Cloud...';
+        return t('builder.updatingCloud');
     }
     else {
-        return 'Syncing to Cloud...';
+        return t('builder.syncingToCloud');
     }
 });
 const handleCloudSync = async () => {

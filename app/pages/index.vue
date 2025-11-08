@@ -1,9 +1,25 @@
 <script lang="ts" setup>
 import { Button } from '~/components/ui/button';
-import { Check, Download, FileText, Shield, Users, Zap } from 'lucide-vue-next';
+import { Check, Download, FileText, Shield, Users, Zap, Languages } from 'lucide-vue-next';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '~/components/ui/select';
 import { createSoftwareApplicationStructuredData, createWebsiteStructuredData } from '~/composables/useSEO';
+import { getDefaultFontForLanguage } from '~/types/resume';
 
-const { t } = useI18n();
+const { t, locale, setLocale, locales } = useI18n();
+
+const switchLanguage = (newLocale: string) => {
+    setLocale(newLocale);
+    // Update document direction immediately
+    if (import.meta.client) {
+        document.documentElement.dir = newLocale === 'ar' ? 'rtl' : 'ltr';
+        document.documentElement.lang = newLocale;
+
+        // Update font to default for new language
+        const settingsStore = useSettingsStore();
+        const newDefaultFont = getDefaultFontForLanguage(newLocale);
+        settingsStore.setSelectedFont(newDefaultFont);
+    }
+};
 
 useHead({
     title: t('homepage.heroTitle'),
@@ -115,12 +131,32 @@ useHead({
                 {{ t('homepage.title') }}<br>
                 <span class="text-gray-600">{{ t('homepage.subtitle') }}</span>
             </h1>
-            <NuxtLink to="/resumes">
-                <Button size="lg">
-                    {{ t('common.buildNow') }}
-                </Button>
-            </NuxtLink>
-            <p class="text-xs text-gray-500 mt-4">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
+                <NuxtLink to="/resumes">
+                    <Button size="lg">
+                        {{ t('common.buildNow') }}
+                    </Button>
+                </NuxtLink>
+                <Select
+                    :model-value="locale"
+                    @update:model-value="switchLanguage"
+                >
+                    <SelectTrigger class="w-[180px]">
+                        <Languages class="w-4 h-4 me-2" />
+                        <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                        <SelectItem
+                            v-for="lang in locales"
+                            :key="lang.code"
+                            :value="lang.code"
+                        >
+                            {{ lang.name }}
+                        </SelectItem>
+                    </SelectContent>
+                </Select>
+            </div>
+            <p class="text-xs text-gray-500">
                 By using this website you agree to
                 <NuxtLink
                     to="/terms"

@@ -268,11 +268,10 @@ const orderedSections = computed(() => {
                         </div>
                         <div>
                             <h2 class="text-2xl font-semibold text-gray-900 mb-2">
-                                No Resume Selected
+                                {{ t('builder.noResumeSelected') }}
                             </h2>
                             <p class="text-gray-600">
-                                To start building your resume, you need to create or select a resume first.
-                                Go to your resumes page to create your first resume.
+                                {{ t('builder.noResumeDescription') }}
                             </p>
                         </div>
                     </div>
@@ -280,7 +279,7 @@ const orderedSections = computed(() => {
                         <NuxtLink to="/resumes">
                             <Button class="w-full">
                                 <FileText class="w-4 h-4 mr-2" />
-                                Go to Resumes Page →
+                                {{ t('builder.goToResumesPage') }} →
                             </Button>
                         </NuxtLink>
                     </div>

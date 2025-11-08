@@ -61,7 +61,10 @@
                 </label>
             </div>
             <div class="text-sm text-gray-600 mb-4">
-                {{ selectedResumes.length }} {{ selectedResumes.length !== 1 ? $t('resumes.resumeCount.resumes') : $t('resumes.resumeCount.resume') }} {{ $t('resumes.modals.export.selected') }}
+                {{ t('resumes.modals.export.selectedCount', {
+                    count: selectedResumes.length,
+                    countPlural: selectedResumes.length !== 1 ? t('resumes.resumeCount.resumes') : t('resumes.resumeCount.resume'),
+                }) }}
             </div>
             <div class="flex justify-end gap-3">
                 <Button
@@ -97,6 +100,7 @@ const emit = defineEmits<{
     close: [];
     export: [resumeIds: string[]];
 }>();
+const { t } = useI18n();
 const selectedResumes = ref<string[]>([]);
 const selectAll = ref(true);
 watch(() => props.isOpen, (newVal) => {

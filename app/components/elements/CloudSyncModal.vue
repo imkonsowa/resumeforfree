@@ -10,11 +10,12 @@
                     {{ $t('resumes.modals.cloudSync.title') }}
                 </DialogTitle>
                 <DialogDescription>
-                    {{ t('resumes.modals.cloudSync.description')
-                        .replace('{count}', cloudInfo.count.toString())
-                        .replace('{limit}', cloudInfo.limit.toString())
-                        .replace('{remaining}', cloudInfo.remaining.toString())
-                        .replace('{remainingPlural}', cloudInfo.remaining !== 1 ? t('resumes.modals.cloudSync.slots') : t('resumes.modals.cloudSync.slot')) }}
+                    {{ t('resumes.modals.cloudSync.description', {
+                        count: cloudInfo.count,
+                        limit: cloudInfo.limit,
+                        remaining: cloudInfo.remaining,
+                        remainingPlural: cloudInfo.remaining !== 1 ? t('resumes.modals.cloudSync.slots') : t('resumes.modals.cloudSync.slot'),
+                    }) }}
                 </DialogDescription>
             </DialogHeader>
             <div class="flex-1 overflow-y-auto space-y-4 py-4">
@@ -68,11 +69,12 @@
                                 {{ $t('resumes.modals.cloudSync.limitExceeded') }}
                             </h4>
                             <p class="text-sm text-amber-700 mt-1">
-                                {{ t('resumes.modals.cloudSync.limitExceededMessage')
-                                    .replace('{count}', getNewResumesCount().toString())
-                                    .replace('{plural}', getNewResumesCount() !== 1 ? t('resumes.resumeCount.resumes') : t('resumes.resumeCount.resume'))
-                                    .replace('{remaining}', cloudInfo.remaining.toString())
-                                    .replace('{remainingPlural}', cloudInfo.remaining !== 1 ? t('resumes.modals.cloudSync.slots') : t('resumes.modals.cloudSync.slot')) }}
+                                {{ t('resumes.modals.cloudSync.limitExceededMessage', {
+                                    count: getNewResumesCount(),
+                                    countPlural: getNewResumesCount() !== 1 ? t('resumes.resumeCount.resumes') : t('resumes.resumeCount.resume'),
+                                    remaining: cloudInfo.remaining,
+                                    remainingPlural: cloudInfo.remaining !== 1 ? t('resumes.modals.cloudSync.slots') : t('resumes.modals.cloudSync.slot'),
+                                }) }}
                             </p>
                         </div>
                     </div>
@@ -100,9 +102,10 @@
                         v-if="isLoading"
                         class="w-4 h-4 mr-2 animate-spin"
                     />
-                    {{ t('resumes.modals.cloudSync.syncButton')
-                        .replace('{count}', selectedResumes.length.toString())
-                        .replace('{plural}', selectedResumes.length !== 1 ? t('resumes.resumeCount.resumes') : t('resumes.resumeCount.resume')) }}
+                    {{ t('resumes.modals.cloudSync.syncButton', {
+                        count: selectedResumes.length,
+                        countPlural: selectedResumes.length !== 1 ? t('resumes.resumeCount.resumes') : t('resumes.resumeCount.resume'),
+                    }) }}
                 </Button>
             </DialogFooter>
         </DialogContent>
