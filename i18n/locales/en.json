@@ -286,6 +286,7 @@
             "projectTitle": "Project Title",
             "projectUrl": "Project URL",
             "description": "Description",
+            "column": "Column",
             "deleteConfirm": {
                 "title": "Delete Project",
                 "message": "Are you sure you want to delete this project? This action cannot be undone."

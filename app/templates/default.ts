@@ -52,7 +52,7 @@ const parse = (data: ResumeData, font: string, locale = 'en', t: (key: string) =
     const rightSections = [];
     movableSections.forEach((section) => {
         if (section === 'technicalSkills') {
-            const placement = data.sectionPlacement?.skills || 'right';
+            const placement = data.sectionPlacement?.skills || 'left';
             if (placement === 'left') {
                 leftSections.push(section);
             }
@@ -61,7 +61,7 @@ const parse = (data: ResumeData, font: string, locale = 'en', t: (key: string) =
             }
         }
         else {
-            const placement = data.sectionPlacement?.[section as keyof typeof data.sectionPlacement] || (section === 'certificates' ? 'right' : 'right');
+            const placement = data.sectionPlacement?.[section as keyof typeof data.sectionPlacement] || (section === 'certificates' ? 'right' : 'left');
             if (placement === 'left') {
                 leftSections.push(section);
             }
