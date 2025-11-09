@@ -37,11 +37,11 @@
                 />
             </div>
             <div class="space-y-2">
-                <Label for="location">{{ t('forms.personalInfo.location') }}</Label>
+                <Label for="location">{{ t('common.location') }}</Label>
                 <Input
                     id="location"
                     :model-value="resumeStore.resumeData.location"
-                    :placeholder="t('forms.personalInfo.location')"
+                    :placeholder="t('common.location')"
                     @update:model-value="(value) => resumeStore.updateField('location', value)"
                 />
             </div>
@@ -49,11 +49,11 @@
         <div class="mt-6 space-y-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="space-y-2">
-                    <Label for="email">{{ t('forms.personalInfo.email') }}</Label>
+                    <Label for="email">{{ t('common.emailAddress') }}</Label>
                     <Input
                         id="email"
                         :model-value="resumeStore.resumeData.email"
-                        :placeholder="t('forms.personalInfo.email')"
+                        :placeholder="t('common.emailAddress')"
                         type="email"
                         @update:model-value="(value) => resumeStore.updateField('email', value)"
                     />

@@ -50,10 +50,10 @@
                     />
                 </div>
                 <div class="space-y-2">
-                    <Label>{{ t('forms.skills.description') }}</Label>
+                    <Label>{{ t('common.description') }}</Label>
                     <Textarea
                         :model-value="skill.description"
-                        :placeholder="t('forms.skills.description')"
+                        :placeholder="t('common.description')"
                         rows="3"
                         @update:model-value="(value) => resumeStore.updateSkill(index, 'description', value)"
                     />

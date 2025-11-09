@@ -18,7 +18,7 @@
                         <!-- Name Field -->
                         <div class="mb-4">
                             <Label for="name">
-                                {{ $t('contact.form.name.label') }}
+                                {{ $t('common.name') }}
                                 <span class="text-red-500">*</span>
                             </Label>
                             <Input
@@ -35,7 +35,7 @@
                         <!-- Email Field -->
                         <div class="mb-4">
                             <Label for="email">
-                                {{ $t('contact.form.email.label') }}
+                                {{ $t('common.email') }}
                                 <span class="text-red-500">*</span>
                             </Label>
                             <Input

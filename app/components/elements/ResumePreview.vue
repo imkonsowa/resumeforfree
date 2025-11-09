@@ -201,7 +201,7 @@
                                         variant="outline"
                                         @click="generatePreview"
                                     >
-                                        {{ t('builder.tryAgain') }}
+                                        {{ t('common.tryAgain') }}
                                     </Button>
                                 </div>
                             </div>

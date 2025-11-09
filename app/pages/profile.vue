@@ -155,7 +155,7 @@ useHead({
                                         <Label
                                             for="name"
                                             class="text-sm font-medium text-gray-700 mb-2 block"
-                                        >{{ $t('auth.name') }}</Label>
+                                        >{{ $t('common.name') }}</Label>
                                         <div class="p-4 bg-gray-50 rounded-lg border border-gray-200 text-base">
                                             {{ authStore.currentUser?.name || $t('profile.notProvided') }}
                                         </div>
@@ -164,7 +164,7 @@ useHead({
                                         <Label
                                             for="email"
                                             class="text-sm font-medium text-gray-700 mb-2 block"
-                                        >{{ $t('profile.emailAddress') }}</Label>
+                                        >{{ $t('common.emailAddress') }}</Label>
                                         <div class="p-4 bg-gray-50 rounded-lg border border-gray-200 text-base">
                                             {{ authStore.currentUser?.email }}
                                         </div>

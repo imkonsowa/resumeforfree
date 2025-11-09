@@ -23,7 +23,24 @@
         "actions": "Actions",
         "column": "Column",
         "left": "Left",
-        "right": "Right"
+        "right": "Right",
+        "location": "Location",
+        "present": "Present",
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "description": "Description",
+        "email": "Email",
+        "position": "Position",
+        "achievements": "Achievements",
+        "addAchievement": "Add Achievement",
+        "achievementPlaceholder": "Describe your key achievements and impact",
+        "name": "Name",
+        "sync": "Sync",
+        "export": "Export",
+        "company": "Company",
+        "companyUrl": "Company Website URL",
+        "emailAddress": "Email Address",
+        "tryAgain": "Try Again"
     },
     "navigation": {
         "home": "Home",
@@ -150,7 +167,6 @@
         "updateCloud": "Update Cloud",
         "syncingToCloud": "Syncing to Cloud...",
         "updatingCloud": "Updating Cloud...",
-        "sync": "Sync",
         "update": "Update",
         "syncing": "Syncing...",
         "updating": "Updating...",
@@ -166,7 +182,6 @@
         "loadingPreview": "Loading Preview",
         "loadingPreviewDescription": "Please wait as fetching Typst module and compiler takes time on slow networks ...",
         "previewError": "Preview Error",
-        "tryAgain": "Try Again",
         "initializingTypst": "Initializing Typst",
         "settingUpCompiler": "Setting up the resume compiler...",
         "zoomControls": {
@@ -198,10 +213,8 @@
             "title": "Personal Information",
             "firstName": "First Name",
             "lastName": "Last Name",
-            "email": "Email Address",
             "phone": "Phone Number",
             "position": "Position/Title",
-            "location": "Location",
             "summary": "Professional Summary",
             "socialLinks": "Social Links",
             "addSocialLink": "Add Social Link",
@@ -215,16 +228,6 @@
             "title": "Experience",
             "addExperience": "Add Experience",
             "emptyMessage": "No experience entries added yet. Click 'Add Experience' to get started.",
-            "position": "Position",
-            "company": "Company",
-            "location": "Location",
-            "companyUrl": "Company Website URL",
-            "startDate": "Start Date",
-            "endDate": "End Date",
-            "present": "Present",
-            "achievements": "Achievements",
-            "addAchievement": "Add Achievement",
-            "achievementPlaceholder": "Describe your key achievements and impact",
             "deleteConfirm": {
                 "title": "Delete Experience",
                 "message": "Are you sure you want to delete this experience entry? This action cannot be undone."
@@ -234,16 +237,6 @@
             "title": "Internships",
             "addInternship": "Add Internship",
             "emptyMessage": "No internship entries added yet. Click 'Add Internship' to get started.",
-            "position": "Position",
-            "company": "Company",
-            "location": "Location",
-            "companyUrl": "Company Website URL",
-            "startDate": "Start Date",
-            "endDate": "End Date",
-            "present": "Present",
-            "achievements": "Achievements",
-            "addAchievement": "Add Achievement",
-            "achievementPlaceholder": "Describe your key achievements and impact",
             "deleteConfirm": {
                 "title": "Delete Internship",
                 "message": "Are you sure you want to delete this internship entry? This action cannot be undone."
@@ -256,12 +249,7 @@
             "institution": "Institution",
             "degree": "Degree",
             "fieldOfStudy": "Field of Study",
-            "location": "Location",
-            "startDate": "Start Date",
-            "endDate": "End Date",
-            "present": "Present",
             "graduationScore": "Graduation Score/GPA",
-            "description": "Description",
             "deleteConfirm": {
                 "title": "Delete Education",
                 "message": "Are you sure you want to delete this education entry? This action cannot be undone."
@@ -272,7 +260,6 @@
             "addSkill": "Add Skill",
             "emptyMessage": "No skills added yet. Click 'Add Skill' to get started.",
             "skillTitle": "Skill/Category",
-            "description": "Description",
             "column": "Column",
             "deleteConfirm": {
                 "title": "Delete Skill",
@@ -285,7 +272,6 @@
             "emptyMessage": "Add your notable projects to showcase your work.",
             "projectTitle": "Project Title",
             "projectUrl": "Project URL",
-            "description": "Description",
             "column": "Column",
             "deleteConfirm": {
                 "title": "Delete Project",
@@ -309,14 +295,6 @@
             "addVolunteering": "Add Volunteering Experience",
             "emptyMessage": "No volunteering experience added yet. Click 'Add Volunteering Experience' to get started.",
             "organization": "Organization",
-            "position": "Position",
-            "location": "Location",
-            "startDate": "Start Date",
-            "endDate": "End Date",
-            "present": "Present",
-            "achievements": "Achievements",
-            "addAchievement": "Add Achievement",
-            "achievementPlaceholder": "Describe your key achievements and impact",
             "column": "Column",
             "deleteConfirm": {
                 "title": "Delete Volunteering Experience",
@@ -331,7 +309,6 @@
             "issuer": "Issuer",
             "date": "Date Issued",
             "url": "Certificate URL",
-            "description": "Description",
             "column": "Column",
             "deleteConfirm": {
                 "title": "Delete Certificate",
@@ -374,9 +351,7 @@
         "signUp": "Sign Up",
         "signOut": "Sign Out",
         "createAccount": "Create Account",
-        "email": "Email",
         "password": "Password",
-        "name": "Name",
         "confirmPassword": "Confirm Password",
         "currentPassword": "Current Password",
         "newPassword": "New Password",
@@ -412,7 +387,6 @@
         "description": "Manage your account settings and preferences",
         "personalInformation": "Personal Information",
         "viewAndManage": "View and manage your account details",
-        "emailAddress": "Email Address",
         "notProvided": "Not provided",
         "accountInformation": "Account Information",
         "accountInfoDescription": "Your account allows you to sync up to 3 resumes to the cloud.",
@@ -432,12 +406,9 @@
         "actions": {
             "new": "New",
             "import": "Import",
-            "export": "Export",
-            "sync": "Sync",
             "cloudSync": "Cloud Sync",
             "createNew": "Create New Resume",
-            "searchPlaceholder": "Search resumes...",
-            "tryAgain": "Try Again"
+            "searchPlaceholder": "Search resumes..."
         },
         "banner": {
             "saveToCloud": "Save Your Resumes to the Cloud",
@@ -467,9 +438,7 @@
             "skills": "skills",
             "build": "Build",
             "copy": "Copy",
-            "export": "Export",
             "exportTitle": "Export resume",
-            "sync": "Sync",
             "syncTitle": "Sync to cloud",
             "disableSync": "Disable Cloud Sync",
             "delete": "Delete"
@@ -507,8 +476,7 @@
                 "infoMessage": "This exports resume data as JSON files for backup or transfer purposes. To download PDF resumes, please use the download button in the builder page.",
                 "selectAll": "Select All",
                 "selected": "selected",
-                "selectedCount": "{count} {countPlural} selected",
-                "exportButton": "Export"
+                "selectedCount": "{count} {countPlural} selected"
             },
             "cloudSync": {
                 "title": "Cloud Sync",
@@ -568,11 +536,9 @@
         "description": "Have a question or feedback? We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.",
         "form": {
             "name": {
-                "label": "Name",
                 "placeholder": "Enter your name"
             },
             "email": {
-                "label": "Email",
                 "placeholder": "Enter your email address"
             },
             "subject": {
@@ -627,8 +593,6 @@
             "title": "Users",
             "description": "Manage user accounts and permissions",
             "noUsers": "No users found",
-            "email": "Email",
-            "name": "Name",
             "role": "Role",
             "verified": "Verified",
             "createdAt": "Created At",
@@ -679,7 +643,6 @@
             "description": "Manage contact form submissions",
             "noMessages": "No messages found",
             "from": "From",
-            "email": "Email",
             "status": {
                 "new": "New",
                 "read": "Read",

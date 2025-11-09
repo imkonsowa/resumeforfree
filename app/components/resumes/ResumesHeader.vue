@@ -53,7 +53,7 @@
                     @click="$emit('export')"
                 >
                     <Download class="w-4 h-4" />
-                    {{ $t('resumes.actions.export') }}
+                    {{ $t('common.export') }}
                 </Button>
                 <Button
                     v-if="authStore.isLoggedIn && resumeCount > 0"
@@ -63,7 +63,7 @@
                     @click="$emit('cloudSync')"
                 >
                     <Cloud class="w-4 h-4" />
-                    <span class="sm:hidden">{{ $t('resumes.actions.sync') }}</span>
+                    <span class="sm:hidden">{{ $t('common.sync') }}</span>
                     <span class="hidden sm:inline">{{ $t('resumes.actions.cloudSync') }}</span>
                 </Button>
                 <Button

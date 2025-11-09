@@ -15,7 +15,7 @@
             >
                 <div class="space-y-4">
                     <div>
-                        <Label for="name">{{ $t('auth.name') }}</Label>
+                        <Label for="name">{{ $t('common.name') }}</Label>
                         <Input
                             id="name"
                             v-model="name"
@@ -27,7 +27,7 @@
                         />
                     </div>
                     <div>
-                        <Label for="email">{{ $t('auth.email') }}</Label>
+                        <Label for="email">{{ $t('common.email') }}</Label>
                         <Input
                             id="email"
                             v-model="email"

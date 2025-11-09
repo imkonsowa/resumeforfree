@@ -104,7 +104,7 @@
                     @click.stop="$emit('export', resume.id)"
                 >
                     <Download class="w-3 h-3" />
-                    {{ $t('resumes.card.export') }}
+                    {{ $t('common.export') }}
                 </Button>
                 <Button
                     v-if="authStore.isLoggedIn"
@@ -115,7 +115,7 @@
                     @click.stop="$emit('sync', resume.id)"
                 >
                     <Cloud class="w-3 h-3" />
-                    {{ $t('resumes.card.sync') }}
+                    {{ $t('common.sync') }}
                 </Button>
                 <Popover>
                     <PopoverTrigger as-child>

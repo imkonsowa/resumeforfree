@@ -61,11 +61,11 @@
                     />
                 </div>
                 <div class="space-y-2">
-                    <Label :for="`project-description-${index}`">{{ t('forms.projects.description') }}</Label>
+                    <Label :for="`project-description-${index}`">{{ t('common.description') }}</Label>
                     <Textarea
                         :id="`project-description-${index}`"
                         :model-value="project.description"
-                        :placeholder="t('forms.projects.description')"
+                        :placeholder="t('common.description')"
                         rows="3"
                         @update:model-value="(value) => resumeStore.updateProject(index, 'description', value)"
                     />

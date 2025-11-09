@@ -40,10 +40,10 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div class="space-y-2">
-                    <Label>{{ t('forms.education.location') }}</Label>
+                    <Label>{{ t('common.location') }}</Label>
                     <Input
                         :model-value="education.location"
-                        :placeholder="t('forms.education.location')"
+                        :placeholder="t('common.location')"
                         @update:model-value="(value) => resumeStore.updateEducation(index, 'location', value)"
                     />
                 </div>
@@ -60,7 +60,7 @@
                 <div class="space-y-2">
                     <MonthYearPicker
                         :model-value="education.startDate"
-                        :label="t('forms.education.startDate')"
+                        :label="t('common.startDate')"
                         @update:model-value="(value) => resumeStore.updateEducation(index, 'startDate', value)"
                     />
                 </div>
@@ -68,7 +68,7 @@
                     <MonthYearPicker
                         :disabled="education.isPresent"
                         :model-value="education.endDate"
-                        :label="t('forms.education.endDate')"
+                        :label="t('common.endDate')"
                         @update:model-value="(value) => resumeStore.updateEducation(index, 'endDate', value)"
                     />
                     <div class="flex items-center space-x-2 mt-2">
@@ -83,15 +83,15 @@
                         <Label
                             :for="`present-${index}`"
                             class="text-sm"
-                        >{{ t('forms.education.present') }}</Label>
+                        >{{ t('common.present') }}</Label>
                     </div>
                 </div>
             </div>
             <div class="space-y-2">
-                <Label>{{ t('forms.education.description') }}</Label>
+                <Label>{{ t('common.description') }}</Label>
                 <Textarea
                     :model-value="education.description"
-                    :placeholder="t('forms.education.description')"
+                    :placeholder="t('common.description')"
                     rows="3"
                     @update:model-value="(value) => resumeStore.updateEducation(index, 'description', value)"
                 />

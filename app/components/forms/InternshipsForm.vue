@@ -22,36 +22,36 @@
         >
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div class="space-y-2">
-                    <Label>{{ t('forms.internships.position') }}</Label>
+                    <Label>{{ t('common.position') }}</Label>
                     <Input
                         :model-value="internship.position"
-                        :placeholder="t('forms.internships.position')"
+                        :placeholder="t('common.position')"
                         @update:model-value="(value) => resumeStore.updateInternship(index, 'position', value)"
                     />
                 </div>
                 <div class="space-y-2">
-                    <Label>{{ t('forms.internships.company') }}</Label>
+                    <Label>{{ t('common.company') }}</Label>
                     <Input
                         :model-value="internship.company"
-                        :placeholder="t('forms.internships.company')"
+                        :placeholder="t('common.company')"
                         @update:model-value="(value) => resumeStore.updateInternship(index, 'company', value)"
                     />
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div class="space-y-2">
-                    <Label>{{ t('forms.internships.location') }}</Label>
+                    <Label>{{ t('common.location') }}</Label>
                     <Input
                         :model-value="internship.location"
-                        :placeholder="t('forms.internships.location')"
+                        :placeholder="t('common.location')"
                         @update:model-value="(value) => resumeStore.updateInternship(index, 'location', value)"
                     />
                 </div>
                 <div class="space-y-2">
-                    <Label>{{ t('forms.internships.companyUrl') }}</Label>
+                    <Label>{{ t('common.companyUrl') }}</Label>
                     <Input
                         :model-value="internship.companyUrl || ''"
-                        :placeholder="t('forms.internships.companyUrl')"
+                        :placeholder="t('common.companyUrl')"
                         @update:model-value="(value) => resumeStore.updateInternship(index, 'companyUrl', value)"
                     />
                 </div>
@@ -60,7 +60,7 @@
                 <div class="space-y-2">
                     <MonthYearPicker
                         :model-value="internship.startDate"
-                        :label="t('forms.internships.startDate')"
+                        :label="t('common.startDate')"
                         @update:model-value="(value) => resumeStore.updateInternship(index, 'startDate', value)"
                     />
                 </div>
@@ -68,7 +68,7 @@
                     <MonthYearPicker
                         :disabled="internship.isPresent"
                         :model-value="internship.endDate"
-                        :label="t('forms.internships.endDate')"
+                        :label="t('common.endDate')"
                         @update:model-value="(value) => resumeStore.updateInternship(index, 'endDate', value)"
                     />
                     <div class="flex items-center space-x-2 mt-2">
@@ -83,20 +83,20 @@
                         <Label
                             :for="`present-${index}`"
                             class="text-sm"
-                        >{{ t('forms.internships.present') }}</Label>
+                        >{{ t('common.present') }}</Label>
                     </div>
                 </div>
             </div>
             <div class="space-y-4">
                 <div class="flex justify-between items-center">
-                    <Label>{{ t('forms.internships.achievements') }}</Label>
+                    <Label>{{ t('common.achievements') }}</Label>
                     <Button
                         size="sm"
                         variant="outline"
                         @click="resumeStore.addInternshipAchievement(index)"
                     >
                         <Plus class="w-4 h-4 mr-2" />
-                        {{ t('forms.internships.addAchievement') }}
+                        {{ t('common.addAchievement') }}
                     </Button>
                 </div>
                 <div class="space-y-2">
@@ -109,7 +109,7 @@
                             <Input
                                 :model-value="internship.achievements[achievementIndex].text"
                                 class="flex-1"
-                                :placeholder="t('forms.internships.achievementPlaceholder')"
+                                :placeholder="t('common.achievementPlaceholder')"
                                 @update:model-value="(value) => resumeStore.updateInternshipAchievement(index, achievementIndex, value)"
                                 @keydown.enter="resumeStore.addInternshipAchievement(index)"
                             />

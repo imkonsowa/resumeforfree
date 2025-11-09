@@ -93,7 +93,7 @@
                                     <strong>{{ $t('admin.contactMessages.from') }}:</strong> {{ message.name }}
                                 </span>
                                 <span>
-                                    <strong>{{ $t('admin.contactMessages.email') }}:</strong>
+                                    <strong>{{ $t('common.email') }}:</strong>
                                     <a
                                         :href="`mailto:${message.email}`"
                                         class="text-blue-600 hover:text-blue-800"

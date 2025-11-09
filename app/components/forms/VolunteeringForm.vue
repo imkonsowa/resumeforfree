@@ -50,33 +50,33 @@
                     />
                 </div>
                 <div class="space-y-2">
-                    <Label>{{ t('forms.volunteering.position') }}</Label>
+                    <Label>{{ t('common.position') }}</Label>
                     <Input
                         :model-value="volunteering.position"
-                        :placeholder="t('forms.volunteering.position')"
+                        :placeholder="t('common.position')"
                         @update:model-value="(value) => resumeStore.updateVolunteering(index, 'position', value)"
                     />
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                 <div class="space-y-2">
-                    <Label>{{ t('forms.volunteering.location') }}</Label>
+                    <Label>{{ t('common.location') }}</Label>
                     <Input
                         :model-value="volunteering.location"
-                        :placeholder="t('forms.volunteering.location')"
+                        :placeholder="t('common.location')"
                         @update:model-value="(value) => resumeStore.updateVolunteering(index, 'location', value)"
                     />
                 </div>
                 <MonthYearPicker
                     :model-value="volunteering.startDate"
-                    :label="t('forms.volunteering.startDate')"
+                    :label="t('common.startDate')"
                     @update:model-value="(value) => resumeStore.updateVolunteering(index, 'startDate', value)"
                 />
                 <div class="space-y-2">
                     <MonthYearPicker
                         :disabled="volunteering.isPresent"
                         :model-value="volunteering.endDate"
-                        :label="t('forms.volunteering.endDate')"
+                        :label="t('common.endDate')"
                         @update:model-value="(value) => resumeStore.updateVolunteering(index, 'endDate', value)"
                     />
                     <div class="flex items-center space-x-2">
@@ -91,20 +91,20 @@
                         <Label
                             :for="`vol-present-${index}`"
                             class="text-sm"
-                        >{{ t('forms.volunteering.present') }}</Label>
+                        >{{ t('common.present') }}</Label>
                     </div>
                 </div>
             </div>
             <div class="space-y-4">
                 <div class="flex justify-between items-center">
-                    <Label>{{ t('forms.volunteering.achievements') }}</Label>
+                    <Label>{{ t('common.achievements') }}</Label>
                     <Button
                         size="sm"
                         variant="outline"
                         @click="resumeStore.addVolunteeringAchievement(index)"
                     >
                         <Plus class="w-4 h-4 mr-2" />
-                        {{ t('forms.volunteering.addAchievement') }}
+                        {{ t('common.addAchievement') }}
                     </Button>
                 </div>
                 <div class="space-y-2">
@@ -117,7 +117,7 @@
                             <Input
                                 :model-value="volunteering.achievements[achievementIndex].text"
                                 class="flex-1"
-                                :placeholder="t('forms.volunteering.achievementPlaceholder')"
+                                :placeholder="t('common.achievementPlaceholder')"
                                 @update:model-value="(value) => resumeStore.updateVolunteeringAchievement(index, achievementIndex, value)"
                                 @keydown.enter="resumeStore.addVolunteeringAchievement(index)"
                             />

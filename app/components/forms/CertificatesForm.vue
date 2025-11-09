@@ -80,11 +80,11 @@
                     />
                 </div>
                 <div class="space-y-2">
-                    <Label :for="`certificate-description-${index}`">{{ t('forms.certificates.description') }}</Label>
+                    <Label :for="`certificate-description-${index}`">{{ t('common.description') }}</Label>
                     <Textarea
                         :id="`certificate-description-${index}`"
                         :model-value="certificate.description || ''"
-                        :placeholder="t('forms.certificates.description')"
+                        :placeholder="t('common.description')"
                         rows="3"
                         @update:model-value="(value) => resumeStore.updateCertificate(index, 'description', value)"
                     />

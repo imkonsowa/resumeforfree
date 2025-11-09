@@ -458,7 +458,7 @@ useHead({
                                 class="mt-2 border-red-300 text-red-700 hover:bg-red-100"
                                 @click="fetchServerResumesIfLoggedIn"
                             >
-                                {{ $t('resumes.actions.tryAgain') }}
+                                {{ $t('common.tryAgain') }}
                             </Button>
                         </div>
                     </div>

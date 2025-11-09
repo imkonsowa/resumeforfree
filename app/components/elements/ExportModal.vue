@@ -77,7 +77,7 @@
                     :disabled="selectedResumes.length === 0"
                     @click="handleExport"
                 >
-                    {{ $t('resumes.modals.export.exportButton') }}
+                    {{ $t('common.export') }}
                 </Button>
             </div>
         </div>

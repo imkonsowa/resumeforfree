@@ -23,7 +23,24 @@
         "actions": "إجراءات",
         "column": "العمود",
         "left": "يسار",
-        "right": "يمين"
+        "right": "يمين",
+        "location": "الموقع",
+        "present": "حالياً",
+        "startDate": "تاريخ البداية",
+        "endDate": "تاريخ النهاية",
+        "description": "الوصف",
+        "email": "البريد الإلكتروني",
+        "position": "المنصب",
+        "achievements": "الإنجازات",
+        "addAchievement": "إضافة إنجاز",
+        "achievementPlaceholder": "اوصف إنجازاتك الرئيسية وتأثيرك",
+        "name": "الاسم",
+        "sync": "مزامنة",
+        "export": "تصدير",
+        "company": "الشركة",
+        "companyUrl": "رابط موقع الشركة",
+        "emailAddress": "عنوان البريد الإلكتروني",
+        "tryAgain": "حاول مرة أخرى"
     },
     "navigation": {
         "home": "الرئيسية",
@@ -150,7 +167,6 @@
         "updateCloud": "تحديث السحابة",
         "syncingToCloud": "جاري المزامنة مع السحابة...",
         "updatingCloud": "جاري تحديث السحابة...",
-        "sync": "مزامنة",
         "update": "تحديث",
         "syncing": "جاري المزامنة...",
         "updating": "جاري التحديث...",
@@ -166,7 +182,6 @@
         "loadingPreview": "جاري تحميل المعاينة",
         "loadingPreviewDescription": "يرجى الانتظار حيث أن تحميل وحدة Typst والمترجم يستغرق وقتاً على الشبكات البطيئة ...",
         "previewError": "خطأ في المعاينة",
-        "tryAgain": "حاول مرة أخرى",
         "initializingTypst": "جاري تهيئة Typst",
         "settingUpCompiler": "جاري إعداد مترجم السيرة الذاتية...",
         "zoomControls": {
@@ -198,10 +213,8 @@
             "title": "المعلومات الشخصية",
             "firstName": "الاسم الأول",
             "lastName": "اسم العائلة",
-            "email": "عنوان البريد الإلكتروني",
             "phone": "رقم الهاتف",
             "position": "المنصب/اللقب",
-            "location": "الموقع",
             "summary": "الملخص المهني",
             "socialLinks": "الروابط الاجتماعية",
             "addSocialLink": "إضافة رابط اجتماعي",
@@ -215,16 +228,6 @@
             "title": "الخبرة",
             "addExperience": "إضافة خبرة",
             "emptyMessage": "لم يتم إضافة إدخالات خبرة بعد. اضغط 'إضافة خبرة' للبدء.",
-            "position": "المنصب",
-            "company": "الشركة",
-            "location": "الموقع",
-            "companyUrl": "رابط موقع الشركة",
-            "startDate": "تاريخ البداية",
-            "endDate": "تاريخ النهاية",
-            "present": "حالياً",
-            "achievements": "الإنجازات",
-            "addAchievement": "إضافة إنجاز",
-            "achievementPlaceholder": "اوصف إنجازاتك الرئيسية وتأثيرك",
             "deleteConfirm": {
                 "title": "حذف الخبرة",
                 "message": "هل أنت متأكد أنك تريد حذف إدخال الخبرة هذا؟ لا يمكن التراجع عن هذا الإجراء."
@@ -234,16 +237,6 @@
             "title": "التدريب",
             "addInternship": "إضافة تدريب",
             "emptyMessage": "لم يتم إضافة إدخالات تدريب بعد. اضغط 'إضافة تدريب' للبدء.",
-            "position": "المنصب",
-            "company": "الشركة",
-            "location": "الموقع",
-            "companyUrl": "رابط موقع الشركة",
-            "startDate": "تاريخ البداية",
-            "endDate": "تاريخ النهاية",
-            "present": "حالياً",
-            "achievements": "الإنجازات",
-            "addAchievement": "إضافة إنجاز",
-            "achievementPlaceholder": "اوصف إنجازاتك الرئيسية وتأثيرك",
             "deleteConfirm": {
                 "title": "حذف التدريب",
                 "message": "هل أنت متأكد أنك تريد حذف إدخال التدريب هذا؟ لا يمكن التراجع عن هذا الإجراء."
@@ -256,12 +249,7 @@
             "institution": "المؤسسة",
             "degree": "الدرجة",
             "fieldOfStudy": "مجال الدراسة",
-            "location": "الموقع",
-            "startDate": "تاريخ البداية",
-            "endDate": "تاريخ النهاية",
-            "present": "حالياً",
             "graduationScore": "درجة التخرج/المعدل",
-            "description": "الوصف",
             "deleteConfirm": {
                 "title": "حذف التعليم",
                 "message": "هل أنت متأكد أنك تريد حذف إدخال التعليم هذا؟ لا يمكن التراجع عن هذا الإجراء."
@@ -272,7 +260,6 @@
             "addSkill": "إضافة مهارة",
             "emptyMessage": "لم يتم إضافة مهارات بعد. اضغط 'إضافة مهارة' للبدء.",
             "skillTitle": "المهارة/الفئة",
-            "description": "الوصف",
             "column": "العمود",
             "deleteConfirm": {
                 "title": "حذف المهارة",
@@ -285,7 +272,6 @@
             "emptyMessage": "أضف مشاريعك البارزة لعرض عملك.",
             "projectTitle": "عنوان المشروع",
             "projectUrl": "رابط المشروع",
-            "description": "الوصف",
             "column": "العمود",
             "deleteConfirm": {
                 "title": "حذف المشروع",
@@ -309,14 +295,6 @@
             "addVolunteering": "إضافة خبرة تطوعية",
             "emptyMessage": "لم يتم إضافة خبرة تطوعية بعد. اضغط 'إضافة خبرة تطوعية' للبدء.",
             "organization": "المنظمة",
-            "position": "المنصب",
-            "location": "الموقع",
-            "startDate": "تاريخ البداية",
-            "endDate": "تاريخ النهاية",
-            "present": "حالياً",
-            "achievements": "الإنجازات",
-            "addAchievement": "إضافة إنجاز",
-            "achievementPlaceholder": "اوصف إنجازاتك الرئيسية وتأثيرك",
             "column": "العمود",
             "deleteConfirm": {
                 "title": "حذف الخبرة التطوعية",
@@ -331,7 +309,6 @@
             "issuer": "الجهة المانحة",
             "date": "تاريخ الإصدار",
             "url": "رابط الشهادة",
-            "description": "الوصف",
             "column": "العمود",
             "deleteConfirm": {
                 "title": "حذف الشهادة",
@@ -374,9 +351,7 @@
         "signUp": "إنشاء حساب",
         "signOut": "تسجيل الخروج",
         "createAccount": "إنشاء حساب",
-        "email": "البريد الإلكتروني",
         "password": "كلمة المرور",
-        "name": "الاسم",
         "confirmPassword": "تأكيد كلمة المرور",
         "currentPassword": "كلمة المرور الحالية",
         "newPassword": "كلمة المرور الجديدة",
@@ -412,7 +387,6 @@
         "description": "إدارة إعدادات حسابك وتفضيلاتك",
         "personalInformation": "المعلومات الشخصية",
         "viewAndManage": "عرض وإدارة تفاصيل حسابك",
-        "emailAddress": "عنوان البريد الإلكتروني",
         "notProvided": "غير مقدم",
         "accountInformation": "معلومات الحساب",
         "accountInfoDescription": "يسمح لك حسابك بمزامنة ما يصل إلى 3 سير ذاتية مع السحابة.",
@@ -432,12 +406,9 @@
         "actions": {
             "new": "جديد",
             "import": "استيراد",
-            "export": "تصدير",
-            "sync": "مزامنة",
             "cloudSync": "مزامنة السحابة",
             "createNew": "إنشاء سيرة ذاتية جديدة",
-            "searchPlaceholder": "البحث في السير الذاتية...",
-            "tryAgain": "حاول مرة أخرى"
+            "searchPlaceholder": "البحث في السير الذاتية..."
         },
         "banner": {
             "saveToCloud": "احفظ سيرك الذاتية إلى السحابة",
@@ -467,9 +438,7 @@
             "skills": "مهارات",
             "build": "بناء",
             "copy": "نسخ",
-            "export": "تصدير",
             "exportTitle": "تصدير السيرة الذاتية",
-            "sync": "مزامنة",
             "syncTitle": "مزامنة إلى السحابة",
             "disableSync": "تعطيل المزامنة السحابية",
             "delete": "حذف"
@@ -507,8 +476,7 @@
                 "infoMessage": "يصدّر هذا بيانات السيرة الذاتية كملفات JSON لأغراض النسخ الاحتياطي أو النقل. لتحميل السير الذاتية بصيغة PDF، يرجى استخدام زر التحميل في صفحة المنشئ.",
                 "selectAll": "تحديد الكل",
                 "selected": "محدد",
-                "selectedCount": "{count} {countPlural} محددة",
-                "exportButton": "تصدير"
+                "selectedCount": "{count} {countPlural} محددة"
             },
             "cloudSync": {
                 "title": "مزامنة السحابة",
@@ -568,11 +536,9 @@
         "description": "لديك سؤال أو ملاحظة؟ يسعدنا سماع رأيك. املأ النموذج أدناه وسنعاود الاتصال بك في أقرب وقت ممكن.",
         "form": {
             "name": {
-                "label": "الاسم",
                 "placeholder": "أدخل اسمك"
             },
             "email": {
-                "label": "البريد الإلكتروني",
                 "placeholder": "أدخل بريدك الإلكتروني"
             },
             "subject": {
@@ -627,8 +593,6 @@
             "title": "المستخدمون",
             "description": "إدارة حسابات المستخدمين والصلاحيات",
             "noUsers": "لا يوجد مستخدمون",
-            "email": "البريد الإلكتروني",
-            "name": "الاسم",
             "role": "الدور",
             "verified": "موثق",
             "createdAt": "تاريخ الإنشاء",
@@ -679,7 +643,6 @@
             "description": "إدارة رسائل نموذج التواصل",
             "noMessages": "لا توجد رسائل",
             "from": "من",
-            "email": "البريد الإلكتروني",
             "status": {
                 "new": "جديد",
                 "read": "مقروء",
