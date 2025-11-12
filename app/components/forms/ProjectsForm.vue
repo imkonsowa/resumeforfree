@@ -1,12 +1,12 @@
 <template>
     <FormContainer
         :is-empty="resumeStore.resumeData.projects.length === 0"
-        :title="t('forms.projects.title')"
+        :title="resumeStore.getLocalizedSectionHeader('projects', locale, t)"
         :add-button-label="t('forms.projects.addProject')"
         :empty-message="t('forms.projects.emptyMessage')"
         section-key="projects"
         @add="resumeStore.addProject"
-        @edit-title="(value) => resumeStore.updateSectionHeader('projects', value)"
+        @edit-title="(value) => resumeStore.updateSectionHeader('projects', value, locale)"
     >
         <template #header-actions>
             <div

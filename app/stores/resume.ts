@@ -113,6 +113,34 @@ export const useResumeStore = defineStore('resume', {
             ];
             return sections.sort((a, b) => a.order - b.order);
         },
+        getLocalizedSectionHeader: (state) => (section: keyof SectionHeaders, locale: string, t: (key: string) => string): string => {
+            const data = state.activeResumeId ? state.resumes[state.activeResumeId]?.data : null;
+            if (!data) return '';
+
+            // Priority 1: Check i18n-specific header for current locale
+            if (data.sectionHeadersI18n?.[locale]?.[section]) {
+                return data.sectionHeadersI18n[locale][section] as string;
+            }
+
+            // Priority 2: Use translation (auto-switches with language)
+            const translationKeyMap: Record<string, string> = {
+                personalInfo: 'forms.personalInfo.title',
+                profile: 'forms.personalInfo.summary',
+                info: 'forms.personalInfo.title',
+                socialLinks: 'forms.personalInfo.socialLinks',
+                projects: 'forms.projects.title',
+                languages: 'forms.languages.title',
+                experience: 'forms.experience.title',
+                internships: 'forms.internships.title',
+                education: 'forms.education.title',
+                skills: 'forms.skills.title',
+                volunteering: 'forms.volunteering.title',
+                certificates: 'forms.certificates.title',
+            };
+
+            const translationKey = translationKeyMap[section];
+            return translationKey ? t(translationKey) : '';
+        },
     },
     actions: {
         initialize() {
@@ -807,11 +835,21 @@ export const useResumeStore = defineStore('resume', {
                 this.updateResumeData(this.activeResumeId, { sectionOrder: { ...newOrder } });
             }
         },
-        updateSectionHeader(section: keyof SectionHeaders, headerText: string) {
+        updateSectionHeader(section: keyof SectionHeaders, headerText: string, locale: string) {
             if (this.activeResumeId) {
                 const currentData = this.resumes[this.activeResumeId].data;
-                const newHeaders = { ...currentData.sectionHeaders, [section]: headerText };
-                this.updateResumeData(this.activeResumeId, { sectionHeaders: newHeaders });
+
+                // Initialize sectionHeadersI18n if it doesn't exist
+                const i18nHeaders = currentData.sectionHeadersI18n || {};
+
+                // Initialize locale object if it doesn't exist
+                const localeHeaders = i18nHeaders[locale] || {};
+
+                // Update the header for the current locale
+                const newLocaleHeaders = { ...localeHeaders, [section]: headerText };
+                const newI18nHeaders = { ...i18nHeaders, [locale]: newLocaleHeaders };
+
+                this.updateResumeData(this.activeResumeId, { sectionHeadersI18n: newI18nHeaders });
             }
         },
         updateSectionPlacement(section: keyof SectionPlacement, placement: 'left' | 'right') {

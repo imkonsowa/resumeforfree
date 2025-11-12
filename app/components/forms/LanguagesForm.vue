@@ -6,7 +6,7 @@
         :empty-message="t('forms.languages.emptyMessage')"
         section-key="languages"
         @add="resumeStore.addLanguage"
-        @edit-title="(value) => resumeStore.updateSectionHeader('languages', value)"
+        @edit-title="(value) => resumeStore.updateSectionHeader('languages', value, locale.value)"
     >
         <template #header-actions>
             <div
@@ -109,6 +109,6 @@ const templateConfig = useTemplate();
 const { t } = useI18n();
 
 const sectionHeaderTitle = computed(() => {
-    return t('forms.languages.title');
+    return resumeStore.getLocalizedSectionHeader('languages', locale.value, t);
 });
 </script>

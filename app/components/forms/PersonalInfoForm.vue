@@ -72,8 +72,8 @@
         </div>
         <div class="mt-6 space-y-4">
             <EditableHeader
-                :value="t('forms.personalInfo.summary')"
-                @update="(value) => resumeStore.updateSectionHeader('profile', value)"
+                :value="resumeStore.getLocalizedSectionHeader('profile', locale, t)"
+                @update="(value) => resumeStore.updateSectionHeader('profile', value, locale)"
             />
             <div class="space-y-2">
                 <Textarea
@@ -88,8 +88,8 @@
         <div class="mt-6 space-y-4">
             <div class="flex justify-between items-center">
                 <EditableHeader
-                    :value="t('forms.personalInfo.socialLinks')"
-                    @update="(value) => resumeStore.updateSectionHeader('socialLinks', value)"
+                    :value="resumeStore.getLocalizedSectionHeader('socialLinks', locale, t)"
+                    @update="(value) => resumeStore.updateSectionHeader('socialLinks', value, locale)"
                 />
                 <Button
                     size="sm"

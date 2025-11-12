@@ -124,6 +124,7 @@ export interface ResumeData {
     softSkills: string;
     sectionOrder: SectionOrder;
     sectionHeaders: SectionHeaders;
+    sectionHeadersI18n?: Record<string, Partial<SectionHeaders>>;
     sectionPlacement: SectionPlacement;
 }
 export interface Resume {

@@ -1,13 +1,13 @@
 <template>
     <FormContainer
         :is-empty="(resumeStore.resumeData.certificates?.length || 0) === 0"
-        :title="t('forms.certificates.title')"
+        :title="resumeStore.getLocalizedSectionHeader('certificates', locale, t)"
         :add-button-label="t('forms.certificates.addCertificate')"
         :empty-message="t('forms.certificates.emptyMessage')"
         section-key="certificates"
         collapsible
         @add="resumeStore.addCertificate"
-        @edit-title="(value) => resumeStore.updateSectionHeader('certificates', value)"
+        @edit-title="(value) => resumeStore.updateSectionHeader('certificates', value, locale)"
     >
         <template #header-actions>
             <div

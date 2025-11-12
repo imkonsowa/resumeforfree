@@ -1,12 +1,12 @@
 <template>
     <FormContainer
         :is-empty="resumeStore.resumeData.internships.length === 0"
-        :title="t('forms.internships.title')"
+        :title="resumeStore.getLocalizedSectionHeader('internships', locale, t)"
         :add-button-label="t('forms.internships.addInternship')"
         :empty-message="t('forms.internships.emptyMessage')"
         section-key="internships"
         @add="resumeStore.addInternship"
-        @edit-title="(value) => resumeStore.updateSectionHeader('internships', value)"
+        @edit-title="(value) => resumeStore.updateSectionHeader('internships', value, locale)"
     >
         <FormCard
             v-for="(internship, index) in resumeStore.resumeData.internships"
