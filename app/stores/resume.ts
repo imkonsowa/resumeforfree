@@ -159,15 +159,6 @@ export const useResumeStore = defineStore('resume', {
                     }
                 }
 
-                // Migrate existing sectionHeaders to sectionHeadersI18n for backward compatibility
-                // This ensures custom headers are preserved when switching languages
-                // Default to 'en' since we can't reliably detect locale during store initialization
-                if (!resume.data.sectionHeadersI18n && resume.data.sectionHeaders) {
-                    resume.data.sectionHeadersI18n = {
-                        en: { ...resume.data.sectionHeaders },
-                    };
-                }
-
                 if (!resume.data.sectionPlacement) {
                     resume.data.sectionPlacement = { ...defaultResumeData.sectionPlacement };
                 }

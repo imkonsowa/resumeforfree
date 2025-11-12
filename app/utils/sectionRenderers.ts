@@ -29,20 +29,28 @@ import {
 
 /**
  * Helper function to get localized section header
- * Priority 1: Check i18n-specific header for current locale
- * Priority 2: Use translation (auto-switches with language)
+ * Priority 1: Check new i18n-specific header for current locale
+ * Priority 2: Fallback to old single-locale header (backward compatibility)
+ * Priority 3: Use translation (auto-switches with language)
  */
 function getLocalizedSectionHeader(
     section: keyof SectionHeaders,
     data: ResumeData,
     context: RendererContext,
 ): string {
-    // Priority 1: Check i18n-specific header for current locale
-    if (data.sectionHeadersI18n?.[context.locale]?.[section]) {
-        return data.sectionHeadersI18n[context.locale][section] as string;
+    // Priority 1: Check new i18n-specific header for current locale
+    const i18nHeader = data.sectionHeadersI18n?.[context.locale]?.[section];
+    if (i18nHeader) {
+        return i18nHeader as string;
     }
 
-    // Priority 2: Use translation (auto-switches with language)
+    // Priority 2: Fallback to old single-locale header for backward compatibility
+    const oldHeader = data.sectionHeaders?.[section];
+    if (oldHeader) {
+        return oldHeader;
+    }
+
+    // Priority 3: Use translation (auto-switches with language)
     const translationKey = SECTION_TRANSLATION_MAP[section];
     return translationKey ? context.t(translationKey) : '';
 }

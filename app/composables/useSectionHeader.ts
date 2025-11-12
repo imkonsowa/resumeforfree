@@ -35,18 +35,29 @@ export function useSectionHeader() {
     /**
      * Get the localized section header for a given section
      * Returns a computed ref that automatically updates when locale changes
+     *
+     * Priority order:
+     * 1. New i18n-specific header (sectionHeadersI18n[locale][section])
+     * 2. Old single-locale header (sectionHeaders[section]) - backward compatibility
+     * 3. Default translation key from SECTION_TRANSLATION_MAP
      */
     const getSectionHeader = (section: keyof SectionHeaders) => {
         return computed(() => {
             const data = resumeStore.resumeData;
 
-            // Priority 1: Check if user has customized this header for current locale
-            const customHeader = data.sectionHeadersI18n?.[locale.value]?.[section];
-            if (customHeader) {
-                return customHeader as string;
+            // Priority 1: Check new i18n-specific header for current locale
+            const i18nHeader = data.sectionHeadersI18n?.[locale.value]?.[section];
+            if (i18nHeader) {
+                return i18nHeader as string;
             }
 
-            // Priority 2: Use default translation key
+            // Priority 2: Fallback to old single-locale header for backward compatibility
+            const oldHeader = data.sectionHeaders?.[section];
+            if (oldHeader) {
+                return oldHeader;
+            }
+
+            // Priority 3: Use default translation key
             const translationKey = SECTION_TRANSLATION_MAP[section];
             return translationKey ? t(translationKey) : '';
         });
