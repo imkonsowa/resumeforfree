@@ -15,7 +15,8 @@ export const useLanguageSwitcher = () => {
     const switchLanguage = (newLocale: string) => {
         setLocale(newLocale);
 
-        // Update document direction immediately
+        settingsStore.setLocale(newLocale);
+
         if (import.meta.client) {
             const localeConfig = locales.value.find(l => l.code === newLocale);
             const dir = localeConfig?.dir || 'ltr';
@@ -23,7 +24,6 @@ export const useLanguageSwitcher = () => {
             document.documentElement.dir = dir;
             document.documentElement.lang = newLocale;
 
-            // Update font to default for new language
             const newDefaultFont = getDefaultFontForLanguage(newLocale);
             settingsStore.setSelectedFont(newDefaultFont);
         }

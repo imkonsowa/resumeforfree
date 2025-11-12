@@ -143,6 +143,7 @@ export interface MultiResumeState {
 export interface AppSettings {
     selectedFont: string;
     selectedTemplate: string;
+    locale: string;
     isRawMode: boolean;
     showDownloadMenu: boolean;
     showFontMenu: boolean;
@@ -194,6 +195,7 @@ export const defaultResumeData: ResumeData = {
 export const defaultAppSettings: AppSettings = {
     selectedFont: 'Calibri',
     selectedTemplate: 'default',
+    locale: 'en',
     isRawMode: false,
     showDownloadMenu: false,
     showFontMenu: false,

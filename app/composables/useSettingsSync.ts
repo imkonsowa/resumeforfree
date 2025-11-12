@@ -2,6 +2,7 @@ export const useSettingsSync = () => {
     const settingsStore = useSettingsStore();
     const authStore = useAuthStore();
     const api = useApi();
+    const { setLocale } = useI18n();
     let syncTimeout: number | null = null;
     const DEBOUNCE_DELAY = 2000; // 2 seconds
 
@@ -21,6 +22,11 @@ export const useSettingsSync = () => {
 
             // Compare timestamps and use newer settings
             const serverWon = settingsStore.initializeFromServer(serverSettings, serverUpdatedAt);
+
+            if (serverWon && serverSettings.locale) {
+                // Server settings won and have a locale, apply it (i18n handles dir/lang updates)
+                setLocale(serverSettings.locale);
+            }
 
             if (!serverWon) {
                 // Local settings are newer, push to server

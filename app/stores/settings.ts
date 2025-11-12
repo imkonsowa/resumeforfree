@@ -41,6 +41,10 @@ export const useSettingsStore = defineStore('settings', {
             this.settings.selectedTemplate = template;
             this.updateTimestamp();
         },
+        setLocale(locale: string) {
+            this.settings.locale = locale;
+            this.updateTimestamp();
+        },
         toggleRawMode() {
             this.settings.isRawMode = !this.settings.isRawMode;
             this.updateTimestamp();
@@ -116,6 +120,11 @@ export const useSettingsStore = defineStore('settings', {
                     languages: true,
                     certificates: true,
                 };
+            }
+            // Initialize locale from i18n if not set
+            if (!this.settings.locale) {
+                const { locale } = useI18n();
+                this.settings.locale = locale.value;
             }
         },
         initializeFromServer(serverSettings: AppSettings, serverUpdatedAt: string) {
