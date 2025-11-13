@@ -2,7 +2,7 @@
     <Dialog
         v-model:open="isOpen"
     >
-        <DialogContent class="max-w-4xl h-[90vh]">
+        <DialogContent class="max-w-[80vw] w-[80vw] h-[90vh]">
             <DialogHeader>
                 <DialogTitle>{{ resumeName }}</DialogTitle>
                 <DialogDescription>
@@ -165,7 +165,7 @@ watch(() => props.modelValue, (newValue) => {
 <style scoped>
 .resume-preview-content :deep(svg) {
     width: 100% !important;
-    max-width: 794px !important;
+    max-width: 1200px !important;
     height: auto !important;
     display: block;
     margin: 0 auto;
