@@ -110,7 +110,6 @@ class TypstLoader {
 
     private async performInitialization(): Promise<void> {
         try {
-            console.log('Initializing Typst...');
             $typst.setCompilerInitOptions({
                 getModule: async () => {
                     const wasmUrl = new URL('@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm', import.meta.url);
@@ -122,14 +121,12 @@ class TypstLoader {
                 },
                 beforeBuild: [
                     preloadRemoteFonts([
-                        // English fonts
                         '/fonts/roboto-regular.ttf',
                         '/fonts/roboto-bold.ttf',
                         '/fonts/calibri-regular.ttf',
                         '/fonts/calibri-bold.ttf',
                         '/fonts/geist-bold.ttf',
                         '/fonts/geist-regular.ttf',
-                        // Arabic fonts
                         '/fonts/ar/naskh.ttf',
                         '/fonts/ar/naskh-bold.ttf',
                     ], { assets: false }),
@@ -145,7 +142,6 @@ class TypstLoader {
                     return await wasmResponse.arrayBuffer();
                 },
             });
-            console.log('Typst initialized successfully');
         }
         catch (error) {
             console.error('Failed to initialize Typst:', error);

@@ -17,15 +17,11 @@ interface ErrorHandlerOptions {
 export function useErrorHandler() {
     const { t } = useI18n();
 
-    /**
-     * Extract a readable error message from various error types
-     */
     const extractErrorMessage = (error: unknown): string => {
         if (error instanceof Error) {
             return error.message;
         }
 
-        // Handle API errors from $fetch
         if (typeof error === 'object' && error !== null) {
             const apiError = error as ApiError;
             return apiError?.data?.message
@@ -37,9 +33,6 @@ export function useErrorHandler() {
         return 'An unknown error occurred';
     };
 
-    /**
-     * Handle an error with configurable options
-     */
     const handleError = async (
         error: unknown,
         options: ErrorHandlerOptions = {},
@@ -70,9 +63,6 @@ export function useErrorHandler() {
         return errorMessage;
     };
 
-    /**
-     * Wrapper for async operations with automatic error handling
-     */
     const withErrorHandling = async <T>(
         operation: () => Promise<T>,
         options: ErrorHandlerOptions = {},

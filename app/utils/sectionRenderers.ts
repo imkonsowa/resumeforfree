@@ -27,37 +27,25 @@ import {
     wrapInSectionBlock,
 } from './layoutFormatters';
 
-/**
- * Helper function to get localized section header
- * Priority 1: Check new i18n-specific header for current locale
- * Priority 2: Fallback to old single-locale header (backward compatibility)
- * Priority 3: Use translation (auto-switches with language)
- */
 function getLocalizedSectionHeader(
     section: keyof SectionHeaders,
     data: ResumeData,
     context: RendererContext,
 ): string {
-    // Priority 1: Check new i18n-specific header for current locale
     const i18nHeader = data.sectionHeadersI18n?.[context.locale]?.[section];
     if (i18nHeader) {
         return i18nHeader as string;
     }
 
-    // Priority 2: Fallback to old single-locale header for backward compatibility
     const oldHeader = data.sectionHeaders?.[section];
     if (oldHeader) {
         return oldHeader;
     }
 
-    // Priority 3: Use translation (auto-switches with language)
     const translationKey = SECTION_TRANSLATION_MAP[section];
     return translationKey ? context.t(translationKey) : '';
 }
 
-/**
- * Render experience section using shared logic
- */
 export const renderSharedExperience: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     if (!data?.experiences || data.experiences.length === 0) {
         return '';
@@ -70,9 +58,6 @@ export const renderSharedExperience: SectionRenderer = (data: ResumeData, contex
     return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
 };
 
-/**
- * Render internships section using shared logic
- */
 export const renderSharedInternships: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     if (!data?.internships || data.internships.length === 0) {
         return '';
@@ -85,9 +70,6 @@ export const renderSharedInternships: SectionRenderer = (data: ResumeData, conte
     return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
 };
 
-/**
- * Render education section using shared logic
- */
 export const renderSharedEducation: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     if (!data?.education || data.education.length === 0) {
         return '';
@@ -100,9 +82,6 @@ export const renderSharedEducation: SectionRenderer = (data: ResumeData, context
     return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
 };
 
-/**
- * Render volunteering section using shared logic
- */
 export const renderSharedVolunteering: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     if (!data?.volunteering || data.volunteering.length === 0) {
         return '';
@@ -115,9 +94,6 @@ export const renderSharedVolunteering: SectionRenderer = (data: ResumeData, cont
     return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
 };
 
-/**
- * Render projects section using shared logic
- */
 export const renderSharedProjects: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     if (!data?.projects || data.projects.length === 0) {
         return '';
@@ -132,9 +108,6 @@ export const renderSharedProjects: SectionRenderer = (data: ResumeData, context:
     return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
 };
 
-/**
- * Render skills section using shared logic
- */
 export const renderSharedSkills: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     if (data?.skills && data.skills.length > 0) {
         const sectionContent = generateSkillsContent(data.skills);
@@ -150,7 +123,6 @@ export const renderSharedSkills: SectionRenderer = (data: ResumeData, context: R
         return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
     }
 
-    // Handle legacy technicalSkills format
     if (!data?.technicalSkills || data.technicalSkills.trim() === '') {
         return '';
     }
@@ -160,9 +132,6 @@ export const renderSharedSkills: SectionRenderer = (data: ResumeData, context: R
     return wrapInSectionBlock(headerText, content, context.fontSize, renderTemplateHeader);
 };
 
-/**
- * Render languages section using shared logic
- */
 export const renderSharedLanguages: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     if (!data?.languages || data.languages.length === 0) {
         return '';
@@ -181,9 +150,6 @@ export const renderSharedLanguages: SectionRenderer = (data: ResumeData, context
     return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
 };
 
-/**
- * Render contact info section using shared logic
- */
 export const renderSharedContactInfo: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     const sectionContent = generateContactContent(data);
     if (sectionContent.length === 0) return '';
@@ -194,9 +160,6 @@ export const renderSharedContactInfo: SectionRenderer = (data: ResumeData, conte
     return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
 };
 
-/**
- * Render social links section using shared logic
- */
 export const renderSharedSocialLinks: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     const sectionContent = generateSocialLinksContent(data);
     if (sectionContent.length === 0) return '';
@@ -204,7 +167,6 @@ export const renderSharedSocialLinks: SectionRenderer = (data: ResumeData, conte
     const formattedContent = formatSocialLinks(sectionContent, context.config.socialLinks);
     const headerText = getLocalizedSectionHeader('socialLinks', data, context);
 
-    // For horizontal links in header, don't wrap in section block
     if (context.config.socialLinks.placement === 'header' && context.config.socialLinks.orientation === 'horizontal') {
         return formattedContent;
     }
@@ -212,9 +174,6 @@ export const renderSharedSocialLinks: SectionRenderer = (data: ResumeData, conte
     return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
 };
 
-/**
- * Render profile/summary section using shared logic
- */
 export const renderSharedProfile: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     if (!data?.summary || !data.summary.trim()) {
         return '';
@@ -226,9 +185,6 @@ export const renderSharedProfile: SectionRenderer = (data: ResumeData, context: 
     return wrapInSectionBlock(headerText, content, context.fontSize, renderTemplateHeader);
 };
 
-/**
- * Render certificates section using shared logic
- */
 export const renderSharedCertificates: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     if (!data?.certificates || data.certificates.length === 0) {
         return '';
@@ -243,9 +199,6 @@ export const renderSharedCertificates: SectionRenderer = (data: ResumeData, cont
     return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
 };
 
-/**
- * Get all available shared section renderers
- */
 export const getSharedSectionRenderers = () => ({
     experience: renderSharedExperience,
     internships: renderSharedInternships,

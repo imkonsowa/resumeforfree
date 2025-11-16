@@ -1,4 +1,4 @@
-import type { ResumeData, SectionOrder, TemplateLayoutConfig } from '~/types/resume';
+import type { ResumeData, SectionOrder } from '~/types/resume';
 import type { TemplateSettings } from '~/types/templateConfig';
 import { COMPACT_LAYOUT_CONFIG } from '~/types/templateConfig';
 import { escapeTypstText } from '~/utils/stringUtils';
@@ -7,14 +7,8 @@ import { useSettingsStore } from '~/stores/settings';
 import { getSharedSectionRenderers } from '~/utils/sectionRenderers';
 import { RendererContext } from '~/utils/rendererContext';
 import { isRtlLocale } from '~/utils/localeUtils';
+import type { Template, TemplateContext } from './index';
 
-export interface Template {
-    id: string;
-    name: string;
-    description: string;
-    layoutConfig: TemplateLayoutConfig;
-    parse: (data: ResumeData, font: string, locale: string, t: (key: string) => string) => string;
-}
 const renderHeaderLeftColumn = (data: ResumeData, fontSize: number): string[] => {
     const rows: string[] = [];
     const fullName = `${escapeTypstText(data?.firstName || '')} ${escapeTypstText(data?.lastName || '')}`.trim();
@@ -99,25 +93,26 @@ const convertResumeHeader = (data: ResumeData, fontSize: number, isRtl = false) 
     }
     return headerParts.join('\n');
 };
-const parse = (data: ResumeData, font: string, locale = 'en', t: (key: string) => string): string => {
+const parse = (templateContext: TemplateContext): string => {
+    const { resumeData: data, font, locale, t } = templateContext;
     const settings: TemplateSettings = { font };
     const settingsStore = useSettingsStore();
     const fontSize = settingsStore.fontSize;
     const isRtl = isRtlLocale(locale);
 
     const config = COMPACT_LAYOUT_CONFIG;
-    const context = new RendererContext(t, fontSize, config, locale);
+    const rendererContext = new RendererContext(t, fontSize, config, locale);
     const sharedRenderers = getSharedSectionRenderers();
 
     const sectionRenderers: Record<string, () => string> = {
-        education: () => sharedRenderers.education(data, context),
-        experience: () => sharedRenderers.experience(data, context),
-        internships: () => sharedRenderers.internships(data, context),
-        skills: () => sharedRenderers.skills(data, context),
-        projects: () => sharedRenderers.projects(data, context),
-        volunteering: () => sharedRenderers.volunteering(data, context),
-        languages: () => sharedRenderers.languages(data, context),
-        certificates: () => sharedRenderers.certificates(data, context),
+        education: () => sharedRenderers.education(data, rendererContext),
+        experience: () => sharedRenderers.experience(data, rendererContext),
+        internships: () => sharedRenderers.internships(data, rendererContext),
+        skills: () => sharedRenderers.skills(data, rendererContext),
+        projects: () => sharedRenderers.projects(data, rendererContext),
+        volunteering: () => sharedRenderers.volunteering(data, rendererContext),
+        languages: () => sharedRenderers.languages(data, rendererContext),
+        certificates: () => sharedRenderers.certificates(data, rendererContext),
     };
     const sectionsToRender = Object.keys(sectionRenderers);
     const sortedSections = sectionsToRender.sort((a, b) => {

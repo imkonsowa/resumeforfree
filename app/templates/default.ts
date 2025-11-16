@@ -1,4 +1,4 @@
-import type { ResumeData, TemplateLayoutConfig } from '~/types/resume';
+import type { ResumeData } from '~/types/resume';
 import type { TemplateSettings } from '~/types/templateConfig';
 import { DEFAULT_LAYOUT_CONFIG } from '~/types/templateConfig';
 import { escapeTypstText } from '~/utils/stringUtils';
@@ -7,14 +7,8 @@ import { useSettingsStore } from '~/stores/settings';
 import { getSharedSectionRenderers } from '~/utils/sectionRenderers';
 import { RendererContext } from '~/utils/rendererContext';
 import { isRtlLocale } from '~/utils/localeUtils';
+import type { Template, TemplateContext } from './index';
 
-export interface Template {
-    id: string;
-    name: string;
-    description: string;
-    layoutConfig: TemplateLayoutConfig;
-    parse: (data: ResumeData, font: string, locale: string, t: (key: string) => string) => string;
-}
 const convertResumeHeader = (data: ResumeData, context: RendererContext, sharedRenderers: ReturnType<typeof getSharedSectionRenderers>) => {
     const fullName = `${escapeTypstText(data?.firstName || '')} ${escapeTypstText(data?.lastName || '')}`.trim();
     const position = escapeTypstText(data?.position || '');
@@ -24,27 +18,28 @@ const convertResumeHeader = (data: ResumeData, context: RendererContext, sharedR
 ${positionBlock}
 ${profileSection}`;
 };
-const parse = (data: ResumeData, font: string, locale = 'en', t: (key: string) => string): string => {
+const parse = (templateContext: TemplateContext): string => {
+    const { resumeData: data, font, locale, t } = templateContext;
     const settings: TemplateSettings = { font };
     const settingsStore = useSettingsStore();
     const fontSize = settingsStore.fontSize;
     const isRtl = isRtlLocale(locale);
 
     const config = DEFAULT_LAYOUT_CONFIG;
-    const context = new RendererContext(t, fontSize, config, locale);
+    const rendererContext = new RendererContext(t, fontSize, config, locale);
     const sharedRenderers = getSharedSectionRenderers();
 
     const allSections = {
-        experiences: () => sharedRenderers.experience(data, context),
-        internships: () => sharedRenderers.internships(data, context),
-        education: () => sharedRenderers.education(data, context),
-        contact: () => sharedRenderers.contactInfo(data, context),
-        socialLinks: () => sharedRenderers.socialLinks(data, context),
-        projects: () => sharedRenderers.projects(data, context),
-        languages: () => sharedRenderers.languages(data, context),
-        technicalSkills: () => sharedRenderers.skills(data, context),
-        volunteering: () => sharedRenderers.volunteering(data, context),
-        certificates: () => sharedRenderers.certificates(data, context),
+        experiences: () => sharedRenderers.experience(data, rendererContext),
+        internships: () => sharedRenderers.internships(data, rendererContext),
+        education: () => sharedRenderers.education(data, rendererContext),
+        contact: () => sharedRenderers.contactInfo(data, rendererContext),
+        socialLinks: () => sharedRenderers.socialLinks(data, rendererContext),
+        projects: () => sharedRenderers.projects(data, rendererContext),
+        languages: () => sharedRenderers.languages(data, rendererContext),
+        technicalSkills: () => sharedRenderers.skills(data, rendererContext),
+        volunteering: () => sharedRenderers.volunteering(data, rendererContext),
+        certificates: () => sharedRenderers.certificates(data, rendererContext),
     };
     const fixedLeftSections = ['experiences', 'internships', 'education'];
     const movableSections = ['projects', 'languages', 'technicalSkills', 'volunteering', 'certificates'];
@@ -101,7 +96,7 @@ const parse = (data: ResumeData, font: string, locale = 'en', t: (key: string) =
         allSections['socialLinks'](),
     ].filter(content => content.trim() !== '');
     const rightContent = [...staticRightContent, ...dynamicRightContent].join('\n\n');
-    const headerAndLeftContent = `${convertResumeHeader(data, context, sharedRenderers)}
+    const headerAndLeftContent = `${convertResumeHeader(data, rendererContext, sharedRenderers)}
 ${leftContent}`;
     const twoColumnLayout = convertGrid([headerAndLeftContent, rightContent], '(7fr, 3fr)');
 

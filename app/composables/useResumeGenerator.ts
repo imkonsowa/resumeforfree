@@ -1,5 +1,6 @@
 import { getTemplate } from '~/templates';
 import type { ResumeData } from '~/types/resume';
+import type { TemplateContext } from '~/templates';
 
 export const useResumeGenerator = () => {
     const { isReady: typstReady, isLoading: typstLoading } = useTypstLoader();
@@ -11,7 +12,13 @@ export const useResumeGenerator = () => {
         font = 'Calibri',
     ): string => {
         const template = getTemplate(templateId);
-        return template.parse(resumeData, font, locale.value, t);
+        const context: TemplateContext = {
+            resumeData,
+            font,
+            locale: locale.value,
+            t,
+        };
+        return template.parse(context);
     };
     const generatePreview = async (
         resumeData: ResumeData,
@@ -48,7 +55,6 @@ export const useResumeGenerator = () => {
             throw error;
         }
     };
-    // Shared filename builder
     const buildFilename = (resumeData: ResumeData, extension: string): string => {
         const firstName = resumeData.firstName || 'Resume';
         const lastName = resumeData.lastName || '';
@@ -57,7 +63,6 @@ export const useResumeGenerator = () => {
         return `${parts.join('_')}.${extension}`;
     };
 
-    // Generic download helper
     const downloadBlob = (blob: Blob, filename: string): void => {
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
@@ -67,7 +72,6 @@ export const useResumeGenerator = () => {
         URL.revokeObjectURL(url);
     };
 
-    // Generic async download function factory
     const createDownloader = <T>(
         generator: (resumeData: ResumeData, templateId: string, font: string) => Promise<T> | T,
         blobConfig: { type: string; extension: string },
@@ -90,7 +94,6 @@ export const useResumeGenerator = () => {
         };
     };
 
-    // Create all downloaders using the factory
     const downloadPDF = createDownloader(
         generatePDF,
         { type: 'application/pdf', extension: 'pdf' },

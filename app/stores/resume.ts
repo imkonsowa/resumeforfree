@@ -175,7 +175,6 @@ export const useResumeStore = defineStore('resume', {
             }
         },
 
-        // Resume management
         createResume(name?: string): string {
             const id = `resume-${this.nextId}`;
             const timestamp = new Date().toISOString();
@@ -263,7 +262,6 @@ export const useResumeStore = defineStore('resume', {
             }
         },
 
-        // Factory methods for creating CRUD operations
         createArrayCRUD<T>(
             arrayKey: keyof ResumeData,
             defaultItem: () => T,
@@ -290,7 +288,6 @@ export const useResumeStore = defineStore('resume', {
             );
         },
 
-        // Experience methods
         addExperience() {
             const crud = this.createArrayCRUD<Experience>('experiences', () => ({
                 company: '',
@@ -340,7 +337,6 @@ export const useResumeStore = defineStore('resume', {
             crud?.moveAchievement(experienceIndex, fromIndex, toIndex);
         },
 
-        // Internship methods
         addInternship() {
             const crud = this.createArrayCRUD<Internship>('internships', () => ({
                 company: '',
@@ -390,7 +386,6 @@ export const useResumeStore = defineStore('resume', {
             crud?.moveAchievement(internshipIndex, fromIndex, toIndex);
         },
 
-        // Education methods
         addEducation() {
             const crud = this.createArrayCRUD<Education>('education', () => ({
                 institution: '',
@@ -421,7 +416,6 @@ export const useResumeStore = defineStore('resume', {
             crud?.move(fromIndex, toIndex);
         },
 
-        // Volunteering methods
         addVolunteering() {
             const crud = this.createArrayCRUD<Volunteering>('volunteering', () => ({
                 organization: '',
@@ -470,7 +464,6 @@ export const useResumeStore = defineStore('resume', {
             crud?.moveAchievement(volunteeringIndex, fromIndex, toIndex);
         },
 
-        // Skills methods
         addSkill() {
             const crud = this.createArrayCRUD<SkillItem>('skills', () => ({
                 title: '',
@@ -494,7 +487,6 @@ export const useResumeStore = defineStore('resume', {
             crud?.move(fromIndex, toIndex);
         },
 
-        // Social Links methods
         addSocialLink() {
             const crud = this.createArrayCRUD<SocialLink>('socialLinks', () => ({
                 platform: 'linkedin',
@@ -519,7 +511,6 @@ export const useResumeStore = defineStore('resume', {
             crud?.move(fromIndex, toIndex);
         },
 
-        // Projects methods
         addProject() {
             const crud = this.createArrayCRUD<Project>('projects', () => ({
                 title: '',
@@ -544,7 +535,6 @@ export const useResumeStore = defineStore('resume', {
             crud?.move(fromIndex, toIndex);
         },
 
-        // Languages methods
         addLanguage() {
             const crud = this.createArrayCRUD<Language>('languages', () => ({
                 name: '',
@@ -568,7 +558,6 @@ export const useResumeStore = defineStore('resume', {
             crud?.move(fromIndex, toIndex);
         },
 
-        // Certificates methods
         addCertificate() {
             const crud = this.createArrayCRUD<Certificate>('certificates', () => ({
                 title: '',
@@ -594,7 +583,6 @@ export const useResumeStore = defineStore('resume', {
             crud?.move(fromIndex, toIndex);
         },
 
-        // Section management
         updateSectionOrder(newOrder: SectionOrder) {
             if (this.activeResumeId) {
                 this.updateResumeData(this.activeResumeId, { sectionOrder: { ...newOrder } });
@@ -664,7 +652,6 @@ export const useResumeStore = defineStore('resume', {
             }
         },
 
-        // Data operations
         setResumeData(data: ResumeData) {
             if (this.activeResumeId) {
                 this.updateResumeData(this.activeResumeId, data);
@@ -695,7 +682,6 @@ export const useResumeStore = defineStore('resume', {
             }
         },
 
-        // Server sync operations
         async fetchServerResumes() {
             this.isLoading = true;
             this.error = null;

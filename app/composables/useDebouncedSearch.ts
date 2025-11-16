@@ -57,37 +57,30 @@ export function useDebouncedSearch(options: UseDebouncedSearchOptions = {}): Use
     const isSearching = ref<boolean>(false);
     const abortController = ref<AbortController | null>(null);
 
-    let debounceTimeout: NodeJS.Timeout | null = null;
+    let debounceTimeout: ReturnType<typeof setTimeout> | null = null;
 
-    // Watch for search query changes
     watch(searchQuery, (newQuery) => {
-        // Clear existing timeout
         if (debounceTimeout) {
             clearTimeout(debounceTimeout);
         }
 
-        // Abort any pending requests
         if (abortController.value) {
             abortController.value.abort();
             abortController.value = null;
         }
 
-        // If query is empty or below minimum length, clear immediately
         if (!newQuery || newQuery.length < minLength) {
             debouncedQuery.value = '';
             isSearching.value = false;
             return;
         }
 
-        // Set debounced value after delay
         debounceTimeout = setTimeout(() => {
             debouncedQuery.value = newQuery;
-            // Create new AbortController for the upcoming request
             abortController.value = new AbortController();
         }, debounceMs);
     });
 
-    // Cleanup on unmount
     onUnmounted(() => {
         if (debounceTimeout) {
             clearTimeout(debounceTimeout);
