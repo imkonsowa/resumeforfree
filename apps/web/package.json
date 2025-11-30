@@ -1,0 +1,30 @@
+{
+  "name": "@resume-builder/web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "deploy": "nuxt build && wrangler deploy",
+    "deploy:staging": "nuxt build && wrangler deploy --env staging",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "preview": "nuxt preview"
+  },
+  "dependencies": {
+    "@cloudflare/workers-types": "^4.20250906.0",
+    "@tsndr/cloudflare-worker-jwt": "^2.5.2",
+    "@vite-pwa/nuxt": "^1.0.4",
+    "@nuxtjs/turnstile": "^1.0.0",
+    "bcryptjs": "^2.4.3",
+    "drizzle-orm": "^0.44.7",
+    "nitro-cloudflare-dev": "^0.2.2"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.6.0",
+    "@types/bcryptjs": "^2.4.6",
+    "eslint": "^9.0.0",
+    "wrangler": "^4.25.0"
+  }
+}
