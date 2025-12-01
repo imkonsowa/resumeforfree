@@ -9,6 +9,17 @@
             </DialogHeader>
 
             <div class="space-y-6 py-4">
+                <!-- Language Selection -->
+                <div class="space-y-2">
+                    <LanguageSelector
+                        variant="select"
+                        show-label
+                    />
+                    <p class="text-sm text-muted-foreground">
+                        {{ t('settings.language.description') }}
+                    </p>
+                </div>
+
                 <!-- Template Selection -->
                 <div class="space-y-2">
                     <Label for="template">{{ t('settings.template.label') }}</Label>

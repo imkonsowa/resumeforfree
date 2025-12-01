@@ -235,7 +235,7 @@ import FormContainer from '~/components/elements/FormContainer.vue';
 import ConfirmationModal from '~/components/elements/ConfirmationModal.vue';
 import EditableHeader from '~/components/elements/EditableHeader.vue';
 
-const { t, locale } = useI18n();
+const { t } = useI18n();
 
 const SOCIAL_PLATFORMS = computed(() => [
     { value: 'linkedin', label: t('platforms.linkedin'), icon: Linkedin },

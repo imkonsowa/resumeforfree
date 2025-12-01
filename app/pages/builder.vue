@@ -3,6 +3,7 @@ import { useResumeStore } from '~/stores/resume';
 import { EyeIcon, FileText } from 'lucide-vue-next';
 import { Button } from '~/components/ui/button';
 import ZoomControls from '~/components/elements/ZoomControls.vue';
+import LanguageSelector from '~/components/elements/LanguageSelector.vue';
 import ResumeBuilderHeader from '~/components/elements/ResumeBuilderHeader.vue';
 import PersonalInfoForm from '~/components/forms/PersonalInfoForm.vue';
 import ExperienceForm from '~/components/forms/ExperienceForm.vue';
@@ -314,15 +315,26 @@ const orderedSections = computed(() => {
                         </ClientOnly>
                     </div>
                 </div>
-                <Button
+                <!-- Mobile FAB buttons -->
+                <div
                     v-if="!showMobilePreview"
-                    class="lg:hidden fixed bottom-6 right-6 z-40 h-14 px-4 rounded-full shadow-lg flex items-center space-x-2"
-                    size="default"
-                    @click="showMobilePreview = true"
+                    class="lg:hidden fixed bottom-6 right-6 z-40 flex items-center gap-2"
                 >
-                    <EyeIcon class="h-5 w-5" />
-                    <span class="text-sm font-medium">{{ t('common.preview') }}</span>
-                </Button>
+                    <LanguageSelector
+                        variant="icon-only"
+                        size="md"
+                        button-class="bg-black text-white border-black hover:bg-gray-800 shadow-lg"
+                    />
+                    <Button
+                        class="h-9 w-9 p-0 bg-black text-white border-black hover:bg-gray-800 shadow-lg"
+                        variant="outline"
+                        size="default"
+                        @click="showMobilePreview = true"
+                    >
+                        <EyeIcon class="h-4 w-4" />
+                        <span class="sr-only">{{ t('common.preview') }}</span>
+                    </Button>
+                </div>
                 <div
                     v-if="showMobilePreview"
                     class="lg:hidden fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-50"
@@ -334,6 +346,10 @@ const orderedSections = computed(() => {
                                     {{ t('builder.resumePreview') }}
                                 </h3>
                                 <div class="flex items-center gap-2">
+                                    <LanguageSelector
+                                        variant="icon-only"
+                                        size="sm"
+                                    />
                                     <ZoomControls
                                         :max-zoom="maxZoom"
                                         :min-zoom="minZoom"

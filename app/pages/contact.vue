@@ -215,14 +215,15 @@ const handleSubmit = async () => {
         formSubmitted.value = true;
         toast.success(t('contact.success.toast'));
     }
-    catch (error: any) {
+    catch (error: unknown) {
         console.error('Contact form submission error:', error);
+        const err = error as { statusCode?: number };
 
         // Handle specific error messages
-        if (error.statusCode === 429) {
+        if (err.statusCode === 429) {
             errorMessage.value = t('contact.errors.rateLimit');
         }
-        else if (error.statusCode === 400) {
+        else if (err.statusCode === 400) {
             errorMessage.value = t('contact.errors.validation');
         }
         else {

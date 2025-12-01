@@ -18,9 +18,9 @@ export default defineEventHandler(async (event) => {
         // Build WHERE clause for search
         const whereCondition = search
             ? or(
-                like(resumes.name, `%${search}%`),
-                like(users.email, `%${search}%`),
-            )
+                    like(resumes.name, `%${search}%`),
+                    like(users.email, `%${search}%`),
+                )
             : undefined;
 
         // Get total count and resumes in parallel

@@ -1,21 +1,13 @@
 <script lang="ts" setup>
-import { Edit, FileText, Github, HelpCircle, Languages, LogOut, Mail, Menu, User, X, LayoutDashboard } from 'lucide-vue-next';
+import { Edit, FileText, Github, HelpCircle, LogOut, Mail, Menu, User, X, LayoutDashboard } from 'lucide-vue-next';
+import LanguageSelector from '~/components/elements/LanguageSelector.vue';
 import { Toaster } from '@/components/ui/sonner';
 import { Button } from '@/components/ui/button';
 import 'vue-sonner/style.css';
 
-const { t, locale, locales } = useI18n();
-const { switchLanguage } = useLanguageSwitcher();
-
-const localesList = computed(() => {
-    return locales.value.map(l => ({
-        code: l.code,
-        name: l.name || l.code,
-    }));
-});
+const { t } = useI18n();
 
 const authStore = useAuthStore();
-const settingsStore = useSettingsStore();
 const isMobileMenuOpen = ref(false);
 const { initializeSettingsFromServer, startSettingsSync, stopSettingsSync } = useSettingsSync();
 
@@ -43,7 +35,8 @@ watch(
         if (isAuthenticated) {
             await initializeSettingsFromServer();
             startSettingsSync();
-        } else {
+        }
+        else {
             stopSettingsSync();
         }
     },
@@ -94,22 +87,10 @@ watch(
                             </ClientOnly>
 
                             <!-- Language Selector -->
-                            <div class="relative flex items-center space-x-1 md:space-x-2 text-gray-600 hover:text-gray-900 transition-colors">
-                                <Languages class="w-4 h-4" />
-                                <select
-                                    :value="locale"
-                                    class="bg-transparent border-none text-sm font-medium cursor-pointer focus:outline-none"
-                                    @change="(e) => switchLanguage((e.target as HTMLSelectElement).value)"
-                                >
-                                    <option
-                                        v-for="loc in localesList"
-                                        :key="loc.code"
-                                        :value="loc.code"
-                                    >
-                                        {{ loc.name }}
-                                    </option>
-                                </select>
-                            </div>
+                            <LanguageSelector
+                                variant="minimal"
+                                show-icon
+                            />
                         </div>
                     </div>
                     <div class="hidden md:flex items-center space-x-2 md:space-x-6">

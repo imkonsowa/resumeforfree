@@ -1,11 +1,10 @@
 <script lang="ts" setup>
 import { Button } from '~/components/ui/button';
-import { Check, Download, FileText, Shield, Users, Zap, Languages } from 'lucide-vue-next';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '~/components/ui/select';
+import { Check, Download, FileText, Shield, Users, Zap } from 'lucide-vue-next';
+import LanguageSelector from '~/components/elements/LanguageSelector.vue';
 import { createSoftwareApplicationStructuredData, createWebsiteStructuredData } from '~/composables/useSEO';
 
-const { t, locale, locales } = useI18n();
-const { switchLanguage } = useLanguageSwitcher();
+const { t } = useI18n();
 
 useHead({
     title: t('homepage.heroTitle'),
@@ -123,24 +122,11 @@ useHead({
                         {{ t('common.buildNow') }}
                     </Button>
                 </NuxtLink>
-                <Select
-                    :model-value="locale"
-                    @update:model-value="switchLanguage"
-                >
-                    <SelectTrigger class="w-[180px]">
-                        <Languages class="w-4 h-4 me-2" />
-                        <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                        <SelectItem
-                            v-for="lang in locales"
-                            :key="lang.code"
-                            :value="lang.code"
-                        >
-                            {{ lang.name }}
-                        </SelectItem>
-                    </SelectContent>
-                </Select>
+                <LanguageSelector
+                    variant="select"
+                    show-icon
+                    width="w-[180px]"
+                />
             </div>
             <p class="text-xs text-gray-500">
                 By using this website you agree to

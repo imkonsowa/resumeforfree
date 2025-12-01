@@ -57,7 +57,7 @@ export function useDebouncedSearch(options: UseDebouncedSearchOptions = {}): Use
     const isSearching = ref<boolean>(false);
     const abortController = ref<AbortController | null>(null);
 
-    let debounceTimeout: NodeJS.Timeout | null = null;
+    let debounceTimeout: ReturnType<typeof setTimeout> | null = null;
 
     // Watch for search query changes
     watch(searchQuery, (newQuery) => {

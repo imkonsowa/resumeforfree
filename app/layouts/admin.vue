@@ -96,7 +96,6 @@ import { Button } from '~/components/ui/button';
 const { t } = useI18n();
 const route = useRoute();
 const authStore = useAuthStore();
-const router = useRouter();
 
 const navigationItems = [
     {

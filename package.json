@@ -14,7 +14,11 @@
     "postinstall": "nuxt prepare",
     "db:generate": "drizzle-kit generate",
     "db:push": "drizzle-kit push",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "test": "vitest",
+    "test:unit": "vitest run --config vitest.config.ts",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
     "@cloudflare/workers-types": "^4.20250906.0",
@@ -52,10 +56,14 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.6.0",
+    "@nuxt/test-utils": "^3.20.1",
+    "@playwright/test": "^1.57.0",
     "@types/bcryptjs": "^2.4.6",
     "drizzle-kit": "^0.31.6",
     "eslint": "^9.0.0",
+    "happy-dom": "^20.0.11",
     "typescript": "^5.8.3",
+    "vitest": "^3.2.4",
     "wrangler": "^4.25.0"
   }
 }

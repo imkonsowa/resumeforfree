@@ -55,8 +55,8 @@ export default defineEventHandler(async (event) => {
             message: 'User role updated',
         };
     }
-    catch (error: any) {
-        if (error.statusCode) {
+    catch (error: unknown) {
+        if ((error as { statusCode?: number }).statusCode) {
             throw error;
         }
         console.error('Error updating user role:', error);

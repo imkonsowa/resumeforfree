@@ -39,8 +39,8 @@ export default defineEventHandler(async (event) => {
             message: 'Resume deleted',
         };
     }
-    catch (error: any) {
-        if (error.statusCode) {
+    catch (error: unknown) {
+        if ((error as { statusCode?: number }).statusCode) {
             throw error;
         }
         console.error('Error deleting resume:', error);

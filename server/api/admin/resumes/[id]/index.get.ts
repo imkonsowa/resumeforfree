@@ -64,8 +64,8 @@ export default defineEventHandler(async (event) => {
             updated_at: result.updated_at,
         };
     }
-    catch (error: any) {
-        if (error.statusCode) {
+    catch (error: unknown) {
+        if ((error as { statusCode?: number }).statusCode) {
             throw error;
         }
         console.error('Error fetching resume:', error);

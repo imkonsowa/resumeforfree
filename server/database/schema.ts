@@ -17,7 +17,7 @@ export const users = sqliteTable('users', {
     role: text('role', { enum: ['user', 'admin'] }).default('user').notNull(),
     createdAt: text('created_at').default(sql`CURRENT_TIMESTAMP`),
     updatedAt: text('updated_at').default(sql`CURRENT_TIMESTAMP`),
-}, (table) => ({
+}, table => ({
     emailIdx: index('idx_users_email').on(table.email),
     roleIdx: index('idx_users_role').on(table.role),
 }));
@@ -36,7 +36,7 @@ export const resumes = sqliteTable('resumes', {
     settings: text('settings', { mode: 'json' }).$type<AppSettings>(),
     createdAt: text('created_at').default(sql`CURRENT_TIMESTAMP`),
     updatedAt: text('updated_at').default(sql`CURRENT_TIMESTAMP`),
-}, (table) => ({
+}, table => ({
     userIdIdx: index('idx_resumes_user_id').on(table.userId),
     userActiveIdx: index('idx_resumes_user_active').on(table.userId, table.isActive),
 }));
@@ -48,10 +48,10 @@ export const resumes = sqliteTable('resumes', {
 export const userSettings = sqliteTable('user_settings', {
     id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID().replace(/-/g, '')),
     userId: text('user_id').notNull().unique().references(() => users.id, { onDelete: 'cascade' }),
-    settings: text('settings', { mode: 'json' }).$type<Record<string, any>>().notNull(),
+    settings: text('settings', { mode: 'json' }).$type<Record<string, unknown>>().notNull(),
     createdAt: text('created_at').default(sql`CURRENT_TIMESTAMP`),
     updatedAt: text('updated_at').default(sql`CURRENT_TIMESTAMP`),
-}, (table) => ({
+}, table => ({
     userIdIdx: index('idx_user_settings_user_id').on(table.userId),
 }));
 
@@ -70,7 +70,7 @@ export const contactMessages = sqliteTable('contact_messages', {
     userAgent: text('user_agent'),
     createdAt: text('created_at').default(sql`CURRENT_TIMESTAMP`),
     updatedAt: text('updated_at').default(sql`CURRENT_TIMESTAMP`),
-}, (table) => ({
+}, table => ({
     statusIdx: index('idx_contact_messages_status').on(table.status),
     createdAtIdx: index('idx_contact_messages_created_at').on(table.createdAt),
     emailIdx: index('idx_contact_messages_email').on(table.email),

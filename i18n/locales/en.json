@@ -206,6 +206,10 @@
         "fontSize": {
             "label": "Font Size",
             "description": "Adjust the base font size for your resume (default: 14pt)"
+        },
+        "language": {
+            "label": "Language",
+            "description": "Choose the language for your resume"
         }
     },
     "forms": {
