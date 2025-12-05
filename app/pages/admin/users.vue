@@ -67,9 +67,6 @@
                                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     {{ $t('admin.users.createdAt') }}
                                 </th>
-                                <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    {{ $t('common.actions') }}
-                                </th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
@@ -101,15 +98,6 @@
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
                                     {{ formatDate(user.created_at) }}
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <Button
-                                        variant="destructive"
-                                        size="sm"
-                                        @click="confirmDelete(user.id)"
-                                    >
-                                        {{ $t('common.delete') }}
-                                    </Button>
                                 </td>
                             </tr>
                         </tbody>
