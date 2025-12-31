@@ -3,15 +3,34 @@
         <div class="max-w-md w-full space-y-8">
             <div class="text-center">
                 <h1 class="text-3xl font-bold text-gray-900">
-                    {{ $t('auth.signIn') }}
+                    {{ $t('auth.forgotPasswordTitle') }}
                 </h1>
                 <p class="mt-2 text-gray-600">
-                    {{ $t('auth.signInDescription') }}
+                    {{ $t('auth.forgotPasswordDescription') }}
                 </p>
             </div>
+
+            <!-- Success State -->
+            <div
+                v-if="success"
+                class="mt-6 p-6 border border-green-200 rounded-lg bg-green-50 text-center"
+            >
+                <div class="flex justify-center mb-4">
+                    <CheckCircle class="h-12 w-12 text-green-500" />
+                </div>
+                <h2 class="text-lg font-semibold text-green-800 mb-2">
+                    {{ $t('auth.resetLinkSent') }}
+                </h2>
+                <p class="text-sm text-green-700">
+                    {{ $t('auth.resetLinkSentDescription') }}
+                </p>
+            </div>
+
+            <!-- Form -->
             <form
+                v-else
                 class="mt-6 space-y-6 p-6 border border-gray-200 rounded-lg bg-white"
-                @submit.prevent="handleLogin"
+                @submit.prevent="handleSubmit"
             >
                 <div class="space-y-4">
                     <div>
@@ -21,18 +40,6 @@
                             v-model="email"
                             type="email"
                             :placeholder="$t('auth.enterEmail')"
-                            required
-                            :disabled="loading"
-                            class="mt-1"
-                        />
-                    </div>
-                    <div>
-                        <Label for="password">{{ $t('auth.password') }}</Label>
-                        <Input
-                            id="password"
-                            v-model="password"
-                            type="password"
-                            :placeholder="$t('auth.enterPassword')"
                             required
                             :disabled="loading"
                             class="mt-1"
@@ -52,7 +59,7 @@
                         v-if="loading"
                         class="mr-2 h-4 w-4 animate-spin"
                     />
-                    {{ $t('auth.signIn') }}
+                    {{ loading ? $t('auth.sendingResetLink') : $t('auth.sendResetLink') }}
                 </Button>
                 <div
                     v-if="error"
@@ -60,25 +67,15 @@
                 >
                     {{ error }}
                 </div>
-                <div class="text-center">
-                    <NuxtLink
-                        to="/auth/forgot-password"
-                        class="text-sm text-blue-600 hover:text-blue-500 hover:underline"
-                    >
-                        {{ $t('auth.forgotPassword') }}
-                    </NuxtLink>
-                </div>
             </form>
+
             <div class="text-center">
-                <p class="text-sm text-gray-600">
-                    {{ $t('auth.dontHaveAccount') }}
-                    <NuxtLink
-                        to="/auth/register"
-                        class="font-medium text-blue-600 hover:text-blue-500 hover:underline"
-                    >
-                        {{ $t('auth.signUp') }}
-                    </NuxtLink>
-                </p>
+                <NuxtLink
+                    to="/auth/login"
+                    class="text-sm font-medium text-blue-600 hover:text-blue-500 hover:underline"
+                >
+                    {{ $t('auth.backToSignIn') }}
+                </NuxtLink>
             </div>
         </div>
     </div>
@@ -88,36 +85,51 @@
 import { Button } from '~/components/ui/button';
 import { Input } from '~/components/ui/input';
 import { Label } from '~/components/ui/label';
-import { Loader2 } from 'lucide-vue-next';
+import { Loader2, CheckCircle } from 'lucide-vue-next';
 import TurnstileWidget from '~/components/elements/TurnstileWidget.vue';
 
 const { t } = useI18n();
-const authStore = useAuthStore();
-const router = useRouter();
+
 const email = ref('');
-const password = ref('');
 const turnstileToken = ref<string | null>(null);
 const turnstileWidgetRef = ref();
 const loading = ref(false);
 const error = ref('');
-const handleLogin = async () => {
+const success = ref(false);
+
+const handleSubmit = async () => {
     if (loading.value || !turnstileToken.value) return;
+
     loading.value = true;
     error.value = '';
-    const result = await authStore.login(email.value, password.value, turnstileToken.value);
-    if (result.success) {
-        router.push('/resumes');
+
+    try {
+        const response = await $fetch('/api/auth/forgot-password', {
+            method: 'POST',
+            body: {
+                email: email.value,
+                turnstileToken: turnstileToken.value,
+            },
+        });
+
+        if (response.success) {
+            success.value = true;
+        }
     }
-    else {
-        error.value = result.error || t('auth.loginFailed');
+    catch (err: unknown) {
+        const fetchError = err as { data?: { message?: string } };
+        error.value = fetchError.data?.message || t('auth.resetPasswordError');
+        turnstileWidgetRef.value?.reset();
     }
-    loading.value = false;
-    turnstileWidgetRef.value?.reset();
+    finally {
+        loading.value = false;
+    }
 };
+
 useHead({
-    title: `${t('auth.signIn')} - Resume For Free`,
+    title: `${t('auth.forgotPasswordTitle')} - Resume Builder`,
     meta: [
-        { name: 'description', content: t('auth.signInDescription') },
+        { name: 'description', content: t('auth.forgotPasswordDescription') },
     ],
 });
 </script>

@@ -60,7 +60,7 @@
     "homepage": {
         "title": "Build Your Resume",
         "subtitle": "For Free",
-        "heroTitle": "Free Resume Builder - No Registration Required | Privacy-First Resume Maker",
+        "heroTitle": "Resume For Free - No Registration Required | Privacy-First Resume Maker",
         "heroDescription": "Build professional resumes for free with complete privacy. No servers, no registration, no payments. Unlimited downloads and resumes. Everything runs locally on your device.",
         "features": {
             "free": {
@@ -154,14 +154,14 @@
     },
     "builder": {
         "title": "Resume Builder",
-        "pageTitle": "Resume Builder - Create Professional Resumes Online | Free, Unlimited and Private",
+        "pageTitle": "Resume For Free - Create Professional Resumes Online | Free, Unlimited and Private",
         "pageDescription": "Build professional resumes online with our free resume builder. Real-time preview, instant PDF generation, unlimited downloads. No registration required, complete privacy.",
         "sections": "Sections",
         "resumePreview": "Resume Preview",
         "noResumeSelected": "No Resume Selected",
         "noResumeDescription": "To start building your resume, you need to create or select a resume first. Go to your resumes page to create your first resume.",
         "goToResumesPage": "Go to Resumes Page",
-        "defaultTitle": "Resume Builder",
+        "defaultTitle": "Resume For Free",
         "expand": "Expand",
         "collapse": "Collapse",
         "syncToCloud": "Sync to Cloud",
@@ -385,7 +385,23 @@
         "changingPassword": "Changing Password...",
         "changePassword": "Change Password",
         "clearForm": "Clear Form",
-        "passwordMinLengthHint": "Password must be at least 8 characters long"
+        "passwordMinLengthHint": "Password must be at least 8 characters long",
+        "forgotPassword": "Forgot Password?",
+        "forgotPasswordTitle": "Reset Your Password",
+        "forgotPasswordDescription": "Enter your email address and we'll send you a link to reset your password",
+        "sendResetLink": "Send Reset Link",
+        "sendingResetLink": "Sending...",
+        "resetLinkSent": "Reset Link Sent!",
+        "resetLinkSentDescription": "Check your email for a link to reset your password. If you don't see it, check your spam folder.",
+        "resetPassword": "Reset Password",
+        "resettingPassword": "Resetting...",
+        "resetPasswordDescription": "Enter your new password below",
+        "resetPasswordSuccess": "Password reset successfully! Redirecting...",
+        "resetPasswordError": "Failed to reset password",
+        "invalidResetLink": "Invalid or expired reset link",
+        "backToSignIn": "Back to Sign In",
+        "tooManyRequests": "Too many requests. Please try again later.",
+        "rateLimitWait": "Please wait before requesting another reset link."
     },
     "profile": {
         "title": "Profile Settings",
@@ -399,7 +415,7 @@
         "pleaseFixErrors": "Please fix the following errors:"
     },
     "resumes": {
-        "pageTitle": "Your Resumes - Manage Multiple Professional Resumes | Free Resume Builder",
+        "pageTitle": "Your Resumes - Manage Multiple Professional Resumes | Resume For Free",
         "pageDescription": "Manage unlimited resumes in one place. Create, edit, duplicate, and organize professional resumes for free. No storage limits, complete privacy.",
         "title": "Your Resumes",
         "resumeCount": {
@@ -572,7 +588,7 @@
             "text": "You can also reach us directly at"
         },
         "seo": {
-            "title": "Contact Us - Get Help with Free Resume Builder | Support",
+            "title": "Contact Us - Get Help with Resume For Free | Support",
             "description": "Need help with our free resume builder? Contact our support team for assistance with creating professional resumes. Fast and friendly customer service."
         }
     },

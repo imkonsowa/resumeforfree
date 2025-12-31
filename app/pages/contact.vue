@@ -262,7 +262,7 @@ useHead({
         },
         {
             property: 'og:site_name',
-            content: 'Free Resume Builder',
+            content: 'Resume For Free',
         },
         {
             property: 'og:title',
