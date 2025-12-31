@@ -30,7 +30,7 @@ export default defineNuxtConfig({
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
                 { name: 'format-detection', content: 'telephone=no' },
                 { name: 'robots', content: 'index, follow' },
-                { name: 'author', content: 'Resume Builder' },
+                { name: 'author', content: 'Resume For Free' },
                 { name: 'theme-color', content: '#3b82f6' },
             ],
         },
@@ -40,7 +40,7 @@ export default defineNuxtConfig({
 
     site: {
         url: 'https://resumeforfree.com',
-        name: 'Resume Builder',
+        name: 'Resume For Free',
         description: 'Build professional resumes for free. No servers, no registration, no payments. Unlimited downloads and resumes with complete privacy.',
         defaultLocale: 'en',
     },
@@ -131,8 +131,8 @@ export default defineNuxtConfig({
 
     pwa: {
         manifest: {
-            name: 'Resume Builder',
-            short_name: 'Resume Builder',
+            name: 'Resume For Free',
+            short_name: 'Resume For Free',
             description: 'Build professional resumes for free',
             theme_color: '#3b82f6',
             background_color: '#ffffff',

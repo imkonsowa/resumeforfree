@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 useHead({
-    title: 'Terms and Conditions - Free Resume Builder',
+    title: 'Terms and Conditions - Resume For Free',
     meta: [
         {
             name: 'description',
-            content: 'Terms and conditions for using the Free Resume Builder application.',
+            content: 'Terms and conditions for using the Resume For Free application.',
         },
     ],
 });
@@ -25,7 +25,7 @@ useHead({
             <div class="prose prose-lg max-w-none">
                 <h2>1. Acceptance of Terms</h2>
                 <p>
-                    By accessing and using the Free Resume Builder ("the Service"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+                    By accessing and using the Resume For Free ("the Service"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
                 </p>
 
                 <h2>2. Open Source Nature</h2>
