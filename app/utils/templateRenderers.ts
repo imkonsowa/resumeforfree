@@ -56,7 +56,9 @@ export const generateEducationContent = (education: Education[], t?: TranslateFu
         const at = t ? t('template.at') : ' at ';
         const separator = t ? t('template.separator') : ', ';
         const gradeLabel = t ? t('template.grade') : 'Grade:';
-        const title = `${edu.degree}${edu.institution ? ' ' + edu.institution : ''}${edu.location ? separator + edu.location : ''}`;
+        const title = edu.degree && edu.institution
+            ? `${edu.degree}${at}${edu.institution}${edu.location ? separator + edu.location : ''}`
+            : `${edu.degree || edu.institution}${edu.location ? separator + edu.location : ''}`;
         const dateRange = convertDateRange(edu.startDate, edu.endDate, edu.isPresent || false, t);
         let additionalInfo = '';
         if (edu.graduationScore && edu.graduationScore.trim()) {
