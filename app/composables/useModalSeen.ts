@@ -82,3 +82,4 @@ export const useModalSeenUtilities = () => {
     };
 };
 export const useFirstTimeModal = () => useModalSeen('firstTimeBuilder');
+export const useLanguageSelectionModal = () => useModalSeen('languageSelection');

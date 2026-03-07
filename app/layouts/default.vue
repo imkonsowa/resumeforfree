@@ -88,8 +88,8 @@ watch(
 
                             <!-- Language Selector -->
                             <LanguageSelector
-                                variant="minimal"
                                 show-icon
+                                button-variant="ghost"
                             />
                         </div>
                     </div>

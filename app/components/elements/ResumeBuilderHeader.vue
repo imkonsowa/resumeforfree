@@ -27,8 +27,8 @@
                     <span class="sm:hidden whitespace-nowrap">{{ isAnySyncing ? (activeResume.serverId ? t('builder.updating') : t('builder.syncing')) : (activeResume.serverId ? t('builder.update') : t('common.sync')) }}</span>
                 </Button>
                 <LanguageSelector
-                    variant="icon-only"
                     size="sm"
+                    show-icon
                 />
                 <Button
                     size="sm"

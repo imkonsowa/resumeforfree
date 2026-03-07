@@ -39,42 +39,36 @@
         </Select>
     </div>
 
-    <!-- Minimal Variant (for header navigation) -->
-    <div
-        v-else-if="variant === 'minimal'"
-        class="relative flex items-center gap-1 text-gray-600 hover:text-gray-900"
-    >
-        <Languages
-            v-if="showIcon"
-            class="w-4 h-4"
-        />
-        <select
-            :value="locale"
-            class="bg-transparent border-none text-sm font-medium cursor-pointer focus:outline-none appearance-none pe-4"
-            @change="(e) => switchLanguage((e.target as HTMLSelectElement).value)"
-        >
-            <option
-                v-for="lang in localesList"
-                :key="lang.code"
-                :value="lang.code"
-            >
-                {{ lang.name }}
-            </option>
-        </select>
-    </div>
-
-    <!-- Icon-Only Variant (for compact spaces) -->
-    <DropdownMenu v-else-if="variant === 'icon-only'">
+    <!-- Dropdown Variant (unified menu for all contexts) -->
+    <DropdownMenu v-else>
         <DropdownMenuTrigger as-child>
             <Button
-                variant="outline"
+                :variant="buttonVariant"
                 :size="size === 'sm' ? 'sm' : 'default'"
                 :class="[
-                    size === 'sm' ? 'h-8 w-8 p-0' : 'h-9 w-9 p-0',
+                    size === 'sm' ? 'h-8 gap-1 px-2' : 'h-9 gap-1.5 px-3',
                     buttonClass,
                 ]"
             >
-                <Languages class="h-4 w-4" />
+                <!-- Large screens: Icon + Full name -->
+                <template v-if="!responsive">
+                    <Languages
+                        v-if="showIcon"
+                        :class="size === 'sm' ? 'h-3.5 w-3.5' : 'h-4 w-4'"
+                    />
+                    <span class="text-sm font-medium">{{ currentLocaleName }}</span>
+                </template>
+                <!-- Responsive: Full name on large, short code on small -->
+                <template v-else>
+                    <Languages
+                        v-if="showIcon"
+                        class="hidden sm:block"
+                        :class="size === 'sm' ? 'h-3.5 w-3.5' : 'h-4 w-4'"
+                    />
+                    <span class="text-sm font-medium hidden sm:inline">{{ currentLocaleName }}</span>
+                    <span class="text-sm font-medium uppercase sm:hidden">{{ locale }}</span>
+                </template>
+                <ChevronDown :class="size === 'sm' ? 'h-3 w-3' : 'h-3.5 w-3.5'" />
                 <span class="sr-only">{{ t('settings.language.label') }}</span>
             </Button>
         </DropdownMenuTrigger>
@@ -93,34 +87,11 @@
             </DropdownMenuItem>
         </DropdownMenuContent>
     </DropdownMenu>
-
-    <!-- Button Group Variant -->
-    <div
-        v-else-if="variant === 'button-group'"
-        class="flex rounded-md border"
-    >
-        <button
-            v-for="(lang, index) in localesList"
-            :key="lang.code"
-            class="px-3 py-1.5 text-sm font-medium transition-colors"
-            :class="[
-                locale === lang.code
-                    ? 'bg-primary text-primary-foreground'
-                    : 'bg-background hover:bg-accent',
-                index === 0 ? 'rounded-s-md' : '',
-                index === localesList.length - 1 ? 'rounded-e-md' : '',
-                index !== 0 ? 'border-s' : '',
-            ]"
-            @click="switchLanguage(lang.code)"
-        >
-            {{ lang.code.toUpperCase() }}
-        </button>
-    </div>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue';
-import { Languages, Check } from 'lucide-vue-next';
+import { Languages, Check, ChevronDown } from 'lucide-vue-next';
 import { Button } from '~/components/ui/button';
 import { Label } from '~/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '~/components/ui/select';
@@ -133,18 +104,22 @@ import {
 
 // Props
 withDefaults(defineProps<{
-    variant?: 'select' | 'icon-only' | 'minimal' | 'button-group';
+    variant?: 'select' | 'dropdown';
     showLabel?: boolean;
     showIcon?: boolean;
+    responsive?: boolean;
     size?: 'sm' | 'md';
     buttonClass?: string;
+    buttonVariant?: 'outline' | 'ghost' | 'default';
     width?: string;
 }>(), {
-    variant: 'select',
+    variant: 'dropdown',
     showLabel: false,
     showIcon: false,
+    responsive: false,
     size: 'md',
     buttonClass: '',
+    buttonVariant: 'outline',
     width: '',
 });
 
@@ -158,5 +133,10 @@ const localesList = computed(() => {
         code: l.code,
         name: l.name || l.code,
     }));
+});
+
+const currentLocaleName = computed(() => {
+    const current = locales.value.find(l => l.code === locale.value);
+    return current?.name || locale.value;
 });
 </script>

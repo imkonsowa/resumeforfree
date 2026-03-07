@@ -43,6 +43,10 @@
         "emailAddress": "Email Address",
         "tryAgain": "Try Again"
     },
+    "languageModal": {
+        "title": "Select Your Language",
+        "description": "Choose your preferred language for the resume builder"
+    },
     "navigation": {
         "home": "Home",
         "builder": "Builder",
@@ -474,6 +478,17 @@
             "createNew": "Create New Resume"
         },
         "modals": {
+            "firstTime": {
+                "title": "Save to Cloud?",
+                "description": "Your data is saved locally by default. Create a free account to sync across devices.",
+                "accessAnywhere": "Access from any device",
+                "autoBackup": "Automatic backup",
+                "freeResumes": "Up to 3 resumes free",
+                "signUp": "Sign Up",
+                "login": "Login",
+                "continueLocally": "Save to local browser",
+                "dontShowAgain": "Don't show again"
+            },
             "create": {
                 "title": "Create New Resume",
                 "resumeName": "Resume Name",
@@ -515,6 +530,28 @@
                 "edu": "edu",
                 "projects": "projects",
                 "noSections": "No sections"
+            },
+            "cloudSyncPrompt": {
+                "title": "Save Your Resume to the Cloud?",
+                "description": "Your resume is currently saved locally. Would you like to sync it to the cloud?",
+                "benefits": {
+                    "title": "Benefits of Cloud Sync",
+                    "accessAnywhere": "Access your resume from any device",
+                    "autoBackup": "Automatic backup and protection",
+                    "realTimeSync": "Real-time synchronization",
+                    "neverLose": "Never lose your work"
+                },
+                "limit": {
+                    "title": "Cloud Storage Limit",
+                    "description": "You can save up to 3 resumes to the cloud with your free account. You currently have {remaining} slot(s) available."
+                },
+                "local": {
+                    "title": "Continue with Local Storage",
+                    "description": "Your resume will remain saved locally in this browser. You can enable cloud sync anytime from the resume settings."
+                },
+                "dontAskAgain": "Don't ask me again for this resume",
+                "enableSync": "Enable Cloud Sync",
+                "keepLocal": "Keep Local Only"
             },
             "delete": {
                 "title": "Delete Resume",

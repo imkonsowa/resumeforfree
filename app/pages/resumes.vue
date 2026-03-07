@@ -61,9 +61,14 @@ const importInputRef = ref<HTMLInputElement>();
 const createNewResume = () => {
     showCreateModal.value = true;
 };
+const getDefaultResumeName = () => {
+    if (!authStore.isLoggedIn) return 'Untitled Resume';
+    const userName = authStore.user?.name?.trim();
+    return userName ? `${userName} - Resume` : 'Untitled Resume';
+};
 const handleCreateResume = async (name: string, navigateToBuilder: boolean, saveToCloud: boolean) => {
     const { toast } = await import('vue-sonner');
-    const resumeName = name.trim() || 'Untitled Resume';
+    const resumeName = name.trim() || getDefaultResumeName();
     const newResumeId = resumeStore.createResume(resumeName);
     resumeStore.setActiveResume(newResumeId);
     showCreateModal.value = false;
@@ -110,7 +115,7 @@ const showCopyResumeModal = (id: string) => {
 };
 const handleCopyResume = (name: string, navigateToBuilder: boolean) => {
     if (resumeToCopy.value) {
-        const resumeName = name.trim() || 'Untitled Resume';
+        const resumeName = name.trim() || getDefaultResumeName();
         const newResumeId = resumeStore.duplicateResume(resumeToCopy.value.id, resumeName);
         if (newResumeId) {
             resumeStore.setActiveResume(newResumeId);

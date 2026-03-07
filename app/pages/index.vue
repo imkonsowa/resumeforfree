@@ -123,9 +123,8 @@ useHead({
                     </Button>
                 </NuxtLink>
                 <LanguageSelector
-                    variant="select"
                     show-icon
-                    width="w-[180px]"
+                    responsive
                 />
             </div>
             <p class="text-xs text-gray-500">

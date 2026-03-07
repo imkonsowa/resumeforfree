@@ -9,10 +9,10 @@
                     <div class="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-full">
                         <Cloud class="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
                     </div>
-                    <span class="leading-tight">Save Your Resume to the Cloud?</span>
+                    <span class="leading-tight">{{ $t('resumes.modals.cloudSyncPrompt.title') }}</span>
                 </DialogTitle>
                 <DialogDescription class="text-sm sm:text-base leading-relaxed pt-1 sm:pt-2">
-                    Your resume is currently saved locally. Would you like to sync it to the cloud?
+                    {{ $t('resumes.modals.cloudSyncPrompt.description') }}
                 </DialogDescription>
             </DialogHeader>
             <div class="space-y-4 sm:space-y-6 py-2 sm:py-4">
@@ -21,24 +21,24 @@
                         <CloudUpload class="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                         <div class="flex-1 min-w-0">
                             <h3 class="font-medium text-blue-900 mb-2 text-sm sm:text-base">
-                                Benefits of Cloud Sync
+                                {{ $t('resumes.modals.cloudSyncPrompt.benefits.title') }}
                             </h3>
                             <ul class="text-xs sm:text-sm text-blue-800 space-y-1">
                                 <li class="flex items-center gap-2">
                                     <Check class="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 flex-shrink-0" />
-                                    <span>Access your resume from any device</span>
+                                    <span>{{ $t('resumes.modals.cloudSyncPrompt.benefits.accessAnywhere') }}</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <Check class="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 flex-shrink-0" />
-                                    <span>Automatic backup and protection</span>
+                                    <span>{{ $t('resumes.modals.cloudSyncPrompt.benefits.autoBackup') }}</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <Check class="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 flex-shrink-0" />
-                                    <span>Real-time synchronization</span>
+                                    <span>{{ $t('resumes.modals.cloudSyncPrompt.benefits.realTimeSync') }}</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <Check class="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 flex-shrink-0" />
-                                    <span>Never lose your work</span>
+                                    <span>{{ $t('resumes.modals.cloudSyncPrompt.benefits.neverLose') }}</span>
                                 </li>
                             </ul>
                         </div>
@@ -49,11 +49,10 @@
                         <Info class="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
                         <div>
                             <h3 class="font-medium text-amber-900 mb-2">
-                                Cloud Storage Limit
+                                {{ $t('resumes.modals.cloudSyncPrompt.limit.title') }}
                             </h3>
                             <p class="text-sm text-amber-800 leading-relaxed">
-                                You can save up to 3 resumes to the cloud with your free account.
-                                You currently have {{ cloudInfo.remaining }} slot{{ cloudInfo.remaining !== 1 ? 's' : '' }} available.
+                                {{ $t('resumes.modals.cloudSyncPrompt.limit.description', { remaining: cloudInfo.remaining }) }}
                             </p>
                         </div>
                     </div>
@@ -63,18 +62,17 @@
                         <HardDrive class="w-4 h-4 sm:w-5 sm:h-5 text-gray-600 mt-0.5 flex-shrink-0" />
                         <div>
                             <h3 class="font-medium text-gray-900 mb-2 text-sm sm:text-base">
-                                Continue with Local Storage
+                                {{ $t('resumes.modals.cloudSyncPrompt.local.title') }}
                             </h3>
                             <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                                Your resume will remain saved locally in this browser.
-                                You can enable cloud sync anytime from the resume settings.
+                                {{ $t('resumes.modals.cloudSyncPrompt.local.description') }}
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
             <DialogFooter class="!flex-col space-y-4 pt-4">
-                <div class="flex items-center space-x-2 w-full">
+                <div class="flex items-center gap-2 w-full">
                     <Checkbox
                         id="dont-show-cloud-sync"
                         v-model="dontShowAgain"
@@ -83,7 +81,7 @@
                         for="dont-show-cloud-sync"
                         class="text-sm text-gray-600 cursor-pointer"
                     >
-                        Don't ask me again for this resume
+                        {{ $t('resumes.modals.cloudSyncPrompt.dontAskAgain') }}
                     </Label>
                 </div>
                 <div class="flex flex-row justify-between w-full gap-2">
@@ -91,15 +89,15 @@
                         :disabled="!canSaveToCloud"
                         @click="$emit('enableSync', dontShowAgain)"
                     >
-                        <CloudUpload class="w-4 h-4 mr-2" />
-                        Enable Cloud Sync
+                        <CloudUpload class="w-4 h-4 me-2" />
+                        {{ $t('resumes.modals.cloudSyncPrompt.enableSync') }}
                     </Button>
                     <Button
                         variant="outline"
                         @click="$emit('continueLocally', dontShowAgain)"
                     >
-                        <HardDrive class="w-4 h-4 mr-2" />
-                        Keep Local Only
+                        <HardDrive class="w-4 h-4 me-2" />
+                        {{ $t('resumes.modals.cloudSyncPrompt.keepLocal') }}
                     </Button>
                 </div>
             </DialogFooter>

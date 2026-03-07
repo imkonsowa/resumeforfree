@@ -239,3 +239,13 @@
 [dir="rtl"] .text-right {
     text-align: left;
 }
+
+@media (min-width: 640px) {
+    [dir="rtl"] .sm\:text-left {
+        text-align: right;
+    }
+
+    [dir="rtl"] .sm\:text-right {
+        text-align: left;
+    }
+}

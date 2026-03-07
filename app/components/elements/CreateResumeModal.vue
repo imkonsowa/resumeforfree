@@ -25,9 +25,14 @@ const saveToCloud = ref(false);
 const canSaveToCloud = computed(() => {
     return authStore.isLoggedIn && resumeStore.canSaveToCloud;
 });
+const getDefaultResumeName = () => {
+    if (!authStore.isLoggedIn) return '';
+    const userName = authStore.user?.name?.trim();
+    return userName ? `${userName} - Resume` : '';
+};
 watch(() => props.isOpen, (isOpen) => {
     if (isOpen) {
-        newResumeName.value = '';
+        newResumeName.value = getDefaultResumeName();
         navigateToBuilder.value = true;
         saveToCloud.value = false;
     }
