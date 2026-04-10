@@ -343,6 +343,8 @@ const handleDownload = async () => {
             selectedTemplate.value || 'default',
             selectedFont.value || 'Calibri',
         );
+        // Fire-and-forget: increment download counter without blocking UX
+        $fetch('/api/increase-downloads-count', { method: 'POST' }).catch(() => {});
     }
     catch (err) {
         error.value = err instanceof Error ? err.message : 'Failed to download PDF';
