@@ -1,24 +1,24 @@
 <template>
-    <div class="space-y-6">
+    <div class="space-y-4 sm:space-y-6">
         <!-- Header -->
         <div>
-            <p class="text-gray-600">
+            <p class="text-sm sm:text-base text-gray-600">
                 {{ $t('admin.resumes.description') }}
             </p>
         </div>
 
         <!-- Search Bar -->
         <div class="relative">
-            <Search class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+            <Search class="absolute start-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
             <Input
                 v-model="searchQuery"
                 type="text"
                 :placeholder="$t('admin.resumes.searchPlaceholder')"
-                class="pl-10"
+                class="ps-10"
             />
             <div
                 v-if="isSearching"
-                class="absolute right-3 top-1/2 transform -translate-y-1/2"
+                class="absolute end-3 top-1/2 -translate-y-1/2"
             >
                 <div class="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600" />
             </div>
@@ -45,26 +45,87 @@
             </p>
         </div>
 
-        <!-- Resumes Table -->
-        <Card v-else>
+        <!-- Resumes Mobile Cards -->
+        <div
+            v-else
+            class="md:hidden space-y-3"
+        >
+            <Card
+                v-for="resume in resumes"
+                :key="resume.id"
+                class="p-4"
+            >
+                <div class="space-y-3">
+                    <div class="flex items-start justify-between gap-2">
+                        <div class="min-w-0 flex-1">
+                            <p class="text-sm font-medium text-gray-900 truncate">
+                                {{ resume.name || 'Untitled Resume' }}
+                            </p>
+                            <p class="text-xs text-gray-600 truncate mt-0.5">
+                                {{ resume.user_email || resume.user_id }}
+                            </p>
+                        </div>
+                        <DropdownMenu>
+                            <DropdownMenuTrigger as-child>
+                                <Button
+                                    variant="ghost"
+                                    size="sm"
+                                    class="shrink-0"
+                                >
+                                    <MoreVertical class="w-4 h-4" />
+                                </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="end">
+                                <DropdownMenuItem
+                                    class="text-red-600 focus:text-red-600"
+                                    @click="confirmDelete(resume.id)"
+                                >
+                                    <Trash2 class="w-4 h-4 me-2" />
+                                    {{ $t('common.delete') }}
+                                </DropdownMenuItem>
+                            </DropdownMenuContent>
+                        </DropdownMenu>
+                    </div>
+                    <div class="flex items-center justify-between gap-2">
+                        <span class="text-xs text-gray-500">
+                            {{ formatDate(resume.updated_at) }}
+                        </span>
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            @click="openPreview(resume)"
+                        >
+                            <Eye class="w-4 h-4 me-1" />
+                            {{ $t('admin.resumes.actions.view') }}
+                        </Button>
+                    </div>
+                </div>
+            </Card>
+        </div>
+
+        <!-- Resumes Table (Desktop) -->
+        <Card
+            v-if="!loading && resumes.length > 0"
+            class="hidden md:block"
+        >
             <CardContent class="p-0">
                 <div class="overflow-x-auto">
                     <table class="w-full">
                         <thead class="bg-gray-50 border-b border-gray-200">
                             <tr>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th class="px-4 lg:px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     {{ $t('admin.resumes.name') }}
                                 </th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th class="px-4 lg:px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     {{ $t('admin.resumes.owner') }}
                                 </th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th class="hidden lg:table-cell px-4 lg:px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     {{ $t('admin.resumes.createdAt') }}
                                 </th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th class="px-4 lg:px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     {{ $t('admin.resumes.updatedAt') }}
                                 </th>
-                                <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th class="px-4 lg:px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     {{ $t('common.actions') }}
                                 </th>
                             </tr>
@@ -74,26 +135,26 @@
                                 v-for="resume in resumes"
                                 :key="resume.id"
                             >
-                                <td class="px-6 py-4 text-sm font-medium text-gray-900">
+                                <td class="px-4 lg:px-6 py-4 text-sm font-medium text-gray-900 max-w-[200px] truncate">
                                     {{ resume.name || 'Untitled Resume' }}
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+                                <td class="px-4 lg:px-6 py-4 text-sm text-gray-700 max-w-[200px] truncate">
                                     {{ resume.user_email || resume.user_id }}
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+                                <td class="hidden lg:table-cell px-4 lg:px-6 py-4 whitespace-nowrap text-sm text-gray-700">
                                     {{ formatDate(resume.created_at) }}
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+                                <td class="px-4 lg:px-6 py-4 whitespace-nowrap text-sm text-gray-700">
                                     {{ formatDate(resume.updated_at) }}
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                <td class="px-4 lg:px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
                                     <div class="flex items-center justify-end gap-2">
                                         <Button
                                             variant="outline"
                                             size="sm"
                                             @click="openPreview(resume)"
                                         >
-                                            <Eye class="w-4 h-4 mr-1" />
+                                            <Eye class="w-4 h-4 me-1" />
                                             {{ $t('admin.resumes.actions.view') }}
                                         </Button>
                                         <DropdownMenu>
@@ -110,7 +171,7 @@
                                                     class="text-red-600 focus:text-red-600"
                                                     @click="confirmDelete(resume.id)"
                                                 >
-                                                    <Trash2 class="w-4 h-4 mr-2" />
+                                                    <Trash2 class="w-4 h-4 me-2" />
                                                     {{ $t('common.delete') }}
                                                 </DropdownMenuItem>
                                             </DropdownMenuContent>
@@ -125,44 +186,12 @@
         </Card>
 
         <!-- Pagination -->
-        <div
+        <AdminPagination
             v-if="pagination.totalPages > 1"
-            class="flex items-center justify-between"
-        >
-            <div class="text-sm text-gray-700">
-                {{ $t('admin.pagination.showing', { from: (pagination.page - 1) * pagination.limit + 1, to: Math.min(pagination.page * pagination.limit, pagination.total), total: pagination.total }) }}
-            </div>
-            <div class="flex gap-2">
-                <Button
-                    variant="outline"
-                    size="sm"
-                    :disabled="currentPage === 1"
-                    @click="goToPage(currentPage - 1)"
-                >
-                    {{ $t('admin.pagination.previous') }}
-                </Button>
-                <div class="flex items-center gap-1">
-                    <Button
-                        v-for="page in pagination.totalPages"
-                        :key="page"
-                        variant="outline"
-                        size="sm"
-                        :class="{ 'bg-blue-50 border-blue-500 text-blue-600': page === currentPage }"
-                        @click="goToPage(page)"
-                    >
-                        {{ page }}
-                    </Button>
-                </div>
-                <Button
-                    variant="outline"
-                    size="sm"
-                    :disabled="currentPage === pagination.totalPages"
-                    @click="goToPage(currentPage + 1)"
-                >
-                    {{ $t('admin.pagination.next') }}
-                </Button>
-            </div>
-        </div>
+            :current-page="currentPage"
+            :pagination="pagination"
+            @go-to-page="goToPage"
+        />
 
         <!-- Preview Dialog -->
         <ResumePreviewDialog
@@ -177,6 +206,7 @@
 
 <script lang="ts" setup>
 import { FileText, Eye, MoreVertical, Trash2, Search } from 'lucide-vue-next';
+import AdminPagination from '~/components/admin/AdminPagination.vue';
 import ResumePreviewDialog from '~/components/admin/ResumePreviewDialog.vue';
 import { Card, CardContent } from '~/components/ui/card';
 import { Button } from '~/components/ui/button';

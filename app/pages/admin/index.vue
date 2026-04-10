@@ -1,17 +1,17 @@
 <template>
-    <div class="space-y-6">
+    <div class="space-y-4 sm:space-y-6">
         <!-- Stats Grid -->
-        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="grid grid-cols-1 gap-3 sm:gap-4 sm:grid-cols-2 xl:grid-cols-4">
             <!-- Total Users -->
             <Card>
-                <CardHeader class="flex flex-row items-center justify-between pb-2">
-                    <CardTitle class="text-sm font-medium text-gray-600">
+                <CardHeader class="flex flex-row items-center justify-between pb-2 px-4 pt-4">
+                    <CardTitle class="text-xs sm:text-sm font-medium text-gray-600">
                         {{ $t('admin.dashboard.totalUsers') }}
                     </CardTitle>
-                    <Users class="w-4 h-4 text-gray-400" />
+                    <Users class="w-4 h-4 text-gray-400 shrink-0" />
                 </CardHeader>
-                <CardContent>
-                    <div class="text-2xl font-bold">
+                <CardContent class="px-4 pb-4">
+                    <div class="text-xl sm:text-2xl font-bold">
                         {{ stats.totalUsers }}
                     </div>
                 </CardContent>
@@ -19,29 +19,44 @@
 
             <!-- Total Resumes -->
             <Card>
-                <CardHeader class="flex flex-row items-center justify-between pb-2">
-                    <CardTitle class="text-sm font-medium text-gray-600">
+                <CardHeader class="flex flex-row items-center justify-between pb-2 px-4 pt-4">
+                    <CardTitle class="text-xs sm:text-sm font-medium text-gray-600">
                         {{ $t('admin.dashboard.totalResumes') }}
                     </CardTitle>
-                    <FileText class="w-4 h-4 text-gray-400" />
+                    <FileText class="w-4 h-4 text-gray-400 shrink-0" />
                 </CardHeader>
-                <CardContent>
-                    <div class="text-2xl font-bold">
+                <CardContent class="px-4 pb-4">
+                    <div class="text-xl sm:text-2xl font-bold">
                         {{ stats.totalResumes }}
+                    </div>
+                </CardContent>
+            </Card>
+
+            <!-- Total Downloads -->
+            <Card>
+                <CardHeader class="flex flex-row items-center justify-between pb-2 px-4 pt-4">
+                    <CardTitle class="text-xs sm:text-sm font-medium text-gray-600">
+                        {{ $t('admin.dashboard.totalDownloads') }}
+                    </CardTitle>
+                    <Download class="w-4 h-4 text-gray-400 shrink-0" />
+                </CardHeader>
+                <CardContent class="px-4 pb-4">
+                    <div class="text-xl sm:text-2xl font-bold">
+                        {{ stats.totalDownloads }}
                     </div>
                 </CardContent>
             </Card>
 
             <!-- Total Messages -->
             <Card>
-                <CardHeader class="flex flex-row items-center justify-between pb-2">
-                    <CardTitle class="text-sm font-medium text-gray-600">
+                <CardHeader class="flex flex-row items-center justify-between pb-2 px-4 pt-4">
+                    <CardTitle class="text-xs sm:text-sm font-medium text-gray-600">
                         {{ $t('admin.dashboard.totalMessages') }}
                     </CardTitle>
-                    <Mail class="w-4 h-4 text-gray-400" />
+                    <Mail class="w-4 h-4 text-gray-400 shrink-0" />
                 </CardHeader>
-                <CardContent>
-                    <div class="text-2xl font-bold">
+                <CardContent class="px-4 pb-4">
+                    <div class="text-xl sm:text-2xl font-bold">
                         {{ stats.totalMessages }}
                     </div>
                     <p
@@ -56,17 +71,19 @@
 
         <!-- Quick Actions -->
         <Card>
-            <CardHeader>
-                <CardTitle>{{ $t('common.quickActions') }}</CardTitle>
+            <CardHeader class="px-4 pt-4 pb-2 sm:px-6 sm:pt-6">
+                <CardTitle class="text-base sm:text-lg">
+                    {{ $t('common.quickActions') }}
+                </CardTitle>
             </CardHeader>
-            <CardContent>
-                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <CardContent class="px-4 pb-4 sm:px-6 sm:pb-6">
+                <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
                     <Button
                         variant="outline"
                         class="justify-start"
                         @click="navigateTo('/admin/users')"
                     >
-                        <Users class="w-4 h-4 mr-2" />
+                        <Users class="w-4 h-4 me-2" />
                         {{ $t('admin.nav.users') }}
                     </Button>
                     <Button
@@ -74,7 +91,7 @@
                         class="justify-start"
                         @click="navigateTo('/admin/resumes')"
                     >
-                        <FileText class="w-4 h-4 mr-2" />
+                        <FileText class="w-4 h-4 me-2" />
                         {{ $t('admin.nav.resumes') }}
                     </Button>
                     <Button
@@ -82,7 +99,7 @@
                         class="justify-start"
                         @click="navigateTo('/admin/contact-messages')"
                     >
-                        <Mail class="w-4 h-4 mr-2" />
+                        <Mail class="w-4 h-4 me-2" />
                         {{ $t('admin.nav.contactMessages') }}
                     </Button>
                 </div>
@@ -102,7 +119,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Users, FileText, Mail } from 'lucide-vue-next';
+import { Users, FileText, Mail, Download } from 'lucide-vue-next';
 import { Card, CardHeader, CardTitle, CardContent } from '~/components/ui/card';
 import { Button } from '~/components/ui/button';
 import { toast } from 'vue-sonner';
@@ -119,6 +136,7 @@ const stats = ref({
     totalResumes: 0,
     totalMessages: 0,
     newMessages: 0,
+    totalDownloads: 0,
 });
 
 const loading = ref(true);

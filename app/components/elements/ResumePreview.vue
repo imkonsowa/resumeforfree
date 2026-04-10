@@ -62,9 +62,9 @@
                         <SlidersHorizontal class="w-4 h-4 me-2" />
                         {{ t('builder.settings') }}
                     </Button>
-                    <div class="flex items-center">
+                    <div class="flex items-center rounded-md overflow-hidden">
                         <Button
-                            class="rounded-e-none h-9"
+                            class="rounded-none h-9"
                             size="sm"
                             @click="handleDownload"
                         >
@@ -75,7 +75,7 @@
                             <MenubarMenu>
                                 <MenubarTrigger as-child>
                                     <Button
-                                        class="rounded-s-none border-s-0 px-2 h-9"
+                                        class="rounded-none px-2 h-9"
                                         size="sm"
                                         variant="default"
                                     >
@@ -109,9 +109,9 @@
                     >
                         <Settings class="w-4 h-4" />
                     </Button>
-                    <div class="flex items-center">
+                    <div class="flex items-center rounded-md overflow-hidden">
                         <Button
-                            class="rounded-e-none h-9"
+                            class="rounded-none h-9"
                             size="sm"
                             @click="handleDownload"
                         >
@@ -122,7 +122,7 @@
                             <MenubarMenu>
                                 <MenubarTrigger as-child>
                                     <Button
-                                        class="rounded-s-none border-s-0 px-2 h-9"
+                                        class="rounded-none px-2 h-9"
                                         size="sm"
                                         variant="default"
                                     >

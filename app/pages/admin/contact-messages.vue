@@ -1,19 +1,19 @@
 <template>
-    <div class="space-y-6">
+    <div class="space-y-4 sm:space-y-6">
         <!-- Header -->
         <div>
-            <p class="text-gray-600">
+            <p class="text-sm sm:text-base text-gray-600">
                 {{ $t('admin.contactMessages.description') }}
             </p>
         </div>
 
         <!-- Filter Tabs -->
-        <div class="mb-6 border-b border-gray-200">
-            <nav class="-mb-px flex space-x-8">
+        <div class="border-b border-gray-200 overflow-x-auto">
+            <nav class="-mb-px flex gap-4 sm:gap-8 min-w-max">
                 <button
                     v-for="filter in filters"
                     :key="filter.value"
-                    class="py-4 px-1 border-b-2 font-medium text-sm"
+                    class="py-3 sm:py-4 px-1 border-b-2 font-medium text-xs sm:text-sm whitespace-nowrap"
                     :class="[
                         currentFilter === filter.value
                             ? 'border-blue-500 text-blue-600'
@@ -24,7 +24,7 @@
                     {{ $t(filter.label) }}
                     <span
                         v-if="filter.count !== undefined"
-                        class="ml-2 py-0.5 px-2 rounded-full text-xs"
+                        class="ms-2 py-0.5 px-2 rounded-full text-xs"
                         :class="currentFilter === filter.value ? 'bg-blue-100 text-blue-600' : 'bg-gray-100 text-gray-600'"
                     >
                         {{ filter.count }}
@@ -56,69 +56,59 @@
         <!-- Messages List -->
         <div
             v-else
-            class="space-y-4"
+            class="space-y-3 sm:space-y-4"
         >
             <Card
                 v-for="message in filteredMessages"
                 :key="message.id"
-                class="p-6"
+                class="p-4 sm:p-6"
             >
-                <div class="flex items-start justify-between">
-                    <div class="flex-1">
-                        <!-- Header -->
-                        <div class="flex items-center gap-3 mb-2">
-                            <span
-                                class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium"
-                                :class="{
-                                    'bg-green-100 text-green-800': message.status === 'new',
-                                    'bg-blue-100 text-blue-800': message.status === 'read',
-                                    'bg-gray-100 text-gray-800': message.status === 'resolved',
-                                }"
-                            >
-                                {{ $t(`admin.contactMessages.status.${message.status}`) }}
-                            </span>
-                            <span class="text-sm text-gray-500">
-                                {{ formatDate(message.created_at) }}
-                            </span>
-                        </div>
-
-                        <!-- Subject -->
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">
-                            {{ message.subject }}
-                        </h3>
-
-                        <!-- Sender Info -->
-                        <div class="flex gap-4 text-sm text-gray-600 mb-3">
-                            <span>
-                                <strong>{{ $t('admin.contactMessages.from') }}:</strong> {{ message.name }}
-                            </span>
-                            <span>
-                                <strong>{{ $t('common.email') }}:</strong>
-                                <a
-                                    :href="`mailto:${message.email}`"
-                                    class="text-blue-600 hover:text-blue-800"
-                                >
-                                    {{ message.email }}
-                                </a>
-                            </span>
-                        </div>
-
-                        <!-- Message Content -->
-                        <p class="text-gray-700 whitespace-pre-wrap">
-                            {{ message.message }}
-                        </p>
-
-                        <!-- Meta Info -->
-                        <div
-                            v-if="message.ip_address"
-                            class="mt-3 text-xs text-gray-500"
+                <div class="space-y-3">
+                    <!-- Header -->
+                    <div class="flex items-center flex-wrap gap-2">
+                        <span
+                            class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium"
+                            :class="{
+                                'bg-green-100 text-green-800': message.status === 'new',
+                                'bg-blue-100 text-blue-800': message.status === 'read',
+                                'bg-gray-100 text-gray-800': message.status === 'resolved',
+                            }"
                         >
-                            <span>IP: {{ message.ip_address }}</span>
-                        </div>
+                            {{ $t(`admin.contactMessages.status.${message.status}`) }}
+                        </span>
+                        <span class="text-xs sm:text-sm text-gray-500">
+                            {{ formatDate(message.created_at) }}
+                        </span>
                     </div>
 
+                    <!-- Subject -->
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 break-words">
+                        {{ message.subject }}
+                    </h3>
+
+                    <!-- Sender Info -->
+                    <div class="flex flex-col sm:flex-row sm:flex-wrap sm:gap-4 gap-1 text-xs sm:text-sm text-gray-600">
+                        <span class="break-words">
+                            <strong>{{ $t('admin.contactMessages.from') }}:</strong> {{ message.name }}
+                        </span>
+                        <span class="break-all">
+                            <strong>{{ $t('common.email') }}:</strong>
+                            <a
+                                :href="`mailto:${message.email}`"
+                                class="text-blue-600 hover:text-blue-800"
+                            >
+                                {{ message.email }}
+                            </a>
+                        </span>
+                    </div>
+
+                    <!-- Message Content -->
+                    <p class="text-sm sm:text-base text-gray-700 whitespace-pre-wrap break-words">
+                        {{ message.message }}
+                    </p>
+
                     <!-- Actions -->
-                    <div class="flex gap-2 ml-4">
+                    <div class="flex flex-wrap gap-2 pt-2 border-t border-gray-100">
                         <Button
                             v-if="message.status !== 'read'"
                             variant="outline"
@@ -148,49 +138,18 @@
         </div>
 
         <!-- Pagination -->
-        <div
+        <AdminPagination
             v-if="pagination.totalPages > 1"
-            class="flex items-center justify-between"
-        >
-            <div class="text-sm text-gray-700">
-                {{ $t('admin.pagination.showing', { from: (pagination.page - 1) * pagination.limit + 1, to: Math.min(pagination.page * pagination.limit, pagination.total), total: pagination.total }) }}
-            </div>
-            <div class="flex gap-2">
-                <Button
-                    variant="outline"
-                    size="sm"
-                    :disabled="currentPage === 1"
-                    @click="goToPage(currentPage - 1)"
-                >
-                    {{ $t('admin.pagination.previous') }}
-                </Button>
-                <div class="flex items-center gap-1">
-                    <Button
-                        v-for="page in pagination.totalPages"
-                        :key="page"
-                        variant="outline"
-                        size="sm"
-                        :class="{ 'bg-blue-50 border-blue-500 text-blue-600': page === currentPage }"
-                        @click="goToPage(page)"
-                    >
-                        {{ page }}
-                    </Button>
-                </div>
-                <Button
-                    variant="outline"
-                    size="sm"
-                    :disabled="currentPage === pagination.totalPages"
-                    @click="goToPage(currentPage + 1)"
-                >
-                    {{ $t('admin.pagination.next') }}
-                </Button>
-            </div>
-        </div>
+            :current-page="currentPage"
+            :pagination="pagination"
+            @go-to-page="goToPage"
+        />
     </div>
 </template>
 
 <script lang="ts" setup>
 import { toast } from 'vue-sonner';
+import AdminPagination from '~/components/admin/AdminPagination.vue';
 import { Card } from '~/components/ui/card';
 import { Button } from '~/components/ui/button';
 

@@ -2,7 +2,10 @@
     <Dialog
         v-model:open="isOpen"
     >
-        <DialogContent class="!max-w-[80vw] !w-[80vw] h-[90vh]">
+        <DialogContent
+            class="!max-w-[80vw] !w-[80vw] h-[90vh]"
+            :dir="userDir"
+        >
             <DialogHeader>
                 <DialogTitle>{{ resumeName }}</DialogTitle>
                 <DialogDescription>
@@ -85,6 +88,7 @@ import { X } from 'lucide-vue-next';
 import { useResumeGenerator } from '~/composables/useResumeGenerator';
 import type { ResumeData, AppSettings } from '~/types/resume';
 import { defaultAppSettings } from '~/types/resume';
+import { isRtlLocale } from '~/utils/localeUtils';
 
 const props = defineProps<{
     modelValue: boolean;
@@ -109,6 +113,8 @@ const isOpen = computed({
 const isLoading = ref(false);
 const error = ref<string | null>(null);
 const previewContent = ref<string>('');
+const userLocale = ref<string>('en');
+const userDir = computed(() => (isRtlLocale(userLocale.value) ? 'rtl' : 'ltr'));
 
 const loadResume = async () => {
     if (!props.resumeId) return;
@@ -132,6 +138,9 @@ const loadResume = async () => {
             ...defaultAppSettings,
             ...userSettings,
         };
+
+        // Set dialog direction based on user's saved locale
+        userLocale.value = settings.locale || 'en';
 
         // Use user's preferred template and font
         const template = settings.selectedTemplate || resumeResponse.template || 'default';

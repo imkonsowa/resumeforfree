@@ -637,6 +637,7 @@
             "totalUsers": "إجمالي المستخدمين",
             "totalResumes": "إجمالي السير الذاتية",
             "totalMessages": "رسائل التواصل",
+            "totalDownloads": "تحميلات PDF",
             "recentActivity": "النشاط الأخير"
         },
         "nav": {

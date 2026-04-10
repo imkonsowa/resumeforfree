@@ -637,6 +637,7 @@
             "totalUsers": "Total Users",
             "totalResumes": "Total Resumes",
             "totalMessages": "Contact Messages",
+            "totalDownloads": "PDF Downloads",
             "recentActivity": "Recent Activity"
         },
         "nav": {
