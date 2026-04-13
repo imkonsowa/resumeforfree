@@ -8,73 +8,32 @@ import { createFAQStructuredData } from '~/composables/useSEO';
 
 const { t } = useI18n();
 
-// Build FAQ data from translations
-const faqs = [
-    {
-        question: t('qa.questions.isFree.question'),
-        answer: t('qa.questions.isFree.answer'),
-    },
-    {
-        question: t('qa.questions.signUp.question'),
-        answer: t('qa.questions.signUp.answer'),
-    },
-    {
-        question: t('qa.questions.pdfExport.question'),
-        answer: t('qa.questions.pdfExport.answer'),
-    },
-    {
-        question: t('qa.questions.privacy.question'),
-        answer: t('qa.questions.privacy.answer'),
-    },
-    {
-        question: t('qa.questions.mobile.question'),
-        answer: t('qa.questions.mobile.answer'),
-    },
-    {
-        question: t('qa.questions.rawMode.question'),
-        answer: t('qa.questions.rawMode.answer'),
-    },
-    {
-        question: t('qa.questions.importExport.question'),
-        answer: t('qa.questions.importExport.answer'),
-    },
-    {
-        question: t('qa.questions.sections.question'),
-        answer: t('qa.questions.sections.answer'),
-    },
-    {
-        question: t('qa.questions.reorder.question'),
-        answer: t('qa.questions.reorder.answer'),
-    },
-    {
-        question: t('qa.questions.customize.question'),
-        answer: t('qa.questions.customize.answer'),
-    },
-    {
-        question: t('qa.questions.browsers.question'),
-        answer: t('qa.questions.browsers.answer'),
-    },
-    {
-        question: t('qa.questions.support.question'),
-        answer: t('qa.questions.support.answer'),
-    },
-];
+const qKeys = [
+    'isFree', 'signUp', 'pdfExport', 'privacy', 'atsFriendly', 'differentFromOthers',
+    'mobile', 'offline', 'importExport', 'sections', 'customize', 'cloudSync',
+    'browsers', 'support',
+] as const;
+
+const faqs = qKeys.map(key => ({
+    question: t(`qa.questions.${key}.question`),
+    answer: t(`qa.questions.${key}.answer`),
+}));
 
 const faqCategories = [
     {
         title: t('qa.categories.gettingStarted'),
         icon: HelpCircle,
-        faqs: faqs.slice(0, 4),
+        faqs: faqs.slice(0, 6),
     },
     {
         title: t('qa.categories.features'),
         icon: CheckCircle,
-        faqs: faqs.slice(4, 8),
+        faqs: faqs.slice(6, 12),
     },
     {
         title: t('qa.categories.technical'),
         icon: HelpCircle,
-        faqs: faqs.slice(8),
+        faqs: faqs.slice(12),
     },
 ];
 
@@ -93,7 +52,6 @@ useHead({
             name: 'robots',
             content: 'index, follow',
         },
-        // Open Graph tags
         {
             property: 'og:type',
             content: 'website',
@@ -118,7 +76,6 @@ useHead({
             property: 'og:image',
             content: 'https://resumeforfree.com/og-image.png',
         },
-        // Twitter Card tags
         {
             name: 'twitter:card',
             content: 'summary_large_image',

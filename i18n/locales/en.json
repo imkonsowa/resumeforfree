@@ -194,10 +194,10 @@
     "qa": {
         "title": "Get Your Questions",
         "titleHighlight": "Answered",
-        "subtitle": "Everything you need to know about our free resume builder. From getting started to advanced features.",
+        "subtitle": "Straight answers about how the resume builder works, what it costs (nothing), and where your data goes.",
         "badge": "Frequently Asked Questions",
-        "ctaTitle": "Ready to Create Your Resume?",
-        "ctaSubtitle": "Start building your professional resume now - it's completely free and takes just minutes!",
+        "ctaTitle": "Ready to Build Your Resume?",
+        "ctaSubtitle": "No signup. Takes about 10 minutes.",
         "categories": {
             "gettingStarted": "Getting Started",
             "features": "Features & Functionality",
@@ -205,52 +205,60 @@
         },
         "questions": {
             "isFree": {
-                "question": "Is the resume builder really free?",
-                "answer": "Yes! Our resume builder is completely free with no hidden costs, no premium features, and no subscription fees. You can create unlimited resumes, download them as PDFs, and use all features without any charges. We believe creating a professional resume should always be accessible to everyone."
+                "question": "Is this actually free? What's the catch?",
+                "answer": "There is no catch. The PDF generation happens in your browser using WebAssembly, so we don't pay for server compute per document. Hosting the static site is cheap. That's the whole business model — there isn't one."
             },
             "signUp": {
-                "question": "Do I need to create an account or sign up?",
-                "answer": "No account creation is required! You can start building your resume immediately without any registration, email verification, or personal information. All your data is stored locally in your browser, ensuring complete privacy and control over your information."
+                "question": "Do I need to create an account?",
+                "answer": "No. You can build, edit, and download unlimited resumes without any account. If you want to access your resumes from multiple devices, you can optionally create a free account to sync up to 3 resumes to the cloud. The limit keeps the service free for everyone."
             },
             "pdfExport": {
-                "question": "How does the PDF export work?",
-                "answer": "Our resume builder uses Typst, a modern typesetting system, to generate high-quality PDF documents. When you click \"Download PDF,\" the system compiles your resume data into a professionally formatted PDF that's ready for printing or digital sharing."
+                "question": "Is the PDF actually good? Or is it a screenshot?",
+                "answer": "It's a real PDF with properly typeset text, embedded fonts, and selectable content. We use Typst, a professional typesetting engine — think LaTeX quality without the learning curve. The output is better than what most paid tools produce."
             },
             "privacy": {
-                "question": "Is my data secure and private?",
-                "answer": "Absolutely! All your resume data is stored locally in your browser's storage. We don't collect, store, or transmit any of your personal information to external servers. Your data stays on your device and is completely under your control."
+                "question": "Where is my data stored?",
+                "answer": "In your browser's local storage. Your resume data never leaves your device unless you explicitly create an account and opt into cloud sync. We don't track you, we don't run analytics, and we don't sell data."
+            },
+            "atsFriendly": {
+                "question": "Are the resumes ATS-friendly?",
+                "answer": "Yes. The PDFs use clean text rendering with standard fonts. There are no images-of-text, no complex multi-column layouts that confuse parsers, and no invisible elements. ATS systems can read them without issues."
+            },
+            "differentFromOthers": {
+                "question": "How is this different from Canva or Zety?",
+                "answer": "Canva requires an account and shows premium upsells while you build. Zety lets you build for free but charges to download the PDF. Both store your data on their servers. We don't require accounts, don't charge anything, don't run ads, and keep your data on your device."
             },
             "mobile": {
-                "question": "Can I use this on mobile devices?",
-                "answer": "Yes! Our resume builder is fully responsive and works on all devices including smartphones and tablets. On mobile, you can access the preview through a floating button that opens a full-screen preview modal."
+                "question": "Does it work on mobile?",
+                "answer": "Yes. The builder is fully responsive. On mobile, there's a floating button that opens a full-screen preview so you can see exactly what your resume looks like while editing."
             },
-            "rawMode": {
-                "question": "What is Raw Typst mode?",
-                "answer": "Raw Typst mode allows advanced users to write Typst markup directly, giving you complete control over formatting and layout. This is perfect for users who want to customize their resume beyond what the form interface provides."
+            "offline": {
+                "question": "Does it work offline?",
+                "answer": "Yes. After loading the site once, the service worker caches everything. You can build and download resumes without an internet connection."
             },
             "importExport": {
-                "question": "Can I import and export my resume data?",
-                "answer": "Yes! You can export your resume data as a JSON file for backup purposes or to transfer between devices. You can also import previously exported data to restore your resume or work on it from another device."
+                "question": "Can I back up or transfer my resume data?",
+                "answer": "Yes. Export your resume as a JSON file and import it on another device or browser. Your data, your file, no account needed."
             },
             "sections": {
-                "question": "What sections can I add to my resume?",
-                "answer": "You can add multiple sections including Personal Information, Work Experience, Education, Skills, Volunteering, and Social Links. Each section supports multiple entries, and you can reorder sections to match your preferences."
-            },
-            "reorder": {
-                "question": "How do I reorder sections or experiences?",
-                "answer": "Use the Section Ordering panel to drag and drop sections into your preferred order. Within each section, you can also reorder individual entries and bullet points using the move up/down buttons."
+                "question": "What sections can I add?",
+                "answer": "Personal info, work experience, education, skills, volunteering, and social links. Each section supports multiple entries. You can drag and drop to reorder sections and individual items within them."
             },
             "customize": {
-                "question": "Can I customize fonts and templates?",
-                "answer": "Yes! You can choose from multiple font options including Roboto and Calibri. Template selection is also available to change the overall layout and styling of your resume."
+                "question": "Can I change fonts and templates?",
+                "answer": "Yes. Multiple font options (Roboto, Calibri, Geist, and Noto Naskh Arabic for RTL) and template layouts are available. Pick a template, pick a font, and the preview updates instantly."
+            },
+            "cloudSync": {
+                "question": "How does cloud sync work?",
+                "answer": "Create a free account, and your resumes sync automatically across devices. The free tier supports up to 3 synced resumes. Local resumes on your device are always unlimited — cloud sync is just for cross-device access."
             },
             "browsers": {
                 "question": "What browsers are supported?",
-                "answer": "Our resume builder works on all modern browsers including Chrome, Firefox, Safari, and Edge. We recommend using the latest version of your preferred browser for the best experience."
+                "answer": "Chrome, Firefox, Safari, and Edge — any modern browser that supports WebAssembly. Use the latest version for the best experience."
             },
             "support": {
-                "question": "How do I get help or report issues?",
-                "answer": "You can visit our GitHub repository to report issues, request features, or contribute to the project. We also provide comprehensive documentation and examples to help you get started."
+                "question": "How do I report a bug or request a feature?",
+                "answer": "Open an issue on our GitHub repository. The project is open source — you can also contribute directly if you want."
             }
         }
     },
