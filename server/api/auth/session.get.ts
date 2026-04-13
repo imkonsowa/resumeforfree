@@ -26,6 +26,7 @@ class DatabaseService {
 export default defineEventHandler(async (event) => {
     const token = getCookie(event, 'auth-token');
     if (!token) {
+        clearAuthCookies(event);
         throw createError({
             statusCode: 401,
             statusMessage: 'No authentication token',
@@ -34,17 +35,18 @@ export default defineEventHandler(async (event) => {
     try {
         const isValid = await jwt.verify(token, JWT_SECRET);
         if (!isValid) {
+            clearAuthCookies(event);
             throw createError({
                 statusCode: 401,
                 statusMessage: 'Invalid token',
             });
         }
         const decoded = jwt.decode(token);
-        const payload = decoded.payload as { sub: string; role?: 'user' | 'admin' };
+        const payload = decoded.payload as { sub: string; email?: string; role?: 'user' | 'admin' };
         const db = event.context.cloudflare?.env?.DB;
         if (!db) {
-            const userEmail = getCookie(event, 'user-email');
-            if (!userEmail) {
+            if (!payload.email) {
+                clearAuthCookies(event);
                 throw createError({
                     statusCode: 401,
                     statusMessage: 'Invalid session',
@@ -52,32 +54,35 @@ export default defineEventHandler(async (event) => {
             }
             const mockUser = {
                 id: payload.sub,
-                email: userEmail,
-                name: userEmail.split('@')[0],
+                email: payload.email,
+                name: payload.email.split('@')[0],
                 verified: true,
-                role: payload.role || 'user' as const, // Default role for all users
+                role: payload.role || 'user' as const,
             };
+            setAuthCookies(event, token, mockUser);
             return { user: mockUser };
         }
         const dbService = new DatabaseService(db);
         const user = await dbService.getUserById(payload.sub);
         if (!user) {
+            clearAuthCookies(event);
             throw createError({
                 statusCode: 401,
                 statusMessage: 'User not found',
             });
         }
-        return {
-            user: {
-                id: user.id,
-                email: user.email,
-                name: user.name,
-                verified: user.verified,
-                role: user.role,
-            },
+        const publicUser = {
+            id: user.id,
+            email: user.email,
+            name: user.name,
+            verified: user.verified,
+            role: user.role,
         };
+        setAuthCookies(event, token, publicUser);
+        return { user: publicUser };
     }
     catch {
+        clearAuthCookies(event);
         throw createError({
             statusCode: 401,
             statusMessage: 'Invalid token',

@@ -67,7 +67,7 @@ export default defineEventHandler(async (event) => {
             email,
             name: name || email.split('@')[0],
             verified: true,
-            role: 'user' as const, // Default role for all users
+            role: 'user' as const,
         };
         const token = await jwt.sign(
             {
@@ -79,18 +79,7 @@ export default defineEventHandler(async (event) => {
             },
             JWT_SECRET,
         );
-        setCookie(event, 'auth-token', token, {
-            httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
-            sameSite: 'lax',
-            maxAge: 60 * 60 * 24 * 30,
-        });
-        setCookie(event, 'user-email', mockUser.email, {
-            httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
-            sameSite: 'lax',
-            maxAge: 60 * 60 * 24 * 30,
-        });
+        setAuthCookies(event, token, mockUser);
         return {
             user: mockUser,
             token,
@@ -131,7 +120,7 @@ export default defineEventHandler(async (event) => {
     }
     const passwordHash = await bcrypt.hash(password, 12);
     const userId = await dbService.createUser(email, passwordHash, name);
-    const defaultRole = 'user'; // New users default to 'user' role
+    const defaultRole = 'user';
     const token = await jwt.sign(
         {
             sub: userId,
@@ -142,26 +131,16 @@ export default defineEventHandler(async (event) => {
         },
         JWT_SECRET,
     );
-    setCookie(event, 'auth-token', token, {
-        httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'lax',
-        maxAge: 60 * 60 * 24 * 30,
-    });
-    setCookie(event, 'user-email', email, {
-        httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'lax',
-        maxAge: 60 * 60 * 24 * 30,
-    });
+    const publicUser = {
+        id: userId,
+        email: email,
+        name: name || email.split('@')[0],
+        verified: true,
+        role: defaultRole,
+    };
+    setAuthCookies(event, token, publicUser);
     return {
-        user: {
-            id: userId,
-            email: email,
-            name: name || email.split('@')[0],
-            verified: true,
-            role: defaultRole,
-        },
+        user: publicUser,
         token,
     };
 });

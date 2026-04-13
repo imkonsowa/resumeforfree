@@ -64,34 +64,132 @@
     "homepage": {
         "title": "Build Your Resume",
         "subtitle": "For Free",
-        "heroTitle": "Resume For Free - No Registration Required | Privacy-First Resume Maker",
-        "heroDescription": "Build professional resumes for free with complete privacy. No servers, no registration, no payments. Unlimited downloads and resumes. Everything runs locally on your device.",
+        "heroTitle": "Free Resume Builder - No Signup, No Watermarks, No Catch | Resume For Free",
+        "heroDescription": "Build and download professional resumes for free. No account required, no watermarks, no hidden fees. Your data stays on your device. Unlimited PDF downloads.",
+        "heroSubheadline": "No account. No watermark. No \"upgrade to download.\" Just a resume builder that does what it says.",
         "features": {
             "free": {
-                "title": "100% Free and Private",
-                "description": "No hidden costs, completely free to use"
+                "title": "Actually Free",
+                "description": "No trial period, no credit card, no \"premium\" tier. Free means free."
             },
-            "noServers": {
-                "title": "No Servers Included",
-                "description": "Everything runs locally on your device"
+            "privacy": {
+                "title": "Your Data Stays on Your Device",
+                "description": "Everything is stored in your browser. We don't collect, store, or sell your personal information."
             },
             "noRegistration": {
-                "title": "No Registration Required",
-                "description": "No signup, no payments, just start building"
+                "title": "No Account Required",
+                "description": "Open the site, build your resume, download the PDF. No email, no signup, no verification."
             },
             "unlimitedDownloads": {
-                "title": "Unlimited Downloads",
-                "description": "Download as many times as you want"
+                "title": "Unlimited PDF Downloads",
+                "description": "Download your resume as many times as you want. No daily limits, no download counters."
             },
             "unlimitedResumes": {
-                "title": "Unlimited Resumes",
-                "description": "Create as many resumes as you need"
+                "title": "Multiple Resumes",
+                "description": "Create separate resumes for different job applications. Tailor each one without starting over."
             },
-            "fastEfficient": {
-                "title": "Fast & Efficient",
-                "description": "Built with Typst for instant results"
+            "offline": {
+                "title": "Works Offline",
+                "description": "Load the site once and it works without internet. Build your resume on a plane, in a tunnel, wherever."
+            },
+            "cloudSync": {
+                "title": "Optional Cloud Sync",
+                "description": "Create a free account to save up to 3 resumes in the cloud and access them from any device. Totally optional — everything works without it."
             }
-        }
+        },
+        "howItWorks": {
+            "title": "How It Works",
+            "subtitle": "Three steps. No account creation in between.",
+            "step1": {
+                "title": "Pick a Template",
+                "description": "Choose a clean, professional layout. No flashy designs that confuse hiring managers."
+            },
+            "step2": {
+                "title": "Fill In Your Details",
+                "description": "Add your experience, education, and skills. Real-time preview shows exactly what the PDF will look like."
+            },
+            "step3": {
+                "title": "Download Your PDF",
+                "description": "Hit download. Get a properly typeset PDF with selectable text and embedded fonts. Done."
+            }
+        },
+        "comparison": {
+            "title": "How We Compare",
+            "subtitle": "We checked so you don't have to.",
+            "headers": {
+                "feature": "Feature",
+                "us": "Resume For Free",
+                "canva": "Canva",
+                "zety": "Zety",
+                "resumeio": "Resume.io"
+            },
+            "rows": {
+                "pdfDownload": "Free PDF download",
+                "noAccount": "No account needed",
+                "noWatermark": "No watermark",
+                "noAds": "No ads while you build",
+                "dataOnDevice": "Data stays on your device",
+                "worksOffline": "Works offline",
+                "unlimitedDownloads": "Unlimited downloads"
+            },
+            "values": {
+                "free": "Free",
+                "paid": "Paid",
+                "yes": "Yes",
+                "no": "No",
+                "limited": "Limited"
+            },
+            "footnote": "Comparison based on free tiers as of April 2026. Competitors may change pricing."
+        },
+        "whyBuilt": {
+            "title": "Why This Exists",
+            "paragraph1": "Every \"free\" resume builder pulls the same move: you spend half an hour entering your work history, arranging sections, picking fonts — and right when you hit download, the paywall appears. $3 trial that auto-renews at $24/month. Or a watermark across your name. Or \"create an account to continue.\"",
+            "paragraph2": "This tool exists because that shouldn't be normal. Your resume is built entirely in your browser using Typst, a modern typesetting engine. There's no server generating your PDF, which means there's no per-document cost to us — which is why it can actually stay free without tricks.",
+            "paragraph3": "No investor pitch deck, no growth metrics to hit, no reason to make you create an account. Just a tool that does the thing."
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "items": {
+                "reallyFree": {
+                    "question": "Is this actually free? What's the catch?",
+                    "answer": "There is no catch. The PDF generation happens in your browser using WebAssembly, so we don't pay for server compute per document. Hosting the static site is cheap. That's the whole business model — there isn't one."
+                },
+                "dataStorage": {
+                    "question": "Where is my data stored?",
+                    "answer": "In your browser's local storage. Your resume data never leaves your device unless you explicitly create an account and opt into cloud sync. We don't track you, we don't run analytics, and we don't sell data."
+                },
+                "needAccount": {
+                    "question": "Do I need to create an account?",
+                    "answer": "No. You can build, edit, and download unlimited resumes without any account. If you want to access your resumes from multiple devices, you can optionally create a free account to sync up to 3 resumes to the cloud. The limit keeps the service free for everyone."
+                },
+                "pdfQuality": {
+                    "question": "Is the PDF actually good? Or is it a screenshot?",
+                    "answer": "It's a real PDF with properly typeset text, embedded fonts, and selectable content. We use Typst, a professional typesetting engine (think LaTeX quality without the learning curve). The output is better than what most paid tools produce."
+                },
+                "atsFriendly": {
+                    "question": "Are the resumes ATS-friendly?",
+                    "answer": "Yes. The PDFs use clean text rendering with standard fonts. There are no images-of-text, no complex multi-column layouts that confuse parsers, and no invisible elements. ATS systems can read them without issues."
+                },
+                "differentFromOthers": {
+                    "question": "How is this different from Canva or Zety?",
+                    "answer": "Canva requires an account and runs ads. Zety lets you build for free but charges to download. Both store your data on their servers. We don't require accounts, don't charge anything, don't run ads, and keep your data on your device."
+                },
+                "offlineWork": {
+                    "question": "Does it work offline?",
+                    "answer": "Yes. After loading the site once, the service worker caches everything. You can build and download resumes without an internet connection."
+                },
+                "multipleResumes": {
+                    "question": "Can I create multiple resumes?",
+                    "answer": "Yes, unlimited. Create different versions for different job applications, different industries, or different formats. There's no cap."
+                }
+            }
+        },
+        "finalCta": {
+            "title": "Ready to Build Your Resume?",
+            "subtitle": "No signup. Takes about 10 minutes."
+        },
+        "termsAgreement": "By using this website you agree to",
+        "termsLink": "terms and conditions"
     },
     "qa": {
         "title": "Get Your Questions",

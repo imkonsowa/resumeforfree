@@ -52,7 +52,7 @@ export default defineEventHandler(async (event) => {
             email,
             name: email.split('@')[0],
             verified: true,
-            role: 'user' as const, // Default role for all users
+            role: 'user' as const,
         };
         const token = await jwt.sign(
             {
@@ -64,18 +64,7 @@ export default defineEventHandler(async (event) => {
             },
             JWT_SECRET,
         );
-        setCookie(event, 'auth-token', token, {
-            httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
-            sameSite: 'lax',
-            maxAge: 60 * 60 * 24 * 30,
-        });
-        setCookie(event, 'user-email', mockUser.email, {
-            httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
-            sameSite: 'lax',
-            maxAge: 60 * 60 * 24 * 30,
-        });
+        setAuthCookies(event, token, mockUser);
         return {
             user: mockUser,
             token,
@@ -125,26 +114,16 @@ export default defineEventHandler(async (event) => {
         },
         JWT_SECRET,
     );
-    setCookie(event, 'auth-token', token, {
-        httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'lax',
-        maxAge: 60 * 60 * 24 * 30,
-    });
-    setCookie(event, 'user-email', user.email, {
-        httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'lax',
-        maxAge: 60 * 60 * 24 * 30,
-    });
+    const publicUser = {
+        id: user.id,
+        email: user.email,
+        name: user.name,
+        verified: user.verified,
+        role: user.role,
+    };
+    setAuthCookies(event, token, publicUser);
     return {
-        user: {
-            id: user.id,
-            email: user.email,
-            name: user.name,
-            verified: user.verified,
-            role: user.role,
-        },
+        user: publicUser,
         token,
     };
 });

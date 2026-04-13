@@ -116,7 +116,7 @@ export default defineNuxtConfig({
                 dir: 'rtl',
             },
         ],
-        lazy: true,
+        lazy: false,
         langDir: 'locales',
         strategy: 'prefix_except_default',
         baseUrl: 'https://resumeforfree.com',
@@ -158,7 +158,7 @@ export default defineNuxtConfig({
     },
 
     robots: {
-        disallow: ['/auth/', '/admin/', '/profile'],
+        disallow: ['/auth/', '/admin/', '/profile', '/_nuxt/'],
         allow: '/',
     },
 

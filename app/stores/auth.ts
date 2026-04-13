@@ -12,6 +12,22 @@ interface AuthState {
     token: string | null;
     isAuthenticated: boolean;
 }
+
+const USER_COOKIE = 'user_info';
+
+function decodeUserCookie(raw: string | null | undefined): AuthUser | null {
+    if (!raw) return null;
+    try {
+        const json = decodeURIComponent(escape(atob(raw)));
+        const parsed = JSON.parse(json) as AuthUser;
+        if (!parsed?.id || !parsed?.email) return null;
+        return parsed;
+    }
+    catch {
+        return null;
+    }
+}
+
 export const useAuthStore = defineStore('auth', {
     state: (): AuthState => ({
         user: null,
@@ -23,6 +39,23 @@ export const useAuthStore = defineStore('auth', {
         isLoggedIn: state => state.isAuthenticated && Boolean(state.user),
     },
     actions: {
+        hydrateFromCookie() {
+            const cookie = useCookie<string | null>(USER_COOKIE, {
+                default: () => null,
+                sameSite: 'lax',
+                path: '/',
+                secure: import.meta.env.PROD,
+            });
+            const user = decodeUserCookie(cookie.value);
+            if (user) {
+                this.user = user;
+                this.isAuthenticated = true;
+                this.token = 'session';
+            }
+            else {
+                this.clearAuth();
+            }
+        },
         async login(email: string, password?: string, turnstileToken?: string) {
             const api = useApi();
             return await api.auth.login(email, password, turnstileToken)
@@ -69,6 +102,7 @@ export const useAuthStore = defineStore('auth', {
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 .catch((error: any) => {
                     console.error('Logout error:', error);
+                    this.clearAuth();
                     return {
                         success: false,
                         error: error?.message || 'Logout failed',
@@ -83,6 +117,7 @@ export const useAuthStore = defineStore('auth', {
                         this.setAuth(result.user);
                         return { success: true };
                     }
+                    this.clearAuth();
                     return { success: false, error: 'No valid session' };
                 })
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -104,6 +139,12 @@ export const useAuthStore = defineStore('auth', {
             this.user = null;
             this.token = null;
             this.isAuthenticated = false;
+            const cookie = useCookie<string | null>(USER_COOKIE, {
+                sameSite: 'lax',
+                path: '/',
+                secure: import.meta.env.PROD,
+            });
+            cookie.value = null;
         },
         async initializeAuth() {
             await this.refreshAuth().catch((error) => {
@@ -111,8 +152,5 @@ export const useAuthStore = defineStore('auth', {
                 this.clearAuth();
             });
         },
-    },
-    persist: {
-        key: 'auth-store',
     },
 });
