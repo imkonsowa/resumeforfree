@@ -38,7 +38,7 @@ const faqCategories = [
 ];
 
 useHead({
-    title: `${t('qa.title')} ${t('qa.titleHighlight')} - ${t('navigation.qa')}`,
+    title: `Free Resume Builder FAQ - ${t('qa.title')} ${t('qa.titleHighlight')} | Resume For Free`,
     meta: [
         {
             name: 'description',
@@ -62,7 +62,7 @@ useHead({
         },
         {
             property: 'og:title',
-            content: `${t('qa.title')} ${t('qa.titleHighlight')} - ${t('navigation.qa')}`,
+            content: `Free Resume Builder FAQ - ${t('qa.title')} ${t('qa.titleHighlight')} | Resume For Free`,
         },
         {
             property: 'og:description',
@@ -82,7 +82,7 @@ useHead({
         },
         {
             name: 'twitter:title',
-            content: `${t('qa.title')} ${t('qa.titleHighlight')} - ${t('navigation.qa')}`,
+            content: `Free Resume Builder FAQ - ${t('qa.title')} ${t('qa.titleHighlight')} | Resume For Free`,
         },
         {
             name: 'twitter:description',

@@ -264,8 +264,8 @@
     },
     "builder": {
         "title": "Resume Builder",
-        "pageTitle": "Resume For Free - Create Professional Resumes Online | Free, Unlimited and Private",
-        "pageDescription": "Build professional resumes online with our free resume builder. Real-time preview, instant PDF generation, unlimited downloads. No registration required, complete privacy.",
+        "pageTitle": "Free Resume Builder - Build & Download PDF Resumes For Free | No Signup",
+        "pageDescription": "Build your resume and download it as a professional PDF — completely free. No account, no watermark, no limits. Real-time preview, instant PDF generation, and your data stays on your device.",
         "sections": "Sections",
         "resumePreview": "Resume Preview",
         "noResumeSelected": "No Resume Selected",
@@ -525,7 +525,7 @@
         "pleaseFixErrors": "Please fix the following errors:"
     },
     "resumes": {
-        "pageTitle": "Your Resumes - Manage Multiple Professional Resumes | Resume For Free",
+        "pageTitle": "Your Resumes - Create & Manage Free Resumes | Resume For Free",
         "pageDescription": "Manage unlimited resumes in one place. Create, edit, duplicate, and organize professional resumes for free. No storage limits, complete privacy.",
         "title": "Your Resumes",
         "resumeCount": {
