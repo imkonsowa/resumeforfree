@@ -5,18 +5,25 @@ export const useResumeGenerator = () => {
     const { isReady: typstReady, isLoading: typstLoading } = useTypstLoader();
     const { locale, t } = useI18n();
 
+    const scopedT = (targetLocale: string) => {
+        return (key: string) => t(key, {}, { locale: targetLocale });
+    };
+
     const generateTypstContent = (
         resumeData: ResumeData,
         templateId = 'default',
         font = 'Calibri',
+        overrideLocale?: string,
     ): string => {
+        const effectiveLocale = overrideLocale || locale.value;
         const template = getTemplate(templateId);
-        return template.parse(resumeData, font, locale.value, t);
+        return template.parse(resumeData, font, effectiveLocale, overrideLocale ? scopedT(effectiveLocale) : t);
     };
     const generatePreview = async (
         resumeData: ResumeData,
         templateId = 'default',
         font = 'Calibri',
+        overrideLocale?: string,
     ): Promise<string> => {
         if (!typstReady.value) {
             throw new Error('Typst not ready');
@@ -24,7 +31,7 @@ export const useResumeGenerator = () => {
         if (!window.$typst) {
             throw new Error('Typst global object not available yet');
         }
-        const typstContent = generateTypstContent(resumeData, templateId, font);
+        const typstContent = generateTypstContent(resumeData, templateId, font, overrideLocale);
         return await window.$typst.svg({ mainContent: typstContent });
     };
     const generatePDF = async (

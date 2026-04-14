@@ -51,10 +51,12 @@
                             v-else-if="previewContent"
                             class="flex justify-center"
                         >
+                            <!-- eslint-disable vue/no-v-html -->
                             <div
                                 class="resume-preview-content bg-white p-4 rounded shadow-lg"
                                 v-html="previewContent"
                             />
+                            <!-- eslint-enable vue/no-v-html -->
                         </div>
 
                         <!-- Empty State -->
@@ -177,7 +179,7 @@ const loadResume = async () => {
         }
 
         // Generate preview with user's font and template
-        previewContent.value = await generatePreview(resumeData, template, font);
+        previewContent.value = await generatePreview(resumeData, template, font, userLocale.value);
     }
     catch (err) {
         console.error('Error loading resume preview:', err);

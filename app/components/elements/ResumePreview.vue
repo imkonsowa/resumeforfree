@@ -210,10 +210,12 @@
                                 class="flex-1 overflow-auto p-4"
                             >
                                 <div class="preview-container flex justify-center min-h-full">
+                                    <!-- eslint-disable vue/no-v-html -->
                                     <div
                                         class="resume-preview-wrapper"
                                         v-html="previewContent"
                                     />
+                                    <!-- eslint-enable vue/no-v-html -->
                                 </div>
                             </div>
                             <div
@@ -344,7 +346,7 @@ const handleDownload = async () => {
             selectedFont.value || 'Calibri',
         );
         // Fire-and-forget: increment download counter without blocking UX
-        $fetch('/api/increase-downloads-count', { method: 'POST' }).catch(() => {});
+        $fetch('/api/increase-downloads-count', { method: 'POST' }).catch(() => { /* fire-and-forget */ });
     }
     catch (err) {
         error.value = err instanceof Error ? err.message : 'Failed to download PDF';
