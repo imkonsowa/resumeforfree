@@ -1,6 +1,18 @@
 import { $typst } from '@myriaddreamin/typst.ts';
 import { preloadRemoteFonts } from '@myriaddreamin/typst.ts/dist/esm/options.init.mjs';
 
+const CACHE_NAME = 'typst-assets-v1';
+
+async function cachedFetch(url: string | URL): Promise<Response> {
+    const request = new Request(url);
+    const cache = await caches.open(CACHE_NAME);
+    const cached = await cache.match(request);
+    if (cached) return cached;
+    const response = await fetch(request);
+    if (response.ok) cache.put(request, response.clone());
+    return response;
+}
+
 export interface TypstLoaderState {
     isLoading: boolean;
     isReady: boolean;
@@ -114,7 +126,7 @@ class TypstLoader {
             $typst.setCompilerInitOptions({
                 getModule: async () => {
                     const wasmUrl = new URL('@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm', import.meta.url);
-                    const wasmResponse = await fetch(wasmUrl);
+                    const wasmResponse = await cachedFetch(wasmUrl);
                     if (!wasmResponse.ok) {
                         throw new Error(`Failed to fetch compiler WASM: ${wasmResponse.status}`);
                     }
@@ -138,7 +150,7 @@ class TypstLoader {
             $typst.setRendererInitOptions({
                 getModule: async () => {
                     const wasmUrl = new URL('@myriaddreamin/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm', import.meta.url);
-                    const wasmResponse = await fetch(wasmUrl);
+                    const wasmResponse = await cachedFetch(wasmUrl);
                     if (!wasmResponse.ok) {
                         throw new Error(`Failed to fetch renderer WASM: ${wasmResponse.status}`);
                     }
