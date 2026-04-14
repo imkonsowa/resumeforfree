@@ -12,6 +12,7 @@ export default defineNuxtConfig({
         '@nuxtjs/i18n',
         'nitro-cloudflare-dev',
         '@nuxtjs/turnstile',
+        'nuxt-auth-utils',
         '@nuxtjs/sitemap',
         '@nuxtjs/robots',
     ],

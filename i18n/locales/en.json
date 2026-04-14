@@ -511,7 +511,13 @@
         "invalidResetLink": "Invalid or expired reset link",
         "backToSignIn": "Back to Sign In",
         "tooManyRequests": "Too many requests. Please try again later.",
-        "rateLimitWait": "Please wait before requesting another reset link."
+        "rateLimitWait": "Please wait before requesting another reset link.",
+        "continueWithGoogle": "Continue with Google",
+        "orContinueWith": "or continue with",
+        "googleOAuthFailed": "Google sign-in failed. Please try again.",
+        "googleNoEmail": "Google account did not provide an email address.",
+        "googleHandlerError": "Something went wrong during Google sign-in.",
+        "googleUserCreationFailed": "Could not create your account from Google profile."
     },
     "profile": {
         "title": "Profile Settings",
