@@ -1,12 +1,5 @@
 import type { H3Event } from 'h3';
-
-export interface AuthedUserPublic {
-    id: string;
-    email: string;
-    name?: string;
-    verified: boolean;
-    role: 'user' | 'admin';
-}
+import type { User } from '~/types/user';
 
 const TOKEN_COOKIE = 'auth-token';
 const USER_COOKIE = 'user_info';
@@ -18,7 +11,7 @@ const baseOptions = () => ({
     path: '/',
 });
 
-export function setAuthCookies(event: H3Event, token: string, user: AuthedUserPublic) {
+export function setAuthCookies(event: H3Event, token: string, user: User) {
     setCookie(event, TOKEN_COOKIE, token, {
         ...baseOptions(),
         httpOnly: true,

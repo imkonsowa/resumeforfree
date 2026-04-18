@@ -1,4 +1,4 @@
-import type { TypstLoaderState } from '~/utils/typstLoader';
+import type { TypstLoaderState } from '~/types/typst';
 import { typstLoader } from '~/utils/typstLoader';
 
 export const useTypstLoader = () => {

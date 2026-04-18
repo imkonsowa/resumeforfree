@@ -89,7 +89,7 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Button } from '~/components/ui/button';
 import { X } from 'lucide-vue-next';
 import { useResumeGenerator } from '~/composables/useResumeGenerator';
-import type { ResumeData, ResumeSettings, AppSettings } from '~/types/resume';
+import type { ResumeData, ResumeSettings, UserSettings } from '~/types/resume';
 import { resumeSettingsFromLegacy } from '~/types/resume';
 import { getLocaleDirection } from '~/composables/useLocale';
 
@@ -139,14 +139,12 @@ const loadResume = async () => {
 
         const resumeData = resumeResponse.data as ResumeData;
         const resumeSettings = resumeResponse.settings as Partial<ResumeSettings> | null;
-        const userSettings = userSettingsResponse.settings as Partial<AppSettings> | null;
+        const userSettings = userSettingsResponse.settings as Partial<UserSettings> | null;
 
         userLocale.value = resumeResponse.language || userSettings?.locale || 'en';
         await loadLocaleMessages(userLocale.value);
 
-        const effectiveSettings = resumeSettings && Object.keys(resumeSettings).length
-            ? { ...resumeSettingsFromLegacy(userSettings), ...resumeSettings }
-            : resumeSettingsFromLegacy(userSettings);
+        const effectiveSettings = resumeSettingsFromLegacy(resumeSettings);
         const template = effectiveSettings.selectedTemplate;
         const font = effectiveSettings.selectedFont;
 
@@ -174,6 +172,7 @@ const loadResume = async () => {
             templateId: template,
             font,
             locale: userLocale.value,
+            fontSize: effectiveSettings.fontSize,
         });
     }
     catch (err) {

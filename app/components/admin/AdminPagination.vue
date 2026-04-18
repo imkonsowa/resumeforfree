@@ -47,13 +47,7 @@
 <script lang="ts" setup>
 import { ChevronLeft, ChevronRight } from 'lucide-vue-next';
 import { Button } from '~/components/ui/button';
-
-interface Pagination {
-    page: number;
-    limit: number;
-    total: number;
-    totalPages: number;
-}
+import type { Pagination } from '~/types/api';
 
 const props = defineProps<{
     currentPage: number;

@@ -131,7 +131,7 @@ import { Slider } from '~/components/ui/slider';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '~/components/ui/select';
 import LanguageSelector from '~/components/elements/LanguageSelector.vue';
 import { useSettingsStore } from '~/stores/settings';
-import { availableTemplates } from '~/types/resume';
+import { getTemplateList } from '~/templates';
 
 // Props
 const props = defineProps<{
@@ -142,6 +142,8 @@ const props = defineProps<{
 const emit = defineEmits<{
     'update:modelValue': [value: boolean];
 }>();
+
+const availableTemplates = getTemplateList();
 
 // i18n
 const { t } = useI18n();

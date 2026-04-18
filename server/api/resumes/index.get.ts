@@ -1,26 +1,15 @@
 import jwt from '@tsndr/cloudflare-worker-jwt';
 import type { D1Database } from '@cloudflare/workers-types';
+import type { ResumeRow } from '~~/server/database/schema';
 
 const JWT_SECRET = process.env.JWT_SECRET;
-interface Resume {
-    id: string;
-    user_id: string;
-    name: string;
-    language: string;
-    is_active: boolean;
-    template: string;
-    data: string | unknown;
-    settings: string | unknown;
-    created_at: string;
-    updated_at: string;
-}
 class DatabaseService {
     constructor(private db: D1Database) {}
-    async getResumesByUserId(userId: string): Promise<Resume[]> {
+    async getResumesByUserId(userId: string): Promise<ResumeRow[]> {
         return await this.db
             .prepare('SELECT * FROM resumes WHERE user_id = ? ORDER BY updated_at DESC')
             .bind(userId)
-            .all<Resume>()
+            .all<ResumeRow>()
             .then(result => result.results || []);
     }
 }

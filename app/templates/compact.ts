@@ -1,20 +1,12 @@
-import type { ResumeData, SectionOrder, TemplateLayoutConfig } from '~/types/resume';
-import type { TemplateSettings } from '~/types/templateConfig';
-import { COMPACT_LAYOUT_CONFIG } from '~/types/templateConfig';
+import type { ResumeData, SectionOrder } from '~/types/resume';
+import type { Template, TemplateParseInput } from '~/types/template';
+import { COMPACT_LAYOUT_CONFIG } from '~/templates/layouts';
 import { escapeTypstText } from '~/utils/stringUtils';
 import { convertEmail, convertLink, SECTION_SPACING } from '~/utils/typstUtils';
-import { useSettingsStore } from '~/stores/settings';
 import { getSharedSectionRenderers } from '~/utils/sectionRenderers';
 import { RendererContext } from '~/utils/rendererContext';
 import { isRtlLocale } from '~/composables/useLocale';
 
-export interface Template {
-    id: string;
-    name: string;
-    description: string;
-    layoutConfig: TemplateLayoutConfig;
-    parse: (data: ResumeData, font: string, locale: string, t: (key: string) => string) => string;
-}
 const renderHeaderLeftColumn = (data: ResumeData, fontSize: number): string[] => {
     const rows: string[] = [];
     const fullName = `${escapeTypstText(data?.firstName || '')} ${escapeTypstText(data?.lastName || '')}`.trim();
@@ -99,10 +91,7 @@ const convertResumeHeader = (data: ResumeData, fontSize: number, isRtl = false) 
     }
     return headerParts.join('\n');
 };
-const parse = (data: ResumeData, font: string, locale = 'en', t: (key: string) => string): string => {
-    const settings: TemplateSettings = { font };
-    const settingsStore = useSettingsStore();
-    const fontSize = settingsStore.fontSize;
+const parse = ({ data, font, locale, t, fontSize }: TemplateParseInput): string => {
     const isRtl = isRtlLocale(locale);
 
     const config = COMPACT_LAYOUT_CONFIG;
@@ -133,8 +122,8 @@ const parse = (data: ResumeData, font: string, locale = 'en', t: (key: string) =
 
     // Configure font and text direction for RTL languages
     const fontConfig = isRtl
-        ? `#set text(font: ("${settings.font}", "Arial"), size: ${fontSize}pt, dir: rtl)`
-        : `#set text(font: ("${settings.font}"), size: ${fontSize}pt)`;
+        ? `#set text(font: ("${font}", "Arial"), size: ${fontSize}pt, dir: rtl)`
+        : `#set text(font: ("${font}"), size: ${fontSize}pt)`;
 
     return `#set page(margin: 1cm)
 ${fontConfig}

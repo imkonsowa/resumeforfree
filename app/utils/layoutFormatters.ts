@@ -1,16 +1,17 @@
-import type { SectionContent, TemplateLayoutConfig } from '~/types/templateConfig';
+import type { SectionContent, TemplateRenderConfig } from '~/types/template';
 import {
     convertList,
     ITEMS_SPACING,
     renderTemplateDate,
     renderTemplateDateWithLink,
+    renderTemplateHeader,
     renderTemplateSubHeader,
     SECTION_SPACING,
 } from './typstUtils';
 
 export const formatSectionItems = (
     items: string[],
-    config: TemplateLayoutConfig['sections'],
+    config: TemplateRenderConfig['sections'],
 ): string => {
     if (config.spacing === 'block' && config.itemSpacing) {
         return items
@@ -21,7 +22,7 @@ export const formatSectionItems = (
 };
 export const formatSocialLinks = (
     sectionContent: SectionContent[],
-    config: TemplateLayoutConfig['socialLinks'],
+    config: TemplateRenderConfig['socialLinks'],
 ): string => {
     const linkItems = sectionContent.map(item => item.content || '').filter(Boolean);
     if (config.orientation === 'horizontal') {
@@ -35,7 +36,7 @@ export const formatSocialLinks = (
 };
 export const formatExperienceItems = (
     sectionContent: SectionContent[],
-    config: TemplateLayoutConfig,
+    config: TemplateRenderConfig,
     fontSize: number,
 ): string => {
     const formattedItems = sectionContent.map((item) => {
@@ -62,7 +63,7 @@ export const formatExperienceItems = (
 };
 export const formatEducationItems = (
     sectionContent: SectionContent[],
-    config: TemplateLayoutConfig,
+    config: TemplateRenderConfig,
     fontSize: number,
 ): string => {
     const formattedItems = sectionContent.map((item) => {
@@ -84,7 +85,7 @@ export const formatEducationItems = (
 };
 export const formatProjectsItems = (
     sectionContent: SectionContent[],
-    config: TemplateLayoutConfig,
+    config: TemplateRenderConfig,
     _fontSize: number,
 ): string => {
     const formattedItems = sectionContent.map((item) => {
@@ -107,7 +108,7 @@ export const formatProjectsItems = (
 };
 export const formatCertificatesItems = (
     sectionContent: SectionContent[],
-    config: TemplateLayoutConfig,
+    config: TemplateRenderConfig,
     fontSize: number,
 ): string => {
     const formattedItems = sectionContent.map((item) => {
@@ -134,7 +135,7 @@ export const formatCertificatesItems = (
 };
 export const formatSimpleItems = (
     sectionContent: SectionContent[],
-    config: TemplateLayoutConfig,
+    config: TemplateRenderConfig,
 ): string => {
     const contentItems = sectionContent.map(item => item.content || '').filter(Boolean);
     return formatSectionItems(contentItems, config.sections);
@@ -143,7 +144,6 @@ export const wrapInSectionBlock = (
     headerText: string,
     content: string,
     fontSize: number,
-    renderTemplateHeader: (text: string, fontSize: number) => string,
 ): string => {
     if (!content.trim()) return '';
     return `#block(above: 0em, below: ${SECTION_SPACING})[

@@ -178,12 +178,19 @@ export const useResumeStore = defineStore('resume', {
                 }
                 if (!resume.language) {
                     const settingsStore = useSettingsStore();
-                    const i18nKeys = Object.keys(resume.data.sectionHeadersI18n || {});
-                    resume.language = i18nKeys[0] || settingsStore.settings.locale || 'en';
+                    resume.language = settingsStore.settings.locale || 'en';
                 }
                 if (!resume.settings || Object.keys(resume.settings).length === 0) {
                     const settingsStore = useSettingsStore();
                     resume.settings = resumeSettingsFromLegacy(settingsStore.settings as Partial<ResumeSettings>);
+                }
+                const legacyI18n = (resume.data as unknown as { sectionHeadersI18n?: Record<string, Partial<SectionHeaders>> }).sectionHeadersI18n;
+                if (legacyI18n) {
+                    const flattened = legacyI18n[resume.language] || Object.values(legacyI18n)[0];
+                    if (flattened && (!resume.data.sectionHeaders || Object.keys(resume.data.sectionHeaders).length === 0)) {
+                        resume.data.sectionHeaders = { ...(flattened as SectionHeaders) };
+                    }
+                    delete (resume.data as unknown as { sectionHeadersI18n?: unknown }).sectionHeadersI18n;
                 }
             });
             if (!this.activeResumeId && Object.keys(this.resumes).length > 0) {
@@ -815,21 +822,11 @@ export const useResumeStore = defineStore('resume', {
                 this.updateResumeData(this.activeResumeId, { sectionOrder: { ...newOrder } });
             }
         },
-        updateSectionHeader(section: keyof SectionHeaders, headerText: string, locale: string) {
+        updateSectionHeader(section: keyof SectionHeaders, headerText: string) {
             if (this.activeResumeId) {
-                const currentData = this.resumes[this.activeResumeId].data;
-
-                // Initialize sectionHeadersI18n if it doesn't exist
-                const i18nHeaders = currentData.sectionHeadersI18n || {};
-
-                // Initialize locale object if it doesn't exist
-                const localeHeaders = i18nHeaders[locale] || {};
-
-                // Update the header for the current locale
-                const newLocaleHeaders = { ...localeHeaders, [section]: headerText };
-                const newI18nHeaders = { ...i18nHeaders, [locale]: newLocaleHeaders };
-
-                this.updateResumeData(this.activeResumeId, { sectionHeadersI18n: newI18nHeaders });
+                const currentHeaders = this.resumes[this.activeResumeId].data.sectionHeaders || {} as SectionHeaders;
+                const newHeaders = { ...currentHeaders, [section]: headerText };
+                this.updateResumeData(this.activeResumeId, { sectionHeaders: newHeaders });
             }
         },
         updateSectionPlacement(section: keyof SectionPlacement, placement: 'left' | 'right') {

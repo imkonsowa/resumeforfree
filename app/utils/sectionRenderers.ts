@@ -1,6 +1,6 @@
 import type { ResumeData, SectionHeaders } from '~/types/resume';
-import type { SectionRenderer } from '~/types/templateConfig';
-import { ITEMS_SPACING, renderTemplateHeader } from './typstUtils';
+import type { SectionRenderer } from '~/types/template';
+import { ITEMS_SPACING } from './typstUtils';
 import { escapeTypstText } from '~/utils/stringUtils';
 import { SECTION_TRANSLATION_MAP } from '~/composables/useSectionHeader';
 import type { RendererContext } from './rendererContext';
@@ -27,30 +27,14 @@ import {
     wrapInSectionBlock,
 } from './layoutFormatters';
 
-/**
- * Helper function to get localized section header
- * Priority 1: Check new i18n-specific header for current locale
- * Priority 2: Fallback to old single-locale header (backward compatibility)
- * Priority 3: Use translation (auto-switches with language)
- */
 function getLocalizedSectionHeader(
     section: keyof SectionHeaders,
     data: ResumeData,
     context: RendererContext,
 ): string {
-    // Priority 1: Check new i18n-specific header for current locale
-    const i18nHeader = data.sectionHeadersI18n?.[context.locale]?.[section];
-    if (i18nHeader) {
-        return i18nHeader as string;
-    }
+    const override = data.sectionHeaders?.[section];
+    if (override) return override;
 
-    // Priority 2: Fallback to old single-locale header for backward compatibility
-    const oldHeader = data.sectionHeaders?.[section];
-    if (oldHeader) {
-        return oldHeader;
-    }
-
-    // Priority 3: Use translation (auto-switches with language)
     const translationKey = SECTION_TRANSLATION_MAP[section];
     return translationKey ? context.t(translationKey) : '';
 }
@@ -67,7 +51,7 @@ export const renderSharedExperience: SectionRenderer = (data: ResumeData, contex
     const formattedContent = formatExperienceItems(sectionContent, context.config, context.fontSize);
     const headerText = getLocalizedSectionHeader('experience', data, context);
 
-    return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
+    return wrapInSectionBlock(headerText, formattedContent, context.fontSize);
 };
 
 /**
@@ -82,7 +66,7 @@ export const renderSharedInternships: SectionRenderer = (data: ResumeData, conte
     const formattedContent = formatExperienceItems(sectionContent, context.config, context.fontSize);
     const headerText = getLocalizedSectionHeader('internships', data, context);
 
-    return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
+    return wrapInSectionBlock(headerText, formattedContent, context.fontSize);
 };
 
 /**
@@ -97,7 +81,7 @@ export const renderSharedEducation: SectionRenderer = (data: ResumeData, context
     const formattedContent = formatEducationItems(sectionContent, context.config, context.fontSize);
     const headerText = getLocalizedSectionHeader('education', data, context);
 
-    return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
+    return wrapInSectionBlock(headerText, formattedContent, context.fontSize);
 };
 
 /**
@@ -112,7 +96,7 @@ export const renderSharedVolunteering: SectionRenderer = (data: ResumeData, cont
     const formattedContent = formatExperienceItems(sectionContent, context.config, context.fontSize);
     const headerText = getLocalizedSectionHeader('volunteering', data, context);
 
-    return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
+    return wrapInSectionBlock(headerText, formattedContent, context.fontSize);
 };
 
 /**
@@ -129,7 +113,7 @@ export const renderSharedProjects: SectionRenderer = (data: ResumeData, context:
     const formattedContent = formatProjectsItems(sectionContent, context.config, context.fontSize);
     const headerText = getLocalizedSectionHeader('projects', data, context);
 
-    return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
+    return wrapInSectionBlock(headerText, formattedContent, context.fontSize);
 };
 
 /**
@@ -147,7 +131,7 @@ export const renderSharedSkills: SectionRenderer = (data: ResumeData, context: R
         });
         const headerText = getLocalizedSectionHeader('skills', data, context);
 
-        return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
+        return wrapInSectionBlock(headerText, formattedContent, context.fontSize);
     }
 
     // Handle legacy technicalSkills format
@@ -157,7 +141,7 @@ export const renderSharedSkills: SectionRenderer = (data: ResumeData, context: R
 
     const content = data.technicalSkills.trim();
     const headerText = getLocalizedSectionHeader('skills', data, context);
-    return wrapInSectionBlock(headerText, content, context.fontSize, renderTemplateHeader);
+    return wrapInSectionBlock(headerText, content, context.fontSize);
 };
 
 /**
@@ -178,7 +162,7 @@ export const renderSharedLanguages: SectionRenderer = (data: ResumeData, context
     });
     const headerText = getLocalizedSectionHeader('languages', data, context);
 
-    return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
+    return wrapInSectionBlock(headerText, formattedContent, context.fontSize);
 };
 
 /**
@@ -191,7 +175,7 @@ export const renderSharedContactInfo: SectionRenderer = (data: ResumeData, conte
     const formattedContent = formatSimpleItems(sectionContent, context.config);
     const headerText = getLocalizedSectionHeader('info', data, context);
 
-    return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
+    return wrapInSectionBlock(headerText, formattedContent, context.fontSize);
 };
 
 /**
@@ -209,7 +193,7 @@ export const renderSharedSocialLinks: SectionRenderer = (data: ResumeData, conte
         return formattedContent;
     }
 
-    return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
+    return wrapInSectionBlock(headerText, formattedContent, context.fontSize);
 };
 
 /**
@@ -223,7 +207,7 @@ export const renderSharedProfile: SectionRenderer = (data: ResumeData, context: 
     const headerText = getLocalizedSectionHeader('profile', data, context);
     const content = escapeTypstText(data.summary.trim());
 
-    return wrapInSectionBlock(headerText, content, context.fontSize, renderTemplateHeader);
+    return wrapInSectionBlock(headerText, content, context.fontSize);
 };
 
 /**
@@ -240,7 +224,7 @@ export const renderSharedCertificates: SectionRenderer = (data: ResumeData, cont
     const formattedContent = formatCertificatesItems(sectionContent, context.config, context.fontSize);
     const headerText = getLocalizedSectionHeader('certificates', data, context);
 
-    return wrapInSectionBlock(headerText, formattedContent, context.fontSize, renderTemplateHeader);
+    return wrapInSectionBlock(headerText, formattedContent, context.fontSize);
 };
 
 /**

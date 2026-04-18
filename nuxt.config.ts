@@ -107,12 +107,12 @@ export default defineNuxtConfig({
         ],
         lazy: true,
         langDir: 'locales',
-        strategy: 'prefix_except_default',
+        strategy: 'no_prefix',
         baseUrl: 'https://resumeforfree.com',
         detectBrowserLanguage: {
             useCookie: true,
             cookieKey: 'i18n_redirected',
-            redirectOn: 'root',
+            redirectOn: 'no prefix',
         },
     },
 

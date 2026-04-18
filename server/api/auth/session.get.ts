@@ -1,26 +1,15 @@
 import jwt from '@tsndr/cloudflare-worker-jwt';
 import type { D1Database } from '@cloudflare/workers-types';
+import type { UserRow } from '~~/server/database/schema';
 
 const JWT_SECRET = process.env.JWT_SECRET;
-interface User {
-    id: string;
-    email: string;
-    password_hash: string;
-    name?: string;
-    verified: boolean;
-    role: 'user' | 'admin';
-    verification_token?: string;
-    verification_sent_at?: string;
-    created_at: string;
-    updated_at: string;
-}
 class DatabaseService {
     constructor(private db: D1Database) {}
-    async getUserById(id: string): Promise<User | null> {
+    async getUserById(id: string): Promise<UserRow | null> {
         return await this.db
             .prepare('SELECT * FROM users WHERE id = ?')
             .bind(id)
-            .first<User>();
+            .first<UserRow>();
     }
 }
 export default defineEventHandler(async (event) => {
@@ -68,7 +57,7 @@ export default defineEventHandler(async (event) => {
             clearAuthCookies(event);
             throw createError({
                 statusCode: 401,
-                statusMessage: 'User not found',
+                statusMessage: 'UserRow not found',
             });
         }
         const publicUser = {

@@ -94,16 +94,8 @@
 import { Button } from '~/components/ui/button';
 import { Badge } from '~/components/ui/badge';
 import { AlertTriangle } from 'lucide-vue-next';
+import type { ImportResumePreview } from '~/types/resume';
 
-export interface ImportResumePreview {
-    name: string;
-    language: string;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    data: any;
-    settings?: import('~/types/resume').ResumeSettings;
-    isDuplicate: boolean;
-    itemCount: number;
-}
 interface Props {
     isOpen: boolean;
     resumesToImport: ImportResumePreview[];

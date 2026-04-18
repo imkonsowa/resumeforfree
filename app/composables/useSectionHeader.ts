@@ -20,30 +20,20 @@ export function useSectionHeader() {
     const { t } = useI18n({ useScope: 'global' });
     const resumeStore = useResumeStore();
 
-    const resumeLanguage = computed(() => resumeStore.activeResumeLanguage);
-
     const getSectionHeader = (section: keyof SectionHeaders) => {
         return computed(() => {
-            const data = resumeStore.resumeData;
-            const lang = resumeLanguage.value;
-
-            const i18nHeader = data.sectionHeadersI18n?.[lang]?.[section];
-            if (i18nHeader) {
-                return i18nHeader as string;
-            }
-
-            const oldHeader = data.sectionHeaders?.[section];
-            if (oldHeader) {
-                return oldHeader;
-            }
+            const override = resumeStore.resumeData.sectionHeaders?.[section];
+            if (override) return override;
 
             const translationKey = SECTION_TRANSLATION_MAP[section];
-            return translationKey ? t(translationKey, 1, { locale: lang }) : '';
+            return translationKey
+                ? t(translationKey, 1, { locale: resumeStore.activeResumeLanguage })
+                : '';
         });
     };
 
     const setSectionHeader = (section: keyof SectionHeaders, value: string) => {
-        resumeStore.updateSectionHeader(section, value, resumeLanguage.value);
+        resumeStore.updateSectionHeader(section, value);
     };
 
     return {

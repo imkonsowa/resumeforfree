@@ -34,8 +34,8 @@ export default defineEventHandler(async (event) => {
                 name: users.name,
                 role: users.role,
                 verified: users.verified,
-                created_at: users.createdAt,
-                updated_at: users.updatedAt,
+                createdAt: users.createdAt,
+                updatedAt: users.updatedAt,
             })
                 .from(users)
                 .where(whereCondition)

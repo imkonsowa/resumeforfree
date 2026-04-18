@@ -1,7 +1,4 @@
-import type { Resume } from '~/types/resume';
-
-type ResumeCreatePayload = Pick<Resume, 'name' | 'data'> & Partial<Pick<Resume, 'language' | 'settings'>>;
-type ResumeUpdatePayload = Partial<Pick<Resume, 'name' | 'language' | 'data' | 'settings'>> & { isActive?: boolean };
+import type { ResumeCreatePayload, ResumeUpdatePayload } from '~/types/api';
 
 export const useApi = () => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -1,15 +1,8 @@
 import jwt from '@tsndr/cloudflare-worker-jwt';
 import type { H3Event } from 'h3';
+import type { JWTPayload } from '~~/server/types/db';
 
 const JWT_SECRET = process.env.JWT_SECRET;
-
-interface JWTPayload {
-    sub: string;
-    email: string;
-    role?: 'user' | 'admin';
-    iat: number;
-    exp: number;
-}
 
 /**
  * Verify JWT token and extract payload

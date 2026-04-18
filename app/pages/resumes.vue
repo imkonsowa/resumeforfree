@@ -8,8 +8,7 @@ import CloudSyncModal from '~/components/elements/CloudSyncModal.vue';
 import ResumesHeader from '~/components/resumes/ResumesHeader.vue';
 import ResumesGrid from '~/components/resumes/ResumesGrid.vue';
 import ResumesEmptyState from '~/components/resumes/ResumesEmptyState.vue';
-import type { ImportResumePreview } from '~/components/elements/ImportConfirmationModal.vue';
-import type { Resume } from '~/types/resume';
+import type { ImportResumePreview, Resume } from '~/types/resume';
 import { Button } from '~/components/ui/button';
 import { CheckCircle, Cloud, LogIn, UserPlus } from 'lucide-vue-next';
 

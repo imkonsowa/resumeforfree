@@ -263,7 +263,7 @@ import { Button } from '~/components/ui/button';
 import { Popover, PopoverContent, PopoverTrigger } from '~/components/ui/popover';
 import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarTrigger } from '~/components/ui/menubar';
 import { ChevronDown, Download, MoreVertical, Settings, SlidersHorizontal } from 'lucide-vue-next';
-import { availableTemplates } from '~/types/resume';
+import { getTemplateList } from '~/templates';
 import { useResumeGenerator } from '~/composables/useResumeGenerator';
 import { useDebounceFn } from '@vueuse/core';
 import SettingsModal from '~/components/elements/SettingsModal.vue';
@@ -271,6 +271,8 @@ import ZoomControls from '~/components/elements/ZoomControls.vue';
 import { useSettingsStore } from '~/stores/settings';
 import { useResumeStore } from '~/stores/resume';
 import { storeToRefs } from 'pinia';
+
+const availableTemplates = getTemplateList();
 
 const { t } = useI18n();
 const { generatePreview, downloadPDF, downloadSVG, downloadTypst, downloadTypstText } = useResumeGenerator();
@@ -328,6 +330,7 @@ const generatePreviewInternal = async () => {
             templateId: selectedTemplate.value,
             font: selectedFont.value,
             locale: resumeStore.activeResumeLanguage,
+            fontSize: fontSize.value,
         });
     }
     catch (err) {
@@ -346,6 +349,7 @@ const handleDownload = async () => {
             templateId: selectedTemplate.value,
             font: selectedFont.value,
             locale: resumeStore.activeResumeLanguage,
+            fontSize: fontSize.value,
         });
         // Fire-and-forget: increment download counter without blocking UX
         $fetch('/api/increase-downloads-count', { method: 'POST' }).catch(() => { /* fire-and-forget */ });
@@ -363,6 +367,7 @@ const handleDownloadSVG = async () => {
             templateId: selectedTemplate.value,
             font: selectedFont.value,
             locale: resumeStore.activeResumeLanguage,
+            fontSize: fontSize.value,
         });
     }
     catch (err) {
@@ -378,6 +383,7 @@ const handleDownloadTypst = () => {
             templateId: selectedTemplate.value,
             font: selectedFont.value,
             locale: resumeStore.activeResumeLanguage,
+            fontSize: fontSize.value,
         });
     }
     catch (err) {
@@ -393,6 +399,7 @@ const handleDownloadTypstText = () => {
             templateId: selectedTemplate.value,
             font: selectedFont.value,
             locale: resumeStore.activeResumeLanguage,
+            fontSize: fontSize.value,
         });
     }
     catch (err) {

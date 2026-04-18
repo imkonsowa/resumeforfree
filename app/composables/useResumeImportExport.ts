@@ -1,4 +1,4 @@
-import type { ImportResumePreview } from '~/components/elements/ImportConfirmationModal.vue';
+import type { ImportResumePreview } from '~/types/resume';
 
 export const useResumeImportExport = () => {
     const resumeStore = useResumeStore();

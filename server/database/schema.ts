@@ -77,15 +77,48 @@ export const contactMessages = sqliteTable('contact_messages', {
     emailIdx: index('idx_contact_messages_email').on(table.email),
 }));
 
-// Export types for use in application
-export type User = typeof users.$inferSelect;
-export type NewUser = typeof users.$inferInsert;
+// =============================================================================
+// Raw-SQL row shapes (snake_case) for handlers that query D1 directly.
+// The Drizzle tables above are the source of truth; these interfaces describe
+// what .prepare().first()/all() returns when selecting with raw SQL.
+// =============================================================================
 
-export type Resume = typeof resumes.$inferSelect;
-export type NewResume = typeof resumes.$inferInsert;
+export interface UserRow {
+    id: string;
+    email: string;
+    password_hash: string;
+    name?: string;
+    verified: boolean;
+    role: 'user' | 'admin';
+    verification_token?: string;
+    verification_sent_at?: string;
+    created_at: string;
+    updated_at: string;
+}
 
-export type UserSetting = typeof userSettings.$inferSelect;
-export type NewUserSetting = typeof userSettings.$inferInsert;
+export interface UserSettingsRow {
+    id: string;
+    user_id: string;
+    settings: string | unknown;
+    created_at: string;
+    updated_at: string;
+}
 
-export type ContactMessage = typeof contactMessages.$inferSelect;
-export type NewContactMessage = typeof contactMessages.$inferInsert;
+export interface ResumeRow {
+    id: string;
+    user_id: string;
+    name: string;
+    language: string;
+    is_active: boolean;
+    template: string;
+    data: string | unknown;
+    settings: string | unknown;
+    created_at: string;
+    updated_at: string;
+}
+
+export interface PasswordResetTokenRow {
+    id: string;
+    user_id: string;
+    expires_at: string;
+}

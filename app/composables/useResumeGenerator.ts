@@ -1,12 +1,6 @@
 import { getTemplate } from '~/templates';
 import type { ResumeData } from '~/types/resume';
-
-export interface ResumeRenderOptions {
-    resumeData: ResumeData;
-    templateId?: string;
-    font?: string;
-    locale?: string;
-}
+import type { ResumeRenderOptions } from '~/types/template';
 
 export const useResumeGenerator = () => {
     const { isReady: typstReady, isLoading: typstLoading } = useTypstLoader();
@@ -21,6 +15,7 @@ export const useResumeGenerator = () => {
         templateId: options.templateId || 'default',
         font: options.font || 'Calibri',
         locale: options.locale || i18n.locale.value,
+        fontSize: options.fontSize ?? 12,
     });
 
     const buildFilename = (resumeData: ResumeData, extension: string): string => {
@@ -44,9 +39,15 @@ export const useResumeGenerator = () => {
     };
 
     const generateTypstContent = (options: ResumeRenderOptions): string => {
-        const { resumeData, templateId, font, locale } = resolve(options);
+        const { resumeData, templateId, font, locale, fontSize } = resolve(options);
         const template = getTemplate(templateId);
-        return template.parse(resumeData, font, locale, scopedT(locale));
+        return template.parse({
+            data: resumeData,
+            font,
+            locale,
+            fontSize,
+            t: scopedT(locale),
+        });
     };
 
     const generatePreview = async (options: ResumeRenderOptions): Promise<string> => {

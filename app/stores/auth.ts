@@ -1,25 +1,19 @@
 import { defineStore } from 'pinia';
+import type { User } from '~/types/user';
 
-interface AuthUser {
-    id: string;
-    email: string;
-    name?: string;
-    verified: boolean;
-    role?: 'user' | 'admin';
-}
 interface AuthState {
-    user: AuthUser | null;
+    user: User | null;
     token: string | null;
     isAuthenticated: boolean;
 }
 
 const USER_COOKIE = 'user_info';
 
-function decodeUserCookie(raw: string | null | undefined): AuthUser | null {
+function decodeUserCookie(raw: string | null | undefined): User | null {
     if (!raw) return null;
     try {
         const json = decodeURIComponent(escape(atob(raw)));
-        const parsed = JSON.parse(json) as AuthUser;
+        const parsed = JSON.parse(json) as User;
         if (!parsed?.id || !parsed?.email) return null;
         return parsed;
     }
@@ -130,7 +124,7 @@ export const useAuthStore = defineStore('auth', {
                     };
                 });
         },
-        setAuth(user: AuthUser) {
+        setAuth(user: User) {
             this.user = user;
             this.token = 'session';
             this.isAuthenticated = true;

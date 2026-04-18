@@ -1,4 +1,5 @@
-import type { Template, TemplateLayoutConfig } from '~/templates/default';
+import type { Template } from '~/types/template';
+import type { TemplateColumnLayout } from '~/types/resume';
 import { defaultTemplate } from '~/templates/default';
 import { compactTemplate } from '~/templates/compact';
 
@@ -15,7 +16,7 @@ export const useTemplate = () => {
                 return defaultTemplate;
         }
     };
-    const getCurrentLayoutConfig = (): TemplateLayoutConfig => {
+    const getCurrentLayoutConfig = (): TemplateColumnLayout => {
         return getCurrentTemplate().layoutConfig;
     };
     const isCurrentTemplateTwoColumn = (): boolean => {

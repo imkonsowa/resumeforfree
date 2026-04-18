@@ -1,6 +1,8 @@
 import { $typst } from '@myriaddreamin/typst.ts';
 import { preloadRemoteFonts } from '@myriaddreamin/typst.ts/dist/esm/options.init.mjs';
 
+import type { TypstLoaderState } from '~/types/typst';
+
 const CACHE_NAME = 'typst-assets-v1';
 
 async function cachedFetch(url: string | URL): Promise<Response> {
@@ -11,13 +13,6 @@ async function cachedFetch(url: string | URL): Promise<Response> {
     const response = await fetch(request);
     if (response.ok) cache.put(request, response.clone());
     return response;
-}
-
-export interface TypstLoaderState {
-    isLoading: boolean;
-    isReady: boolean;
-    error: string | null;
-    hasInitialized: boolean;
 }
 class TypstLoader {
     private static instance: TypstLoader;

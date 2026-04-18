@@ -1,9 +1,7 @@
 import type { Certificate, Education, Experience, Internship, Language, Project, ResumeData, SkillItem, Volunteering } from '~/types/resume';
-import type { SectionContent } from '~/types/templateConfig';
+import type { SectionContent, TranslateFunction } from '~/types/template';
 import { convertDateRange, convertEmail, convertExternalLinkIcon, convertLink } from './typstUtils';
 import { escapeTypstString, escapeTypstText } from './stringUtils';
-
-type TranslateFunction = (key: string) => string;
 
 export const SOCIAL_PLATFORM_LABELS = {
     linkedin: 'LinkedIn',
@@ -20,7 +18,7 @@ export const generateExperienceContent = (experiences: Experience[], t?: Transla
         const at = t ? t('template.at') : ' at ';
         const separator = t ? t('template.separator') : ', ';
         const title = `${experience.position}${experience.company ? at + experience.company : ''}${experience.location ? separator + experience.location : ''}`;
-        const dateRange = convertDateRange(experience.startDate, experience.endDate, experience.isPresent, t);
+        const dateRange = convertDateRange({ startDate: experience.startDate, endDate: experience.endDate, isPresent: experience.isPresent, t });
         const companyLink = experience.companyUrl?.trim() ? convertExternalLinkIcon(experience.companyUrl) : '';
         const achievements = experience.achievements
             .filter(achievement => achievement.text && achievement.text.trim() !== '')
@@ -38,7 +36,7 @@ export const generateInternshipsContent = (internships: Internship[], t?: Transl
         const at = t ? t('template.at') : ' at ';
         const separator = t ? t('template.separator') : ', ';
         const title = `${internship.position}${internship.company ? at + internship.company : ''}${internship.location ? separator + internship.location : ''}`;
-        const dateRange = convertDateRange(internship.startDate, internship.endDate, internship.isPresent, t);
+        const dateRange = convertDateRange({ startDate: internship.startDate, endDate: internship.endDate, isPresent: internship.isPresent, t });
         const companyLink = internship.companyUrl?.trim() ? convertExternalLinkIcon(internship.companyUrl) : '';
         const achievements = internship.achievements
             .filter(achievement => achievement.text && achievement.text.trim() !== '')
@@ -59,7 +57,7 @@ export const generateEducationContent = (education: Education[], t?: TranslateFu
         const title = edu.degree && edu.institution
             ? `${edu.degree}${at}${edu.institution}${edu.location ? separator + edu.location : ''}`
             : `${edu.degree || edu.institution}${edu.location ? separator + edu.location : ''}`;
-        const dateRange = convertDateRange(edu.startDate, edu.endDate, edu.isPresent || false, t);
+        const dateRange = convertDateRange({ startDate: edu.startDate, endDate: edu.endDate, isPresent: edu.isPresent || false, t });
         let additionalInfo = '';
         if (edu.graduationScore && edu.graduationScore.trim()) {
             additionalInfo += `*${gradeLabel}* ${escapeTypstText(edu.graduationScore)}`;
@@ -80,7 +78,7 @@ export const generateVolunteeringContent = (volunteering: Volunteering[], t?: Tr
         const at = t ? t('template.at') : ' at ';
         const separator = t ? t('template.separator') : ', ';
         const title = `${vol.position}${vol.organization ? at + vol.organization : ''}${vol.location ? separator + vol.location : ''}`;
-        const dateRange = convertDateRange(vol.startDate, vol.endDate, vol.isPresent, t);
+        const dateRange = convertDateRange({ startDate: vol.startDate, endDate: vol.endDate, isPresent: vol.isPresent, t });
         const achievements = vol.achievements
             .filter(achievement => achievement.text && achievement.text.trim() !== '')
             .map(achievement => achievement.text);
@@ -187,7 +185,7 @@ export const generateCertificatesContent = (certificates: Certificate[]): Sectio
         .filter(cert => cert.title.trim() || cert.issuer.trim())
         .map((cert) => {
             const title = `${cert.title}${cert.issuer ? ' from ' + cert.issuer : ''}`;
-            const dateRange = cert.date ? convertDateRange(cert.date) : '';
+            const dateRange = cert.date ? convertDateRange({ startDate: cert.date }) : '';
             const certLink = cert.url?.trim() ? convertExternalLinkIcon(cert.url) : '';
             const description = cert.description?.trim() ? escapeTypstText(cert.description) : '';
             return {

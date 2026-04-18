@@ -218,6 +218,7 @@ import {
     DropdownMenuTrigger,
 } from '~/components/ui/dropdown-menu';
 import { toast } from 'vue-sonner';
+import type { AdminResumeListItem as Resume, Pagination } from '~/types/api';
 
 definePageMeta({
     middleware: 'admin',
@@ -226,23 +227,12 @@ definePageMeta({
 
 const { t } = useI18n();
 
-interface Resume {
-    id: string;
-    user_id: string;
-    user_email?: string;
-    name: string;
-    template?: string;
-    is_active?: boolean;
-    created_at: string;
-    updated_at: string;
-}
-
 const resumes = ref<Resume[]>([]);
 const loading = ref(true);
 const showPreview = ref(false);
 const previewResume = ref<Resume | null>(null);
 const currentPage = ref(1);
-const pagination = ref({
+const pagination = ref<Pagination>({
     page: 1,
     limit: 50,
     total: 0,

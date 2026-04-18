@@ -75,12 +75,6 @@ export interface SectionOrder {
     languages: number;
     certificates: number;
 }
-export interface TemplateLayoutConfig {
-    isTwoColumn: boolean;
-    leftColumnRatio?: string;
-    rightColumnRatio?: string;
-    movableSections?: string[];
-}
 export interface SectionPlacement {
     skills: 'left' | 'right';
     projects: 'left' | 'right';
@@ -124,7 +118,6 @@ export interface ResumeData {
     softSkills: string;
     sectionOrder: SectionOrder;
     sectionHeaders: SectionHeaders;
-    sectionHeadersI18n?: Record<string, Partial<SectionHeaders>>;
     sectionPlacement: SectionPlacement;
 }
 export interface Resume {
@@ -142,6 +135,15 @@ export interface MultiResumeState {
     activeResumeId: string | null;
     nextId: number;
 }
+export interface ImportResumePreview {
+    name: string;
+    language: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    data: any;
+    settings?: ResumeSettings;
+    isDuplicate: boolean;
+    itemCount: number;
+}
 export interface UserSettings {
     locale: string;
     showDownloadMenu?: boolean;
@@ -155,7 +157,6 @@ export interface ResumeSettings {
     sectionCollapsed: Record<string, boolean>;
     isRawMode: boolean;
 }
-export type AppSettings = UserSettings & ResumeSettings;
 export const defaultResumeData: ResumeData = {
     version: 'v1',
     firstName: '',
@@ -220,11 +221,6 @@ export const defaultResumeSettings: ResumeSettings = {
         certificates: true,
     },
 };
-export const defaultAppSettings: AppSettings = {
-    ...defaultUserSettings,
-    ...defaultResumeSettings,
-};
-
 /**
  * Builds a complete ResumeSettings from a user's legacy settings JSON
  * (pre-refactor shape where font/template/etc lived on user_settings).
@@ -265,16 +261,3 @@ export const getDefaultFontForLanguage = (language: string) => {
     const fonts = getFontsForLanguage(language);
     return fonts[0]?.family || 'Calibri';
 };
-
-export const availableTemplates = [
-    {
-        id: 'default',
-        name: 'Default',
-        description: 'Optimal for one or two pages resumes',
-    },
-    {
-        id: 'compact',
-        name: 'Compact',
-        description: 'Single column template for longer resumes',
-    },
-];

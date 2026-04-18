@@ -1,3 +1,4 @@
+import type { DateRangeInput } from '~/types/template';
 import { escapeTypstString, escapeTypstText } from './stringUtils';
 
 export const HEADER_SPACING = '1em';
@@ -41,7 +42,7 @@ export const formatDateToMonthYear = (date: string): string => {
     }
     return date;
 };
-export const convertDateRange = (startDate: string, endDate?: string, isPresent?: boolean, t?: (key: string) => string): string => {
+export const convertDateRange = ({ startDate, endDate, isPresent, t }: DateRangeInput): string => {
     if (!startDate && !endDate && !isPresent) return '';
     const presentText = t ? t('template.present') : 'Present';
     let dateText = '';

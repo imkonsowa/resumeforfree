@@ -1,12 +1,7 @@
 import bcrypt from 'bcryptjs';
 import type { D1Database } from '@cloudflare/workers-types';
+import type { PasswordResetTokenRow } from '~~/server/database/schema';
 import { hashToken } from '../../utils/email';
-
-interface TokenRecord {
-    id: string;
-    user_id: string;
-    expires_at: string;
-}
 
 export default defineEventHandler(async (event) => {
     const db = event.context.cloudflare?.env?.DB as D1Database | undefined;
@@ -56,7 +51,7 @@ export default defineEventHandler(async (event) => {
                 WHERE token_hash = ?
             `)
             .bind(hashedToken)
-            .first<TokenRecord>();
+            .first<PasswordResetTokenRow>();
 
         if (!tokenRecord) {
             throw createError({

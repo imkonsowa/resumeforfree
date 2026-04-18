@@ -1,21 +1,15 @@
 import jwt from '@tsndr/cloudflare-worker-jwt';
 import type { D1Database } from '@cloudflare/workers-types';
+import type { UserSettingsRow } from '~~/server/database/schema';
 
 const JWT_SECRET = process.env.JWT_SECRET;
-interface UserSettings {
-    id: string;
-    user_id: string;
-    settings: string | unknown;
-    created_at: string;
-    updated_at: string;
-}
 class DatabaseService {
     constructor(private db: D1Database) {}
-    async getUserSettings(userId: string): Promise<UserSettings | null> {
+    async getUserSettings(userId: string): Promise<UserSettingsRow | null> {
         return await this.db
             .prepare('SELECT * FROM user_settings WHERE user_id = ?')
             .bind(userId)
-            .first<UserSettings>();
+            .first<UserSettingsRow>();
     }
 }
 export default defineEventHandler(async (event) => {

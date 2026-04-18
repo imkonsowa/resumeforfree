@@ -1,19 +1,12 @@
 import jwt from '@tsndr/cloudflare-worker-jwt';
 import type { D1Database } from '@cloudflare/workers-types';
+import type { ResumeUpdatePatch } from '~~/server/types/db';
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
-interface ResumeUpdates {
-    name?: string;
-    language?: string;
-    data?: unknown;
-    settings?: unknown;
-    isActive?: boolean;
-}
-
 class DatabaseService {
     constructor(private db: D1Database) {}
-    async updateResume(resumeId: string, userId: string, updates: ResumeUpdates): Promise<void> {
+    async updateResume(resumeId: string, userId: string, updates: ResumeUpdatePatch): Promise<void> {
         const setParts: string[] = [];
         const values: unknown[] = [];
         if (updates.name !== undefined) {

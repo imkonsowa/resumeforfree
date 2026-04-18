@@ -1,9 +1,5 @@
-export interface ConfirmationOptions {
-    title?: string;
-    message?: string;
-    confirmText?: string;
-    cancelText?: string;
-}
+import type { ConfirmationOptions } from '~/types/ui';
+
 export const useConfirmation = () => {
     const isOpen = ref(false);
     const title = ref('Confirm Action');

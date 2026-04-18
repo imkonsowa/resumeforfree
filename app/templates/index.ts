@@ -1,4 +1,4 @@
-import type { Template } from './default';
+import type { Template } from '~/types/template';
 import { defaultTemplate } from './default';
 import { compactTemplate } from './compact';
 

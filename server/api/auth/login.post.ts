@@ -1,27 +1,16 @@
 import jwt from '@tsndr/cloudflare-worker-jwt';
 import bcrypt from 'bcryptjs';
 import type { D1Database } from '@cloudflare/workers-types';
+import type { UserRow } from '~~/server/database/schema';
 
 const JWT_SECRET = process.env.JWT_SECRET;
-interface User {
-    id: string;
-    email: string;
-    password_hash: string;
-    name?: string;
-    verified: boolean;
-    role: 'user' | 'admin';
-    verification_token?: string;
-    verification_sent_at?: string;
-    created_at: string;
-    updated_at: string;
-}
 class DatabaseService {
     constructor(private db: D1Database) {}
-    async getUserByEmail(email: string): Promise<User | null> {
+    async getUserByEmail(email: string): Promise<UserRow | null> {
         return await this.db
             .prepare('SELECT * FROM users WHERE email = ?')
             .bind(email)
-            .first<User>();
+            .first<UserRow>();
     }
 }
 export default defineEventHandler(async (event) => {

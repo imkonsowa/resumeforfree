@@ -33,45 +33,45 @@ const mockT = (key: string): string => {
 describe('Default Template Parsing', () => {
     describe('basic parsing', () => {
         it('should parse minimal resume without errors', () => {
-            const result = defaultTemplate.parse(testResumes.minimal, 'Calibri', 'en', mockT);
+            const result = defaultTemplate.parse({ data: testResumes.minimal, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             expect(result).toBeDefined();
             expect(typeof result).toBe('string');
             expect(result.length).toBeGreaterThan(0);
         });
 
         it('should parse full resume without errors', () => {
-            const result = defaultTemplate.parse(fullResume, 'Calibri', 'en', mockT);
+            const result = defaultTemplate.parse({ data: fullResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             expect(result).toBeDefined();
             expect(result).toContain('Sarah');
             expect(result).toContain('Johnson');
         });
 
         it('should include font configuration', () => {
-            const result = defaultTemplate.parse(testResumes.minimal, 'Calibri', 'en', mockT);
+            const result = defaultTemplate.parse({ data: testResumes.minimal, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             expect(result).toContain('Calibri');
         });
     });
 
     describe('special characters handling', () => {
         it('should properly escape C# in skills', () => {
-            const result = defaultTemplate.parse(specialCharsResume, 'Calibri', 'en', mockT);
+            const result = defaultTemplate.parse({ data: specialCharsResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             // In content blocks, # should be escaped as \#
             expect(result).toContain('C\\#');
         });
 
         it('should properly escape $ in content', () => {
-            const result = defaultTemplate.parse(specialCharsResume, 'Calibri', 'en', mockT);
+            const result = defaultTemplate.parse({ data: specialCharsResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             expect(result).toContain('\\$');
         });
 
         it('should handle project titles with special chars', () => {
-            const result = defaultTemplate.parse(specialCharsResume, 'Calibri', 'en', mockT);
+            const result = defaultTemplate.parse({ data: specialCharsResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             // Project title goes in #text("...") so should use escapeTypstString
             expect(result).toContain('Operators Logic App');
         });
 
         it('should not have unescaped # in user content', () => {
-            const result = defaultTemplate.parse(specialCharsResume, 'Calibri', 'en', mockT);
+            const result = defaultTemplate.parse({ data: specialCharsResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             // The user content "C#" should appear escaped as "C\#"
             // Check that the special characters from input are properly escaped
             expect(result).toContain('C\\#');
@@ -83,17 +83,17 @@ describe('Default Template Parsing', () => {
 
     describe('Typst markup characters', () => {
         it('should escape asterisks in user content', () => {
-            const result = defaultTemplate.parse(typstMarkupResume, 'Calibri', 'en', mockT);
+            const result = defaultTemplate.parse({ data: typstMarkupResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             expect(result).toContain('\\*');
         });
 
         it('should escape underscores in user content', () => {
-            const result = defaultTemplate.parse(typstMarkupResume, 'Calibri', 'en', mockT);
+            const result = defaultTemplate.parse({ data: typstMarkupResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             expect(result).toContain('\\_');
         });
 
         it('should escape brackets in user content', () => {
-            const result = defaultTemplate.parse(typstMarkupResume, 'Calibri', 'en', mockT);
+            const result = defaultTemplate.parse({ data: typstMarkupResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             expect(result).toContain('\\[');
             expect(result).toContain('\\]');
             expect(result).toContain('\\{');
@@ -103,18 +103,18 @@ describe('Default Template Parsing', () => {
 
     describe('edge cases', () => {
         it('should handle empty fields gracefully', () => {
-            const result = defaultTemplate.parse(edgeCaseResume, 'Calibri', 'en', mockT);
+            const result = defaultTemplate.parse({ data: edgeCaseResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             expect(result).toBeDefined();
             // Should not throw
         });
 
         it('should handle whitespace-only summary', () => {
-            const result = defaultTemplate.parse(edgeCaseResume, 'Calibri', 'en', mockT);
+            const result = defaultTemplate.parse({ data: edgeCaseResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             expect(result).toBeDefined();
         });
 
         it('should handle skills with only title or only description', () => {
-            const result = defaultTemplate.parse(edgeCaseResume, 'Calibri', 'en', mockT);
+            const result = defaultTemplate.parse({ data: edgeCaseResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             expect(result).toBeDefined();
         });
     });
@@ -123,13 +123,13 @@ describe('Default Template Parsing', () => {
 describe('Compact Template Parsing', () => {
     describe('basic parsing', () => {
         it('should parse minimal resume without errors', () => {
-            const result = compactTemplate.parse(testResumes.minimal, 'Calibri', 'en', mockT);
+            const result = compactTemplate.parse({ data: testResumes.minimal, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             expect(result).toBeDefined();
             expect(typeof result).toBe('string');
         });
 
         it('should parse full resume without errors', () => {
-            const result = compactTemplate.parse(fullResume, 'Calibri', 'en', mockT);
+            const result = compactTemplate.parse({ data: fullResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             expect(result).toBeDefined();
             expect(result).toContain('Sarah');
         });
@@ -137,19 +137,19 @@ describe('Compact Template Parsing', () => {
 
     describe('special characters handling', () => {
         it('should properly escape C# in compact template', () => {
-            const result = compactTemplate.parse(specialCharsResume, 'Calibri', 'en', mockT);
+            const result = compactTemplate.parse({ data: specialCharsResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             expect(result).toContain('C\\#');
         });
 
         it('should properly escape $ in compact template', () => {
-            const result = compactTemplate.parse(specialCharsResume, 'Calibri', 'en', mockT);
+            const result = compactTemplate.parse({ data: specialCharsResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             expect(result).toContain('\\$');
         });
     });
 
     describe('edge cases', () => {
         it('should handle empty resume data', () => {
-            const result = compactTemplate.parse(edgeCaseResume, 'Calibri', 'en', mockT);
+            const result = compactTemplate.parse({ data: edgeCaseResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             expect(result).toBeDefined();
         });
     });
@@ -158,14 +158,14 @@ describe('Compact Template Parsing', () => {
 describe('Template Output Validation', () => {
     describe('Typst syntax validation', () => {
         it('should produce valid Typst document structure', () => {
-            const result = defaultTemplate.parse(fullResume, 'Calibri', 'en', mockT);
+            const result = defaultTemplate.parse({ data: fullResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             // Check for required Typst setup
             expect(result).toContain('#set page');
             expect(result).toContain('#set text');
         });
 
         it('should have balanced brackets in output', () => {
-            const result = defaultTemplate.parse(fullResume, 'Calibri', 'en', mockT);
+            const result = defaultTemplate.parse({ data: fullResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             // Count opening and closing brackets (excluding escaped ones)
             const openBrackets = (result.match(/(?<!\\)\[/g) || []).length;
             const closeBrackets = (result.match(/(?<!\\)\]/g) || []).length;
@@ -173,7 +173,7 @@ describe('Template Output Validation', () => {
         });
 
         it('should have balanced curly braces in output', () => {
-            const result = defaultTemplate.parse(fullResume, 'Calibri', 'en', mockT);
+            const result = defaultTemplate.parse({ data: fullResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             const openBraces = (result.match(/(?<!\\)\{/g) || []).length;
             const closeBraces = (result.match(/(?<!\\)\}/g) || []).length;
             // Note: May not be exactly equal due to Typst syntax, but should be close
@@ -181,7 +181,7 @@ describe('Template Output Validation', () => {
         });
 
         it('should have balanced parentheses in output', () => {
-            const result = defaultTemplate.parse(fullResume, 'Calibri', 'en', mockT);
+            const result = defaultTemplate.parse({ data: fullResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
             const openParens = (result.match(/\(/g) || []).length;
             const closeParens = (result.match(/\)/g) || []).length;
             expect(openParens).toBe(closeParens);
@@ -191,8 +191,8 @@ describe('Template Output Validation', () => {
 
 describe('Both Templates Consistency', () => {
     it('should produce similar content for same resume', () => {
-        const defaultResult = defaultTemplate.parse(fullResume, 'Calibri', 'en', mockT);
-        const compactResult = compactTemplate.parse(fullResume, 'Calibri', 'en', mockT);
+        const defaultResult = defaultTemplate.parse({ data: fullResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
+        const compactResult = compactTemplate.parse({ data: fullResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
 
         // Both should contain the person's name
         expect(defaultResult).toContain('Sarah');
@@ -204,8 +204,8 @@ describe('Both Templates Consistency', () => {
     });
 
     it('should handle special chars consistently across templates', () => {
-        const defaultResult = defaultTemplate.parse(specialCharsResume, 'Calibri', 'en', mockT);
-        const compactResult = compactTemplate.parse(specialCharsResume, 'Calibri', 'en', mockT);
+        const defaultResult = defaultTemplate.parse({ data: specialCharsResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
+        const compactResult = compactTemplate.parse({ data: specialCharsResume, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
 
         // Both should have escaped # characters
         expect(defaultResult).toContain('C\\#');

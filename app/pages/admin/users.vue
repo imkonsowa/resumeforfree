@@ -80,7 +80,7 @@
                                 {{ user.verified ? $t('common.yes') : $t('common.no') }}
                             </span>
                             <span class="text-xs text-gray-500">
-                                {{ formatDate(user.created_at) }}
+                                {{ formatDate(user.createdAt) }}
                             </span>
                         </div>
                     </div>
@@ -171,7 +171,7 @@
                                     </span>
                                 </td>
                                 <td class="px-4 lg:px-6 py-4 whitespace-nowrap text-sm text-gray-700">
-                                    {{ formatDate(user.created_at) }}
+                                    {{ formatDate(user.createdAt) }}
                                 </td>
                                 <td class="px-4 lg:px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
                                     <DropdownMenu>
@@ -356,6 +356,8 @@ import { Label } from '~/components/ui/label';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '~/components/ui/dialog';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from '~/components/ui/dropdown-menu';
 import { toast } from 'vue-sonner';
+import type { User } from '~/types/user';
+import type { Pagination } from '~/types/api';
 
 definePageMeta({
     middleware: 'admin',
@@ -364,19 +366,10 @@ definePageMeta({
 
 const { t } = useI18n();
 
-interface User {
-    id: string;
-    email: string;
-    name?: string;
-    role: 'user' | 'admin';
-    verified: boolean;
-    created_at: string;
-}
-
 const users = ref<User[]>([]);
 const loading = ref(true);
 const currentPage = ref(1);
-const pagination = ref({
+const pagination = ref<Pagination>({
     page: 1,
     limit: 50,
     total: 0,

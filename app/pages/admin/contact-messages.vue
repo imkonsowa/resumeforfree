@@ -152,6 +152,7 @@ import { toast } from 'vue-sonner';
 import AdminPagination from '~/components/admin/AdminPagination.vue';
 import { Card } from '~/components/ui/card';
 import { Button } from '~/components/ui/button';
+import type { AdminContactMessage as ContactMessage, Pagination } from '~/types/api';
 
 definePageMeta({
     middleware: 'admin',
@@ -160,24 +161,11 @@ definePageMeta({
 
 const { t } = useI18n();
 
-interface ContactMessage {
-    id: string;
-    name: string;
-    email: string;
-    subject: string;
-    message: string;
-    status: 'new' | 'read' | 'resolved';
-    ip_address?: string;
-    user_agent?: string;
-    created_at: string;
-    updated_at: string;
-}
-
 const messages = ref<ContactMessage[]>([]);
 const loading = ref(true);
 const currentFilter = ref<string>('all');
 const currentPage = ref(1);
-const pagination = ref({
+const pagination = ref<Pagination>({
     page: 1,
     limit: 50,
     total: 0,
