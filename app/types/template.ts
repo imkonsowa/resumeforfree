@@ -63,12 +63,4 @@ export interface Template {
     parse: (input: TemplateParseInput) => string;
 }
 
-export interface ResumeRenderOptions {
-    resumeData: ResumeData;
-    templateId?: string;
-    font?: string;
-    locale?: string;
-    fontSize?: number;
-}
-
 export type SectionRenderer = (data: ResumeData, context: RendererContext) => string;

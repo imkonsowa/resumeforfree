@@ -91,7 +91,7 @@ const handleCreateResume = async (name: string, language: string, navigateToBuil
         ...defaultResumeSettings,
         selectedFont: getDefaultFontForLanguage(language),
     };
-    const newResumeId = resumeStore.createResume(resumeName, language, seededSettings);
+    const newResumeId = resumeStore.createResume({ name: resumeName, language, settings: seededSettings });
     resumeStore.setActiveResume(newResumeId);
     showCreateModal.value = false;
     if (saveToCloud && authStore.isLoggedIn) {

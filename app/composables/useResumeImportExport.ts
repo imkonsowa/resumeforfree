@@ -97,7 +97,7 @@ export const useResumeImportExport = () => {
         selectedIndexes.forEach((index) => {
             const resumeData = previews[index];
             if (resumeData) {
-                const newResumeId = resumeStore.createResume(resumeData.name, resumeData.language, resumeData.settings);
+                const newResumeId = resumeStore.createResume({ name: resumeData.name, language: resumeData.language, settings: resumeData.settings });
                 resumeStore.updateResumeData(newResumeId, resumeData.data);
                 importedCount++;
             }

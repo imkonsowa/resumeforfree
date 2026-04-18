@@ -89,7 +89,7 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Button } from '~/components/ui/button';
 import { X } from 'lucide-vue-next';
 import { useResumeGenerator } from '~/composables/useResumeGenerator';
-import type { ResumeData, ResumeSettings, UserSettings } from '~/types/resume';
+import type { Resume, ResumeData, ResumeSettings, UserSettings } from '~/types/resume';
 import { resumeSettingsFromLegacy } from '~/types/resume';
 import { getLocaleDirection } from '~/composables/useLocale';
 
@@ -137,16 +137,20 @@ const loadResume = async () => {
             $fetch(`/api/admin/users/${props.userId}/settings`).catch(() => ({ settings: null })),
         ]);
 
-        const resumeData = resumeResponse.data as ResumeData;
-        const resumeSettings = resumeResponse.settings as Partial<ResumeSettings> | null;
         const userSettings = userSettingsResponse.settings as Partial<UserSettings> | null;
 
-        userLocale.value = resumeResponse.language || userSettings?.locale || 'en';
-        await loadLocaleMessages(userLocale.value);
+        const resume: Resume = {
+            id: props.resumeId,
+            name: props.resumeName,
+            language: resumeResponse.language || userSettings?.locale || 'en',
+            data: resumeResponse.data as ResumeData,
+            settings: resumeSettingsFromLegacy(resumeResponse.settings as Partial<ResumeSettings> | null),
+            createdAt: resumeResponse.createdAt || '',
+            updatedAt: resumeResponse.updatedAt || '',
+        };
 
-        const effectiveSettings = resumeSettingsFromLegacy(resumeSettings);
-        const template = effectiveSettings.selectedTemplate;
-        const font = effectiveSettings.selectedFont;
+        userLocale.value = resume.language;
+        await loadLocaleMessages(userLocale.value);
 
         if (!typstReady.value) {
             await new Promise((resolve) => {
@@ -167,13 +171,7 @@ const loadResume = async () => {
             throw new Error('Typst compiler not ready');
         }
 
-        previewContent.value = await generatePreview({
-            resumeData,
-            templateId: template,
-            font,
-            locale: userLocale.value,
-            fontSize: effectiveSettings.fontSize,
-        });
+        previewContent.value = await generatePreview(resume);
     }
     catch (err) {
         console.error('Error loading resume preview:', err);

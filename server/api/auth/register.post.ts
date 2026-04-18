@@ -1,16 +1,16 @@
 import jwt from '@tsndr/cloudflare-worker-jwt';
 import bcrypt from 'bcryptjs';
 import type { D1Database } from '@cloudflare/workers-types';
-import type { UserRow } from '~~/server/database/schema';
+import type { UserModel } from '~~/server/database/schema';
 
 const JWT_SECRET = process.env.JWT_SECRET;
 class DatabaseService {
     constructor(private db: D1Database) {}
-    async getUserByEmail(email: string): Promise<UserRow | null> {
+    async getUserByEmail(email: string): Promise<UserModel | null> {
         return await this.db
             .prepare('SELECT * FROM users WHERE email = ?')
             .bind(email)
-            .first<UserRow>();
+            .first<UserModel>();
     }
 
     async createUser(email: string, passwordHash: string, name?: string): Promise<string> {
@@ -104,7 +104,7 @@ export default defineEventHandler(async (event) => {
     if (existingUser) {
         throw createError({
             statusCode: 400,
-            statusMessage: 'UserRow already exists',
+            statusMessage: 'User already exists',
         });
     }
     const passwordHash = await bcrypt.hash(password, 12);

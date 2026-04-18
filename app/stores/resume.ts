@@ -196,15 +196,15 @@ export const useResumeStore = defineStore('resume', {
                 this.activeResumeId = Object.keys(this.resumes)[0];
             }
         },
-        createResume(name?: string, language = 'en', settings?: ResumeSettings): string {
+        createResume(input: { name?: string; language?: string; settings?: ResumeSettings } = {}): string {
             const id = `resume-${this.nextId}`;
             const timestamp = new Date().toISOString();
             this.resumes[id] = {
                 id,
-                name: name || `Resume ${this.nextId}`,
-                language,
+                name: input.name || `Resume ${this.nextId}`,
+                language: input.language || 'en',
                 data: { ...defaultResumeData },
-                settings: settings ? { ...settings } : { ...defaultResumeSettings },
+                settings: input.settings ? { ...input.settings } : { ...defaultResumeSettings },
                 createdAt: timestamp,
                 updatedAt: timestamp,
             };

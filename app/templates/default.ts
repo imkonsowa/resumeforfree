@@ -20,7 +20,7 @@ const parse = ({ data, font, locale, t, fontSize }: TemplateParseInput): string 
     const isRtl = isRtlLocale(locale);
 
     const config = DEFAULT_LAYOUT_CONFIG;
-    const context = new RendererContext(t, fontSize, config, locale);
+    const context = new RendererContext({ t, fontSize, config, locale });
     const sharedRenderers = getSharedSectionRenderers();
 
     const allSections = {

@@ -1,18 +1,18 @@
 import jwt from '@tsndr/cloudflare-worker-jwt';
 import bcrypt from 'bcryptjs';
 import type { D1Database } from '@cloudflare/workers-types';
-import type { UserRow } from '~~/server/database/schema';
+import type { UserModel } from '~~/server/database/schema';
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
 class DatabaseService {
     constructor(private db: D1Database) {}
 
-    async getUserById(id: string): Promise<UserRow | null> {
+    async getUserById(id: string): Promise<UserModel | null> {
         return await this.db
             .prepare('SELECT * FROM users WHERE id = ?')
             .bind(id)
-            .first<UserRow>();
+            .first<UserModel>();
     }
 
     async updateUserPassword(id: string, passwordHash: string): Promise<void> {
@@ -92,7 +92,7 @@ export default defineEventHandler(async (event) => {
         if (!user) {
             throw createError({
                 statusCode: 404,
-                statusMessage: 'UserRow not found',
+                statusMessage: 'User not found',
             });
         }
 

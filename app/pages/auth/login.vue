@@ -155,7 +155,7 @@ const handleLogin = async () => {
     if (loading.value || !turnstileToken.value) return;
     loading.value = true;
     error.value = '';
-    const result = await authStore.login(email.value, password.value, turnstileToken.value);
+    const result = await authStore.login({ email: email.value, password: password.value, turnstileToken: turnstileToken.value });
     if (result.success) {
         router.push('/resumes');
     }

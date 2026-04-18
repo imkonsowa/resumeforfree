@@ -1,5 +1,5 @@
 import type { D1Database } from '@cloudflare/workers-types';
-import type { UserSettingsRow } from '~~/server/database/schema';
+import type { UserSettingsModel } from '~~/server/database/schema';
 
 export default defineEventHandler(async (event) => {
     // Verify admin authentication
@@ -27,7 +27,7 @@ export default defineEventHandler(async (event) => {
         const userSettings = await db
             .prepare('SELECT * FROM user_settings WHERE user_id = ?')
             .bind(userId)
-            .first<UserSettingsRow>();
+            .first<UserSettingsModel>();
 
         return {
             settings: userSettings

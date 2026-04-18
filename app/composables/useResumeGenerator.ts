@@ -1,6 +1,5 @@
 import { getTemplate } from '~/templates';
-import type { ResumeData } from '~/types/resume';
-import type { ResumeRenderOptions } from '~/types/template';
+import type { Resume, ResumeData } from '~/types/resume';
 
 export const useResumeGenerator = () => {
     const { isReady: typstReady, isLoading: typstLoading } = useTypstLoader();
@@ -9,14 +8,6 @@ export const useResumeGenerator = () => {
     const scopedT = (targetLocale: string) => {
         return (key: string) => i18n.t(key, 1, { locale: targetLocale });
     };
-
-    const resolve = (options: ResumeRenderOptions) => ({
-        resumeData: options.resumeData,
-        templateId: options.templateId || 'default',
-        font: options.font || 'Calibri',
-        locale: options.locale || i18n.locale.value,
-        fontSize: options.fontSize ?? 12,
-    });
 
     const buildFilename = (resumeData: ResumeData, extension: string): string => {
         const parts = [
@@ -38,37 +29,28 @@ export const useResumeGenerator = () => {
         URL.revokeObjectURL(url);
     };
 
-    const generateTypstContent = (options: ResumeRenderOptions): string => {
-        const { resumeData, templateId, font, locale, fontSize } = resolve(options);
-        const template = getTemplate(templateId);
+    const generateTypstContent = (resume: Resume): string => {
+        const template = getTemplate(resume.settings.selectedTemplate);
         return template.parse({
-            data: resumeData,
-            font,
-            locale,
-            fontSize,
-            t: scopedT(locale),
+            data: resume.data,
+            font: resume.settings.selectedFont,
+            locale: resume.language,
+            fontSize: resume.settings.fontSize,
+            t: scopedT(resume.language),
         });
     };
 
-    const generatePreview = async (options: ResumeRenderOptions): Promise<string> => {
-        if (!typstReady.value) {
-            throw new Error('Typst not ready');
-        }
-        if (!window.$typst) {
-            throw new Error('Typst global object not available yet');
-        }
-        return await window.$typst.svg({ mainContent: generateTypstContent(options) });
+    const generatePreview = async (resume: Resume): Promise<string> => {
+        if (!typstReady.value) throw new Error('Typst not ready');
+        if (!window.$typst) throw new Error('Typst global object not available yet');
+        return await window.$typst.svg({ mainContent: generateTypstContent(resume) });
     };
 
-    const generatePDF = async (options: ResumeRenderOptions): Promise<Uint8Array> => {
-        if (!typstReady.value) {
-            throw new Error('Typst not ready');
-        }
-        if (!window.$typst) {
-            throw new Error('Typst global object not available');
-        }
+    const generatePDF = async (resume: Resume): Promise<Uint8Array> => {
+        if (!typstReady.value) throw new Error('Typst not ready');
+        if (!window.$typst) throw new Error('Typst global object not available');
         try {
-            return await window.$typst.pdf({ mainContent: generateTypstContent(options) });
+            return await window.$typst.pdf({ mainContent: generateTypstContent(resume) });
         }
         catch (error) {
             console.error('PDF generation error:', error);
@@ -76,10 +58,10 @@ export const useResumeGenerator = () => {
         }
     };
 
-    const downloadPDF = async (options: ResumeRenderOptions): Promise<void> => {
+    const downloadPDF = async (resume: Resume): Promise<void> => {
         try {
-            const pdfData = await generatePDF(options);
-            triggerDownload(pdfData, 'application/pdf', buildFilename(options.resumeData, 'pdf'));
+            const pdfData = await generatePDF(resume);
+            triggerDownload(pdfData, 'application/pdf', buildFilename(resume.data, 'pdf'));
         }
         catch (error) {
             console.error('PDF download error:', error);
@@ -87,10 +69,10 @@ export const useResumeGenerator = () => {
         }
     };
 
-    const downloadSVG = async (options: ResumeRenderOptions): Promise<void> => {
+    const downloadSVG = async (resume: Resume): Promise<void> => {
         try {
-            const svgContent = await generatePreview(options);
-            triggerDownload(svgContent, 'image/svg+xml', buildFilename(options.resumeData, 'svg'));
+            const svgContent = await generatePreview(resume);
+            triggerDownload(svgContent, 'image/svg+xml', buildFilename(resume.data, 'svg'));
         }
         catch (error) {
             console.error('SVG download error:', error);
@@ -98,9 +80,9 @@ export const useResumeGenerator = () => {
         }
     };
 
-    const downloadTypst = (options: ResumeRenderOptions): void => {
+    const downloadTypst = (resume: Resume): void => {
         try {
-            triggerDownload(generateTypstContent(options), 'text/plain', buildFilename(options.resumeData, 'typ'));
+            triggerDownload(generateTypstContent(resume), 'text/plain', buildFilename(resume.data, 'typ'));
         }
         catch (error) {
             console.error('Typst download error:', error);
@@ -108,9 +90,9 @@ export const useResumeGenerator = () => {
         }
     };
 
-    const downloadTypstText = (options: ResumeRenderOptions): void => {
+    const downloadTypstText = (resume: Resume): void => {
         try {
-            triggerDownload(generateTypstContent(options), 'text/plain', buildFilename(options.resumeData, 'txt'));
+            triggerDownload(generateTypstContent(resume), 'text/plain', buildFilename(resume.data, 'txt'));
         }
         catch (error) {
             console.error('Typst text download error:', error);

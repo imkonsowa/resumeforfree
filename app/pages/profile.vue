@@ -59,10 +59,10 @@ const handleChangePassword = async () => {
 
         // Call change password API
         const api = useApi();
-        await api.auth.changePassword(
-            passwordForm.value.currentPassword,
-            passwordForm.value.newPassword,
-        );
+        await api.auth.changePassword({
+            currentPassword: passwordForm.value.currentPassword,
+            newPassword: passwordForm.value.newPassword,
+        });
 
         // Reset form
         passwordForm.value = {

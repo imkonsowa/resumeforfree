@@ -325,13 +325,8 @@ const generatePreviewInternal = async () => {
         if (!typstReady.value) {
             return;
         }
-        previewContent.value = await generatePreview({
-            resumeData: resumeData.value,
-            templateId: selectedTemplate.value,
-            font: selectedFont.value,
-            locale: resumeStore.activeResumeLanguage,
-            fontSize: fontSize.value,
-        });
+        if (!resumeStore.activeResume) return;
+        previewContent.value = await generatePreview(resumeStore.activeResume);
     }
     catch (err) {
         console.error(err);
@@ -342,17 +337,10 @@ const generatePreviewInternal = async () => {
     }
 };
 const handleDownload = async () => {
-    if (!resumeData.value) return;
+    if (!resumeStore.activeResume) return;
     try {
-        await downloadPDF({
-            resumeData: resumeData.value,
-            templateId: selectedTemplate.value,
-            font: selectedFont.value,
-            locale: resumeStore.activeResumeLanguage,
-            fontSize: fontSize.value,
-        });
-        // Fire-and-forget: increment download counter without blocking UX
-        $fetch('/api/increase-downloads-count', { method: 'POST' }).catch(() => { /* fire-and-forget */ });
+        await downloadPDF(resumeStore.activeResume);
+        $fetch('/api/increase-downloads-count', { method: 'POST' }).catch(console.debug);
     }
     catch (err) {
         error.value = err instanceof Error ? err.message : 'Failed to download PDF';
@@ -360,15 +348,9 @@ const handleDownload = async () => {
     }
 };
 const handleDownloadSVG = async () => {
-    if (!resumeData.value) return;
+    if (!resumeStore.activeResume) return;
     try {
-        await downloadSVG({
-            resumeData: resumeData.value,
-            templateId: selectedTemplate.value,
-            font: selectedFont.value,
-            locale: resumeStore.activeResumeLanguage,
-            fontSize: fontSize.value,
-        });
+        await downloadSVG(resumeStore.activeResume);
     }
     catch (err) {
         error.value = err instanceof Error ? err.message : 'Failed to download SVG';
@@ -376,15 +358,9 @@ const handleDownloadSVG = async () => {
     }
 };
 const handleDownloadTypst = () => {
-    if (!resumeData.value) return;
+    if (!resumeStore.activeResume) return;
     try {
-        downloadTypst({
-            resumeData: resumeData.value,
-            templateId: selectedTemplate.value,
-            font: selectedFont.value,
-            locale: resumeStore.activeResumeLanguage,
-            fontSize: fontSize.value,
-        });
+        downloadTypst(resumeStore.activeResume);
     }
     catch (err) {
         error.value = err instanceof Error ? err.message : 'Failed to download Typst';
@@ -392,15 +368,9 @@ const handleDownloadTypst = () => {
     }
 };
 const handleDownloadTypstText = () => {
-    if (!resumeData.value) return;
+    if (!resumeStore.activeResume) return;
     try {
-        downloadTypstText({
-            resumeData: resumeData.value,
-            templateId: selectedTemplate.value,
-            font: selectedFont.value,
-            locale: resumeStore.activeResumeLanguage,
-            fontSize: fontSize.value,
-        });
+        downloadTypstText(resumeStore.activeResume);
     }
     catch (err) {
         error.value = err instanceof Error ? err.message : 'Failed to download Typst as text';

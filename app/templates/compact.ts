@@ -95,7 +95,7 @@ const parse = ({ data, font, locale, t, fontSize }: TemplateParseInput): string 
     const isRtl = isRtlLocale(locale);
 
     const config = COMPACT_LAYOUT_CONFIG;
-    const context = new RendererContext(t, fontSize, config, locale);
+    const context = new RendererContext({ t, fontSize, config, locale });
     const sharedRenderers = getSharedSectionRenderers();
 
     const sectionRenderers: Record<string, () => string> = {

@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia';
 import type { User } from '~/types/user';
+import type { LoginRequest, RegisterRequest } from '~/types/api';
 
 interface AuthState {
     user: User | null;
@@ -50,9 +51,9 @@ export const useAuthStore = defineStore('auth', {
                 this.clearAuth();
             }
         },
-        async login(email: string, password?: string, turnstileToken?: string) {
+        async login(payload: LoginRequest) {
             const api = useApi();
-            return await api.auth.login(email, password, turnstileToken)
+            return await api.auth.login(payload)
                 .then((result) => {
                     if (result?.user) {
                         this.setAuth(result.user);
@@ -68,9 +69,9 @@ export const useAuthStore = defineStore('auth', {
                     };
                 });
         },
-        async register(email: string, password: string, passwordConfirm: string, name: string, turnstileToken?: string) {
+        async register(payload: RegisterRequest) {
             const api = useApi();
-            return await api.auth.register(email, password, passwordConfirm, name, turnstileToken)
+            return await api.auth.register(payload)
                 .then((result) => {
                     if (result?.user) {
                         this.setAuth(result.user);

@@ -1,6 +1,6 @@
 import bcrypt from 'bcryptjs';
 import type { D1Database } from '@cloudflare/workers-types';
-import type { PasswordResetTokenRow } from '~~/server/database/schema';
+import type { PasswordResetTokenModel } from '~~/server/database/schema';
 import { hashToken } from '../../utils/email';
 
 export default defineEventHandler(async (event) => {
@@ -51,7 +51,7 @@ export default defineEventHandler(async (event) => {
                 WHERE token_hash = ?
             `)
             .bind(hashedToken)
-            .first<PasswordResetTokenRow>();
+            .first<PasswordResetTokenModel>();
 
         if (!tokenRecord) {
             throw createError({

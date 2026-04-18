@@ -183,13 +183,13 @@ const handleRegister = async () => {
     loading.value = true;
     error.value = '';
     success.value = '';
-    const result = await authStore.register(
-        email.value,
-        password.value,
-        passwordConfirm.value,
-        name.value,
-        turnstileToken.value,
-    );
+    const result = await authStore.register({
+        email: email.value,
+        password: password.value,
+        passwordConfirm: passwordConfirm.value,
+        name: name.value,
+        turnstileToken: turnstileToken.value,
+    });
     if (result.success) {
         success.value = t('auth.accountCreatedSuccess');
         setTimeout(() => {

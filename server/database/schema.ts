@@ -77,7 +77,7 @@ export const contactMessages = sqliteTable('contact_messages', {
     emailIdx: index('idx_contact_messages_email').on(table.email),
 }));
 
-export interface UserRow {
+export interface UserModel {
     id: string;
     email: string;
     password_hash: string;
@@ -90,7 +90,7 @@ export interface UserRow {
     updated_at: string;
 }
 
-export interface UserSettingsRow {
+export interface UserSettingsModel {
     id: string;
     user_id: string;
     settings: string | unknown;
@@ -98,7 +98,7 @@ export interface UserSettingsRow {
     updated_at: string;
 }
 
-export interface ResumeRow {
+export interface ResumeModel {
     id: string;
     user_id: string;
     name: string;
@@ -111,7 +111,7 @@ export interface ResumeRow {
     updated_at: string;
 }
 
-export interface PasswordResetTokenRow {
+export interface PasswordResetTokenModel {
     id: string;
     user_id: string;
     expires_at: string;
