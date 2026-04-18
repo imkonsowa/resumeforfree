@@ -8,6 +8,7 @@ import type {
     Project,
     Resume,
     ResumeData,
+    ResumeSettings,
     SectionHeaders,
     SectionOrder,
     SectionPlacement,
@@ -15,7 +16,7 @@ import type {
     SocialLink,
     Volunteering,
 } from '~/types/resume';
-import { defaultResumeData } from '~/types/resume';
+import { defaultResumeData, defaultResumeSettings, resumeSettingsFromLegacy } from '~/types/resume';
 
 interface ResumeStoreState {
     resumes: Record<string, Resume>;
@@ -65,6 +66,14 @@ export const useResumeStore = defineStore('resume', {
         },
         canSaveToCloud(): boolean {
             return this.cloudInfo.remaining > 0;
+        },
+        activeResumeLanguage: (state): string => {
+            if (!state.activeResumeId) return 'en';
+            return state.resumes[state.activeResumeId]?.language || 'en';
+        },
+        activeResumeSettings: (state): ResumeSettings => {
+            if (!state.activeResumeId) return { ...defaultResumeSettings };
+            return state.resumes[state.activeResumeId]?.settings || { ...defaultResumeSettings };
         },
         resumeData: (state): ResumeData => {
             const activeData = state.activeResumeId ? state.resumes[state.activeResumeId]?.data : null;
@@ -167,18 +176,29 @@ export const useResumeStore = defineStore('resume', {
                 if (resume.serverId === undefined) {
                     resume.serverId = undefined;
                 }
+                if (!resume.language) {
+                    const settingsStore = useSettingsStore();
+                    const i18nKeys = Object.keys(resume.data.sectionHeadersI18n || {});
+                    resume.language = i18nKeys[0] || settingsStore.settings.locale || 'en';
+                }
+                if (!resume.settings || Object.keys(resume.settings).length === 0) {
+                    const settingsStore = useSettingsStore();
+                    resume.settings = resumeSettingsFromLegacy(settingsStore.settings as Partial<ResumeSettings>);
+                }
             });
             if (!this.activeResumeId && Object.keys(this.resumes).length > 0) {
                 this.activeResumeId = Object.keys(this.resumes)[0];
             }
         },
-        createResume(name?: string): string {
+        createResume(name?: string, language = 'en', settings?: ResumeSettings): string {
             const id = `resume-${this.nextId}`;
             const timestamp = new Date().toISOString();
             this.resumes[id] = {
                 id,
                 name: name || `Resume ${this.nextId}`,
+                language,
                 data: { ...defaultResumeData },
+                settings: settings ? { ...settings } : { ...defaultResumeSettings },
                 createdAt: timestamp,
                 updatedAt: timestamp,
             };
@@ -234,7 +254,9 @@ export const useResumeStore = defineStore('resume', {
                 this.resumes[newId] = {
                     id: newId,
                     name: customName || `${originalResume.name} (Copy)`,
+                    language: originalResume.language,
                     data: { ...originalResume.data },
+                    settings: { ...originalResume.settings },
                     createdAt: timestamp,
                     updatedAt: timestamp,
                 };
@@ -894,7 +916,18 @@ export const useResumeStore = defineStore('resume', {
                 this.isLoading = false;
             }
         },
-        async reconcileServerResumes(serverResumes: Array<{ id: string; name: string; data: ResumeData; createdAt: string; updatedAt: string }>) {
+        async reconcileServerResumes(serverResumes: Array<{ id: string; name: string; language?: string | null; data: ResumeData; settings?: ResumeSettings | null; createdAt: string; updatedAt: string }>) {
+            const settingsStore = useSettingsStore();
+            const hasSettings = (s?: ResumeSettings | null): s is ResumeSettings =>
+                Boolean(s && typeof s === 'object' && Object.keys(s).length > 0);
+            const pickLanguage = (server?: string | null, local?: string): string =>
+                server || local || settingsStore.settings.locale || 'en';
+            const pickSettings = (server?: ResumeSettings | null, local?: ResumeSettings): ResumeSettings => {
+                if (hasSettings(server)) return { ...defaultResumeSettings, ...server };
+                if (local && Object.keys(local).length) return local;
+                return resumeSettingsFromLegacy(settingsStore.settings as Partial<ResumeSettings>);
+            };
+
             for (const serverResume of serverResumes) {
                 const localResumeId = this.findLocalResumeByServerId(serverResume.id);
                 if (localResumeId) {
@@ -905,13 +938,23 @@ export const useResumeStore = defineStore('resume', {
                         this.resumes[localResumeId] = {
                             ...localResume,
                             name: serverResume.name,
+                            language: pickLanguage(serverResume.language, localResume.language),
                             data: serverResume.data,
+                            settings: hasSettings(serverResume.settings)
+                                ? pickSettings(serverResume.settings, localResume.settings)
+                                : localResume.settings || { ...defaultResumeSettings },
                             updatedAt: serverResume.updatedAt,
                             serverId: serverResume.id,
                         };
                     }
                     else {
                         this.resumes[localResumeId].serverId = serverResume.id;
+                        if (!this.resumes[localResumeId].language) {
+                            this.resumes[localResumeId].language = pickLanguage(serverResume.language);
+                        }
+                        if (!this.resumes[localResumeId].settings) {
+                            this.resumes[localResumeId].settings = pickSettings(serverResume.settings);
+                        }
                     }
                 }
                 else {
@@ -921,7 +964,9 @@ export const useResumeStore = defineStore('resume', {
                         id: newLocalId,
                         serverId: serverResume.id,
                         name: serverResume.name,
+                        language: pickLanguage(serverResume.language),
                         data: serverResume.data || { ...defaultResumeData },
+                        settings: pickSettings(serverResume.settings),
                         createdAt: serverResume.createdAt,
                         updatedAt: serverResume.updatedAt,
                     };
@@ -961,14 +1006,10 @@ export const useResumeStore = defineStore('resume', {
                 const api = useApi();
 
                 if (resume.serverId) {
-                    await api.resumes.update(resume.serverId, {
-                        name: resume.name,
-                        data: resume.data,
-                    });
+                    await api.resumes.update(resume.serverId, resume);
                 }
-
                 else {
-                    const serverResume = await api.resumes.create(resume.name, resume.data);
+                    const serverResume = await api.resumes.create(resume);
                     this.resumes[resumeId].serverId = serverResume.id;
                 }
                 this.resumes[resumeId].updatedAt = new Date().toISOString();
@@ -977,6 +1018,50 @@ export const useResumeStore = defineStore('resume', {
                 console.error('Failed to sync resume to server:', error);
                 throw error;
             }
+        },
+        setActiveResumeSetting<K extends keyof ResumeSettings>(key: K, value: ResumeSettings[K]) {
+            if (!this.activeResumeId) return;
+            const resume = this.resumes[this.activeResumeId];
+            if (!resume) return;
+            if (!resume.settings) {
+                resume.settings = { ...defaultResumeSettings };
+            }
+            resume.settings[key] = value;
+            resume.updatedAt = new Date().toISOString();
+        },
+        toggleActiveResumeSectionCollapse(sectionKey: string) {
+            if (!this.activeResumeId) return;
+            const resume = this.resumes[this.activeResumeId];
+            if (!resume) return;
+            if (!resume.settings) {
+                resume.settings = { ...defaultResumeSettings };
+            }
+            if (!resume.settings.sectionCollapsed) {
+                resume.settings.sectionCollapsed = {};
+            }
+            resume.settings.sectionCollapsed[sectionKey] = !resume.settings.sectionCollapsed[sectionKey];
+            resume.updatedAt = new Date().toISOString();
+        },
+        setActiveResumeSectionCollapsed(sectionKey: string, collapsed: boolean) {
+            if (!this.activeResumeId) return;
+            const resume = this.resumes[this.activeResumeId];
+            if (!resume) return;
+            if (!resume.settings) {
+                resume.settings = { ...defaultResumeSettings };
+            }
+            if (!resume.settings.sectionCollapsed) {
+                resume.settings.sectionCollapsed = {};
+            }
+            resume.settings.sectionCollapsed[sectionKey] = collapsed;
+            resume.updatedAt = new Date().toISOString();
+        },
+        collapseAllActiveResumeSections() {
+            const sections = ['personal', 'experience', 'internships', 'education', 'skills', 'volunteering', 'projects', 'languages', 'certificates'];
+            sections.forEach(section => this.setActiveResumeSectionCollapsed(section, true));
+        },
+        expandAllActiveResumeSections() {
+            const sections = ['personal', 'experience', 'internships', 'education', 'skills', 'volunteering', 'projects', 'languages', 'certificates'];
+            sections.forEach(section => this.setActiveResumeSectionCollapsed(section, false));
         },
     },
 });

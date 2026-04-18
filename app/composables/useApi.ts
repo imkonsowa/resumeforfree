@@ -1,3 +1,8 @@
+import type { Resume } from '~/types/resume';
+
+type ResumeCreatePayload = Pick<Resume, 'name' | 'data'> & Partial<Pick<Resume, 'language' | 'settings'>>;
+type ResumeUpdatePayload = Partial<Pick<Resume, 'name' | 'language' | 'data' | 'settings'>> & { isActive?: boolean };
+
 export const useApi = () => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleError = (error: any) => {
@@ -41,15 +46,13 @@ export const useApi = () => {
             async get(id: string) {
                 return await $fetch(`/api/resumes/${id}`).then(({ resume }) => resume).catch(handleError);
             },
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            async create(name: string, data: any, template?: string) {
+            async create(payload: ResumeCreatePayload) {
                 return await $fetch('/api/resumes', {
                     method: 'POST',
-                    body: { name, data, template },
+                    body: payload,
                 }).then(({ resume }) => resume).catch(handleError);
             },
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            async update(id: string, updates: any) {
+            async update(id: string, updates: ResumeUpdatePayload) {
                 return await $fetch(`/api/resumes/${id}`, {
                     method: 'PUT',
                     body: updates,

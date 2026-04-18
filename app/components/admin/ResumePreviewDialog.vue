@@ -89,9 +89,9 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Button } from '~/components/ui/button';
 import { X } from 'lucide-vue-next';
 import { useResumeGenerator } from '~/composables/useResumeGenerator';
-import type { ResumeData, AppSettings } from '~/types/resume';
-import { defaultAppSettings } from '~/types/resume';
-import { isRtlLocale } from '~/utils/localeUtils';
+import type { ResumeData, ResumeSettings, AppSettings } from '~/types/resume';
+import { defaultResumeSettings } from '~/types/resume';
+import { getLocaleDirection } from '~/utils/localeUtils';
 
 const props = defineProps<{
     modelValue: boolean;
@@ -118,7 +118,7 @@ const isLoading = ref(false);
 const error = ref<string | null>(null);
 const previewContent = ref<string>('');
 const userLocale = ref<string>('en');
-const userDir = computed(() => (isRtlLocale(userLocale.value) ? 'rtl' : 'ltr'));
+const userDir = computed(() => getLocaleDirection(userLocale.value));
 
 // Scoped translator — resolves against the resume owner's saved locale,
 // NOT the admin's active UI locale.
@@ -143,20 +143,13 @@ const loadResume = async () => {
         ]);
 
         const resumeData = resumeResponse.data as ResumeData;
+        const resumeSettings = resumeResponse.settings as Partial<ResumeSettings> | null;
+        const userSettings = userSettingsResponse.settings as Partial<AppSettings> | null;
 
-        // Merge user settings with defaults (user settings take precedence)
-        const userSettings = userSettingsResponse.settings as AppSettings | null;
-        const settings: AppSettings = {
-            ...defaultAppSettings,
-            ...userSettings,
-        };
+        userLocale.value = resumeResponse.language || userSettings?.locale || 'en';
 
-        // Set dialog direction based on user's saved locale
-        userLocale.value = settings.locale || 'en';
-
-        // Use user's preferred template and font
-        const template = settings.selectedTemplate || resumeResponse.template || 'default';
-        const font = settings.selectedFont || 'Calibri';
+        const template = resumeSettings?.selectedTemplate || resumeResponse.template || defaultResumeSettings.selectedTemplate;
+        const font = resumeSettings?.selectedFont || defaultResumeSettings.selectedFont;
 
         // Wait for Typst to be ready
         if (!typstReady.value) {
@@ -178,8 +171,12 @@ const loadResume = async () => {
             throw new Error('Typst compiler not ready');
         }
 
-        // Generate preview with user's font and template
-        previewContent.value = await generatePreview(resumeData, template, font, userLocale.value);
+        previewContent.value = await generatePreview({
+            resumeData,
+            templateId: template,
+            font,
+            locale: userLocale.value,
+        });
     }
     catch (err) {
         console.error('Error loading resume preview:', err);

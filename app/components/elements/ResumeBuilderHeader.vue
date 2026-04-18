@@ -26,10 +26,6 @@
                     <span class="hidden sm:inline whitespace-nowrap">{{ isAnySyncing ? syncingText : syncButtonText }}</span>
                     <span class="sm:hidden whitespace-nowrap">{{ isAnySyncing ? (activeResume.serverId ? t('builder.updating') : t('builder.syncing')) : (activeResume.serverId ? t('builder.update') : t('common.sync')) }}</span>
                 </Button>
-                <LanguageSelector
-                    size="sm"
-                    show-icon
-                />
                 <Button
                     size="sm"
                     variant="outline"

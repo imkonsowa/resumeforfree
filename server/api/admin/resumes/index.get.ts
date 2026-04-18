@@ -33,6 +33,7 @@ export default defineEventHandler(async (event) => {
                 id: resumes.id,
                 user_id: resumes.userId,
                 name: resumes.name,
+                language: resumes.language,
                 template: resumes.template,
                 is_active: resumes.isActive,
                 created_at: resumes.createdAt,

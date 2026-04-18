@@ -3,8 +3,8 @@ import { useResumeStore } from '~/stores/resume';
 import { EyeIcon, FileText } from 'lucide-vue-next';
 import { Button } from '~/components/ui/button';
 import ZoomControls from '~/components/elements/ZoomControls.vue';
-import LanguageSelector from '~/components/elements/LanguageSelector.vue';
 import ResumeBuilderHeader from '~/components/elements/ResumeBuilderHeader.vue';
+import { getLocaleDirection } from '~/utils/localeUtils';
 import PersonalInfoForm from '~/components/forms/PersonalInfoForm.vue';
 import ExperienceForm from '~/components/forms/ExperienceForm.vue';
 import InternshipsForm from '~/components/forms/InternshipsForm.vue';
@@ -17,7 +17,6 @@ import CertificatesForm from '~/components/forms/CertificatesForm.vue';
 import ResumePreview from '~/components/elements/ResumePreview.vue';
 import FirstTimeBuilderModal from '~/components/elements/FirstTimeBuilderModal.vue';
 import CloudSyncPromptModal from '~/components/elements/CloudSyncPromptModal.vue';
-import LanguageSelectionModal from '~/components/elements/LanguageSelectionModal.vue';
 import SyncIndicator from '~/components/elements/SyncIndicator.vue';
 
 const { t } = useI18n();
@@ -89,8 +88,6 @@ const resumeStore = useResumeStore();
 const settingsStore = useSettingsStore();
 const authStore = useAuthStore();
 const { hasSeenModal, markModalSeen } = useModalSeen('firstTimeBuilder');
-const { hasSeenModal: hasSeenLanguageModal, markModalSeen: markLanguageModalSeen } = useModalSeen('languageSelection');
-const { switchLanguage } = useLanguageSwitcher();
 const { startAutoSync, stopAutoSync, isSyncing, lastSyncSuccess, lastSyncTime, lastSyncError } = useAutoSync();
 useTypstLoader();
 
@@ -116,16 +113,11 @@ const checkOtherModals = () => {
     }
 };
 
+const resumeLanguageDir = computed(() => getLocaleDirection(resumeStore.activeResumeLanguage));
+
 onMounted(() => {
     settingsStore.initialize();
     resumeStore.initialize();
-
-    // Show language selection modal FIRST if not seen
-    if (!hasSeenLanguageModal()) {
-        showLanguageModal.value = true;
-        return;
-    }
-
     checkOtherModals();
 });
 watch(() => authStore.isAuthenticated, (isAuthenticated) => {
@@ -152,7 +144,6 @@ watch(() => resumeStore.activeResumeId, (newResumeId) => {
 const showMobilePreview = ref(false);
 const showFirstTimeModal = ref(false);
 const showCloudSyncModal = ref(false);
-const showLanguageModal = ref(false);
 const zoomLevel = ref(1);
 const minZoom = 0.5;
 const maxZoom = 2.5;
@@ -231,12 +222,6 @@ const handleContinueWithoutSync = (dontShowAgain: boolean) => {
     }
 };
 
-const handleLanguageSelect = (locale: string) => {
-    switchLanguage(locale);
-    markLanguageModalSeen();
-    showLanguageModal.value = false;
-    checkOtherModals();
-};
 const sectionComponents = {
     experiences: ExperienceForm,
     internships: InternshipsForm,
@@ -272,7 +257,10 @@ const orderedSections = computed(() => {
 
 <template>
     <ClientOnly>
-        <div class="bg-gray-50 min-h-screen">
+        <div
+            class="bg-gray-50 min-h-screen"
+            :dir="resumeLanguageDir"
+        >
             <SyncIndicator
                 :is-syncing="isSyncing"
                 :last-sync-success="lastSyncSuccess"
@@ -340,11 +328,8 @@ const orderedSections = computed(() => {
                 <!-- Mobile FAB buttons -->
                 <div
                     v-if="!showMobilePreview"
-                    class="lg:hidden fixed bottom-6 right-6 z-40 flex items-center gap-2"
+                    class="lg:hidden fixed bottom-6 right-6 z-40"
                 >
-                    <LanguageSelector
-                        button-class="bg-black text-white border-black hover:bg-gray-800 shadow-lg"
-                    />
                     <Button
                         class="h-9 w-9 p-0 bg-black text-white border-black hover:bg-gray-800 shadow-lg"
                         variant="outline"
@@ -366,7 +351,6 @@ const orderedSections = computed(() => {
                                     {{ t('builder.resumePreview') }}
                                 </h3>
                                 <div class="flex items-center gap-2">
-                                    <LanguageSelector size="sm" />
                                     <ZoomControls
                                         :max-zoom="maxZoom"
                                         :min-zoom="minZoom"
@@ -418,10 +402,6 @@ const orderedSections = computed(() => {
             @close="handleCloudSyncModalClose"
             @enable-sync="handleEnableSync"
             @continue-locally="handleContinueWithoutSync"
-        />
-        <LanguageSelectionModal
-            :is-open="showLanguageModal"
-            @select="handleLanguageSelect"
         />
     </ClientOnly>
 </template>

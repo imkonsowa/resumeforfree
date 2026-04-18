@@ -31,6 +31,7 @@ const fetchServerResumesIfLoggedIn = async () => {
     }
 };
 onMounted(async () => {
+    resumeStore.initialize();
     await fetchServerResumesIfLoggedIn();
 });
 watch(() => authStore.isLoggedIn, async (isLoggedIn) => {
@@ -66,10 +67,15 @@ const getDefaultResumeName = () => {
     const userName = authStore.user?.name?.trim();
     return userName ? `${userName} - Resume` : 'Untitled Resume';
 };
-const handleCreateResume = async (name: string, navigateToBuilder: boolean, saveToCloud: boolean) => {
+const handleCreateResume = async (name: string, language: string, navigateToBuilder: boolean, saveToCloud: boolean) => {
     const { toast } = await import('vue-sonner');
+    const { defaultResumeSettings, getDefaultFontForLanguage } = await import('~/types/resume');
     const resumeName = name.trim() || getDefaultResumeName();
-    const newResumeId = resumeStore.createResume(resumeName);
+    const seededSettings = {
+        ...defaultResumeSettings,
+        selectedFont: getDefaultFontForLanguage(language),
+    };
+    const newResumeId = resumeStore.createResume(resumeName, language, seededSettings);
     resumeStore.setActiveResume(newResumeId);
     showCreateModal.value = false;
     if (saveToCloud && authStore.isLoggedIn) {
@@ -78,7 +84,7 @@ const handleCreateResume = async (name: string, navigateToBuilder: boolean, save
             const api = useApi();
             const resume = resumeStore.resumesList.find(r => r.id === newResumeId);
             if (resume) {
-                const newCloudResume = await api.resumes.create(resume.name, resume.data);
+                const newCloudResume = await api.resumes.create(resume);
                 if (resumeStore.resumes[newResumeId] && newCloudResume) {
                     resumeStore.resumes[newResumeId].serverId = newCloudResume.id;
                     resumeStore.resumes[newResumeId].updatedAt = new Date().toISOString();
@@ -172,15 +178,12 @@ const syncResume = async (id: string) => {
         toast.info(t('resumes.toast.syncingToCloud'));
         if (resume.serverId) {
             try {
-                await api.resumes.update(resume.serverId, {
-                    name: resume.name,
-                    data: resume.data,
-                });
+                await api.resumes.update(resume.serverId, resume);
                 toast.success(t('resumes.toast.updatedInCloud').replace('{name}', resume.name));
             }
             catch (error: unknown) {
                 if (error && typeof error === 'object' && 'statusCode' in error && error.statusCode === 404) {
-                    const newResume = await api.resumes.create(resume.name, resume.data);
+                    const newResume = await api.resumes.create(resume);
                     if (resumeStore.resumes[id] && newResume) {
                         resumeStore.resumes[id].serverId = newResume.id;
                         resumeStore.resumes[id].updatedAt = new Date().toISOString();
@@ -193,7 +196,7 @@ const syncResume = async (id: string) => {
             }
         }
         else {
-            const newResume = await api.resumes.create(resume.name, resume.data);
+            const newResume = await api.resumes.create(resume);
             if (resumeStore.resumes[id] && newResume) {
                 resumeStore.resumes[id].serverId = newResume.id;
                 resumeStore.resumes[id].updatedAt = new Date().toISOString();

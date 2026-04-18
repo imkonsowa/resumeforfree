@@ -6,6 +6,7 @@ interface Resume {
     id: string;
     user_id: string;
     name: string;
+    language: string;
     is_active: boolean;
     template: string;
     data: string | unknown;
@@ -53,6 +54,7 @@ export default defineEventHandler(async (event) => {
         resumes: resumes.map(resume => ({
             id: resume.id,
             name: resume.name,
+            language: resume.language ?? null,
             isActive: resume.is_active,
             template: resume.template,
             data: typeof resume.data === 'string' ? JSON.parse(resume.data) : resume.data,

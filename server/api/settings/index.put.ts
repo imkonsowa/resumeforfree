@@ -18,19 +18,23 @@ class DatabaseService {
             .first<UserSettings>();
     }
 
-    async upsertUserSettings(userId: string, settings: unknown): Promise<void> {
-        const existingSettings = await this.getUserSettings(userId);
-        if (existingSettings) {
+    async upsertUserSettings(userId: string, incoming: Record<string, unknown>): Promise<void> {
+        const existingRow = await this.getUserSettings(userId);
+        if (existingRow) {
+            const existingParsed = (typeof existingRow.settings === 'string'
+                ? JSON.parse(existingRow.settings || '{}')
+                : existingRow.settings || {}) as Record<string, unknown>;
+            const merged = { ...existingParsed, ...incoming };
             await this.db
                 .prepare('UPDATE user_settings SET settings = ?, updated_at = CURRENT_TIMESTAMP WHERE user_id = ?')
-                .bind(JSON.stringify(settings), userId)
+                .bind(JSON.stringify(merged), userId)
                 .run();
         }
         else {
             const settingsId = crypto.randomUUID().replace(/-/g, '').slice(0, 16);
             await this.db
                 .prepare('INSERT INTO user_settings (id, user_id, settings) VALUES (?, ?, ?)')
-                .bind(settingsId, userId, JSON.stringify(settings))
+                .bind(settingsId, userId, JSON.stringify(incoming))
                 .run();
         }
     }
@@ -54,7 +58,7 @@ export default defineEventHandler(async (event) => {
     const payload = decoded.payload as { sub: string };
     const userId = payload.sub;
     const body = await readBody(event);
-    const { settings } = body;
+    const { settings } = body as { settings?: Record<string, unknown> };
     if (!settings || typeof settings !== 'object') {
         throw createError({
             statusCode: 400,

@@ -10,20 +10,28 @@ interface Props {
 }
 interface Emits {
     (e: 'close'): void;
-    (e: 'confirm', name: string, navigateToBuilder: boolean, saveToCloud: boolean): void;
+    (e: 'confirm', name: string, language: string, navigateToBuilder: boolean, saveToCloud: boolean): void;
 }
 
 const props = defineProps<Props>();
 
 const emit = defineEmits<Emits>();
-const { t } = useI18n();
+const { t, locales } = useI18n();
 const authStore = useAuthStore();
 const resumeStore = useResumeStore();
+const settingsStore = useSettingsStore();
 const newResumeName = ref('');
+const selectedLanguage = ref(settingsStore.settings.locale || 'en');
 const navigateToBuilder = ref(true);
 const saveToCloud = ref(false);
 const canSaveToCloud = computed(() => {
     return authStore.isLoggedIn && resumeStore.canSaveToCloud;
+});
+const localesList = computed(() => {
+    return locales.value.map(l => ({
+        code: l.code,
+        name: l.name || l.code,
+    }));
 });
 const getDefaultResumeName = () => {
     if (!authStore.isLoggedIn) return '';
@@ -33,12 +41,13 @@ const getDefaultResumeName = () => {
 watch(() => props.isOpen, (isOpen) => {
     if (isOpen) {
         newResumeName.value = getDefaultResumeName();
+        selectedLanguage.value = settingsStore.settings.locale || 'en';
         navigateToBuilder.value = true;
         saveToCloud.value = false;
     }
 });
 const handleConfirm = () => {
-    emit('confirm', newResumeName.value, navigateToBuilder.value, saveToCloud.value);
+    emit('confirm', newResumeName.value, selectedLanguage.value, navigateToBuilder.value, saveToCloud.value);
 };
 const handleCancel = () => {
     emit('close');
@@ -74,6 +83,25 @@ const handleEnter = (event: KeyboardEvent) => {
                         :placeholder="$t('resumes.modals.create.enterName')"
                         @keydown="handleEnter"
                     />
+                </div>
+                <div class="space-y-2">
+                    <Label>{{ $t('resumes.modals.create.resumeLanguage') }}</Label>
+                    <div class="grid grid-cols-2 gap-2">
+                        <button
+                            v-for="loc in localesList"
+                            :key="loc.code"
+                            type="button"
+                            class="flex flex-col items-center justify-center p-3 rounded-lg border-2 transition-all hover:border-primary hover:bg-secondary"
+                            :class="selectedLanguage === loc.code ? 'border-primary bg-secondary' : 'border-border bg-background'"
+                            @click="selectedLanguage = loc.code"
+                        >
+                            <span class="text-sm font-semibold">{{ loc.name }}</span>
+                            <span class="text-xs text-muted-foreground uppercase">{{ loc.code }}</span>
+                        </button>
+                    </div>
+                    <p class="text-xs text-muted-foreground">
+                        {{ $t('resumes.modals.create.languageNote') }}
+                    </p>
                 </div>
                 <div class="space-y-3 pt-2">
                     <div class="flex items-center space-x-2">

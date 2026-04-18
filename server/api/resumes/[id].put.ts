@@ -5,8 +5,8 @@ const JWT_SECRET = process.env.JWT_SECRET;
 
 interface ResumeUpdates {
     name?: string;
+    language?: string;
     data?: unknown;
-    template?: string;
     settings?: unknown;
     isActive?: boolean;
 }
@@ -20,17 +20,22 @@ class DatabaseService {
             setParts.push('name = ?');
             values.push(updates.name);
         }
+        if (updates.language !== undefined) {
+            setParts.push('language = ?');
+            values.push(updates.language);
+        }
         if (updates.data !== undefined) {
             setParts.push('data = ?');
             values.push(JSON.stringify(updates.data));
         }
-        if (updates.template !== undefined) {
-            setParts.push('template = ?');
-            values.push(updates.template);
-        }
         if (updates.settings !== undefined) {
             setParts.push('settings = ?');
             values.push(JSON.stringify(updates.settings));
+            const tmpl = (updates.settings as { selectedTemplate?: string } | null)?.selectedTemplate;
+            if (tmpl) {
+                setParts.push('template = ?');
+                values.push(tmpl);
+            }
         }
         if (updates.isActive !== undefined) {
             setParts.push('is_active = ?');
@@ -108,6 +113,7 @@ export default defineEventHandler(async (event) => {
         resume: {
             id: updatedResume.id,
             name: updatedResume.name,
+            language: updatedResume.language ?? null,
             isActive: updatedResume.is_active,
             template: updatedResume.template,
             data: typeof updatedResume.data === 'string' ? JSON.parse(updatedResume.data) : updatedResume.data,

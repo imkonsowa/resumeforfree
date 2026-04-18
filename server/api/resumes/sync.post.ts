@@ -15,8 +15,8 @@ class DatabaseService {
     async upsertResume(userId: string, resumeData: {
         serverId?: string;
         name: string;
+        language?: string;
         data: unknown;
-        template?: string;
         settings?: unknown;
         id: string;
     }): Promise<string> {
@@ -29,11 +29,12 @@ class DatabaseService {
         }
         if (existingResume) {
             await this.db
-                .prepare('UPDATE resumes SET name = ?, data = ?, template = ?, settings = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ? AND user_id = ?')
+                .prepare('UPDATE resumes SET name = ?, language = ?, data = ?, template = ?, settings = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ? AND user_id = ?')
                 .bind(
                     resumeData.name,
+                    resumeData.language ?? null,
                     JSON.stringify(resumeData.data),
-                    resumeData.template || 'template1',
+                    (resumeData.settings as { selectedTemplate?: string } | undefined)?.selectedTemplate || 'default',
                     JSON.stringify(resumeData.settings || {}),
                     existingResume.id,
                     userId,
@@ -44,12 +45,13 @@ class DatabaseService {
         else {
             const resumeId = resumeData.serverId || crypto.randomUUID().replace(/-/g, '').slice(0, 16);
             await this.db
-                .prepare('INSERT INTO resumes (id, user_id, name, is_active, template, data, settings) VALUES (?, ?, ?, 0, ?, ?, ?)')
+                .prepare('INSERT INTO resumes (id, user_id, name, is_active, template, language, data, settings) VALUES (?, ?, ?, 0, ?, ?, ?, ?)')
                 .bind(
                     resumeId,
                     userId,
                     resumeData.name,
-                    resumeData.template || 'template1',
+                    (resumeData.settings as { selectedTemplate?: string } | undefined)?.selectedTemplate || 'default',
+                    resumeData.language ?? null,
                     JSON.stringify(resumeData.data),
                     JSON.stringify(resumeData.settings || {}),
                 )

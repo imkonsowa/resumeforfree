@@ -12,11 +12,13 @@ class DatabaseService {
         return result?.count || 0;
     }
 
-    async createResume(userId: string, name: string, data: unknown, template = 'template1', settings: unknown = {}): Promise<string> {
+    async createResume(userId: string, payload: { name: string; data: unknown; language?: string | null; settings?: Record<string, unknown> | null }): Promise<string> {
         const resumeId = crypto.randomUUID().replace(/-/g, '').slice(0, 16);
+        const settings = payload.settings ?? {};
+        const template = (settings as { selectedTemplate?: string }).selectedTemplate || 'default';
         await this.db
-            .prepare('INSERT INTO resumes (id, user_id, name, is_active, template, data, settings) VALUES (?, ?, ?, 0, ?, ?, ?)')
-            .bind(resumeId, userId, name, template, JSON.stringify(data), JSON.stringify(settings))
+            .prepare('INSERT INTO resumes (id, user_id, name, is_active, template, language, data, settings) VALUES (?, ?, ?, 0, ?, ?, ?, ?)')
+            .bind(resumeId, userId, payload.name, template, payload.language ?? null, JSON.stringify(payload.data), JSON.stringify(settings))
             .run();
         return resumeId;
     }
@@ -56,7 +58,7 @@ export default defineEventHandler(async (event) => {
     const payload = decoded.payload as { sub: string };
     const userId = payload.sub;
     const body = await readBody(event);
-    const { name, data, template, settings } = body;
+    const { name, data, settings, language } = body;
     if (!name || !data) {
         throw createError({
             statusCode: 400,
@@ -78,12 +80,13 @@ export default defineEventHandler(async (event) => {
             statusMessage: 'Free accounts can only store up to 3 resumes in the cloud. Please delete a resume to add a new one.',
         });
     }
-    const resumeId = await dbService.createResume(userId, name, data, template, settings);
+    const resumeId = await dbService.createResume(userId, { name, data, language, settings });
     const resume = await dbService.getResumeById(resumeId, userId);
     return {
         resume: {
             id: resume.id,
             name: resume.name,
+            language: resume.language ?? null,
             isActive: resume.is_active,
             template: resume.template,
             data: typeof resume.data === 'string' ? JSON.parse(resume.data) : resume.data,

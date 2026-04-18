@@ -10,7 +10,9 @@ export const useResumeImportExport = () => {
         }
         const exportData = resumes.map(resume => ({
             name: resume.name,
+            language: resume.language,
             data: resume.data,
+            settings: resume.settings,
             createdAt: resume.createdAt,
             updatedAt: resume.updatedAt,
         }));
@@ -61,7 +63,9 @@ export const useResumeImportExport = () => {
                                 + (resumeData.data.certificates?.length || 0);
                         return {
                             name: resumeData.name,
+                            language: resumeData.language || 'en',
                             data: resumeData.data,
+                            settings: resumeData.settings,
                             isDuplicate: existingNames.includes(resumeData.name.toLowerCase()),
                             itemCount,
                         };
@@ -93,7 +97,7 @@ export const useResumeImportExport = () => {
         selectedIndexes.forEach((index) => {
             const resumeData = previews[index];
             if (resumeData) {
-                const newResumeId = resumeStore.createResume(resumeData.name);
+                const newResumeId = resumeStore.createResume(resumeData.name, resumeData.language, resumeData.settings);
                 resumeStore.updateResumeData(newResumeId, resumeData.data);
                 importedCount++;
             }

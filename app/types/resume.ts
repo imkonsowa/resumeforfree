@@ -130,7 +130,9 @@ export interface ResumeData {
 export interface Resume {
     id: string;
     name: string;
+    language: string;
     data: ResumeData;
+    settings: ResumeSettings;
     createdAt: string;
     updatedAt: string;
     serverId?: string;
@@ -140,17 +142,20 @@ export interface MultiResumeState {
     activeResumeId: string | null;
     nextId: number;
 }
-export interface AppSettings {
+export interface UserSettings {
+    locale: string;
+    showDownloadMenu?: boolean;
+    showFontMenu?: boolean;
+    showTemplateMenu?: boolean;
+}
+export interface ResumeSettings {
     selectedFont: string;
     selectedTemplate: string;
-    locale: string;
-    isRawMode: boolean;
-    showDownloadMenu: boolean;
-    showFontMenu: boolean;
-    showTemplateMenu: boolean;
     fontSize: number;
     sectionCollapsed: Record<string, boolean>;
+    isRawMode: boolean;
 }
+export type AppSettings = UserSettings & ResumeSettings;
 export const defaultResumeData: ResumeData = {
     version: 'v1',
     firstName: '',
@@ -192,15 +197,17 @@ export const defaultResumeData: ResumeData = {
         certificates: 'right',
     },
 };
-export const defaultAppSettings: AppSettings = {
-    selectedFont: 'Calibri',
-    selectedTemplate: 'default',
+export const defaultUserSettings: UserSettings = {
     locale: 'en',
-    isRawMode: false,
     showDownloadMenu: false,
     showFontMenu: false,
     showTemplateMenu: false,
+};
+export const defaultResumeSettings: ResumeSettings = {
+    selectedFont: 'Calibri',
+    selectedTemplate: 'default',
     fontSize: 12,
+    isRawMode: false,
     sectionCollapsed: {
         personal: false,
         experience: true,
@@ -212,6 +219,28 @@ export const defaultAppSettings: AppSettings = {
         languages: true,
         certificates: true,
     },
+};
+export const defaultAppSettings: AppSettings = {
+    ...defaultUserSettings,
+    ...defaultResumeSettings,
+};
+
+/**
+ * Builds a complete ResumeSettings from a user's legacy settings JSON
+ * (pre-refactor shape where font/template/etc lived on user_settings).
+ * Any missing field falls back to `defaultResumeSettings`.
+ */
+export const resumeSettingsFromLegacy = (legacy: Partial<ResumeSettings> | null | undefined): ResumeSettings => {
+    const src = legacy || {};
+    return {
+        selectedFont: src.selectedFont || defaultResumeSettings.selectedFont,
+        selectedTemplate: src.selectedTemplate || defaultResumeSettings.selectedTemplate,
+        fontSize: src.fontSize ?? defaultResumeSettings.fontSize,
+        sectionCollapsed: src.sectionCollapsed && Object.keys(src.sectionCollapsed).length
+            ? { ...src.sectionCollapsed }
+            : { ...defaultResumeSettings.sectionCollapsed },
+        isRawMode: src.isRawMode ?? defaultResumeSettings.isRawMode,
+    };
 };
 
 // Language-specific font configurations

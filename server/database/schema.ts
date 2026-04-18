@@ -1,6 +1,6 @@
 import { sqliteTable, text, integer, index } from 'drizzle-orm/sqlite-core';
 import { sql } from 'drizzle-orm';
-import type { ResumeData, AppSettings } from '~/types/resume';
+import type { ResumeData, ResumeSettings, UserSettings } from '~/types/resume';
 
 /**
  * Users table
@@ -31,9 +31,10 @@ export const resumes = sqliteTable('resumes', {
     userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
     name: text('name').notNull(),
     isActive: integer('is_active', { mode: 'boolean' }).default(false),
-    template: text('template').default('template1'),
+    template: text('template').default('default'),
+    language: text('language'),
     data: text('data', { mode: 'json' }).$type<ResumeData>().notNull(),
-    settings: text('settings', { mode: 'json' }).$type<AppSettings>(),
+    settings: text('settings', { mode: 'json' }).$type<ResumeSettings>(),
     createdAt: text('created_at').default(sql`CURRENT_TIMESTAMP`),
     updatedAt: text('updated_at').default(sql`CURRENT_TIMESTAMP`),
 }, table => ({
@@ -48,7 +49,7 @@ export const resumes = sqliteTable('resumes', {
 export const userSettings = sqliteTable('user_settings', {
     id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID().replace(/-/g, '')),
     userId: text('user_id').notNull().unique().references(() => users.id, { onDelete: 'cascade' }),
-    settings: text('settings', { mode: 'json' }).$type<Record<string, unknown>>().notNull(),
+    settings: text('settings', { mode: 'json' }).$type<UserSettings>().notNull(),
     createdAt: text('created_at').default(sql`CURRENT_TIMESTAMP`),
     updatedAt: text('updated_at').default(sql`CURRENT_TIMESTAMP`),
 }, table => ({
