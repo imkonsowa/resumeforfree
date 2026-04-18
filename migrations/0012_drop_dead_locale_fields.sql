@@ -10,17 +10,19 @@
 --      (selectedFont, selectedTemplate, fontSize, sectionCollapsed, isRawMode).
 -- =====================================================================
 
--- A) Flatten sectionHeadersI18n → sectionHeaders per resume.language.
---    Only run when sectionHeadersI18n exists AND the target locale's
---    headers exist inside it. Preserves any existing sectionHeaders.
+-- A) Merge sectionHeadersI18n[resume.language] into sectionHeaders.
+--    Priority must match runtime behaviour (app/composables/useSectionHeader.ts):
+--      i18n override wins over plain sectionHeaders.
+--    Use json_patch(base, overlay) so overlay keys win per-section —
+--    preserves headers that only existed in sectionHeaders AND headers that
+--    only existed (or were newer) in sectionHeadersI18n[language].
 UPDATE resumes
 SET data = json_set(
     data,
     '$.sectionHeaders',
-    COALESCE(
-        json_extract(data, '$.sectionHeaders'),
-        json_extract(data, '$.sectionHeadersI18n.' || language),
-        json('{}')
+    json_patch(
+        COALESCE(json_extract(data, '$.sectionHeaders'),                     json('{}')),
+        COALESCE(json_extract(data, '$.sectionHeadersI18n.' || language),    json('{}'))
     )
 )
 WHERE json_extract(data, '$.sectionHeadersI18n') IS NOT NULL;

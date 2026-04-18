@@ -186,10 +186,9 @@ export const useResumeStore = defineStore('resume', {
                 }
                 const legacyI18n = (resume.data as unknown as { sectionHeadersI18n?: Record<string, Partial<SectionHeaders>> }).sectionHeadersI18n;
                 if (legacyI18n) {
-                    const flattened = legacyI18n[resume.language] || Object.values(legacyI18n)[0];
-                    if (flattened && (!resume.data.sectionHeaders || Object.keys(resume.data.sectionHeaders).length === 0)) {
-                        resume.data.sectionHeaders = { ...(flattened as SectionHeaders) };
-                    }
+                    const overlay = legacyI18n[resume.language] || Object.values(legacyI18n)[0] || {};
+                    const base = resume.data.sectionHeaders || ({} as SectionHeaders);
+                    resume.data.sectionHeaders = { ...base, ...overlay } as SectionHeaders;
                     delete (resume.data as unknown as { sectionHeadersI18n?: unknown }).sectionHeadersI18n;
                 }
             });
