@@ -17,7 +17,7 @@ export const SECTION_TRANSLATION_MAP: Record<keyof SectionHeaders, string> = {
 } as const;
 
 export function useSectionHeader() {
-    const { t } = useI18n();
+    const { t } = useI18n({ useScope: 'global' });
     const resumeStore = useResumeStore();
 
     const resumeLanguage = computed(() => resumeStore.activeResumeLanguage);
@@ -38,7 +38,7 @@ export function useSectionHeader() {
             }
 
             const translationKey = SECTION_TRANSLATION_MAP[section];
-            return translationKey ? t(translationKey, {}, { locale: lang }) : '';
+            return translationKey ? t(translationKey, 1, { locale: lang }) : '';
         });
     };
 

@@ -129,6 +129,7 @@ import { Button } from '~/components/ui/button';
 import { Label } from '~/components/ui/label';
 import { Slider } from '~/components/ui/slider';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '~/components/ui/select';
+import LanguageSelector from '~/components/elements/LanguageSelector.vue';
 import { useSettingsStore } from '~/stores/settings';
 import { availableTemplates } from '~/types/resume';
 

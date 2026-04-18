@@ -10,17 +10,17 @@ export interface ResumeRenderOptions {
 
 export const useResumeGenerator = () => {
     const { isReady: typstReady, isLoading: typstLoading } = useTypstLoader();
-    const { locale: uiLocale, t } = useI18n();
+    const i18n = useI18n({ useScope: 'global' });
 
     const scopedT = (targetLocale: string) => {
-        return (key: string) => t(key, {}, { locale: targetLocale });
+        return (key: string) => i18n.t(key, 1, { locale: targetLocale });
     };
 
     const resolve = (options: ResumeRenderOptions) => ({
         resumeData: options.resumeData,
         templateId: options.templateId || 'default',
         font: options.font || 'Calibri',
-        locale: options.locale || uiLocale.value,
+        locale: options.locale || i18n.locale.value,
     });
 
     const buildFilename = (resumeData: ResumeData, extension: string): string => {
@@ -46,8 +46,7 @@ export const useResumeGenerator = () => {
     const generateTypstContent = (options: ResumeRenderOptions): string => {
         const { resumeData, templateId, font, locale } = resolve(options);
         const template = getTemplate(templateId);
-        const translate = options.locale && options.locale !== uiLocale.value ? scopedT(locale) : t;
-        return template.parse(resumeData, font, locale, translate);
+        return template.parse(resumeData, font, locale, scopedT(locale));
     };
 
     const generatePreview = async (options: ResumeRenderOptions): Promise<string> => {

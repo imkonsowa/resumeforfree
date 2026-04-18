@@ -102,22 +102,10 @@ export default defineNuxtConfig({
     i18n: {
         defaultLocale: 'en',
         locales: [
-            {
-                code: 'en',
-                name: 'English',
-                file: 'en.json',
-                language: 'en-US',
-                dir: 'ltr',
-            },
-            {
-                code: 'ar',
-                name: 'العربية',
-                file: 'ar.json',
-                language: 'ar-SA',
-                dir: 'rtl',
-            },
+            { code: 'en', name: 'English', file: 'en.json', language: 'en-US', dir: 'ltr' },
+            { code: 'ar', name: 'العربية', file: 'ar.json', language: 'ar-SA', dir: 'rtl' },
         ],
-        lazy: false,
+        lazy: true,
         langDir: 'locales',
         strategy: 'prefix_except_default',
         baseUrl: 'https://resumeforfree.com',

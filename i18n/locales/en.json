@@ -266,6 +266,7 @@
   },
   "builder": {
     "title": "Resume Builder",
+    "languageMismatch": "This resume is in {language}.",
     "pageTitle": "Free Resume Builder - Build & Download PDF Resumes For Free | No Signup",
     "pageDescription": "Build your resume and download it as a professional PDF — completely free. No account, no watermark, no limits. Real-time preview, instant PDF generation, and your data stays on your device.",
     "sections": "Sections",

@@ -72,7 +72,7 @@ import FormContainer from '~/components/elements/FormContainer.vue';
 
 const resumeStore = useResumeStore();
 const templateConfig = useTemplate();
-const { t } = useI18n();
+const { t } = useResumeT();
 const { getSectionHeader, setSectionHeader } = useSectionHeader();
 const skillsHeader = getSectionHeader('skills');
 </script>

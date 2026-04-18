@@ -182,7 +182,7 @@ import FormCard from '~/components/elements/FormCard.vue';
 import FormContainer from '~/components/elements/FormContainer.vue';
 
 const resumeStore = useResumeStore();
-const { t } = useI18n();
+const { t } = useResumeT();
 const { getSectionHeader, setSectionHeader } = useSectionHeader();
 const experienceHeader = getSectionHeader('experience');
 </script>

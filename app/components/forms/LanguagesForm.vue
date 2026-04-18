@@ -105,7 +105,7 @@ import ConfirmationModal from '~/components/elements/ConfirmationModal.vue';
 const resumeStore = useResumeStore();
 const confirmation = useConfirmation();
 const templateConfig = useTemplate();
-const { t } = useI18n();
+const { t } = useResumeT();
 const { getSectionHeader, setSectionHeader } = useSectionHeader();
 const sectionHeaderTitle = getSectionHeader('languages');
 </script>

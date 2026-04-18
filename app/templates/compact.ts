@@ -6,7 +6,7 @@ import { convertEmail, convertLink, SECTION_SPACING } from '~/utils/typstUtils';
 import { useSettingsStore } from '~/stores/settings';
 import { getSharedSectionRenderers } from '~/utils/sectionRenderers';
 import { RendererContext } from '~/utils/rendererContext';
-import { isRtlLocale } from '~/utils/localeUtils';
+import { isRtlLocale } from '~/composables/useLocale';
 
 export interface Template {
     id: string;

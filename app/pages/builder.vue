@@ -4,7 +4,7 @@ import { EyeIcon, FileText } from 'lucide-vue-next';
 import { Button } from '~/components/ui/button';
 import ZoomControls from '~/components/elements/ZoomControls.vue';
 import ResumeBuilderHeader from '~/components/elements/ResumeBuilderHeader.vue';
-import { getLocaleDirection } from '~/utils/localeUtils';
+import { getLocaleDirection } from '~/composables/useLocale';
 import PersonalInfoForm from '~/components/forms/PersonalInfoForm.vue';
 import ExperienceForm from '~/components/forms/ExperienceForm.vue';
 import InternshipsForm from '~/components/forms/InternshipsForm.vue';
@@ -18,8 +18,9 @@ import ResumePreview from '~/components/elements/ResumePreview.vue';
 import FirstTimeBuilderModal from '~/components/elements/FirstTimeBuilderModal.vue';
 import CloudSyncPromptModal from '~/components/elements/CloudSyncPromptModal.vue';
 import SyncIndicator from '~/components/elements/SyncIndicator.vue';
+import LanguageMismatchAlert from '~/components/elements/LanguageMismatchAlert.vue';
 
-const { t } = useI18n();
+const { t, loadLocaleMessages } = useI18n({ useScope: 'global' });
 
 useHead({
     title: t('builder.pageTitle'),
@@ -114,6 +115,17 @@ const checkOtherModals = () => {
 };
 
 const resumeLanguageDir = computed(() => getLocaleDirection(resumeStore.activeResumeLanguage));
+
+if (import.meta.client && resumeStore.activeResumeLanguage) {
+    await loadLocaleMessages(resumeStore.activeResumeLanguage).catch(err => console.error('[builder] locale load failed:', err));
+}
+
+watch(
+    () => resumeStore.activeResumeLanguage,
+    (lang) => {
+        if (lang) loadLocaleMessages(lang).catch(err => console.error('[builder] locale load failed:', err));
+    },
+);
 
 onMounted(() => {
     settingsStore.initialize();
@@ -304,6 +316,7 @@ const orderedSections = computed(() => {
                 <div class="w-full lg:w-1/2 min-h-screen">
                     <div class="p-4 lg:p-8 pb-32">
                         <ResumeBuilderHeader />
+                        <LanguageMismatchAlert />
                         <div class="space-y-6">
                             <PersonalInfoForm />
                             <div
