@@ -77,12 +77,6 @@ export const contactMessages = sqliteTable('contact_messages', {
     emailIdx: index('idx_contact_messages_email').on(table.email),
 }));
 
-// =============================================================================
-// Raw-SQL row shapes (snake_case) for handlers that query D1 directly.
-// The Drizzle tables above are the source of truth; these interfaces describe
-// what .prepare().first()/all() returns when selecting with raw SQL.
-// =============================================================================
-
 export interface UserRow {
     id: string;
     email: string;

@@ -192,6 +192,7 @@ const handleRegister = (dontShowAgain: boolean) => {
     if (dontShowAgain) {
         markModalSeen();
     }
+    useCloudSyncIntent().markIntent();
     navigateTo('/auth/register');
 };
 const handleLogin = (dontShowAgain: boolean) => {
@@ -199,6 +200,7 @@ const handleLogin = (dontShowAgain: boolean) => {
     if (dontShowAgain) {
         markModalSeen();
     }
+    useCloudSyncIntent().markIntent();
     navigateTo('/auth/login');
 };
 

@@ -23,12 +23,29 @@ const fetchServerResumesIfLoggedIn = async () => {
     if (authStore.isLoggedIn) {
         try {
             await resumeStore.fetchServerResumes();
+            await maybeFulfilCloudSyncIntent();
         }
         catch (error) {
             console.error('Failed to fetch server resumes:', error);
         }
     }
 };
+
+const maybeFulfilCloudSyncIntent = async () => {
+    const { consumeIntent } = useCloudSyncIntent();
+    if (!consumeIntent()) return;
+
+    const { synced, skipped } = await resumeStore.syncLocalOnlyResumes();
+    if (synced > 0) {
+        const { toast } = await import('vue-sonner');
+        toast.success(t('notifications.autoSyncedToCloud', { count: synced }));
+    }
+    if (skipped > 0) {
+        const { toast } = await import('vue-sonner');
+        toast.info(t('notifications.cloudLimitReached', { count: skipped }));
+    }
+};
+
 onMounted(async () => {
     resumeStore.initialize();
     await fetchServerResumesIfLoggedIn();

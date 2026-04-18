@@ -994,6 +994,27 @@ export const useResumeStore = defineStore('resume', {
             }
             return null;
         },
+        async syncLocalOnlyResumes(): Promise<{ synced: number; skipped: number }> {
+            const localOnly = Object.values(this.resumes)
+                .filter(r => !r.serverId)
+                .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime());
+
+            const remainingSlots = Math.max(0, 3 - this.cloudInfo.count);
+            const toSync = localOnly.slice(0, remainingSlots);
+            const skipped = localOnly.length - toSync.length;
+
+            let synced = 0;
+            for (const resume of toSync) {
+                try {
+                    await this.syncResumeToServer(resume.id);
+                    synced++;
+                }
+                catch (error) {
+                    console.error(`Failed to auto-sync resume ${resume.id}:`, error);
+                }
+            }
+            return { synced, skipped };
+        },
         async syncResumeToServer(resumeId: string) {
             const resume = this.resumes[resumeId];
             if (!resume) return;
