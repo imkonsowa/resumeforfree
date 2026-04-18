@@ -99,9 +99,6 @@ const handleEnter = (event: KeyboardEvent) => {
                             <span class="text-xs text-muted-foreground uppercase">{{ loc.code }}</span>
                         </button>
                     </div>
-                    <p class="text-xs text-muted-foreground">
-                        {{ $t('resumes.modals.create.languageNote') }}
-                    </p>
                 </div>
                 <div class="space-y-3 pt-2">
                     <div class="flex items-center space-x-2">

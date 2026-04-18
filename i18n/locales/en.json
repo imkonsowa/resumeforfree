@@ -615,8 +615,7 @@
         "slotsAvailableMessage": "{remaining} of {limit} cloud slots available",
         "noSlotsAvailableMessage": "No cloud slots available ({count}/{limit} used)",
         "createButton": "Create Resume",
-        "resumeLanguage": "Resume Language",
-        "languageNote": "This cannot be changed later"
+        "resumeLanguage": "Resume Language"
       },
       "copy": {
         "title": "Copy Resume",

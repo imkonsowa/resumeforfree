@@ -49,6 +49,13 @@
                     <span>{{ $t('resumes.status.updated') }} {{ formatDate(resume.updatedAt) }}</span>
                 </div>
                 <div class="flex items-center gap-2">
+                    <ResumeLanguageSelector
+                        :model-value="resume.language"
+                        size="sm"
+                        button-variant="ghost"
+                        button-class="h-7 text-xs px-2"
+                        @update="(code) => resumeStore.setResumeLanguage(resume.id, code)"
+                    />
                     <Badge
                         v-if="isActive"
                         class="bg-blue-500 text-white text-xs"
@@ -173,6 +180,7 @@ import {
     X,
 } from 'lucide-vue-next';
 import type { Resume } from '~/types/resume';
+import ResumeLanguageSelector from '~/components/elements/ResumeLanguageSelector.vue';
 
 const props = defineProps<Props>();
 

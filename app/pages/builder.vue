@@ -4,6 +4,7 @@ import { EyeIcon, FileText } from 'lucide-vue-next';
 import { Button } from '~/components/ui/button';
 import ZoomControls from '~/components/elements/ZoomControls.vue';
 import ResumeBuilderHeader from '~/components/elements/ResumeBuilderHeader.vue';
+import ResumeLanguageSelector from '~/components/elements/ResumeLanguageSelector.vue';
 import { getLocaleDirection } from '~/composables/useLocale';
 import PersonalInfoForm from '~/components/forms/PersonalInfoForm.vue';
 import ExperienceForm from '~/components/forms/ExperienceForm.vue';
@@ -340,15 +341,20 @@ const orderedSections = computed(() => {
                         </ClientOnly>
                     </div>
                 </div>
-                <!-- Mobile FAB buttons -->
                 <div
                     v-if="!showMobilePreview"
-                    class="lg:hidden fixed bottom-6 right-6 z-40"
+                    class="lg:hidden fixed bottom-6 right-6 z-40 flex items-center gap-2"
                 >
+                    <ResumeLanguageSelector
+                        v-if="resumeStore.activeResume"
+                        :model-value="resumeStore.activeResume.language"
+                        button-class="bg-black text-white border-black hover:bg-gray-800 shadow-lg"
+                        @update="(code) => resumeStore.setResumeLanguage(resumeStore.activeResume!.id, code)"
+                    />
                     <Button
-                        class="h-9 w-9 p-0 bg-black text-white border-black hover:bg-gray-800 shadow-lg"
+                        class="h-8 w-8 p-0 bg-black text-white border-black hover:bg-gray-800 shadow-lg"
                         variant="outline"
-                        size="default"
+                        size="sm"
                         @click="showMobilePreview = true"
                     >
                         <EyeIcon class="h-4 w-4" />
@@ -366,6 +372,11 @@ const orderedSections = computed(() => {
                                     {{ t('builder.resumePreview') }}
                                 </h3>
                                 <div class="flex items-center gap-2">
+                                    <ResumeLanguageSelector
+                                        v-if="resumeStore.activeResume"
+                                        :model-value="resumeStore.activeResume.language"
+                                        @update="(code) => resumeStore.setResumeLanguage(resumeStore.activeResume!.id, code)"
+                                    />
                                     <ZoomControls
                                         :max-zoom="maxZoom"
                                         :min-zoom="minZoom"

@@ -615,8 +615,7 @@
         "slotsAvailableMessage": "{remaining} من {limit} مساحات سحابية متاحة",
         "noSlotsAvailableMessage": "لا توجد مساحات سحابية متاحة ({count}/{limit} مستخدم)",
         "createButton": "إنشاء السيرة الذاتية",
-        "resumeLanguage": "لغة السيرة الذاتية",
-        "languageNote": "لا يمكن تغيير هذا لاحقاً"
+        "resumeLanguage": "لغة السيرة الذاتية"
       },
       "copy": {
         "title": "نسخ السيرة الذاتية",

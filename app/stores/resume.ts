@@ -16,7 +16,7 @@ import type {
     SocialLink,
     Volunteering,
 } from '~/types/resume';
-import { defaultResumeData, defaultResumeSettings, resumeSettingsFromLegacy } from '~/types/resume';
+import { defaultResumeData, defaultResumeSettings, getDefaultFontForLanguage, resumeSettingsFromLegacy } from '~/types/resume';
 
 interface ResumeStoreState {
     resumes: Record<string, Resume>;
@@ -234,6 +234,21 @@ export const useResumeStore = defineStore('resume', {
             if (this.resumes[id]) {
                 this.resumes[id].name = name;
                 this.resumes[id].updatedAt = new Date().toISOString();
+            }
+        },
+        async setResumeLanguage(id: string, language: string): Promise<void> {
+            const resume = this.resumes[id];
+            if (!resume || resume.language === language) return;
+            resume.language = language;
+            resume.settings = {
+                ...resume.settings,
+                selectedFont: getDefaultFontForLanguage(language),
+            };
+            resume.updatedAt = new Date().toISOString();
+            if (resume.serverId) {
+                await this.syncResumeToServer(id).catch((error) => {
+                    console.error('Failed to sync language change to server:', error);
+                });
             }
         },
         updateServerId(id: string, serverId: string): void {

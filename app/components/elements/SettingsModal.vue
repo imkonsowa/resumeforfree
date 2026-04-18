@@ -9,15 +9,17 @@
             </DialogHeader>
 
             <div class="space-y-6 py-4">
-                <!-- Language Selection -->
-                <div class="space-y-2">
-                    <LanguageSelector
-                        variant="select"
-                        show-label
+                <div
+                    v-if="resumeStore.activeResume"
+                    class="space-y-2"
+                >
+                    <Label>{{ t('settings.language.label') }}</Label>
+                    <ResumeLanguageSelector
+                        :model-value="resumeStore.activeResume.language"
+                        size="default"
+                        button-class="w-full justify-between"
+                        @update="(code) => resumeStore.setResumeLanguage(resumeStore.activeResume!.id, code)"
                     />
-                    <p class="text-sm text-muted-foreground">
-                        {{ t('settings.language.description') }}
-                    </p>
                 </div>
 
                 <!-- Template Selection -->
@@ -129,8 +131,9 @@ import { Button } from '~/components/ui/button';
 import { Label } from '~/components/ui/label';
 import { Slider } from '~/components/ui/slider';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '~/components/ui/select';
-import LanguageSelector from '~/components/elements/LanguageSelector.vue';
+import ResumeLanguageSelector from '~/components/elements/ResumeLanguageSelector.vue';
 import { useSettingsStore } from '~/stores/settings';
+import { useResumeStore } from '~/stores/resume';
 import { getTemplateList } from '~/templates';
 
 // Props
@@ -148,8 +151,8 @@ const availableTemplates = getTemplateList();
 // i18n
 const { t } = useI18n();
 
-// Store
 const settingsStore = useSettingsStore();
+const resumeStore = useResumeStore();
 
 // Local state
 const fontSize = ref([settingsStore.fontSize]);
