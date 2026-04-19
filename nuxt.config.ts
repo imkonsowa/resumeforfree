@@ -66,11 +66,6 @@ export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
     nitro: {
         preset: 'cloudflare-module',
-        cloudflare: {
-            d1: {
-                DB: process.env.NODE_ENV === 'production' ? undefined : './dev.db',
-            },
-        },
     },
 
     vite: {

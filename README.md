@@ -43,7 +43,7 @@ npm run dev
 ### Cloud sync (optional)
 
 ```bash
-make local-db       # Apply D1 migrations to ./dev.db
+make local-db       # Apply D1 migrations to local D1 (.wrangler/state/)
 npm run dev
 ```
 
