@@ -6,8 +6,14 @@ import {
     renderTemplateDateWithLink,
     renderTemplateHeader,
     renderTemplateSubHeader,
+    renderTemplateSubHeaderContent,
     SECTION_SPACING,
 } from './typstUtils';
+
+const renderItemTitle = (item: SectionContent, fontSize: number): string => {
+    if (item.titleContent) return renderTemplateSubHeaderContent(item.titleContent, fontSize);
+    return renderTemplateSubHeader(item.title, fontSize);
+};
 
 export const formatSectionItems = (
     items: string[],
@@ -40,7 +46,7 @@ export const formatExperienceItems = (
     fontSize: number,
 ): string => {
     const formattedItems = sectionContent.map((item) => {
-        let content = renderTemplateSubHeader(item.title, fontSize);
+        let content = renderItemTitle(item, fontSize);
         if (item.date || item.content) {
             content += '\n\n';
             const dateAndLinkSection = renderTemplateDateWithLink(
@@ -86,16 +92,24 @@ export const formatEducationItems = (
 export const formatProjectsItems = (
     sectionContent: SectionContent[],
     config: TemplateRenderConfig,
-    _fontSize: number,
+    fontSize: number,
 ): string => {
     const formattedItems = sectionContent.map((item) => {
         let content = '';
         if (item.title) {
             content += item.title;
         }
+        if (item.date) {
+            if (content) content += '\n\n';
+            content += renderTemplateDate(item.date, fontSize);
+        }
         if (item.content) {
             if (content) content += '\n\n';
             content += item.content;
+        }
+        if (item.achievements && item.achievements.length > 0) {
+            if (content) content += '\n\n';
+            content += convertList(item.achievements);
         }
         return content;
     }).filter(content => content.trim());

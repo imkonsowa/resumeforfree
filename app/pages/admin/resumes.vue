@@ -64,6 +64,12 @@
                             <p class="text-xs text-gray-600 truncate mt-0.5">
                                 {{ resume.user_email || resume.user_id }}
                             </p>
+                            <p
+                                v-if="resume.language"
+                                class="text-xs text-gray-500 mt-0.5 uppercase"
+                            >
+                                {{ resume.language }}
+                            </p>
                         </div>
                         <DropdownMenu>
                             <DropdownMenuTrigger as-child>
@@ -87,9 +93,16 @@
                         </DropdownMenu>
                     </div>
                     <div class="flex items-center justify-between gap-2">
-                        <span class="text-xs text-gray-500">
-                            {{ formatDate(resume.updated_at) }}
-                        </span>
+                        <div class="text-xs text-gray-500 space-y-0.5">
+                            <div>
+                                <span class="text-gray-400">{{ $t('admin.resumes.createdAt') }}:</span>
+                                {{ formatDateTime(resume.created_at) }}
+                            </div>
+                            <div>
+                                <span class="text-gray-400">{{ $t('admin.resumes.updatedAt') }}:</span>
+                                {{ formatDateTime(resume.updated_at) }}
+                            </div>
+                        </div>
                         <Button
                             variant="outline"
                             size="sm"
@@ -119,7 +132,10 @@
                                 <th class="px-4 lg:px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     {{ $t('admin.resumes.owner') }}
                                 </th>
-                                <th class="hidden lg:table-cell px-4 lg:px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th class="px-4 lg:px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    {{ $t('admin.resumes.language') }}
+                                </th>
+                                <th class="px-4 lg:px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     {{ $t('admin.resumes.createdAt') }}
                                 </th>
                                 <th class="px-4 lg:px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -141,11 +157,14 @@
                                 <td class="px-4 lg:px-6 py-4 text-sm text-gray-700 max-w-[200px] truncate">
                                     {{ resume.user_email || resume.user_id }}
                                 </td>
-                                <td class="hidden lg:table-cell px-4 lg:px-6 py-4 whitespace-nowrap text-sm text-gray-700">
-                                    {{ formatDate(resume.created_at) }}
+                                <td class="px-4 lg:px-6 py-4 whitespace-nowrap text-sm text-gray-700 uppercase">
+                                    {{ resume.language || '—' }}
                                 </td>
                                 <td class="px-4 lg:px-6 py-4 whitespace-nowrap text-sm text-gray-700">
-                                    {{ formatDate(resume.updated_at) }}
+                                    {{ formatDateTime(resume.created_at) }}
+                                </td>
+                                <td class="px-4 lg:px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+                                    {{ formatDateTime(resume.updated_at) }}
                                 </td>
                                 <td class="px-4 lg:px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
                                     <div class="flex items-center justify-end gap-2">
@@ -200,6 +219,7 @@
             :resume-name="previewResume?.name || ''"
             :owner-email="previewResume?.user_email || ''"
             :user-id="previewResume?.user_id || ''"
+            @language-updated="onLanguageUpdated"
         />
     </div>
 </template>
@@ -290,6 +310,12 @@ const openPreview = (resume: Resume) => {
     showPreview.value = true;
 };
 
+const onLanguageUpdated = ({ resumeId, language }: { resumeId: string; language: string }) => {
+    const match = resumes.value.find(r => r.id === resumeId);
+    if (match) match.language = language;
+    if (previewResume.value?.id === resumeId) previewResume.value.language = language;
+};
+
 const confirmDelete = (resumeId: string) => {
     if (confirm(t('admin.resumes.confirmDelete'))) {
         deleteResume(resumeId);
@@ -313,14 +339,18 @@ const deleteResume = async (resumeId: string) => {
     }
 };
 
-const formatDate = (dateString: string) => {
+const formatDateTime = (dateString: string) => {
+    if (!dateString) return '—';
     const date = new Date(dateString);
+    if (Number.isNaN(date.getTime())) return '—';
     return new Intl.DateTimeFormat('en-US', {
         year: 'numeric',
         month: 'short',
         day: 'numeric',
         hour: '2-digit',
         minute: '2-digit',
+        second: '2-digit',
+        hour12: false,
     }).format(date);
 };
 

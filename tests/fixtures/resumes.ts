@@ -63,13 +63,19 @@ export const specialCharsResume: ResumeData = {
     projects: [
         {
             title: 'Operators Logic App - C#, Windows App',
-            url: '',
             description: 'Developed automated logical operations for Issue #123',
+            links: [],
+            startDate: '',
+            endDate: '',
+            achievements: [],
         },
         {
             title: 'E-Commerce Platform (Revenue: $500K+)',
-            url: 'https://example.com',
             description: 'Built with C# & React. Handles ~10,000 transactions/day.',
+            links: [{ url: 'https://example.com', label: 'Live Demo' }],
+            startDate: '',
+            endDate: '',
+            achievements: [],
         },
     ],
     experiences: [
@@ -104,8 +110,11 @@ export const typstMarkupResume: ResumeData = {
     projects: [
         {
             title: 'Project with "quotes" inside',
-            url: '',
             description: 'Description with backslash \\ and more "quotes"',
+            links: [],
+            startDate: '',
+            endDate: '',
+            achievements: [],
         },
     ],
 };
@@ -227,13 +236,23 @@ export const fullResume: ResumeData = {
     projects: [
         {
             title: 'Open Source CLI Tool',
-            url: 'https://github.com/sarahjohnson/cli-tool',
             description: 'A command-line tool for automating development workflows',
+            links: [{ url: 'https://github.com/sarahjohnson/cli-tool', label: 'GitHub' }],
+            startDate: '2023-01',
+            endDate: '',
+            isPresent: true,
+            achievements: [
+                { text: 'Reached 500+ stars on GitHub' },
+                { text: 'Used by 2,000+ developers monthly' },
+            ],
         },
         {
             title: 'Personal Blog',
-            url: 'https://sarahjohnson.dev',
             description: 'Technical blog about web development best practices',
+            links: [{ url: 'https://sarahjohnson.dev', label: 'Live Demo' }],
+            startDate: '2021-06',
+            endDate: '2023-12',
+            achievements: [],
         },
     ],
     languages: [
@@ -289,7 +308,7 @@ export const edgeCaseResume: ResumeData = {
         { title: '', description: '' }, // completely empty
     ],
     projects: [
-        { title: '', url: '', description: '' },
+        { title: '', description: '', links: [], startDate: '', endDate: '', achievements: [] },
     ],
 };
 

@@ -15,6 +15,7 @@
     "db:generate": "drizzle-kit generate",
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
+    "db:sync-prod": "bash scripts/db-sync-prod-to-local.sh",
     "test": "vitest",
     "test:unit": "vitest run --config vitest.config.ts",
     "test:e2e": "playwright test",

@@ -107,7 +107,7 @@ export const renderSharedProjects: SectionRenderer = (data: ResumeData, context:
         return '';
     }
 
-    const sectionContent = generateProjectsContent(data.projects);
+    const sectionContent = generateProjectsContent(data.projects, context.t);
     if (sectionContent.length === 0) return '';
 
     const formattedContent = formatProjectsItems(sectionContent, context.config, context.fontSize);

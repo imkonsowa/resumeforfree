@@ -47,10 +47,18 @@ export interface SocialLink {
     url: string;
     customLabel?: string;
 }
+export interface ProjectLink {
+    url: string;
+    label: string;
+}
 export interface Project {
     title: string;
-    url: string;
     description: string;
+    links: ProjectLink[];
+    startDate: string;
+    endDate: string;
+    isPresent?: boolean;
+    achievements: Array<{ text: string }>;
 }
 export interface Language {
     name: string;

@@ -1,7 +1,28 @@
 import type { Certificate, Education, Experience, Internship, Language, Project, ResumeData, SkillItem, Volunteering } from '~/types/resume';
 import type { SectionContent, TranslateFunction } from '~/types/template';
-import { convertDateRange, convertEmail, convertExternalLinkIcon, convertLink } from './typstUtils';
-import { escapeTypstString, escapeTypstText } from './stringUtils';
+import { convertDateRange, convertEmail, convertExternalLinkIcon, convertLink, convertUnderlinedLink } from './typstUtils';
+import { escapeTypstText } from './stringUtils';
+
+const buildPositionAtCompanyContent = (
+    position: string,
+    company: string,
+    companyUrl: string | undefined,
+    location: string,
+    at: string,
+    separator: string,
+): string => {
+    let content = escapeTypstText(position);
+    if (company) {
+        const companyMarkup = companyUrl?.trim()
+            ? convertUnderlinedLink(companyUrl.trim(), company)
+            : escapeTypstText(company);
+        content += at + companyMarkup;
+    }
+    if (location) {
+        content += separator + escapeTypstText(location);
+    }
+    return content;
+};
 
 export const SOCIAL_PLATFORM_LABELS = {
     linkedin: 'LinkedIn',
@@ -17,16 +38,22 @@ export const generateExperienceContent = (experiences: Experience[], t?: Transla
     return experiences.map((experience) => {
         const at = t ? t('template.at') : ' at ';
         const separator = t ? t('template.separator') : ', ';
-        const title = `${experience.position}${experience.company ? at + experience.company : ''}${experience.location ? separator + experience.location : ''}`;
+        const titleContent = buildPositionAtCompanyContent(
+            experience.position,
+            experience.company,
+            experience.companyUrl,
+            experience.location,
+            at,
+            separator,
+        );
         const dateRange = convertDateRange({ startDate: experience.startDate, endDate: experience.endDate, isPresent: experience.isPresent, t });
-        const companyLink = experience.companyUrl?.trim() ? convertExternalLinkIcon(experience.companyUrl) : '';
         const achievements = experience.achievements
             .filter(achievement => achievement.text && achievement.text.trim() !== '')
             .map(achievement => achievement.text);
         return {
-            title,
+            title: '',
+            titleContent,
             date: dateRange,
-            content: companyLink,
             achievements,
         };
     });
@@ -35,16 +62,22 @@ export const generateInternshipsContent = (internships: Internship[], t?: Transl
     return internships.map((internship) => {
         const at = t ? t('template.at') : ' at ';
         const separator = t ? t('template.separator') : ', ';
-        const title = `${internship.position}${internship.company ? at + internship.company : ''}${internship.location ? separator + internship.location : ''}`;
+        const titleContent = buildPositionAtCompanyContent(
+            internship.position,
+            internship.company,
+            internship.companyUrl,
+            internship.location,
+            at,
+            separator,
+        );
         const dateRange = convertDateRange({ startDate: internship.startDate, endDate: internship.endDate, isPresent: internship.isPresent, t });
-        const companyLink = internship.companyUrl?.trim() ? convertExternalLinkIcon(internship.companyUrl) : '';
         const achievements = internship.achievements
             .filter(achievement => achievement.text && achievement.text.trim() !== '')
             .map(achievement => achievement.text);
         return {
-            title,
+            title: '',
+            titleContent,
             date: dateRange,
-            content: companyLink,
             achievements,
         };
     });
@@ -89,21 +122,44 @@ export const generateVolunteeringContent = (volunteering: Volunteering[], t?: Tr
         };
     });
 };
-export const generateProjectsContent = (projects: Project[]): SectionContent[] => {
+export const generateProjectsContent = (projects: Project[], t?: TranslateFunction): SectionContent[] => {
     return projects
-        .filter(project => project.title.trim() || project.description.trim())
+        .filter((project) => {
+            const hasLinks = Array.isArray(project.links) && project.links.length > 0;
+            const hasAchievements = Array.isArray(project.achievements)
+                && project.achievements.some(a => a.text?.trim());
+            return project.title.trim() || project.description.trim() || hasLinks || hasAchievements;
+        })
         .map((project) => {
-            let title = '';
-            if (project.title.trim()) {
-                title = `#block(below: 0.6em)[#text("${escapeTypstString(project.title)}", weight: "bold")`;
-                if (project.url.trim()) {
-                    title += ` • ${convertExternalLinkIcon(project.url)}`;
-                }
-                title += `]`;
-            }
+            const name = project.title.trim()
+                ? `*${escapeTypstText(project.title.trim())}*`
+                : '';
+            const linkMarkups = (project.links || [])
+                .map((link) => {
+                    const url = link.url?.trim();
+                    const label = link.label?.trim();
+                    return url && label ? convertLink(url, label) : '';
+                })
+                .filter(Boolean);
+            const firstLine = [name, ...linkMarkups].filter(Boolean).join(' • ');
+            const desc = project.description.trim() ? escapeTypstText(project.description.trim()) : '';
+            const combined = [firstLine, desc].filter(Boolean).join('\n\n');
+
+            const dateRange = convertDateRange({
+                startDate: project.startDate,
+                endDate: project.endDate,
+                isPresent: project.isPresent,
+                t,
+            });
+            const achievements = (project.achievements || [])
+                .filter(a => a.text && a.text.trim() !== '')
+                .map(a => a.text);
+
             return {
-                title,
-                content: project.description.trim() ? escapeTypstText(project.description) : undefined,
+                title: '',
+                date: dateRange,
+                content: combined || undefined,
+                achievements,
             };
         });
 };

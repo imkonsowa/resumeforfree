@@ -6,6 +6,7 @@ import type {
     Internship,
     Language,
     Project,
+    ProjectLink,
     Resume,
     ResumeData,
     ResumeSettings,
@@ -17,6 +18,7 @@ import type {
     Volunteering,
 } from '~/types/resume';
 import { defaultResumeData, defaultResumeSettings, getDefaultFontForLanguage, resumeSettingsFromLegacy } from '~/types/resume';
+import { inferLabelFromUrl } from '~/utils/urlUtils';
 
 interface ResumeStoreState {
     resumes: Record<string, Resume>;
@@ -190,6 +192,17 @@ export const useResumeStore = defineStore('resume', {
                     const base = resume.data.sectionHeaders || ({} as SectionHeaders);
                     resume.data.sectionHeaders = { ...base, ...overlay } as SectionHeaders;
                     delete (resume.data as unknown as { sectionHeadersI18n?: unknown }).sectionHeadersI18n;
+                }
+                if (Array.isArray(resume.data.projects)) {
+                    resume.data.projects.forEach((project) => {
+                        const legacy = project as unknown as { url?: string };
+                        const hasLinks = Array.isArray(project.links) && project.links.length > 0;
+                        if (!hasLinks && legacy.url && legacy.url.trim()) {
+                            const url = legacy.url.trim();
+                            project.links = [{ url, label: inferLabelFromUrl(url) }];
+                        }
+                        delete legacy.url;
+                    });
                 }
             });
             if (!this.activeResumeId && Object.keys(this.resumes).length > 0) {
@@ -722,11 +735,95 @@ export const useResumeStore = defineStore('resume', {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newProjects = [...currentData.projects, {
                     title: '',
-                    url: '',
                     description: '',
+                    links: [] as ProjectLink[],
+                    startDate: '',
+                    endDate: '',
+                    isPresent: false,
+                    achievements: [] as Array<{ text: string }>,
                 }];
                 this.updateResumeData(this.activeResumeId, { projects: newProjects });
             }
+        },
+        addProjectAchievement(projectIndex: number, achievement = '') {
+            if (!this.activeResumeId) return;
+            const currentData = this.resumes[this.activeResumeId].data;
+            if (!currentData.projects[projectIndex]) return;
+            const newProjects = [...currentData.projects];
+            newProjects[projectIndex] = {
+                ...newProjects[projectIndex],
+                achievements: [...(newProjects[projectIndex].achievements || []), { text: achievement }],
+            };
+            this.updateResumeData(this.activeResumeId, { projects: newProjects });
+        },
+        updateProjectAchievement(projectIndex: number, achievementIndex: number, achievement: string) {
+            if (!this.activeResumeId) return;
+            const currentData = this.resumes[this.activeResumeId].data;
+            const project = currentData.projects[projectIndex];
+            if (!project?.achievements?.[achievementIndex]) return;
+            const newProjects = [...currentData.projects];
+            const newAchievements = [...project.achievements];
+            newAchievements[achievementIndex] = { text: achievement };
+            newProjects[projectIndex] = { ...project, achievements: newAchievements };
+            this.updateResumeData(this.activeResumeId, { projects: newProjects });
+        },
+        removeProjectAchievement(projectIndex: number, achievementIndex: number) {
+            if (!this.activeResumeId) return;
+            const currentData = this.resumes[this.activeResumeId].data;
+            const project = currentData.projects[projectIndex];
+            if (!project?.achievements) return;
+            const newProjects = [...currentData.projects];
+            const newAchievements = [...project.achievements];
+            newAchievements.splice(achievementIndex, 1);
+            newProjects[projectIndex] = { ...project, achievements: newAchievements };
+            this.updateResumeData(this.activeResumeId, { projects: newProjects });
+        },
+        moveProjectAchievement(projectIndex: number, fromIndex: number, toIndex: number) {
+            if (!this.activeResumeId) return;
+            const currentData = this.resumes[this.activeResumeId].data;
+            const project = currentData.projects[projectIndex];
+            if (!project?.achievements) return;
+            const newProjects = [...currentData.projects];
+            const newAchievements = [...project.achievements];
+            const item = newAchievements.splice(fromIndex, 1)[0];
+            newAchievements.splice(toIndex, 0, item);
+            newProjects[projectIndex] = { ...project, achievements: newAchievements };
+            this.updateResumeData(this.activeResumeId, { projects: newProjects });
+        },
+        addProjectLink(projectIndex: number) {
+            if (!this.activeResumeId) return;
+            const currentData = this.resumes[this.activeResumeId].data;
+            if (!currentData.projects[projectIndex]) return;
+            const newProjects = [...currentData.projects];
+            const project = { ...newProjects[projectIndex] };
+            project.links = [...(project.links || []), { url: '', label: '' }];
+            newProjects[projectIndex] = project;
+            this.updateResumeData(this.activeResumeId, { projects: newProjects });
+        },
+        updateProjectLink(projectIndex: number, linkIndex: number, field: keyof ProjectLink, value: string) {
+            if (!this.activeResumeId) return;
+            const currentData = this.resumes[this.activeResumeId].data;
+            const project = currentData.projects[projectIndex];
+            if (!project || !project.links?.[linkIndex]) return;
+            const newProjects = [...currentData.projects];
+            const newProject = { ...project, links: [...project.links] };
+            newProject.links[linkIndex] = { ...newProject.links[linkIndex], [field]: value };
+            if (field === 'url' && !newProject.links[linkIndex].label.trim() && value.trim()) {
+                newProject.links[linkIndex].label = inferLabelFromUrl(value);
+            }
+            newProjects[projectIndex] = newProject;
+            this.updateResumeData(this.activeResumeId, { projects: newProjects });
+        },
+        removeProjectLink(projectIndex: number, linkIndex: number) {
+            if (!this.activeResumeId) return;
+            const currentData = this.resumes[this.activeResumeId].data;
+            const project = currentData.projects[projectIndex];
+            if (!project || !project.links?.[linkIndex]) return;
+            const newProjects = [...currentData.projects];
+            const newProject = { ...project, links: [...project.links] };
+            newProject.links.splice(linkIndex, 1);
+            newProjects[projectIndex] = newProject;
+            this.updateResumeData(this.activeResumeId, { projects: newProjects });
         },
         updateProject(index: number, field: keyof Project, value: unknown) {
             if (this.activeResumeId) {

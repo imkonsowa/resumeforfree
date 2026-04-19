@@ -14,6 +14,24 @@
                     <DialogDescription>
                         {{ t('admin.resumes.preview.owner') }}: {{ ownerEmail }}
                     </DialogDescription>
+                    <div
+                        v-if="resumeLanguage"
+                        class="flex items-center gap-2 mt-2"
+                    >
+                        <span class="text-xs text-gray-500">{{ t('admin.resumes.language') }}:</span>
+                        <ResumeLanguageSelector
+                            :model-value="resumeLanguage"
+                            size="sm"
+                            button-variant="outline"
+                            @update="handleLanguageChange"
+                        />
+                        <span
+                            v-if="isUpdatingLanguage"
+                            class="text-xs text-gray-500"
+                        >
+                            {{ t('common.loading') }}
+                        </span>
+                    </div>
                 </DialogHeader>
 
                 <ClientOnly>
@@ -88,6 +106,8 @@
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '~/components/ui/dialog';
 import { Button } from '~/components/ui/button';
 import { X } from 'lucide-vue-next';
+import { toast } from 'vue-sonner';
+import ResumeLanguageSelector from '~/components/elements/ResumeLanguageSelector.vue';
 import { useResumeGenerator } from '~/composables/useResumeGenerator';
 import type { Resume, ResumeData, ResumeSettings, UserSettings } from '~/types/resume';
 import { resumeSettingsFromLegacy } from '~/types/resume';
@@ -103,6 +123,7 @@ const props = defineProps<{
 
 const emit = defineEmits<{
     'update:modelValue': [value: boolean];
+    'language-updated': [payload: { resumeId: string; language: string }];
 }>();
 
 const { generatePreview } = useResumeGenerator();
@@ -119,6 +140,9 @@ const isLoading = ref(false);
 const error = ref<string | null>(null);
 const previewContent = ref<string>('');
 const userLocale = ref<string>('en');
+const resumeLanguage = ref<string>('');
+const isUpdatingLanguage = ref(false);
+let currentResume: Resume | null = null;
 const userDir = computed(() => getLocaleDirection(userLocale.value));
 
 const t = (key: string, named?: Record<string, unknown>) =>
@@ -150,6 +174,8 @@ const loadResume = async () => {
         };
 
         userLocale.value = resume.language;
+        resumeLanguage.value = resume.language;
+        currentResume = resume;
         await loadLocaleMessages(userLocale.value);
 
         if (!typstReady.value) {
@@ -182,10 +208,50 @@ const loadResume = async () => {
     }
 };
 
+const handleLanguageChange = async (newLanguage: string) => {
+    if (!props.resumeId || newLanguage === resumeLanguage.value) return;
+
+    const confirmMessage = t('admin.resumes.confirmLanguageChange', {
+        name: props.resumeName || props.resumeId,
+        language: newLanguage.toUpperCase(),
+    });
+    if (!window.confirm(confirmMessage as string)) return;
+
+    isUpdatingLanguage.value = true;
+    try {
+        await $fetch(`/api/admin/resumes/${props.resumeId}/language`, {
+            method: 'PATCH',
+            body: { language: newLanguage },
+        });
+
+        resumeLanguage.value = newLanguage;
+        userLocale.value = newLanguage;
+        if (currentResume) {
+            currentResume.language = newLanguage;
+            await loadLocaleMessages(newLanguage);
+            previewContent.value = await generatePreview(currentResume);
+        }
+
+        emit('language-updated', { resumeId: props.resumeId, language: newLanguage });
+        toast.success(t('admin.resumes.success.languageUpdated') as string);
+    }
+    catch (err) {
+        console.error('Failed to update resume language:', err);
+        toast.error(t('admin.resumes.errors.languageUpdateFailed') as string);
+    }
+    finally {
+        isUpdatingLanguage.value = false;
+    }
+};
+
 // Watch for dialog open and load resume
 watch(() => props.modelValue, (newValue) => {
     if (newValue && props.resumeId) {
         loadResume();
+    }
+    else if (!newValue) {
+        resumeLanguage.value = '';
+        currentResume = null;
     }
 });
 </script>

@@ -20,6 +20,10 @@ export const convertExternalLinkIcon = (url: string): string => {
     if (!url) return '';
     return `#link("${url}")[#text(size: 10pt, weight: "semibold", fill: blue)[↗]]`;
 };
+export const convertUnderlinedLink = (url: string, text: string): string => {
+    if (!url || !text) return '';
+    return `#link("${url}")[#underline[#text(fill: blue, "${escapeTypstString(text)}")]]`;
+};
 export const convertHeader = (title: string, size = '16pt'): string => {
     if (!title) return '';
     return `#block(below: ${HEADER_SPACING}, above: 0em)[#text("${escapeTypstString(title)}", size: ${size}, weight: "bold")]`;
@@ -87,6 +91,9 @@ export const renderTemplateHeader = (text: string, fontSize: number): string => 
 };
 export const renderTemplateSubHeader = (text: string, fontSize: number): string => {
     return `#block(below: 0.6em)[#text("${escapeTypstString(text)}", size: ${fontSize}pt, weight: "bold")]`;
+};
+export const renderTemplateSubHeaderContent = (content: string, fontSize: number): string => {
+    return `#block(below: 0.6em)[#text(size: ${fontSize}pt, weight: "bold")[${content}]]`;
 };
 export const renderTemplateDate = (dateText: string, fontSize: number): string => {
     return `#block(above: 0em, below: 0.6em)[#text(size: ${fontSize - 2}pt)[${dateText}]]`;

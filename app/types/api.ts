@@ -37,6 +37,7 @@ export interface AdminResumeListItem {
     user_id: string;
     user_email?: string;
     name: string;
+    language?: string;
     template?: string;
     is_active?: boolean;
     created_at: string;

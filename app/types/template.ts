@@ -40,6 +40,7 @@ export interface TemplateRenderConfig {
 
 export interface SectionContent {
     title: string;
+    titleContent?: string;
     date?: string;
     content?: string;
     achievements?: string[];
