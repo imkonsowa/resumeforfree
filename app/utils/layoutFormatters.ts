@@ -96,7 +96,10 @@ export const formatProjectsItems = (
 ): string => {
     const formattedItems = sectionContent.map((item) => {
         let content = '';
-        if (item.title) {
+        if (item.titleContent) {
+            content += `#block(below: 0.4em)[${item.titleContent}]`;
+        }
+        else if (item.title) {
             content += item.title;
         }
         if (item.date) {

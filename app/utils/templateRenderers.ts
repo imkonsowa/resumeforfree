@@ -141,9 +141,8 @@ export const generateProjectsContent = (projects: Project[], t?: TranslateFuncti
                     return url && label ? convertLink(url, label) : '';
                 })
                 .filter(Boolean);
-            const firstLine = [name, ...linkMarkups].filter(Boolean).join(' • ');
+            const titleContent = [name, ...linkMarkups].filter(Boolean).join(' • ');
             const desc = project.description.trim() ? escapeTypstText(project.description.trim()) : '';
-            const combined = [firstLine, desc].filter(Boolean).join('\n\n');
 
             const dateRange = convertDateRange({
                 startDate: project.startDate,
@@ -157,8 +156,9 @@ export const generateProjectsContent = (projects: Project[], t?: TranslateFuncti
 
             return {
                 title: '',
+                titleContent: titleContent || undefined,
                 date: dateRange,
-                content: combined || undefined,
+                content: desc || undefined,
                 achievements,
             };
         });
