@@ -23,13 +23,13 @@
                     v-for="resume in syncableResumes"
                     :key="resume.id"
                     class="flex items-start gap-3 p-3 border rounded-lg hover:bg-gray-50 transition-colors cursor-pointer"
-                    :class="{ 'bg-blue-50 border-blue-200': selectedResumes.includes(resume.id) }"
+                    :class="{ 'bg-green-50 border-green-200': selectedResumes.includes(resume.id) }"
                     @click="toggleResume(resume.id)"
                 >
                     <div class="flex-shrink-0 w-5 h-5 flex items-center justify-center">
                         <CheckCircle
                             v-if="selectedResumes.includes(resume.id)"
-                            class="w-5 h-5 text-blue-600"
+                            class="w-5 h-5 text-green-700"
                         />
                     </div>
                     <div class="flex-1 min-w-0">

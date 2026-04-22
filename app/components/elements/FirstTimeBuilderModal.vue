@@ -6,7 +6,7 @@
         <DialogContent class="max-w-[95vw] sm:max-w-md mx-4 sm:mx-auto">
             <DialogHeader class="pb-2">
                 <DialogTitle class="flex items-center gap-2 text-lg">
-                    <Cloud class="w-5 h-5 text-blue-600" />
+                    <Cloud class="w-5 h-5 text-green-700" />
                     <span>{{ $t('resumes.modals.firstTime.title') }}</span>
                 </DialogTitle>
                 <DialogDescription class="text-sm leading-relaxed pt-1">

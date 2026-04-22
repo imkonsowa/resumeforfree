@@ -133,7 +133,7 @@
                     {{ $t('auth.alreadyHaveAccount') }}
                     <NuxtLink
                         to="/auth/login"
-                        class="font-medium text-blue-600 hover:text-blue-500 hover:underline"
+                        class="font-medium text-green-700 hover:text-green-ink hover:underline"
                     >
                         {{ $t('auth.signIn') }}
                     </NuxtLink>

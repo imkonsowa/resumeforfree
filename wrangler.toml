@@ -20,6 +20,7 @@ name = "SEND_EMAIL"
 [vars]
 ENVIRONMENT = "production"
 NUXT_PUBLIC_TURNSTILE_SITE_KEY = "0x4AAAAAABwL8wn1D3oP3pku"
+NUXT_PUBLIC_TURNSTILE_INVISIBLE_SITE_KEY = "0x4AAAAAADAHK5VMXcL-4tqa"
 
 [observability.logs]
 enabled = true

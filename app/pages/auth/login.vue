@@ -99,7 +99,7 @@
                 <div class="text-center">
                     <NuxtLink
                         to="/auth/forgot-password"
-                        class="text-sm text-blue-600 hover:text-blue-500 hover:underline"
+                        class="text-sm text-green-700 hover:text-green-ink hover:underline"
                     >
                         {{ $t('auth.forgotPassword') }}
                     </NuxtLink>
@@ -110,7 +110,7 @@
                     {{ $t('auth.dontHaveAccount') }}
                     <NuxtLink
                         to="/auth/register"
-                        class="font-medium text-blue-600 hover:text-blue-500 hover:underline"
+                        class="font-medium text-green-700 hover:text-green-ink hover:underline"
                     >
                         {{ $t('auth.signUp') }}
                     </NuxtLink>

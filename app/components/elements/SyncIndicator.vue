@@ -76,7 +76,7 @@ const show = computed(() =>
 );
 const indicatorClasses = computed(() => {
     if (props.isSyncing) {
-        return 'bg-blue-50 border-blue-200 text-blue-800';
+        return 'bg-green-50 border-green-200 text-green-ink';
     }
     else if (showSuccess.value) {
         return 'bg-green-50 border-green-200 text-green-800';

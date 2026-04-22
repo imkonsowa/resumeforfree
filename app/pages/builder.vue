@@ -105,9 +105,10 @@ const checkOtherModals = () => {
     if (authStore.isAuthenticated) {
         startAutoSync();
 
-        // Check if active resume is not synced to cloud and prompt hasn't been dismissed
+        // Check if active resume is not synced to cloud, prompt hasn't been dismissed,
+        // and the user still has available cloud slots
         const activeResume = resumeStore.activeResume;
-        if (activeResume && !activeResume.serverId) {
+        if (activeResume && !activeResume.serverId && resumeStore.canSaveToCloud) {
             const { isDismissed } = useCloudSyncPrompt(activeResume.id);
             if (!isDismissed()) {
                 showCloudSyncModal.value = true;
@@ -152,7 +153,7 @@ watch(() => authStore.isAuthenticated, (isAuthenticated) => {
 watch(() => resumeStore.activeResumeId, (newResumeId) => {
     if (newResumeId && authStore.isAuthenticated) {
         const activeResume = resumeStore.activeResume;
-        if (activeResume && !activeResume.serverId) {
+        if (activeResume && !activeResume.serverId && resumeStore.canSaveToCloud) {
             const { isDismissed } = useCloudSyncPrompt(activeResume.id);
             if (!isDismissed()) {
                 showCloudSyncModal.value = true;
@@ -295,8 +296,8 @@ const orderedSections = computed(() => {
             >
                 <div class="max-w-md w-full text-center space-y-6">
                     <div class="space-y-4">
-                        <div class="mx-auto w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                            <FileText class="w-8 h-8 text-blue-600" />
+                        <div class="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                            <FileText class="w-8 h-8 text-green-700" />
                         </div>
                         <div>
                             <h2 class="text-2xl font-semibold text-gray-900 mb-2">

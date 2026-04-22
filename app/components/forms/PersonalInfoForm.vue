@@ -116,7 +116,7 @@
                         <div class="w-32 md:w-40">
                             <select
                                 :value="link.platform"
-                                class="w-full px-3 py-2 border rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 text-sm"
+                                class="w-full px-3 py-2 border rounded-md border-gray-300 focus:border-green focus:ring-green-50 focus:ring-[3px] text-sm"
                                 @change="(e) => resumeStore.updateSocialLink(linkIndex, 'platform', (e.target as HTMLSelectElement).value)"
                             >
                                 <option

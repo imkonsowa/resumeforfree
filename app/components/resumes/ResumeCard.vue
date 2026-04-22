@@ -1,6 +1,6 @@
 <template>
     <Card
-        :class="{ 'ring-2 ring-blue-500': isActive }"
+        :class="{ 'ring-2 ring-green': isActive }"
         class="hover:shadow-lg transition-shadow relative"
     >
         <CardHeader class="pb-4">
@@ -58,7 +58,7 @@
                     />
                     <Badge
                         v-if="isActive"
-                        class="bg-blue-500 text-white text-xs"
+                        class="bg-green text-white text-xs"
                     >
                         {{ $t('resumes.status.active') }}
                     </Badge>

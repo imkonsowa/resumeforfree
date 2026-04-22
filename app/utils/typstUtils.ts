@@ -46,7 +46,7 @@ export const formatDateToMonthYear = (date: string): string => {
     }
     return date;
 };
-export const convertDateRange = ({ startDate, endDate, isPresent, t }: DateRangeInput): string => {
+export const formatDateRangeText = ({ startDate, endDate, isPresent, t }: DateRangeInput): string => {
     if (!startDate && !endDate && !isPresent) return '';
     const presentText = t ? t('template.present') : 'Present';
     let dateText = '';
@@ -59,6 +59,11 @@ export const convertDateRange = ({ startDate, endDate, isPresent, t }: DateRange
     if (isPresent) {
         dateText += dateText ? ` - ${presentText}` : presentText;
     }
+    return dateText;
+};
+export const convertDateRange = (input: DateRangeInput): string => {
+    const dateText = formatDateRangeText(input);
+    if (!dateText) return '';
     return `#text(fill: gray, "${escapeTypstString(dateText)}")`;
 };
 export const convertList = (items: string[], indent = '1em'): string => {

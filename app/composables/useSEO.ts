@@ -52,7 +52,7 @@ export const createSoftwareApplicationStructuredData = () => ({
         'availability': 'https://schema.org/InStock',
     },
     'featureList': [
-        'Free resume builder — no payments, ever',
+        'Free resume builder - no payments, ever',
         'No registration required',
         'Unlimited resume downloads',
         'Unlimited number of resumes',

@@ -60,7 +60,27 @@
     "signIn": "Sign In",
     "signUp": "Sign Up",
     "signOut": "Sign Out",
-    "profile": "Profile"
+    "profile": "Profile",
+    "startBuilding": "Start building",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "footer": {
+    "tagline": "A resume builder that stays free. Built in browser with Typst. No account, no tracking.",
+    "productHeading": "Product",
+    "productLinks": {
+      "builder": "Builder",
+      "yourResumes": "Your Resumes",
+      "cloudSync": "Cloud sync"
+    },
+    "resourcesHeading": "Resources",
+    "supportHeading": "Support",
+    "supportLinks": {
+      "terms": "Terms",
+      "privacy": "Privacy"
+    },
+    "copyright": "© 2026 ResumeForFree · Built with Typst.ts & Nuxt",
+    "noTracking": "No cookies. No tracking."
   },
   "homepage": {
     "title": "Build Your Resume",
@@ -68,6 +88,45 @@
     "heroTitle": "Free Resume Builder - No Signup, No Watermarks, No Catch | Resume For Free",
     "heroDescription": "Build and download professional resumes for free. No account required, no watermarks, no hidden fees. Your data stays on your device. Unlimited PDF downloads.",
     "heroSubheadline": "No account. No watermark. No \"upgrade to download.\" Just a resume builder that does what it says.",
+    "hero": {
+      "badge": "10,247 users · 55,812 PDFs downloaded",
+      "title": "The free resume builder that stays free forever.",
+      "sub": "Build, preview, and download an ATS-ready PDF in your browser. No account. No watermark. No upgrade to download.",
+      "ctaBuild": "Build my resume",
+      "ctaSample": "See a sample PDF",
+      "note": "No signup · No credit card · Takes about 5 minutes",
+      "stat1Label": "Resumes built",
+      "stat2Label": "PDFs downloaded",
+      "stat3Label": "Lifetime cost"
+    },
+    "sampleResume": {
+      "alt": "Sample resume preview",
+      "name": "Omar Al-Masry",
+      "title": "Senior Software Engineer | Backend | Cloud",
+      "profile": "Backend engineer with 8+ years building high-performance distributed systems. Focused on cloud-native infrastructure, observability, and data processing at scale.",
+      "location": "Remote",
+      "experience": {
+        "heading": "Work Experience",
+        "roleLine": "Senior Software Engineer at Acme Corp, Remote",
+        "dateRange": "Jan 2023 - Present",
+        "bullet1": "Built multi-region data pipeline processing 2B events per day.",
+        "bullet2": "Led backend architecture for mission-critical analytics platform."
+      },
+      "skills": {
+        "heading": "Technical Skills",
+        "langLabel": "Languages",
+        "langValue": "Golang, JavaScript, Python, PHP",
+        "cloudLabel": "Cloud",
+        "cloudValue": "Docker, Kubernetes, AWS, GCP",
+        "dbLabel": "Databases",
+        "dbValue": "PostgreSQL, Redis, ElasticSearch"
+      },
+      "education": {
+        "heading": "Education",
+        "degreeLine": "B.Sc. Computer Science, State University",
+        "date": "2015"
+      }
+    },
     "features": {
       "free": {
         "title": "Actually Free",
@@ -85,6 +144,10 @@
         "title": "Unlimited PDF Downloads",
         "description": "Download your resume as many times as you want. No daily limits, no download counters."
       },
+      "atsOptimized": {
+        "title": "ATS-optimized output",
+        "description": "Typeset with Typst - real selectable text, embedded fonts, clean structure. Passes major applicant tracking systems."
+      },
       "unlimitedResumes": {
         "title": "Multiple Resumes",
         "description": "Create separate resumes for different job applications. Tailor each one without starting over."
@@ -95,28 +158,34 @@
       },
       "cloudSync": {
         "title": "Optional Cloud Sync",
-        "description": "Create a free account to save up to 3 resumes in the cloud and access them from any device. Totally optional — everything works without it."
-      }
+        "description": "Create a free account to save up to 3 resumes in the cloud and access them from any device. Totally optional - everything works without it."
+      },
+      "eyebrow": "Features",
+      "sectionTitle": "Everything you need to build a professional resume. Nothing behind a paywall.",
+      "sub": "The features competitors reserve for paid tiers are all included, by default, for everyone."
     },
     "howItWorks": {
       "title": "How It Works",
       "subtitle": "Three steps. No account creation in between.",
+      "eyebrow": "How it works",
       "step1": {
-        "title": "Pick a Template",
+        "title": "Choose a template",
         "description": "Choose a clean, professional layout. No flashy designs that confuse hiring managers."
       },
       "step2": {
-        "title": "Fill In Your Details",
+        "title": "Fill in your details",
         "description": "Add your experience, education, and skills. Real-time preview shows exactly what the PDF will look like."
       },
       "step3": {
-        "title": "Download Your PDF",
+        "title": "Download your PDF",
         "description": "Hit download. Get a properly typeset PDF with selectable text and embedded fonts. Done."
       }
     },
     "comparison": {
-      "title": "How We Compare",
+      "title": "How we compare to the paid alternatives.",
       "subtitle": "We checked so you don't have to.",
+      "eyebrow": "Comparison",
+      "caption": "Based on competitors' free tiers as of April 2026. Pricing may change.",
       "headers": {
         "feature": "Feature",
         "us": "Resume For Free",
@@ -131,7 +200,8 @@
         "noAds": "No ads while you build",
         "dataOnDevice": "Data stays on your device",
         "worksOffline": "Works offline",
-        "unlimitedDownloads": "Unlimited downloads"
+        "unlimitedDownloads": "Unlimited downloads",
+        "noTrial": "No trial that auto-charges"
       },
       "values": {
         "free": "Free",
@@ -144,16 +214,23 @@
     },
     "whyBuilt": {
       "title": "Why This Exists",
-      "paragraph1": "Every \"free\" resume builder pulls the same move: you spend half an hour entering your work history, arranging sections, picking fonts — and right when you hit download, the paywall appears. $3 trial that auto-renews at $24/month. Or a watermark across your name. Or \"create an account to continue.\"",
-      "paragraph2": "This tool exists because that shouldn't be normal. Your resume is built entirely in your browser using Typst, a modern typesetting engine. There's no server generating your PDF, which means there's no per-document cost to us — which is why it can actually stay free without tricks.",
+      "eyebrow": "Why this exists",
+      "sectionTitle": "A quick, honest note.",
+      "bylineRole": "Built by an indie engineer · Reachable on GitHub",
+      "paragraph1": "Every \"free\" resume builder pulls the same move: you spend half an hour entering your work history, arranging sections, picking fonts - and right when you hit download, the paywall appears. $3 trial that auto-renews at $24/month. Or a watermark across your name. Or \"create an account to continue.\"",
+      "paragraph2": "This tool exists because that shouldn't be normal. Your resume is built entirely in your browser using Typst, a modern typesetting engine. There's no server generating your PDF, which means there's no per-document cost to us - which is why it can actually stay free without tricks.",
       "paragraph3": "No investor pitch deck, no growth metrics to hit, no reason to make you create an account. Just a tool that does the thing."
     },
     "faq": {
       "title": "Frequently Asked Questions",
+      "eyebrow": "FAQ",
+      "contactIntro": "Can't find what you need?",
+      "contactLinkContact": "Contact us",
+      "contactLinkGithub": "open a GitHub issue",
       "items": {
         "reallyFree": {
           "question": "Is this actually free? What's the catch?",
-          "answer": "There is no catch. The PDF generation happens in your browser using WebAssembly, so we don't pay for server compute per document. Hosting the static site is cheap. That's the whole business model — there isn't one."
+          "answer": "There is no catch. The PDF generation happens in your browser using WebAssembly, so we don't pay for server compute per document. Hosting the static site is cheap. That's the whole business model - there isn't one."
         },
         "dataStorage": {
           "question": "Where is my data stored?",
@@ -187,7 +264,10 @@
     },
     "finalCta": {
       "title": "Ready to Build Your Resume?",
-      "subtitle": "No signup. Takes about 10 minutes."
+      "subtitle": "No signup. Takes about 10 minutes.",
+      "sub": "Free forever. No signup. Takes about 5 minutes.",
+      "ctaBuild": "Start building",
+      "ctaSample": "See sample PDF"
     },
     "termsAgreement": "By using this website you agree to",
     "termsLink": "terms and conditions"
@@ -207,7 +287,7 @@
     "questions": {
       "isFree": {
         "question": "Is this actually free? What's the catch?",
-        "answer": "There is no catch. The PDF generation happens in your browser using WebAssembly, so we don't pay for server compute per document. Hosting the static site is cheap. That's the whole business model — there isn't one."
+        "answer": "There is no catch. The PDF generation happens in your browser using WebAssembly, so we don't pay for server compute per document. Hosting the static site is cheap. That's the whole business model - there isn't one."
       },
       "signUp": {
         "question": "Do I need to create an account?",
@@ -215,7 +295,7 @@
       },
       "pdfExport": {
         "question": "Is the PDF actually good? Or is it a screenshot?",
-        "answer": "It's a real PDF with properly typeset text, embedded fonts, and selectable content. We use Typst, a professional typesetting engine — think LaTeX quality without the learning curve. The output is better than what most paid tools produce."
+        "answer": "It's a real PDF with properly typeset text, embedded fonts, and selectable content. We use Typst, a professional typesetting engine - think LaTeX quality without the learning curve. The output is better than what most paid tools produce."
       },
       "privacy": {
         "question": "Where is my data stored?",
@@ -251,15 +331,15 @@
       },
       "cloudSync": {
         "question": "How does cloud sync work?",
-        "answer": "Create a free account, and your resumes sync automatically across devices. The free tier supports up to 3 synced resumes. Local resumes on your device are always unlimited — cloud sync is just for cross-device access."
+        "answer": "Create a free account, and your resumes sync automatically across devices. The free tier supports up to 3 synced resumes. Local resumes on your device are always unlimited - cloud sync is just for cross-device access."
       },
       "browsers": {
         "question": "What browsers are supported?",
-        "answer": "Chrome, Firefox, Safari, and Edge — any modern browser that supports WebAssembly. Use the latest version for the best experience."
+        "answer": "Chrome, Firefox, Safari, and Edge - any modern browser that supports WebAssembly. Use the latest version for the best experience."
       },
       "support": {
         "question": "How do I report a bug or request a feature?",
-        "answer": "Open an issue on our GitHub repository. The project is open source — you can also contribute directly if you want."
+        "answer": "Open an issue on our GitHub repository. The project is open source - you can also contribute directly if you want."
       }
     }
   },
@@ -267,7 +347,7 @@
     "title": "Resume Builder",
     "languageMismatch": "This resume is in {language}.",
     "pageTitle": "Free Resume Builder - Build & Download PDF Resumes For Free | No Signup",
-    "pageDescription": "Build your resume and download it as a professional PDF — completely free. No account, no watermark, no limits. Real-time preview, instant PDF generation, and your data stays on your device.",
+    "pageDescription": "Build your resume and download it as a professional PDF - completely free. No account, no watermark, no limits. Real-time preview, instant PDF generation, and your data stays on your device.",
     "sections": "Sections",
     "resumePreview": "Resume Preview",
     "noResumeSelected": "No Resume Selected",
@@ -328,6 +408,7 @@
   "forms": {
     "personalInfo": {
       "title": "Personal Information",
+      "profile": "Profile",
       "firstName": "First Name",
       "lastName": "Last Name",
       "phone": "Phone Number",
@@ -452,7 +533,7 @@
     "dataExported": "Data exported successfully",
     "settingsReset": "Settings reset to defaults",
     "autoSyncedToCloud": "Saved {count} resume to the cloud | Saved {count} resumes to the cloud",
-    "cloudLimitReached": "Cloud limit reached — {count} resume kept local | Cloud limit reached — {count} resumes kept local",
+    "cloudLimitReached": "Cloud limit reached - {count} resume kept local | Cloud limit reached - {count} resumes kept local",
     "updateAvailable": "A new version is available",
     "updateAvailableDescription": "Refresh to load the latest improvements.",
     "updateRefresh": "Refresh"

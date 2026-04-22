@@ -54,10 +54,12 @@ export default defineNuxtConfig({
                 : 'http://localhost:8010',
             turnstile: {
                 siteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY || '1x00000000000000000000AA',
+                invisibleSiteKey: process.env.NUXT_PUBLIC_TURNSTILE_INVISIBLE_SITE_KEY || '1x00000000000000000000BB',
             },
         },
         turnstile: {
             secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY || '1x0000000000000000000000000000000AA',
+            invisibleSecretKey: process.env.NUXT_TURNSTILE_INVISIBLE_SECRET_KEY || '1x0000000000000000000000000000000BB',
         },
     },
     future: {

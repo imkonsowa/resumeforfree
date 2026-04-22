@@ -150,7 +150,7 @@
                 <p>
                     {{ $t('contact.alternative.text') }}
                     <a
-                        class="text-blue-600 hover:text-blue-800 font-medium underline"
+                        class="text-green-700 hover:text-green-ink font-medium underline"
                         href="mailto:contact@resumeforfree.com"
                     >
                         contact@resumeforfree.com

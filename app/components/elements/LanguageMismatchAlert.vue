@@ -31,11 +31,11 @@ const dismiss = () => {
     <div
         v-if="show"
         :dir="uiDir"
-        class="mb-4 flex items-center justify-between gap-3 rounded-md border border-blue-200 bg-blue-50 px-3 py-2 text-sm text-blue-800"
+        class="mb-4 flex items-center justify-between gap-3 rounded-md border border-green-200 bg-green-50 px-3 py-2 text-sm text-green-ink"
     >
         <span>{{ t('builder.languageMismatch', { language: resumeLanguageName }) }}</span>
         <button
-            class="rounded p-1 text-blue-600 hover:bg-blue-100"
+            class="rounded p-1 text-green-700 hover:bg-green-100"
             :aria-label="t('common.close')"
             @click="dismiss"
         >

@@ -17,11 +17,11 @@
                     {{ $t('resumes.modals.export.description') }}
                 </p>
             </div>
-            <div class="bg-blue-50 border border-blue-200 rounded-md p-3 mb-4">
+            <div class="bg-green-50 border border-green-200 rounded-md p-3 mb-4">
                 <div class="flex">
-                    <Info class="h-5 w-5 text-blue-600 flex-shrink-0" />
+                    <Info class="h-5 w-5 text-green-700 flex-shrink-0" />
                     <div class="ml-3">
-                        <p class="text-sm text-blue-800">
+                        <p class="text-sm text-green-700">
                             {{ $t('resumes.modals.export.infoMessage') }}
                         </p>
                     </div>

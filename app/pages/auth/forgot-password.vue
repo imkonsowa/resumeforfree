@@ -72,7 +72,7 @@
             <div class="text-center">
                 <NuxtLink
                     to="/auth/login"
-                    class="text-sm font-medium text-blue-600 hover:text-blue-500 hover:underline"
+                    class="text-sm font-medium text-green-700 hover:text-green-ink hover:underline"
                 >
                     {{ $t('auth.backToSignIn') }}
                 </NuxtLink>

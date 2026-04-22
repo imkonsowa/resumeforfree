@@ -15,6 +15,15 @@ const renderItemTitle = (item: SectionContent, fontSize: number): string => {
     return renderTemplateSubHeader(item.title, fontSize);
 };
 
+const renderInlineTitleAndDate = (
+    titleMarkup: string,
+    dateText: string,
+    fontSize: number,
+): string => {
+    const styledDate = `#text(size: ${fontSize}pt, weight: "bold")[${dateText}]`;
+    return `#block(below: 0.6em)[#grid(columns: (1fr, auto), column-gutter: 0.8em, [${titleMarkup}], [${styledDate}])]`;
+};
+
 export const formatSectionItems = (
     items: string[],
     config: TemplateRenderConfig['sections'],
@@ -45,16 +54,23 @@ export const formatExperienceItems = (
     config: TemplateRenderConfig,
     fontSize: number,
 ): string => {
+    const inline = config.sections.datesInline === true;
     const formattedItems = sectionContent.map((item) => {
-        let content = renderItemTitle(item, fontSize);
-        if (item.date || item.content) {
-            content += '\n\n';
-            const dateAndLinkSection = renderTemplateDateWithLink(
-                item.date || '',
-                item.content || null,
-                fontSize,
-            );
-            content += dateAndLinkSection;
+        let content = '';
+        if (inline && item.dateText) {
+            const titleInner = item.titleContent ? item.titleContent : item.title;
+            const titleMarkup = `#text(size: ${fontSize}pt, weight: "bold")[${titleInner}]`;
+            content = renderInlineTitleAndDate(titleMarkup, item.dateText, fontSize);
+            if (item.content) {
+                content += `\n\n#text(size: ${fontSize - 1}pt)[${item.content}]`;
+            }
+        }
+        else {
+            content = renderItemTitle(item, fontSize);
+            if (item.date || item.content) {
+                content += '\n\n';
+                content += renderTemplateDateWithLink(item.date || '', item.content || null, fontSize);
+            }
         }
         if (item.achievements && item.achievements.length > 0) {
             content += '\n\n';
@@ -72,11 +88,19 @@ export const formatEducationItems = (
     config: TemplateRenderConfig,
     fontSize: number,
 ): string => {
+    const inline = config.sections.datesInline === true;
     const formattedItems = sectionContent.map((item) => {
-        let content = renderTemplateSubHeader(item.title, fontSize);
-        if (item.date) {
-            content += '\n\n';
-            content += renderTemplateDate(item.date, fontSize);
+        let content = '';
+        if (inline && item.dateText) {
+            const titleMarkup = `#text(size: ${fontSize}pt, weight: "bold")[${item.title}]`;
+            content = renderInlineTitleAndDate(titleMarkup, item.dateText, fontSize);
+        }
+        else {
+            content = renderTemplateSubHeader(item.title, fontSize);
+            if (item.date) {
+                content += '\n\n';
+                content += renderTemplateDate(item.date, fontSize);
+            }
         }
         if (item.additionalInfo) {
             content += '\n\n';
@@ -128,16 +152,22 @@ export const formatCertificatesItems = (
     config: TemplateRenderConfig,
     fontSize: number,
 ): string => {
+    const inline = config.sections.datesInline === true;
     const formattedItems = sectionContent.map((item) => {
-        let content = renderTemplateSubHeader(item.title, fontSize);
-        if (item.date || item.content) {
-            content += '\n\n';
-            const dateAndLinkSection = renderTemplateDateWithLink(
-                item.date || '',
-                item.content || null,
-                fontSize,
-            );
-            content += dateAndLinkSection;
+        let content = '';
+        if (inline && item.dateText) {
+            const titleMarkup = `#text(size: ${fontSize}pt, weight: "bold")[${item.title}]`;
+            content = renderInlineTitleAndDate(titleMarkup, item.dateText, fontSize);
+            if (item.content) {
+                content += `\n\n#text(size: ${fontSize - 1}pt)[${item.content}]`;
+            }
+        }
+        else {
+            content = renderTemplateSubHeader(item.title, fontSize);
+            if (item.date || item.content) {
+                content += '\n\n';
+                content += renderTemplateDateWithLink(item.date || '', item.content || null, fontSize);
+            }
         }
         if (item.additionalInfo) {
             content += '\n\n';

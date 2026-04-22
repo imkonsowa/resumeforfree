@@ -23,6 +23,7 @@ export interface TemplateRenderConfig {
         spacing: 'block' | 'joined';
         itemSpacing: string;
         joinSeparator: string;
+        datesInline?: boolean;
     };
     socialLinks: {
         orientation: 'vertical' | 'horizontal';
@@ -42,6 +43,7 @@ export interface SectionContent {
     title: string;
     titleContent?: string;
     date?: string;
+    dateText?: string;
     content?: string;
     achievements?: string[];
     links?: string[];

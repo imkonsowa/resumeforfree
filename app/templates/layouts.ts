@@ -28,6 +28,7 @@ export const COMPACT_LAYOUT_CONFIG: TemplateRenderConfig = {
         spacing: 'joined',
         itemSpacing: '',
         joinSeparator: '\n\n',
+        datesInline: true,
     },
     socialLinks: {
         orientation: 'horizontal',

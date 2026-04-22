@@ -386,26 +386,26 @@ useHead({
 </script>
 
 <template>
-    <div class="px-4 py-8">
+    <div class="px-4 py-8 pb-20">
         <div class="container mx-auto">
             <ClientOnly>
                 <div
                     v-if="!authStore.isLoggedIn"
-                    class="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg"
+                    class="mb-6 p-4 bg-green-50 border border-green-200 rounded-[10px]"
                 >
                     <div class="flex items-start gap-3">
-                        <Cloud class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                        <Cloud class="w-5 h-5 text-green-700 mt-0.5 flex-shrink-0" />
                         <div class="flex-1">
-                            <h3 class="text-sm font-medium text-blue-900 mb-1">
+                            <h3 class="text-sm font-semibold text-green-ink mb-1">
                                 {{ $t('resumes.banner.saveToCloud') }}
                             </h3>
-                            <p class="text-sm text-blue-700 mb-3">
+                            <p class="text-sm text-green-700/90 mb-3">
                                 {{ $t('resumes.banner.registerPrompt') }}
                             </p>
                             <div class="flex gap-2">
                                 <Button
                                     size="sm"
-                                    class="bg-blue-600 hover:bg-blue-700"
+                                    class="bg-green hover:bg-green-600 text-white"
                                     @click="router.push(localePath('/auth/register'))"
                                 >
                                     <UserPlus class="w-4 h-4 mr-1" />
@@ -414,7 +414,7 @@ useHead({
                                 <Button
                                     size="sm"
                                     variant="outline"
-                                    class="border-blue-300 text-blue-700 hover:bg-blue-100"
+                                    class="border-rule bg-white text-ink hover:bg-bg-2"
                                     @click="router.push(localePath('/auth/login'))"
                                 >
                                     <LogIn class="w-4 h-4 mr-1" />
@@ -456,7 +456,7 @@ useHead({
                     class="flex items-center justify-center py-12"
                 >
                     <div class="flex flex-col items-center gap-3">
-                        <div class="animate-spin w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full" />
+                        <div class="animate-spin w-8 h-8 border-4 border-green border-t-transparent rounded-full" />
                         <p class="text-gray-600">
                             {{ $t('resumes.status.loading') }}
                         </p>

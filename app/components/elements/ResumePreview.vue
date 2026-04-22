@@ -64,7 +64,7 @@
                     </Button>
                     <div class="flex items-center rounded-md overflow-hidden">
                         <Button
-                            class="rounded-none h-9"
+                            class="rounded-none h-9 bg-green hover:bg-green-600 text-white border-green hover:border-green-600"
                             size="sm"
                             @click="handleDownload"
                         >
@@ -75,7 +75,7 @@
                             <MenubarMenu>
                                 <MenubarTrigger as-child>
                                     <Button
-                                        class="rounded-none px-2 h-9"
+                                        class="rounded-none px-2 h-9 bg-green hover:bg-green-600 text-white border-green hover:border-green-600"
                                         size="sm"
                                         variant="default"
                                     >
@@ -111,7 +111,7 @@
                     </Button>
                     <div class="flex items-center rounded-md overflow-hidden">
                         <Button
-                            class="rounded-none h-9"
+                            class="rounded-none h-9 bg-green hover:bg-green-600 text-white border-green hover:border-green-600"
                             size="sm"
                             @click="handleDownload"
                         >
@@ -122,7 +122,7 @@
                             <MenubarMenu>
                                 <MenubarTrigger as-child>
                                     <Button
-                                        class="rounded-none px-2 h-9"
+                                        class="rounded-none px-2 h-9 bg-green hover:bg-green-600 text-white border-green hover:border-green-600"
                                         size="sm"
                                         variant="default"
                                     >
@@ -158,7 +158,7 @@
                             >
                                 <div class="text-center">
                                     <div
-                                        class="w-16 h-16 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin mx-auto mb-4"
+                                        class="w-16 h-16 border-4 border-gray-300 border-t-green rounded-full animate-spin mx-auto mb-4"
                                     />
                                     <h3 class="text-xl font-semibold text-gray-800 mb-2">
                                         {{ t('builder.loadingPreview') }}
@@ -224,10 +224,10 @@
                             >
                                 <div class="text-center">
                                     <div
-                                        class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"
+                                        class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
                                     >
                                         <svg
-                                            class="w-8 h-8 text-blue-500"
+                                            class="w-8 h-8 text-green-700"
                                             fill="none"
                                             stroke="currentColor"
                                             viewBox="0 0 24 24"
@@ -253,6 +253,7 @@
                 </CardContent>
             </Card>
             <SettingsModal v-model="showSettingsModal" />
+            <InvisibleTurnstile ref="turnstileRef" />
         </div>
     </ClientOnly>
 </template>
@@ -268,11 +269,14 @@ import { useResumeGenerator } from '~/composables/useResumeGenerator';
 import { useDebounceFn } from '@vueuse/core';
 import SettingsModal from '~/components/elements/SettingsModal.vue';
 import ZoomControls from '~/components/elements/ZoomControls.vue';
+import InvisibleTurnstile from '~/components/elements/InvisibleTurnstile.vue';
 import { useSettingsStore } from '~/stores/settings';
 import { useResumeStore } from '~/stores/resume';
 import { storeToRefs } from 'pinia';
 
 const availableTemplates = getTemplateList();
+
+const turnstileRef = ref<InstanceType<typeof InvisibleTurnstile> | null>(null);
 
 const { t } = useI18n();
 const { generatePreview, downloadPDF, downloadSVG, downloadTypst, downloadTypstText } = useResumeGenerator();
@@ -340,7 +344,13 @@ const handleDownload = async () => {
     if (!resumeStore.activeResume) return;
     try {
         await downloadPDF(resumeStore.activeResume);
-        $fetch('/api/increase-downloads-count', { method: 'POST' }).catch(console.debug);
+        const token = await turnstileRef.value?.getToken();
+        $fetch('/api/increase-downloads-count', {
+            method: 'POST',
+            body: { turnstileToken: token },
+        })
+            .catch(console.debug)
+            .finally(() => turnstileRef.value?.reset());
     }
     catch (err) {
         error.value = err instanceof Error ? err.message : 'Failed to download PDF';

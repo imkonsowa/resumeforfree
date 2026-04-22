@@ -6,8 +6,8 @@
         <DialogContent class="max-w-[95vw] sm:max-w-lg max-h-[95vh] overflow-y-auto mx-4 sm:mx-auto">
             <DialogHeader class="pb-2 sm:pb-4">
                 <DialogTitle class="flex items-center gap-2 sm:gap-3 text-lg sm:text-xl">
-                    <div class="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-full">
-                        <Cloud class="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
+                    <div class="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-green-100 rounded-full">
+                        <Cloud class="w-5 h-5 sm:w-6 sm:h-6 text-green-700" />
                     </div>
                     <span class="leading-tight">{{ $t('resumes.modals.cloudSyncPrompt.title') }}</span>
                 </DialogTitle>
@@ -16,28 +16,28 @@
                 </DialogDescription>
             </DialogHeader>
             <div class="space-y-4 sm:space-y-6 py-2 sm:py-4">
-                <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 sm:p-4">
+                <div class="bg-green-50 border border-green-200 rounded-lg p-3 sm:p-4">
                     <div class="flex items-start gap-2 sm:gap-3">
-                        <CloudUpload class="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                        <CloudUpload class="w-4 h-4 sm:w-5 sm:h-5 text-green-700 mt-0.5 flex-shrink-0" />
                         <div class="flex-1 min-w-0">
-                            <h3 class="font-medium text-blue-900 mb-2 text-sm sm:text-base">
+                            <h3 class="font-medium text-green-ink mb-2 text-sm sm:text-base">
                                 {{ $t('resumes.modals.cloudSyncPrompt.benefits.title') }}
                             </h3>
-                            <ul class="text-xs sm:text-sm text-blue-800 space-y-1">
+                            <ul class="text-xs sm:text-sm text-green-700 space-y-1">
                                 <li class="flex items-center gap-2">
-                                    <Check class="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 flex-shrink-0" />
+                                    <Check class="w-3 h-3 sm:w-4 sm:h-4 text-green-700 flex-shrink-0" />
                                     <span>{{ $t('resumes.modals.cloudSyncPrompt.benefits.accessAnywhere') }}</span>
                                 </li>
                                 <li class="flex items-center gap-2">
-                                    <Check class="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 flex-shrink-0" />
+                                    <Check class="w-3 h-3 sm:w-4 sm:h-4 text-green-700 flex-shrink-0" />
                                     <span>{{ $t('resumes.modals.cloudSyncPrompt.benefits.autoBackup') }}</span>
                                 </li>
                                 <li class="flex items-center gap-2">
-                                    <Check class="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 flex-shrink-0" />
+                                    <Check class="w-3 h-3 sm:w-4 sm:h-4 text-green-700 flex-shrink-0" />
                                     <span>{{ $t('resumes.modals.cloudSyncPrompt.benefits.realTimeSync') }}</span>
                                 </li>
                                 <li class="flex items-center gap-2">
-                                    <Check class="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 flex-shrink-0" />
+                                    <Check class="w-3 h-3 sm:w-4 sm:h-4 text-green-700 flex-shrink-0" />
                                     <span>{{ $t('resumes.modals.cloudSyncPrompt.benefits.neverLose') }}</span>
                                 </li>
                             </ul>

@@ -124,7 +124,7 @@ useHead({
                                 <nav class="space-y-1">
                                     <button
                                         class="w-full flex items-center gap-3 px-3 py-2 text-sm rounded-md transition-colors text-left"
-                                        :class="activeSection === 'personal' ? 'bg-blue-100 text-blue-900 font-medium' : 'text-gray-700 hover:bg-gray-100'"
+                                        :class="activeSection === 'personal' ? 'bg-green-50 text-green-ink font-medium' : 'text-gray-700 hover:bg-gray-100'"
                                         @click="activeSection = 'personal'"
                                     >
                                         <User class="w-4 h-4" />
@@ -132,7 +132,7 @@ useHead({
                                     </button>
                                     <button
                                         class="w-full flex items-center gap-3 px-3 py-2 text-sm rounded-md transition-colors text-left"
-                                        :class="activeSection === 'password' ? 'bg-blue-100 text-blue-900 font-medium' : 'text-gray-700 hover:bg-gray-100'"
+                                        :class="activeSection === 'password' ? 'bg-green-50 text-green-ink font-medium' : 'text-gray-700 hover:bg-gray-100'"
                                         @click="activeSection = 'password'"
                                     >
                                         <Lock class="w-4 h-4" />
@@ -180,16 +180,16 @@ useHead({
 
                                 <Separator />
 
-                                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                                <div class="bg-green-50 border border-green-200 rounded-lg p-4">
                                     <div class="flex items-start gap-3">
-                                        <div class="w-5 h-5 text-blue-600 mt-0.5">
+                                        <div class="w-5 h-5 text-green-700 mt-0.5">
                                             ℹ️
                                         </div>
                                         <div>
-                                            <h4 class="text-sm font-medium text-blue-900 mb-1">
+                                            <h4 class="text-sm font-medium text-green-ink mb-1">
                                                 {{ $t('profile.accountInformation') }}
                                             </h4>
-                                            <p class="text-sm text-blue-700">
+                                            <p class="text-sm text-green-700">
                                                 {{ $t('profile.accountInfoDescription') }}
                                             </p>
                                         </div>

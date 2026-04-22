@@ -16,7 +16,7 @@
                 <span class="text-sm text-gray-600">{{ t('forms.volunteering.column') }}:</span>
                 <select
                     :value="resumeStore.resumeData.sectionPlacement.volunteering"
-                    class="px-2 py-1 text-sm border rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    class="px-2 py-1 text-sm border rounded focus:ring-[3px] focus:ring-green-50 focus:border-green"
                     @change="(e) => resumeStore.updateSectionPlacement('volunteering', (e.target as HTMLSelectElement).value as 'left' | 'right')"
                 >
                     <option value="left">

@@ -129,7 +129,7 @@ const handleEnter = (event: KeyboardEvent) => {
                                 class="text-sm font-normal flex items-center gap-1"
                                 for="save-to-cloud"
                             >
-                                <Cloud class="w-4 h-4 text-blue-600" />
+                                <Cloud class="w-4 h-4 text-green-700" />
                                 {{ $t('resumes.modals.create.saveToCloud') }}
                             </Label>
                         </div>
