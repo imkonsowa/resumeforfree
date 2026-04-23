@@ -22,7 +22,7 @@ import {
 const { t, locale } = useI18n();
 const localePath = useLocalePath();
 
-const sampleResumeSrc = computed(() => `/sample-resume-${locale.value}.png`);
+const sampleResumeSrc = computed(() => `/sample-resume-${locale.value}.svg`);
 
 interface PublicStats {
     users: number;
@@ -201,6 +201,16 @@ useHead({
                             {{ $t('homepage.hero.note') }}
                         </p>
 
+                        <p class="text-xs text-ink-4 mt-2">
+                            {{ $t('homepage.termsAgreement') }}
+                            <NuxtLink
+                                :to="localePath('/terms')"
+                                class="text-green-700 underline underline-offset-2 hover:text-green-ink"
+                            >
+                                {{ $t('homepage.termsLink') }}
+                            </NuxtLink>
+                        </p>
+
                         <!-- Stats row -->
                         <div class="mt-10 pt-6 border-t border-rule grid grid-cols-3 gap-8">
                             <div>
@@ -230,16 +240,15 @@ useHead({
                         </div>
                     </div>
 
-                    <!-- Right: sample resume preview (rasterized so its contents aren't indexed) -->
+                    <!-- Right: sample resume preview (SVG as object; content isn't indexed as page content) -->
                     <div class="hidden lg:flex justify-center">
-                        <img
-                            :src="sampleResumeSrc"
-                            :alt="$t('homepage.sampleResume.alt')"
-                            loading="eager"
-                            decoding="async"
-                            class="w-[420px] h-auto rounded-[10px] border border-rule bg-white"
+                        <object
+                            :data="sampleResumeSrc"
+                            type="image/svg+xml"
+                            :aria-label="$t('homepage.sampleResume.alt')"
+                            class="w-[420px] aspect-[596/842] rounded-[10px] border border-rule bg-white pointer-events-none"
                             style="box-shadow: 0 1px 2px rgb(11 18 32 / 0.04), 0 20px 40px -12px rgb(11 18 32 / 0.12);"
-                        >
+                        />
                     </div>
                 </div>
             </div>

@@ -43,7 +43,15 @@ export const useResumeGenerator = () => {
     const generatePreview = async (resume: Resume): Promise<string> => {
         if (!typstReady.value) throw new Error('Typst not ready');
         if (!window.$typst) throw new Error('Typst global object not available yet');
-        return await window.$typst.svg({ mainContent: generateTypstContent(resume) });
+        return await window.$typst.svg({
+            mainContent: generateTypstContent(resume),
+            // Disable the runtime <script> block Typst.ts adds by default. It provides
+            // click-ripple and selection-highlight glue that only works inside its own
+            // runtime, and it contains unescaped `&` that breaks strict XML parsing
+            // (<object>, xmllint, external viewers). Emitting body+defs+css only
+            // produces portable, standards-compliant SVG.
+            data_selection: { body: true, defs: true, css: true, js: false },
+        });
     };
 
     const generatePDF = async (resume: Resume): Promise<Uint8Array> => {

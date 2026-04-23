@@ -263,10 +263,6 @@ watch(
                                 :to="localePath('/resumes')"
                                 class="block text-[13.5px] text-ink-3 hover:text-ink py-1 transition-colors"
                             >{{ t('footer.productLinks.yourResumes') }}</NuxtLink>
-                            <NuxtLink
-                                :to="localePath('/builder')"
-                                class="block text-[13.5px] text-ink-3 hover:text-ink py-1 transition-colors"
-                            >{{ t('footer.productLinks.cloudSync') }}</NuxtLink>
                         </div>
                     </div>
 
@@ -303,10 +299,6 @@ watch(
                                 :to="localePath('/terms')"
                                 class="block text-[13.5px] text-ink-3 hover:text-ink py-1 transition-colors"
                             >{{ t('footer.supportLinks.terms') }}</NuxtLink>
-                            <NuxtLink
-                                :to="localePath('/privacy')"
-                                class="block text-[13.5px] text-ink-3 hover:text-ink py-1 transition-colors"
-                            >{{ t('footer.supportLinks.privacy') }}</NuxtLink>
                         </div>
                     </div>
                 </div>
