@@ -9,6 +9,7 @@
     "close": "إغلاق",
     "done": "تم",
     "copyFailed": "فشل النسخ إلى الحافظة",
+    "link": "رابط",
     "preview": "معاينة",
     "download": "تنزيل",
     "loading": "جاري التحميل...",
@@ -26,6 +27,7 @@
     "left": "اليسار",
     "right": "اليمين",
     "location": "الموقع",
+    "locationPlaceholder": "القاهرة، مصر",
     "present": "حتى الآن",
     "startDate": "تاريخ البدء",
     "endDate": "تاريخ الانتهاء",
@@ -40,6 +42,7 @@
     "export": "تصدير",
     "company": "جهة العمل",
     "companyUrl": "رابط جهة العمل",
+    "organizationUrl": "رابط المنظمة",
     "emailAddress": "عنوان البريد الإلكتروني",
     "tryAgain": "حاول مرة أخرى"
   },

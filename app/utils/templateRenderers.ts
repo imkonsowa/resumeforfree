@@ -1,6 +1,6 @@
 import type { Certificate, Education, Experience, Internship, Language, Project, ResumeData, SkillItem, Volunteering } from '~/types/resume';
 import type { SectionContent, TranslateFunction } from '~/types/template';
-import { convertDateRange, convertEmail, convertExternalLinkIcon, convertLink, convertUnderlinedLink, formatDateRangeText } from './typstUtils';
+import { convertDateRange, convertEmail, convertLink, convertUnderlinedLink, formatDateRangeText } from './typstUtils';
 import { escapeTypstText } from './stringUtils';
 
 const buildPositionAtCompanyContent = (
@@ -113,13 +113,21 @@ export const generateVolunteeringContent = (volunteering: Volunteering[], t?: Tr
     return volunteering.map((vol) => {
         const at = t ? t('template.at') : ' at ';
         const separator = t ? t('template.separator') : ', ';
-        const title = `${vol.position}${vol.organization ? at + vol.organization : ''}${vol.location ? separator + vol.location : ''}`;
+        const titleContent = buildPositionAtCompanyContent(
+            vol.position,
+            vol.organization,
+            vol.organizationUrl,
+            vol.location,
+            at,
+            separator,
+        );
         const dateInput = { startDate: vol.startDate, endDate: vol.endDate, isPresent: vol.isPresent, t };
         const achievements = vol.achievements
             .filter(achievement => achievement.text && achievement.text.trim() !== '')
             .map(achievement => achievement.text);
         return {
-            title,
+            title: '',
+            titleContent,
             date: convertDateRange(dateInput),
             dateText: formatDateRangeText(dateInput),
             achievements,
@@ -241,18 +249,23 @@ export const generateSocialLinksContent = (data: ResumeData): SectionContent[] =
         };
     });
 };
-export const generateCertificatesContent = (certificates: Certificate[]): SectionContent[] => {
+export const generateCertificatesContent = (certificates: Certificate[], t?: TranslateFunction): SectionContent[] => {
+    const linkLabel = t ? t('common.link') : 'Link';
     return certificates
         .filter(cert => cert.title.trim() || cert.issuer.trim())
         .map((cert) => {
             const title = `${cert.title}${cert.issuer ? ' from ' + cert.issuer : ''}`;
-            const dateRange = cert.date ? convertDateRange({ startDate: cert.date }) : '';
-            const certLink = cert.url?.trim() ? convertExternalLinkIcon(cert.url) : '';
+            const certLink = cert.url?.trim() ? convertLink(cert.url, linkLabel) : '';
+            const titleContent = certLink
+                ? `${escapeTypstText(title)} · ${certLink}`
+                : undefined;
+            const dateInput = { startDate: cert.date };
             const description = cert.description?.trim() ? escapeTypstText(cert.description) : '';
             return {
                 title,
-                date: dateRange,
-                content: certLink,
+                titleContent,
+                date: cert.date ? convertDateRange(dateInput) : '',
+                dateText: cert.date ? formatDateRangeText(dateInput) : '',
                 additionalInfo: description || undefined,
             };
         });

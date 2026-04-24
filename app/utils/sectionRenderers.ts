@@ -218,7 +218,7 @@ export const renderSharedCertificates: SectionRenderer = (data: ResumeData, cont
         return '';
     }
 
-    const sectionContent = generateCertificatesContent(data.certificates);
+    const sectionContent = generateCertificatesContent(data.certificates, context.t);
     if (sectionContent.length === 0) return '';
 
     const formattedContent = formatCertificatesItems(sectionContent, context.config, context.fontSize);

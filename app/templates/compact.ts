@@ -2,7 +2,7 @@ import type { ResumeData, SectionOrder } from '~/types/resume';
 import type { Template, TemplateParseInput } from '~/types/template';
 import { COMPACT_LAYOUT_CONFIG } from '~/templates/layouts';
 import { escapeTypstText } from '~/utils/stringUtils';
-import { convertEmail, convertLink, SECTION_SPACING } from '~/utils/typstUtils';
+import { convertEmail, convertLink } from '~/utils/typstUtils';
 import { getSharedSectionRenderers } from '~/utils/sectionRenderers';
 import { RendererContext } from '~/utils/rendererContext';
 import { isRtlLocale } from '~/composables/useLocale';
@@ -84,11 +84,6 @@ const convertResumeHeader = (data: ResumeData, fontSize: number, isRtl = false) 
     headerParts.push('    ]');
     headerParts.push(')');
     headerParts.push('#block(above: 1em, below: 1em)[#line(length: 100%, stroke: 1pt + black)]');
-    if (data?.summary) {
-        headerParts.push(`#block(above: 0em, below: ${SECTION_SPACING})[`
-            + `#text(size: ${fontSize}pt)[${escapeTypstText(data.summary)}]`
-            + ']');
-    }
     return headerParts.join('\n');
 };
 const parse = ({ data, font, locale, t, fontSize }: TemplateParseInput): string => {
@@ -118,7 +113,8 @@ const parse = ({ data, font, locale, t, fontSize }: TemplateParseInput): string 
         .map(section => sectionRenderers[section]())
         .filter(content => content.trim() !== '');
     const sectionsContent = sections.join('\n\n');
-    const fullContent = `${convertResumeHeader(data, fontSize, isRtl)}${sectionsContent ? `\n\n${sectionsContent}` : ''}`;
+    const profileSection = sharedRenderers.profile(data, context);
+    const fullContent = `${convertResumeHeader(data, fontSize, isRtl)}${profileSection ? `\n${profileSection}` : ''}${sectionsContent ? `\n\n${sectionsContent}` : ''}`;
 
     // Configure font and text direction for RTL languages
     const fontConfig = isRtl

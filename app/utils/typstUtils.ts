@@ -16,10 +16,6 @@ export const convertLinkWithColor = (url: string, text: string, color = 'blue'):
     if (!url || !text) return '';
     return `#link("${url}")[#text(fill: ${color}, "${escapeTypstString(text)}")]`;
 };
-export const convertExternalLinkIcon = (url: string): string => {
-    if (!url) return '';
-    return `#link("${url}")[#text(size: 10pt, weight: "semibold", fill: blue)[↗]]`;
-};
 export const convertUnderlinedLink = (url: string, text: string): string => {
     if (!url || !text) return '';
     return `#link("${url}")[#underline[#text(fill: blue, "${escapeTypstString(text)}")]]`;

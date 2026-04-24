@@ -40,21 +40,49 @@
             >
                 <Edit2 class="w-4 h-4" />
             </Button>
+            <Button
+                v-if="canReset"
+                :title="t('common.resetToDefaults')"
+                class="p-1 h-auto opacity-50 hover:opacity-100 text-ink-3 hover:text-ink"
+                size="sm"
+                variant="ghost"
+                @click="handleReset"
+            >
+                <RotateCcw class="w-4 h-4" />
+            </Button>
         </div>
     </div>
 </template>
 
 <script lang="ts" setup>
-import { nextTick, ref } from 'vue';
+import { computed, nextTick, ref } from 'vue';
 import { Button } from '~/components/ui/button';
-import { Check, Edit2, X } from 'lucide-vue-next';
+import { Check, Edit2, RotateCcw, X } from 'lucide-vue-next';
+import type { SectionHeaders } from '~/types/resume';
+import { SECTION_TRANSLATION_MAP } from '~/composables/useSectionHeader';
 
 interface Props {
     value: string;
+    sectionKey?: keyof SectionHeaders;
 }
 type Emits = (e: 'update', value: string) => void;
 const props = defineProps<Props>();
 const emit = defineEmits<Emits>();
+const { t } = useI18n();
+const resumeStore = useResumeStore();
+const canReset = computed(() => {
+    if (!props.sectionKey) return false;
+    const override = resumeStore.resumeData.sectionHeaders?.[props.sectionKey];
+    if (!override || !String(override).trim()) return false;
+    const translationKey = SECTION_TRANSLATION_MAP[props.sectionKey];
+    const defaultLabel = translationKey ? t(translationKey) : '';
+    return override !== defaultLabel;
+});
+const handleReset = () => {
+    if (props.sectionKey) {
+        resumeStore.updateSectionHeader(props.sectionKey, '');
+    }
+};
 const isEditing = ref(false);
 const localValue = ref(props.value);
 const inputRef = ref<HTMLInputElement>();

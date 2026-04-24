@@ -9,6 +9,7 @@
     "close": "Close",
     "done": "Done",
     "copyFailed": "Failed to copy to clipboard",
+    "link": "Link",
     "preview": "Preview",
     "download": "Download",
     "loading": "Loading...",
@@ -26,6 +27,7 @@
     "left": "Left",
     "right": "Right",
     "location": "Location",
+    "locationPlaceholder": "Cairo, Egypt",
     "present": "Present",
     "startDate": "Start Date",
     "endDate": "End Date",
@@ -40,6 +42,7 @@
     "export": "Export",
     "company": "Company",
     "companyUrl": "Company Website URL",
+    "organizationUrl": "Organization Website URL",
     "emailAddress": "Email Address",
     "tryAgain": "Try Again"
   },

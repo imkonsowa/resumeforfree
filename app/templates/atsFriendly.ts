@@ -148,7 +148,7 @@ function renderVolunteering(data: ResumeData, context: RendererContext): string 
 
 function renderCertificates(data: ResumeData, context: RendererContext): string {
     if (!data?.certificates?.length) return '';
-    const items = generateCertificatesContent(data.certificates);
+    const items = generateCertificatesContent(data.certificates, context.t);
     const body = formatCertificatesItems(items, context.config, context.fontSize);
     return renderAtsSection(getHeader('certificates', data, context), body, context.fontSize);
 }

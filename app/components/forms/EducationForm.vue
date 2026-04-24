@@ -43,7 +43,7 @@
                     <Label>{{ t('common.location') }}</Label>
                     <Input
                         :model-value="education.location"
-                        :placeholder="t('common.location')"
+                        :placeholder="t('common.locationPlaceholder')"
                         @update:model-value="(value) => resumeStore.updateEducation(index, 'location', value)"
                     />
                 </div>

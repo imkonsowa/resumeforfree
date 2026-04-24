@@ -42,14 +42,6 @@
         >
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div class="space-y-2">
-                    <Label>{{ t('forms.volunteering.organization') }}</Label>
-                    <Input
-                        :model-value="volunteering.organization"
-                        :placeholder="t('forms.volunteering.organization')"
-                        @update:model-value="(value) => resumeStore.updateVolunteering(index, 'organization', value)"
-                    />
-                </div>
-                <div class="space-y-2">
                     <Label>{{ t('common.position') }}</Label>
                     <Input
                         :model-value="volunteering.position"
@@ -57,21 +49,41 @@
                         @update:model-value="(value) => resumeStore.updateVolunteering(index, 'position', value)"
                     />
                 </div>
+                <div class="space-y-2">
+                    <Label>{{ t('forms.volunteering.organization') }}</Label>
+                    <Input
+                        :model-value="volunteering.organization"
+                        :placeholder="t('forms.volunteering.organization')"
+                        @update:model-value="(value) => resumeStore.updateVolunteering(index, 'organization', value)"
+                    />
+                </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div class="space-y-2">
                     <Label>{{ t('common.location') }}</Label>
                     <Input
                         :model-value="volunteering.location"
-                        :placeholder="t('common.location')"
+                        :placeholder="t('common.locationPlaceholder')"
                         @update:model-value="(value) => resumeStore.updateVolunteering(index, 'location', value)"
                     />
                 </div>
-                <MonthYearPicker
-                    :model-value="volunteering.startDate"
-                    :label="t('common.startDate')"
-                    @update:model-value="(value) => resumeStore.updateVolunteering(index, 'startDate', value)"
-                />
+                <div class="space-y-2">
+                    <Label>{{ t('common.organizationUrl') }}</Label>
+                    <Input
+                        :model-value="volunteering.organizationUrl || ''"
+                        :placeholder="t('common.organizationUrl')"
+                        @update:model-value="(value) => resumeStore.updateVolunteering(index, 'organizationUrl', value)"
+                    />
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div class="space-y-2">
+                    <MonthYearPicker
+                        :model-value="volunteering.startDate"
+                        :label="t('common.startDate')"
+                        @update:model-value="(value) => resumeStore.updateVolunteering(index, 'startDate', value)"
+                    />
+                </div>
                 <div class="space-y-2">
                     <MonthYearPicker
                         :disabled="volunteering.isPresent"
@@ -79,7 +91,7 @@
                         :label="t('common.endDate')"
                         @update:model-value="(value) => resumeStore.updateVolunteering(index, 'endDate', value)"
                     />
-                    <div class="flex items-center space-x-2">
+                    <div class="flex items-center space-x-2 mt-2">
                         <Checkbox
                             :id="`vol-present-${index}`"
                             :model-value="volunteering.isPresent"

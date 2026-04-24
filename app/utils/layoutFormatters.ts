@@ -20,7 +20,7 @@ const renderInlineTitleAndDate = (
     dateText: string,
     fontSize: number,
 ): string => {
-    const styledDate = `#text(size: ${fontSize}pt, weight: "bold")[${dateText}]`;
+    const styledDate = `#text(size: ${fontSize}pt, weight: "bold", fill: rgb("#4B5563"))[${dateText}]`;
     return `#block(below: 0.6em)[#grid(columns: (1fr, auto), column-gutter: 0.8em, [${titleMarkup}], [${styledDate}])]`;
 };
 
@@ -156,17 +156,15 @@ export const formatCertificatesItems = (
     const formattedItems = sectionContent.map((item) => {
         let content = '';
         if (inline && item.dateText) {
-            const titleMarkup = `#text(size: ${fontSize}pt, weight: "bold")[${item.title}]`;
+            const titleInner = item.titleContent ? item.titleContent : item.title;
+            const titleMarkup = `#text(size: ${fontSize}pt, weight: "bold")[${titleInner}]`;
             content = renderInlineTitleAndDate(titleMarkup, item.dateText, fontSize);
-            if (item.content) {
-                content += `\n\n#text(size: ${fontSize - 1}pt)[${item.content}]`;
-            }
         }
         else {
-            content = renderTemplateSubHeader(item.title, fontSize);
-            if (item.date || item.content) {
+            content = renderItemTitle(item, fontSize);
+            if (item.date) {
                 content += '\n\n';
-                content += renderTemplateDateWithLink(item.date || '', item.content || null, fontSize);
+                content += renderTemplateDate(item.date, fontSize);
             }
         }
         if (item.additionalInfo) {

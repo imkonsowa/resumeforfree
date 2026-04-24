@@ -31,6 +31,7 @@ export interface Education {
 }
 export interface Volunteering {
     organization: string;
+    organizationUrl?: string;
     position: string;
     location: string;
     startDate: string;

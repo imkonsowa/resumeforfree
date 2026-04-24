@@ -3,7 +3,7 @@ import type { SectionHeaders } from '~/types/resume';
 
 export const SECTION_TRANSLATION_MAP: Record<keyof SectionHeaders, string> = {
     personalInfo: 'forms.personalInfo.title',
-    profile: 'forms.personalInfo.summary',
+    profile: 'forms.personalInfo.profile',
     info: 'forms.personalInfo.title',
     socialLinks: 'forms.personalInfo.socialLinks',
     projects: 'forms.projects.title',

@@ -192,7 +192,7 @@ const parse = ({ data, font, locale, t, fontSize }: TemplateParseInput): string 
         ),
         certificates: () => buildSection(
             getSectionLabel('certificates', data, context),
-            itemsToRows(generateCertificatesContent(data.certificates || [])),
+            itemsToRows(generateCertificatesContent(data.certificates || [], context.t)),
         ),
     };
 

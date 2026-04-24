@@ -6,6 +6,7 @@
                     <EditableHeader
                         v-if="props.editable"
                         :value="props.title"
+                        :section-key="typedSectionKey"
                         @update="$emit('edit-title', $event)"
                     />
                     <h3
@@ -68,6 +69,7 @@ import { Button } from '~/components/ui/button';
 import { ChevronDown } from 'lucide-vue-next';
 import AddButton from '~/components/elements/AddButton.vue';
 import EditableHeader from '~/components/elements/EditableHeader.vue';
+import type { SectionHeaders } from '~/types/resume';
 
 interface Props {
     title: string;
@@ -89,6 +91,7 @@ const _emit = defineEmits<{
     'edit-title': [value: string];
 }>();
 const settingsStore = useSettingsStore();
+const typedSectionKey = computed(() => props.sectionKey as keyof SectionHeaders | undefined);
 const isCollapsed = computed(() => {
     if (!props.collapsible || !props.sectionKey) return false;
     return settingsStore.sectionCollapsed[props.sectionKey] || false;
