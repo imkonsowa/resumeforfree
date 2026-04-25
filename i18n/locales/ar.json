@@ -82,7 +82,7 @@
       "terms": "الشروط والأحكام",
       "privacy": "سياسة الخصوصية"
     },
-    "copyright": "© 2026 ResumeForFree · صُنع بواسطة Typst.ts و Nuxt",
+    "copyright": "© 2026 ResumeForFree · صُنع بواسطة Typst.ts و Nuxt بواسطة {author}",
     "noTracking": "بدون ملفات تعريف الارتباط. بدون تتبع للمستخدمين."
   },
   "homepage": {

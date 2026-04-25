@@ -16,7 +16,7 @@ import {
     generateVolunteeringContent,
 } from '~/utils/templateRenderers';
 
-const BORING_LAYOUT_CONFIG: TemplateRenderConfig = {
+const SIMPLE_LAYOUT_CONFIG: TemplateRenderConfig = {
     layout: 'single-column',
     sections: { spacing: 'joined', itemSpacing: '', joinSeparator: '\n\n' },
     socialLinks: { orientation: 'horizontal', placement: 'header', separator: ', ' },
@@ -24,14 +24,14 @@ const BORING_LAYOUT_CONFIG: TemplateRenderConfig = {
     projects: { itemSpacing: '' },
 };
 
-interface BoringRow {
+interface SimpleRow {
     date?: string;
     content: string;
 }
 
-interface BoringSection {
+interface SimpleSection {
     label: string;
-    rows: BoringRow[];
+    rows: SimpleRow[];
 }
 
 function getSectionLabel(section: keyof SectionHeaders, data: ResumeData, context: RendererContext): string {
@@ -42,7 +42,7 @@ function getSectionLabel(section: keyof SectionHeaders, data: ResumeData, contex
 }
 
 function titleMarkup(item: SectionContent): string {
-    if (item.titleContent) return item.titleContent;
+    if (item.titleContent) return `#text(weight: "bold")[${item.titleContent}]`;
     if (item.title) return `*${escapeTypstText(item.title)}*`;
     return '';
 }
@@ -60,18 +60,18 @@ function renderRowContent(item: SectionContent): string {
     return parts.join('\n\n');
 }
 
-function itemsToRows(items: SectionContent[]): BoringRow[] {
+function itemsToRows(items: SectionContent[]): SimpleRow[] {
     return items
         .map(item => ({ date: item.date, content: renderRowContent(item) }))
         .filter(r => r.content.trim());
 }
 
-function buildSection(label: string, rows: BoringRow[]): BoringSection | null {
+function buildSection(label: string, rows: SimpleRow[]): SimpleSection | null {
     if (!rows.length) return null;
     return { label, rows };
 }
 
-function renderProfile(data: ResumeData, context: RendererContext): BoringSection | null {
+function renderProfile(data: ResumeData, context: RendererContext): SimpleSection | null {
     if (!data?.summary) return null;
     return buildSection(
         context.t('forms.personalInfo.profile') || 'PROFILE',
@@ -79,7 +79,7 @@ function renderProfile(data: ResumeData, context: RendererContext): BoringSectio
     );
 }
 
-function renderLinks(data: ResumeData, context: RendererContext): BoringSection | null {
+function renderLinks(data: ResumeData, context: RendererContext): SimpleSection | null {
     const socialLinks = (data?.socialLinks || []).filter(l => l.platform && l.url?.trim());
     if (!socialLinks.length) return null;
 
@@ -107,7 +107,7 @@ function renderLinks(data: ResumeData, context: RendererContext): BoringSection 
     );
 }
 
-function renderBoringSection(section: BoringSection, fontSize: number, isFirst: boolean): string {
+function renderSimpleSection(section: SimpleSection, fontSize: number, isFirst: boolean): string {
     if (!section.rows.length) return '';
 
     const label = `#text(size: ${fontSize - 1}pt, tracking: 0.08em)[${escapeTypstText(section.label)}]`;
@@ -138,7 +138,6 @@ function renderBoringSection(section: BoringSection, fontSize: number, isFirst: 
 function renderHeader(data: ResumeData, fontSize: number): string {
     const fullName = `${escapeTypstText(data?.firstName || '')} ${escapeTypstText(data?.lastName || '')}`.trim();
     const position = escapeTypstText(data?.position || '');
-    const titleLine = [fullName, position].filter(Boolean).join(', ');
 
     const contactParts: string[] = [];
     if (data?.location) contactParts.push(escapeTypstText(data.location));
@@ -146,9 +145,14 @@ function renderHeader(data: ResumeData, fontSize: number): string {
     if (data?.email) contactParts.push(convertEmail(data.email));
 
     const parts: string[] = [];
-    parts.push(`#block(above: 0em, below: 1.4em)[#align(center)[#text(size: ${fontSize + 3}pt, weight: "bold")[${titleLine}]]]`);
+    if (fullName) {
+        parts.push(`#block(width: 100%, above: 0em, below: 0.6em)[#align(center)[#text(size: ${fontSize + 8}pt, weight: "bold")[${fullName}]]]`);
+    }
+    if (position) {
+        parts.push(`#block(width: 100%, above: 0em, below: 1em)[#align(center)[#text(size: ${fontSize + 2}pt)[${position}]]]`);
+    }
     if (contactParts.length) {
-        parts.push(`#block(above: 0em, below: 1.6em)[#align(center)[#text(size: ${fontSize}pt)[${contactParts.join(', ')}]]]`);
+        parts.push(`#block(width: 100%, above: 0em, below: 1.4em)[#align(center)[#text(size: ${fontSize}pt)[${contactParts.join(' · ')}]]]`);
     }
     parts.push(`#block(above: 0em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]`);
 
@@ -157,9 +161,9 @@ function renderHeader(data: ResumeData, fontSize: number): string {
 
 const parse = ({ data, font, locale, t, fontSize }: TemplateParseInput): string => {
     const isRtl = isRtlLocale(locale);
-    const context = new RendererContext({ t, fontSize, config: BORING_LAYOUT_CONFIG, locale });
+    const context = new RendererContext({ t, fontSize, config: SIMPLE_LAYOUT_CONFIG, locale });
 
-    const sectionMap: Record<string, () => BoringSection | null> = {
+    const sectionMap: Record<string, () => SimpleSection | null> = {
         links: () => renderLinks(data, context),
         profile: () => renderProfile(data, context),
         education: () => buildSection(
@@ -210,7 +214,7 @@ const parse = ({ data, font, locale, t, fontSize }: TemplateParseInput): string 
     for (const key of [...fixedOrder, ...orderedDataSections]) {
         const section = sectionMap[key]();
         if (!section) continue;
-        const out = renderBoringSection(section, fontSize, first);
+        const out = renderSimpleSection(section, fontSize, first);
         if (out) {
             rendered.push(out);
             first = false;
@@ -230,9 +234,9 @@ ${rendered.join('\n')}
 #pagebreak(weak: true)`;
 };
 
-export const boringTemplate: Template = {
-    id: 'boring',
-    name: 'Boring',
+export const simpleTemplate: Template = {
+    id: 'simple',
+    name: 'Simple',
     description: 'Traditional academic CV layout with labeled columns and horizontal rules',
     layoutConfig: {
         isTwoColumn: false,

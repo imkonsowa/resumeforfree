@@ -454,21 +454,6 @@ useHead({
                         {{ t('homepage.whyBuilt.paragraph3') }}
                     </p>
                 </div>
-
-                <!-- Byline -->
-                <div class="mt-8 pt-6 border-t border-rule flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-[13px] font-semibold shrink-0">
-                        RF
-                    </div>
-                    <div>
-                        <div class="text-[13.5px] font-semibold text-ink">
-                            Resume For Free
-                        </div>
-                        <div class="text-[12.5px] text-ink-4">
-                            {{ $t('homepage.whyBuilt.bylineRole') }}
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 

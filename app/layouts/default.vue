@@ -305,7 +305,21 @@ watch(
 
                 <!-- Bottom row -->
                 <div class="flex flex-col sm:flex-row justify-between items-center gap-2 pt-5 border-t border-rule text-[12.5px] text-ink-4">
-                    <div>{{ t('footer.copyright') }}</div>
+                    <div>
+                        <i18n-t
+                            keypath="footer.copyright"
+                            tag="span"
+                        >
+                            <template #author>
+                                <a
+                                    href="https://konsowa.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-green-700 hover:text-green-ink underline underline-offset-2"
+                                >Ibrahim Konsowa</a>
+                            </template>
+                        </i18n-t>
+                    </div>
                     <div>{{ t('footer.noTracking') }}</div>
                 </div>
             </div>

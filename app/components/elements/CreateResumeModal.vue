@@ -21,6 +21,7 @@ const authStore = useAuthStore();
 const resumeStore = useResumeStore();
 const settingsStore = useSettingsStore();
 const newResumeName = ref('');
+const nameInputRef = ref<{ $el?: HTMLElement } | HTMLInputElement | null>(null);
 const selectedLanguage = ref(settingsStore.settings.locale || 'en');
 const navigateToBuilder = ref(true);
 const saveToCloud = ref(false);
@@ -44,9 +45,17 @@ watch(() => props.isOpen, (isOpen) => {
         selectedLanguage.value = settingsStore.settings.locale || 'en';
         navigateToBuilder.value = true;
         saveToCloud.value = false;
+        nextTick(() => {
+            const el = nameInputRef.value as { $el?: HTMLElement } | HTMLInputElement | null;
+            const input = el && '$el' in el ? el.$el?.querySelector('input') : (el as HTMLInputElement | null);
+            input?.focus();
+            input?.select();
+        });
     }
 });
+const isValid = computed(() => Boolean(newResumeName.value.trim()));
 const handleConfirm = () => {
+    if (!isValid.value) return;
     emit('confirm', newResumeName.value, selectedLanguage.value, navigateToBuilder.value, saveToCloud.value);
 };
 const handleCancel = () => {
@@ -75,11 +84,15 @@ const handleEnter = (event: KeyboardEvent) => {
                     {{ $t('resumes.modals.create.title') }}
                 </h3>
                 <div class="space-y-2">
-                    <Label for="resume-name">{{ $t('resumes.modals.create.resumeName') }}</Label>
+                    <Label for="resume-name">
+                        {{ $t('resumes.modals.create.resumeName') }}
+                        <span class="text-destructive">*</span>
+                    </Label>
                     <Input
                         id="resume-name"
+                        ref="nameInputRef"
                         v-model="newResumeName"
-                        autofocus
+                        required
                         :placeholder="$t('resumes.modals.create.enterName')"
                         @keydown="handleEnter"
                     />
@@ -156,6 +169,7 @@ const handleEnter = (event: KeyboardEvent) => {
                 <div class="flex gap-3 pt-4">
                     <Button
                         class="flex-1"
+                        :disabled="!isValid"
                         @click="handleConfirm"
                     >
                         {{ $t('resumes.modals.create.createButton') }}

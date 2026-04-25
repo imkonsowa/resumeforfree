@@ -82,7 +82,7 @@
       "terms": "Terms",
       "privacy": "Privacy"
     },
-    "copyright": "© 2026 ResumeForFree · Built with Typst.ts & Nuxt",
+    "copyright": "© 2026 ResumeForFree · Built with Typst.ts & Nuxt by {author}",
     "noTracking": "No cookies. No tracking."
   },
   "homepage": {
