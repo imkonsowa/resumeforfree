@@ -284,7 +284,7 @@ const { isReady: typstReady } = useTypstLoader();
 const settingsStore = useSettingsStore();
 const resumeStore = useResumeStore();
 const { resumeData, activeResume } = storeToRefs(resumeStore);
-const { selectedFont, selectedTemplate, fontSize } = storeToRefs(settingsStore);
+const { selectedFont, selectedTemplate, fontSize, photoShape } = storeToRefs(settingsStore);
 const isLoading = ref(false);
 const error = ref<string | null>(null);
 const previewContent = ref<string>('');
@@ -392,7 +392,7 @@ const debouncedGeneratePreview = useDebounceFn(() => {
 }, 100);
 const activeResumeLanguage = computed(() => resumeStore.activeResumeLanguage);
 watch(
-    [resumeData, selectedTemplate, selectedFont, fontSize, activeResumeLanguage],
+    [resumeData, selectedTemplate, selectedFont, fontSize, photoShape, activeResumeLanguage],
     () => {
         debouncedGeneratePreview();
     },

@@ -1,9 +1,27 @@
 import { getTemplate } from '~/templates';
 import type { Resume, ResumeData } from '~/types/resume';
+import { typstLoader } from '~/utils/typstLoader';
+import { loadPhotoBytes, PHOTO_VFS_PATH } from '~/utils/photoLoader';
 
 export const useResumeGenerator = () => {
     const { isReady: typstReady, isLoading: typstLoading } = useTypstLoader();
     const i18n = useI18n({ useScope: 'global' });
+
+    const syncPhotoToVfs = async (resume: Resume): Promise<void> => {
+        const photo = resume.data.photo;
+        if (!photo) {
+            await typstLoader.unregisterPhoto(PHOTO_VFS_PATH);
+            return;
+        }
+        try {
+            const bytes = await loadPhotoBytes(photo);
+            await typstLoader.registerPhoto(PHOTO_VFS_PATH, bytes);
+        }
+        catch (error) {
+            console.error('Failed to register resume photo with Typst:', error);
+            await typstLoader.unregisterPhoto(PHOTO_VFS_PATH);
+        }
+    };
 
     const scopedT = (targetLocale: string) => {
         return (key: string) => i18n.t(key, 1, { locale: targetLocale });
@@ -36,6 +54,7 @@ export const useResumeGenerator = () => {
             font: resume.settings.selectedFont,
             locale: resume.language,
             fontSize: resume.settings.fontSize,
+            photoShape: resume.settings.photoShape || 'rectangle',
             t: scopedT(resume.language),
         });
     };
@@ -43,6 +62,7 @@ export const useResumeGenerator = () => {
     const generatePreview = async (resume: Resume): Promise<string> => {
         if (!typstReady.value) throw new Error('Typst not ready');
         if (!window.$typst) throw new Error('Typst global object not available yet');
+        await syncPhotoToVfs(resume);
         return await window.$typst.svg({
             mainContent: generateTypstContent(resume),
             // Disable the runtime <script> block Typst.ts adds by default. It provides
@@ -58,6 +78,7 @@ export const useResumeGenerator = () => {
         if (!typstReady.value) throw new Error('Typst not ready');
         if (!window.$typst) throw new Error('Typst global object not available');
         try {
+            await syncPhotoToVfs(resume);
             return await window.$typst.pdf({ mainContent: generateTypstContent(resume) });
         }
         catch (error) {

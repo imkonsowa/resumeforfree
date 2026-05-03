@@ -5,6 +5,7 @@ import { convertEmail, SECTION_SPACING } from '~/utils/typstUtils';
 import { RendererContext } from '~/utils/rendererContext';
 import { isRtlLocale } from '~/composables/useLocale';
 import { SECTION_TRANSLATION_MAP } from '~/composables/useSectionHeader';
+import { renderProfilePhoto } from '~/utils/sectionRenderers';
 import {
     generateCertificatesContent,
     generateEducationContent,
@@ -45,6 +46,9 @@ const ATS_LAYOUT_CONFIG: TemplateRenderConfig = {
     projects: {
         itemSpacing: '0.6em',
     },
+    photo: {
+        supported: true,
+    },
 };
 
 function getHeader(section: keyof SectionHeaders, data: ResumeData, context: RendererContext): string {
@@ -63,7 +67,7 @@ ${body}
 ]`;
 }
 
-function renderTopHeader(data: ResumeData, fontSize: number): string {
+function renderTopHeader(data: ResumeData, context: RendererContext, fontSize: number): string {
     const firstName = escapeTypstText(data?.firstName || '').toUpperCase();
     const lastName = escapeTypstText(data?.lastName || '').toUpperCase();
     const fullName = `${firstName} ${lastName}`.trim();
@@ -74,20 +78,31 @@ function renderTopHeader(data: ResumeData, fontSize: number): string {
     if (data?.email) contactParts.push(convertEmail(data.email));
     if (data?.phone) contactParts.push(`#text(dir: ltr)[${escapeTypstText(data.phone)}]`);
 
-    const parts: string[] = [];
-
+    const textBlocks: string[] = [];
     if (fullName) {
-        parts.push(`#block(above: 0em, below: 0.8em)[#text(size: ${fontSize + 14}pt, weight: "bold", fill: ${ATS_BLUE})[${fullName}]]`);
+        textBlocks.push(`#block(above: 0em, below: 0.8em)[#text(size: ${fontSize + 14}pt, weight: "bold", fill: ${ATS_BLUE})[${fullName}]]`);
     }
     if (position) {
-        parts.push(`#block(above: 0em, below: 1em)[#text(size: ${fontSize + 4}pt, weight: "bold")[${position}]]`);
+        textBlocks.push(`#block(above: 0em, below: 1em)[#text(size: ${fontSize + 4}pt, weight: "bold")[${position}]]`);
     }
     if (contactParts.length > 0) {
-        parts.push(`#block(above: 0em, below: 1.4em)[#text(size: ${fontSize}pt)[${contactParts.join(' | ')}]]`);
+        textBlocks.push(`#block(above: 0em, below: 1.4em)[#text(size: ${fontSize}pt)[${contactParts.join(' | ')}]]`);
     }
-    parts.push(`#block(above: 0em, below: 0em)[#line(length: 100%, stroke: 0.5pt + ${ATS_BLUE})]`);
+    const textColumn = textBlocks.join('\n');
 
-    return parts.join('\n');
+    const photo = renderProfilePhoto(data, context);
+    const headerBody = photo
+        ? `#grid(
+    columns: (1fr, auto),
+    column-gutter: 16pt,
+    align: (start + top, end + top),
+    [${textColumn}],
+    [${photo}],
+)`
+        : textColumn;
+
+    return `${headerBody}
+#block(above: 0.6em, below: 0em)[#line(length: 100%, stroke: 0.5pt + ${ATS_BLUE})]`;
 }
 
 function renderProfile(data: ResumeData, context: RendererContext): string {
@@ -153,11 +168,11 @@ function renderCertificates(data: ResumeData, context: RendererContext): string 
     return renderAtsSection(getHeader('certificates', data, context), body, context.fontSize);
 }
 
-const parse = ({ data, font, locale, t, fontSize }: TemplateParseInput): string => {
+const parse = ({ data, font, locale, t, fontSize, photoShape }: TemplateParseInput): string => {
     const isRtl = isRtlLocale(locale);
-    const context = new RendererContext({ t, fontSize, config: ATS_LAYOUT_CONFIG, locale });
+    const context = new RendererContext({ t, fontSize, config: ATS_LAYOUT_CONFIG, locale, photoShape: photoShape || 'rectangle' });
 
-    const header = renderTopHeader(data, fontSize);
+    const header = renderTopHeader(data, context, fontSize);
 
     const sectionRenderers: Record<string, () => string> = {
         profile: () => renderProfile(data, context),

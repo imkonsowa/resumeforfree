@@ -40,16 +40,25 @@ export default defineEventHandler(async (event) => {
     const dbService = new DatabaseService(db);
     const resumes = await dbService.getResumesByUserId(userId);
     return {
-        resumes: resumes.map(resume => ({
-            id: resume.id,
-            name: resume.name,
-            language: resume.language ?? null,
-            isActive: resume.is_active,
-            template: resume.template,
-            data: typeof resume.data === 'string' ? JSON.parse(resume.data) : resume.data,
-            settings: typeof resume.settings === 'string' ? JSON.parse(resume.settings || '{}') : resume.settings,
-            createdAt: resume.created_at,
-            updatedAt: resume.updated_at,
-        })),
+        resumes: resumes.map((resume) => {
+            const data = typeof resume.data === 'string' ? JSON.parse(resume.data) : resume.data;
+            if (resume.photo_url) {
+                data.photo = { source: 'r2', url: resume.photo_url };
+            }
+            else {
+                delete data.photo;
+            }
+            return {
+                id: resume.id,
+                name: resume.name,
+                language: resume.language ?? null,
+                isActive: resume.is_active,
+                template: resume.template,
+                data,
+                settings: typeof resume.settings === 'string' ? JSON.parse(resume.settings || '{}') : resume.settings,
+                createdAt: resume.created_at,
+                updatedAt: resume.updated_at,
+            };
+        }),
     };
 });

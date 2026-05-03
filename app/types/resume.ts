@@ -105,6 +105,19 @@ export interface SectionHeaders {
     volunteering: string;
     certificates: string;
 }
+export interface LocalResumePhoto {
+    source: 'local';
+    dataUrl: string;
+    mime: string;
+    width: number;
+    height: number;
+}
+export interface RemoteResumePhoto {
+    source: 'r2';
+    url: string;
+}
+export type ResumePhoto = LocalResumePhoto | RemoteResumePhoto;
+
 export interface ResumeData {
     version: string;
     firstName: string;
@@ -114,6 +127,7 @@ export interface ResumeData {
     position: string;
     location: string;
     summary: string;
+    photo?: ResumePhoto;
     experiences: Experience[];
     internships: Internship[];
     education: Education[];
@@ -159,10 +173,13 @@ export interface UserSettings {
     showFontMenu?: boolean;
     showTemplateMenu?: boolean;
 }
+export type PhotoShape = 'circle' | 'rectangle';
+
 export interface ResumeSettings {
     selectedFont: string;
     selectedTemplate: string;
     fontSize: number;
+    photoShape: PhotoShape;
     sectionCollapsed: Record<string, boolean>;
     isRawMode: boolean;
 }
@@ -217,6 +234,7 @@ export const defaultResumeSettings: ResumeSettings = {
     selectedFont: 'Calibri',
     selectedTemplate: 'compact',
     fontSize: 12,
+    photoShape: 'rectangle',
     isRawMode: false,
     sectionCollapsed: {
         personal: false,
@@ -241,6 +259,7 @@ export const resumeSettingsFromLegacy = (legacy: Partial<ResumeSettings> | null 
         selectedFont: src.selectedFont || defaultResumeSettings.selectedFont,
         selectedTemplate: src.selectedTemplate || defaultResumeSettings.selectedTemplate,
         fontSize: src.fontSize ?? defaultResumeSettings.fontSize,
+        photoShape: src.photoShape || defaultResumeSettings.photoShape,
         sectionCollapsed: src.sectionCollapsed && Object.keys(src.sectionCollapsed).length
             ? { ...src.sectionCollapsed }
             : { ...defaultResumeSettings.sectionCollapsed },

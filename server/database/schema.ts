@@ -33,6 +33,7 @@ export const resumes = sqliteTable('resumes', {
     language: text('language'),
     data: text('data', { mode: 'json' }).$type<ResumeData>().notNull(),
     settings: text('settings', { mode: 'json' }).$type<ResumeSettings>(),
+    photoUrl: text('photo_url'),
     createdAt: text('created_at').default(sql`CURRENT_TIMESTAMP`),
     updatedAt: text('updated_at').default(sql`CURRENT_TIMESTAMP`),
 }, table => ({
@@ -104,6 +105,7 @@ export interface ResumeModel {
     template: string;
     data: string | unknown;
     settings: string | unknown;
+    photo_url?: string | null;
     created_at: string;
     updated_at: string;
 }

@@ -9,6 +9,7 @@ import type {
     ProjectLink,
     Resume,
     ResumeData,
+    ResumePhoto,
     ResumeSettings,
     SectionHeaders,
     SectionOrder,
@@ -263,6 +264,17 @@ export const useResumeStore = defineStore('resume', {
                     console.error('Failed to sync language change to server:', error);
                 });
             }
+        },
+        setResumePhoto(id: string, photo: ResumePhoto): void {
+            if (!this.resumes[id]) return;
+            this.resumes[id].data = { ...this.resumes[id].data, photo };
+            this.resumes[id].updatedAt = new Date().toISOString();
+        },
+        clearResumePhoto(id: string): void {
+            if (!this.resumes[id]) return;
+            const { photo: _photo, ...rest } = this.resumes[id].data;
+            this.resumes[id].data = rest as ResumeData;
+            this.resumes[id].updatedAt = new Date().toISOString();
         },
         updateServerId(id: string, serverId: string): void {
             if (this.resumes[id]) {
@@ -1063,6 +1075,14 @@ export const useResumeStore = defineStore('resume', {
                         if (!this.resumes[localResumeId].settings) {
                             this.resumes[localResumeId].settings = pickSettings(serverResume.settings);
                         }
+                    }
+                    const localPhoto = this.resumes[localResumeId].data?.photo;
+                    const serverPhoto = serverResume.data?.photo;
+                    if (serverPhoto) {
+                        this.resumes[localResumeId].data.photo = serverPhoto;
+                    }
+                    else if (localPhoto?.source === 'r2') {
+                        delete this.resumes[localResumeId].data.photo;
                     }
                 }
                 else {

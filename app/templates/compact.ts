@@ -3,7 +3,7 @@ import type { Template, TemplateParseInput } from '~/types/template';
 import { COMPACT_LAYOUT_CONFIG } from '~/templates/layouts';
 import { escapeTypstText } from '~/utils/stringUtils';
 import { convertEmail, convertLink } from '~/utils/typstUtils';
-import { getSharedSectionRenderers } from '~/utils/sectionRenderers';
+import { getSharedSectionRenderers, renderProfilePhoto } from '~/utils/sectionRenderers';
 import { RendererContext } from '~/utils/rendererContext';
 import { isRtlLocale } from '~/composables/useLocale';
 
@@ -63,15 +63,24 @@ const renderHeaderRightColumn = (data: ResumeData, fontSize: number): string[] =
 
     return rows;
 };
-const convertResumeHeader = (data: ResumeData, fontSize: number, isRtl = false) => {
+const convertResumeHeader = (data: ResumeData, context: RendererContext, fontSize: number, isRtl = false) => {
     const leftColumnRows = renderHeaderLeftColumn(data, fontSize);
     const rightColumnRows = renderHeaderRightColumn(data, fontSize);
+    const photo = renderProfilePhoto(data, context);
+    const startAlign = isRtl ? 'right' : 'left';
+    const endAlign = isRtl ? 'left' : 'right';
     const headerParts: string[] = [];
-    const alignment = isRtl ? 'right, right' : 'left, left';
     headerParts.push('#grid(');
-    headerParts.push('    columns: (6fr, 4fr),');
-    headerParts.push('    column-gutter: 20pt,');
-    headerParts.push(`    align: (${alignment}),`);
+    if (photo) {
+        headerParts.push('    columns: (6fr, 4fr, auto),');
+        headerParts.push('    column-gutter: 16pt,');
+        headerParts.push(`    align: (${startAlign}, ${startAlign}, ${endAlign} + horizon),`);
+    }
+    else {
+        headerParts.push('    columns: (6fr, 4fr),');
+        headerParts.push('    column-gutter: 20pt,');
+        headerParts.push(`    align: (${startAlign}, ${startAlign}),`);
+    }
     headerParts.push('    [');
     leftColumnRows.forEach((row) => {
         headerParts.push(`        ${row}`);
@@ -81,16 +90,19 @@ const convertResumeHeader = (data: ResumeData, fontSize: number, isRtl = false) 
     rightColumnRows.forEach((row) => {
         headerParts.push(`        ${row}`);
     });
-    headerParts.push('    ]');
+    headerParts.push(photo ? '    ],' : '    ]');
+    if (photo) {
+        headerParts.push(`    [${photo}]`);
+    }
     headerParts.push(')');
     headerParts.push('#block(above: 1em, below: 1em)[#line(length: 100%, stroke: 1pt + black)]');
     return headerParts.join('\n');
 };
-const parse = ({ data, font, locale, t, fontSize }: TemplateParseInput): string => {
+const parse = ({ data, font, locale, t, fontSize, photoShape }: TemplateParseInput): string => {
     const isRtl = isRtlLocale(locale);
 
     const config = COMPACT_LAYOUT_CONFIG;
-    const context = new RendererContext({ t, fontSize, config, locale });
+    const context = new RendererContext({ t, fontSize, config, locale, photoShape: photoShape || 'rectangle' });
     const sharedRenderers = getSharedSectionRenderers();
 
     const sectionRenderers: Record<string, () => string> = {
@@ -114,7 +126,7 @@ const parse = ({ data, font, locale, t, fontSize }: TemplateParseInput): string 
         .filter(content => content.trim() !== '');
     const sectionsContent = sections.join('\n\n');
     const profileSection = sharedRenderers.profile(data, context);
-    const fullContent = `${convertResumeHeader(data, fontSize, isRtl)}${profileSection ? `\n${profileSection}` : ''}${sectionsContent ? `\n\n${sectionsContent}` : ''}`;
+    const fullContent = `${convertResumeHeader(data, context, fontSize, isRtl)}${profileSection ? `\n${profileSection}` : ''}${sectionsContent ? `\n\n${sectionsContent}` : ''}`;
 
     // Configure font and text direction for RTL languages
     const fontConfig = isRtl

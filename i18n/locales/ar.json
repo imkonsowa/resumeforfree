@@ -423,7 +423,17 @@
       "platform": "المنصة",
       "url": "الرابط",
       "customLabel": "تسمية مخصصة للرابط",
-      "selectPlatform": "اختر المنصة"
+      "selectPlatform": "اختر المنصة",
+      "photo": {
+        "label": "صورة الملف الشخصي",
+        "upload": "رفع صورة",
+        "remove": "إزالة",
+        "note": "تظهر الصورة بزوايا دائرية صغيرة بشكل افتراضي.",
+        "roundedToggle": "صورة دائرية",
+        "invalidType": "يجب أن يكون الملف من نوع JPG أو PNG أو WebP",
+        "tooLarge": "يجب أن يكون حجم الملف أقل من 2 ميجابايت",
+        "cropTitle": "اقتصاص الصورة"
+      }
     },
     "experience": {
       "title": "الخبرة العملية",

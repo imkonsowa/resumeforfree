@@ -15,6 +15,7 @@ import {
     generateSkillsContent,
     generateVolunteeringContent,
 } from '~/utils/templateRenderers';
+import { renderProfilePhoto } from '~/utils/sectionRenderers';
 
 const SIMPLE_LAYOUT_CONFIG: TemplateRenderConfig = {
     layout: 'single-column',
@@ -22,6 +23,9 @@ const SIMPLE_LAYOUT_CONFIG: TemplateRenderConfig = {
     socialLinks: { orientation: 'horizontal', placement: 'header', separator: ', ' },
     header: { style: 'simple', includeContact: true },
     projects: { itemSpacing: '' },
+    photo: {
+        supported: true,
+    },
 };
 
 interface SimpleRow {
@@ -135,7 +139,7 @@ function renderSimpleSection(section: SimpleSection, fontSize: number, isFirst: 
 )`;
 }
 
-function renderHeader(data: ResumeData, fontSize: number): string {
+function renderHeader(data: ResumeData, context: RendererContext, fontSize: number): string {
     const fullName = `${escapeTypstText(data?.firstName || '')} ${escapeTypstText(data?.lastName || '')}`.trim();
     const position = escapeTypstText(data?.position || '');
 
@@ -144,24 +148,36 @@ function renderHeader(data: ResumeData, fontSize: number): string {
     if (data?.phone) contactParts.push(`#text(dir: ltr)[${escapeTypstText(data.phone)}]`);
     if (data?.email) contactParts.push(convertEmail(data.email));
 
-    const parts: string[] = [];
+    const textBlocks: string[] = [];
     if (fullName) {
-        parts.push(`#block(width: 100%, above: 0em, below: 0.6em)[#align(center)[#text(size: ${fontSize + 8}pt, weight: "bold")[${fullName}]]]`);
+        textBlocks.push(`#block(above: 0em, below: 0.6em)[#text(size: ${fontSize + 8}pt, weight: "bold")[${fullName}]]`);
     }
     if (position) {
-        parts.push(`#block(width: 100%, above: 0em, below: 1em)[#align(center)[#text(size: ${fontSize + 2}pt)[${position}]]]`);
+        textBlocks.push(`#block(above: 0em, below: 1em)[#text(size: ${fontSize + 2}pt)[${position}]]`);
     }
     if (contactParts.length) {
-        parts.push(`#block(width: 100%, above: 0em, below: 1.4em)[#align(center)[#text(size: ${fontSize}pt)[${contactParts.join(' · ')}]]]`);
+        textBlocks.push(`#block(above: 0em, below: 1.4em)[#text(size: ${fontSize}pt)[${contactParts.join(' · ')}]]`);
     }
-    parts.push(`#block(above: 0em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]`);
+    const textColumn = textBlocks.join('\n');
 
-    return parts.join('\n');
+    const photo = renderProfilePhoto(data, context);
+    const headerBody = photo
+        ? `#grid(
+    columns: (1fr, auto),
+    column-gutter: 16pt,
+    align: (start + top, end + top),
+    [${textColumn}],
+    [${photo}],
+)`
+        : textColumn;
+
+    return `${headerBody}
+#block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]`;
 }
 
-const parse = ({ data, font, locale, t, fontSize }: TemplateParseInput): string => {
+const parse = ({ data, font, locale, t, fontSize, photoShape }: TemplateParseInput): string => {
     const isRtl = isRtlLocale(locale);
-    const context = new RendererContext({ t, fontSize, config: SIMPLE_LAYOUT_CONFIG, locale });
+    const context = new RendererContext({ t, fontSize, config: SIMPLE_LAYOUT_CONFIG, locale, photoShape: photoShape || 'rectangle' });
 
     const sectionMap: Record<string, () => SimpleSection | null> = {
         links: () => renderLinks(data, context),
@@ -228,7 +244,7 @@ const parse = ({ data, font, locale, t, fontSize }: TemplateParseInput): string 
     return `#set page(margin: 1.5cm)
 ${fontConfig}
 #set par(leading: 0.5em, justify: false)
-${renderHeader(data, fontSize)}
+${renderHeader(data, context, fontSize)}
 #v(${SECTION_SPACING})
 ${rendered.join('\n')}
 #pagebreak(weak: true)`;

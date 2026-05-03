@@ -3,7 +3,7 @@ import type { Template, TemplateParseInput } from '~/types/template';
 import { DEFAULT_LAYOUT_CONFIG } from '~/templates/layouts';
 import { escapeTypstText } from '~/utils/stringUtils';
 import { convertGrid, SECTION_SPACING } from '~/utils/typstUtils';
-import { getSharedSectionRenderers } from '~/utils/sectionRenderers';
+import { getSharedSectionRenderers, renderProfilePhoto } from '~/utils/sectionRenderers';
 import { RendererContext } from '~/utils/rendererContext';
 import { isRtlLocale } from '~/composables/useLocale';
 
@@ -16,11 +16,11 @@ const convertResumeHeader = (data: ResumeData, context: RendererContext, sharedR
 ${positionBlock}
 ${profileSection}`;
 };
-const parse = ({ data, font, locale, t, fontSize }: TemplateParseInput): string => {
+const parse = ({ data, font, locale, t, fontSize, photoShape }: TemplateParseInput): string => {
     const isRtl = isRtlLocale(locale);
 
     const config = DEFAULT_LAYOUT_CONFIG;
-    const context = new RendererContext({ t, fontSize, config, locale });
+    const context = new RendererContext({ t, fontSize, config, locale, photoShape: photoShape || 'rectangle' });
     const sharedRenderers = getSharedSectionRenderers();
 
     const allSections = {
@@ -85,7 +85,10 @@ const parse = ({ data, font, locale, t, fontSize }: TemplateParseInput): string 
         .sort((a, b) => (rightSectionOrder[a] || 999) - (rightSectionOrder[b] || 999))
         .map(section => allSections[section]())
         .filter(content => content.trim() !== '');
+    const photoBlock = renderProfilePhoto(data, context);
+    const photoWithSpacing = photoBlock ? `#block(below: 1em)[${photoBlock}]` : '';
     const staticRightContent = [
+        photoWithSpacing,
         allSections['contact'](),
         allSections['socialLinks'](),
     ].filter(content => content.trim() !== '');

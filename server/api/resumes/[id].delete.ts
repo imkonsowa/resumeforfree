@@ -12,9 +12,9 @@ class DatabaseService {
         return result.changes !== undefined ? result.changes > 0 : result.success;
     }
 
-    async getResumeById(resumeId: string, userId: string): Promise<{ id: string; user_id: string } | null> {
+    async getResumeById(resumeId: string, userId: string): Promise<{ id: string; user_id: string; photo_url: string | null } | null> {
         return await this.db
-            .prepare('SELECT * FROM resumes WHERE id = ? AND user_id = ?')
+            .prepare('SELECT id, user_id, photo_url FROM resumes WHERE id = ? AND user_id = ?')
             .bind(resumeId, userId)
             .first();
     }
@@ -58,6 +58,12 @@ export default defineEventHandler(async (event) => {
             statusCode: 404,
             statusMessage: 'Resume not found',
         });
+    }
+    if (existingResume.photo_url) {
+        const photos = event.context.cloudflare?.env?.PHOTOS;
+        if (photos) {
+            await photos.delete(`photos/${userId}/${resumeId}`);
+        }
     }
     const deleted = await dbService.deleteResume(resumeId, userId);
     if (!deleted) {

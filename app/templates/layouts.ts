@@ -20,6 +20,9 @@ export const DEFAULT_LAYOUT_CONFIG: TemplateRenderConfig = {
     projects: {
         itemSpacing: HEADER_SPACING,
     },
+    photo: {
+        supported: true,
+    },
 };
 
 export const COMPACT_LAYOUT_CONFIG: TemplateRenderConfig = {
@@ -41,5 +44,8 @@ export const COMPACT_LAYOUT_CONFIG: TemplateRenderConfig = {
     },
     projects: {
         itemSpacing: '',
+    },
+    photo: {
+        supported: true,
     },
 };

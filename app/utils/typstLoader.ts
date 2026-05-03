@@ -97,6 +97,21 @@ class TypstLoader {
         await this.initialize();
     }
 
+    async registerPhoto(path: string, bytes: Uint8Array): Promise<void> {
+        if (!this.state.isReady || !window.$typst) return;
+        await window.$typst.mapShadow(path, bytes);
+    }
+
+    async unregisterPhoto(path: string): Promise<void> {
+        if (!this.state.isReady || !window.$typst) return;
+        try {
+            await window.$typst.unmapShadow(path);
+        }
+        catch {
+            // unmapping a non-mapped path is a noop in our intent
+        }
+    }
+
     private setState(newState: Partial<TypstLoaderState>) {
         this.state = { ...this.state, ...newState };
         this.notifyListeners();

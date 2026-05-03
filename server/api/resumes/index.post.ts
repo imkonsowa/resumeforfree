@@ -65,6 +65,9 @@ export default defineEventHandler(async (event) => {
             statusMessage: 'Name and data are required',
         });
     }
+    if (data && typeof data === 'object') {
+        delete (data as { photo?: unknown }).photo;
+    }
     const db = event.context.cloudflare?.env?.DB;
     if (!db) {
         throw createError({

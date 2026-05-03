@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import type { UserSettings, ResumeSettings } from '~/types/resume';
+import type { UserSettings, ResumeSettings, PhotoShape } from '~/types/resume';
 import { defaultUserSettings, defaultResumeSettings, getFontsForLanguage } from '~/types/resume';
 
 export const useSettingsStore = defineStore('settings', {
@@ -32,6 +32,10 @@ export const useSettingsStore = defineStore('settings', {
             const resumeStore = useResumeStore();
             return resumeStore.activeResumeSettings.isRawMode ?? false;
         },
+        photoShape(): PhotoShape {
+            const resumeStore = useResumeStore();
+            return resumeStore.activeResumeSettings.photoShape ?? defaultResumeSettings.photoShape;
+        },
         showDownloadMenu: state => state.settings.showDownloadMenu ?? false,
         showFontMenu: state => state.settings.showFontMenu ?? false,
         showTemplateMenu: state => state.settings.showTemplateMenu ?? false,
@@ -57,6 +61,11 @@ export const useSettingsStore = defineStore('settings', {
         setSelectedTemplate(template: string) {
             const resumeStore = useResumeStore();
             resumeStore.setActiveResumeSetting('selectedTemplate', template);
+            this.updateTimestamp();
+        },
+        setPhotoShape(shape: PhotoShape) {
+            const resumeStore = useResumeStore();
+            resumeStore.setActiveResumeSetting('photoShape', shape);
             this.updateTimestamp();
         },
         setLocale(locale: string) {

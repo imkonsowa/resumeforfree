@@ -8,6 +8,7 @@
         :title="t('forms.personalInfo.title')"
         section-key="personal"
     >
+        <PhotoUploader class="mb-6" />
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="space-y-2">
                 <Label for="firstName">{{ t('forms.personalInfo.firstName') }}</Label>
@@ -236,6 +237,7 @@ import {
 import FormContainer from '~/components/elements/FormContainer.vue';
 import ConfirmationModal from '~/components/elements/ConfirmationModal.vue';
 import EditableHeader from '~/components/elements/EditableHeader.vue';
+import PhotoUploader from '~/components/elements/PhotoUploader.vue';
 
 const { t } = useResumeT();
 

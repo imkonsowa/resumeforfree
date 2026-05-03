@@ -114,6 +114,9 @@ export default defineEventHandler(async (event) => {
     }
     const syncResults = [];
     for (const resumeData of resumes) {
+        if (resumeData?.data && typeof resumeData.data === 'object') {
+            delete (resumeData.data as { photo?: unknown }).photo;
+        }
         const serverId = await dbService.upsertResume(userId, resumeData);
         const syncedResume = await dbService.getResumeById(serverId, userId);
         syncResults.push({

@@ -84,6 +84,19 @@ export const useApi = () => {
                     body: data,
                 }).catch(handleError);
             },
+            async uploadPhoto(id: string, file: Blob) {
+                const form = new FormData();
+                form.append('file', file);
+                return await $fetch(`/api/resumes/${id}/photo`, {
+                    method: 'POST',
+                    body: form,
+                }).then(({ photo }) => photo).catch(handleError);
+            },
+            async deletePhoto(id: string) {
+                return await $fetch(`/api/resumes/${id}/photo`, {
+                    method: 'DELETE',
+                }).then(() => true).catch(handleError);
+            },
         },
         share: {
             async getByToken(token: string) {

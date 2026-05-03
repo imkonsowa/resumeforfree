@@ -48,8 +48,10 @@ class DatabaseService {
         name: string;
         is_active: number;
         template: string;
+        language: string | null;
         data: string | unknown;
         settings: string | unknown;
+        photo_url: string | null;
         created_at: string;
         updated_at: string;
     } | null> {
@@ -85,6 +87,9 @@ export default defineEventHandler(async (event) => {
         });
     }
     const body = await readBody(event);
+    if (body?.data && typeof body.data === 'object') {
+        delete (body.data as { photo?: unknown }).photo;
+    }
     const db = event.context.cloudflare?.env?.DB;
     if (!db) {
         throw createError({
@@ -102,6 +107,13 @@ export default defineEventHandler(async (event) => {
     }
     await dbService.updateResume(resumeId, userId, body);
     const updatedResume = await dbService.getResumeById(resumeId, userId);
+    const data = typeof updatedResume.data === 'string' ? JSON.parse(updatedResume.data) : updatedResume.data;
+    if (updatedResume.photo_url) {
+        data.photo = { source: 'r2', url: updatedResume.photo_url };
+    }
+    else {
+        delete data.photo;
+    }
     return {
         resume: {
             id: updatedResume.id,
@@ -109,7 +121,7 @@ export default defineEventHandler(async (event) => {
             language: updatedResume.language ?? null,
             isActive: updatedResume.is_active,
             template: updatedResume.template,
-            data: typeof updatedResume.data === 'string' ? JSON.parse(updatedResume.data) : updatedResume.data,
+            data,
             settings: typeof updatedResume.settings === 'string' ? JSON.parse(updatedResume.settings || '{}') : updatedResume.settings,
             createdAt: updatedResume.created_at,
             updatedAt: updatedResume.updated_at,

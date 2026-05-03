@@ -14,6 +14,10 @@ binding = "DB"
 database_name = "resume-builder-db"
 database_id = "18a06c90-6adb-4400-bbf5-85313c47df0a"
 
+[[r2_buckets]]
+binding = "PHOTOS"
+bucket_name = "resume-builder-photos"
+
 [[send_email]]
 name = "SEND_EMAIL"
 

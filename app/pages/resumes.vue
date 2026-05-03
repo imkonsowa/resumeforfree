@@ -45,6 +45,7 @@ const maybeFulfilCloudSyncIntent = async () => {
         const { toast } = await import('vue-sonner');
         toast.info(t('notifications.cloudLimitReached', { count: skipped }));
     }
+    await useResumePhoto().syncLocalPhotosToServer();
 };
 
 onMounted(async () => {

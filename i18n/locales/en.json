@@ -423,7 +423,17 @@
       "platform": "Platform",
       "url": "URL",
       "customLabel": "Custom Label",
-      "selectPlatform": "Select platform"
+      "selectPlatform": "Select platform",
+      "photo": {
+        "label": "Profile Photo",
+        "upload": "Upload Photo",
+        "remove": "Remove",
+        "note": "Photos are rendered with rounded corners by default.",
+        "roundedToggle": "Round photo",
+        "invalidType": "File must be JPG, PNG, or WebP",
+        "tooLarge": "File must be under 2 MB",
+        "cropTitle": "Crop your photo"
+      }
     },
     "experience": {
       "title": "Experience",

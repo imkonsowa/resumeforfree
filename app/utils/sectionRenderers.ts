@@ -1,6 +1,6 @@
 import type { ResumeData, SectionHeaders } from '~/types/resume';
 import type { SectionRenderer } from '~/types/template';
-import { ITEMS_SPACING } from './typstUtils';
+import { ITEMS_SPACING, PHOTO_SIZE } from './typstUtils';
 import { escapeTypstText } from '~/utils/stringUtils';
 import { SECTION_TRANSLATION_MAP } from '~/composables/useSectionHeader';
 import type { RendererContext } from './rendererContext';
@@ -227,6 +227,13 @@ export const renderSharedCertificates: SectionRenderer = (data: ResumeData, cont
     return wrapInSectionBlock(headerText, formattedContent, context.fontSize);
 };
 
+export const renderProfilePhoto = (data: ResumeData, context: RendererContext): string => {
+    const photoCfg = context.config.photo;
+    if (!photoCfg?.supported || !data.photo) return '';
+    const radius = context.photoShape === 'circle' ? '50%' : '1mm';
+    return `#box(width: ${PHOTO_SIZE}, height: ${PHOTO_SIZE}, clip: true, radius: ${radius}, image("/photo", width: 100%, height: 100%, fit: "cover"))`;
+};
+
 /**
  * Get all available shared section renderers
  */
@@ -242,4 +249,5 @@ export const getSharedSectionRenderers = () => ({
     socialLinks: renderSharedSocialLinks,
     profile: renderSharedProfile,
     certificates: renderSharedCertificates,
+    photo: renderProfilePhoto,
 });

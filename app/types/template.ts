@@ -17,6 +17,10 @@ export interface TemplateColumnLayout {
     movableSections?: string[];
 }
 
+export interface TemplatePhotoConfig {
+    supported: boolean;
+}
+
 export interface TemplateRenderConfig {
     layout: 'single-column' | 'two-column';
     sections: {
@@ -37,6 +41,7 @@ export interface TemplateRenderConfig {
     projects: {
         itemSpacing: string;
     };
+    photo?: TemplatePhotoConfig;
 }
 
 export interface SectionContent {
@@ -55,6 +60,7 @@ export interface TemplateParseInput {
     font: string;
     locale: string;
     fontSize: number;
+    photoShape?: 'circle' | 'rectangle';
     t: TranslateFunction;
 }
 
