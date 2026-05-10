@@ -18,9 +18,6 @@
             </div>
             <div class="flex-1 space-y-2">
                 <Label>{{ t('forms.personalInfo.photo.label') }}</Label>
-                <p class="text-xs text-gray-500">
-                    {{ t('forms.personalInfo.photo.note') }}
-                </p>
                 <div class="flex flex-wrap gap-2">
                     <Button
                         size="sm"
