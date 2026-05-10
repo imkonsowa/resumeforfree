@@ -1,0 +1,852 @@
+{
+  "common": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "add": "Ajouter",
+    "remove": "Retirer",
+    "close": "Fermer",
+    "done": "Terminé",
+    "copyFailed": "Échec de la copie dans le presse-papiers",
+    "link": "Lien",
+    "preview": "Aperçu",
+    "download": "Télécharger",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "yes": "Oui",
+    "no": "Non",
+    "language": "Langue",
+    "buildNow": "Créer Maintenant",
+    "startBuilding": "Commencer à Créer",
+    "resetToDefaults": "Rétablir les paramètres par défaut",
+    "quickActions": "Actions Rapides",
+    "actions": "Actions",
+    "column": "Colonne",
+    "left": "Gauche",
+    "right": "Droite",
+    "location": "Lieu",
+    "locationPlaceholder": "Paris, France",
+    "present": "Présent",
+    "startDate": "Date de début",
+    "endDate": "Date de fin",
+    "description": "Description",
+    "email": "E-mail",
+    "position": "Poste",
+    "achievements": "Réalisations",
+    "addAchievement": "Ajouter une réalisation",
+    "achievementPlaceholder": "Décrivez vos réalisations clés et votre impact",
+    "name": "Nom",
+    "sync": "Synchroniser",
+    "export": "Exporter",
+    "company": "Entreprise",
+    "companyUrl": "URL du site web de l'entreprise",
+    "organizationUrl": "URL du site web de l'organisation",
+    "emailAddress": "Adresse e-mail",
+    "tryAgain": "Réessayer"
+  },
+  "languageModal": {
+    "title": "Sélectionnez votre langue",
+    "description": "Choisissez votre langue préférée pour le créateur de CV",
+    "resumeTitle": "Sélectionnez la langue du CV",
+    "resumeDescription": "Choisissez la langue de ce CV. Cette sélection est définitive et ne pourra pas être modifiée après création."
+  },
+  "navigation": {
+    "home": "Accueil",
+    "builder": "Créateur",
+    "qa": "Q&R",
+    "help": "Aide",
+    "resumes": "Vos CV",
+    "contact": "Contact",
+    "github": "GitHub",
+    "signIn": "Se Connecter",
+    "signUp": "S'inscrire",
+    "signOut": "Se Déconnecter",
+    "profile": "Profil",
+    "startBuilding": "Commencer à créer",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
+  "footer": {
+    "tagline": "Un créateur de CV qui reste gratuit. Construit dans le navigateur avec Typst. Sans compte, sans suivi.",
+    "productHeading": "Produit",
+    "productLinks": {
+      "builder": "Créateur",
+      "yourResumes": "Vos CV",
+      "cloudSync": "Synchronisation cloud"
+    },
+    "resourcesHeading": "Ressources",
+    "supportHeading": "Support",
+    "supportLinks": {
+      "terms": "Conditions",
+      "privacy": "Confidentialité"
+    },
+    "copyright": "© 2026 ResumeForFree · Créé avec Typst.ts & Nuxt par {author}",
+    "noTracking": "Pas de cookies. Pas de suivi."
+  },
+  "homepage": {
+    "title": "Créez Votre CV",
+    "subtitle": "Gratuitement",
+    "heroTitle": "Créateur de CV Gratuit - Sans Inscription, Sans Filigrane, Sans Piège | Resume For Free",
+    "heroDescription": "Créez et téléchargez des CV professionnels gratuitement. Aucun compte requis, sans filigrane, aucuns frais cachés. Vos données restent sur votre appareil. Téléchargements de PDF illimités.",
+    "heroSubheadline": "Sans compte. Sans filigrane. Pas de \"mise à niveau pour télécharger\". Juste un créateur de CV qui tient ses promesses.",
+    "hero": {
+      "badge": "10 247 utilisateurs · 55 812 PDF téléchargés",
+      "title": "Le créateur de CV gratuit qui le restera toujours.",
+      "sub": "Créez, prévisualisez et téléchargez un PDF compatible ATS dans votre navigateur. Sans compte. Sans filigrane. Pas de mise à niveau pour télécharger.",
+      "ctaBuild": "Créer mon CV",
+      "ctaSample": "Voir un exemple de PDF",
+      "note": "Sans inscription · Sans carte de crédit · Prend environ 5 minutes",
+      "stat1Label": "CV créés",
+      "stat2Label": "PDF téléchargés",
+      "stat3Label": "Coût à vie"
+    },
+    "sampleResume": {
+      "alt": "Aperçu de l'exemple de CV",
+      "name": "Omar Al-Masry",
+      "title": "Ingénieur Logiciel Senior | Backend | Cloud",
+      "profile": "Ingénieur backend avec plus de 8 ans d'expérience dans la création de systèmes distribués à hautes performances. Axé sur l'infrastructure cloud native, l'observabilité et le traitement de données à grande échelle.",
+      "location": "À distance",
+      "experience": {
+        "heading": "Expérience Professionnelle",
+        "roleLine": "Ingénieur Logiciel Senior chez Acme Corp, À distance",
+        "dateRange": "Janv 2023 - Présent",
+        "bullet1": "Création d'un pipeline de données multirégional traitant 2 milliards d'événements par jour.",
+        "bullet2": "Direction de l'architecture backend pour une plateforme d'analyse critique."
+      },
+      "skills": {
+        "heading": "Compétences Techniques",
+        "langLabel": "Langages",
+        "langValue": "Golang, JavaScript, Python, PHP",
+        "cloudLabel": "Cloud",
+        "cloudValue": "Docker, Kubernetes, AWS, GCP",
+        "dbLabel": "Bases de données",
+        "dbValue": "PostgreSQL, Redis, ElasticSearch"
+      },
+      "education": {
+        "heading": "Éducation",
+        "degreeLine": "Licence en Informatique, Université d'État",
+        "date": "2015"
+      }
+    },
+    "features": {
+      "free": {
+        "title": "Vraiment Gratuit",
+        "description": "Pas de période d'essai, pas de carte de crédit, pas de niveau \"premium\". Gratuit veut dire gratuit."
+      },
+      "privacy": {
+        "title": "Vos Données Restent sur Votre Appareil",
+        "description": "Tout est stocké dans votre navigateur. Nous ne collectons, ne stockons, ni ne vendons vos informations personnelles."
+      },
+      "noRegistration": {
+        "title": "Aucun Compte Requis",
+        "description": "Ouvrez le site, créez votre CV, téléchargez le PDF. Pas d'e-mail, pas d'inscription, pas de vérification."
+      },
+      "unlimitedDownloads": {
+        "title": "Téléchargements de PDF Illimités",
+        "description": "Téléchargez votre CV autant de fois que vous le souhaitez. Pas de limites quotidiennes, pas de compteurs de téléchargement."
+      },
+      "atsOptimized": {
+        "title": "Sortie optimisée pour les ATS",
+        "description": "Mise en page avec Typst - vrai texte sélectionnable, polices intégrées, structure propre. Passe la plupart des systèmes de suivi des candidats."
+      },
+      "unlimitedResumes": {
+        "title": "CV Multiples",
+        "description": "Créez des CV distincts pour différentes candidatures. Adaptez chacun sans avoir à tout recommencer."
+      },
+      "offline": {
+        "title": "Fonctionne Hors Ligne",
+        "description": "Chargez le site une fois et il fonctionne sans internet. Créez votre CV dans un avion, un tunnel, n'importe où."
+      },
+      "cloudSync": {
+        "title": "Synchronisation Cloud Optionnelle",
+        "description": "Créez un compte gratuit pour enregistrer jusqu'à 3 CV dans le cloud et y accéder depuis n'importe quel appareil. Totalement optionnel - tout fonctionne sans cela."
+      },
+      "eyebrow": "Fonctionnalités",
+      "sectionTitle": "Tout ce dont vous avez besoin pour créer un CV professionnel. Rien n'est bloqué par un péage.",
+      "sub": "Les fonctionnalités que nos concurrents réservent à leurs offres payantes sont toutes incluses, par défaut, pour tout le monde."
+    },
+    "howItWorks": {
+      "title": "Comment Ça Marche",
+      "subtitle": "Trois étapes. Pas de création de compte entre-temps.",
+      "eyebrow": "Comment ça marche",
+      "step1": {
+        "title": "Choisissez un modèle",
+        "description": "Choisissez une mise en page claire et professionnelle. Pas de designs tape-à-l'œil qui embrouillent les recruteurs."
+      },
+      "step2": {
+        "title": "Remplissez vos détails",
+        "description": "Ajoutez votre expérience, votre éducation et vos compétences. L'aperçu en temps réel montre exactement à quoi ressemblera le PDF."
+      },
+      "step3": {
+        "title": "Téléchargez votre PDF",
+        "description": "Appuyez sur télécharger. Obtenez un PDF correctement mis en page avec du texte sélectionnable et des polices intégrées. Terminé."
+      }
+    },
+    "comparison": {
+      "title": "Comment nous nous comparons aux alternatives payantes.",
+      "subtitle": "Nous avons vérifié pour que vous n'ayez pas à le faire.",
+      "eyebrow": "Comparaison",
+      "caption": "Basé sur les offres gratuites des concurrents en avril 2026. Les prix peuvent changer.",
+      "headers": {
+        "feature": "Fonctionnalité",
+        "us": "Resume For Free",
+        "canva": "Canva",
+        "zety": "Zety",
+        "resumeio": "Resume.io"
+      },
+      "rows": {
+        "pdfDownload": "Téléchargement PDF gratuit",
+        "noAccount": "Aucun compte requis",
+        "noWatermark": "Pas de filigrane",
+        "noAds": "Pas de publicités",
+        "dataOnDevice": "Données sur votre appareil",
+        "worksOffline": "Fonctionne hors ligne",
+        "unlimitedDownloads": "Téléchargements illimités",
+        "noTrial": "Pas d'essai qui facture automatiquement"
+      },
+      "values": {
+        "free": "Gratuit",
+        "paid": "Payant",
+        "yes": "Oui",
+        "no": "Non",
+        "limited": "Limité"
+      },
+      "footnote": "Comparaison basée sur les offres gratuites en avril 2026. Les concurrents peuvent modifier leurs prix."
+    },
+    "whyBuilt": {
+      "title": "Pourquoi Cela Existe",
+      "eyebrow": "Pourquoi cela existe",
+      "sectionTitle": "Une note courte et honnête.",
+      "bylineRole": "Créé par un ingénieur indépendant · Joignable sur GitHub",
+      "paragraph1": "Chaque créateur de CV \"gratuit\" fait le même coup : vous passez une demi-heure à entrer votre historique professionnel, à organiser les sections, à choisir les polices - et juste au moment où vous appuyez sur télécharger, le mur de paiement apparaît. Un essai de 3 $ qui se renouvelle automatiquement à 24 $/mois. Ou un filigrane sur votre nom. Ou \"créez un compte pour continuer.\"",
+      "paragraph2": "Cet outil existe parce que cela ne devrait pas être normal. Votre CV est entièrement créé dans votre navigateur à l'aide de Typst, un moteur de composition moderne. Il n'y a pas de serveur générant votre PDF, ce qui signifie qu'il n'y a aucun coût par document pour nous - c'est pourquoi il peut réellement rester gratuit sans piège.",
+      "paragraph3": "Pas de pitch deck pour investisseurs, pas d'objectifs de croissance à atteindre, aucune raison de vous obliger à créer un compte. Juste un outil qui fait ce qu'il dit."
+    },
+    "faq": {
+      "title": "Foire Aux Questions",
+      "eyebrow": "FAQ",
+      "contactIntro": "Vous ne trouvez pas ce dont vous avez besoin ?",
+      "contactLinkContact": "Contactez-nous",
+      "contactLinkGithub": "ouvrez un ticket GitHub",
+      "items": {
+        "reallyFree": {
+          "question": "Est-ce vraiment gratuit ? Quel est le piège ?",
+          "answer": "Il n'y a pas de piège. La génération du PDF s'effectue dans votre navigateur via WebAssembly, nous ne payons donc pas pour le traitement serveur de chaque document. L'hébergement du site statique est peu coûteux. C'est tout notre modèle économique - il n'y en a pas."
+        },
+        "dataStorage": {
+          "question": "Où sont stockées mes données ?",
+          "answer": "Dans le stockage local de votre navigateur. Les données de votre CV ne quittent jamais votre appareil à moins que vous ne créiez explicitement un compte et optiez pour la synchronisation cloud. Nous ne vous traquons pas, nous n'effectuons pas d'analyses et nous ne vendons pas de données."
+        },
+        "needAccount": {
+          "question": "Dois-je créer un compte ?",
+          "answer": "Non. Vous pouvez créer, modifier et télécharger des CV illimités sans aucun compte. Si vous souhaitez accéder à vos CV depuis plusieurs appareils, vous pouvez éventuellement créer un compte gratuit pour synchroniser jusqu'à 3 CV sur le cloud. Cette limite permet de garder le service gratuit pour tous."
+        },
+        "pdfQuality": {
+          "question": "Le PDF est-il vraiment bon ? Ou est-ce une capture d'écran ?",
+          "answer": "C'est un vrai PDF avec du texte correctement mis en forme, des polices intégrées et un contenu sélectionnable. Nous utilisons Typst, un moteur de composition professionnel - imaginez la qualité de LaTeX sans la courbe d'apprentissage. Le résultat est meilleur que ce que produisent la plupart des outils payants."
+        },
+        "atsFriendly": {
+          "question": "Les CV sont-ils compatibles avec les ATS ?",
+          "answer": "Oui. Les PDF utilisent un rendu de texte propre avec des polices standards. Il n'y a pas d'images contenant du texte, pas de mises en page complexes à plusieurs colonnes qui brouillent les analyseurs, et aucun élément invisible. Les systèmes ATS peuvent les lire sans problème."
+        },
+        "differentFromOthers": {
+          "question": "En quoi est-ce différent de Canva ou Zety ?",
+          "answer": "Canva nécessite un compte et affiche des publicités. Zety vous permet de créer gratuitement mais fait payer le téléchargement. Les deux stockent vos données sur leurs serveurs. Nous ne demandons pas de compte, ne facturons rien, n'affichons pas de publicités et gardons vos données sur votre appareil."
+        },
+        "offlineWork": {
+          "question": "Cela fonctionne-t-il hors ligne ?",
+          "answer": "Oui. Après avoir chargé le site une fois, le service worker met tout en cache. Vous pouvez créer et télécharger des CV sans connexion internet."
+        },
+        "multipleResumes": {
+          "question": "Puis-je créer plusieurs CV ?",
+          "answer": "Oui, de manière illimitée. Créez différentes versions pour différentes candidatures, secteurs ou formats. Il n'y a aucune limite."
+        }
+      }
+    },
+    "finalCta": {
+      "title": "Prêt à Créer Votre CV ?",
+      "subtitle": "Pas d'inscription. Prend environ 10 minutes.",
+      "sub": "Gratuit pour toujours. Pas d'inscription. Prend environ 5 minutes.",
+      "ctaBuild": "Commencer à créer",
+      "ctaSample": "Voir un exemple de PDF"
+    },
+    "termsAgreement": "En utilisant ce site web, vous acceptez les",
+    "termsLink": "conditions générales"
+  },
+  "qa": {
+    "title": "Obtenez des Réponses à",
+    "titleHighlight": "Vos Questions",
+    "subtitle": "Des réponses claires sur le fonctionnement du créateur de CV, son coût (aucun) et la destination de vos données.",
+    "badge": "Foire Aux Questions",
+    "ctaTitle": "Prêt à Créer Votre CV ?",
+    "ctaSubtitle": "Pas d'inscription. Prend environ 10 minutes.",
+    "categories": {
+      "gettingStarted": "Pour Commencer",
+      "features": "Fonctionnalités & Capacité",
+      "technical": "Technique & Support"
+    },
+    "questions": {
+      "isFree": {
+        "question": "Est-ce vraiment gratuit ? Quel est le piège ?",
+        "answer": "Il n'y a pas de piège. La génération du PDF s'effectue dans votre navigateur via WebAssembly, nous ne payons donc pas pour le traitement serveur de chaque document. L'hébergement du site statique est peu coûteux. C'est tout notre modèle économique - il n'y en a pas."
+      },
+      "signUp": {
+        "question": "Dois-je créer un compte ?",
+        "answer": "Non. Vous pouvez créer, modifier et télécharger des CV illimités sans aucun compte. Si vous souhaitez accéder à vos CV depuis plusieurs appareils, vous pouvez éventuellement créer un compte gratuit pour synchroniser jusqu'à 3 CV sur le cloud. Cette limite permet de garder le service gratuit pour tous."
+      },
+      "pdfExport": {
+        "question": "Le PDF est-il vraiment bon ? Ou est-ce une capture d'écran ?",
+        "answer": "C'est un vrai PDF avec du texte correctement mis en forme, des polices intégrées et un contenu sélectionnable. Nous utilisons Typst, un moteur de composition professionnel - imaginez la qualité de LaTeX sans la courbe d'apprentissage. Le résultat est meilleur que ce que produisent la plupart des outils payants."
+      },
+      "privacy": {
+        "question": "Où sont stockées mes données ?",
+        "answer": "Dans le stockage local de votre navigateur. Les données de votre CV ne quittent jamais votre appareil à moins que vous ne créiez explicitement un compte et optiez pour la synchronisation cloud. Nous ne vous traquons pas, nous n'effectuons pas d'analyses et nous ne vendons pas de données."
+      },
+      "atsFriendly": {
+        "question": "Les CV sont-ils compatibles avec les ATS ?",
+        "answer": "Oui. Les PDF utilisent un rendu de texte propre avec des polices standards. Il n'y a pas d'images contenant du texte, pas de mises en page complexes à plusieurs colonnes qui brouillent les analyseurs, et aucun élément invisible. Les systèmes ATS peuvent les lire sans problème."
+      },
+      "differentFromOthers": {
+        "question": "En quoi est-ce différent de Canva ou Zety ?",
+        "answer": "Canva nécessite un compte et affiche des options premium pendant la création. Zety vous permet de créer gratuitement mais fait payer le téléchargement du PDF. Les deux stockent vos données sur leurs serveurs. Nous ne demandons pas de compte, ne facturons rien, n'affichons pas de publicités et gardons vos données sur votre appareil."
+      },
+      "mobile": {
+        "question": "Cela fonctionne-t-il sur mobile ?",
+        "answer": "Oui. Le créateur est entièrement réactif. Sur mobile, un bouton flottant ouvre un aperçu en plein écran pour que vous puissiez voir exactement à quoi ressemble votre CV pendant l'édition."
+      },
+      "offline": {
+        "question": "Cela fonctionne-t-il hors ligne ?",
+        "answer": "Oui. Après avoir chargé le site une fois, le service worker met tout en cache. Vous pouvez créer et télécharger des CV sans connexion internet."
+      },
+      "importExport": {
+        "question": "Puis-je sauvegarder ou transférer les données de mon CV ?",
+        "answer": "Oui. Exportez votre CV sous forme de fichier JSON et importez-le sur un autre appareil ou navigateur. Vos données, votre fichier, sans compte."
+      },
+      "sections": {
+        "question": "Quelles sections puis-je ajouter ?",
+        "answer": "Informations personnelles, expérience professionnelle, éducation, compétences, bénévolat et liens sociaux. Chaque section prend en charge plusieurs entrées. Vous pouvez glisser-déposer pour réorganiser les sections et les éléments individuels à l'intérieur de celles-ci."
+      },
+      "customize": {
+        "question": "Puis-je changer les polices et les modèles ?",
+        "answer": "Oui. Plusieurs options de polices (Roboto, Calibri, Geist et Noto Naskh Arabic pour RTL) et des mises en page de modèles sont disponibles. Choisissez un modèle, choisissez une police, et l'aperçu se met à jour instantanément."
+      },
+      "cloudSync": {
+        "question": "Comment fonctionne la synchronisation cloud ?",
+        "answer": "Créez un compte gratuit et vos CV se synchroniseront automatiquement entre vos appareils. L'offre gratuite prend en charge jusqu'à 3 CV synchronisés. Les CV locaux sur votre appareil sont toujours illimités - la synchronisation cloud sert uniquement à l'accès multi-appareils."
+      },
+      "browsers": {
+        "question": "Quels navigateurs sont pris en charge ?",
+        "answer": "Chrome, Firefox, Safari et Edge - n'importe quel navigateur moderne prenant en charge WebAssembly. Utilisez la dernière version pour la meilleure expérience."
+      },
+      "support": {
+        "question": "Comment signaler un bug ou demander une fonctionnalité ?",
+        "answer": "Ouvrez un ticket sur notre dépôt GitHub. Le projet est open source - vous pouvez également contribuer directement si vous le souhaitez."
+      }
+    }
+  },
+  "builder": {
+    "title": "Créateur de CV",
+    "languageMismatch": "Ce CV est en {language}.",
+    "pageTitle": "Créateur de CV Gratuit - Créez et Téléchargez des CV PDF Gratuitement | Sans Inscription",
+    "pageDescription": "Créez votre CV et téléchargez-le sous forme de PDF professionnel - totalement gratuitement. Pas de compte, pas de filigrane, pas de limites. Aperçu en temps réel, génération PDF instantanée, et vos données restent sur votre appareil.",
+    "sections": "Sections",
+    "resumePreview": "Aperçu du CV",
+    "noResumeSelected": "Aucun CV Sélectionné",
+    "noResumeDescription": "Pour commencer à créer votre CV, vous devez d'abord créer ou sélectionner un CV. Allez sur votre page de CV pour créer votre premier CV.",
+    "goToResumesPage": "Aller à la page de CV",
+    "defaultTitle": "Resume For Free",
+    "expand": "Développer",
+    "collapse": "Réduire",
+    "syncToCloud": "Synchroniser sur le Cloud",
+    "updateCloud": "Mettre à Jour le Cloud",
+    "syncingToCloud": "Synchronisation sur le Cloud...",
+    "updatingCloud": "Mise à Jour du Cloud...",
+    "update": "Mettre à Jour",
+    "syncing": "Synchronisation...",
+    "updating": "Mise à Jour...",
+    "preview": "Aperçu",
+    "settings": "Paramètres",
+    "download": "Télécharger",
+    "downloadPDF": "PDF",
+    "downloadAs": "Télécharger en {format}",
+    "downloadAsSVG": "Télécharger en SVG",
+    "downloadAsTypst": "Télécharger en Typst",
+    "downloadAsText": "Télécharger en Texte",
+    "template": "Modèle",
+    "loadingPreview": "Chargement de l'Aperçu",
+    "loadingPreviewDescription": "Veuillez patienter car la récupération du module Typst et du compilateur prend du temps sur les réseaux lents...",
+    "previewError": "Erreur d'Aperçu",
+    "initializingTypst": "Initialisation de Typst",
+    "settingUpCompiler": "Configuration du compilateur de CV...",
+    "zoomControls": {
+      "zoomIn": "Zoom Avant",
+      "zoomOut": "Zoom Arrière",
+      "resetZoom": "Réinitialiser le Zoom"
+    }
+  },
+  "settings": {
+    "title": "Paramètres du CV",
+    "description": "Personnalisez l'apparence de votre CV",
+    "template": {
+      "label": "Modèle",
+      "placeholder": "Sélectionnez un modèle",
+      "description": "Choisissez le modèle de mise en page pour votre CV"
+    },
+    "font": {
+      "label": "Famille de Polices",
+      "placeholder": "Sélectionnez une police",
+      "description": "Choisissez la famille de polices pour votre CV"
+    },
+    "fontSize": {
+      "label": "Taille de Police",
+      "description": "Ajustez la taille de police de base de votre CV (défaut : 14pt)"
+    },
+    "language": {
+      "label": "Langue",
+      "description": "Choisissez la langue de votre CV"
+    }
+  },
+  "forms": {
+    "personalInfo": {
+      "title": "Informations Personnelles",
+      "profile": "Profil",
+      "firstName": "Prénom",
+      "lastName": "Nom de famille",
+      "phone": "Numéro de téléphone",
+      "position": "Poste/Titre",
+      "summary": "Résumé Professionnel",
+      "socialLinks": "Liens Sociaux",
+      "addSocialLink": "Ajouter un Lien Social",
+      "socialLinksEmpty": "Aucun lien social ajouté pour l'instant. Cliquez sur 'Ajouter un Lien Social' pour commencer.",
+      "platform": "Plateforme",
+      "url": "URL",
+      "customLabel": "Libellé Personnalisé",
+      "selectPlatform": "Sélectionner une plateforme",
+      "photo": {
+        "label": "Photo de Profil",
+        "upload": "Télécharger une Photo",
+        "remove": "Retirer",
+        "note": "Par défaut, les photos sont affichées avec des coins arrondis.",
+        "roundedToggle": "Photo arrondie",
+        "invalidType": "Le fichier doit être un JPG, PNG ou WebP",
+        "tooLarge": "Le fichier doit faire moins de 2 Mo",
+        "cropTitle": "Recadrez votre photo"
+      }
+    },
+    "experience": {
+      "title": "Expérience",
+      "addExperience": "Ajouter une Expérience",
+      "emptyMessage": "Aucune expérience ajoutée pour l'instant. Cliquez sur 'Ajouter une Expérience' pour commencer.",
+      "deleteConfirm": {
+        "title": "Supprimer l'Expérience",
+        "message": "Êtes-vous sûr de vouloir supprimer cette expérience ? Cette action ne peut pas être annulée."
+      }
+    },
+    "internships": {
+      "title": "Stages",
+      "addInternship": "Ajouter un Stage",
+      "emptyMessage": "Aucun stage ajouté pour l'instant. Cliquez sur 'Ajouter un Stage' pour commencer.",
+      "deleteConfirm": {
+        "title": "Supprimer le Stage",
+        "message": "Êtes-vous sûr de vouloir supprimer ce stage ? Cette action ne peut pas être annulée."
+      }
+    },
+    "education": {
+      "title": "Éducation",
+      "addEducation": "Ajouter une Éducation",
+      "emptyMessage": "Aucune éducation ajoutée pour l'instant. Cliquez sur 'Ajouter une Éducation' pour commencer.",
+      "institution": "Établissement",
+      "degree": "Diplôme",
+      "fieldOfStudy": "Domaine d'Études",
+      "graduationScore": "Score de Remise des Diplômes/GPA",
+      "deleteConfirm": {
+        "title": "Supprimer l'Éducation",
+        "message": "Êtes-vous sûr de vouloir supprimer cette éducation ? Cette action ne peut pas être annulée."
+      }
+    },
+    "skills": {
+      "title": "Compétences",
+      "addSkill": "Ajouter une Compétence",
+      "emptyMessage": "Aucune compétence ajoutée pour l'instant. Cliquez sur 'Ajouter une Compétence' pour commencer.",
+      "skillTitle": "Compétence/Catégorie",
+      "column": "Colonne",
+      "deleteConfirm": {
+        "title": "Supprimer la Compétence",
+        "message": "Êtes-vous sûr de vouloir supprimer cette compétence ? Cette action ne peut pas être annulée."
+      }
+    },
+    "projects": {
+      "title": "Projets",
+      "addProject": "Ajouter un Projet",
+      "emptyMessage": "Ajoutez vos projets notables pour présenter votre travail.",
+      "projectTitle": "Titre du Projet",
+      "projectUrl": "URL du Projet",
+      "links": "Liens",
+      "addLink": "Ajouter un Lien",
+      "removeLink": "Retirer le lien",
+      "linkLabel": "Libellé (ex. GitHub)",
+      "linkUrl": "URL",
+      "emptyLinks": "Aucun lien pour le moment. Ajoutez un GitHub, une Démo en Direct, des articles de blog, etc.",
+      "column": "Colonne",
+      "deleteConfirm": {
+        "title": "Supprimer le Projet",
+        "message": "Êtes-vous sûr de vouloir supprimer ce projet ? Cette action ne peut pas être annulée."
+      }
+    },
+    "languages": {
+      "title": "Langues",
+      "addLanguage": "Ajouter une Langue",
+      "emptyMessage": "Aucune langue ajoutée pour l'instant. Cliquez sur 'Ajouter une Langue' pour commencer.",
+      "languageName": "Langue",
+      "proficiency": "Niveau de Maîtrise",
+      "column": "Colonne",
+      "deleteConfirm": {
+        "title": "Supprimer la Langue",
+        "message": "Êtes-vous sûr de vouloir supprimer cette langue ? Cette action ne peut pas être annulée."
+      }
+    },
+    "volunteering": {
+      "title": "Bénévolat",
+      "addVolunteering": "Ajouter une Expérience de Bénévolat",
+      "emptyMessage": "Aucune expérience de bénévolat ajoutée pour l'instant. Cliquez sur 'Ajouter une Expérience de Bénévolat' pour commencer.",
+      "organization": "Organisation",
+      "column": "Colonne",
+      "deleteConfirm": {
+        "title": "Supprimer l'Expérience de Bénévolat",
+        "message": "Êtes-vous sûr de vouloir supprimer cette expérience de bénévolat ? Cette action ne peut pas être annulée."
+      }
+    },
+    "certificates": {
+      "title": "Certificats",
+      "addCertificate": "Ajouter un Certificat",
+      "emptyMessage": "Aucun certificat ajouté pour l'instant. Cliquez sur 'Ajouter un Certificat' pour commencer.",
+      "certificateTitle": "Titre du Certificat",
+      "issuer": "Émetteur",
+      "date": "Date de Délivrance",
+      "url": "URL du Certificat",
+      "column": "Colonne",
+      "deleteConfirm": {
+        "title": "Supprimer le Certificat",
+        "message": "Êtes-vous sûr de vouloir supprimer ce certificat ? Cette action ne peut pas être annulée."
+      }
+    }
+  },
+  "validation": {
+    "required": "Ce champ est obligatoire",
+    "email": "Veuillez entrer une adresse e-mail valide",
+    "url": "Veuillez entrer une URL valide"
+  },
+  "notifications": {
+    "resumeCreated": "CV créé avec succès",
+    "resumeDeleted": "CV supprimé avec succès",
+    "resumeDuplicated": "CV dupliqué avec succès",
+    "dataImported": "Données importées avec succès",
+    "dataExported": "Données exportées avec succès",
+    "settingsReset": "Paramètres réinitialisés aux valeurs par défaut",
+    "autoSyncedToCloud": "{count} CV enregistré sur le cloud | {count} CV enregistrés sur le cloud",
+    "cloudLimitReached": "Limite cloud atteinte - {count} CV conservé localement | Limite cloud atteinte - {count} CV conservés localement",
+    "updateAvailable": "Une nouvelle version est disponible",
+    "updateAvailableDescription": "Actualisez pour charger les dernières améliorations.",
+    "updateRefresh": "Actualiser"
+  },
+  "platforms": {
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "twitter": "Twitter",
+    "portfolio": "Portfolio",
+    "dribbble": "Dribbble",
+    "medium": "Medium",
+    "devto": "Dev.to",
+    "personal": "Personnel",
+    "other": "Autre"
+  },
+  "template": {
+    "at": " chez ",
+    "present": "Présent",
+    "grade": "Note :",
+    "separator": ", "
+  },
+  "auth": {
+    "signIn": "Se Connecter",
+    "signUp": "S'inscrire",
+    "signOut": "Se Déconnecter",
+    "createAccount": "Créer un Compte",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le Mot de passe",
+    "currentPassword": "Mot de passe Actuel",
+    "newPassword": "Nouveau Mot de passe",
+    "enterEmail": "Entrez votre e-mail",
+    "enterPassword": "Entrez votre mot de passe",
+    "enterName": "Entrez votre nom",
+    "enterCurrentPassword": "Entrez votre mot de passe actuel",
+    "enterNewPassword": "Entrez votre nouveau mot de passe",
+    "confirmNewPassword": "Confirmez votre nouveau mot de passe",
+    "createPasswordPlaceholder": "Créez un mot de passe (min 6 caractères)",
+    "confirmPasswordPlaceholder": "Confirmez votre mot de passe",
+    "signInDescription": "Connectez-vous à votre compte pour accéder à vos CV",
+    "createAccountDescription": "Créez un compte gratuit pour enregistrer et accéder à vos CV",
+    "dontHaveAccount": "Vous n'avez pas de compte ?",
+    "alreadyHaveAccount": "Vous avez déjà un compte ?",
+    "passwordsDoNotMatch": "Les mots de passe ne correspondent pas",
+    "loginFailed": "Échec de la connexion",
+    "registrationFailed": "Échec de l'inscription",
+    "accountCreatedSuccess": "Compte créé avec succès ! Redirection...",
+    "passwordChangedSuccess": "Mot de passe modifié avec succès",
+    "passwordChangeError": "Échec de la modification du mot de passe",
+    "currentPasswordRequired": "Le mot de passe actuel est requis",
+    "newPasswordRequired": "Le nouveau mot de passe est requis",
+    "newPasswordMinLength": "Le nouveau mot de passe doit comporter au moins 8 caractères",
+    "newPasswordsDoNotMatch": "Les nouveaux mots de passe ne correspondent pas",
+    "changingPassword": "Modification du Mot de passe...",
+    "changePassword": "Modifier le Mot de passe",
+    "clearForm": "Effacer le Formulaire",
+    "passwordMinLengthHint": "Le mot de passe doit comporter au moins 8 caractères",
+    "forgotPassword": "Mot de passe Oublié ?",
+    "forgotPasswordTitle": "Réinitialiser Votre Mot de passe",
+    "forgotPasswordDescription": "Entrez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe",
+    "sendResetLink": "Envoyer le Lien de Réinitialisation",
+    "sendingResetLink": "Envoi...",
+    "resetLinkSent": "Lien de Réinitialisation Envoyé !",
+    "resetLinkSentDescription": "Vérifiez vos e-mails pour obtenir le lien afin de réinitialiser votre mot de passe. Si vous ne le voyez pas, vérifiez votre dossier de courriers indésirables.",
+    "resetPassword": "Réinitialiser le Mot de passe",
+    "resettingPassword": "Réinitialisation...",
+    "resetPasswordDescription": "Entrez votre nouveau mot de passe ci-dessous",
+    "resetPasswordSuccess": "Mot de passe réinitialisé avec succès ! Redirection...",
+    "resetPasswordError": "Échec de la réinitialisation du mot de passe",
+    "invalidResetLink": "Lien de réinitialisation invalide ou expiré",
+    "backToSignIn": "Retour à la Connexion",
+    "tooManyRequests": "Trop de requêtes. Veuillez réessayer plus tard.",
+    "rateLimitWait": "Veuillez patienter avant de demander un autre lien de réinitialisation.",
+    "continueWithGoogle": "Continuer avec Google",
+    "orContinueWith": "ou continuer avec",
+    "googleOAuthFailed": "La connexion avec Google a échoué. Veuillez réessayer.",
+    "googleNoEmail": "Le compte Google n'a fourni aucune adresse e-mail.",
+    "googleHandlerError": "Un problème est survenu lors de la connexion Google.",
+    "googleUserCreationFailed": "Impossible de créer votre compte à partir de votre profil Google."
+  },
+  "profile": {
+    "title": "Paramètres du Profil",
+    "description": "Gérez vos paramètres et préférences de compte",
+    "personalInformation": "Informations Personnelles",
+    "viewAndManage": "Consultez et gérez les détails de votre compte",
+    "notProvided": "Non renseigné",
+    "accountInformation": "Informations du Compte",
+    "accountInfoDescription": "Votre compte vous permet de synchroniser jusqu'à 3 CV sur le cloud.",
+    "updatePasswordDescription": "Mettez à jour votre mot de passe pour sécuriser votre compte",
+    "pleaseFixErrors": "Veuillez corriger les erreurs suivantes :"
+  },
+  "resumes": {
+    "pageTitle": "Vos CV - Créez & Gérez des CV Gratuits | Resume For Free",
+    "pageDescription": "Gérez des CV illimités en un seul endroit. Créez, modifiez, dupliquez et organisez des CV professionnels gratuitement. Sans limites de stockage, confidentialité totale.",
+    "title": "Vos CV",
+    "resumeCount": {
+      "total": "total",
+      "of": "sur",
+      "resume": "CV",
+      "resumes": "CV"
+    },
+    "actions": {
+      "new": "Nouveau",
+      "import": "Importer",
+      "cloudSync": "Synchro Cloud",
+      "createNew": "Créer un Nouveau CV",
+      "searchPlaceholder": "Rechercher des CV..."
+    },
+    "banner": {
+      "saveToCloud": "Enregistrez Vos CV sur le Cloud",
+      "registerPrompt": "Inscrivez-vous pour un compte gratuit pour enregistrer jusqu'à 3 CV sur le cloud et y accéder depuis n'importe quel navigateur. Ne perdez plus jamais votre travail !",
+      "registerFree": "S'inscrire Gratuitement",
+      "login": "Connexion",
+      "cloudAvailable": "Stockage Cloud Disponible",
+      "cloudAvailableDescription": "Vous pouvez maintenant enregistrer jusqu'à 3 CV sur le cloud et y accéder depuis n'importe quel navigateur. Utilisez le bouton \"Synchro Cloud\" pour synchroniser vos CV."
+    },
+    "status": {
+      "loading": "Chargement des CV...",
+      "failed": "Échec du chargement des CV",
+      "active": "Actif",
+      "synced": "Synchronisé",
+      "notSynced": "Non synchronisé",
+      "updated": "Mis à jour"
+    },
+    "card": {
+      "editNameTitle": "Modifier le nom du CV",
+      "noName": "Aucun nom spécifié",
+      "noPosition": "Aucun poste spécifié",
+      "noSections": "Aucune section ajoutée",
+      "experience": "expérience",
+      "experiences": "expériences",
+      "education": "éducation",
+      "skill": "compétence",
+      "skills": "compétences",
+      "build": "Créer",
+      "copy": "Copier",
+      "exportTitle": "Exporter le CV",
+      "syncTitle": "Synchroniser sur le cloud",
+      "disableSync": "Désactiver la Synchro Cloud",
+      "delete": "Supprimer"
+    },
+    "empty": {
+      "noResumes": "Aucun CV pour l'instant",
+      "createFirst": "Créez votre premier CV pour commencer",
+      "createFirstButton": "Créez Votre Premier CV",
+      "noResults": "Aucun CV trouvé",
+      "noResultsMessage": "Aucun CV ne correspond à votre recherche pour",
+      "clearSearch": "Effacer la Recherche",
+      "createNew": "Créer un Nouveau CV"
+    },
+    "modals": {
+      "firstTime": {
+        "title": "Enregistrer sur le Cloud ?",
+        "description": "Vos données sont enregistrées localement par défaut. Créez un compte gratuit pour les synchroniser sur plusieurs appareils.",
+        "accessAnywhere": "Accès depuis n'importe quel appareil",
+        "autoBackup": "Sauvegarde automatique",
+        "freeResumes": "Jusqu'à 3 CV gratuits",
+        "signUp": "S'inscrire",
+        "login": "Connexion",
+        "continueLocally": "Enregistrer dans le navigateur local",
+        "dontShowAgain": "Ne plus afficher"
+      },
+      "create": {
+        "title": "Créer un Nouveau CV",
+        "resumeName": "Nom du CV",
+        "enterName": "Entrez le nom du CV",
+        "navigateToBuilder": "Aller au créateur après création",
+        "saveToCloud": "Enregistrer sur le cloud",
+        "slotsAvailableMessage": "{remaining} emplacement(s) cloud disponible(s) sur {limit}",
+        "noSlotsAvailableMessage": "Aucun emplacement cloud disponible ({count}/{limit} utilisés)",
+        "createButton": "Créer le CV",
+        "resumeLanguage": "Langue du CV"
+      },
+      "copy": {
+        "title": "Copier le CV",
+        "resumeName": "Nom du CV",
+        "enterName": "Entrez le nom du CV",
+        "navigateToBuilder": "Aller au créateur après copie",
+        "copyButton": "Copier le CV"
+      },
+      "export": {
+        "title": "Exporter des CV",
+        "description": "Sélectionnez des CV à exporter en JSON",
+        "infoMessage": "Ceci exporte les données des CV sous forme de fichiers JSON à des fins de sauvegarde ou de transfert. Pour télécharger des CV en PDF, veuillez utiliser le bouton de téléchargement sur la page du créateur.",
+        "selectAll": "Tout Sélectionner",
+        "selected": "sélectionné",
+        "selectedCount": "{count} sélectionné | {count} sélectionnés"
+      },
+      "cloudSync": {
+        "title": "Synchronisation Cloud",
+        "description": "Vous avez {count}/{limit} CV sur le cloud. Il en reste {remaining}.",
+        "slot": "emplacement",
+        "slots": "emplacements",
+        "allSynced": "Tous les CV sont synchronisés sur le cloud",
+        "unsyncHint": "Utilisez \"Désactiver la Synchro Cloud\" depuis le menu du CV pour désynchroniser un CV.",
+        "limitExceeded": "Limite de Stockage Dépassée",
+        "limitExceededMessage": "Vous essayez de synchroniser {count} nouveau(x) CV, mais il ne vous reste que {remaining} emplacement(s). Veuillez désélectionner des CV ou supprimer ceux existants sur le cloud.",
+        "deselectAll": "Tout Désélectionner",
+        "selectAll": "Tout Sélectionner",
+        "syncButton": "Synchroniser {count} CV",
+        "exp": "exp",
+        "edu": "édu",
+        "projects": "projets",
+        "noSections": "Aucune section"
+      },
+      "cloudSyncPrompt": {
+        "title": "Enregistrer Votre CV sur le Cloud ?",
+        "description": "Votre CV est actuellement enregistré localement. Souhaitez-vous le synchroniser avec le cloud ?",
+        "benefits": {
+          "title": "Avantages de la Synchro Cloud",
+          "accessAnywhere": "Accédez à votre CV depuis n'importe quel appareil",
+          "autoBackup": "Sauvegarde et protection automatiques",
+          "realTimeSync": "Synchronisation en temps réel",
+          "neverLose": "Ne perdez jamais votre travail"
+        },
+        "limit": {
+          "title": "Limite de Stockage Cloud",
+          "description": "Vous pouvez enregistrer jusqu'à 3 CV sur le cloud avec votre compte gratuit. Vous disposez actuellement de {remaining} emplacement(s) disponible(s)."
+        },
+        "local": {
+          "title": "Continuer avec le Stockage Local",
+          "description": "Votre CV restera enregistré localement dans ce navigateur. Vous pouvez activer la synchronisation cloud à tout moment depuis les paramètres du CV."
+        },
+        "dontAskAgain": "Ne plus me demander pour ce CV",
+        "enableSync": "Activer la Synchro Cloud",
+        "keepLocal": "Garder Uniquement Local"
+      },
+      "delete": {
+        "title": "Supprimer le CV",
+        "message": "Êtes-vous sûr de vouloir supprimer \"{name}\" ? Cette action ne peut pas être annulée.",
+        "confirmButton": "Supprimer"
+      },
+      "disableSync": {
+        "title": "Désactiver la Synchro Cloud",
+        "message": "Êtes-vous sûr de vouloir retirer \"{name}\" du cloud ? Le CV restera sur votre appareil mais ne sera plus synchronisé.",
+        "confirmButton": "Retirer du Cloud"
+      },
+      "cancel": "Annuler"
+    },
+    "toast": {
+      "creatingInCloud": "Création du CV sur le cloud...",
+      "createdAndSaved": "Le CV \"{name}\" a été créé et enregistré sur le cloud",
+      "createdLocallyFailed": "Le CV \"{name}\" a été créé localement, mais n'a pas pu être enregistré sur le cloud : {error}",
+      "loginToSaveCloud": "Veuillez vous connecter pour enregistrer les CV sur le cloud",
+      "created": "CV \"{name}\" créé",
+      "deletedFromCloud": "CV \"{name}\" supprimé du cloud",
+      "deletedLocallyFailed": "CV supprimé localement, mais n'a pas pu être supprimé du cloud : {error}",
+      "deleted": "CV \"{name}\" supprimé",
+      "loginToSync": "Veuillez vous connecter pour synchroniser les CV",
+      "resumeNotFound": "CV non trouvé",
+      "syncingToCloud": "Synchronisation du CV sur le cloud...",
+      "updatedInCloud": "CV \"{name}\" mis à jour sur le cloud",
+      "syncedNewCopy": "CV \"{name}\" synchronisé sur le cloud (nouvelle copie créée)",
+      "syncedToCloud": "CV \"{name}\" synchronisé sur le cloud",
+      "syncFailed": "Échec de la synchronisation du CV : {error}",
+      "removedFromCloud": "\"{name}\" retiré du cloud et synchro cloud désactivée",
+      "removeFailed": "Échec du retrait du cloud : {error}. Synchro cloud désactivée localement.",
+      "syncingMultiple": "Synchronisation de {count} CV sur le cloud...",
+      "syncedMultiple": "{count} CV synchronisés avec succès sur le cloud",
+      "syncMultipleFailed": "Échec de la synchronisation des CV : {error}",
+      "resumeNotSynced": "Le CV n'est pas synchronisé sur le cloud"
+    }
+  },
+  "contact": {
+    "title": "Contactez-Nous",
+    "description": "Vous avez une question ou des commentaires ? Nous aimerions vous entendre. Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.",
+    "form": {
+      "name": {
+        "placeholder": "Entrez votre nom"
+      },
+      "email": {
+        "placeholder": "Entrez votre adresse e-mail"
+      },
+      "subject": {
+        "label": "Sujet",
+        "placeholder": "De quoi s'agit-il ?"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Parlez-nous plus de votre question ou de vos commentaires..."
+      },
+      "submit": "Envoyer le Message",
+      "sending": "Envoi..."
+    },
+    "success": {
+      "title": "Message Envoyé avec Succès !",
+      "message": "Merci de nous avoir contactés. Nous vous répondrons dans les plus brefs délais.",
+      "toast": "Message envoyé avec succès",
+      "keepBuilding": "Continuer à Créer"
+    },
+    "errors": {
+      "validation": "Veuillez vérifier votre saisie et réessayer",
+      "rateLimit": "Trop de requêtes. Veuillez réessayer dans une heure.",
+      "generic": "Échec de l'envoi du message. Veuillez réessayer plus tard."
+    },
+    "alternative": {
+      "text": "Vous pouvez également nous joindre directement à"
+    },
+    "seo": {
+      "title": "Contactez-Nous - Obtenez de l'Aide avec Resume For Free | Support",
+      "description": "Besoin d'aide avec notre créateur de CV gratuit ? Contactez notre équipe de support pour obtenir de l'aide concernant la création de CV professionnels. Service client rapide et amical."
+    }
+  }
+}

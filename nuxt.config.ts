@@ -101,6 +101,8 @@ export default defineNuxtConfig({
         locales: [
             { code: 'en', name: 'English', file: 'en.json', language: 'en-US', dir: 'ltr' },
             { code: 'ar', name: 'العربية', file: 'ar.json', language: 'ar-SA', dir: 'rtl' },
+            { code: 'tr', name: 'Türkçe', file: 'tr.json', language: 'tr-TR', dir: 'ltr' },
+            { code: 'fr', name: 'Français', file: 'fr.json', language: 'fr-FR', dir: 'ltr' },
         ],
         lazy: true,
         langDir: 'locales',
@@ -168,6 +170,10 @@ export default defineNuxtConfig({
             '/profile',
             '/ar/auth/**',
             '/ar/profile',
+            '/tr/auth/**',
+            '/tr/profile',
+            '/fr/auth/**',
+            '/fr/profile',
         ],
         defaults: {
             changefreq: 'weekly',

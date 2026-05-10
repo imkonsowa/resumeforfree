@@ -1,0 +1,852 @@
+{
+  "common": {
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "add": "Ekle",
+    "remove": "Kaldır",
+    "close": "Kapat",
+    "done": "Tamamlandı",
+    "copyFailed": "Panoya kopyalanamadı",
+    "link": "Bağlantı",
+    "preview": "Önizleme",
+    "download": "İndir",
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "success": "Başarılı",
+    "yes": "Evet",
+    "no": "Hayır",
+    "language": "Dil",
+    "buildNow": "Şimdi Oluştur",
+    "startBuilding": "Oluşturmaya Başla",
+    "resetToDefaults": "Varsayılanlara Sıfırla",
+    "quickActions": "Hızlı İşlemler",
+    "actions": "İşlemler",
+    "column": "Sütun",
+    "left": "Sol",
+    "right": "Sağ",
+    "location": "Konum",
+    "locationPlaceholder": "İstanbul, Türkiye",
+    "present": "Devam Ediyor",
+    "startDate": "Başlangıç Tarihi",
+    "endDate": "Bitiş Tarihi",
+    "description": "Açıklama",
+    "email": "E-posta",
+    "position": "Pozisyon",
+    "achievements": "Başarılar",
+    "addAchievement": "Başarı Ekle",
+    "achievementPlaceholder": "Önemli başarılarınızı ve etkinizi açıklayın",
+    "name": "İsim",
+    "sync": "Senkronize Et",
+    "export": "Dışa Aktar",
+    "company": "Şirket",
+    "companyUrl": "Şirket Web Sitesi URL'si",
+    "organizationUrl": "Kuruluş Web Sitesi URL'si",
+    "emailAddress": "E-posta Adresi",
+    "tryAgain": "Tekrar Dene"
+  },
+  "languageModal": {
+    "title": "Dilinizi Seçin",
+    "description": "Özgeçmiş oluşturucu için tercih ettiğiniz dili seçin",
+    "resumeTitle": "Özgeçmiş Dilini Seçin",
+    "resumeDescription": "Bu özgeçmiş için dili seçin. Bu seçim kalıcıdır ve oluşturulduktan sonra değiştirilemez."
+  },
+  "navigation": {
+    "home": "Ana Sayfa",
+    "builder": "Oluşturucu",
+    "qa": "Soru & Cevap",
+    "help": "Yardım",
+    "resumes": "Özgeçmişleriniz",
+    "contact": "İletişim",
+    "github": "GitHub",
+    "signIn": "Giriş Yap",
+    "signUp": "Kayıt Ol",
+    "signOut": "Çıkış Yap",
+    "profile": "Profil",
+    "startBuilding": "Oluşturmaya başla",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat"
+  },
+  "footer": {
+    "tagline": "Ücretsiz kalan bir özgeçmiş oluşturucu. Typst ile tarayıcıda oluşturulmuştur. Hesap yok, izleme yok.",
+    "productHeading": "Ürün",
+    "productLinks": {
+      "builder": "Oluşturucu",
+      "yourResumes": "Özgeçmişleriniz",
+      "cloudSync": "Bulut senkronizasyonu"
+    },
+    "resourcesHeading": "Kaynaklar",
+    "supportHeading": "Destek",
+    "supportLinks": {
+      "terms": "Şartlar",
+      "privacy": "Gizlilik"
+    },
+    "copyright": "© 2026 ResumeForFree · {author} tarafından Typst.ts & Nuxt ile oluşturuldu",
+    "noTracking": "Çerez yok. İzleme yok."
+  },
+  "homepage": {
+    "title": "Özgeçmişinizi Oluşturun",
+    "subtitle": "Ücretsiz Olarak",
+    "heroTitle": "Ücretsiz Özgeçmiş Oluşturucu - Kayıt Yok, Filigran Yok, Hile Yok | Resume For Free",
+    "heroDescription": "Profesyonel özgeçmişleri ücretsiz oluşturun ve indirin. Hesap gerekmez, filigran yok, gizli ücret yok. Verileriniz cihazınızda kalır. Sınırsız PDF indirme.",
+    "heroSubheadline": "Hesap yok. Filigran yok. \"İndirmek için yükseltin\" yok. Sadece söylendiği gibi çalışan bir özgeçmiş oluşturucu.",
+    "hero": {
+      "badge": "10.247 kullanıcı · 55.812 PDF indirildi",
+      "title": "Sonsuza dek ücretsiz kalan ücretsiz özgeçmiş oluşturucu.",
+      "sub": "Tarayıcınızda ATS uyumlu bir PDF oluşturun, önizleyin ve indirin. Hesap yok. Filigran yok. İndirmek için yükseltme yok.",
+      "ctaBuild": "Özgeçmişimi oluştur",
+      "ctaSample": "Örnek bir PDF gör",
+      "note": "Kayıt yok · Kredi kartı yok · Sadece yaklaşık 5 dakika sürer",
+      "stat1Label": "Oluşturulan özgeçmişler",
+      "stat2Label": "İndirilen PDF'ler",
+      "stat3Label": "Ömür boyu maliyet"
+    },
+    "sampleResume": {
+      "alt": "Örnek özgeçmiş önizlemesi",
+      "name": "Ömer Yılmaz",
+      "title": "Kıdemli Yazılım Mühendisi | Backend | Bulut",
+      "profile": "Yüksek performanslı dağıtık sistemler kurma konusunda 8+ yıllık deneyime sahip backend mühendisi. Bulut yerel altyapısına, gözlemlenebilirliğe ve büyük ölçekli veri işlemeye odaklıdır.",
+      "location": "Uzaktan",
+      "experience": {
+        "heading": "İş Deneyimi",
+        "roleLine": "Kıdemli Yazılım Mühendisi, Acme Corp, Uzaktan",
+        "dateRange": "Oca 2023 - Devam Ediyor",
+        "bullet1": "Günde 2 milyar olay işleyen çok bölgeli veri boru hattı oluşturdu.",
+        "bullet2": "Kritik öneme sahip analitik platformu için backend mimarisine liderlik etti."
+      },
+      "skills": {
+        "heading": "Teknik Beceriler",
+        "langLabel": "Diller",
+        "langValue": "Golang, JavaScript, Python, PHP",
+        "cloudLabel": "Bulut",
+        "cloudValue": "Docker, Kubernetes, AWS, GCP",
+        "dbLabel": "Veritabanları",
+        "dbValue": "PostgreSQL, Redis, ElasticSearch"
+      },
+      "education": {
+        "heading": "Eğitim",
+        "degreeLine": "Bilgisayar Mühendisliği Lisans, Devlet Üniversitesi",
+        "date": "2015"
+      }
+    },
+    "features": {
+      "free": {
+        "title": "Gerçekten Ücretsiz",
+        "description": "Deneme süresi yok, kredi kartı yok, \"premium\" seviye yok. Ücretsiz demek, ücretsiz demektir."
+      },
+      "privacy": {
+        "title": "Verileriniz Cihazınızda Kalır",
+        "description": "Her şey tarayıcınızda saklanır. Kişisel bilgilerinizi toplamıyor, saklamıyor veya satmıyoruz."
+      },
+      "noRegistration": {
+        "title": "Hesap Gerekmez",
+        "description": "Siteyi açın, özgeçmişinizi oluşturun, PDF'yi indirin. E-posta yok, kayıt yok, doğrulama yok."
+      },
+      "unlimitedDownloads": {
+        "title": "Sınırsız PDF İndirme",
+        "description": "Özgeçmişinizi istediğiniz kadar indirin. Günlük sınır yok, indirme sayacı yok."
+      },
+      "atsOptimized": {
+        "title": "ATS optimize çıktı",
+        "description": "Typst ile dizgi - gerçek seçilebilir metin, gömülü yazı tipleri, temiz yapı. Büyük başvuru takip sistemlerini geçer."
+      },
+      "unlimitedResumes": {
+        "title": "Birden Fazla Özgeçmiş",
+        "description": "Farklı iş başvuruları için ayrı özgeçmişler oluşturun. Her birini baştan başlamadan özelleştirin."
+      },
+      "offline": {
+        "title": "Çevrimdışı Çalışır",
+        "description": "Siteyi bir kez yükleyin, internet olmadan çalışsın. Özgeçmişinizi bir uçakta, tünelde, nerede olursanız olun oluşturun."
+      },
+      "cloudSync": {
+        "title": "İsteğe Bağlı Bulut Senkronizasyonu",
+        "description": "3 adede kadar özgeçmişi bulutta kaydetmek ve herhangi bir cihazdan erişmek için ücretsiz bir hesap oluşturun. Tamamen isteğe bağlıdır - her şey onsuz da çalışır."
+      },
+      "eyebrow": "Özellikler",
+      "sectionTitle": "Profesyonel bir özgeçmiş oluşturmak için ihtiyacınız olan her şey. Hiçbir şey ödeme duvarının arkasında değil.",
+      "sub": "Rakiplerin ücretli seviyelere ayırdığı özellikler, herkes için varsayılan olarak dahildir."
+    },
+    "howItWorks": {
+      "title": "Nasıl Çalışır",
+      "subtitle": "Üç adım. Arada hesap oluşturma yok.",
+      "eyebrow": "Nasıl çalışır",
+      "step1": {
+        "title": "Bir şablon seçin",
+        "description": "Temiz ve profesyonel bir düzen seçin. İşe alım yöneticilerinin kafasını karıştıran gösterişli tasarımlar yok."
+      },
+      "step2": {
+        "title": "Bilgilerinizi doldurun",
+        "description": "Deneyiminizi, eğitiminizi ve becerilerinizi ekleyin. Gerçek zamanlı önizleme, PDF'nin tam olarak nasıl görüneceğini gösterir."
+      },
+      "step3": {
+        "title": "PDF'nizi indirin",
+        "description": "İndir butonuna basın. Seçilebilir metin ve gömülü yazı tipleriyle düzgün şekilde dizilmiş bir PDF alın. Bitti."
+      }
+    },
+    "comparison": {
+      "title": "Ücretli alternatiflerle karşılaştırmamız.",
+      "subtitle": "Sizin için kontrol ettik, böylece siz uğraşmayın.",
+      "eyebrow": "Karşılaştırma",
+      "caption": "Nisan 2026 itibariyle rakiplerin ücretsiz paketlerine dayanmaktadır. Fiyatlandırma değişebilir.",
+      "headers": {
+        "feature": "Özellik",
+        "us": "Resume For Free",
+        "canva": "Canva",
+        "zety": "Zety",
+        "resumeio": "Resume.io"
+      },
+      "rows": {
+        "pdfDownload": "Ücretsiz PDF indirme",
+        "noAccount": "Hesap gerekmez",
+        "noWatermark": "Filigran yok",
+        "noAds": "Oluştururken reklam yok",
+        "dataOnDevice": "Veriler cihazınızda kalır",
+        "worksOffline": "Çevrimdışı çalışır",
+        "unlimitedDownloads": "Sınırsız indirme",
+        "noTrial": "Otomatik ücretlendiren deneme sürümü yok"
+      },
+      "values": {
+        "free": "Ücretsiz",
+        "paid": "Ücretli",
+        "yes": "Evet",
+        "no": "Hayır",
+        "limited": "Sınırlı"
+      },
+      "footnote": "Nisan 2026 itibariyle ücretsiz paketlere dayalı karşılaştırma. Rakipler fiyatlandırmayı değiştirebilir."
+    },
+    "whyBuilt": {
+      "title": "Bu Neden Var",
+      "eyebrow": "Bu neden var",
+      "sectionTitle": "Kısa ve dürüst bir not.",
+      "bylineRole": "Bağımsız bir mühendis tarafından oluşturuldu · GitHub üzerinden ulaşılabilir",
+      "paragraph1": "Her \"ücretsiz\" özgeçmiş oluşturucu aynı numarayı yapar: çalışma geçmişinizi girmek, bölümleri düzenlemek, yazı tiplerini seçmek için yarım saat harcarsınız - ve tam indir butonuna bastığınızda, ödeme duvarı ortaya çıkar. Ayda 24 dolara otomatik yenilenen 3 dolarlık deneme sürümü. Veya adınızın üzerinde bir filigran. Veya \"devam etmek için bir hesap oluşturun.\"",
+      "paragraph2": "Bu araç var çünkü bu normal olmamalı. Özgeçmişiniz, modern bir dizgi motoru olan Typst kullanılarak tamamen tarayıcınızda oluşturulur. PDF'nizi oluşturan bir sunucu yok, bu da belge başına bize düşen bir maliyet olmadığı anlamına gelir - işte bu yüzden hile yapmadan gerçekten ücretsiz kalabiliyor.",
+      "paragraph3": "Yatırımcı sunumu yok, ulaşılacak büyüme hedefleri yok, sizi bir hesap oluşturmaya zorlamak için bir neden yok. Sadece işini yapan bir araç."
+    },
+    "faq": {
+      "title": "Sıkça Sorulan Sorular",
+      "eyebrow": "SSS",
+      "contactIntro": "İhtiyacınız olanı bulamıyor musunuz?",
+      "contactLinkContact": "Bize ulaşın",
+      "contactLinkGithub": "bir GitHub sorunu açın",
+      "items": {
+        "reallyFree": {
+          "question": "Bu gerçekten ücretsiz mi? Püf noktası ne?",
+          "answer": "Püf noktası yok. PDF oluşturma işlemi WebAssembly kullanılarak tarayıcınızda gerçekleşir, bu nedenle belge başına sunucu işlem ücreti ödemeyiz. Statik siteyi barındırmak ucuzdur. Tüm iş modeli bu - aslında bir iş modeli yok."
+        },
+        "dataStorage": {
+          "question": "Verilerim nerede saklanıyor?",
+          "answer": "Tarayıcınızın yerel depolamasında. Özgeçmiş verileriniz, açıkça bir hesap oluşturup bulut senkronizasyonunu etkinleştirmediğiniz sürece cihazınızdan asla ayrılmaz. Sizi takip etmiyoruz, analiz yapmıyoruz ve veri satmıyoruz."
+        },
+        "needAccount": {
+          "question": "Hesap oluşturmam gerekiyor mu?",
+          "answer": "Hayır. Herhangi bir hesap olmadan sınırsız sayıda özgeçmiş oluşturabilir, düzenleyebilir ve indirebilirsiniz. Özgeçmişlerinize birden fazla cihazdan erişmek isterseniz, isteğe bağlı olarak 3 özgeçmişe kadar buluta senkronize etmek için ücretsiz bir hesap oluşturabilirsiniz. Bu sınır, hizmeti herkes için ücretsiz tutmamızı sağlar."
+        },
+        "pdfQuality": {
+          "question": "PDF gerçekten kaliteli mi? Yoksa bir ekran görüntüsü mü?",
+          "answer": "Düzgün şekilde dizilmiş metin, gömülü yazı tipleri ve seçilebilir içeriği olan gerçek bir PDF'dir. Öğrenme eğrisi olmayan LaTeX kalitesini düşünün - profesyonel bir dizgi motoru olan Typst kullanıyoruz. Çıktı, çoğu ücretli aracın ürettiğinden daha iyidir."
+        },
+        "atsFriendly": {
+          "question": "Özgeçmişler ATS dostu mu?",
+          "answer": "Evet. PDF'ler, standart yazı tipleriyle temiz metin oluşturma kullanır. Metin görselleri, ayrıştırıcıların kafasını karıştıran karmaşık çok sütunlu düzenler ve görünmez öğeler yoktur. ATS sistemleri bunları sorunsuz bir şekilde okuyabilir."
+        },
+        "differentFromOthers": {
+          "question": "Bunun Canva veya Zety'den farkı ne?",
+          "answer": "Canva hesap gerektirir ve siz oluştururken reklamlar gösterir. Zety ücretsiz oluşturmanıza izin verir ancak PDF'yi indirmek için ücret alır. Her ikisi de verilerinizi kendi sunucularında saklar. Biz hesap talep etmiyoruz, hiçbir şey için ücret almıyoruz, reklam yayınlamıyoruz ve verilerinizi cihazınızda tutuyoruz."
+        },
+        "offlineWork": {
+          "question": "Çevrimdışı çalışıyor mu?",
+          "answer": "Evet. Siteyi bir kez yükledikten sonra, hizmet çalışanı her şeyi önbelleğe alır. İnternet bağlantısı olmadan özgeçmişler oluşturabilir ve indirebilirsiniz."
+        },
+        "multipleResumes": {
+          "question": "Birden fazla özgeçmiş oluşturabilir miyim?",
+          "answer": "Evet, sınırsız sayıda. Farklı iş başvuruları, farklı sektörler veya farklı formatlar için farklı sürümler oluşturun. Sınır yoktur."
+        }
+      }
+    },
+    "finalCta": {
+      "title": "Özgeçmişinizi Oluşturmaya Hazır Mısınız?",
+      "subtitle": "Kayıt yok. Yaklaşık 10 dakika sürer.",
+      "sub": "Sonsuza dek ücretsiz. Kayıt yok. Yaklaşık 5 dakika sürer.",
+      "ctaBuild": "Oluşturmaya başla",
+      "ctaSample": "Örnek PDF gör"
+    },
+    "termsAgreement": "Bu web sitesini kullanarak şunları kabul etmiş olursunuz:",
+    "termsLink": "şartlar ve koşullar"
+  },
+  "qa": {
+    "title": "Sorularınıza",
+    "titleHighlight": "Cevap Bulun",
+    "subtitle": "Özgeçmiş oluşturucunun nasıl çalıştığı, ne kadar maliyeti olduğu (hiç) ve verilerinizin nereye gittiği hakkında net cevaplar.",
+    "badge": "Sıkça Sorulan Sorular",
+    "ctaTitle": "Özgeçmişinizi Oluşturmaya Hazır Mısınız?",
+    "ctaSubtitle": "Kayıt yok. Yaklaşık 10 dakika sürer.",
+    "categories": {
+      "gettingStarted": "Başlangıç",
+      "features": "Özellikler & İşlevsellik",
+      "technical": "Teknik & Destek"
+    },
+    "questions": {
+      "isFree": {
+        "question": "Bu gerçekten ücretsiz mi? Püf noktası ne?",
+        "answer": "Püf noktası yok. PDF oluşturma işlemi WebAssembly kullanılarak tarayıcınızda gerçekleşir, bu nedenle belge başına sunucu işlem ücreti ödemeyiz. Statik siteyi barındırmak ucuzdur. Tüm iş modeli bu - aslında bir iş modeli yok."
+      },
+      "signUp": {
+        "question": "Hesap oluşturmam gerekiyor mu?",
+        "answer": "Hayır. Herhangi bir hesap olmadan sınırsız sayıda özgeçmiş oluşturabilir, düzenleyebilir ve indirebilirsiniz. Özgeçmişlerinize birden fazla cihazdan erişmek isterseniz, isteğe bağlı olarak 3 özgeçmişe kadar buluta senkronize etmek için ücretsiz bir hesap oluşturabilirsiniz. Bu sınır, hizmeti herkes için ücretsiz tutmamızı sağlar."
+      },
+      "pdfExport": {
+        "question": "PDF gerçekten kaliteli mi? Yoksa bir ekran görüntüsü mü?",
+        "answer": "Düzgün şekilde dizilmiş metin, gömülü yazı tipleri ve seçilebilir içeriği olan gerçek bir PDF'dir. Öğrenme eğrisi olmayan LaTeX kalitesini düşünün - profesyonel bir dizgi motoru olan Typst kullanıyoruz. Çıktı, çoğu ücretli aracın ürettiğinden daha iyidir."
+      },
+      "privacy": {
+        "question": "Verilerim nerede saklanıyor?",
+        "answer": "Tarayıcınızın yerel depolamasında. Özgeçmiş verileriniz, açıkça bir hesap oluşturup bulut senkronizasyonunu etkinleştirmediğiniz sürece cihazınızdan asla ayrılmaz. Sizi takip etmiyoruz, analiz yapmıyoruz ve veri satmıyoruz."
+      },
+      "atsFriendly": {
+        "question": "Özgeçmişler ATS dostu mu?",
+        "answer": "Evet. PDF'ler, standart yazı tipleriyle temiz metin oluşturma kullanır. Metin görselleri, ayrıştırıcıların kafasını karıştıran karmaşık çok sütunlu düzenler ve görünmez öğeler yoktur. ATS sistemleri bunları sorunsuz bir şekilde okuyabilir."
+      },
+      "differentFromOthers": {
+        "question": "Bunun Canva veya Zety'den farkı ne?",
+        "answer": "Canva hesap gerektirir ve siz oluştururken premium satış teklifleri gösterir. Zety ücretsiz oluşturmanıza izin verir ancak PDF'yi indirmek için ücret alır. Her ikisi de verilerinizi kendi sunucularında saklar. Biz hesap talep etmiyoruz, hiçbir şey için ücret almıyoruz, reklam yayınlamıyoruz ve verilerinizi cihazınızda tutuyoruz."
+      },
+      "mobile": {
+        "question": "Mobil cihazlarda çalışıyor mu?",
+        "answer": "Evet. Oluşturucu tamamen duyarlıdır. Mobilde, özgeçmişinizin düzenlerken tam olarak nasıl göründüğünü görebilmeniz için tam ekran önizleme açan kayan bir düğme bulunur."
+      },
+      "offline": {
+        "question": "Çevrimdışı çalışıyor mu?",
+        "answer": "Evet. Siteyi bir kez yükledikten sonra, hizmet çalışanı her şeyi önbelleğe alır. İnternet bağlantısı olmadan özgeçmişler oluşturabilir ve indirebilirsiniz."
+      },
+      "importExport": {
+        "question": "Özgeçmiş verilerimi yedekleyebilir veya aktarabilir miyim?",
+        "answer": "Evet. Özgeçmişinizi JSON dosyası olarak dışa aktarın ve başka bir cihazda veya tarayıcıda içe aktarın. Sizin veriniz, sizin dosyanız, hesap gerekmez."
+      },
+      "sections": {
+        "question": "Hangi bölümleri ekleyebilirim?",
+        "answer": "Kişisel bilgiler, iş deneyimi, eğitim, beceriler, gönüllülük ve sosyal bağlantılar. Her bölüm birden fazla girdiyi destekler. Bölümleri ve içlerindeki bireysel öğeleri yeniden sıralamak için sürükleyip bırakabilirsiniz."
+      },
+      "customize": {
+        "question": "Yazı tiplerini ve şablonları değiştirebilir miyim?",
+        "answer": "Evet. Birden fazla yazı tipi seçeneği (Roboto, Calibri, Geist ve RTL için Noto Naskh Arabic) ve şablon düzenleri mevcuttur. Bir şablon seçin, bir yazı tipi seçin ve önizleme anında güncellenir."
+      },
+      "cloudSync": {
+        "question": "Bulut senkronizasyonu nasıl çalışır?",
+        "answer": "Ücretsiz bir hesap oluşturduğunuzda özgeçmişleriniz cihazlar arasında otomatik olarak senkronize edilir. Ücretsiz paket, 3 adede kadar senkronize edilmiş özgeçmişi destekler. Cihazınızdaki yerel özgeçmişler her zaman sınırsızdır - bulut senkronizasyonu yalnızca cihazlar arası erişim içindir."
+      },
+      "browsers": {
+        "question": "Hangi tarayıcılar destekleniyor?",
+        "answer": "Chrome, Firefox, Safari ve Edge - WebAssembly'yi destekleyen modern tüm tarayıcılar. En iyi deneyim için en son sürümü kullanın."
+      },
+      "support": {
+        "question": "Bir hatayı nasıl bildiririm veya bir özellik talep ederim?",
+        "answer": "GitHub depomuzda bir sorun açın. Proje açık kaynaktır - isterseniz doğrudan da katkıda bulunabilirsiniz."
+      }
+    }
+  },
+  "builder": {
+    "title": "Özgeçmiş Oluşturucu",
+    "languageMismatch": "Bu özgeçmiş {language} dilindedir.",
+    "pageTitle": "Ücretsiz Özgeçmiş Oluşturucu - Ücretsiz PDF Özgeçmişleri Oluşturun ve İndirin | Kayıt Yok",
+    "pageDescription": "Özgeçmişinizi oluşturun ve profesyonel bir PDF olarak indirin - tamamen ücretsiz. Hesap yok, filigran yok, sınır yok. Gerçek zamanlı önizleme, anında PDF oluşturma ve verileriniz cihazınızda kalır.",
+    "sections": "Bölümler",
+    "resumePreview": "Özgeçmiş Önizlemesi",
+    "noResumeSelected": "Özgeçmiş Seçilmedi",
+    "noResumeDescription": "Özgeçmişinizi oluşturmaya başlamak için önce bir özgeçmiş oluşturmalı veya seçmelisiniz. İlk özgeçmişinizi oluşturmak için özgeçmişler sayfanıza gidin.",
+    "goToResumesPage": "Özgeçmişler Sayfasına Git",
+    "defaultTitle": "Resume For Free",
+    "expand": "Genişlet",
+    "collapse": "Daralt",
+    "syncToCloud": "Buluta Senkronize Et",
+    "updateCloud": "Bulutu Güncelle",
+    "syncingToCloud": "Buluta Senkronize Ediliyor...",
+    "updatingCloud": "Bulut Güncelleniyor...",
+    "update": "Güncelle",
+    "syncing": "Senkronize Ediliyor...",
+    "updating": "Güncelleniyor...",
+    "preview": "Önizleme",
+    "settings": "Ayarlar",
+    "download": "İndir",
+    "downloadPDF": "PDF",
+    "downloadAs": "{format} Olarak İndir",
+    "downloadAsSVG": "SVG Olarak İndir",
+    "downloadAsTypst": "Typst Olarak İndir",
+    "downloadAsText": "Metin Olarak İndir",
+    "template": "Şablon",
+    "loadingPreview": "Önizleme Yükleniyor",
+    "loadingPreviewDescription": "Yavaş ağlarda Typst modülü ve derleyicisinin getirilmesi zaman alacağından lütfen bekleyin...",
+    "previewError": "Önizleme Hatası",
+    "initializingTypst": "Typst Başlatılıyor",
+    "settingUpCompiler": "Özgeçmiş derleyicisi kuruluyor...",
+    "zoomControls": {
+      "zoomIn": "Yakınlaştır",
+      "zoomOut": "Uzaklaştır",
+      "resetZoom": "Yakınlaştırmayı Sıfırla"
+    }
+  },
+  "settings": {
+    "title": "Özgeçmiş Ayarları",
+    "description": "Özgeçmiş görünümünüzü özelleştirin",
+    "template": {
+      "label": "Şablon",
+      "placeholder": "Bir şablon seçin",
+      "description": "Özgeçmişiniz için düzen şablonunu seçin"
+    },
+    "font": {
+      "label": "Yazı Tipi Ailesi",
+      "placeholder": "Bir yazı tipi seçin",
+      "description": "Özgeçmişiniz için yazı tipi ailesini seçin"
+    },
+    "fontSize": {
+      "label": "Yazı Boyutu",
+      "description": "Özgeçmişiniz için temel yazı boyutunu ayarlayın (varsayılan: 14pt)"
+    },
+    "language": {
+      "label": "Dil",
+      "description": "Özgeçmişiniz için dili seçin"
+    }
+  },
+  "forms": {
+    "personalInfo": {
+      "title": "Kişisel Bilgiler",
+      "profile": "Profil",
+      "firstName": "Ad",
+      "lastName": "Soyad",
+      "phone": "Telefon Numarası",
+      "position": "Pozisyon/Unvan",
+      "summary": "Profesyonel Özet",
+      "socialLinks": "Sosyal Bağlantılar",
+      "addSocialLink": "Sosyal Bağlantı Ekle",
+      "socialLinksEmpty": "Henüz sosyal bağlantı eklenmedi. Başlamak için 'Sosyal Bağlantı Ekle'ye tıklayın.",
+      "platform": "Platform",
+      "url": "URL",
+      "customLabel": "Özel Etiket",
+      "selectPlatform": "Platform seçin",
+      "photo": {
+        "label": "Profil Fotoğrafı",
+        "upload": "Fotoğraf Yükle",
+        "remove": "Kaldır",
+        "note": "Fotoğraflar varsayılan olarak yuvarlatılmış köşelerle oluşturulur.",
+        "roundedToggle": "Yuvarlak fotoğraf",
+        "invalidType": "Dosya JPG, PNG veya WebP olmalıdır",
+        "tooLarge": "Dosya 2 MB'dan küçük olmalıdır",
+        "cropTitle": "Fotoğrafınızı kırpın"
+      }
+    },
+    "experience": {
+      "title": "Deneyim",
+      "addExperience": "Deneyim Ekle",
+      "emptyMessage": "Henüz deneyim girdisi eklenmedi. Başlamak için 'Deneyim Ekle'ye tıklayın.",
+      "deleteConfirm": {
+        "title": "Deneyimi Sil",
+        "message": "Bu deneyim girdisini silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+      }
+    },
+    "internships": {
+      "title": "Stajlar",
+      "addInternship": "Staj Ekle",
+      "emptyMessage": "Henüz staj girdisi eklenmedi. Başlamak için 'Staj Ekle'ye tıklayın.",
+      "deleteConfirm": {
+        "title": "Stajı Sil",
+        "message": "Bu staj girdisini silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+      }
+    },
+    "education": {
+      "title": "Eğitim",
+      "addEducation": "Eğitim Ekle",
+      "emptyMessage": "Henüz eğitim girdisi eklenmedi. Başlamak için 'Eğitim Ekle'ye tıklayın.",
+      "institution": "Kurum",
+      "degree": "Derece",
+      "fieldOfStudy": "Eğitim Alanı",
+      "graduationScore": "Mezuniyet Puanı/Not Ortalaması",
+      "deleteConfirm": {
+        "title": "Eğitimi Sil",
+        "message": "Bu eğitim girdisini silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+      }
+    },
+    "skills": {
+      "title": "Beceriler",
+      "addSkill": "Beceri Ekle",
+      "emptyMessage": "Henüz beceri eklenmedi. Başlamak için 'Beceri Ekle'ye tıklayın.",
+      "skillTitle": "Beceri/Kategori",
+      "column": "Sütun",
+      "deleteConfirm": {
+        "title": "Beceriyi Sil",
+        "message": "Bu beceriyi silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+      }
+    },
+    "projects": {
+      "title": "Projeler",
+      "addProject": "Proje Ekle",
+      "emptyMessage": "Çalışmalarınızı sergilemek için dikkate değer projelerinizi ekleyin.",
+      "projectTitle": "Proje Başlığı",
+      "projectUrl": "Proje URL'si",
+      "links": "Bağlantılar",
+      "addLink": "Bağlantı Ekle",
+      "removeLink": "Bağlantıyı Kaldır",
+      "linkLabel": "Etiket (örn. GitHub)",
+      "linkUrl": "URL",
+      "emptyLinks": "Henüz bağlantı yok. GitHub, Canlı Demo, blog yazıları vb. ekleyin.",
+      "column": "Sütun",
+      "deleteConfirm": {
+        "title": "Projeyi Sil",
+        "message": "Bu projeyi silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+      }
+    },
+    "languages": {
+      "title": "Diller",
+      "addLanguage": "Dil Ekle",
+      "emptyMessage": "Henüz dil eklenmedi. Başlamak için 'Dil Ekle'ye tıklayın.",
+      "languageName": "Dil",
+      "proficiency": "Yeterlilik Seviyesi",
+      "column": "Sütun",
+      "deleteConfirm": {
+        "title": "Dili Sil",
+        "message": "Bu dili silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+      }
+    },
+    "volunteering": {
+      "title": "Gönüllülük",
+      "addVolunteering": "Gönüllülük Deneyimi Ekle",
+      "emptyMessage": "Henüz gönüllülük deneyimi eklenmedi. Başlamak için 'Gönüllülük Deneyimi Ekle'ye tıklayın.",
+      "organization": "Organizasyon",
+      "column": "Sütun",
+      "deleteConfirm": {
+        "title": "Gönüllülük Deneyimini Sil",
+        "message": "Bu gönüllülük deneyimini silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+      }
+    },
+    "certificates": {
+      "title": "Sertifikalar",
+      "addCertificate": "Sertifika Ekle",
+      "emptyMessage": "Henüz sertifika eklenmedi. Başlamak için 'Sertifika Ekle'ye tıklayın.",
+      "certificateTitle": "Sertifika Başlığı",
+      "issuer": "Veren Kurum",
+      "date": "Veriliş Tarihi",
+      "url": "Sertifika URL'si",
+      "column": "Sütun",
+      "deleteConfirm": {
+        "title": "Sertifikayı Sil",
+        "message": "Bu sertifikayı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+      }
+    }
+  },
+  "validation": {
+    "required": "Bu alan zorunludur",
+    "email": "Lütfen geçerli bir e-posta adresi girin",
+    "url": "Lütfen geçerli bir URL girin"
+  },
+  "notifications": {
+    "resumeCreated": "Özgeçmiş başarıyla oluşturuldu",
+    "resumeDeleted": "Özgeçmiş başarıyla silindi",
+    "resumeDuplicated": "Özgeçmiş başarıyla kopyalandı",
+    "dataImported": "Veriler başarıyla içe aktarıldı",
+    "dataExported": "Veriler başarıyla dışa aktarıldı",
+    "settingsReset": "Ayarlar varsayılanlara sıfırlandı",
+    "autoSyncedToCloud": "{count} özgeçmiş buluta kaydedildi | {count} özgeçmiş buluta kaydedildi",
+    "cloudLimitReached": "Bulut sınırına ulaşıldı - {count} özgeçmiş yerelde tutuldu | Bulut sınırına ulaşıldı - {count} özgeçmiş yerelde tutuldu",
+    "updateAvailable": "Yeni bir sürüm mevcut",
+    "updateAvailableDescription": "En son iyileştirmeleri yüklemek için yenileyin.",
+    "updateRefresh": "Yenile"
+  },
+  "platforms": {
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "twitter": "Twitter",
+    "portfolio": "Portföy",
+    "dribbble": "Dribbble",
+    "medium": "Medium",
+    "devto": "Dev.to",
+    "personal": "Kişisel",
+    "other": "Diğer"
+  },
+  "template": {
+    "at": " - ",
+    "present": "Devam Ediyor",
+    "grade": "Not:",
+    "separator": ", "
+  },
+  "auth": {
+    "signIn": "Giriş Yap",
+    "signUp": "Kayıt Ol",
+    "signOut": "Çıkış Yap",
+    "createAccount": "Hesap Oluştur",
+    "password": "Şifre",
+    "confirmPassword": "Şifreyi Onayla",
+    "currentPassword": "Mevcut Şifre",
+    "newPassword": "Yeni Şifre",
+    "enterEmail": "E-postanızı girin",
+    "enterPassword": "Şifrenizi girin",
+    "enterName": "Adınızı girin",
+    "enterCurrentPassword": "Mevcut şifrenizi girin",
+    "enterNewPassword": "Yeni şifrenizi girin",
+    "confirmNewPassword": "Yeni şifrenizi onaylayın",
+    "createPasswordPlaceholder": "Bir şifre oluşturun (en az 6 karakter)",
+    "confirmPasswordPlaceholder": "Şifrenizi onaylayın",
+    "signInDescription": "Özgeçmişlerinize erişmek için hesabınıza giriş yapın",
+    "createAccountDescription": "Özgeçmişlerinizi kaydetmek ve erişmek için ücretsiz bir hesap oluşturun",
+    "dontHaveAccount": "Hesabınız yok mu?",
+    "alreadyHaveAccount": "Zaten bir hesabınız var mı?",
+    "passwordsDoNotMatch": "Şifreler eşleşmiyor",
+    "loginFailed": "Giriş başarısız oldu",
+    "registrationFailed": "Kayıt başarısız oldu",
+    "accountCreatedSuccess": "Hesap başarıyla oluşturuldu! Yönlendiriliyor...",
+    "passwordChangedSuccess": "Şifre başarıyla değiştirildi",
+    "passwordChangeError": "Şifre değiştirilemedi",
+    "currentPasswordRequired": "Mevcut şifre zorunludur",
+    "newPasswordRequired": "Yeni şifre zorunludur",
+    "newPasswordMinLength": "Yeni şifre en az 8 karakter olmalıdır",
+    "newPasswordsDoNotMatch": "Yeni şifreler eşleşmiyor",
+    "changingPassword": "Şifre Değiştiriliyor...",
+    "changePassword": "Şifreyi Değiştir",
+    "clearForm": "Formu Temizle",
+    "passwordMinLengthHint": "Şifre en az 8 karakter uzunluğunda olmalıdır",
+    "forgotPassword": "Şifrenizi mi unuttunuz?",
+    "forgotPasswordTitle": "Şifrenizi Sıfırlayın",
+    "forgotPasswordDescription": "E-posta adresinizi girin, şifrenizi sıfırlamanız için size bir bağlantı gönderelim",
+    "sendResetLink": "Sıfırlama Bağlantısını Gönder",
+    "sendingResetLink": "Gönderiliyor...",
+    "resetLinkSent": "Sıfırlama Bağlantısı Gönderildi!",
+    "resetLinkSentDescription": "Şifrenizi sıfırlama bağlantısı için e-postanızı kontrol edin. Görmezseniz, spam klasörünüzü kontrol edin.",
+    "resetPassword": "Şifreyi Sıfırla",
+    "resettingPassword": "Sıfırlanıyor...",
+    "resetPasswordDescription": "Aşağıya yeni şifrenizi girin",
+    "resetPasswordSuccess": "Şifre başarıyla sıfırlandı! Yönlendiriliyor...",
+    "resetPasswordError": "Şifre sıfırlanamadı",
+    "invalidResetLink": "Geçersiz veya süresi dolmuş sıfırlama bağlantısı",
+    "backToSignIn": "Giriş Yap'a Dön",
+    "tooManyRequests": "Çok fazla istek. Lütfen daha sonra tekrar deneyin.",
+    "rateLimitWait": "Lütfen başka bir sıfırlama bağlantısı talep etmeden önce bekleyin.",
+    "continueWithGoogle": "Google ile Devam Et",
+    "orContinueWith": "veya şununla devam et",
+    "googleOAuthFailed": "Google girişi başarısız oldu. Lütfen tekrar deneyin.",
+    "googleNoEmail": "Google hesabı bir e-posta adresi sağlamadı.",
+    "googleHandlerError": "Google girişi sırasında bir şeyler ters gitti.",
+    "googleUserCreationFailed": "Google profilinden hesabınız oluşturulamadı."
+  },
+  "profile": {
+    "title": "Profil Ayarları",
+    "description": "Hesap ayarlarınızı ve tercihlerinizi yönetin",
+    "personalInformation": "Kişisel Bilgiler",
+    "viewAndManage": "Hesap ayrıntılarınızı görüntüleyin ve yönetin",
+    "notProvided": "Sağlanmadı",
+    "accountInformation": "Hesap Bilgileri",
+    "accountInfoDescription": "Hesabınız, 3 adede kadar özgeçmişi buluta senkronize etmenize olanak tanır.",
+    "updatePasswordDescription": "Hesabınızı güvende tutmak için şifrenizi güncelleyin",
+    "pleaseFixErrors": "Lütfen aşağıdaki hataları düzeltin:"
+  },
+  "resumes": {
+    "pageTitle": "Özgeçmişleriniz - Ücretsiz Özgeçmişler Oluşturun ve Yönetin | Resume For Free",
+    "pageDescription": "Sınırsız özgeçmişleri tek bir yerden yönetin. Ücretsiz profesyonel özgeçmişler oluşturun, düzenleyin, çoğaltın ve düzenleyin. Depolama sınırı yok, tam gizlilik.",
+    "title": "Özgeçmişleriniz",
+    "resumeCount": {
+      "total": "toplam",
+      "of": "/",
+      "resume": "özgeçmiş",
+      "resumes": "özgeçmiş"
+    },
+    "actions": {
+      "new": "Yeni",
+      "import": "İçe Aktar",
+      "cloudSync": "Bulut Senkronizasyonu",
+      "createNew": "Yeni Özgeçmiş Oluştur",
+      "searchPlaceholder": "Özgeçmişleri ara..."
+    },
+    "banner": {
+      "saveToCloud": "Özgeçmişlerinizi Buluta Kaydedin",
+      "registerPrompt": "3 adede kadar özgeçmişi buluta kaydetmek ve herhangi bir tarayıcıdan erişmek için ücretsiz bir hesaba kaydolun. Çalışmalarınızı bir daha asla kaybetmeyin!",
+      "registerFree": "Ücretsiz Kayıt Ol",
+      "login": "Giriş Yap",
+      "cloudAvailable": "Bulut Depolama Mevcut",
+      "cloudAvailableDescription": "Artık 3 adede kadar özgeçmişi buluta kaydedebilir ve herhangi bir tarayıcıdan erişebilirsiniz. Özgeçmişlerinizi senkronize etmek için \"Bulut Senkronizasyonu\" düğmesini kullanın."
+    },
+    "status": {
+      "loading": "Özgeçmişler yükleniyor...",
+      "failed": "Özgeçmişler yüklenemedi",
+      "active": "Aktif",
+      "synced": "Senkronize Edildi",
+      "notSynced": "Senkronize Edilmedi",
+      "updated": "Güncellendi"
+    },
+    "card": {
+      "editNameTitle": "Özgeçmiş adını düzenle",
+      "noName": "İsim belirtilmemiş",
+      "noPosition": "Pozisyon belirtilmemiş",
+      "noSections": "Bölüm eklenmemiş",
+      "experience": "deneyim",
+      "experiences": "deneyim",
+      "education": "eğitim",
+      "skill": "beceri",
+      "skills": "beceri",
+      "build": "Oluştur",
+      "copy": "Kopyala",
+      "exportTitle": "Özgeçmişi dışa aktar",
+      "syncTitle": "Buluta senkronize et",
+      "disableSync": "Bulut Senkronizasyonunu Devre Dışı Bırak",
+      "delete": "Sil"
+    },
+    "empty": {
+      "noResumes": "Henüz özgeçmiş yok",
+      "createFirst": "Başlamak için ilk özgeçmişinizi oluşturun",
+      "createFirstButton": "İlk Özgeçmişinizi Oluşturun",
+      "noResults": "Özgeçmiş bulunamadı",
+      "noResultsMessage": "Aramanızla eşleşen özgeçmiş yok:",
+      "clearSearch": "Aramayı Temizle",
+      "createNew": "Yeni Özgeçmiş Oluştur"
+    },
+    "modals": {
+      "firstTime": {
+        "title": "Buluta Kaydedilsin mi?",
+        "description": "Verileriniz varsayılan olarak yerel olarak kaydedilir. Cihazlar arasında senkronize etmek için ücretsiz bir hesap oluşturun.",
+        "accessAnywhere": "Her cihazdan erişim",
+        "autoBackup": "Otomatik yedekleme",
+        "freeResumes": "3 özgeçmişe kadar ücretsiz",
+        "signUp": "Kayıt Ol",
+        "login": "Giriş Yap",
+        "continueLocally": "Yerel tarayıcıya kaydet",
+        "dontShowAgain": "Tekrar gösterme"
+      },
+      "create": {
+        "title": "Yeni Özgeçmiş Oluştur",
+        "resumeName": "Özgeçmiş Adı",
+        "enterName": "Özgeçmiş adını girin",
+        "navigateToBuilder": "Oluşturduktan sonra oluşturucuya git",
+        "saveToCloud": "Buluta kaydet",
+        "slotsAvailableMessage": "{limit} bulut yuvasından {remaining} tanesi kullanılabilir",
+        "noSlotsAvailableMessage": "Kullanılabilir bulut yuvası yok ({count}/{limit} kullanıldı)",
+        "createButton": "Özgeçmiş Oluştur",
+        "resumeLanguage": "Özgeçmiş Dili"
+      },
+      "copy": {
+        "title": "Özgeçmişi Kopyala",
+        "resumeName": "Özgeçmiş Adı",
+        "enterName": "Özgeçmiş adını girin",
+        "navigateToBuilder": "Kopyaladıktan sonra oluşturucuya git",
+        "copyButton": "Özgeçmişi Kopyala"
+      },
+      "export": {
+        "title": "Özgeçmişleri Dışa Aktar",
+        "description": "JSON olarak dışa aktarılacak özgeçmişleri seçin",
+        "infoMessage": "Bu, yedekleme veya aktarım amacıyla özgeçmiş verilerini JSON dosyaları olarak dışa aktarır. PDF özgeçmişlerini indirmek için lütfen oluşturucu sayfasındaki indir düğmesini kullanın.",
+        "selectAll": "Tümünü Seç",
+        "selected": "seçildi",
+        "selectedCount": "{count} {countPlural} seçildi"
+      },
+      "cloudSync": {
+        "title": "Bulut Senkronizasyonu",
+        "description": "Bulutta {count}/{limit} özgeçmişiniz var. Kalan: {remaining} {remainingPlural}.",
+        "slot": "yuva",
+        "slots": "yuva",
+        "allSynced": "Tüm özgeçmişler buluta senkronize edildi",
+        "unsyncHint": "Bir özgeçmişin senkronizasyonunu kaldırmak için özgeçmiş menüsündeki \"Bulut Senkronizasyonunu Devre Dışı Bırak\" seçeneğini kullanın.",
+        "limitExceeded": "Depolama Sınırı Aşıldı",
+        "limitExceededMessage": "{count} yeni {countPlural} senkronize etmeye çalışıyorsunuz, ancak yalnızca {remaining} {remainingPlural} kaldı. Lütfen bazı özgeçmişlerin seçimini kaldırın veya mevcut olanları buluttan silin.",
+        "deselectAll": "Tüm Seçimleri Kaldır",
+        "selectAll": "Tümünü Seç",
+        "syncButton": "{count} {countPlural} Senkronize Et",
+        "exp": "deneyim",
+        "edu": "eğitim",
+        "projects": "proje",
+        "noSections": "Bölüm yok"
+      },
+      "cloudSyncPrompt": {
+        "title": "Özgeçmişinizi Buluta Kaydetmek İster misiniz?",
+        "description": "Özgeçmişiniz şu anda yerel olarak kaydediliyor. Bulutla senkronize etmek ister misiniz?",
+        "benefits": {
+          "title": "Bulut Senkronizasyonunun Faydaları",
+          "accessAnywhere": "Özgeçmişinize herhangi bir cihazdan erişin",
+          "autoBackup": "Otomatik yedekleme ve koruma",
+          "realTimeSync": "Gerçek zamanlı senkronizasyon",
+          "neverLose": "Çalışmanızı asla kaybetmeyin"
+        },
+        "limit": {
+          "title": "Bulut Depolama Sınırı",
+          "description": "Ücretsiz hesabınızla buluta en fazla 3 özgeçmiş kaydedebilirsiniz. Şu anda {remaining} kullanılabilir yuvanız var."
+        },
+        "local": {
+          "title": "Yerel Depolama İle Devam Et",
+          "description": "Özgeçmişiniz bu tarayıcıda yerel olarak kayıtlı kalacaktır. Bulut senkronizasyonunu istediğiniz zaman özgeçmiş ayarlarından etkinleştirebilirsiniz."
+        },
+        "dontAskAgain": "Bu özgeçmiş için bana tekrar sorma",
+        "enableSync": "Bulut Senkronizasyonunu Etkinleştir",
+        "keepLocal": "Sadece Yerelde Tut"
+      },
+      "delete": {
+        "title": "Özgeçmişi Sil",
+        "message": "\"{name}\" adlı özgeçmişi silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+        "confirmButton": "Sil"
+      },
+      "disableSync": {
+        "title": "Bulut Senkronizasyonunu Devre Dışı Bırak",
+        "message": "\"{name}\" adlı özgeçmişi buluttan kaldırmak istediğinizden emin misiniz? Özgeçmiş cihazınızda kalacak ancak artık senkronize edilmeyecek.",
+        "confirmButton": "Buluttan Kaldır"
+      },
+      "cancel": "İptal"
+    },
+    "toast": {
+      "creatingInCloud": "Özgeçmiş bulutta oluşturuluyor...",
+      "createdAndSaved": "\"{name}\" özgeçmişi oluşturuldu ve buluta kaydedildi",
+      "createdLocallyFailed": "\"{name}\" özgeçmişi yerel olarak oluşturuldu, ancak buluta kaydedilemedi: {error}",
+      "loginToSaveCloud": "Özgeçmişleri buluta kaydetmek için lütfen giriş yapın",
+      "created": "\"{name}\" özgeçmişi oluşturuldu",
+      "deletedFromCloud": "\"{name}\" özgeçmişi buluttan silindi",
+      "deletedLocallyFailed": "Özgeçmiş yerel olarak silindi, ancak buluttan silinemedi: {error}",
+      "deleted": "\"{name}\" özgeçmişi silindi",
+      "loginToSync": "Özgeçmişleri senkronize etmek için lütfen giriş yapın",
+      "resumeNotFound": "Özgeçmiş bulunamadı",
+      "syncingToCloud": "Özgeçmiş buluta senkronize ediliyor...",
+      "updatedInCloud": "\"{name}\" özgeçmişi bulutta güncellendi",
+      "syncedNewCopy": "\"{name}\" özgeçmişi buluta senkronize edildi (yeni kopya oluşturuldu)",
+      "syncedToCloud": "\"{name}\" özgeçmişi buluta senkronize edildi",
+      "syncFailed": "Özgeçmiş senkronize edilemedi: {error}",
+      "removedFromCloud": "\"{name}\" buluttan kaldırıldı ve bulut senkronizasyonu devre dışı bırakıldı",
+      "removeFailed": "Buluttan kaldırılamadı: {error}. Bulut senkronizasyonu yerel olarak devre dışı bırakıldı.",
+      "syncingMultiple": "{count} özgeçmiş buluta senkronize ediliyor...",
+      "syncedMultiple": "{count} özgeçmiş başarıyla buluta senkronize edildi",
+      "syncMultipleFailed": "Özgeçmişler senkronize edilemedi: {error}",
+      "resumeNotSynced": "Özgeçmiş buluta senkronize edilmedi"
+    }
+  },
+  "contact": {
+    "title": "Bize Ulaşın",
+    "description": "Bir sorunuz veya geri bildiriminiz mi var? Sizden haber almayı çok isteriz. Aşağıdaki formu doldurun, en kısa sürede size geri dönelim.",
+    "form": {
+      "name": {
+        "placeholder": "Adınızı girin"
+      },
+      "email": {
+        "placeholder": "E-posta adresinizi girin"
+      },
+      "subject": {
+        "label": "Konu",
+        "placeholder": "Bu ne hakkında?"
+      },
+      "message": {
+        "label": "Mesaj",
+        "placeholder": "Bize sorunuz veya geri bildiriminiz hakkında daha fazla bilgi verin..."
+      },
+      "submit": "Mesaj Gönder",
+      "sending": "Gönderiliyor..."
+    },
+    "success": {
+      "title": "Mesaj Başarıyla Gönderildi!",
+      "message": "Bizimle iletişime geçtiğiniz için teşekkür ederiz. Mümkün olan en kısa sürede size geri döneceğiz.",
+      "toast": "Mesaj başarıyla gönderildi",
+      "keepBuilding": "Oluşturmaya Devam Et"
+    },
+    "errors": {
+      "validation": "Lütfen girişinizi kontrol edin ve tekrar deneyin",
+      "rateLimit": "Çok fazla istek. Lütfen bir saat sonra tekrar deneyin.",
+      "generic": "Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin."
+    },
+    "alternative": {
+      "text": "Bize doğrudan şuradan da ulaşabilirsiniz:"
+    },
+    "seo": {
+      "title": "Bize Ulaşın - Resume For Free ile Yardım Alın | Destek",
+      "description": "Ücretsiz özgeçmiş oluşturucumuzla ilgili yardıma mı ihtiyacınız var? Profesyonel özgeçmişler oluşturma konusunda yardım almak için destek ekibimizle iletişime geçin. Hızlı ve güler yüzlü müşteri hizmetleri."
+    }
+  }
+}

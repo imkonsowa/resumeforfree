@@ -104,11 +104,11 @@ const handleEnter = (event: KeyboardEvent) => {
                             v-for="loc in localesList"
                             :key="loc.code"
                             type="button"
-                            class="flex flex-col items-center justify-center p-3 rounded-lg border-2 transition-all hover:border-primary hover:bg-secondary"
-                            :class="selectedLanguage === loc.code ? 'border-primary bg-secondary' : 'border-border bg-background'"
+                            class="flex items-center justify-between px-3 py-2 rounded-md border-2 transition-all hover:border-green-600/50 hover:bg-secondary"
+                            :class="selectedLanguage === loc.code ? 'border-green-600 bg-green-50' : 'border-border bg-background'"
                             @click="selectedLanguage = loc.code"
                         >
-                            <span class="text-sm font-semibold">{{ loc.name }}</span>
+                            <span class="text-sm font-medium">{{ loc.name }}</span>
                             <span class="text-xs text-muted-foreground uppercase">{{ loc.code }}</span>
                         </button>
                     </div>

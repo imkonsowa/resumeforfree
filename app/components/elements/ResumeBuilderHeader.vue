@@ -5,11 +5,6 @@
                 <h1 class="text-2xl font-bold text-gray-900">
                     {{ resumeStore.activeResume?.name || t('builder.defaultTitle') }}
                 </h1>
-                <ResumeLanguageSelector
-                    v-if="activeResume"
-                    :model-value="activeResume.language"
-                    @update="handleLanguageChange"
-                />
             </div>
             <div class="flex items-center space-x-2">
                 <Button
@@ -66,7 +61,6 @@
 import { Button } from '~/components/ui/button';
 import { ChevronDown, ChevronUp, ListIcon, Cloud, Loader2 } from 'lucide-vue-next';
 import ResumeStepper from '~/components/elements/ResumeStepper.vue';
-import ResumeLanguageSelector from '~/components/elements/ResumeLanguageSelector.vue';
 
 const resumeStore = useResumeStore();
 const settingsStore = useSettingsStore();
@@ -100,10 +94,6 @@ const syncingText = computed(() => {
         return t('builder.syncingToCloud');
     }
 });
-const handleLanguageChange = (code: string) => {
-    if (!activeResume.value) return;
-    resumeStore.setResumeLanguage(activeResume.value.id, code);
-};
 const handleCloudSync = async () => {
     if (!activeResume.value || isAnySyncing.value) return;
     const { toast } = await import('vue-sonner');
