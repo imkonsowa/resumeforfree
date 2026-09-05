@@ -1,7 +1,7 @@
 import type { ResumeData, SectionHeaders, SectionOrder } from '~/types/resume';
 import type { SectionContent, Template, TemplateParseInput, TemplateRenderConfig } from '~/types/template';
 import { escapeTypstText } from '~/utils/stringUtils';
-import { convertEmail, convertLink, convertList, LATIN_FONT_STACK, renderDescription, SECTION_SPACING } from '~/utils/typstUtils';
+import { convertEmail, convertLink, convertList, LATIN_FONT_STACK, renderDescription, renderTemplateSubHeader, renderTemplateSubHeaderContent, SECTION_SPACING } from '~/utils/typstUtils';
 import { RendererContext } from '~/utils/rendererContext';
 import { isRtlLocale } from '~/composables/useLocale';
 import { SECTION_TRANSLATION_MAP } from '~/composables/useSectionHeader';
@@ -43,15 +43,15 @@ function getSectionLabel(section: keyof SectionHeaders, data: ResumeData, contex
     return (key ? context.t(key) : '').toUpperCase();
 }
 
-function titleMarkup(item: SectionContent): string {
-    if (item.titleContent) return `#text(weight: "bold")[${item.titleContent}]`;
-    if (item.title) return `*${escapeTypstText(item.title)}*`;
+function titleMarkup(item: SectionContent, fontSize: number): string {
+    if (item.titleContent) return renderTemplateSubHeaderContent(item.titleContent, fontSize);
+    if (item.title) return renderTemplateSubHeader(item.title, fontSize);
     return '';
 }
 
 function renderRowContent(item: SectionContent, fontSize: number): string {
     const parts: string[] = [];
-    const title = titleMarkup(item);
+    const title = titleMarkup(item, fontSize);
     if (title) parts.push(title);
     if (item.content) parts.push(renderDescription(item.content, fontSize));
     if (item.description) parts.push(renderDescription(item.description, fontSize));
