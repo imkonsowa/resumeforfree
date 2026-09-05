@@ -13,6 +13,14 @@ import {
     SECTION_SPACING,
 } from './typstUtils';
 
+const joinItems = (items: string[], config: TemplateRenderConfig, spacing?: string): string => {
+    const gap = spacing || config.sections.itemSpacing || ITEMS_SPACING;
+    return items
+        .filter(content => content.trim())
+        .map(content => `#block(above: 0em, below: ${gap})[${content}]`)
+        .join('');
+};
+
 const renderItemTitle = (item: SectionContent, fontSize: number): string => {
     if (item.titleContent) return renderTemplateSubHeaderContent(item.titleContent, fontSize);
     return renderTemplateSubHeader(item.title, fontSize);
@@ -84,10 +92,7 @@ export const formatExperienceItems = (
         }
         return content;
     });
-    if (config.layout === 'two-column') {
-        return formattedItems.join('\n\n');
-    }
-    return formattedItems.join(config.sections.joinSeparator);
+    return joinItems(formattedItems, config);
 };
 export const formatEducationItems = (
     sectionContent: SectionContent[],
@@ -117,10 +122,7 @@ export const formatEducationItems = (
         }
         return content;
     });
-    if (config.layout === 'two-column') {
-        return formattedItems.join('\n\n');
-    }
-    return formattedItems.join(config.sections.joinSeparator);
+    return joinItems(formattedItems, config);
 };
 export const formatProjectsItems = (
     sectionContent: SectionContent[],
@@ -150,13 +152,8 @@ export const formatProjectsItems = (
             content += convertList(item.achievements);
         }
         return content;
-    }).filter(content => content.trim());
-    if (config.sections.spacing === 'block' && config.projects.itemSpacing) {
-        return formattedItems
-            .map(content => `#block(above: 0em, below: ${config.projects.itemSpacing})[${content}]`)
-            .join('');
-    }
-    return formattedItems.join(config.sections.joinSeparator);
+    });
+    return joinItems(formattedItems, config, config.projects.itemSpacing);
 };
 export const formatCertificatesItems = (
     sectionContent: SectionContent[],
@@ -183,10 +180,7 @@ export const formatCertificatesItems = (
         }
         return content;
     });
-    if (config.layout === 'two-column') {
-        return formattedItems.join('\n\n');
-    }
-    return formattedItems.join(config.sections.joinSeparator);
+    return joinItems(formattedItems, config);
 };
 export const formatSimpleItems = (
     sectionContent: SectionContent[],
