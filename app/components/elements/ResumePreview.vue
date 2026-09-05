@@ -210,12 +210,10 @@
                                 class="flex-1 overflow-auto p-4"
                             >
                                 <div class="preview-container flex justify-center min-h-full">
-                                    <!-- eslint-disable vue/no-v-html -->
                                     <div
                                         class="resume-preview-wrapper"
                                         v-html="previewContent"
                                     />
-                                    <!-- eslint-enable vue/no-v-html -->
                                 </div>
                             </div>
                             <div
@@ -272,6 +270,7 @@ import ZoomControls from '~/components/elements/ZoomControls.vue';
 import InvisibleTurnstile from '~/components/elements/InvisibleTurnstile.vue';
 import { useSettingsStore } from '~/stores/settings';
 import { useResumeStore } from '~/stores/resume';
+import { describeTypstError } from '~/utils/stringUtils';
 import { storeToRefs } from 'pinia';
 
 const availableTemplates = getTemplateList();
@@ -284,7 +283,7 @@ const { isReady: typstReady } = useTypstLoader();
 const settingsStore = useSettingsStore();
 const resumeStore = useResumeStore();
 const { resumeData, activeResume } = storeToRefs(resumeStore);
-const { selectedFont, selectedTemplate, fontSize, photoShape } = storeToRefs(settingsStore);
+const { selectedFont, selectedTemplate, fontSize, photoShape, showSectionHeaderLine } = storeToRefs(settingsStore);
 const isLoading = ref(false);
 const error = ref<string | null>(null);
 const previewContent = ref<string>('');
@@ -334,7 +333,10 @@ const generatePreviewInternal = async () => {
     }
     catch (err) {
         console.error(err);
-        error.value = err instanceof Error ? err.message : 'Failed to generate preview';
+        const detail = describeTypstError(err);
+        error.value = detail
+            ? t('builder.previewErrorDetailed', { detail })
+            : t('builder.previewError');
     }
     finally {
         isLoading.value = false;
@@ -392,7 +394,7 @@ const debouncedGeneratePreview = useDebounceFn(() => {
 }, 100);
 const activeResumeLanguage = computed(() => resumeStore.activeResumeLanguage);
 watch(
-    [resumeData, selectedTemplate, selectedFont, fontSize, photoShape, activeResumeLanguage],
+    [resumeData, selectedTemplate, selectedFont, fontSize, photoShape, showSectionHeaderLine, activeResumeLanguage],
     () => {
         debouncedGeneratePreview();
     },
