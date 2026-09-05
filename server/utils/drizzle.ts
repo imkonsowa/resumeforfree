@@ -3,7 +3,6 @@ import type { D1Database } from '@cloudflare/workers-types';
 import type { H3Event } from 'h3';
 import * as schema from '../database/schema';
 
-// Re-export schema for use in API routes
 export * from '../database/schema';
 
 export function useDrizzle(event: H3Event) {

@@ -1,10 +1,9 @@
 import type { D1Database } from '@cloudflare/workers-types';
 import { sendPasswordResetEmail, hashToken } from '../../utils/email';
 
-// Rate limiting constants
-const RATE_LIMIT_WINDOW_MINUTES = 60; // 1 hour window
-const MAX_REQUESTS_PER_WINDOW = 3; // Max 3 requests per hour
-const MIN_INTERVAL_MINUTES = 5; // Minimum 5 minutes between requests
+const RATE_LIMIT_WINDOW_MINUTES = 60;
+const MAX_REQUESTS_PER_WINDOW = 3;
+const MIN_INTERVAL_MINUTES = 5;
 
 export default defineEventHandler(async (event) => {
     const config = useRuntimeConfig();
@@ -23,7 +22,6 @@ export default defineEventHandler(async (event) => {
         });
     }
 
-    // Validate Turnstile in production
     if (process.env.NODE_ENV === 'production') {
         const isValidToken = await verifyTurnstileToken(turnstileToken, config.turnstile.secretKey);
         if (!isValidToken) {
@@ -34,7 +32,6 @@ export default defineEventHandler(async (event) => {
         }
     }
 
-    // For development without database
     if (!db) {
         console.log('[DEV] Password reset requested for:', email);
         return {
@@ -52,13 +49,11 @@ export default defineEventHandler(async (event) => {
     }
 
     try {
-        // Check if user exists
         const user = await db
             .prepare('SELECT id, email FROM users WHERE email = ?')
             .bind(email.toLowerCase())
             .first<{ id: string; email: string }>();
 
-        // Always return success to prevent email enumeration
         if (!user) {
             return {
                 success: true,
@@ -66,7 +61,6 @@ export default defineEventHandler(async (event) => {
             };
         }
 
-        // Rate limiting: Check recent requests for this user
         const windowStart = new Date(Date.now() - RATE_LIMIT_WINDOW_MINUTES * 60 * 1000).toISOString();
         const recentTokens = await db
             .prepare(`
@@ -77,7 +71,6 @@ export default defineEventHandler(async (event) => {
             .bind(user.id, windowStart)
             .all<{ created_at: string }>();
 
-        // Check if max requests exceeded
         if (recentTokens.results && recentTokens.results.length >= MAX_REQUESTS_PER_WINDOW) {
             throw createError({
                 statusCode: 429,
@@ -85,7 +78,6 @@ export default defineEventHandler(async (event) => {
             });
         }
 
-        // Check minimum interval between requests
         if (recentTokens.results && recentTokens.results.length > 0) {
             const lastRequest = new Date(recentTokens.results[0].created_at);
             const minIntervalMs = MIN_INTERVAL_MINUTES * 60 * 1000;
@@ -100,20 +92,16 @@ export default defineEventHandler(async (event) => {
             }
         }
 
-        // Generate reset token
         const tokenId = crypto.randomUUID().replace(/-/g, '').slice(0, 16);
         const token = crypto.randomUUID();
         const hashedToken = await hashToken(token);
 
-        // Set expiration to 1 hour from now
         const expiresAt = new Date(Date.now() + 60 * 60 * 1000).toISOString();
 
-        // Clean up expired tokens for this user (keep recent ones for rate limiting)
         await db.prepare('DELETE FROM password_reset_tokens WHERE user_id = ? AND expires_at < datetime("now")')
             .bind(user.id)
             .run();
 
-        // Store new token in database (user can have multiple valid tokens, all work)
         await db.prepare(`
             INSERT INTO password_reset_tokens (id, user_id, token_hash, expires_at)
             VALUES (?, ?, ?, ?)
@@ -121,7 +109,6 @@ export default defineEventHandler(async (event) => {
             .bind(tokenId, user.id, hashedToken, expiresAt)
             .run();
 
-        // Send email with unhashed token
         const emailSent = await sendPasswordResetEmail(sendEmail, user.email, token);
 
         if (!emailSent) {
@@ -134,7 +121,6 @@ export default defineEventHandler(async (event) => {
         };
     }
     catch (error: unknown) {
-        // Re-throw rate limit errors
         if ((error as { statusCode?: number }).statusCode === 429) {
             throw error;
         }

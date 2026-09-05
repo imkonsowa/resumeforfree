@@ -25,7 +25,6 @@ class DatabaseService {
 
 export default defineEventHandler(async (event) => {
     try {
-        // Get auth token from cookies
         const token = getCookie(event, 'auth-token');
 
         if (!token) {
@@ -35,7 +34,6 @@ export default defineEventHandler(async (event) => {
             });
         }
 
-        // Verify JWT token
         let payload;
         try {
             const isValid = await jwt.verify(token, JWT_SECRET || '');
@@ -62,7 +60,6 @@ export default defineEventHandler(async (event) => {
         const body = await readBody(event);
         const { currentPassword, newPassword } = body;
 
-        // Validate input
         if (!currentPassword || !newPassword) {
             throw createError({
                 statusCode: 400,

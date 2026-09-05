@@ -2,10 +2,6 @@ import { sqliteTable, text, integer, index } from 'drizzle-orm/sqlite-core';
 import { sql } from 'drizzle-orm';
 import type { ResumeData, ResumeSettings, UserSettings } from '~/types/resume';
 
-/**
- * Users table
- * Stores user authentication and profile information
- */
 export const users = sqliteTable('users', {
     id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID().replace(/-/g, '')),
     email: text('email').notNull().unique(),
@@ -13,17 +9,13 @@ export const users = sqliteTable('users', {
     name: text('name'),
     verified: integer('verified', { mode: 'boolean' }).default(false),
     verificationToken: text('verification_token'),
-    verificationSentAt: text('verification_sent_at'), // SQLite uses TEXT for dates
+    verificationSentAt: text('verification_sent_at'),
     createdAt: text('created_at').default(sql`CURRENT_TIMESTAMP`),
     updatedAt: text('updated_at').default(sql`CURRENT_TIMESTAMP`),
 }, table => ({
     emailIdx: index('idx_users_email').on(table.email),
 }));
 
-/**
- * Resumes table
- * Stores user resume data with JSON fields
- */
 export const resumes = sqliteTable('resumes', {
     id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID().replace(/-/g, '')),
     userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
@@ -41,10 +33,6 @@ export const resumes = sqliteTable('resumes', {
     userActiveIdx: index('idx_resumes_user_active').on(table.userId, table.isActive),
 }));
 
-/**
- * User Settings table
- * Stores user-specific application settings
- */
 export const userSettings = sqliteTable('user_settings', {
     id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID().replace(/-/g, '')),
     userId: text('user_id').notNull().unique().references(() => users.id, { onDelete: 'cascade' }),
@@ -55,10 +43,6 @@ export const userSettings = sqliteTable('user_settings', {
     userIdIdx: index('idx_user_settings_user_id').on(table.userId),
 }));
 
-/**
- * Contact Messages table
- * Stores messages submitted via contact form
- */
 export const contactMessages = sqliteTable('contact_messages', {
     id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID().replace(/-/g, '')),
     name: text('name').notNull(),

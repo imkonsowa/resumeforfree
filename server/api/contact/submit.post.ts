@@ -1,27 +1,23 @@
 import type { D1Database } from '@cloudflare/workers-types';
 import { sendContactNotificationEmail } from '../../utils/email';
 
-// Simple in-memory rate limiter (for production, consider Redis or D1-based storage)
 const rateLimitMap = new Map<string, number[]>();
-const RATE_LIMIT_WINDOW = 60 * 60 * 1000; // 1 hour in milliseconds
-const RATE_LIMIT_MAX = 3; // Max 3 submissions per hour
+const RATE_LIMIT_WINDOW = 60 * 60 * 1000;
+const RATE_LIMIT_MAX = 3;
 
 function checkRateLimit(ipAddress: string): boolean {
     const now = Date.now();
     const timestamps = rateLimitMap.get(ipAddress) || [];
 
-    // Filter out timestamps older than 1 hour
     const recentTimestamps = timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW);
 
     if (recentTimestamps.length >= RATE_LIMIT_MAX) {
-        return false; // Rate limit exceeded
+        return false;
     }
 
-    // Add current timestamp and update map
     recentTimestamps.push(now);
     rateLimitMap.set(ipAddress, recentTimestamps);
 
-    // Clean up old entries periodically (simple approach)
     if (rateLimitMap.size > 1000) {
         for (const [ip, times] of rateLimitMap.entries()) {
             const validTimes = times.filter(ts => now - ts < RATE_LIMIT_WINDOW);
@@ -31,7 +27,7 @@ function checkRateLimit(ipAddress: string): boolean {
         }
     }
 
-    return true; // Within rate limit
+    return true;
 }
 
 export default defineEventHandler(async (event) => {
@@ -45,11 +41,9 @@ export default defineEventHandler(async (event) => {
         });
     }
 
-    // Parse request body
     const body = await readBody(event);
     const { name, email, subject, message, turnstileToken } = body;
 
-    // Validate input
     if (!name || !email || !subject || !message) {
         throw createError({
             statusCode: 400,
@@ -57,7 +51,6 @@ export default defineEventHandler(async (event) => {
         });
     }
 
-    // Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         throw createError({
@@ -66,7 +59,6 @@ export default defineEventHandler(async (event) => {
         });
     }
 
-    // Verify Turnstile token (only in production)
     if (process.env.NODE_ENV === 'production') {
         const isValidToken = await verifyTurnstileToken(turnstileToken, config.turnstile.secretKey);
         if (!isValidToken) {
@@ -77,7 +69,6 @@ export default defineEventHandler(async (event) => {
         }
     }
 
-    // Get IP address and user agent
     const ipAddress = getRequestHeader(event, 'cf-connecting-ip')
         || getRequestHeader(event, 'x-forwarded-for')
         || getRequestHeader(event, 'x-real-ip')
@@ -85,7 +76,6 @@ export default defineEventHandler(async (event) => {
 
     const userAgent = getRequestHeader(event, 'user-agent') || 'unknown';
 
-    // Check rate limit
     if (!checkRateLimit(ipAddress)) {
         throw createError({
             statusCode: 429,
@@ -94,10 +84,8 @@ export default defineEventHandler(async (event) => {
     }
 
     try {
-        // Generate unique ID
         const messageId = crypto.randomUUID().replace(/-/g, '').slice(0, 16);
 
-        // Insert contact message into database
         await db.prepare(`
             INSERT INTO contact_messages
             (id, name, email, subject, message, ip_address, user_agent)

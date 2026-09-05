@@ -169,13 +169,10 @@ useHead({
 
 <template>
     <main>
-        <!-- ─── Hero ─────────────────────────────────────────────────────── -->
         <section class="border-b border-rule py-[72px] md:py-[88px]">
             <div class="max-w-[1180px] mx-auto px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-16 items-center">
-                    <!-- Left: copy -->
                     <div>
-                        <!-- Stats chip -->
                         <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-50 border border-green-200 text-xs font-medium text-green-700 mb-5">
                             <span class="w-1.5 h-1.5 rounded-full bg-green shrink-0" />
                             {{ formatNumber(stats.users) }} {{ $t('homepage.hero.stat1Label') }} · {{ formatNumber(stats.downloads) }} {{ $t('homepage.hero.stat2Label') }}
@@ -211,7 +208,6 @@ useHead({
                             </NuxtLink>
                         </p>
 
-                        <!-- Stats row -->
                         <div class="mt-10 pt-6 border-t border-rule grid grid-cols-3 gap-8">
                             <div>
                                 <div class="text-[22px] font-bold tracking-tight text-ink">
@@ -240,7 +236,6 @@ useHead({
                         </div>
                     </div>
 
-                    <!-- Right: sample resume preview (SVG as object; content isn't indexed as page content) -->
                     <div class="hidden lg:flex justify-center">
                         <object
                             :data="sampleResumeSrc"
@@ -254,7 +249,6 @@ useHead({
             </div>
         </section>
 
-        <!-- ─── Features ──────────────────────────────────────────────────── -->
         <section class="py-[88px] bg-white">
             <div class="max-w-[1180px] mx-auto px-6">
                 <div class="max-w-[620px] mb-12">
@@ -292,7 +286,6 @@ useHead({
             </div>
         </section>
 
-        <!-- ─── How It Works ──────────────────────────────────────────────── -->
         <section class="py-[88px] bg-bg-2 border-t border-b border-rule">
             <div class="max-w-[1180px] mx-auto px-6">
                 <div class="text-center max-w-[640px] mx-auto mb-12">
@@ -328,7 +321,6 @@ useHead({
             </div>
         </section>
 
-        <!-- ─── Compare Table ─────────────────────────────────────────────── -->
         <section class="py-[88px] bg-white">
             <div class="max-w-[980px] mx-auto px-6">
                 <div class="text-center mb-10">
@@ -433,7 +425,6 @@ useHead({
             </div>
         </section>
 
-        <!-- ─── Why This Exists ───────────────────────────────────────────── -->
         <section class="py-[88px] bg-bg-2 border-t border-b border-rule">
             <div
                 class="max-w-[980px] mx-auto px-6"
@@ -457,11 +448,9 @@ useHead({
             </div>
         </section>
 
-        <!-- ─── FAQ ───────────────────────────────────────────────────────── -->
         <section class="py-[88px] bg-white">
             <div class="max-w-[1180px] mx-auto px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-[72px]">
-                    <!-- Left: heading -->
                     <div>
                         <div class="text-xs uppercase tracking-widest font-semibold text-green-700 mb-3">
                             {{ $t('homepage.faq.eyebrow') }}
@@ -487,7 +476,6 @@ useHead({
                         </p>
                     </div>
 
-                    <!-- Right: accordion -->
                     <div class="bg-white border border-rule rounded-[10px] overflow-hidden">
                         <div
                             v-for="(item, index) in faqItems"
@@ -519,7 +507,6 @@ useHead({
             </div>
         </section>
 
-        <!-- ─── Final CTA ─────────────────────────────────────────────────── -->
         <section class="py-[88px] bg-bg-2 border-t border-rule">
             <div class="max-w-[640px] mx-auto px-6 text-center">
                 <h2 class="text-[clamp(30px,4vw,44px)] font-semibold tracking-tight leading-tight text-ink">

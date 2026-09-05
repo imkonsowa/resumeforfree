@@ -70,7 +70,6 @@ export const useSettingsSync = () => {
     const startSettingsSync = (): void => {
         if (!authStore.isAuthenticated) return;
 
-        // Watch for settings changes and sync with debouncing
         watch(
             () => settingsStore.settings,
             () => {

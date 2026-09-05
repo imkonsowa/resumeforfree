@@ -54,11 +54,9 @@ watch(
 
 <template>
     <div class="min-h-screen bg-white flex flex-col">
-        <!-- ─── Nav ────────────────────────────────────────────────────────── -->
         <header class="sticky top-0 z-40 border-b border-rule bg-white/90 backdrop-blur">
             <div class="max-w-[1180px] mx-auto px-6">
                 <div class="flex items-center justify-between h-[60px]">
-                    <!-- Left: wordmark + nav links -->
                     <div class="flex items-center gap-7">
                         <NuxtLink :to="localePath('/')">
                             <Wordmark />
@@ -77,7 +75,6 @@ watch(
                         </nav>
                     </div>
 
-                    <!-- Right: lang + github + auth -->
                     <div class="hidden md:flex items-center gap-1.5">
                         <LanguageSelector
                             show-icon
@@ -130,7 +127,6 @@ watch(
                         </ClientOnly>
                     </div>
 
-                    <!-- Mobile hamburger -->
                     <button
                         class="md:hidden p-2 text-ink-3 hover:text-ink transition-colors"
                         :aria-label="isMobileMenuOpen ? t('navigation.closeMenu') : t('navigation.openMenu')"
@@ -148,13 +144,11 @@ watch(
                 </div>
             </div>
 
-            <!-- Mobile drawer -->
             <div
                 v-if="isMobileMenuOpen"
                 class="md:hidden border-t border-rule bg-white"
             >
                 <div class="max-w-[1180px] mx-auto px-6 py-4 space-y-1">
-                    <!-- Nav links -->
                     <NuxtLink
                         v-for="link in navLinks"
                         :key="link.path"
@@ -179,7 +173,6 @@ watch(
 
                     <div class="h-px bg-rule my-2" />
 
-                    <!-- Auth -->
                     <ClientOnly>
                         <div
                             v-if="!authStore.isLoggedIn"
@@ -233,15 +226,12 @@ watch(
             <slot />
         </main>
 
-        <!-- ─── Footer ────────────────────────────────────────────────────── -->
         <footer
             v-if="route.path !== localePath('/builder')"
             class="border-t border-rule bg-white pt-14 pb-7"
         >
             <div class="max-w-[1180px] mx-auto px-6">
-                <!-- 4-column grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-10 mb-10">
-                    <!-- Wordmark + tagline -->
                     <div>
                         <Wordmark />
                         <p class="text-[13.5px] text-ink-4 mt-3 max-w-[320px] leading-relaxed">
@@ -249,7 +239,6 @@ watch(
                         </p>
                     </div>
 
-                    <!-- Product -->
                     <div>
                         <div class="text-[12px] uppercase tracking-[0.04em] font-semibold text-ink-4 mb-3">
                             {{ t('footer.productHeading') }}
@@ -266,7 +255,6 @@ watch(
                         </div>
                     </div>
 
-                    <!-- Resources -->
                     <div>
                         <div class="text-[12px] uppercase tracking-[0.04em] font-semibold text-ink-4 mb-3">
                             {{ t('footer.resourcesHeading') }}
@@ -285,7 +273,6 @@ watch(
                         </div>
                     </div>
 
-                    <!-- Support -->
                     <div>
                         <div class="text-[12px] uppercase tracking-[0.04em] font-semibold text-ink-4 mb-3">
                             {{ t('footer.supportHeading') }}
@@ -303,7 +290,6 @@ watch(
                     </div>
                 </div>
 
-                <!-- Bottom row -->
                 <div class="flex flex-col sm:flex-row justify-between items-center gap-2 pt-5 border-t border-rule text-[12.5px] text-ink-4">
                     <div>
                         <i18n-t

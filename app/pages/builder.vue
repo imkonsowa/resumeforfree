@@ -95,18 +95,14 @@ const { startAutoSync, stopAutoSync, isSyncing, lastSyncSuccess, lastSyncTime, l
 useTypstLoader();
 
 const checkOtherModals = () => {
-    // Show first time modal for unauthenticated users
     if (!hasSeenModal() && !authStore.isAuthenticated && resumeStore.resumeCount > 0) {
         showFirstTimeModal.value = true;
         return;
     }
 
-    // Check if should show cloud sync modal for authenticated users
     if (authStore.isAuthenticated) {
         startAutoSync();
 
-        // Check if active resume is not synced to cloud, prompt hasn't been dismissed,
-        // and the user still has available cloud slots
         const activeResume = resumeStore.activeResume;
         if (activeResume && !activeResume.serverId && resumeStore.canSaveToCloud) {
             const { isDismissed } = useCloudSyncPrompt(activeResume.id);
@@ -149,7 +145,6 @@ watch(() => authStore.isAuthenticated, (isAuthenticated) => {
     }
 });
 
-// Watch for active resume changes to check if we should show cloud sync modal
 watch(() => resumeStore.activeResumeId, (newResumeId) => {
     if (newResumeId && authStore.isAuthenticated) {
         const activeResume = resumeStore.activeResume;
@@ -224,7 +219,6 @@ const handleEnableSync = async (dontShowAgain: boolean) => {
         dismissPrompt();
     }
 
-    // Sync the resume to the server (this will create it on the server if needed)
     if (resumeStore.activeResumeId) {
         try {
             await resumeStore.syncResumeToServer(resumeStore.activeResumeId);
@@ -289,7 +283,6 @@ const orderedSections = computed(() => {
                 :last-sync-time="lastSyncTime"
                 :error-message="lastSyncError"
             />
-            <!-- Empty State: No Resumes -->
             <div
                 v-if="!hasResumes || !hasActiveResume"
                 class="min-h-screen flex items-center justify-center p-4"
@@ -318,7 +311,6 @@ const orderedSections = computed(() => {
                     </div>
                 </div>
             </div>
-            <!-- Builder Content: When Resume Exists -->
             <div
                 v-else
                 class="flex flex-col lg:flex-row"

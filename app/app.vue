@@ -11,7 +11,6 @@
 const { locale, locales } = useI18n();
 const rootEl = ref<HTMLElement | null>(null);
 
-// Inject hreflang alternate links and og:locale automatically per page
 const localeHead = useLocaleHead({ dir: true, lang: true, seo: true });
 useHead(() => ({
     htmlAttrs: localeHead.value.htmlAttrs ?? {},
@@ -19,12 +18,10 @@ useHead(() => ({
     meta: localeHead.value.meta ?? [],
 }));
 
-// Set initial direction after mount to avoid hydration mismatch
 onMounted(() => {
     updateDirection();
 });
 
-// Watch for language changes to update document direction
 watch(locale, () => {
     updateDirection();
 });
@@ -35,11 +32,9 @@ function updateDirection() {
         const dir = localeConfig?.dir || 'ltr';
         const isRtl = dir === 'rtl';
 
-        // Update document element
         document.documentElement.dir = dir;
         document.documentElement.lang = locale.value;
 
-        // Update root element
         if (rootEl.value) {
             rootEl.value.dir = dir;
             if (isRtl) {
