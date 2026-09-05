@@ -16,11 +16,18 @@ const convertResumeHeader = (data: ResumeData, context: RendererContext, sharedR
 ${positionBlock}
 ${profileSection}`;
 };
-const parse = ({ data, font, locale, t, fontSize, photoShape }: TemplateParseInput): string => {
+const parse = ({ data, font, locale, t, fontSize, photoShape, showSectionHeaderLine }: TemplateParseInput): string => {
     const isRtl = isRtlLocale(locale);
 
     const config = DEFAULT_LAYOUT_CONFIG;
-    const context = new RendererContext({ t, fontSize, config, locale, photoShape: photoShape || 'rectangle' });
+    const context = new RendererContext({
+        t,
+        fontSize,
+        config,
+        locale,
+        photoShape: photoShape || 'rectangle',
+        sectionStyle: { headerUnderline: showSectionHeaderLine ?? false },
+    });
     const sharedRenderers = getSharedSectionRenderers();
 
     const allSections = {
@@ -97,7 +104,6 @@ const parse = ({ data, font, locale, t, fontSize, photoShape }: TemplateParseInp
 ${leftContent}`;
     const twoColumnLayout = convertGrid([headerAndLeftContent, rightContent], '(7fr, 3fr)');
 
-    // Configure font and text direction for RTL languages
     const fontConfig = isRtl
         ? `#set text(font: ("${font}", "Arial"), size: ${fontSize}pt, dir: rtl)`
         : `#set text(font: ("${font}"), size: ${fontSize}pt)`;

@@ -22,7 +22,6 @@
                     />
                 </div>
 
-                <!-- Template Selection -->
                 <div class="space-y-2">
                     <Label for="template">{{ t('settings.template.label') }}</Label>
                     <Select
@@ -56,7 +55,6 @@
                     </p>
                 </div>
 
-                <!-- Font Selection -->
                 <div class="space-y-2">
                     <Label for="font-family">{{ t('settings.font.label') }}</Label>
                     <Select
@@ -81,7 +79,6 @@
                     </p>
                 </div>
 
-                <!-- Font Size Control -->
                 <div class="space-y-2">
                     <Label for="font-size">{{ t('settings.fontSize.label') }}</Label>
                     <div class="flex items-center space-x-4">
@@ -99,6 +96,25 @@
                     <p class="text-sm text-muted-foreground">
                         {{ t('settings.fontSize.description') }}
                     </p>
+                </div>
+
+                <div class="flex items-start justify-between gap-4">
+                    <div class="space-y-1">
+                        <Label
+                            for="section-header-line"
+                            class="cursor-pointer"
+                        >
+                            {{ t('settings.sectionHeaderLine.label') }}
+                        </Label>
+                        <p class="text-sm text-muted-foreground">
+                            {{ t('settings.sectionHeaderLine.description') }}
+                        </p>
+                    </div>
+                    <Switch
+                        id="section-header-line"
+                        :model-value="showSectionHeaderLine"
+                        @update:model-value="updateShowSectionHeaderLine"
+                    />
                 </div>
             </div>
 
@@ -130,36 +146,33 @@ import {
 import { Button } from '~/components/ui/button';
 import { Label } from '~/components/ui/label';
 import { Slider } from '~/components/ui/slider';
+import { Switch } from '~/components/ui/switch';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '~/components/ui/select';
 import ResumeLanguageSelector from '~/components/elements/ResumeLanguageSelector.vue';
 import { useSettingsStore } from '~/stores/settings';
 import { useResumeStore } from '~/stores/resume';
 import { getTemplateList } from '~/templates';
 
-// Props
 const props = defineProps<{
     modelValue: boolean;
 }>();
 
-// Emits
 const emit = defineEmits<{
     'update:modelValue': [value: boolean];
 }>();
 
 const availableTemplates = getTemplateList();
 
-// i18n
 const { t } = useI18n();
 
 const settingsStore = useSettingsStore();
 const resumeStore = useResumeStore();
 
-// Local state
 const fontSize = ref([settingsStore.fontSize]);
 const selectedFont = ref(settingsStore.selectedFont);
 const selectedTemplate = ref(settingsStore.selectedTemplate);
+const showSectionHeaderLine = computed(() => settingsStore.showSectionHeaderLine);
 
-// Computed
 const isOpen = computed({
     get: () => props.modelValue,
     set: value => emit('update:modelValue', value),
@@ -174,7 +187,6 @@ const availableFonts = computed(() => {
     return settingsStore.availableFontsForCurrentLanguage;
 });
 
-// Watch for external changes
 watch(() => settingsStore.fontSize, (newSize) => {
     fontSize.value = [newSize];
 });
@@ -187,13 +199,16 @@ watch(() => settingsStore.selectedTemplate, (newTemplate) => {
     selectedTemplate.value = newTemplate;
 });
 
-// Methods
 const updateFontSize = (value: number[]) => {
     settingsStore.setFontSize(value[0]);
 };
 
 const updateFont = (value: string) => {
     settingsStore.setSelectedFont(value);
+};
+
+const updateShowSectionHeaderLine = (value: boolean) => {
+    settingsStore.setShowSectionHeaderLine(value);
 };
 
 const updateTemplate = (value: string) => {

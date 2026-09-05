@@ -36,6 +36,10 @@ export const useSettingsStore = defineStore('settings', {
             const resumeStore = useResumeStore();
             return resumeStore.activeResumeSettings.photoShape ?? defaultResumeSettings.photoShape;
         },
+        showSectionHeaderLine(): boolean {
+            const resumeStore = useResumeStore();
+            return resumeStore.activeResumeSettings.showSectionHeaderLine ?? defaultResumeSettings.showSectionHeaderLine;
+        },
         showDownloadMenu: state => state.settings.showDownloadMenu ?? false,
         showFontMenu: state => state.settings.showFontMenu ?? false,
         showTemplateMenu: state => state.settings.showTemplateMenu ?? false,
@@ -66,6 +70,11 @@ export const useSettingsStore = defineStore('settings', {
         setPhotoShape(shape: PhotoShape) {
             const resumeStore = useResumeStore();
             resumeStore.setActiveResumeSetting('photoShape', shape);
+            this.updateTimestamp();
+        },
+        setShowSectionHeaderLine(value: boolean) {
+            const resumeStore = useResumeStore();
+            resumeStore.setActiveResumeSetting('showSectionHeaderLine', value);
             this.updateTimestamp();
         },
         setLocale(locale: string) {

@@ -39,9 +39,6 @@ function getLocalizedSectionHeader(
     return translationKey ? context.t(translationKey) : '';
 }
 
-/**
- * Render experience section using shared logic
- */
 export const renderSharedExperience: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     if (!data?.experiences || data.experiences.length === 0) {
         return '';
@@ -54,9 +51,6 @@ export const renderSharedExperience: SectionRenderer = (data: ResumeData, contex
     return wrapInSection(headerText, formattedContent, context);
 };
 
-/**
- * Render internships section using shared logic
- */
 export const renderSharedInternships: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     if (!data?.internships || data.internships.length === 0) {
         return '';
@@ -69,9 +63,6 @@ export const renderSharedInternships: SectionRenderer = (data: ResumeData, conte
     return wrapInSection(headerText, formattedContent, context);
 };
 
-/**
- * Render education section using shared logic
- */
 export const renderSharedEducation: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     if (!data?.education || data.education.length === 0) {
         return '';
@@ -84,9 +75,6 @@ export const renderSharedEducation: SectionRenderer = (data: ResumeData, context
     return wrapInSection(headerText, formattedContent, context);
 };
 
-/**
- * Render volunteering section using shared logic
- */
 export const renderSharedVolunteering: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     if (!data?.volunteering || data.volunteering.length === 0) {
         return '';
@@ -99,9 +87,6 @@ export const renderSharedVolunteering: SectionRenderer = (data: ResumeData, cont
     return wrapInSection(headerText, formattedContent, context);
 };
 
-/**
- * Render projects section using shared logic
- */
 export const renderSharedProjects: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     if (!data?.projects || data.projects.length === 0) {
         return '';
@@ -155,9 +140,6 @@ export const renderSharedLanguages: SectionRenderer = (data: ResumeData, context
     return wrapInSection(headerText, body, context);
 };
 
-/**
- * Render contact info section using shared logic
- */
 export const renderSharedContactInfo: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     const sectionContent = generateContactContent(data);
     if (sectionContent.length === 0) return '';
@@ -168,9 +150,6 @@ export const renderSharedContactInfo: SectionRenderer = (data: ResumeData, conte
     return wrapInSection(headerText, formattedContent, context);
 };
 
-/**
- * Render social links section using shared logic
- */
 export const renderSharedSocialLinks: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     const sectionContent = generateSocialLinksContent(data);
     if (sectionContent.length === 0) return '';
@@ -178,7 +157,6 @@ export const renderSharedSocialLinks: SectionRenderer = (data: ResumeData, conte
     const formattedContent = formatSocialLinks(sectionContent, context.config.socialLinks);
     const headerText = getLocalizedSectionHeader('socialLinks', data, context);
 
-    // For horizontal links in header, don't wrap in section block
     if (context.config.socialLinks.placement === 'header' && context.config.socialLinks.orientation === 'horizontal') {
         return formattedContent;
     }
@@ -198,9 +176,6 @@ export const renderSharedProfile: SectionRenderer = (data: ResumeData, context: 
     return wrapInSection(headerText, body, context);
 };
 
-/**
- * Render certificates section using shared logic
- */
 export const renderSharedCertificates: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     if (!data?.certificates || data.certificates.length === 0) {
         return '';
@@ -222,9 +197,6 @@ export const renderProfilePhoto = (data: ResumeData, context: RendererContext): 
     return `#box(width: ${PHOTO_SIZE}, height: ${PHOTO_SIZE}, clip: true, radius: ${radius}, image("/photo", width: 100%, height: 100%, fit: "cover"))`;
 };
 
-/**
- * Get all available shared section renderers
- */
 export const getSharedSectionRenderers = () => ({
     experience: renderSharedExperience,
     internships: renderSharedInternships,

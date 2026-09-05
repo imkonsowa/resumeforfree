@@ -72,6 +72,7 @@ export interface TemplateParseInput {
     locale: string;
     fontSize: number;
     photoShape?: 'circle' | 'rectangle';
+    showSectionHeaderLine?: boolean;
     t: TranslateFunction;
 }
 
