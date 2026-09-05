@@ -10,7 +10,6 @@
                 </p>
             </div>
 
-            <!-- Success State -->
             <div
                 v-if="success"
                 class="mt-6 p-6 border border-green-200 rounded-lg bg-green-50 text-center"
@@ -26,7 +25,6 @@
                 </p>
             </div>
 
-            <!-- Form -->
             <form
                 v-else
                 class="mt-6 space-y-6 p-6 border border-gray-200 rounded-lg bg-white"

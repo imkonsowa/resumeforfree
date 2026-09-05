@@ -19,13 +19,15 @@
     "test": "vitest",
     "test:unit": "vitest run --config vitest.config.ts",
     "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui"
+    "test:e2e:ui": "playwright test --ui",
+    "fonts:manifest": "node scripts/generate-font-manifest.mjs",
+    "wasm:upload": "node scripts/upload-wasm.mjs"
   },
   "dependencies": {
     "@cloudflare/workers-types": "^4.20250906.0",
-    "@myriaddreamin/typst-ts-renderer": "^0.6.0",
-    "@myriaddreamin/typst-ts-web-compiler": "^0.6.0",
-    "@myriaddreamin/typst.ts": "^0.6.0",
+    "@myriaddreamin/typst-ts-renderer": "^0.7.0",
+    "@myriaddreamin/typst-ts-web-compiler": "^0.7.0",
+    "@myriaddreamin/typst.ts": "^0.7.0",
     "@nuxtjs/i18n": "^10.2.0",
     "@nuxtjs/robots": "^6.0.6",
     "@nuxtjs/sitemap": "^8.0.12",

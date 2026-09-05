@@ -377,14 +377,15 @@
     "template": "Template",
     "loadingPreview": "Loading Preview",
     "loadingPreviewDescription": "Please wait as fetching Typst module and compiler takes time on slow networks ...",
-    "previewError": "Preview Error",
+    "previewError": "Failed to generate preview. Please check your resume content for unusual characters.",
     "initializingTypst": "Initializing Typst",
     "settingUpCompiler": "Setting up the resume compiler...",
     "zoomControls": {
       "zoomIn": "Zoom In",
       "zoomOut": "Zoom Out",
       "resetZoom": "Reset Zoom"
-    }
+    },
+    "previewErrorDetailed": "Preview failed: {detail}"
   },
   "settings": {
     "title": "Resume Settings",
@@ -406,6 +407,10 @@
     "language": {
       "label": "Language",
       "description": "Choose the language for your resume"
+    },
+    "sectionHeaderLine": {
+      "label": "Section header line",
+      "description": "Add a thin divider line under each section header"
     }
   },
   "forms": {

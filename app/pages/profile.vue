@@ -10,7 +10,6 @@ const { t } = useI18n();
 const localePath = useLocalePath();
 const authStore = useAuthStore();
 
-// Redirect if not logged in
 if (!authStore.isLoggedIn) {
     await navigateTo(localePath('/auth/login'));
 }
@@ -27,7 +26,6 @@ const showCurrentPassword = ref(false);
 const showNewPassword = ref(false);
 const showConfirmPassword = ref(false);
 
-// Password change form
 const passwordForm = ref({
     currentPassword: '',
     newPassword: '',
@@ -64,14 +62,12 @@ const handleChangePassword = async () => {
     try {
         isChangingPassword.value = true;
 
-        // Call change password API
         const api = useApi();
         await api.auth.changePassword({
             currentPassword: passwordForm.value.currentPassword,
             newPassword: passwordForm.value.newPassword,
         });
 
-        // Reset form
         passwordForm.value = {
             currentPassword: '',
             newPassword: '',
@@ -106,7 +102,6 @@ useHead({
     <div class="min-h-screen bg-gray-50">
         <div class="container mx-auto px-4 py-8">
             <div class="max-w-6xl mx-auto">
-                <!-- Page Header -->
                 <div class="mb-8">
                     <h1 class="text-3xl font-bold text-gray-900 mb-2">
                         {{ $t('profile.title') }}
@@ -117,7 +112,6 @@ useHead({
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                    <!-- Sidebar -->
                     <div class="md:col-span-1">
                         <Card>
                             <CardContent class="p-4">
@@ -143,9 +137,7 @@ useHead({
                         </Card>
                     </div>
 
-                    <!-- Main Content -->
                     <div class="md:col-span-3">
-                        <!-- Personal Information Section -->
                         <Card v-if="activeSection === 'personal'">
                             <CardHeader>
                                 <CardTitle class="flex items-center gap-2">
@@ -198,7 +190,6 @@ useHead({
                             </CardContent>
                         </Card>
 
-                        <!-- Change Password Section -->
                         <Card v-if="activeSection === 'password'">
                             <CardHeader>
                                 <CardTitle class="flex items-center gap-2">
@@ -214,7 +205,6 @@ useHead({
                                     class="space-y-6"
                                     @submit.prevent="handleChangePassword"
                                 >
-                                    <!-- Error Messages -->
                                     <div
                                         v-if="passwordErrors.length > 0"
                                         class="bg-red-50 border border-red-200 rounded-md p-4"
@@ -239,7 +229,6 @@ useHead({
                                         </div>
                                     </div>
 
-                                    <!-- Current Password -->
                                     <div>
                                         <Label
                                             for="current-password"
@@ -272,7 +261,6 @@ useHead({
                                         </div>
                                     </div>
 
-                                    <!-- New Password -->
                                     <div>
                                         <Label
                                             for="new-password"
@@ -309,7 +297,6 @@ useHead({
                                         </p>
                                     </div>
 
-                                    <!-- Confirm New Password -->
                                     <div>
                                         <Label
                                             for="confirm-password"
@@ -342,7 +329,6 @@ useHead({
                                         </div>
                                     </div>
 
-                                    <!-- Submit Button -->
                                     <div class="flex gap-3 pt-4">
                                         <Button
                                             type="submit"

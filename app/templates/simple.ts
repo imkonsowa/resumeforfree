@@ -1,7 +1,7 @@
 import type { ResumeData, SectionHeaders, SectionOrder } from '~/types/resume';
 import type { SectionContent, Template, TemplateParseInput, TemplateRenderConfig } from '~/types/template';
 import { escapeTypstText } from '~/utils/stringUtils';
-import { convertEmail, convertLink, convertList, renderDescription, SECTION_SPACING } from '~/utils/typstUtils';
+import { convertEmail, convertLink, convertList, LATIN_FONT_STACK, renderDescription, SECTION_SPACING } from '~/utils/typstUtils';
 import { RendererContext } from '~/utils/rendererContext';
 import { isRtlLocale } from '~/composables/useLocale';
 import { SECTION_TRANSLATION_MAP } from '~/composables/useSectionHeader';
@@ -144,7 +144,7 @@ function renderHeader(data: ResumeData, context: RendererContext, fontSize: numb
 
     const contactParts: string[] = [];
     if (data?.location) contactParts.push(escapeTypstText(data.location));
-    if (data?.phone) contactParts.push(`#text(dir: ltr)[${escapeTypstText(data.phone)}]`);
+    if (data?.phone) contactParts.push(`#text(dir: ltr, font: (${LATIN_FONT_STACK}))[${escapeTypstText(data.phone)}]`);
     if (data?.email) contactParts.push(convertEmail(data.email));
 
     const textBlocks: string[] = [];
@@ -239,12 +239,13 @@ const parse = ({ data, font, locale, t, fontSize, photoShape }: TemplateParseInp
     }
 
     const fontConfig = isRtl
-        ? `#set text(font: ("${font}", "Arial"), size: ${fontSize}pt, dir: rtl)`
+        ? `#set text(font: ("${font}", ${LATIN_FONT_STACK}), size: ${fontSize}pt, dir: rtl)`
         : `#set text(font: ("${font}"), size: ${fontSize}pt)`;
+    const leading = isRtl ? '0.75em' : '0.5em';
 
     return `#set page(margin: 1.5cm)
 ${fontConfig}
-#set par(leading: 0.5em, justify: false)
+#set par(leading: ${leading}, justify: false)
 ${renderHeader(data, context, fontSize)}
 #v(${SECTION_SPACING})
 ${rendered.join('\n')}

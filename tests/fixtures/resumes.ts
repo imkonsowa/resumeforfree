@@ -1,11 +1,5 @@
 import type { ResumeData } from '~/types/resume';
 
-/**
- * Test fixtures for various resume scenarios
- * Each fixture tests different edge cases for Typst rendering
- */
-
-// Base resume with minimal data
 export const minimalResume: ResumeData = {
     version: 'v1',
     firstName: 'John',
@@ -47,7 +41,6 @@ export const minimalResume: ResumeData = {
     },
 };
 
-// Resume with special characters that need escaping
 export const specialCharsResume: ResumeData = {
     ...minimalResume,
     firstName: 'John#',
@@ -95,7 +88,6 @@ export const specialCharsResume: ResumeData = {
     ],
 };
 
-// Resume with Typst markup characters
 export const typstMarkupResume: ResumeData = {
     ...minimalResume,
     firstName: 'Test*User',
@@ -118,7 +110,6 @@ export const typstMarkupResume: ResumeData = {
     ],
 };
 
-// Resume with Unicode and international characters
 export const unicodeResume: ResumeData = {
     ...minimalResume,
     firstName: 'Jose',
@@ -131,7 +122,6 @@ export const unicodeResume: ResumeData = {
     ],
 };
 
-// Arabic RTL resume
 export const arabicResume: ResumeData = {
     ...minimalResume,
     firstName: 'Ahmed',
@@ -144,7 +134,6 @@ export const arabicResume: ResumeData = {
     ],
 };
 
-// Full comprehensive resume
 export const fullResume: ResumeData = {
     version: 'v1',
     firstName: 'Sarah',
@@ -290,7 +279,6 @@ export const fullResume: ResumeData = {
     },
 };
 
-// Resume with empty/null edge cases
 export const edgeCaseResume: ResumeData = {
     ...minimalResume,
     firstName: '',
@@ -299,11 +287,11 @@ export const edgeCaseResume: ResumeData = {
     phone: '',
     position: '',
     location: '',
-    summary: '   ', // whitespace only
+    summary: '   ',
     skills: [
         { title: '', description: 'Only description, no title' },
         { title: 'Only title', description: '' },
-        { title: '', description: '' }, // completely empty
+        { title: '', description: '' },
     ],
     projects: [
         { title: '', description: '', links: [], startDate: '', endDate: '', achievements: [] },
@@ -389,7 +377,6 @@ export const descriptionsResume: ResumeData = {
     ],
 };
 
-// All test fixtures exported as a collection
 export const testResumes = {
     minimal: minimalResume,
     specialChars: specialCharsResume,

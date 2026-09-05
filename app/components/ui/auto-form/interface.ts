@@ -33,22 +33,16 @@ export interface InputComponents {
 }
 
 export interface ConfigItem {
-    /** Value for the `FormLabel` */
     label?: string
-    /** Value for the `FormDescription` */
     description?: string
-    /** Pick which component to be rendered. */
     component?: keyof typeof INPUT_COMPONENTS | Component
-    /** Hide `FormLabel`. */
     hideLabel?: boolean
     inputProps?: InputHTMLAttributes
 }
 
-// Define a type to unwrap an array
 type UnwrapArray<T> = T extends (infer U)[] ? U : never
 
 export type Config<SchemaType extends object> = {
-    // If SchemaType.key is an object, create a nested Config, otherwise ConfigItem
     [Key in keyof SchemaType]?:
     SchemaType[Key] extends any[]
         ? UnwrapArray<Config<SchemaType[Key]>>
@@ -86,7 +80,6 @@ export type OptionsDependency<
 > = BaseDependency<SchemaType> & {
     type: DependencyType.SETS_OPTIONS
 
-    // Partial array of values from sourceField that will trigger the dependency
     options: EnumValues
 }
 

@@ -1,40 +1,22 @@
 import type {z} from 'zod';
 
-// TODO: This should support recursive ZodEffects but TypeScript doesn't allow circular type definitions.
 export type ZodObjectOrWrapped =
     | z.ZodObject<any, any>
     | z.ZodEffects<z.ZodObject<any, any>>
 
-/**
- * Beautify a camelCase string.
- * e.g. "myString" -> "My String"
- */
 export function beautifyObjectName(string: string) {
-    // Remove bracketed indices
-    // if numbers only return the string
     let output = string.replace(/\[\d+\]/g, '').replace(/([A-Z])/g, ' $1');
     output = output.charAt(0).toUpperCase() + output.slice(1);
     return output;
 }
 
-/**
- * Parse string and extract the index
- * @param string
- * @returns index or undefined
- */
 export function getIndexIfArray(string: string) {
     const indexRegex = /\[(\d+)\]/;
-    // Match the index
     const match = string.match(indexRegex);
-    // Extract the index (number)
     const index = match ? Number.parseInt(match[1]) : undefined;
     return index;
 }
 
-/**
- * Get the lowest level Zod type.
- * This will unpack optionals, refinements, etc.
- */
 export function getBaseSchema<
     ChildType extends z.ZodAny | z.AnyZodObject = z.ZodAny,
 >(schema: ChildType | z.ZodEffects<ChildType>): ChildType | null {
@@ -49,18 +31,11 @@ export function getBaseSchema<
     return schema as ChildType;
 }
 
-/**
- * Get the type name of the lowest level Zod type.
- * This will unpack optionals, refinements, etc.
- */
 export function getBaseType(schema: z.ZodAny) {
     const baseSchema = getBaseSchema(schema);
     return baseSchema ? baseSchema._def.typeName : '';
 }
 
-/**
- * Search for a "ZodDefault" in the Zod stack and return its value.
- */
 export function getDefaultValueInZodStack(schema: z.ZodAny): any {
     const typedSchema = schema as unknown as z.ZodDefault<
         z.ZodNumber | z.ZodString
@@ -97,9 +72,6 @@ function isIndex(value: unknown): value is number {
     return Number(value) >= 0;
 }
 
-/**
- * Constructs a path with dot paths for arrays to use brackets to be compatible with vee-validate path syntax
- */
 export function normalizeFormPath(path: string): string {
     const pathArr = path.split('.');
     if (!pathArr.length)
@@ -120,9 +92,6 @@ export function normalizeFormPath(path: string): string {
 
 type NestedRecord = Record<string, unknown> | { [k: string]: NestedRecord }
 
-/**
- * Checks if the path opted out of nested fields using `[fieldName]` syntax
- */
 export function isNotNestedPath(path: string) {
     return /^\[.+\]$/.test(path);
 }
@@ -142,9 +111,6 @@ function cleanupNonNestedPath(path: string) {
     return path;
 }
 
-/**
- * Gets a nested property value from an object
- */
 export function getFromPath<TValue = unknown>(object: NestedRecord | undefined, path: string): TValue | undefined
 export function getFromPath<TValue = unknown, TFallback = TValue>(
     object: NestedRecord | undefined,

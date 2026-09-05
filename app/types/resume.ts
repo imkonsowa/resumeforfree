@@ -183,6 +183,7 @@ export interface ResumeSettings {
     selectedTemplate: string;
     fontSize: number;
     photoShape: PhotoShape;
+    showSectionHeaderLine: boolean;
     sectionCollapsed: Record<string, boolean>;
     isRawMode: boolean;
 }
@@ -237,6 +238,7 @@ export const defaultResumeSettings: ResumeSettings = {
     selectedTemplate: 'compact',
     fontSize: 12,
     photoShape: 'rectangle',
+    showSectionHeaderLine: false,
     isRawMode: false,
     sectionCollapsed: {
         personal: false,
@@ -250,11 +252,6 @@ export const defaultResumeSettings: ResumeSettings = {
         certificates: true,
     },
 };
-/**
- * Builds a complete ResumeSettings from a user's legacy settings JSON
- * (pre-refactor shape where font/template/etc lived on user_settings).
- * Any missing field falls back to `defaultResumeSettings`.
- */
 export const resumeSettingsFromLegacy = (legacy: Partial<ResumeSettings> | null | undefined): ResumeSettings => {
     const src = legacy || {};
     return {
@@ -262,6 +259,7 @@ export const resumeSettingsFromLegacy = (legacy: Partial<ResumeSettings> | null 
         selectedTemplate: src.selectedTemplate || defaultResumeSettings.selectedTemplate,
         fontSize: src.fontSize ?? defaultResumeSettings.fontSize,
         photoShape: src.photoShape || defaultResumeSettings.photoShape,
+        showSectionHeaderLine: src.showSectionHeaderLine ?? defaultResumeSettings.showSectionHeaderLine,
         sectionCollapsed: src.sectionCollapsed && Object.keys(src.sectionCollapsed).length
             ? { ...src.sectionCollapsed }
             : { ...defaultResumeSettings.sectionCollapsed },
@@ -269,7 +267,6 @@ export const resumeSettingsFromLegacy = (legacy: Partial<ResumeSettings> | null 
     };
 };
 
-// Language-specific font configurations
 export const availableFonts = {
     en: [
         { name: 'Calibri', family: 'Calibri' },
@@ -281,12 +278,10 @@ export const availableFonts = {
     ],
 };
 
-// Function to get fonts for current language
 export const getFontsForLanguage = (language: string) => {
     return availableFonts[language as keyof typeof availableFonts] || availableFonts.en;
 };
 
-// Default font for each language
 export const getDefaultFontForLanguage = (language: string) => {
     const fonts = getFontsForLanguage(language);
     return fonts[0]?.family || 'Calibri';

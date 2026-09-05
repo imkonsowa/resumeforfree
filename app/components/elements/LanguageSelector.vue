@@ -1,5 +1,4 @@
 <template>
-    <!-- Select Variant (for forms/settings) -->
     <div
         v-if="variant === 'select'"
         class="space-y-2"
@@ -39,7 +38,6 @@
         </Select>
     </div>
 
-    <!-- Dropdown Variant (unified menu for all contexts) -->
     <DropdownMenu v-else>
         <DropdownMenuTrigger as-child>
             <Button
@@ -50,7 +48,6 @@
                     buttonClass,
                 ]"
             >
-                <!-- Large screens: Icon + Full name -->
                 <template v-if="!responsive">
                     <Languages
                         v-if="showIcon"
@@ -58,7 +55,6 @@
                     />
                     <span class="text-sm font-medium">{{ currentLocaleName }}</span>
                 </template>
-                <!-- Responsive: Full name on large, short code on small -->
                 <template v-else>
                     <Languages
                         v-if="showIcon"
@@ -102,7 +98,6 @@ import {
     DropdownMenuTrigger,
 } from '~/components/ui/dropdown-menu';
 
-// Props
 withDefaults(defineProps<{
     variant?: 'select' | 'dropdown';
     showLabel?: boolean;
@@ -123,11 +118,9 @@ withDefaults(defineProps<{
     width: '',
 });
 
-// i18n
 const { locale, locales, t } = useI18n();
 const { switchLanguage } = useLanguageSwitcher();
 
-// Computed
 const localesList = computed(() => {
     return locales.value.map(l => ({
         code: l.code,

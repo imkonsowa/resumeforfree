@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { escapeTypstText, escapeTypstString } from '~/utils/stringUtils';
+import { escapeTypstText, escapeTypstString, describeTypstError } from '~/utils/stringUtils';
 
 describe('escapeTypstText', () => {
     describe('hash character (#) escaping for content blocks', () => {
@@ -175,5 +175,40 @@ describe('escapeTypstString', () => {
             const result = escapeTypstString('"quoted"');
             expect(result).toBe('\\"quoted\\"');
         });
+    });
+});
+
+describe('escapeTypstText - label syntax (issues #38, #40)', () => {
+    it('escapes @ so social handles do not become label references', () => {
+        expect(escapeTypstText('Contact @rami_dev today')).toContain('\\@rami');
+    });
+
+    it('escapes @ inside a plain-text email in free text', () => {
+        expect(escapeTypstText('reach me at rami@example.com')).toContain('rami\\@example.com');
+    });
+
+    it('escapes every @ occurrence', () => {
+        const result = escapeTypstText('@foo and @bar');
+        expect(result.match(/\\@/g)).toHaveLength(2);
+    });
+});
+
+describe('describeTypstError', () => {
+    it('extracts the human-readable message from a Typst diagnostic string', () => {
+        const raw = '[SourceDiagnostic { severity: Error, span: Span(123), message: "label `<foo>` does not exist in the document", trace: [] }]';
+        expect(describeTypstError(raw)).toBe('label `<foo>` does not exist in the document');
+    });
+
+    it('de-duplicates and joins multiple diagnostics', () => {
+        const raw = 'message: "first problem" ... message: "first problem" ... message: "second problem"';
+        expect(describeTypstError(raw)).toBe('first problem; second problem');
+    });
+
+    it('falls back to the raw text when no diagnostic is present', () => {
+        expect(describeTypstError(new Error('boom'))).toBe('boom');
+    });
+
+    it('returns empty string for nullish input', () => {
+        expect(describeTypstError(null)).toBe('');
     });
 });

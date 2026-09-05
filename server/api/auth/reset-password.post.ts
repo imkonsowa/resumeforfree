@@ -30,7 +30,6 @@ export default defineEventHandler(async (event) => {
         });
     }
 
-    // For development without database
     if (!db) {
         console.log('[DEV] Password reset with token:', token);
         return {
@@ -40,10 +39,8 @@ export default defineEventHandler(async (event) => {
     }
 
     try {
-        // Hash the provided token to compare with stored hash
         const hashedToken = await hashToken(token);
 
-        // Find token record
         const tokenRecord = await db
             .prepare(`
                 SELECT id, user_id, expires_at
@@ -60,10 +57,8 @@ export default defineEventHandler(async (event) => {
             });
         }
 
-        // Check if token has expired
         const expiresAt = new Date(tokenRecord.expires_at);
         if (expiresAt < new Date()) {
-            // Delete expired token
             await db.prepare('DELETE FROM password_reset_tokens WHERE id = ?')
                 .bind(tokenRecord.id)
                 .run();
@@ -74,10 +69,8 @@ export default defineEventHandler(async (event) => {
             });
         }
 
-        // Hash the new password
         const passwordHash = await bcrypt.hash(password, 12);
 
-        // Update user's password
         await db.prepare(`
             UPDATE users
             SET password_hash = ?, updated_at = datetime("now")
@@ -86,7 +79,6 @@ export default defineEventHandler(async (event) => {
             .bind(passwordHash, tokenRecord.user_id)
             .run();
 
-        // Delete all reset tokens for this user (invalidate any other tokens)
         await db.prepare('DELETE FROM password_reset_tokens WHERE user_id = ?')
             .bind(tokenRecord.user_id)
             .run();

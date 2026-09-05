@@ -22,10 +22,6 @@ export const INPUT_COMPONENTS: InputComponents = {
     object: AutoFormFieldObject
 };
 
-/**
- * Define handlers for specific Zod types.
- * You can expand this object to support more types.
- */
 export const DEFAULT_ZOD_HANDLERS: {
     [key: string]: keyof typeof INPUT_COMPONENTS
 } = {

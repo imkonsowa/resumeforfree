@@ -100,7 +100,6 @@ const handleCloudSync = async () => {
     try {
         isSyncing.value = true;
         await resumeStore.syncResumeToServer(activeResume.value.id);
-        // Silent sync - success toasts are handled by the calling component
     }
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     catch (error: any) {

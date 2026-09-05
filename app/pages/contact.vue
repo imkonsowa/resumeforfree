@@ -15,7 +15,6 @@
                         v-if="!formSubmitted"
                         @submit.prevent="handleSubmit"
                     >
-                        <!-- Name Field -->
                         <div class="mb-4">
                             <Label for="name">
                                 {{ $t('common.name') }}
@@ -32,7 +31,6 @@
                             />
                         </div>
 
-                        <!-- Email Field -->
                         <div class="mb-4">
                             <Label for="email">
                                 {{ $t('common.email') }}
@@ -49,7 +47,6 @@
                             />
                         </div>
 
-                        <!-- Subject Field -->
                         <div class="mb-4">
                             <Label for="subject">
                                 {{ $t('contact.form.subject.label') }}
@@ -66,7 +63,6 @@
                             />
                         </div>
 
-                        <!-- Message Field -->
                         <div class="mb-6">
                             <Label for="message">
                                 {{ $t('contact.form.message.label') }}
@@ -83,7 +79,6 @@
                             />
                         </div>
 
-                        <!-- Turnstile Widget -->
                         <div class="mb-6">
                             <TurnstileWidget
                                 ref="turnstileWidgetRef"
@@ -91,7 +86,6 @@
                             />
                         </div>
 
-                        <!-- Submit Button -->
                         <Button
                             type="submit"
                             class="w-full"
@@ -101,7 +95,6 @@
                             <span v-else>{{ $t('contact.form.submit') }}</span>
                         </Button>
 
-                        <!-- Error Message -->
                         <p
                             v-if="errorMessage"
                             class="mt-4 text-sm text-red-600 text-center"
@@ -110,7 +103,6 @@
                         </p>
                     </form>
 
-                    <!-- Success Message -->
                     <div
                         v-else
                         class="text-center py-8"
@@ -145,7 +137,6 @@
                 </CardContent>
             </Card>
 
-            <!-- Alternative Contact Info -->
             <div class="mt-8 text-center text-sm text-gray-600">
                 <p>
                     {{ $t('contact.alternative.text') }}
@@ -220,7 +211,6 @@ const handleSubmit = async () => {
         console.error('Contact form submission error:', error);
         const err = error as { statusCode?: number };
 
-        // Handle specific error messages
         if (err.statusCode === 429) {
             errorMessage.value = t('contact.errors.rateLimit');
         }
@@ -233,7 +223,6 @@ const handleSubmit = async () => {
 
         toast.error(errorMessage.value);
 
-        // Reset Turnstile widget
         turnstileWidgetRef.value?.reset();
         turnstileToken.value = null;
     }

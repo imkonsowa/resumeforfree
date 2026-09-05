@@ -377,14 +377,15 @@
     "template": "القالب",
     "loadingPreview": "جاري تحميل المعاينة",
     "loadingPreviewDescription": "يرجى الانتظار، قد يستغرق إعداد محرك Typst بضع لحظات إذا كان الاتصال بطيئاً...",
-    "previewError": "حدث خطأ أثناء المعاينة",
+    "previewError": "تعذر إنشاء المعاينة. يرجى مراجعة محتوى سيرتك الذاتية بحثًا عن رموز غير معتادة.",
     "initializingTypst": "جاري تهيئة Typst...",
     "settingUpCompiler": "جاري إعداد محرك معالجة السيرة الذاتية...",
     "zoomControls": {
       "zoomIn": "تكبير",
       "zoomOut": "تصغير",
       "resetZoom": "استعادة الحجم الطبيعي"
-    }
+    },
+    "previewErrorDetailed": "فشلت المعاينة: {detail}"
   },
   "settings": {
     "title": "إعدادات السيرة الذاتية",
@@ -406,6 +407,10 @@
     "language": {
       "label": "اللغة",
       "description": "حدد لغة سيرتك الذاتية"
+    },
+    "sectionHeaderLine": {
+      "label": "خط أسفل عنوان القسم",
+      "description": "إضافة خط فاصل رفيع أسفل كل عنوان قسم"
     }
   },
   "forms": {

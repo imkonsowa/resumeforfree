@@ -10,7 +10,6 @@
                 </p>
             </div>
 
-            <!-- Success State -->
             <div
                 v-if="success"
                 class="mt-6 p-6 border border-green-200 rounded-lg bg-green-50 text-center"
@@ -23,7 +22,6 @@
                 </p>
             </div>
 
-            <!-- Invalid Token State -->
             <div
                 v-else-if="!token"
                 class="mt-6 p-6 border border-red-200 rounded-lg bg-red-50 text-center"
@@ -36,7 +34,6 @@
                 </p>
             </div>
 
-            <!-- Form -->
             <form
                 v-else
                 class="mt-6 space-y-6 p-6 border border-gray-200 rounded-lg bg-white"
@@ -122,13 +119,11 @@ const handleSubmit = async () => {
 
     error.value = '';
 
-    // Validate passwords match
     if (password.value !== confirmPassword.value) {
         error.value = t('auth.passwordsDoNotMatch');
         return;
     }
 
-    // Validate password length
     if (password.value.length < 6) {
         error.value = t('auth.newPasswordMinLength');
         return;
@@ -147,7 +142,6 @@ const handleSubmit = async () => {
 
         if (response.success) {
             success.value = true;
-            // Redirect to login after 2 seconds
             setTimeout(() => {
                 router.push(localePath('/auth/login'));
             }, 2000);

@@ -1,9 +1,22 @@
 import { $typst } from '@myriaddreamin/typst.ts';
-import { preloadRemoteFonts } from '@myriaddreamin/typst.ts/dist/esm/options.init.mjs';
+import { disableDefaultFontAssets } from '@myriaddreamin/typst.ts/dist/esm/options.init.mjs';
+import { version as TYPST_VERSION } from '@myriaddreamin/typst.ts/package.json';
 
 import type { TypstLoaderState } from '~/types/typst';
+import { buildLazyFonts, loadFontManifest } from '~/utils/fontLoader';
 
-const CACHE_NAME = 'typst-assets-v1';
+const CACHE_PREFIX = 'typst-assets-';
+const CACHE_NAME = `${CACHE_PREFIX}${TYPST_VERSION}`;
+const COMPILER_WASM_URL = `/wasm/typst-ts-web-compiler-${TYPST_VERSION}.wasm`;
+
+async function purgeStaleCaches(): Promise<void> {
+    const names = await caches.keys();
+    await Promise.all(
+        names
+            .filter(name => name.startsWith(CACHE_PREFIX) && name !== CACHE_NAME)
+            .map(name => caches.delete(name)),
+    );
+}
 
 async function cachedFetch(url: string | URL): Promise<Response> {
     const request = new Request(url);
@@ -104,12 +117,7 @@ class TypstLoader {
 
     async unregisterPhoto(path: string): Promise<void> {
         if (!this.state.isReady || !window.$typst) return;
-        try {
-            await window.$typst.unmapShadow(path);
-        }
-        catch {
-            // unmapping a non-mapped path is a noop in our intent
-        }
+        await Promise.resolve(window.$typst.unmapShadow(path)).catch(() => undefined);
     }
 
     private setState(newState: Partial<TypstLoaderState>) {
@@ -133,29 +141,16 @@ class TypstLoader {
     private async performInitialization(): Promise<void> {
         try {
             console.log('Initializing Typst...');
+            await purgeStaleCaches();
             $typst.setCompilerInitOptions({
                 getModule: async () => {
-                    const wasmUrl = new URL('@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm', import.meta.url);
-                    const wasmResponse = await cachedFetch(wasmUrl);
+                    const wasmResponse = await cachedFetch(COMPILER_WASM_URL);
                     if (!wasmResponse.ok) {
                         throw new Error(`Failed to fetch compiler WASM: ${wasmResponse.status}`);
                     }
                     return await wasmResponse.arrayBuffer();
                 },
-                beforeBuild: [
-                    preloadRemoteFonts([
-                        // English fonts
-                        '/fonts/roboto-regular.ttf',
-                        '/fonts/roboto-bold.ttf',
-                        '/fonts/calibri-regular.ttf',
-                        '/fonts/calibri-bold.ttf',
-                        '/fonts/geist-bold.ttf',
-                        '/fonts/geist-regular.ttf',
-                        // Arabic fonts
-                        '/fonts/ar/naskh.ttf',
-                        '/fonts/ar/naskh-bold.ttf',
-                    ], { assets: false }),
-                ],
+                beforeBuild: [disableDefaultFontAssets()],
             });
             $typst.setRendererInitOptions({
                 getModule: async () => {
@@ -167,7 +162,9 @@ class TypstLoader {
                     return await wasmResponse.arrayBuffer();
                 },
             });
-            console.log('Typst initialized successfully');
+            const manifest = await loadFontManifest();
+            await $typst.setFonts(buildLazyFonts(manifest));
+            console.log(`Typst initialized with ${manifest.length} lazy fonts`);
         }
         catch (error) {
             console.error('Failed to initialize Typst:', error);

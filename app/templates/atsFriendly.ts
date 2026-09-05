@@ -1,7 +1,7 @@
 import type { ResumeData, SectionOrder } from '~/types/resume';
 import type { SectionStyle, Template, TemplateParseInput, TemplateRenderConfig } from '~/types/template';
 import { escapeTypstText } from '~/utils/stringUtils';
-import { convertEmail, convertLink } from '~/utils/typstUtils';
+import { convertEmail, convertLink, LATIN_FONT_STACK } from '~/utils/typstUtils';
 import { RendererContext } from '~/utils/rendererContext';
 import { isRtlLocale } from '~/composables/useLocale';
 import { getSharedSectionRenderers, renderProfilePhoto } from '~/utils/sectionRenderers';
@@ -50,7 +50,7 @@ function renderTopHeader(data: ResumeData, context: RendererContext, fontSize: n
     const contactParts: string[] = [];
     if (data?.location) contactParts.push(escapeTypstText(data.location));
     if (data?.email) contactParts.push(convertEmail(data.email));
-    if (data?.phone) contactParts.push(`#text(dir: ltr)[${escapeTypstText(data.phone)}]`);
+    if (data?.phone) contactParts.push(`#text(dir: ltr, font: (${LATIN_FONT_STACK}))[${escapeTypstText(data.phone)}]`);
 
     const platformLabels: Record<string, string> = {
         linkedin: 'LinkedIn',
@@ -142,12 +142,13 @@ const parse = ({ data, font, locale, t, fontSize, photoShape }: TemplateParseInp
         .join('\n');
 
     const fontConfig = isRtl
-        ? `#set text(font: ("${font}", "Arial"), size: ${fontSize}pt, dir: rtl)`
+        ? `#set text(font: ("${font}", ${LATIN_FONT_STACK}), size: ${fontSize}pt, dir: rtl)`
         : `#set text(font: ("${font}"), size: ${fontSize}pt)`;
+    const leading = isRtl ? '0.7em' : '0.45em';
 
     return `#set page(margin: 1.2cm)
 ${fontConfig}
-#set par(leading: 0.45em)
+#set par(leading: ${leading})
 ${header}
 ${sections}
 #pagebreak(weak: true)`;

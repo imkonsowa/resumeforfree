@@ -110,7 +110,6 @@ useHead({
 
 <template>
     <div class="min-h-screen bg-background">
-        <!-- Hero Section -->
         <div class="border-b bg-muted/40">
             <div class="container mx-auto px-4 py-16 text-center">
                 <Badge
@@ -129,7 +128,6 @@ useHead({
             </div>
         </div>
 
-        <!-- FAQ Section -->
         <div class="container mx-auto px-4 py-16">
             <div class="space-y-12">
                 <div
@@ -175,7 +173,6 @@ useHead({
             </div>
         </div>
 
-        <!-- CTA Section -->
         <div class="border-t bg-muted/40">
             <div class="container mx-auto px-4 py-16 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">
