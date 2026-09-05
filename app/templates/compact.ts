@@ -2,23 +2,24 @@ import type { ResumeData, SectionOrder } from '~/types/resume';
 import type { Template, TemplateParseInput } from '~/types/template';
 import { COMPACT_LAYOUT_CONFIG } from '~/templates/layouts';
 import { escapeTypstText } from '~/utils/stringUtils';
-import { convertEmail, convertLink } from '~/utils/typstUtils';
+import { convertEmail, convertLink, LATIN_FONT_STACK } from '~/utils/typstUtils';
 import { getSharedSectionRenderers, renderProfilePhoto } from '~/utils/sectionRenderers';
 import { RendererContext } from '~/utils/rendererContext';
 import { isRtlLocale } from '~/composables/useLocale';
 
-const renderHeaderRows = (data: ResumeData, fontSize: number): string[] => {
+const renderHeaderRows = (data: ResumeData, fontSize: number, isRtl: boolean): string[] => {
     const rows: string[] = [];
     const fullName = `${escapeTypstText(data?.firstName || '')} ${escapeTypstText(data?.lastName || '')}`.trim();
     const position = escapeTypstText(data?.position || '');
     rows.push(`#text(size: ${fontSize + 12}pt, weight: "bold")[${fullName}]`);
     if (position) {
-        rows.push(`#block(above: 0.8em)[#text(size: ${fontSize + 2}pt)[${position}]]`);
+        const nameGap = isRtl ? '1.3em' : '0.8em';
+        rows.push(`#block(above: ${nameGap})[#text(size: ${fontSize + 2}pt)[${position}]]`);
     }
 
     const contactParts: string[] = [];
     if (data?.email) contactParts.push(convertEmail(data.email));
-    if (data?.phone) contactParts.push(`#text(dir: ltr)[${escapeTypstText(data.phone)}]`);
+    if (data?.phone) contactParts.push(`#text(dir: ltr, font: (${LATIN_FONT_STACK}))[${escapeTypstText(data.phone)}]`);
     if (data?.location) contactParts.push(escapeTypstText(data.location));
     if (contactParts.length > 0) {
         rows.push(`#block(above: 0.8em)[#text(size: ${fontSize - 1}pt)[${contactParts.join(' • ')}]]`);
@@ -52,7 +53,7 @@ const renderHeaderRows = (data: ResumeData, fontSize: number): string[] => {
     return rows;
 };
 const convertResumeHeader = (data: ResumeData, context: RendererContext, fontSize: number, isRtl = false) => {
-    const headerRows = renderHeaderRows(data, fontSize);
+    const headerRows = renderHeaderRows(data, fontSize, isRtl);
     const photo = renderProfilePhoto(data, context);
     const startAlign = isRtl ? 'right' : 'left';
     const endAlign = isRtl ? 'left' : 'right';
@@ -71,11 +72,18 @@ const convertResumeHeader = (data: ResumeData, context: RendererContext, fontSiz
     return `${body}
 #block(above: 1em, below: 1em)[#line(length: 100%, stroke: 1pt + black)]`;
 };
-const parse = ({ data, font, locale, t, fontSize, photoShape }: TemplateParseInput): string => {
+const parse = ({ data, font, locale, t, fontSize, photoShape, showSectionHeaderLine }: TemplateParseInput): string => {
     const isRtl = isRtlLocale(locale);
 
     const config = COMPACT_LAYOUT_CONFIG;
-    const context = new RendererContext({ t, fontSize, config, locale, photoShape: photoShape || 'rectangle' });
+    const context = new RendererContext({
+        t,
+        fontSize,
+        config,
+        locale,
+        photoShape: photoShape || 'rectangle',
+        sectionStyle: { headerUnderline: showSectionHeaderLine ?? false },
+    });
     const sharedRenderers = getSharedSectionRenderers();
 
     const sectionRenderers: Record<string, () => string> = {
@@ -101,14 +109,14 @@ const parse = ({ data, font, locale, t, fontSize, photoShape }: TemplateParseInp
     const profileSection = sharedRenderers.profile(data, context);
     const fullContent = `${convertResumeHeader(data, context, fontSize, isRtl)}${profileSection ? `\n${profileSection}` : ''}${sectionsContent ? `\n\n${sectionsContent}` : ''}`;
 
-    // Configure font and text direction for RTL languages
     const fontConfig = isRtl
-        ? `#set text(font: ("${font}", "Arial"), size: ${fontSize}pt, dir: rtl)`
+        ? `#set text(font: ("${font}", ${LATIN_FONT_STACK}), size: ${fontSize}pt, dir: rtl)`
         : `#set text(font: ("${font}"), size: ${fontSize}pt)`;
+    const leading = isRtl ? '0.65em' : '0.4em';
 
     return `#set page(margin: 1cm)
 ${fontConfig}
-#set par(leading: 0.4em)
+#set par(leading: ${leading})
 ${fullContent}
 #pagebreak(weak: true)`;
 };

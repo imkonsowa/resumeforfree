@@ -6,6 +6,9 @@ export const SECTION_SPACING = '1.6em';
 export const ITEMS_SPACING = '0.8em';
 export const DESCRIPTION_BELOW = '0.8em';
 export const PHOTO_SIZE = '25mm';
+
+export const LATIN_FALLBACK_FAMILIES = ['Calibri', 'Roboto'] as const;
+export const LATIN_FONT_STACK = LATIN_FALLBACK_FAMILIES.map(f => `"${f}"`).join(', ');
 export const renderDescription = (description: string, fontSize: number): string => {
     if (!description) return '';
     return `#block(above: 0em, below: ${DESCRIPTION_BELOW})[#text(size: ${fontSize}pt)[${description}]]`;
