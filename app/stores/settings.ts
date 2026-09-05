@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import type { UserSettings, ResumeSettings, PhotoShape } from '~/types/resume';
-import { defaultUserSettings, defaultResumeSettings, getFontsForLanguage } from '~/types/resume';
+import { defaultUserSettings, defaultResumeSettings, getFontsForLanguage, resolveFontFamily } from '~/types/resume';
 
 export const useSettingsStore = defineStore('settings', {
     state: () => ({
@@ -14,7 +14,8 @@ export const useSettingsStore = defineStore('settings', {
     getters: {
         selectedFont(): string {
             const resumeStore = useResumeStore();
-            return resumeStore.activeResumeSettings.selectedFont || defaultResumeSettings.selectedFont;
+            const stored = resumeStore.activeResumeSettings.selectedFont || defaultResumeSettings.selectedFont;
+            return resolveFontFamily(stored, resumeStore.activeResumeLanguage);
         },
         selectedTemplate(): string {
             const resumeStore = useResumeStore();

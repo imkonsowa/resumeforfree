@@ -14,13 +14,20 @@ const source = resolve(root, 'node_modules/@myriaddreamin/typst-ts-web-compiler/
 const key = `typst-ts-web-compiler-${version}.wasm`;
 const mib = (statSync(source).size / 1048576).toFixed(1);
 
-console.log(`Uploading ${key} (${mib} MiB) to ${BUCKET}`);
+const targets = process.argv.includes('--local')
+    ? ['--local']
+    : process.argv.includes('--remote')
+        ? ['--remote']
+        : ['--local', '--remote'];
 
-execFileSync('npx', [
-    'wrangler', 'r2', 'object', 'put', `${BUCKET}/${key}`,
-    '--file', source,
-    '--content-type', 'application/wasm',
-    '--remote',
-], { stdio: 'inherit', cwd: root });
+for (const target of targets) {
+    console.log(`Uploading ${key} (${mib} MiB) to ${BUCKET} ${target}`);
+    execFileSync('npx', [
+        'wrangler', 'r2', 'object', 'put', `${BUCKET}/${key}`,
+        '--file', source,
+        '--content-type', 'application/wasm',
+        target,
+    ], { stdio: 'inherit', cwd: root });
+}
 
 console.log(`Done. Served at /wasm/${key}`);

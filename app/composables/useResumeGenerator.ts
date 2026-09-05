@@ -1,5 +1,6 @@
 import { getTemplate } from '~/templates';
 import type { Resume, ResumeData, ResumePhoto } from '~/types/resume';
+import { resolveFontFamily } from '~/types/resume';
 import { typstLoader } from '~/utils/typstLoader';
 import { loadPhotoBytes, PHOTO_VFS_PATH } from '~/utils/photoLoader';
 import { loadFontManifest, resolveFontUrls, warmFonts } from '~/utils/fontLoader';
@@ -41,7 +42,7 @@ export const useResumeGenerator = () => {
     const warmResumeFonts = async (resume: Resume): Promise<void> => {
         try {
             const manifest = await loadFontManifest();
-            const families = [resume.settings.selectedFont, ...LATIN_FALLBACK_FAMILIES];
+            const families = [resolveFontFamily(resume.settings.selectedFont, resume.language), ...LATIN_FALLBACK_FAMILIES];
             const urls = resolveFontUrls(manifest, families);
             await warmFonts(urls.length > 0 ? urls : manifest.map(entry => entry.url));
         }
@@ -78,11 +79,11 @@ export const useResumeGenerator = () => {
         const template = getTemplate(resume.settings.selectedTemplate);
         return template.parse({
             data: resume.data,
-            font: resume.settings.selectedFont,
+            font: resolveFontFamily(resume.settings.selectedFont, resume.language),
             locale: resume.language,
             fontSize: resume.settings.fontSize,
             photoShape: resume.settings.photoShape || 'rectangle',
-            showSectionHeaderLine: resume.settings.showSectionHeaderLine ?? false,
+            showSectionHeaderLine: resume.settings.showSectionHeaderLine ?? true,
             t: scopedT(resume.language),
         });
     };

@@ -11,8 +11,16 @@ const FONT_FILES = [
     'calibri-bold.ttf',
     'geist-regular.ttf',
     'geist-bold.ttf',
-    'ar/naskh.ttf',
-    'ar/naskh-bold.ttf',
+    'ar/noto-naskh-regular.ttf',
+    'ar/noto-naskh-bold.ttf',
+    'ar/cairo-regular.ttf',
+    'ar/cairo-bold.ttf',
+    'ar/amiri-regular.ttf',
+    'ar/amiri-bold.ttf',
+    'ar/plex-sans-arabic-regular.ttf',
+    'ar/plex-sans-arabic-bold.ttf',
+    'ar/tajawal-regular.ttf',
+    'ar/tajawal-bold.ttf',
 ];
 
 const wasmPath = resolve(root, 'node_modules/@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm');

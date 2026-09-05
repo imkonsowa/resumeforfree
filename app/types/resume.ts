@@ -238,7 +238,7 @@ export const defaultResumeSettings: ResumeSettings = {
     selectedTemplate: 'compact',
     fontSize: 12,
     photoShape: 'rectangle',
-    showSectionHeaderLine: false,
+    showSectionHeaderLine: true,
     isRawMode: false,
     sectionCollapsed: {
         personal: false,
@@ -274,12 +274,27 @@ export const availableFonts = {
         { name: 'Roboto', family: 'Roboto' },
     ],
     ar: [
-        { name: 'Naskh', family: 'Naskh' },
+        { name: 'Noto Naskh', family: 'Noto Naskh Arabic' },
+        { name: 'Cairo', family: 'Cairo' },
+        { name: 'Amiri', family: 'Amiri' },
+        { name: 'IBM Plex Arabic', family: 'IBM Plex Sans Arabic' },
+        { name: 'Tajawal', family: 'Tajawal' },
     ],
+};
+
+const LEGACY_FONT_ALIASES: Record<string, string> = {
+    Naskh: 'Noto Naskh Arabic',
 };
 
 export const getFontsForLanguage = (language: string) => {
     return availableFonts[language as keyof typeof availableFonts] || availableFonts.en;
+};
+
+export const resolveFontFamily = (font: string, language: string): string => {
+    const fonts = getFontsForLanguage(language);
+    const candidate = LEGACY_FONT_ALIASES[font] ?? font;
+    if (fonts.some(f => f.family === candidate)) return candidate;
+    return fonts[0]?.family || 'Calibri';
 };
 
 export const getDefaultFontForLanguage = (language: string) => {

@@ -26,7 +26,7 @@ const parse = ({ data, font, locale, t, fontSize, photoShape, showSectionHeaderL
         config,
         locale,
         photoShape: photoShape || 'rectangle',
-        sectionStyle: { headerUnderline: showSectionHeaderLine ?? false },
+        sectionStyle: { headerUnderline: showSectionHeaderLine ?? true },
     });
     const sharedRenderers = getSharedSectionRenderers();
 

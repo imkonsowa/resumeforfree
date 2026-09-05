@@ -70,7 +70,7 @@ const convertResumeHeader = (data: ResumeData, context: RendererContext, fontSiz
         : textBlock;
 
     return `${body}
-#block(above: 1em, below: 1em)[#line(length: 100%, stroke: 1pt + black)]`;
+#block(above: 1em, below: 1em)[#line(length: 100%, stroke: 0.5pt + black)]`;
 };
 const parse = ({ data, font, locale, t, fontSize, photoShape, showSectionHeaderLine }: TemplateParseInput): string => {
     const isRtl = isRtlLocale(locale);
@@ -82,7 +82,7 @@ const parse = ({ data, font, locale, t, fontSize, photoShape, showSectionHeaderL
         config,
         locale,
         photoShape: photoShape || 'rectangle',
-        sectionStyle: { headerUnderline: showSectionHeaderLine ?? false },
+        sectionStyle: { headerUnderline: showSectionHeaderLine ?? true },
     });
     const sharedRenderers = getSharedSectionRenderers();
 
