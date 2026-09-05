@@ -4,12 +4,12 @@
   "license": "AGPL-3.0-or-later",
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "deploy": "nuxt build && wrangler deploy",
+    "build": "npm run fonts:manifest && nuxt build",
+    "deploy": "npm run fonts:manifest && nuxt build && wrangler deploy",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "npm run fonts:manifest && nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "db:generate": "drizzle-kit generate",
@@ -19,7 +19,8 @@
     "test": "vitest",
     "test:unit": "vitest run --config vitest.config.ts",
     "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui"
+    "test:e2e:ui": "playwright test --ui",
+    "fonts:manifest": "node scripts/generate-font-manifest.mjs"
   },
   "dependencies": {
     "@cloudflare/workers-types": "^4.20250906.0",

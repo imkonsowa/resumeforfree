@@ -2,6 +2,8 @@ import { getTemplate } from '~/templates';
 import type { Resume, ResumeData, ResumePhoto } from '~/types/resume';
 import { typstLoader } from '~/utils/typstLoader';
 import { loadPhotoBytes, PHOTO_VFS_PATH } from '~/utils/photoLoader';
+import { loadFontManifest, resolveFontUrls, warmFonts } from '~/utils/fontLoader';
+import { LATIN_FALLBACK_FAMILIES } from '~/utils/typstUtils';
 
 let lastSyncedPhotoKey: string | null = null;
 
@@ -33,6 +35,18 @@ export const useResumeGenerator = () => {
             console.error('Failed to register resume photo with Typst:', error);
             await typstLoader.unregisterPhoto(PHOTO_VFS_PATH);
             lastSyncedPhotoKey = null;
+        }
+    };
+
+    const warmResumeFonts = async (resume: Resume): Promise<void> => {
+        try {
+            const manifest = await loadFontManifest();
+            const families = [resume.settings.selectedFont, ...LATIN_FALLBACK_FAMILIES];
+            const urls = resolveFontUrls(manifest, families);
+            await warmFonts(urls.length > 0 ? urls : manifest.map(entry => entry.url));
+        }
+        catch (error) {
+            console.error('Failed to warm fonts before compile:', error);
         }
     };
 
@@ -68,6 +82,7 @@ export const useResumeGenerator = () => {
             locale: resume.language,
             fontSize: resume.settings.fontSize,
             photoShape: resume.settings.photoShape || 'rectangle',
+            showSectionHeaderLine: resume.settings.showSectionHeaderLine ?? false,
             t: scopedT(resume.language),
         });
     };
@@ -75,14 +90,10 @@ export const useResumeGenerator = () => {
     const generatePreview = async (resume: Resume): Promise<string> => {
         if (!typstReady.value) throw new Error('Typst not ready');
         if (!window.$typst) throw new Error('Typst global object not available yet');
+        await warmResumeFonts(resume);
         await syncPhotoToVfs(resume);
         return await window.$typst.svg({
             mainContent: generateTypstContent(resume),
-            // Disable the runtime <script> block Typst.ts adds by default. It provides
-            // click-ripple and selection-highlight glue that only works inside its own
-            // runtime, and it contains unescaped `&` that breaks strict XML parsing
-            // (<object>, xmllint, external viewers). Emitting body+defs+css only
-            // produces portable, standards-compliant SVG.
             data_selection: { body: true, defs: true, css: true, js: false },
         });
     };
@@ -91,6 +102,7 @@ export const useResumeGenerator = () => {
         if (!typstReady.value) throw new Error('Typst not ready');
         if (!window.$typst) throw new Error('Typst global object not available');
         try {
+            await warmResumeFonts(resume);
             await syncPhotoToVfs(resume);
             return await window.$typst.pdf({ mainContent: generateTypstContent(resume) });
         }
