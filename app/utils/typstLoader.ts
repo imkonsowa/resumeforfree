@@ -7,6 +7,7 @@ import { buildLazyFonts, loadFontManifest } from '~/utils/fontLoader';
 
 const CACHE_PREFIX = 'typst-assets-';
 const CACHE_NAME = `${CACHE_PREFIX}${TYPST_VERSION}`;
+const COMPILER_WASM_URL = `/wasm/typst-ts-web-compiler-${TYPST_VERSION}.wasm`;
 
 async function purgeStaleCaches(): Promise<void> {
     const names = await caches.keys();
@@ -143,8 +144,7 @@ class TypstLoader {
             await purgeStaleCaches();
             $typst.setCompilerInitOptions({
                 getModule: async () => {
-                    const wasmUrl = new URL('@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm', import.meta.url);
-                    const wasmResponse = await cachedFetch(wasmUrl);
+                    const wasmResponse = await cachedFetch(COMPILER_WASM_URL);
                     if (!wasmResponse.ok) {
                         throw new Error(`Failed to fetch compiler WASM: ${wasmResponse.status}`);
                     }

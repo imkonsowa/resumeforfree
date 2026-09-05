@@ -20,7 +20,8 @@
     "test:unit": "vitest run --config vitest.config.ts",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "fonts:manifest": "node scripts/generate-font-manifest.mjs"
+    "fonts:manifest": "node scripts/generate-font-manifest.mjs",
+    "wasm:upload": "node scripts/upload-wasm.mjs"
   },
   "dependencies": {
     "@cloudflare/workers-types": "^4.20250906.0",
