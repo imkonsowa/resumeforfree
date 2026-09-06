@@ -84,7 +84,7 @@ const copyToken = async () => {
 
 const formatDate = (value: string | null) => {
     if (!value) return '—';
-    const parsed = new Date(value.replace(' ', 'T'));
+    const parsed = new Date(value);
     return Number.isNaN(parsed.getTime()) ? value : parsed.toLocaleString();
 };
 

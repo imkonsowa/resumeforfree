@@ -1,6 +1,7 @@
 import jwt from '@tsndr/cloudflare-worker-jwt';
 import type { D1Database } from '@cloudflare/workers-types';
 import type { UserSettingsModel } from '~~/server/database/schema';
+import { toIsoUtc } from '~~/server/utils/datetime';
 
 const JWT_SECRET = process.env.JWT_SECRET;
 class DatabaseService {
@@ -44,6 +45,6 @@ export default defineEventHandler(async (event) => {
                     ? JSON.parse(userSettings.settings)
                     : userSettings.settings)
             : {},
-        updated_at: userSettings?.updated_at || null,
+        updated_at: toIsoUtc(userSettings?.updated_at),
     };
 });

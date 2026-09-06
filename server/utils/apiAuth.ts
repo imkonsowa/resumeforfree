@@ -1,6 +1,7 @@
 import jwt from '@tsndr/cloudflare-worker-jwt';
 import type { H3Event } from 'h3';
 import type { D1Database } from '@cloudflare/workers-types';
+import { toIsoUtc } from '~~/server/utils/datetime';
 
 export const TOKEN_PREFIX = 'rff_';
 export const DEFAULT_TOKEN_TTL_HOURS = 24;
@@ -46,7 +47,7 @@ async function userIdFromApiToken(event: H3Event, token: string): Promise<string
     if (row.revoked_at) {
         throw createError({ statusCode: 401, statusMessage: 'API token revoked' });
     }
-    if (new Date(`${row.expires_at.replace(' ', 'T')}Z`).getTime() <= Date.now()) {
+    if (new Date(toIsoUtc(row.expires_at)!).getTime() <= Date.now()) {
         throw createError({ statusCode: 401, statusMessage: 'API token expired' });
     }
 

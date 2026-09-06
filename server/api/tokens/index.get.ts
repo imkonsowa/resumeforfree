@@ -1,4 +1,5 @@
 import { getDb, requireSessionUserId } from '~~/server/utils/apiAuth';
+import { toIsoUtc } from '~~/server/utils/datetime';
 
 export default defineEventHandler(async (event) => {
     const userId = await requireSessionUserId(event);
@@ -24,11 +25,11 @@ export default defineEventHandler(async (event) => {
             id: row.id,
             name: row.name,
             prefix: row.token_prefix,
-            expiresAt: row.expires_at,
-            lastUsedAt: row.last_used_at,
-            revokedAt: row.revoked_at,
-            createdAt: row.created_at,
-            active: !row.revoked_at && new Date(`${row.expires_at.replace(' ', 'T')}Z`).getTime() > now,
+            expiresAt: toIsoUtc(row.expires_at),
+            lastUsedAt: toIsoUtc(row.last_used_at),
+            revokedAt: toIsoUtc(row.revoked_at),
+            createdAt: toIsoUtc(row.created_at),
+            active: !row.revoked_at && new Date(toIsoUtc(row.expires_at)!).getTime() > now,
         })),
     };
 });

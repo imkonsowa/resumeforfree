@@ -1,4 +1,5 @@
 import { DEFAULT_TOKEN_TTL_HOURS, MAX_TOKEN_TTL_HOURS, generateToken, getDb, hashToken, requireSessionUserId } from '~~/server/utils/apiAuth';
+import { toIsoUtc } from '~~/server/utils/datetime';
 
 const MAX_ACTIVE_TOKENS = 10;
 
@@ -48,8 +49,8 @@ export default defineEventHandler(async (event) => {
             id: created?.id,
             name: created?.name,
             prefix: created?.token_prefix,
-            expiresAt: created?.expires_at,
-            createdAt: created?.created_at,
+            expiresAt: toIsoUtc(created?.expires_at),
+            createdAt: toIsoUtc(created?.created_at),
         },
     };
 });
