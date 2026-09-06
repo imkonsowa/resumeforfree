@@ -208,8 +208,9 @@ export const useResumeStore = defineStore('resume', {
                     });
                 }
             });
-            if (!this.activeResumeId && Object.keys(this.resumes).length > 0) {
-                this.activeResumeId = Object.keys(this.resumes)[0];
+            if (!this.activeResumeId || !this.resumes[this.activeResumeId]) {
+                const availableIds = Object.keys(this.resumes);
+                this.activeResumeId = availableIds.length > 0 ? availableIds[0] : null;
             }
         },
         createResume(input: { name?: string; language?: string; settings?: ResumeSettings } = {}): string {
@@ -314,14 +315,14 @@ export const useResumeStore = defineStore('resume', {
             return '';
         },
         updateField(field: keyof ResumeData, value: unknown) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const updateData = { ...currentData, [field]: value };
                 this.updateResumeData(this.activeResumeId, updateData);
             }
         },
         addExperience() {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newExperiences = [...currentData.experiences, {
                     company: '',
@@ -337,7 +338,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         updateExperience(index: number, field: keyof Experience, value: unknown) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.experiences[index]) {
                     const newExperiences = [...currentData.experiences];
@@ -347,7 +348,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         removeExperience(index: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newExperiences = [...currentData.experiences];
                 newExperiences.splice(index, 1);
@@ -355,7 +356,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         moveExperience(fromIndex: number, toIndex: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newExperiences = [...currentData.experiences];
                 const item = newExperiences.splice(fromIndex, 1)[0];
@@ -364,7 +365,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         addExperienceAchievement(experienceIndex: number, achievement = '') {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.experiences[experienceIndex]) {
                     const newExperiences = [...currentData.experiences];
@@ -377,7 +378,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         updateExperienceAchievement(experienceIndex: number, achievementIndex: number, achievement: string) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.experiences[experienceIndex]?.achievements[achievementIndex] !== undefined) {
                     const newExperiences = [...currentData.experiences];
@@ -392,7 +393,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         removeExperienceAchievement(experienceIndex: number, achievementIndex: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.experiences[experienceIndex]) {
                     const newExperiences = [...currentData.experiences];
@@ -407,7 +408,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         moveExperienceAchievement(experienceIndex: number, fromIndex: number, toIndex: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.experiences[experienceIndex]) {
                     const newExperiences = [...currentData.experiences];
@@ -423,7 +424,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         addInternship() {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newInternships = [...currentData.internships, {
                     company: '',
@@ -439,7 +440,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         updateInternship(index: number, field: keyof Internship, value: unknown) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.internships[index]) {
                     const newInternships = [...currentData.internships];
@@ -449,7 +450,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         removeInternship(index: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newInternships = [...currentData.internships];
                 newInternships.splice(index, 1);
@@ -457,7 +458,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         moveInternship(fromIndex: number, toIndex: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newInternships = [...currentData.internships];
                 const item = newInternships.splice(fromIndex, 1)[0];
@@ -466,7 +467,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         addInternshipAchievement(internshipIndex: number, achievement = '') {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.internships[internshipIndex]) {
                     const newInternships = [...currentData.internships];
@@ -479,7 +480,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         updateInternshipAchievement(internshipIndex: number, achievementIndex: number, achievement: string) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.internships[internshipIndex]?.achievements[achievementIndex] !== undefined) {
                     const newInternships = [...currentData.internships];
@@ -494,7 +495,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         removeInternshipAchievement(internshipIndex: number, achievementIndex: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.internships[internshipIndex]) {
                     const newInternships = [...currentData.internships];
@@ -509,7 +510,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         moveInternshipAchievement(internshipIndex: number, fromIndex: number, toIndex: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.internships[internshipIndex]) {
                     const newInternships = [...currentData.internships];
@@ -525,7 +526,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         addEducation() {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newEducation = [...currentData.education, {
                     institution: '',
@@ -543,7 +544,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         updateEducation(index: number, field: keyof Education, value: unknown) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.education[index]) {
                     const newEducation = [...currentData.education];
@@ -553,7 +554,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         removeEducation(index: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newEducation = [...currentData.education];
                 newEducation.splice(index, 1);
@@ -561,7 +562,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         moveEducation(fromIndex: number, toIndex: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newEducation = [...currentData.education];
                 const item = newEducation.splice(fromIndex, 1)[0];
@@ -570,7 +571,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         addEducationAchievement(educationIndex: number, achievement = '') {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.education[educationIndex]) {
                     const newEducation = [...currentData.education];
@@ -584,7 +585,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         updateEducationAchievement(educationIndex: number, achievementIndex: number, achievement: string) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const existing = currentData.education[educationIndex]?.achievements;
                 if (existing && existing[achievementIndex] !== undefined) {
@@ -600,7 +601,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         removeEducationAchievement(educationIndex: number, achievementIndex: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const existing = currentData.education[educationIndex]?.achievements;
                 if (existing) {
@@ -616,7 +617,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         moveEducationAchievement(educationIndex: number, fromIndex: number, toIndex: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const existing = currentData.education[educationIndex]?.achievements;
                 if (existing) {
@@ -633,7 +634,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         addVolunteering() {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newVolunteering = [...currentData.volunteering, {
                     organization: '',
@@ -648,7 +649,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         updateVolunteering(index: number, field: keyof Volunteering, value: unknown) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.volunteering[index]) {
                     const newVolunteering = [...currentData.volunteering];
@@ -658,7 +659,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         removeVolunteering(index: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newVolunteering = [...currentData.volunteering];
                 newVolunteering.splice(index, 1);
@@ -666,7 +667,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         moveVolunteering(fromIndex: number, toIndex: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newVolunteering = [...currentData.volunteering];
                 const item = newVolunteering.splice(fromIndex, 1)[0];
@@ -675,7 +676,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         addVolunteeringAchievement(volunteeringIndex: number, achievement = '') {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.volunteering[volunteeringIndex]) {
                     const newVolunteering = [...currentData.volunteering];
@@ -688,7 +689,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         updateVolunteeringAchievement(volunteeringIndex: number, achievementIndex: number, achievement: string) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.volunteering[volunteeringIndex]?.achievements[achievementIndex] !== undefined) {
                     const newVolunteering = [...currentData.volunteering];
@@ -703,7 +704,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         removeVolunteeringAchievement(volunteeringIndex: number, achievementIndex: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.volunteering[volunteeringIndex]) {
                     const newVolunteering = [...currentData.volunteering];
@@ -718,7 +719,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         moveVolunteeringAchievement(volunteeringIndex: number, fromIndex: number, toIndex: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.volunteering[volunteeringIndex]) {
                     const newVolunteering = [...currentData.volunteering];
@@ -734,7 +735,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         addSkill() {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newSkills = [...currentData.skills, {
                     title: '',
@@ -744,7 +745,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         updateSkill(index: number, field: keyof SkillItem, value: unknown) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.skills[index]) {
                     const newSkills = [...currentData.skills];
@@ -754,7 +755,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         removeSkill(index: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newSkills = [...currentData.skills];
                 newSkills.splice(index, 1);
@@ -762,7 +763,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         moveSkill(fromIndex: number, toIndex: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newSkills = [...currentData.skills];
                 const item = newSkills.splice(fromIndex, 1)[0];
@@ -771,7 +772,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         addSocialLink() {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newSocialLinks = [...currentData.socialLinks, {
                     platform: 'linkedin',
@@ -782,7 +783,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         updateSocialLink(index: number, field: keyof SocialLink, value: unknown) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.socialLinks[index]) {
                     const newSocialLinks = [...currentData.socialLinks];
@@ -792,7 +793,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         removeSocialLink(index: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newSocialLinks = [...currentData.socialLinks];
                 newSocialLinks.splice(index, 1);
@@ -800,7 +801,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         moveSocialLink(fromIndex: number, toIndex: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newSocialLinks = [...currentData.socialLinks];
                 const item = newSocialLinks.splice(fromIndex, 1)[0];
@@ -809,7 +810,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         addProject() {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newProjects = [...currentData.projects, {
                     title: '',
@@ -824,7 +825,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         addProjectAchievement(projectIndex: number, achievement = '') {
-            if (!this.activeResumeId) return;
+            if (!this.activeResumeId || !this.resumes[this.activeResumeId]) return;
             const currentData = this.resumes[this.activeResumeId].data;
             if (!currentData.projects[projectIndex]) return;
             const newProjects = [...currentData.projects];
@@ -835,7 +836,7 @@ export const useResumeStore = defineStore('resume', {
             this.updateResumeData(this.activeResumeId, { projects: newProjects });
         },
         updateProjectAchievement(projectIndex: number, achievementIndex: number, achievement: string) {
-            if (!this.activeResumeId) return;
+            if (!this.activeResumeId || !this.resumes[this.activeResumeId]) return;
             const currentData = this.resumes[this.activeResumeId].data;
             const project = currentData.projects[projectIndex];
             if (!project?.achievements?.[achievementIndex]) return;
@@ -846,7 +847,7 @@ export const useResumeStore = defineStore('resume', {
             this.updateResumeData(this.activeResumeId, { projects: newProjects });
         },
         removeProjectAchievement(projectIndex: number, achievementIndex: number) {
-            if (!this.activeResumeId) return;
+            if (!this.activeResumeId || !this.resumes[this.activeResumeId]) return;
             const currentData = this.resumes[this.activeResumeId].data;
             const project = currentData.projects[projectIndex];
             if (!project?.achievements) return;
@@ -857,7 +858,7 @@ export const useResumeStore = defineStore('resume', {
             this.updateResumeData(this.activeResumeId, { projects: newProjects });
         },
         moveProjectAchievement(projectIndex: number, fromIndex: number, toIndex: number) {
-            if (!this.activeResumeId) return;
+            if (!this.activeResumeId || !this.resumes[this.activeResumeId]) return;
             const currentData = this.resumes[this.activeResumeId].data;
             const project = currentData.projects[projectIndex];
             if (!project?.achievements) return;
@@ -869,7 +870,7 @@ export const useResumeStore = defineStore('resume', {
             this.updateResumeData(this.activeResumeId, { projects: newProjects });
         },
         addProjectLink(projectIndex: number) {
-            if (!this.activeResumeId) return;
+            if (!this.activeResumeId || !this.resumes[this.activeResumeId]) return;
             const currentData = this.resumes[this.activeResumeId].data;
             if (!currentData.projects[projectIndex]) return;
             const newProjects = [...currentData.projects];
@@ -879,7 +880,7 @@ export const useResumeStore = defineStore('resume', {
             this.updateResumeData(this.activeResumeId, { projects: newProjects });
         },
         updateProjectLink(projectIndex: number, linkIndex: number, field: keyof ProjectLink, value: string) {
-            if (!this.activeResumeId) return;
+            if (!this.activeResumeId || !this.resumes[this.activeResumeId]) return;
             const currentData = this.resumes[this.activeResumeId].data;
             const project = currentData.projects[projectIndex];
             if (!project || !project.links?.[linkIndex]) return;
@@ -893,7 +894,7 @@ export const useResumeStore = defineStore('resume', {
             this.updateResumeData(this.activeResumeId, { projects: newProjects });
         },
         removeProjectLink(projectIndex: number, linkIndex: number) {
-            if (!this.activeResumeId) return;
+            if (!this.activeResumeId || !this.resumes[this.activeResumeId]) return;
             const currentData = this.resumes[this.activeResumeId].data;
             const project = currentData.projects[projectIndex];
             if (!project || !project.links?.[linkIndex]) return;
@@ -904,7 +905,7 @@ export const useResumeStore = defineStore('resume', {
             this.updateResumeData(this.activeResumeId, { projects: newProjects });
         },
         updateProject(index: number, field: keyof Project, value: unknown) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.projects[index]) {
                     const newProjects = [...currentData.projects];
@@ -914,7 +915,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         removeProject(index: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newProjects = [...currentData.projects];
                 newProjects.splice(index, 1);
@@ -922,7 +923,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         moveProject(fromIndex: number, toIndex: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newProjects = [...currentData.projects];
                 const item = newProjects.splice(fromIndex, 1)[0];
@@ -931,7 +932,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         addLanguage() {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newLanguages = [...currentData.languages, {
                     name: '',
@@ -941,7 +942,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         updateLanguage(index: number, field: keyof Language, value: unknown) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.languages[index]) {
                     const newLanguages = [...currentData.languages];
@@ -951,7 +952,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         removeLanguage(index: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newLanguages = [...currentData.languages];
                 newLanguages.splice(index, 1);
@@ -959,7 +960,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         moveLanguage(fromIndex: number, toIndex: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newLanguages = [...currentData.languages];
                 const item = newLanguages.splice(fromIndex, 1)[0];
@@ -968,7 +969,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         addCertificate() {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newCertificates = [...currentData.certificates, {
                     title: '',
@@ -980,7 +981,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         updateCertificate(index: number, field: keyof Certificate, value: unknown) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 if (currentData.certificates[index]) {
                     const newCertificates = [...currentData.certificates];
@@ -990,7 +991,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         removeCertificate(index: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newCertificates = [...currentData.certificates];
                 newCertificates.splice(index, 1);
@@ -998,7 +999,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         moveCertificate(fromIndex: number, toIndex: number) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newCertificates = [...currentData.certificates];
                 const item = newCertificates.splice(fromIndex, 1)[0];
@@ -1012,21 +1013,21 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         updateSectionHeader(section: keyof SectionHeaders, headerText: string) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentHeaders = this.resumes[this.activeResumeId].data.sectionHeaders || {} as SectionHeaders;
                 const newHeaders = { ...currentHeaders, [section]: headerText };
                 this.updateResumeData(this.activeResumeId, { sectionHeaders: newHeaders });
             }
         },
         updateSectionPlacement(section: keyof SectionPlacement, placement: 'left' | 'right') {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const newPlacement = { ...currentData.sectionPlacement, [section]: placement };
                 this.updateResumeData(this.activeResumeId, { sectionPlacement: newPlacement });
             }
         },
         moveSectionUp(sectionKey: keyof SectionOrder) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const currentOrder = currentData.sectionOrder[sectionKey];
                 if (currentOrder > 0) {
@@ -1043,7 +1044,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         moveSectionDown(sectionKey: keyof SectionOrder) {
-            if (this.activeResumeId) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
                 const currentData = this.resumes[this.activeResumeId].data;
                 const currentOrder = currentData.sectionOrder[sectionKey];
                 const maxOrder = Math.max(...Object.values(currentData.sectionOrder));
@@ -1236,7 +1237,7 @@ export const useResumeStore = defineStore('resume', {
             }
         },
         setActiveResumeSetting<K extends keyof ResumeSettings>(key: K, value: ResumeSettings[K]) {
-            if (!this.activeResumeId) return;
+            if (!this.activeResumeId || !this.resumes[this.activeResumeId]) return;
             const resume = this.resumes[this.activeResumeId];
             if (!resume) return;
             if (!resume.settings) {
@@ -1246,7 +1247,7 @@ export const useResumeStore = defineStore('resume', {
             resume.updatedAt = new Date().toISOString();
         },
         toggleActiveResumeSectionCollapse(sectionKey: string) {
-            if (!this.activeResumeId) return;
+            if (!this.activeResumeId || !this.resumes[this.activeResumeId]) return;
             const resume = this.resumes[this.activeResumeId];
             if (!resume) return;
             if (!resume.settings) {
@@ -1259,7 +1260,7 @@ export const useResumeStore = defineStore('resume', {
             resume.updatedAt = new Date().toISOString();
         },
         setActiveResumeSectionCollapsed(sectionKey: string, collapsed: boolean) {
-            if (!this.activeResumeId) return;
+            if (!this.activeResumeId || !this.resumes[this.activeResumeId]) return;
             const resume = this.resumes[this.activeResumeId];
             if (!resume) return;
             if (!resume.settings) {

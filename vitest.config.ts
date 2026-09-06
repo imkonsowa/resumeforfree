@@ -10,6 +10,7 @@ export default defineConfig({
     },
     resolve: {
         alias: {
+            '~~': resolve(__dirname, '.'),
             '~': resolve(__dirname, './app'),
             '@': resolve(__dirname, './app'),
         },

@@ -342,7 +342,7 @@ const orderedSections = computed(() => {
                 </div>
                 <div
                     v-if="!showMobilePreview"
-                    class="lg:hidden fixed bottom-6 right-6 z-40 flex items-center gap-2"
+                    class="lg:hidden fixed bottom-[calc(1.5rem_+_env(safe-area-inset-bottom))] right-[calc(1.5rem_+_env(safe-area-inset-right))] z-40 flex items-center gap-2"
                 >
                     <ResumeLanguageSelector
                         v-if="resumeStore.activeResume"
@@ -362,7 +362,7 @@ const orderedSections = computed(() => {
                 </div>
                 <div
                     v-if="showMobilePreview"
-                    class="lg:hidden fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-50"
+                    class="lg:hidden fixed inset-0 z-50 overflow-y-auto bg-black/50"
                 >
                     <div class="flex items-center justify-center min-h-screen p-4">
                         <div class="bg-white rounded-lg max-w-full w-full max-h-[90vh] flex flex-col">
