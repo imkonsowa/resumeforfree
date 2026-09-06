@@ -11,6 +11,7 @@ import {
     renderTemplateSubHeader,
     renderTemplateSubHeaderContent,
     SECTION_SPACING,
+    SECTION_HEADER_SIZE_OFFSET,
 } from './typstUtils';
 
 const joinItems = (items: string[], config: TemplateRenderConfig, spacing?: string): string => {
@@ -192,7 +193,7 @@ export const formatSimpleItems = (
 const buildSectionHeader = (headerText: string, style: SectionStyle): string => {
     const fontSize = style.fontSize ?? 12;
     const display = style.headerUpperCase ? headerText.toUpperCase() : headerText;
-    const size = `${fontSize + (style.headerSizeOffset ?? 2)}pt`;
+    const size = `${fontSize + (style.headerSizeOffset ?? SECTION_HEADER_SIZE_OFFSET)}pt`;
     const fillProp = style.headerColor ? `, fill: ${style.headerColor}` : '';
     const headerText$ = `#text(size: ${size}, weight: "bold"${fillProp})[${escapeTypstText(display)}]`;
 

@@ -37,7 +37,6 @@ const ATS_SECTION_STYLE: SectionStyle = {
     headerColor: ATS_BLUE,
     headerUnderline: true,
     headerUpperCase: true,
-    headerSizeOffset: 1,
     spacingAbove: '1em',
 };
 

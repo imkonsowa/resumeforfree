@@ -2,6 +2,7 @@ import type { DateRangeInput } from '~/types/template';
 import { escapeTypstString, escapeTypstText } from './stringUtils';
 
 export const HEADER_SPACING = '1em';
+export const SECTION_HEADER_SIZE_OFFSET = 3;
 export const SECTION_SPACING = '1.6em';
 export const ITEMS_SPACING = '0.8em';
 export const DESCRIPTION_BELOW = '0.8em';

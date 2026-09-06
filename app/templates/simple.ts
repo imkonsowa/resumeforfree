@@ -1,7 +1,7 @@
 import type { ResumeData, SectionHeaders, SectionOrder } from '~/types/resume';
 import type { SectionContent, Template, TemplateParseInput, TemplateRenderConfig } from '~/types/template';
 import { escapeTypstText } from '~/utils/stringUtils';
-import { convertEmail, convertLink, convertList, LATIN_FONT_STACK, renderDescription, renderTemplateSubHeader, renderTemplateSubHeaderContent, SECTION_SPACING } from '~/utils/typstUtils';
+import { convertEmail, convertLink, convertList, LATIN_FONT_STACK, renderDescription, renderTemplateSubHeader, renderTemplateSubHeaderContent, SECTION_HEADER_SIZE_OFFSET, SECTION_SPACING } from '~/utils/typstUtils';
 import { RendererContext } from '~/utils/rendererContext';
 import { isRtlLocale } from '~/composables/useLocale';
 import { SECTION_TRANSLATION_MAP } from '~/composables/useSectionHeader';
@@ -113,7 +113,7 @@ function renderLinks(data: ResumeData, context: RendererContext): SimpleSection 
 function renderSimpleSection(section: SimpleSection, fontSize: number, isFirst: boolean): string {
     if (!section.rows.length) return '';
 
-    const label = `#text(size: ${fontSize - 1}pt, tracking: 0.08em)[${escapeTypstText(section.label)}]`;
+    const label = `#text(size: ${fontSize + SECTION_HEADER_SIZE_OFFSET}pt, weight: "bold", tracking: 0.08em)[${escapeTypstText(section.label)}]`;
 
     const cells: string[] = [];
     section.rows.forEach((row, idx) => {
