@@ -4,7 +4,7 @@ import { Input } from '~/components/ui/input';
 import { Label } from '~/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
 import { Separator } from '~/components/ui/separator';
-import { User, Lock, Eye, EyeOff } from 'lucide-vue-next';
+import { User, Lock, Eye, EyeOff, KeyRound } from 'lucide-vue-next';
 
 const { t } = useI18n();
 const localePath = useLocalePath();
@@ -20,7 +20,7 @@ useHead({
     ],
 });
 
-const activeSection = ref<'personal' | 'password'>('personal');
+const activeSection = ref<'personal' | 'password' | 'tokens'>('personal');
 const isChangingPassword = ref(false);
 const showCurrentPassword = ref(false);
 const showNewPassword = ref(false);
@@ -131,6 +131,14 @@ useHead({
                                     >
                                         <Lock class="w-4 h-4" />
                                         {{ $t('auth.changePassword') }}
+                                    </button>
+                                    <button
+                                        class="w-full flex items-center gap-3 px-3 py-2 text-sm rounded-md transition-colors text-left"
+                                        :class="activeSection === 'tokens' ? 'bg-green-50 text-green-ink font-medium' : 'text-gray-700 hover:bg-gray-100'"
+                                        @click="activeSection = 'tokens'"
+                                    >
+                                        <KeyRound class="w-4 h-4" />
+                                        {{ $t('apiTokens.title') }}
                                     </button>
                                 </nav>
                             </CardContent>
@@ -350,6 +358,8 @@ useHead({
                                 </form>
                             </CardContent>
                         </Card>
+
+                        <ApiTokensPanel v-if="activeSection === 'tokens'" />
                     </div>
                 </div>
             </div>
