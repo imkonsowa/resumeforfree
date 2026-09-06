@@ -55,7 +55,7 @@ watch(
 <template>
     <div class="min-h-screen bg-white flex flex-col">
         <header class="sticky top-0 z-40 border-b border-rule bg-white/90 backdrop-blur">
-            <div class="max-w-[1180px] mx-auto px-6">
+            <div class="max-w-[1180px] mx-auto px-6 ps-[max(1.5rem,env(safe-area-inset-left))] pe-[max(1.5rem,env(safe-area-inset-right))]">
                 <div class="flex items-center justify-between h-[60px]">
                     <div class="flex items-center gap-7">
                         <NuxtLink :to="localePath('/')">
