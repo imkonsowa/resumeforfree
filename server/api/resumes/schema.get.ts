@@ -12,6 +12,7 @@ export default defineEventHandler(() => ({
         }]),
     ),
     routes: [
+        'GET    /api/resumes                                          (list your resumes; start here to find a resumeId)',
         'GET    /api/resumes/{resumeId}/sections/{section}',
         'PUT    /api/resumes/{resumeId}/sections/{section}            (replace whole section)',
         'POST   /api/resumes/{resumeId}/sections/{section}            (append one item)',

@@ -1,8 +1,7 @@
-import jwt from '@tsndr/cloudflare-worker-jwt';
 import type { D1Database } from '@cloudflare/workers-types';
 import type { ResumeModel } from '~~/server/database/schema';
+import { requireUserId } from '~~/server/utils/apiAuth';
 
-const JWT_SECRET = process.env.JWT_SECRET;
 class DatabaseService {
     constructor(private db: D1Database) {}
     async getResumesByUserId(userId: string): Promise<ResumeModel[]> {
@@ -14,23 +13,7 @@ class DatabaseService {
     }
 }
 export default defineEventHandler(async (event) => {
-    const token = getCookie(event, 'auth-token');
-    if (!token) {
-        throw createError({
-            statusCode: 401,
-            statusMessage: 'Authentication required',
-        });
-    }
-    const isValid = await jwt.verify(token, JWT_SECRET);
-    if (!isValid) {
-        throw createError({
-            statusCode: 401,
-            statusMessage: 'Invalid token',
-        });
-    }
-    const decoded = jwt.decode(token);
-    const payload = decoded.payload as { sub: string };
-    const userId = payload.sub;
+    const userId = await requireUserId(event);
     const db = event.context.cloudflare?.env?.DB;
     if (!db) {
         return {
