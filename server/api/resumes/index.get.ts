@@ -1,6 +1,7 @@
 import type { D1Database } from '@cloudflare/workers-types';
 import type { ResumeModel } from '~~/server/database/schema';
 import { requireUserId } from '~~/server/utils/apiAuth';
+import { toIsoUtc } from '~~/server/utils/datetime';
 
 class DatabaseService {
     constructor(private db: D1Database) {}
@@ -39,8 +40,8 @@ export default defineEventHandler(async (event) => {
                 template: resume.template,
                 data,
                 settings: typeof resume.settings === 'string' ? JSON.parse(resume.settings || '{}') : resume.settings,
-                createdAt: resume.created_at,
-                updatedAt: resume.updated_at,
+                createdAt: toIsoUtc(resume.created_at),
+                updatedAt: toIsoUtc(resume.updated_at),
             };
         }),
     };

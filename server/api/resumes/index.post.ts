@@ -1,5 +1,6 @@
 import jwt from '@tsndr/cloudflare-worker-jwt';
 import type { D1Database } from '@cloudflare/workers-types';
+import { toIsoUtc } from '~~/server/utils/datetime';
 
 const JWT_SECRET = process.env.JWT_SECRET;
 class DatabaseService {
@@ -94,8 +95,8 @@ export default defineEventHandler(async (event) => {
             template: resume.template,
             data: typeof resume.data === 'string' ? JSON.parse(resume.data) : resume.data,
             settings: typeof resume.settings === 'string' ? JSON.parse(resume.settings || '{}') : resume.settings,
-            createdAt: resume.created_at,
-            updatedAt: resume.updated_at,
+            createdAt: toIsoUtc(resume.created_at),
+            updatedAt: toIsoUtc(resume.updated_at),
         },
     };
 });

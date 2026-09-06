@@ -1,5 +1,6 @@
 import jwt from '@tsndr/cloudflare-worker-jwt';
 import type { D1Database } from '@cloudflare/workers-types';
+import { toIsoUtc } from '~~/server/utils/datetime';
 
 const JWT_SECRET = process.env.JWT_SECRET;
 class DatabaseService {
@@ -124,7 +125,7 @@ export default defineEventHandler(async (event) => {
             serverId: serverId,
             name: resumeData.name,
             synced: true,
-            updatedAt: syncedResume.updated_at,
+            updatedAt: toIsoUtc(syncedResume.updated_at),
         });
     }
     return {
