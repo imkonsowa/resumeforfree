@@ -12,6 +12,7 @@ import {
     renderTemplateSubHeaderContent,
     SECTION_SPACING,
     SECTION_HEADER_SIZE_OFFSET,
+    DATE_COLOR,
 } from './typstUtils';
 
 const joinItems = (items: string[], config: TemplateRenderConfig, spacing?: string): string => {
@@ -32,7 +33,7 @@ const renderInlineTitleAndDate = (
     dateText: string,
     fontSize: number,
 ): string => {
-    const styledDate = `#text(size: ${fontSize}pt, weight: "bold", fill: rgb("#4B5563"))[${dateText}]`;
+    const styledDate = `#text(size: ${fontSize}pt, weight: "bold", fill: ${DATE_COLOR})[${dateText}]`;
     return `#block(below: 0.6em)[#grid(columns: (1fr, auto), column-gutter: 0.8em, [${titleMarkup}], [${styledDate}])]`;
 };
 

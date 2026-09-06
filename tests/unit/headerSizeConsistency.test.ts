@@ -3,7 +3,7 @@ import { defaultTemplate } from '~/templates/default';
 import { compactTemplate } from '~/templates/compact';
 import { simpleTemplate } from '~/templates/simple';
 import { atsFriendlyTemplate } from '~/templates/atsFriendly';
-import { SECTION_HEADER_SIZE_OFFSET } from '~/utils/typstUtils';
+import { DATE_COLOR, SECTION_HEADER_SIZE_OFFSET } from '~/utils/typstUtils';
 import type { ResumeData } from '~/types/resume';
 
 const data = {
@@ -66,5 +66,30 @@ describe('section header size is unified across templates', () => {
         const sources = [defaultTemplate, compactTemplate, simpleTemplate, atsFriendlyTemplate];
         expect(sources.length).toBe(4);
         expect(SECTION_HEADER_SIZE_OFFSET).toBe(3);
+    });
+});
+
+describe('date colour is unified and readable', () => {
+    it('no template emits Typst\'s pale built-in gray for dates', () => {
+        for (const { name, tpl } of TEMPLATES) {
+            const src = tpl.parse({ data, font: 'Calibri', locale: 'en', fontSize: 12, t: (k: string) => k });
+            expect(
+                /fill:\s*gray\b/.test(src),
+                `${name}: uses Typst "gray" (#AAAAAA, 2.3:1 on white) — below WCAG AA and hard to read in print`,
+            ).toBe(false);
+        }
+    });
+
+    it('every rendered date uses the shared DATE_COLOR', () => {
+        for (const { name, tpl } of TEMPLATES) {
+            const src = tpl.parse({ data, font: 'Calibri', locale: 'en', fontSize: 12, t: (k: string) => k });
+            const fills = [...src.matchAll(/fill:\s*(rgb\("#[0-9A-Fa-f]{6}"\)|gray|black|blue)/g)].map(m => m[1]);
+            const greys = fills.filter(f => /rgb\("#(4B5563|AAAAAA|6B7280|9CA3AF)"\)/i.test(f) || f === 'gray');
+            const unique = [...new Set(greys)];
+            expect(
+                unique.length <= 1 && (unique.length === 0 || unique[0] === DATE_COLOR),
+                `${name}: mixed muted colours ${unique.join(', ')} — dates must all use DATE_COLOR (${DATE_COLOR})`,
+            ).toBe(true);
+        }
     });
 });

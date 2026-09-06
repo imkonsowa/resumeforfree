@@ -3,6 +3,7 @@ import { escapeTypstString, escapeTypstText } from './stringUtils';
 
 export const HEADER_SPACING = '1em';
 export const SECTION_HEADER_SIZE_OFFSET = 3;
+export const DATE_COLOR = 'rgb("#4B5563")';
 export const SECTION_SPACING = '1.6em';
 export const ITEMS_SPACING = '0.8em';
 export const DESCRIPTION_BELOW = '0.8em';
@@ -70,7 +71,7 @@ export const formatDateRangeText = ({ startDate, endDate, isPresent, t }: DateRa
 export const convertDateRange = (input: DateRangeInput): string => {
     const dateText = formatDateRangeText(input);
     if (!dateText) return '';
-    return `#text(fill: gray, "${escapeTypstString(dateText)}")`;
+    return `#text(fill: ${DATE_COLOR}, "${escapeTypstString(dateText)}")`;
 };
 export const convertList = (items: string[], indent = '1em'): string => {
     if (!items || items.length === 0) return '';
@@ -107,11 +108,11 @@ export const renderTemplateSubHeaderContent = (content: string, fontSize: number
     return `#block(below: 0.6em)[#text(size: ${fontSize}pt, weight: "bold")[${content}]]`;
 };
 export const renderTemplateDate = (dateText: string, fontSize: number): string => {
-    return `#block(above: 0em, below: 0.6em)[#text(size: ${fontSize - 2}pt)[${dateText}]]`;
+    return `#block(above: 0em, below: 0.6em)[#text(size: ${fontSize - 2}pt, fill: ${DATE_COLOR})[${dateText}]]`;
 };
 export const renderTemplateDateWithLink = (dateRange: string, link: string | null, fontSize: number): string => {
     if (link) {
-        return `#block(above: 0em, below: 0.6em)[#text(size: ${fontSize - 2}pt)[${dateRange} • ${link}]]`;
+        return `#block(above: 0em, below: 0.6em)[#text(size: ${fontSize - 2}pt, fill: ${DATE_COLOR})[${dateRange} • ${link}]]`;
     }
     return renderTemplateDate(dateRange, fontSize);
 };
