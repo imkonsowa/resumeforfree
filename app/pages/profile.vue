@@ -5,6 +5,7 @@ import { Label } from '~/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
 import { Separator } from '~/components/ui/separator';
 import { User, Lock, Eye, EyeOff, KeyRound } from 'lucide-vue-next';
+import ApiTokensPanel from '~/components/elements/ApiTokensPanel.vue';
 
 const { t } = useI18n();
 const localePath = useLocalePath();
