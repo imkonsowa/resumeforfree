@@ -1,10 +1,8 @@
-import tailwindcss from '@tailwindcss/vite';
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
     modules: [
-        'shadcn-nuxt',
+        '@nuxt/ui',
         '@pinia/nuxt',
         'pinia-plugin-persistedstate/nuxt',
         '@nuxt/eslint',
@@ -38,13 +36,26 @@ export default defineNuxtConfig({
         },
     },
 
-    css: ['~/assets/css/tailwind.css', '~/assets/css/app.css'],
+    css: ['~/assets/css/main.css'],
 
     site: {
         url: 'https://resumeforfree.com',
         name: 'Resume For Free',
         description: 'Build professional resumes for free. No servers, no registration, no payments. Unlimited downloads and resumes with complete privacy.',
         defaultLocale: 'en',
+    },
+
+    colorMode: {
+        preference: 'light',
+        fallback: 'light',
+        classSuffix: '',
+        storageKey: 'rff-color-mode',
+    },
+
+    ui: {
+        theme: {
+            colors: ['primary', 'secondary', 'info', 'success', 'warning', 'error'],
+        },
     },
 
     runtimeConfig: {
@@ -71,9 +82,6 @@ export default defineNuxtConfig({
     },
 
     vite: {
-        plugins: [
-            tailwindcss(),
-        ],
         optimizeDeps: {
             exclude: [
                 '@myriaddreamin/typst-ts-web-compiler',
@@ -96,6 +104,12 @@ export default defineNuxtConfig({
         },
     },
 
+    fonts: {
+        families: [
+            { name: 'Noto Sans Arabic', provider: 'google', weights: [400, 500, 600, 700] },
+        ],
+    },
+
     i18n: {
         defaultLocale: 'en',
         locales: [
@@ -113,6 +127,10 @@ export default defineNuxtConfig({
             cookieKey: 'i18n_redirected',
             redirectOn: 'root',
         },
+    },
+
+    icon: {
+        provider: 'iconify',
     },
 
     piniaPluginPersistedstate: {
@@ -157,11 +175,6 @@ export default defineNuxtConfig({
 
     seo: {
         redirectToCanonicalSiteUrl: true,
-    },
-
-    shadcn: {
-        prefix: '',
-        componentDir: './app/components/ui',
     },
 
     sitemap: {

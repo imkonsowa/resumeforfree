@@ -45,7 +45,20 @@
         "organizationUrl": "رابط المنظمة",
         "emailAddress": "عنوان البريد الإلكتروني",
         "tryAgain": "حاول مرة أخرى",
-        "copy": "نسخ"
+        "copy": "نسخ",
+        "month": "الشهر",
+        "year": "السنة",
+        "moveUp": "تحريك لأعلى",
+        "moveDown": "تحريك لأسفل",
+        "confirmAction": "تأكيد الإجراء",
+        "confirmMessage": "هل أنت متأكد أنك تريد المتابعة؟",
+        "confirm": "تأكيد",
+        "expand": "توسيع",
+        "collapse": "طي",
+        "moreActions": "إجراءات أخرى",
+        "or": "أو",
+        "saved": "تم الحفظ",
+        "syncFailed": "فشلت المزامنة"
     },
     "languageModal": {
         "title": "اختر لغتك",
@@ -352,7 +365,7 @@
         "languageMismatch": "لغة هذه السيرة الذاتية هي {language}.",
         "pageTitle": "أداة إنشاء سير ذاتية مجانية - ابنِ ونزّل سيرتك بصيغة PDF مجاناً | بدون تسجيل",
         "pageDescription": "أنشئ سيرتك الذاتية ونزّلها بتنسيق PDF احترافي، مجاناً وبلا قيود. بدون حسابات أو علامات مائية. معاينة فورية لبياناتك المحفوظة بأمان على جهازك.",
-        "sections": "الأقسام",
+        "sections": "أقسام السيرة الذاتية",
         "resumePreview": "معاينة السيرة الذاتية",
         "noResumeSelected": "لم يتم تحديد سيرة ذاتية",
         "noResumeDescription": "لتبدأ، يرجى إنشاء أو تحديد سيرة ذاتية من صفحة 'سيرك الذاتية'.",
@@ -386,7 +399,10 @@
             "zoomOut": "تصغير",
             "resetZoom": "استعادة الحجم الطبيعي"
         },
-        "previewErrorDetailed": "فشلت المعاينة: {detail}"
+        "previewErrorDetailed": "فشلت المعاينة: {detail}",
+        "zoomIn": "تكبير",
+        "zoomOut": "تصغير",
+        "downloadOptions": "خيارات التنزيل"
     },
     "settings": {
         "title": "إعدادات السيرة الذاتية",
@@ -542,7 +558,11 @@
     "validation": {
         "required": "هذا الحقل مطلوب",
         "email": "يرجى إدخال عنوان بريد إلكتروني صحيح",
-        "url": "يرجى إدخال رابط إلكتروني صحيح"
+        "url": "يرجى إدخال رابط إلكتروني صحيح",
+        "invalidEmail": "أدخل بريدًا إلكترونيًا صالحًا",
+        "passwordRequired": "كلمة المرور مطلوبة",
+        "nameRequired": "الاسم مطلوب",
+        "passwordMinLength": "يجب أن تتكون كلمة المرور من 6 أحرف على الأقل"
     },
     "notifications": {
         "resumeCreated": "تم إنشاء السيرة الذاتية بنجاح!",
@@ -631,7 +651,8 @@
         "googleOAuthFailed": "فشل تسجيل الدخول بواسطة Google. يرجى المحاولة مجدداً.",
         "googleNoEmail": "حساب Google لم يزودنا بعنوان بريد إلكتروني.",
         "googleHandlerError": "حدث خطأ أثناء محاولة تسجيل الدخول عبر Google.",
-        "googleUserCreationFailed": "تعذر إنشاء حساب باستخدام ملفك الشخصي في Google."
+        "googleUserCreationFailed": "تعذر إنشاء حساب باستخدام ملفك الشخصي في Google.",
+        "togglePassword": "إظهار/إخفاء كلمة المرور"
     },
     "profile": {
         "title": "إعدادات الملف الشخصي",
@@ -790,7 +811,15 @@
                 "message": "هل أنت متأكد من رغبتك في إزالة السيرة الذاتية \"{name}\" من السحابة؟ ستبقى السيرة محفوظة على جهازك لكنها لن تُزامن بعد الآن.",
                 "confirmButton": "إزالة من السحابة"
             },
-            "cancel": "إلغاء"
+            "cancel": "إلغاء",
+            "import": {
+                "title": "استيراد السير الذاتية",
+                "foundCount": "تم العثور على {count} سيرة ذاتية في الملف",
+                "duplicateWarning": "يوجد {count} سيرة ذاتية بأسماء مطابقة بالفعل. تم إلغاء تحديدها افتراضيًا.",
+                "itemCount": "{count} عنصر",
+                "selectedCount": "تم تحديد {count} سيرة ذاتية للاستيراد",
+                "importSelected": "استيراد المحدد"
+            }
         },
         "toast": {
             "creatingInCloud": "جاري إنشاء السيرة الذاتية في السحابة...",

@@ -13,19 +13,15 @@
                 v-if="templateConfig.canMoveSection('languages')"
                 class="flex items-center gap-2"
             >
-                <span class="text-sm text-gray-600">{{ t('forms.languages.column') }}:</span>
-                <select
-                    :value="resumeStore.resumeData.sectionPlacement.languages"
-                    class="px-2 py-1 text-sm border rounded focus:ring-[3px] focus:ring-green-50 focus:border-green"
-                    @change="(e) => resumeStore.updateSectionPlacement('languages', (e.target as HTMLSelectElement).value as 'left' | 'right')"
-                >
-                    <option value="left">
-                        {{ t('common.left', 'Left') }}
-                    </option>
-                    <option value="right">
-                        {{ t('common.right', 'Right') }}
-                    </option>
-                </select>
+                <span class="text-sm text-toned">{{ t('forms.languages.column') }}:</span>
+                <USelect
+                    :model-value="resumeStore.resumeData.sectionPlacement.languages"
+                    :items="placementItems"
+                    value-key="value"
+                    size="sm"
+                    class="w-28"
+                    @update:model-value="(value) => resumeStore.updateSectionPlacement('languages', value as 'left' | 'right')"
+                />
             </div>
         </template>
         <FormCard
@@ -41,46 +37,24 @@
             @move-down="resumeStore.moveLanguage(index, index + 1)"
         >
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="space-y-2">
-                    <Label :for="`language-name-${index}`">{{ t('forms.languages.languageName') }}</Label>
-                    <Input
-                        :id="`language-name-${index}`"
+                <UFormField :label="t('forms.languages.languageName')">
+                    <UInput
                         :model-value="language.name"
                         :placeholder="t('forms.languages.languageName')"
+                        class="w-full"
                         @update:model-value="(value) => resumeStore.updateLanguage(index, 'name', value)"
                     />
-                </div>
-                <div class="space-y-2">
-                    <Label :for="`language-proficiency-${index}`">{{ t('forms.languages.proficiency') }}</Label>
-                    <select
-                        :id="`language-proficiency-${index}`"
-                        :value="language.proficiency"
-                        class="w-full px-3 py-2 border rounded-md border-gray-300 shadow-sm focus:border-green focus:ring-green-50 focus:ring-[3px]"
-                        @change="(e) => resumeStore.updateLanguage(index, 'proficiency', (e.target as HTMLSelectElement).value)"
-                    >
-                        <option value="">
-                            {{ t('forms.languages.proficiency') }}
-                        </option>
-                        <option value="Native">
-                            {{ t('proficiency.native', 'Native') }}
-                        </option>
-                        <option value="Fluent">
-                            {{ t('proficiency.fluent', 'Fluent') }}
-                        </option>
-                        <option value="Proficient">
-                            {{ t('proficiency.proficient', 'Proficient') }}
-                        </option>
-                        <option value="Conversational">
-                            {{ t('proficiency.conversational', 'Conversational') }}
-                        </option>
-                        <option value="Basic">
-                            {{ t('proficiency.basic', 'Basic') }}
-                        </option>
-                        <option value="Beginner">
-                            {{ t('proficiency.beginner', 'Beginner') }}
-                        </option>
-                    </select>
-                </div>
+                </UFormField>
+                <UFormField :label="t('forms.languages.proficiency')">
+                    <USelect
+                        :model-value="language.proficiency"
+                        :items="proficiencyItems"
+                        value-key="value"
+                        class="w-full"
+                        :placeholder="t('forms.languages.proficiency')"
+                        @update:model-value="(value) => resumeStore.updateLanguage(index, 'proficiency', value)"
+                    />
+                </UFormField>
             </div>
         </FormCard>
     </FormContainer>
@@ -96,8 +70,6 @@
 </template>
 
 <script lang="ts" setup>
-import { Input } from '~/components/ui/input';
-import { Label } from '~/components/ui/label';
 import FormContainer from '~/components/elements/FormContainer.vue';
 import FormCard from '~/components/elements/FormCard.vue';
 import ConfirmationModal from '~/components/elements/ConfirmationModal.vue';
@@ -106,6 +78,20 @@ const resumeStore = useResumeStore();
 const confirmation = useConfirmation();
 const templateConfig = useTemplate();
 const { t } = useResumeT();
+
+const proficiencyItems = computed(() => [
+    { label: t('proficiency.native', 'Native'), value: 'Native' },
+    { label: t('proficiency.fluent', 'Fluent'), value: 'Fluent' },
+    { label: t('proficiency.proficient', 'Proficient'), value: 'Proficient' },
+    { label: t('proficiency.conversational', 'Conversational'), value: 'Conversational' },
+    { label: t('proficiency.basic', 'Basic'), value: 'Basic' },
+    { label: t('proficiency.beginner', 'Beginner'), value: 'Beginner' },
+]);
+
+const placementItems = computed(() => [
+    { label: t('common.left', 'Left'), value: 'left' },
+    { label: t('common.right', 'Right'), value: 'right' },
+]);
 const { getSectionHeader, setSectionHeader } = useSectionHeader();
 const sectionHeaderTitle = getSectionHeader('languages');
 </script>

@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-import { Button } from '~/components/ui/button';
-import { Input } from '~/components/ui/input';
-import { Label } from '~/components/ui/label';
-import { Checkbox } from '~/components/ui/checkbox';
-
 interface Props {
     isOpen: boolean;
     resumeName: string;
@@ -14,82 +9,71 @@ interface Emits {
 }
 
 const props = defineProps<Props>();
-
 const emit = defineEmits<Emits>();
+
+const { t } = useI18n();
+
 const copyResumeName = ref('');
 const navigateToBuilder = ref(true);
+
+const open = computed({
+    get: () => props.isOpen,
+    set: (value) => {
+        if (!value) emit('close');
+    },
+});
+
 watch(() => props.isOpen, (isOpen) => {
     if (isOpen) {
         copyResumeName.value = props.resumeName;
         navigateToBuilder.value = true;
     }
 });
+
 const handleConfirm = () => {
     emit('confirm', copyResumeName.value, navigateToBuilder.value);
-};
-const handleCancel = () => {
-    emit('close');
-};
-const handleEnter = (event: KeyboardEvent) => {
-    if (event.key === 'Enter') {
-        handleConfirm();
-    }
 };
 </script>
 
 <template>
-    <div
-        v-if="isOpen"
-        class="fixed inset-0 z-50 flex items-center justify-center"
-        @click="handleCancel"
+    <UModal
+        v-model:open="open"
+        :title="t('resumes.modals.copy.title')"
+        :ui="{ footer: 'justify-end' }"
     >
-        <div class="absolute inset-0 bg-black/50" />
-        <div
-            class="relative bg-white border rounded-lg shadow-xl p-6 w-96 max-w-[90vw]"
-            @click.stop
-        >
+        <template #body>
             <div class="space-y-4">
-                <h3 class="text-lg font-semibold text-gray-900">
-                    {{ $t('resumes.modals.copy.title') }}
-                </h3>
-                <div class="space-y-2">
-                    <Label for="copy-resume-name">{{ $t('resumes.modals.copy.resumeName') }}</Label>
-                    <Input
-                        id="copy-resume-name"
+                <UFormField
+                    name="copyResumeName"
+                    :label="t('resumes.modals.copy.resumeName')"
+                >
+                    <UInput
                         v-model="copyResumeName"
                         autofocus
-                        :placeholder="$t('resumes.modals.copy.enterName')"
-                        @keydown="handleEnter"
+                        class="w-full"
+                        :placeholder="t('resumes.modals.copy.enterName')"
+                        @keydown.enter="handleConfirm"
                     />
-                </div>
-                <div class="flex items-center space-x-2 pt-2">
-                    <Checkbox
-                        id="copy-navigate-to-builder"
-                        v-model="navigateToBuilder"
-                    />
-                    <Label
-                        class="text-sm font-normal"
-                        for="copy-navigate-to-builder"
-                    >
-                        {{ $t('resumes.modals.copy.navigateToBuilder') }}
-                    </Label>
-                </div>
-                <div class="flex gap-3 pt-4">
-                    <Button
-                        class="flex-1"
-                        @click="handleConfirm"
-                    >
-                        {{ $t('resumes.modals.copy.copyButton') }}
-                    </Button>
-                    <Button
-                        class="flex-1"
-                        variant="outline"
-                        @click="handleCancel"
-                    >
-                        {{ $t('resumes.modals.cancel') }}
-                    </Button>
-                </div>
+                </UFormField>
+
+                <UCheckbox
+                    v-model="navigateToBuilder"
+                    :label="t('resumes.modals.copy.navigateToBuilder')"
+                />
             </div>
-        </div>
-    </div>
+        </template>
+
+        <template #footer>
+            <UButton
+                color="neutral"
+                variant="outline"
+                :label="t('resumes.modals.cancel')"
+                @click="emit('close')"
+            />
+            <UButton
+                :label="t('resumes.modals.copy.copyButton')"
+                @click="handleConfirm"
+            />
+        </template>
+    </UModal>
 </template>

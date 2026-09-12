@@ -6,7 +6,7 @@
                     <span class="hidden md:inline">{{ t('builder.preview') }}</span>
                     <span class="md:hidden text-base">{{ activeResume?.name }}</span>
                 </h2>
-                <div class="hidden md:flex items-center space-x-3">
+                <div class="hidden md:flex items-center gap-3">
                     <div class="zoom-controls-midscreen">
                         <ZoomControls
                             :max-zoom="maxZoom"
@@ -18,238 +18,170 @@
                         />
                     </div>
                     <div class="template-selection-desktop">
-                        <Popover v-model:open="showTemplateMenu">
-                            <PopoverTrigger as-child>
-                                <Button
-                                    class="h-9"
-                                    size="sm"
-                                    variant="outline"
-                                >
-                                    <span>{{
-                                        (availableTemplates?.find(t => t.id === selectedTemplate)?.name || 'Compact')
-                                    }} {{ t('builder.template') }}</span>
-                                    <ChevronDown class="w-4 h-4 ms-2" />
-                                </Button>
-                            </PopoverTrigger>
-                            <PopoverContent class="w-80">
-                                <div class="space-y-2">
-                                    <div
-                                        v-for="template in availableTemplates"
-                                        :key="template.id"
-                                        :class="selectedTemplate === template.id ? 'bg-accent' : ''"
-                                        class="cursor-pointer rounded-md p-3 hover:bg-accent transition-colors"
-                                        @click="handleTemplateSelect(template.id)"
-                                    >
-                                        <div class="flex flex-col space-y-1">
-                                            <div class="font-medium text-sm">
-                                                {{ template.name }}
-                                            </div>
-                                            <div class="text-xs text-muted-foreground">
-                                                {{ template.description }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </PopoverContent>
-                        </Popover>
-                    </div>
-                    <Button
-                        class="h-9"
-                        size="sm"
-                        variant="outline"
-                        @click="showSettingsModal = true"
-                    >
-                        <SlidersHorizontal class="w-4 h-4 me-2" />
-                        {{ t('builder.settings') }}
-                    </Button>
-                    <div class="flex items-center rounded-md overflow-hidden">
-                        <Button
-                            class="rounded-none h-9 bg-green hover:bg-green-600 text-white border-green hover:border-green-600"
+                        <USelectMenu
+                            v-model="selectedTemplateId"
+                            :items="templateItems"
+                            value-key="value"
+                            label-key="label"
+                            :search-input="false"
                             size="sm"
+                            class="w-56"
+                            :ui="{ base: 'h-9' }"
+                        />
+                    </div>
+                    <UButton
+                        size="sm"
+                        color="neutral"
+                        variant="outline"
+                        class="h-9"
+                        icon="i-lucide-sliders-horizontal"
+                        :label="t('builder.settings')"
+                        @click="showSettingsModal = true"
+                    />
+                    <div class="inline-flex items-center rounded-md overflow-hidden">
+                        <UButton
+                            size="sm"
+                            color="secondary"
+                            class="rounded-none h-9"
+                            icon="i-lucide-download"
                             @click="handleDownload"
                         >
-                            <Download class="w-4 h-4 me-2" />
                             <span class="download-text">{{ t('builder.download') }}</span> {{ t('builder.downloadPDF') }}
-                        </Button>
-                        <Menubar class="border-0 p-0 h-auto flex items-center">
-                            <MenubarMenu>
-                                <MenubarTrigger as-child>
-                                    <Button
-                                        class="rounded-none px-2 h-9 bg-green hover:bg-green-600 text-white border-green hover:border-green-600"
-                                        size="sm"
-                                        variant="default"
-                                    >
-                                        <MoreVertical class="w-4 h-4" />
-                                    </Button>
-                                </MenubarTrigger>
-                                <MenubarContent>
-                                    <MenubarItem @click="handleDownloadSVG">
-                                        <Download class="w-4 h-4 me-2" />
-                                        {{ t('builder.downloadAsSVG') }}
-                                    </MenubarItem>
-                                    <MenubarItem @click="handleDownloadTypst">
-                                        <Download class="w-4 h-4 me-2" />
-                                        {{ t('builder.downloadAsTypst') }}
-                                    </MenubarItem>
-                                    <MenubarItem @click="handleDownloadTypstText">
-                                        <Download class="w-4 h-4 me-2" />
-                                        {{ t('builder.downloadAsText') }}
-                                    </MenubarItem>
-                                </MenubarContent>
-                            </MenubarMenu>
-                        </Menubar>
+                        </UButton>
+                        <UDropdownMenu
+                            :items="downloadItems"
+                            :content="{ align: 'end' }"
+                        >
+                            <UButton
+                                size="sm"
+                                color="secondary"
+                                class="rounded-none h-9 px-2"
+                                icon="i-lucide-more-vertical"
+                                :aria-label="t('builder.downloadOptions', 'Download options')"
+                            />
+                        </UDropdownMenu>
                     </div>
                 </div>
-                <div class="md:hidden flex space-x-2">
-                    <Button
-                        class="h-9"
+                <div class="md:hidden flex gap-2">
+                    <UButton
                         size="sm"
+                        color="neutral"
                         variant="outline"
+                        class="h-9"
+                        icon="i-lucide-settings"
+                        :aria-label="t('builder.settings')"
                         @click="showSettingsModal = true"
-                    >
-                        <Settings class="w-4 h-4" />
-                    </Button>
-                    <div class="flex items-center rounded-md overflow-hidden">
-                        <Button
-                            class="rounded-none h-9 bg-green hover:bg-green-600 text-white border-green hover:border-green-600"
+                    />
+                    <div class="inline-flex items-center rounded-md overflow-hidden">
+                        <UButton
                             size="sm"
+                            color="secondary"
+                            class="rounded-none h-9"
+                            icon="i-lucide-download"
+                            :label="t('builder.download')"
                             @click="handleDownload"
+                        />
+                        <UDropdownMenu
+                            :items="downloadItems"
+                            :content="{ align: 'end' }"
                         >
-                            <Download class="w-4 h-4 me-2" />
-                            {{ t('builder.download') }}
-                        </Button>
-                        <Menubar class="border-0 p-0 h-auto flex items-center">
-                            <MenubarMenu>
-                                <MenubarTrigger as-child>
-                                    <Button
-                                        class="rounded-none px-2 h-9 bg-green hover:bg-green-600 text-white border-green hover:border-green-600"
-                                        size="sm"
-                                        variant="default"
-                                    >
-                                        <MoreVertical class="w-4 h-4" />
-                                    </Button>
-                                </MenubarTrigger>
-                                <MenubarContent>
-                                    <MenubarItem @click="handleDownloadSVG">
-                                        <Download class="w-4 h-4 me-2" />
-                                        {{ t('builder.downloadAsSVG') }}
-                                    </MenubarItem>
-                                    <MenubarItem @click="handleDownloadTypst">
-                                        <Download class="w-4 h-4 me-2" />
-                                        {{ t('builder.downloadAsTypst') }}
-                                    </MenubarItem>
-                                    <MenubarItem @click="handleDownloadTypstText">
-                                        <Download class="w-4 h-4 me-2" />
-                                        {{ t('builder.downloadAsText') }}
-                                    </MenubarItem>
-                                </MenubarContent>
-                            </MenubarMenu>
-                        </Menubar>
+                            <UButton
+                                size="sm"
+                                color="secondary"
+                                class="rounded-none h-9 px-2"
+                                icon="i-lucide-more-vertical"
+                                :aria-label="t('builder.downloadOptions', 'Download options')"
+                            />
+                        </UDropdownMenu>
                     </div>
                 </div>
             </div>
-            <Card class="h-full">
-                <CardContent class="p-0">
-                    <div class="bg-gray-100 rounded-lg overflow-hidden h-full">
-                        <div class="bg-white h-full min-h-[calc(100vh-200px)] flex flex-col">
-                            <div
-                                v-if="isLoading && !previewContent"
-                                class="flex items-center justify-center flex-1"
-                            >
-                                <div class="text-center">
-                                    <div
-                                        class="w-16 h-16 border-4 border-gray-300 border-t-green rounded-full animate-spin mx-auto mb-4"
-                                    />
-                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">
-                                        {{ t('builder.loadingPreview') }}
-                                    </h3>
-                                    <p class="text-gray-600">
-                                        {{ t('builder.loadingPreviewDescription') }}
-                                    </p>
-                                </div>
+            <UCard
+                class="h-full"
+                :ui="{ body: 'p-0' }"
+            >
+                <div class="bg-elevated overflow-hidden h-full">
+                    <div class="bg-white h-full min-h-[calc(100vh-200px)] flex flex-col">
+                        <div
+                            v-if="isLoading && !previewContent"
+                            class="flex items-center justify-center flex-1"
+                        >
+                            <div class="text-center">
+                                <div
+                                    class="w-16 h-16 border-4 border-accented border-t-secondary rounded-full animate-spin mx-auto mb-4"
+                                />
+                                <h3 class="text-xl font-semibold text-default mb-2">
+                                    {{ t('builder.loadingPreview') }}
+                                </h3>
+                                <p class="text-toned">
+                                    {{ t('builder.loadingPreviewDescription') }}
+                                </p>
                             </div>
-                            <div
-                                v-else-if="error && !previewContent"
-                                class="flex items-center justify-center flex-1"
-                            >
-                                <div class="text-center">
-                                    <div
-                                        class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4"
-                                    >
-                                        <svg
-                                            class="w-8 h-8 text-red-500"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path
-                                                d="M6 18L18 6M6 6l12 12"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="2"
-                                            />
-                                        </svg>
-                                    </div>
-                                    <h3 class="text-xl font-semibold text-red-800 mb-2">
-                                        {{ t('builder.previewError') }}
-                                    </h3>
-                                    <p class="text-red-600 mb-4">
-                                        {{ error }}
-                                    </p>
-                                    <Button
-                                        size="sm"
-                                        variant="outline"
-                                        @click="generatePreview"
-                                    >
-                                        {{ t('common.tryAgain') }}
-                                    </Button>
-                                </div>
-                            </div>
-                            <div
-                                v-else-if="previewContent"
-                                class="flex-1 overflow-auto p-4"
-                            >
-                                <div class="preview-container flex justify-center min-h-full">
-                                    <div
-                                        class="resume-preview-wrapper"
-                                        v-html="previewContent"
+                        </div>
+                        <div
+                            v-else-if="error && !previewContent"
+                            class="flex items-center justify-center flex-1"
+                        >
+                            <div class="text-center">
+                                <div
+                                    class="w-16 h-16 bg-error/15 rounded-full flex items-center justify-center mx-auto mb-4"
+                                >
+                                    <UIcon
+                                        name="i-lucide-x"
+                                        class="size-8 text-error"
                                     />
                                 </div>
+                                <h3 class="text-xl font-semibold text-error mb-2">
+                                    {{ t('builder.previewError') }}
+                                </h3>
+                                <p class="text-error mb-4">
+                                    {{ error }}
+                                </p>
+                                <UButton
+                                    size="sm"
+                                    color="neutral"
+                                    variant="outline"
+                                    @click="generatePreview"
+                                >
+                                    {{ t('common.tryAgain') }}
+                                </UButton>
                             </div>
-                            <div
-                                v-else
-                                class="flex items-center justify-center flex-1"
-                            >
-                                <div class="text-center">
-                                    <div
-                                        class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
-                                    >
-                                        <svg
-                                            class="w-8 h-8 text-green-700"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path
-                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="2"
-                                            />
-                                        </svg>
-                                    </div>
-                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">
-                                        {{ t('builder.initializingTypst') }}
-                                    </h3>
-                                    <p class="text-gray-600">
-                                        {{ t('builder.settingUpCompiler') }}
-                                    </p>
+                        </div>
+                        <div
+                            v-else-if="previewContent"
+                            class="flex-1 overflow-auto p-4"
+                        >
+                            <div class="preview-container flex justify-center min-h-full">
+                                <div
+                                    class="resume-preview-wrapper"
+                                    v-html="previewContent"
+                                />
+                            </div>
+                        </div>
+                        <div
+                            v-else
+                            class="flex items-center justify-center flex-1"
+                        >
+                            <div class="text-center">
+                                <div
+                                    class="w-16 h-16 bg-secondary/15 rounded-full flex items-center justify-center mx-auto mb-4"
+                                >
+                                    <UIcon
+                                        name="i-lucide-loader-circle"
+                                        class="size-8 text-secondary animate-spin"
+                                    />
                                 </div>
+                                <h3 class="text-xl font-semibold text-default mb-2">
+                                    {{ t('builder.initializingTypst') }}
+                                </h3>
+                                <p class="text-toned">
+                                    {{ t('builder.settingUpCompiler') }}
+                                </p>
                             </div>
                         </div>
                     </div>
-                </CardContent>
-            </Card>
+                </div>
+            </UCard>
             <SettingsModal v-model="showSettingsModal" />
             <InvisibleTurnstile ref="turnstileRef" />
         </div>
@@ -257,11 +189,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Card, CardContent } from '~/components/ui/card';
-import { Button } from '~/components/ui/button';
-import { Popover, PopoverContent, PopoverTrigger } from '~/components/ui/popover';
-import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarTrigger } from '~/components/ui/menubar';
-import { ChevronDown, Download, MoreVertical, Settings, SlidersHorizontal } from 'lucide-vue-next';
+import type { DropdownMenuItem } from '@nuxt/ui';
 import { getTemplateList } from '~/templates';
 import { useResumeGenerator } from '~/composables/useResumeGenerator';
 import { useDebounceFn } from '@vueuse/core';
@@ -287,8 +215,26 @@ const { selectedFont, selectedTemplate, fontSize, photoShape, showSectionHeaderL
 const isLoading = ref(false);
 const error = ref<string | null>(null);
 const previewContent = ref<string>('');
-const showTemplateMenu = ref(false);
 const showSettingsModal = ref(false);
+
+const templateItems = computed(() =>
+    availableTemplates.map(template => ({
+        label: `${template.name} ${t('builder.template')}`,
+        description: template.description,
+        value: template.id,
+    })),
+);
+
+const selectedTemplateId = computed({
+    get: () => selectedTemplate.value,
+    set: value => settingsStore.setSelectedTemplate(value),
+});
+
+const downloadItems = computed<DropdownMenuItem[]>(() => [
+    { label: t('builder.downloadAsSVG'), icon: 'i-lucide-download', onSelect: handleDownloadSVG },
+    { label: t('builder.downloadAsTypst'), icon: 'i-lucide-download', onSelect: handleDownloadTypst },
+    { label: t('builder.downloadAsText'), icon: 'i-lucide-download', onSelect: handleDownloadTypstText },
+]);
 const zoomLevel = ref(1);
 const minZoom = 0.5;
 const maxZoom = 2.5;
@@ -302,10 +248,6 @@ const handleZoomOut = () => {
     if (zoomLevel.value > minZoom) {
         zoomLevel.value = Math.max(zoomLevel.value - zoomStep, minZoom);
     }
-};
-const handleTemplateSelect = (template: string) => {
-    settingsStore.setSelectedTemplate(template);
-    showTemplateMenu.value = false;
 };
 const generatePreviewInternal = async () => {
     if (!resumeData.value) return;

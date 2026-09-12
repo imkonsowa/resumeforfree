@@ -14,14 +14,14 @@ useHead({
     <div
         dir="ltr"
         lang="en"
-        class="min-h-screen py-16 px-4 sm:px-6 lg:px-8 text-left"
+        class="min-h-screen py-16 px-4 sm:px-6 lg:px-8 text-start"
     >
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12">
-                <h1 class="text-4xl font-bold text-gray-900 mb-4">
+                <h1 class="text-4xl font-bold text-highlighted mb-4">
                     Terms and Conditions
                 </h1>
-                <p class="text-lg text-gray-600">
+                <p class="text-lg text-toned">
                     Last updated: April 25, 2026
                 </p>
             </div>
@@ -101,11 +101,11 @@ useHead({
                     If you have any questions about these Terms and Conditions, please contact us through the contact page or GitHub repository.
                 </p>
 
-                <div class="bg-green-50 border border-green-200 rounded-lg p-6 mt-8">
-                    <h3 class="text-lg font-semibold text-green-ink mb-2">
+                <div class="bg-secondary/10 border border-secondary/30 rounded-lg p-6 mt-8">
+                    <h3 class="text-lg font-semibold text-secondary mb-2">
                         Open Source Community
                     </h3>
-                    <p class="text-green-700">
+                    <p class="text-secondary">
                         This project welcomes contributions from the community. If you're interested in contributing, reporting issues, or suggesting improvements, please visit our GitHub repository. Together, we can make this tool better for everyone.
                     </p>
                 </div>
@@ -113,9 +113,9 @@ useHead({
 
             <div class="text-center mt-12">
                 <NuxtLink to="/">
-                    <Button size="lg">
+                    <UButton size="lg">
                         Back to Home
-                    </Button>
+                    </UButton>
                 </NuxtLink>
             </div>
         </div>

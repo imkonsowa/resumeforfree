@@ -21,40 +21,40 @@
             @move-down="resumeStore.moveEducation(index, index + 1)"
         >
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div class="space-y-2">
-                    <Label>{{ t('forms.education.institution') }}</Label>
-                    <Input
+                <UFormField :label="t('forms.education.institution')">
+                    <UInput
                         :model-value="education.institution"
                         :placeholder="t('forms.education.institution')"
+                        class="w-full"
                         @update:model-value="(value) => resumeStore.updateEducation(index, 'institution', value)"
                     />
-                </div>
-                <div class="space-y-2">
-                    <Label>{{ t('forms.education.degree') }}</Label>
-                    <Input
+                </UFormField>
+                <UFormField :label="t('forms.education.degree')">
+                    <UInput
                         :model-value="education.degree"
                         :placeholder="t('forms.education.degree')"
+                        class="w-full"
                         @update:model-value="(value) => resumeStore.updateEducation(index, 'degree', value)"
                     />
-                </div>
+                </UFormField>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div class="space-y-2">
-                    <Label>{{ t('common.location') }}</Label>
-                    <Input
+                <UFormField :label="t('common.location')">
+                    <UInput
                         :model-value="education.location"
                         :placeholder="t('common.locationPlaceholder')"
+                        class="w-full"
                         @update:model-value="(value) => resumeStore.updateEducation(index, 'location', value)"
                     />
-                </div>
-                <div class="space-y-2">
-                    <Label>{{ t('forms.education.graduationScore') }}</Label>
-                    <Input
+                </UFormField>
+                <UFormField :label="t('forms.education.graduationScore')">
+                    <UInput
                         :model-value="education.graduationScore"
                         :placeholder="t('forms.education.graduationScore')"
+                        class="w-full"
                         @update:model-value="(value) => resumeStore.updateEducation(index, 'graduationScore', value)"
                     />
-                </div>
+                </UFormField>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div class="space-y-2">
@@ -71,42 +71,39 @@
                         :label="t('common.endDate')"
                         @update:model-value="(value) => resumeStore.updateEducation(index, 'endDate', value)"
                     />
-                    <div class="flex items-center space-x-2 mt-2">
-                        <Checkbox
-                            :id="`present-${index}`"
-                            :model-value="education.isPresent"
-                            @update:model-value="(value) => {
-                                resumeStore.updateEducation(index, 'isPresent', value);
-                                if (value) resumeStore.updateEducation(index, 'endDate', '');
-                            }"
-                        />
-                        <Label
-                            :for="`present-${index}`"
-                            class="text-sm"
-                        >{{ t('common.present') }}</Label>
-                    </div>
+                    <UCheckbox
+                        :model-value="education.isPresent"
+                        :label="t('common.present')"
+                        @update:model-value="(value) => {
+                            resumeStore.updateEducation(index, 'isPresent', value);
+                            if (value) resumeStore.updateEducation(index, 'endDate', '');
+                        }"
+                    />
                 </div>
             </div>
-            <div class="space-y-2 mb-4">
-                <Label>{{ t('common.description') }}</Label>
-                <Textarea
+            <UFormField :label="t('common.description')">
+                <UTextarea
                     :model-value="education.description"
                     :placeholder="t('common.description')"
                     rows="3"
+                    class="w-full"
                     @update:model-value="(value) => resumeStore.updateEducation(index, 'description', value)"
                 />
-            </div>
+            </UFormField>
             <div class="space-y-4">
                 <div class="flex justify-between items-center">
-                    <Label>{{ t('common.achievements') }}</Label>
-                    <Button
+                    <h4 class="text-sm font-medium text-default">
+                        {{ t('common.achievements') }}
+                    </h4>
+                    <UButton
                         size="sm"
+                        color="neutral"
                         variant="outline"
+                        icon="i-lucide-plus"
                         @click="resumeStore.addEducationAchievement(index)"
                     >
-                        <Plus class="w-4 h-4 mr-2" />
                         {{ t('common.addAchievement') }}
-                    </Button>
+                    </UButton>
                 </div>
                 <div class="space-y-2">
                     <div
@@ -114,64 +111,64 @@
                         :key="achievementIndex"
                         class="space-y-2"
                     >
-                        <div class="flex items-center space-x-2 md:space-x-2">
-                            <Input
+                        <div class="flex items-center gap-2 md:gap-2">
+                            <UInput
                                 :model-value="(education.achievements || [])[achievementIndex].text"
                                 class="flex-1"
                                 :placeholder="t('common.achievementPlaceholder')"
                                 @update:model-value="(value) => resumeStore.updateEducationAchievement(index, achievementIndex, value)"
                                 @keydown.enter="resumeStore.addEducationAchievement(index)"
                             />
-                            <div class="hidden md:flex items-center space-x-1">
-                                <Button
+                            <div class="hidden md:flex items-center gap-1">
+                                <UButton
                                     :disabled="achievementIndex === 0"
                                     size="sm"
+                                    color="neutral"
                                     variant="outline"
+                                    icon="i-lucide-chevron-up"
                                     @click="resumeStore.moveEducationAchievement(index, achievementIndex, achievementIndex - 1)"
-                                >
-                                    <ChevronUp class="w-4 h-4" />
-                                </Button>
-                                <Button
+                                />
+                                <UButton
                                     :disabled="achievementIndex === (education.achievements || []).length - 1"
                                     size="sm"
+                                    color="neutral"
                                     variant="outline"
+                                    icon="i-lucide-chevron-down"
                                     @click="resumeStore.moveEducationAchievement(index, achievementIndex, achievementIndex + 1)"
-                                >
-                                    <ChevronDown class="w-4 h-4" />
-                                </Button>
-                                <Button
+                                />
+                                <UButton
                                     size="sm"
+                                    color="neutral"
                                     variant="outline"
+                                    icon="i-lucide-trash-2"
                                     @click="resumeStore.removeEducationAchievement(index, achievementIndex)"
-                                >
-                                    <Trash2 class="w-4 h-4" />
-                                </Button>
+                                />
                             </div>
                         </div>
-                        <div class="flex md:hidden items-center justify-center space-x-2">
-                            <Button
+                        <div class="flex md:hidden items-center justify-center gap-2">
+                            <UButton
                                 :disabled="achievementIndex === 0"
                                 size="sm"
+                                color="neutral"
                                 variant="outline"
+                                icon="i-lucide-chevron-up"
                                 @click="resumeStore.moveEducationAchievement(index, achievementIndex, achievementIndex - 1)"
-                            >
-                                <ChevronUp class="w-4 h-4" />
-                            </Button>
-                            <Button
+                            />
+                            <UButton
                                 :disabled="achievementIndex === (education.achievements || []).length - 1"
                                 size="sm"
+                                color="neutral"
                                 variant="outline"
+                                icon="i-lucide-chevron-down"
                                 @click="resumeStore.moveEducationAchievement(index, achievementIndex, achievementIndex + 1)"
-                            >
-                                <ChevronDown class="w-4 h-4" />
-                            </Button>
-                            <Button
+                            />
+                            <UButton
                                 size="sm"
+                                color="neutral"
                                 variant="outline"
+                                icon="i-lucide-trash-2"
                                 @click="resumeStore.removeEducationAchievement(index, achievementIndex)"
-                            >
-                                <Trash2 class="w-4 h-4" />
-                            </Button>
+                            />
                         </div>
                     </div>
                 </div>
@@ -181,12 +178,6 @@
 </template>
 
 <script lang="ts" setup>
-import { Button } from '~/components/ui/button';
-import { Input } from '~/components/ui/input';
-import { Label } from '~/components/ui/label';
-import { Textarea } from '~/components/ui/textarea';
-import { Checkbox } from '~/components/ui/checkbox';
-import { ChevronDown, ChevronUp, Plus, Trash2 } from 'lucide-vue-next';
 import MonthYearPicker from '~/components/elements/MonthYearPicker.vue';
 import FormCard from '~/components/elements/FormCard.vue';
 import FormContainer from '~/components/elements/FormContainer.vue';

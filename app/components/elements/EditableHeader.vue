@@ -4,60 +4,63 @@
             v-if="isEditing"
             class="flex items-center gap-2 flex-1"
         >
-            <input
+            <UInput
                 ref="inputRef"
                 v-model="localValue"
                 autofocus
-                class="flex-1 px-2 py-1 border rounded text-lg font-semibold"
+                size="lg"
+                class="flex-1"
                 @keyup.enter="saveHeader"
                 @keyup.escape="cancelEdit"
-            >
-            <button
-                class="p-1 text-green-600 hover:text-green-700"
+            />
+            <UButton
+                size="sm"
+                color="secondary"
+                variant="ghost"
+                icon="i-lucide-check"
+                :aria-label="t('common.save')"
                 @click="saveHeader"
-            >
-                <Check class="w-4 h-4" />
-            </button>
-            <button
-                class="p-1 text-red-600 hover:text-red-700"
+            />
+            <UButton
+                size="sm"
+                color="error"
+                variant="ghost"
+                icon="i-lucide-x"
+                :aria-label="t('common.cancel')"
                 @click="cancelEdit"
-            >
-                <X class="w-4 h-4" />
-            </button>
+            />
         </div>
         <div
             v-else
             class="flex items-center gap-2"
         >
-            <h3 class="text-lg font-semibold text-gray-900">
+            <h3 class="text-lg font-semibold text-highlighted">
                 {{ value }}
             </h3>
-            <Button
+            <UButton
                 class="p-1 h-auto opacity-50 hover:opacity-100"
                 size="sm"
+                color="neutral"
                 variant="ghost"
+                icon="i-lucide-square-pen"
                 @click="startEdit"
-            >
-                <Edit2 class="w-4 h-4" />
-            </Button>
-            <Button
+            />
+            <UButton
                 v-if="canReset"
-                :title="t('common.resetToDefaults')"
-                class="p-1 h-auto opacity-50 hover:opacity-100 text-ink-3 hover:text-ink"
+                :aria-label="t('common.resetToDefaults')"
+                class="p-1 h-auto opacity-50 hover:opacity-100 text-toned hover:text-highlighted"
                 size="sm"
+                color="neutral"
                 variant="ghost"
+                icon="i-lucide-rotate-ccw"
                 @click="handleReset"
-            >
-                <RotateCcw class="w-4 h-4" />
-            </Button>
+            />
         </div>
     </div>
 </template>
 
 <script lang="ts" setup>
 import { computed, nextTick, ref } from 'vue';
-import { Button } from '~/components/ui/button';
-import { Check, Edit2, RotateCcw, X } from 'lucide-vue-next';
 import type { SectionHeaders } from '~/types/resume';
 import { SECTION_TRANSLATION_MAP } from '~/composables/useSectionHeader';
 
@@ -85,13 +88,14 @@ const handleReset = () => {
 };
 const isEditing = ref(false);
 const localValue = ref(props.value);
-const inputRef = ref<HTMLInputElement>();
+const inputRef = ref<{ inputRef?: HTMLInputElement } | null>(null);
 const startEdit = async () => {
     localValue.value = props.value;
     isEditing.value = true;
     await nextTick();
-    inputRef.value?.focus();
-    inputRef.value?.select();
+    const el = inputRef.value?.inputRef;
+    el?.focus();
+    el?.select();
 };
 const saveHeader = () => {
     if (localValue.value.trim() && localValue.value !== props.value) {

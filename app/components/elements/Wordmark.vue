@@ -1,12 +1,10 @@
 <script lang="ts" setup>
 import Logo from './Logo.vue';
 
-interface Props {
+withDefaults(defineProps<{
     showIcon?: boolean;
     iconSize?: number;
-}
-
-withDefaults(defineProps<Props>(), {
+}>(), {
     showIcon: true,
     iconSize: 24,
 });
@@ -18,8 +16,8 @@ withDefaults(defineProps<Props>(), {
             v-if="showIcon"
             :size="iconSize"
         />
-        <span class="text-[15px] font-bold tracking-tight text-ink">
-            Resume<span class="text-green-700">ForFree</span>
+        <span class="text-[15px] font-bold tracking-tight text-highlighted">
+            Resume<span class="text-secondary">ForFree</span>
         </span>
     </div>
 </template>

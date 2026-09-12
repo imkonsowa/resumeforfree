@@ -14,19 +14,15 @@
                 v-if="templateConfig.canMoveSection('certificates')"
                 class="flex items-center gap-2"
             >
-                <span class="text-sm text-gray-600">{{ t('forms.certificates.column') }}:</span>
-                <select
-                    :value="resumeStore.resumeData.sectionPlacement.certificates"
-                    class="px-2 py-1 text-sm border rounded focus:ring-[3px] focus:ring-green-50 focus:border-green"
-                    @change="(e) => resumeStore.updateSectionPlacement('certificates', (e.target as HTMLSelectElement).value as 'left' | 'right')"
-                >
-                    <option value="left">
-                        {{ t('common.left', 'Left') }}
-                    </option>
-                    <option value="right">
-                        {{ t('common.right', 'Right') }}
-                    </option>
-                </select>
+                <span class="text-sm text-toned">{{ t('forms.certificates.column') }}:</span>
+                <USelect
+                    :model-value="resumeStore.resumeData.sectionPlacement.certificates"
+                    :items="placementItems"
+                    value-key="value"
+                    size="sm"
+                    class="w-28"
+                    @update:model-value="(value) => resumeStore.updateSectionPlacement('certificates', value as 'left' | 'right')"
+                />
             </div>
         </template>
         <FormCard
@@ -42,25 +38,23 @@
             @move-down="resumeStore.moveCertificate(index, index + 1)"
         >
             <div class="space-y-4">
-                <div class="space-y-2">
-                    <Label :for="`certificate-title-${index}`">{{ t('forms.certificates.certificateTitle') }}</Label>
-                    <Input
-                        :id="`certificate-title-${index}`"
+                <UFormField :label="t('forms.certificates.certificateTitle')">
+                    <UInput
                         :model-value="certificate.title"
                         :placeholder="t('forms.certificates.certificateTitle')"
+                        class="w-full"
                         @update:model-value="(value) => resumeStore.updateCertificate(index, 'title', value)"
                     />
-                </div>
+                </UFormField>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="space-y-2">
-                        <Label :for="`certificate-issuer-${index}`">{{ t('forms.certificates.issuer') }}</Label>
-                        <Input
-                            :id="`certificate-issuer-${index}`"
+                    <UFormField :label="t('forms.certificates.issuer')">
+                        <UInput
                             :model-value="certificate.issuer"
                             :placeholder="t('forms.certificates.issuer')"
+                            class="w-full"
                             @update:model-value="(value) => resumeStore.updateCertificate(index, 'issuer', value)"
                         />
-                    </div>
+                    </UFormField>
                     <div class="space-y-2">
                         <MonthYearPicker
                             :model-value="certificate.date"
@@ -69,26 +63,24 @@
                         />
                     </div>
                 </div>
-                <div class="space-y-2">
-                    <Label :for="`certificate-url-${index}`">{{ t('forms.certificates.url') }}</Label>
-                    <Input
-                        :id="`certificate-url-${index}`"
+                <UFormField :label="t('forms.certificates.url')">
+                    <UInput
                         :model-value="certificate.url || ''"
                         :placeholder="t('forms.certificates.url')"
                         type="url"
+                        class="w-full"
                         @update:model-value="(value) => resumeStore.updateCertificate(index, 'url', value)"
                     />
-                </div>
-                <div class="space-y-2">
-                    <Label :for="`certificate-description-${index}`">{{ t('common.description') }}</Label>
-                    <Textarea
-                        :id="`certificate-description-${index}`"
+                </UFormField>
+                <UFormField :label="t('common.description')">
+                    <UTextarea
                         :model-value="certificate.description || ''"
                         :placeholder="t('common.description')"
                         rows="3"
+                        class="w-full"
                         @update:model-value="(value) => resumeStore.updateCertificate(index, 'description', value)"
                     />
-                </div>
+                </UFormField>
             </div>
         </FormCard>
     </FormContainer>
@@ -104,9 +96,6 @@
 </template>
 
 <script lang="ts" setup>
-import { Input } from '~/components/ui/input';
-import { Label } from '~/components/ui/label';
-import { Textarea } from '~/components/ui/textarea';
 import MonthYearPicker from '~/components/elements/MonthYearPicker.vue';
 import FormContainer from '~/components/elements/FormContainer.vue';
 import FormCard from '~/components/elements/FormCard.vue';
@@ -116,6 +105,11 @@ const resumeStore = useResumeStore();
 const confirmation = useConfirmation();
 const templateConfig = useTemplate();
 const { t } = useResumeT();
+
+const placementItems = computed(() => [
+    { label: t('common.left', 'Left'), value: 'left' },
+    { label: t('common.right', 'Right'), value: 'right' },
+]);
 const { getSectionHeader, setSectionHeader } = useSectionHeader();
 const certificatesHeader = getSectionHeader('certificates');
 </script>

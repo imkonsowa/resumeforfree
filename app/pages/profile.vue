@@ -1,13 +1,9 @@
 <script lang="ts" setup>
-import { Button } from '~/components/ui/button';
-import { Input } from '~/components/ui/input';
-import { Label } from '~/components/ui/label';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
-import { Separator } from '~/components/ui/separator';
-import { User, Lock, Eye, EyeOff, KeyRound } from 'lucide-vue-next';
+import type { NavigationMenuItem } from '@nuxt/ui';
 import ApiTokensPanel from '~/components/elements/ApiTokensPanel.vue';
 
 const { t } = useI18n();
+const notify = useNotify();
 const localePath = useLocalePath();
 const authStore = useAuthStore();
 
@@ -22,6 +18,12 @@ useHead({
 });
 
 const activeSection = ref<'personal' | 'password' | 'tokens'>('personal');
+
+const sectionItems = computed<NavigationMenuItem[]>(() => [
+    { label: t('profile.personalInformation'), icon: 'i-lucide-user', value: 'personal' },
+    { label: t('auth.changePassword'), icon: 'i-lucide-lock', value: 'password' },
+    { label: t('apiTokens.title'), icon: 'i-lucide-key-round', value: 'tokens' },
+]);
 const isChangingPassword = ref(false);
 const showCurrentPassword = ref(false);
 const showNewPassword = ref(false);
@@ -34,6 +36,11 @@ const passwordForm = ref({
 });
 
 const passwordErrors = ref<string[]>([]);
+
+const resetPasswordForm = () => {
+    passwordForm.value = { currentPassword: '', newPassword: '', confirmPassword: '' };
+    passwordErrors.value = [];
+};
 
 const handleChangePassword = async () => {
     passwordErrors.value = [];
@@ -58,8 +65,6 @@ const handleChangePassword = async () => {
         return;
     }
 
-    const { toast } = await import('vue-sonner');
-
     try {
         isChangingPassword.value = true;
 
@@ -75,13 +80,13 @@ const handleChangePassword = async () => {
             confirmPassword: '',
         };
 
-        toast.success(t('auth.passwordChangedSuccess'));
+        notify.success(t('auth.passwordChangedSuccess'));
     }
     catch (error: unknown) {
         console.error('Password change error:', error);
         const errorMessage = (error as Error)?.message || t('auth.passwordChangeError');
         passwordErrors.value.push(errorMessage);
-        toast.error(errorMessage);
+        notify.error(errorMessage);
     }
     finally {
         isChangingPassword.value = false;
@@ -100,265 +105,201 @@ useHead({
 </script>
 
 <template>
-    <div class="min-h-screen bg-gray-50">
+    <div class="min-h-screen bg-muted">
         <div class="container mx-auto px-4 py-8">
             <div class="max-w-6xl mx-auto">
                 <div class="mb-8">
-                    <h1 class="text-3xl font-bold text-gray-900 mb-2">
+                    <h1 class="text-3xl font-bold text-highlighted mb-2">
                         {{ $t('profile.title') }}
                     </h1>
-                    <p class="text-gray-600">
+                    <p class="text-toned">
                         {{ $t('profile.description') }}
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                     <div class="md:col-span-1">
-                        <Card>
-                            <CardContent class="p-4">
-                                <nav class="space-y-1">
-                                    <button
-                                        class="w-full flex items-center gap-3 px-3 py-2 text-sm rounded-md transition-colors text-left"
-                                        :class="activeSection === 'personal' ? 'bg-green-50 text-green-ink font-medium' : 'text-gray-700 hover:bg-gray-100'"
-                                        @click="activeSection = 'personal'"
-                                    >
-                                        <User class="w-4 h-4" />
-                                        {{ $t('profile.personalInformation') }}
-                                    </button>
-                                    <button
-                                        class="w-full flex items-center gap-3 px-3 py-2 text-sm rounded-md transition-colors text-left"
-                                        :class="activeSection === 'password' ? 'bg-green-50 text-green-ink font-medium' : 'text-gray-700 hover:bg-gray-100'"
-                                        @click="activeSection = 'password'"
-                                    >
-                                        <Lock class="w-4 h-4" />
-                                        {{ $t('auth.changePassword') }}
-                                    </button>
-                                    <button
-                                        class="w-full flex items-center gap-3 px-3 py-2 text-sm rounded-md transition-colors text-left"
-                                        :class="activeSection === 'tokens' ? 'bg-green-50 text-green-ink font-medium' : 'text-gray-700 hover:bg-gray-100'"
-                                        @click="activeSection = 'tokens'"
-                                    >
-                                        <KeyRound class="w-4 h-4" />
-                                        {{ $t('apiTokens.title') }}
-                                    </button>
-                                </nav>
-                            </CardContent>
-                        </Card>
+                        <UNavigationMenu
+                            v-model="activeSection"
+                            :items="sectionItems"
+                            orientation="vertical"
+                        />
                     </div>
 
                     <div class="md:col-span-3">
-                        <Card v-if="activeSection === 'personal'">
-                            <CardHeader>
-                                <CardTitle class="flex items-center gap-2">
-                                    <User class="w-5 h-5" />
+                        <UCard v-if="activeSection === 'personal'">
+                            <template #header>
+                                <div class="flex items-center gap-2 text-highlighted font-semibold">
+                                    <UIcon
+                                        name="i-lucide-user"
+                                        class="size-5"
+                                    />
                                     {{ $t('profile.personalInformation') }}
-                                </CardTitle>
-                                <CardDescription>
+                                </div>
+                                <p class="mt-1 text-muted text-sm">
                                     {{ $t('profile.viewAndManage') }}
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent class="space-y-8">
+                                </p>
+                            </template>
+                            <div class="space-y-8">
                                 <div class="space-y-6">
-                                    <div>
-                                        <Label
-                                            for="name"
-                                            class="text-sm font-medium text-gray-700 mb-2 block"
-                                        >{{ $t('common.name') }}</Label>
-                                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200 text-base">
-                                            {{ authStore.currentUser?.name || $t('profile.notProvided') }}
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <Label
-                                            for="email"
-                                            class="text-sm font-medium text-gray-700 mb-2 block"
-                                        >{{ $t('common.emailAddress') }}</Label>
-                                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200 text-base">
-                                            {{ authStore.currentUser?.email }}
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <Separator />
-
-                                <div class="bg-green-50 border border-green-200 rounded-lg p-4">
-                                    <div class="flex items-start gap-3">
-                                        <div class="w-5 h-5 text-green-700 mt-0.5">
-                                            ℹ️
-                                        </div>
-                                        <div>
-                                            <h4 class="text-sm font-medium text-green-ink mb-1">
-                                                {{ $t('profile.accountInformation') }}
-                                            </h4>
-                                            <p class="text-sm text-green-700">
-                                                {{ $t('profile.accountInfoDescription') }}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-
-                        <Card v-if="activeSection === 'password'">
-                            <CardHeader>
-                                <CardTitle class="flex items-center gap-2">
-                                    <Lock class="w-5 h-5" />
-                                    {{ $t('auth.changePassword') }}
-                                </CardTitle>
-                                <CardDescription>
-                                    {{ $t('profile.updatePasswordDescription') }}
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <form
-                                    class="space-y-6"
-                                    @submit.prevent="handleChangePassword"
-                                >
-                                    <div
-                                        v-if="passwordErrors.length > 0"
-                                        class="bg-red-50 border border-red-200 rounded-md p-4"
+                                    <UFormField
+                                        name="name"
+                                        :label="$t('common.name')"
                                     >
-                                        <div class="flex items-start gap-3">
-                                            <div class="w-5 h-5 text-red-600 mt-0.5">
-                                                ⚠️
-                                            </div>
-                                            <div>
-                                                <h4 class="text-sm font-medium text-red-900 mb-2">
-                                                    {{ $t('profile.pleaseFixErrors') }}
-                                                </h4>
-                                                <ul class="text-sm text-red-700 space-y-1">
-                                                    <li
-                                                        v-for="error in passwordErrors"
-                                                        :key="error"
-                                                    >
-                                                        • {{ error }}
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <Label
-                                            for="current-password"
-                                            class="text-sm font-medium text-gray-700"
-                                        >{{ $t('auth.currentPassword') }}</Label>
-                                        <div class="relative mt-1">
-                                            <Input
-                                                id="current-password"
-                                                v-model="passwordForm.currentPassword"
-                                                :type="showCurrentPassword ? 'text' : 'password'"
-                                                :placeholder="$t('auth.enterCurrentPassword')"
-                                                class="pr-10"
-                                                :disabled="isChangingPassword"
-                                                required
-                                            />
-                                            <button
-                                                type="button"
-                                                class="absolute inset-y-0 right-0 pr-3 flex items-center"
-                                                @click="showCurrentPassword = !showCurrentPassword"
-                                            >
-                                                <Eye
-                                                    v-if="!showCurrentPassword"
-                                                    class="w-4 h-4 text-gray-400"
-                                                />
-                                                <EyeOff
-                                                    v-else
-                                                    class="w-4 h-4 text-gray-400"
-                                                />
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <Label
-                                            for="new-password"
-                                            class="text-sm font-medium text-gray-700"
-                                        >{{ $t('auth.newPassword') }}</Label>
-                                        <div class="relative mt-1">
-                                            <Input
-                                                id="new-password"
-                                                v-model="passwordForm.newPassword"
-                                                :type="showNewPassword ? 'text' : 'password'"
-                                                :placeholder="$t('auth.enterNewPassword')"
-                                                class="pr-10"
-                                                :disabled="isChangingPassword"
-                                                required
-                                                minlength="8"
-                                            />
-                                            <button
-                                                type="button"
-                                                class="absolute inset-y-0 right-0 pr-3 flex items-center"
-                                                @click="showNewPassword = !showNewPassword"
-                                            >
-                                                <Eye
-                                                    v-if="!showNewPassword"
-                                                    class="w-4 h-4 text-gray-400"
-                                                />
-                                                <EyeOff
-                                                    v-else
-                                                    class="w-4 h-4 text-gray-400"
-                                                />
-                                            </button>
-                                        </div>
-                                        <p class="mt-1 text-xs text-gray-500">
-                                            {{ $t('auth.passwordMinLengthHint') }}
+                                        <p class="p-4 bg-muted rounded-lg border border-default text-base">
+                                            {{ authStore.currentUser?.name || $t('profile.notProvided') }}
                                         </p>
-                                    </div>
+                                    </UFormField>
+                                    <UFormField
+                                        name="email"
+                                        :label="$t('common.emailAddress')"
+                                    >
+                                        <p class="p-4 bg-muted rounded-lg border border-default text-base">
+                                            {{ authStore.currentUser?.email }}
+                                        </p>
+                                    </UFormField>
+                                </div>
 
-                                    <div>
-                                        <Label
-                                            for="confirm-password"
-                                            class="text-sm font-medium text-gray-700"
-                                        >{{ $t('auth.confirmNewPassword') }}</Label>
-                                        <div class="relative mt-1">
-                                            <Input
-                                                id="confirm-password"
-                                                v-model="passwordForm.confirmPassword"
-                                                :type="showConfirmPassword ? 'text' : 'password'"
-                                                :placeholder="$t('auth.confirmNewPassword')"
-                                                class="pr-10"
-                                                :disabled="isChangingPassword"
-                                                required
-                                            />
-                                            <button
-                                                type="button"
-                                                class="absolute inset-y-0 right-0 pr-3 flex items-center"
-                                                @click="showConfirmPassword = !showConfirmPassword"
+                                <USeparator />
+
+                                <UAlert
+                                    color="secondary"
+                                    variant="soft"
+                                    icon="i-lucide-info"
+                                    :title="$t('profile.accountInformation')"
+                                    :description="$t('profile.accountInfoDescription')"
+                                />
+                            </div>
+                        </UCard>
+
+                        <UCard v-if="activeSection === 'password'">
+                            <template #header>
+                                <div class="flex items-center gap-2 text-highlighted font-semibold">
+                                    <UIcon
+                                        name="i-lucide-lock"
+                                        class="size-5"
+                                    />
+                                    {{ $t('auth.changePassword') }}
+                                </div>
+                                <p class="mt-1 text-muted text-sm">
+                                    {{ $t('profile.updatePasswordDescription') }}
+                                </p>
+                            </template>
+                            <UForm
+                                :state="passwordForm"
+                                class="space-y-6"
+                                @submit="handleChangePassword"
+                            >
+                                <UAlert
+                                    v-if="passwordErrors.length > 0"
+                                    color="error"
+                                    variant="soft"
+                                    icon="i-lucide-triangle-alert"
+                                    :title="$t('profile.pleaseFixErrors')"
+                                >
+                                    <template #description>
+                                        <ul class="space-y-1 mt-1">
+                                            <li
+                                                v-for="error in passwordErrors"
+                                                :key="error"
                                             >
-                                                <Eye
-                                                    v-if="!showConfirmPassword"
-                                                    class="w-4 h-4 text-gray-400"
-                                                />
-                                                <EyeOff
-                                                    v-else
-                                                    class="w-4 h-4 text-gray-400"
-                                                />
-                                            </button>
-                                        </div>
-                                    </div>
+                                                {{ error }}
+                                            </li>
+                                        </ul>
+                                    </template>
+                                </UAlert>
 
-                                    <div class="flex gap-3 pt-4">
-                                        <Button
-                                            type="submit"
-                                            :disabled="isChangingPassword"
-                                            class="flex items-center gap-2"
-                                        >
-                                            <Lock class="w-4 h-4" />
-                                            {{ isChangingPassword ? $t('auth.changingPassword') : $t('auth.changePassword') }}
-                                        </Button>
-                                        <Button
-                                            type="button"
-                                            variant="outline"
-                                            :disabled="isChangingPassword"
-                                            @click="passwordForm = { currentPassword: '', newPassword: '', confirmPassword: '' }; passwordErrors = []"
-                                        >
-                                            {{ $t('auth.clearForm') }}
-                                        </Button>
-                                    </div>
-                                </form>
-                            </CardContent>
-                        </Card>
+                                <UFormField
+                                    name="currentPassword"
+                                    :label="$t('auth.currentPassword')"
+                                >
+                                    <UInput
+                                        v-model="passwordForm.currentPassword"
+                                        :type="showCurrentPassword ? 'text' : 'password'"
+                                        :placeholder="$t('auth.enterCurrentPassword')"
+                                        :disabled="isChangingPassword"
+                                        class="w-full"
+                                    >
+                                        <template #trailing>
+                                            <UButton
+                                                color="neutral"
+                                                variant="link"
+                                                size="sm"
+                                                :icon="showCurrentPassword ? 'i-lucide-eye-off' : 'i-lucide-eye'"
+                                                :aria-label="$t('auth.togglePassword', 'Toggle password visibility')"
+                                                @click="showCurrentPassword = !showCurrentPassword"
+                                            />
+                                        </template>
+                                    </UInput>
+                                </UFormField>
+
+                                <UFormField
+                                    name="newPassword"
+                                    :label="$t('auth.newPassword')"
+                                    :description="$t('auth.passwordMinLengthHint')"
+                                >
+                                    <UInput
+                                        v-model="passwordForm.newPassword"
+                                        :type="showNewPassword ? 'text' : 'password'"
+                                        :placeholder="$t('auth.enterNewPassword')"
+                                        :disabled="isChangingPassword"
+                                        class="w-full"
+                                    >
+                                        <template #trailing>
+                                            <UButton
+                                                color="neutral"
+                                                variant="link"
+                                                size="sm"
+                                                :icon="showNewPassword ? 'i-lucide-eye-off' : 'i-lucide-eye'"
+                                                :aria-label="$t('auth.togglePassword', 'Toggle password visibility')"
+                                                @click="showNewPassword = !showNewPassword"
+                                            />
+                                        </template>
+                                    </UInput>
+                                </UFormField>
+
+                                <UFormField
+                                    name="confirmPassword"
+                                    :label="$t('auth.confirmNewPassword')"
+                                >
+                                    <UInput
+                                        v-model="passwordForm.confirmPassword"
+                                        :type="showConfirmPassword ? 'text' : 'password'"
+                                        :placeholder="$t('auth.confirmNewPassword')"
+                                        :disabled="isChangingPassword"
+                                        class="w-full"
+                                    >
+                                        <template #trailing>
+                                            <UButton
+                                                color="neutral"
+                                                variant="link"
+                                                size="sm"
+                                                :icon="showConfirmPassword ? 'i-lucide-eye-off' : 'i-lucide-eye'"
+                                                :aria-label="$t('auth.togglePassword', 'Toggle password visibility')"
+                                                @click="showConfirmPassword = !showConfirmPassword"
+                                            />
+                                        </template>
+                                    </UInput>
+                                </UFormField>
+
+                                <div class="flex gap-3 pt-4">
+                                    <UButton
+                                        type="submit"
+                                        icon="i-lucide-lock"
+                                        :loading="isChangingPassword"
+                                        :label="$t('auth.changePassword')"
+                                    />
+                                    <UButton
+                                        type="button"
+                                        color="neutral"
+                                        variant="outline"
+                                        :disabled="isChangingPassword"
+                                        :label="$t('auth.clearForm')"
+                                        @click="resetPasswordForm"
+                                    />
+                                </div>
+                            </UForm>
+                        </UCard>
 
                         <ApiTokensPanel v-if="activeSection === 'tokens'" />
                     </div>

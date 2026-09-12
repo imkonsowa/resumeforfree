@@ -1,46 +1,43 @@
 <template>
-    <Dialog
-        :open="isOpen"
-        @update:open="$emit('close')"
+    <UModal
+        v-model:open="open"
+        :title="t('resumes.modals.cloudSync.title')"
+        :description="t('resumes.modals.cloudSync.description', {
+            count: cloudInfo.count,
+            limit: cloudInfo.limit,
+            remaining: cloudInfo.remaining,
+            remainingPlural: cloudInfo.remaining !== 1 ? t('resumes.modals.cloudSync.slots') : t('resumes.modals.cloudSync.slot'),
+        })"
+        :ui="{ content: 'max-w-2xl' }"
     >
-        <DialogContent class="max-w-2xl max-h-[80vh] overflow-hidden flex flex-col">
-            <DialogHeader class="flex-shrink-0">
-                <DialogTitle class="flex items-center gap-2">
-                    <Cloud class="w-5 h-5" />
-                    {{ $t('resumes.modals.cloudSync.title') }}
-                </DialogTitle>
-                <DialogDescription>
-                    {{ t('resumes.modals.cloudSync.description', {
-                        count: cloudInfo.count,
-                        limit: cloudInfo.limit,
-                        remaining: cloudInfo.remaining,
-                        remainingPlural: cloudInfo.remaining !== 1 ? t('resumes.modals.cloudSync.slots') : t('resumes.modals.cloudSync.slot'),
-                    }) }}
-                </DialogDescription>
-            </DialogHeader>
-            <div class="flex-1 overflow-y-auto space-y-4 py-4">
+        <template #body>
+            <div class="max-h-[60vh] overflow-y-auto space-y-4">
                 <div
                     v-for="resume in syncableResumes"
                     :key="resume.id"
-                    class="flex items-start gap-3 p-3 border rounded-lg hover:bg-gray-50 transition-colors cursor-pointer"
-                    :class="{ 'bg-green-50 border-green-200': selectedResumes.includes(resume.id) }"
+                    class="flex items-start gap-3 p-3 border rounded-lg hover:bg-muted transition-colors cursor-pointer"
+                    :class="{ 'bg-secondary/10 border-secondary/30': selectedResumes.includes(resume.id) }"
                     @click="toggleResume(resume.id)"
                 >
                     <div class="flex-shrink-0 w-5 h-5 flex items-center justify-center">
-                        <CheckCircle
+                        <UIcon
                             v-if="selectedResumes.includes(resume.id)"
-                            class="w-5 h-5 text-green-700"
+                            name="i-lucide-check-circle"
+                            class="w-5 h-5 text-secondary"
                         />
                     </div>
                     <div class="flex-1 min-w-0">
-                        <div class="block font-medium text-gray-900 truncate">
+                        <div class="block font-medium text-highlighted truncate">
                             {{ resume.name }}
                         </div>
-                        <div class="text-sm text-gray-500 space-y-1">
+                        <div class="text-sm text-muted space-y-1">
                             <p>Updated {{ formatDate(resume.updatedAt) }}</p>
                             <div class="flex items-center gap-4 text-xs">
                                 <span class="flex items-center gap-1">
-                                    <AlertCircle class="w-3 h-3 text-amber-600" />
+                                    <UIcon
+                                        name="i-lucide-alert-circle"
+                                        class="w-3 h-3 text-warning"
+                                    />
                                     {{ $t('resumes.status.notSynced') }}
                                 </span>
                                 <span>{{ getSectionCount(resume) }}</span>
@@ -48,86 +45,58 @@
                         </div>
                     </div>
                 </div>
-                <div
+                <UEmpty
                     v-if="syncableResumes.length === 0"
-                    class="text-center py-8 text-gray-500"
-                >
-                    <Cloud class="w-12 h-12 mx-auto mb-3 text-gray-300" />
-                    <p>{{ $t('resumes.modals.cloudSync.allSynced') }}</p>
-                    <p class="text-xs mt-2">
-                        {{ $t('resumes.modals.cloudSync.unsyncHint') }}
-                    </p>
-                </div>
-                <div
+                    icon="i-lucide-cloud"
+                    :title="$t('resumes.modals.cloudSync.allSynced')"
+                    :description="$t('resumes.modals.cloudSync.unsyncHint')"
+                />
+                <UAlert
                     v-if="getNewResumesCount() > cloudInfo.remaining"
-                    class="bg-amber-50 border border-amber-200 rounded-lg p-4"
-                >
-                    <div class="flex items-start gap-3">
-                        <AlertCircle class="w-5 h-5 text-amber-600 mt-0.5" />
-                        <div>
-                            <h4 class="text-sm font-medium text-amber-800">
-                                {{ $t('resumes.modals.cloudSync.limitExceeded') }}
-                            </h4>
-                            <p class="text-sm text-amber-700 mt-1">
-                                {{ t('resumes.modals.cloudSync.limitExceededMessage', {
-                                    count: getNewResumesCount(),
-                                    countPlural: getNewResumesCount() !== 1 ? t('resumes.resumeCount.resumes') : t('resumes.resumeCount.resume'),
-                                    remaining: cloudInfo.remaining,
-                                    remainingPlural: cloudInfo.remaining !== 1 ? t('resumes.modals.cloudSync.slots') : t('resumes.modals.cloudSync.slot'),
-                                }) }}
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                    color="warning"
+                    variant="soft"
+                    icon="i-lucide-circle-alert"
+                    :title="$t('resumes.modals.cloudSync.limitExceeded')"
+                    :description="t('resumes.modals.cloudSync.limitExceededMessage', {
+                        count: getNewResumesCount(),
+                        countPlural: getNewResumesCount() !== 1 ? t('resumes.resumeCount.resumes') : t('resumes.resumeCount.resume'),
+                        remaining: cloudInfo.remaining,
+                        remainingPlural: cloudInfo.remaining !== 1 ? t('resumes.modals.cloudSync.slots') : t('resumes.modals.cloudSync.slot'),
+                    })"
+                />
             </div>
-            <DialogFooter class="flex-shrink-0 gap-2">
-                <Button
+        </template>
+        <template #footer>
+            <div class="flex justify-end gap-2 w-full">
+                <UButton
+                    color="neutral"
                     variant="outline"
-                    @click="$emit('close')"
-                >
-                    {{ $t('resumes.modals.cancel') }}
-                </Button>
-                <Button
+                    :label="$t('resumes.modals.cancel')"
+                    @click="emit('close')"
+                />
+                <UButton
+                    color="neutral"
                     variant="outline"
                     :disabled="syncableResumes.length === 0"
+                    :label="selectedResumes.length === syncableResumes.length ? t('resumes.modals.cloudSync.deselectAll') : t('resumes.modals.cloudSync.selectAll')"
                     @click="selectAll"
-                >
-                    {{ selectedResumes.length === syncableResumes.length ? t('resumes.modals.cloudSync.deselectAll') : t('resumes.modals.cloudSync.selectAll') }}
-                </Button>
-                <Button
-                    :disabled="selectedResumes.length === 0 || isLoading || getNewResumesCount() > cloudInfo.remaining"
-                    @click="handleSync"
-                >
-                    <Loader2
-                        v-if="isLoading"
-                        class="w-4 h-4 mr-2 animate-spin"
-                    />
-                    {{ t('resumes.modals.cloudSync.syncButton', {
+                />
+                <UButton
+                    color="secondary"
+                    :loading="isLoading"
+                    :disabled="selectedResumes.length === 0 || getNewResumesCount() > cloudInfo.remaining"
+                    :label="t('resumes.modals.cloudSync.syncButton', {
                         count: selectedResumes.length,
                         countPlural: selectedResumes.length !== 1 ? t('resumes.resumeCount.resumes') : t('resumes.resumeCount.resume'),
-                    }) }}
-                </Button>
-            </DialogFooter>
-        </DialogContent>
-    </Dialog>
+                    })"
+                    @click="handleSync"
+                />
+            </div>
+        </template>
+    </UModal>
 </template>
 
 <script lang="ts" setup>
-import { Button } from '~/components/ui/button';
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '~/components/ui/dialog';
-import {
-    AlertCircle,
-    CheckCircle,
-    Cloud,
-    Loader2,
-} from 'lucide-vue-next';
 import type { Resume } from '~/types/resume';
 
 const props = defineProps<Props>();
@@ -136,6 +105,13 @@ const emit = defineEmits<{
     close: [];
     sync: [resumeIds: string[]];
 }>();
+
+const open = computed({
+    get: () => props.isOpen,
+    set: (value) => {
+        if (!value) emit('close');
+    },
+});
 
 const { t } = useI18n();
 

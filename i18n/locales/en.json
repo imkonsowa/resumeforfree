@@ -45,7 +45,20 @@
         "organizationUrl": "Organization Website URL",
         "emailAddress": "Email Address",
         "tryAgain": "Try Again",
-        "copy": "Copy"
+        "copy": "Copy",
+        "month": "Month",
+        "year": "Year",
+        "moveUp": "Move up",
+        "moveDown": "Move down",
+        "confirmAction": "Confirm action",
+        "confirmMessage": "Are you sure you want to proceed?",
+        "confirm": "Confirm",
+        "expand": "Expand",
+        "collapse": "Collapse",
+        "moreActions": "More actions",
+        "or": "or",
+        "saved": "Saved",
+        "syncFailed": "Sync failed"
     },
     "languageModal": {
         "title": "Select Your Language",
@@ -352,7 +365,7 @@
         "languageMismatch": "This resume is in {language}.",
         "pageTitle": "Free Resume Builder - Build & Download PDF Resumes For Free | No Signup",
         "pageDescription": "Build your resume and download it as a professional PDF - completely free. No account, no watermark, no limits. Real-time preview, instant PDF generation, and your data stays on your device.",
-        "sections": "Sections",
+        "sections": "Resume sections",
         "resumePreview": "Resume Preview",
         "noResumeSelected": "No Resume Selected",
         "noResumeDescription": "To start building your resume, you need to create or select a resume first. Go to your resumes page to create your first resume.",
@@ -386,7 +399,10 @@
             "zoomOut": "Zoom Out",
             "resetZoom": "Reset Zoom"
         },
-        "previewErrorDetailed": "Preview failed: {detail}"
+        "previewErrorDetailed": "Preview failed: {detail}",
+        "zoomIn": "Zoom in",
+        "zoomOut": "Zoom out",
+        "downloadOptions": "Download options"
     },
     "settings": {
         "title": "Resume Settings",
@@ -542,7 +558,11 @@
     "validation": {
         "required": "This field is required",
         "email": "Please enter a valid email address",
-        "url": "Please enter a valid URL"
+        "url": "Please enter a valid URL",
+        "invalidEmail": "Enter a valid email address",
+        "passwordRequired": "Password is required",
+        "nameRequired": "Name is required",
+        "passwordMinLength": "Password must be at least 6 characters"
     },
     "notifications": {
         "resumeCreated": "Resume created successfully",
@@ -631,7 +651,8 @@
         "googleOAuthFailed": "Google sign-in failed. Please try again.",
         "googleNoEmail": "Google account did not provide an email address.",
         "googleHandlerError": "Something went wrong during Google sign-in.",
-        "googleUserCreationFailed": "Could not create your account from Google profile."
+        "googleUserCreationFailed": "Could not create your account from Google profile.",
+        "togglePassword": "Toggle password visibility"
     },
     "profile": {
         "title": "Profile Settings",
@@ -790,7 +811,15 @@
                 "message": "Are you sure you want to remove \"{name}\" from the cloud? The resume will remain on your device but will no longer be synced.",
                 "confirmButton": "Remove from Cloud"
             },
-            "cancel": "Cancel"
+            "cancel": "Cancel",
+            "import": {
+                "title": "Import resumes",
+                "foundCount": "{count} resume(s) found in file",
+                "duplicateWarning": "{count} resume(s) with matching names already exist. These are unchecked by default.",
+                "itemCount": "{count} items",
+                "selectedCount": "{count} resume(s) selected for import",
+                "importSelected": "Import selected"
+            }
         },
         "toast": {
             "creatingInCloud": "Creating resume in cloud...",

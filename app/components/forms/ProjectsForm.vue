@@ -13,19 +13,15 @@
                 v-if="templateConfig.canMoveSection('projects')"
                 class="flex items-center gap-2"
             >
-                <span class="text-sm text-gray-600">{{ t('forms.projects.column') }}:</span>
-                <select
-                    :value="resumeStore.resumeData.sectionPlacement.projects"
-                    class="px-2 py-1 text-sm border rounded focus:ring-[3px] focus:ring-green-50 focus:border-green"
-                    @change="(e) => resumeStore.updateSectionPlacement('projects', (e.target as HTMLSelectElement).value as 'left' | 'right')"
-                >
-                    <option value="left">
-                        {{ t('common.left', 'Left') }}
-                    </option>
-                    <option value="right">
-                        {{ t('common.right', 'Right') }}
-                    </option>
-                </select>
+                <span class="text-sm text-toned">{{ t('forms.projects.column') }}:</span>
+                <USelect
+                    :model-value="resumeStore.resumeData.sectionPlacement.projects"
+                    :items="placementItems"
+                    value-key="value"
+                    size="sm"
+                    class="w-28"
+                    @update:model-value="(value) => resumeStore.updateSectionPlacement('projects', value as 'left' | 'right')"
+                />
             </div>
         </template>
         <FormCard
@@ -41,25 +37,23 @@
             @move-down="resumeStore.moveProject(index, index + 1)"
         >
             <div class="space-y-4">
-                <div class="space-y-2">
-                    <Label :for="`project-title-${index}`">{{ t('forms.projects.projectTitle') }}</Label>
-                    <Input
-                        :id="`project-title-${index}`"
+                <UFormField :label="t('forms.projects.projectTitle')">
+                    <UInput
                         :model-value="project.title"
                         :placeholder="t('forms.projects.projectTitle')"
+                        class="w-full"
                         @update:model-value="(value) => resumeStore.updateProject(index, 'title', value)"
                     />
-                </div>
-                <div class="space-y-2">
-                    <Label :for="`project-description-${index}`">{{ t('common.description') }}</Label>
-                    <Textarea
-                        :id="`project-description-${index}`"
+                </UFormField>
+                <UFormField :label="t('common.description')">
+                    <UTextarea
                         :model-value="project.description"
                         :placeholder="t('common.description')"
                         rows="2"
+                        class="w-full"
                         @update:model-value="(value) => resumeStore.updateProject(index, 'description', value)"
                     />
-                </div>
+                </UFormField>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="space-y-2">
                         <MonthYearPicker
@@ -75,38 +69,35 @@
                             :label="t('common.endDate')"
                             @update:model-value="(value) => resumeStore.updateProject(index, 'endDate', value)"
                         />
-                        <div class="flex items-center space-x-2 mt-2">
-                            <Checkbox
-                                :id="`project-present-${index}`"
-                                :model-value="project.isPresent"
-                                @update:model-value="(value) => {
-                                    resumeStore.updateProject(index, 'isPresent', value);
-                                    if (value) resumeStore.updateProject(index, 'endDate', '');
-                                }"
-                            />
-                            <Label
-                                :for="`project-present-${index}`"
-                                class="text-sm"
-                            >{{ t('common.present') }}</Label>
-                        </div>
+                        <UCheckbox
+                            :model-value="project.isPresent"
+                            :label="t('common.present')"
+                            @update:model-value="(value) => {
+                                resumeStore.updateProject(index, 'isPresent', value);
+                                if (value) resumeStore.updateProject(index, 'endDate', '');
+                            }"
+                        />
                     </div>
                 </div>
                 <div class="space-y-2">
                     <div class="flex items-center justify-between">
-                        <Label>{{ t('forms.projects.links') }}</Label>
-                        <Button
+                        <h4 class="text-sm font-medium text-default">
+                            {{ t('forms.projects.links') }}
+                        </h4>
+                        <UButton
                             type="button"
+                            color="neutral"
                             variant="outline"
                             size="sm"
+                            icon="i-lucide-plus"
                             @click="resumeStore.addProjectLink(index)"
                         >
-                            <Plus class="w-3.5 h-3.5 me-1" />
                             {{ t('forms.projects.addLink') }}
-                        </Button>
+                        </UButton>
                     </div>
                     <div
                         v-if="!project.links?.length"
-                        class="text-xs text-gray-500"
+                        class="text-xs text-muted"
                     >
                         {{ t('forms.projects.emptyLinks') }}
                     </div>
@@ -115,42 +106,46 @@
                         :key="linkIndex"
                         class="flex items-start gap-2"
                     >
-                        <Input
+                        <UInput
                             :model-value="link.label"
                             :placeholder="t('forms.projects.linkLabel')"
                             class="flex-1 md:max-w-[180px]"
                             @update:model-value="(value) => resumeStore.updateProjectLink(index, linkIndex, 'label', String(value))"
                         />
-                        <Input
+                        <UInput
                             :model-value="link.url"
                             :placeholder="t('forms.projects.linkUrl')"
                             type="url"
                             class="flex-1"
                             @update:model-value="(value) => resumeStore.updateProjectLink(index, linkIndex, 'url', String(value))"
                         />
-                        <Button
+                        <UButton
                             type="button"
+                            color="neutral"
                             variant="ghost"
                             size="sm"
-                            class="text-red-600 hover:text-red-700"
+                            class="text-error hover:text-error"
+                            icon="i-lucide-trash-2"
                             @click="resumeStore.removeProjectLink(index, linkIndex)"
                         >
-                            <Trash2 class="w-4 h-4" />
                             <span class="sr-only">{{ t('forms.projects.removeLink') }}</span>
-                        </Button>
+                        </UButton>
                     </div>
                 </div>
                 <div class="space-y-2">
                     <div class="flex items-center justify-between">
-                        <Label>{{ t('common.achievements') }}</Label>
-                        <Button
+                        <h4 class="text-sm font-medium text-default">
+                            {{ t('common.achievements') }}
+                        </h4>
+                        <UButton
                             size="sm"
+                            color="neutral"
                             variant="outline"
+                            icon="i-lucide-plus"
                             @click="resumeStore.addProjectAchievement(index)"
                         >
-                            <Plus class="w-4 h-4 me-2" />
                             {{ t('common.addAchievement') }}
-                        </Button>
+                        </UButton>
                     </div>
                     <div
                         v-for="(_, achievementIndex) in project.achievements || []"
@@ -158,7 +153,7 @@
                         class="space-y-2"
                     >
                         <div class="flex items-center gap-2">
-                            <Input
+                            <UInput
                                 :model-value="project.achievements[achievementIndex].text"
                                 class="flex-1"
                                 :placeholder="t('common.achievementPlaceholder')"
@@ -166,29 +161,29 @@
                                 @keydown.enter="resumeStore.addProjectAchievement(index)"
                             />
                             <div class="flex items-center gap-1">
-                                <Button
+                                <UButton
                                     :disabled="achievementIndex === 0"
                                     size="sm"
+                                    color="neutral"
                                     variant="outline"
+                                    icon="i-lucide-chevron-up"
                                     @click="resumeStore.moveProjectAchievement(index, achievementIndex, achievementIndex - 1)"
-                                >
-                                    <ChevronUp class="w-4 h-4" />
-                                </Button>
-                                <Button
+                                />
+                                <UButton
                                     :disabled="achievementIndex === (project.achievements.length - 1)"
                                     size="sm"
+                                    color="neutral"
                                     variant="outline"
+                                    icon="i-lucide-chevron-down"
                                     @click="resumeStore.moveProjectAchievement(index, achievementIndex, achievementIndex + 1)"
-                                >
-                                    <ChevronDown class="w-4 h-4" />
-                                </Button>
-                                <Button
+                                />
+                                <UButton
                                     size="sm"
+                                    color="neutral"
                                     variant="outline"
+                                    icon="i-lucide-trash-2"
                                     @click="resumeStore.removeProjectAchievement(index, achievementIndex)"
-                                >
-                                    <Trash2 class="w-4 h-4" />
-                                </Button>
+                                />
                             </div>
                         </div>
                     </div>
@@ -208,12 +203,6 @@
 </template>
 
 <script lang="ts" setup>
-import { ChevronDown, ChevronUp, Plus, Trash2 } from 'lucide-vue-next';
-import { Input } from '~/components/ui/input';
-import { Label } from '~/components/ui/label';
-import { Textarea } from '~/components/ui/textarea';
-import { Button } from '~/components/ui/button';
-import { Checkbox } from '~/components/ui/checkbox';
 import MonthYearPicker from '~/components/elements/MonthYearPicker.vue';
 import FormContainer from '~/components/elements/FormContainer.vue';
 import FormCard from '~/components/elements/FormCard.vue';
@@ -223,6 +212,11 @@ const resumeStore = useResumeStore();
 const confirmation = useConfirmation();
 const templateConfig = useTemplate();
 const { t } = useResumeT();
+
+const placementItems = computed(() => [
+    { label: t('common.left', 'Left'), value: 'left' },
+    { label: t('common.right', 'Right'), value: 'right' },
+]);
 const { getSectionHeader, setSectionHeader } = useSectionHeader();
 const projectsHeader = getSectionHeader('projects');
 </script>

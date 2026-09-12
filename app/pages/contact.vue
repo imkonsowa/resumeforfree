@@ -1,170 +1,152 @@
 <template>
-    <main class="min-h-screen flex flex-col items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
+    <UContainer class="py-16">
         <div class="w-full max-w-2xl mx-auto">
-            <h1 class="text-4xl font-bold text-black mb-8 text-center">
+            <h1 class="text-4xl font-bold text-highlighted mb-8 text-center">
                 {{ $t('contact.title') }}
             </h1>
 
-            <Card class="p-6 sm:p-8">
-                <CardContent class="pt-0">
-                    <p class="text-gray-700 mb-8 text-center">
-                        {{ $t('contact.description') }}
-                    </p>
-
-                    <form
-                        v-if="!formSubmitted"
-                        @submit.prevent="handleSubmit"
-                    >
-                        <div class="mb-4">
-                            <Label for="name">
-                                {{ $t('common.name') }}
-                                <span class="text-red-500">*</span>
-                            </Label>
-                            <Input
-                                id="name"
-                                v-model="formData.name"
-                                type="text"
-                                :placeholder="$t('contact.form.name.placeholder')"
-                                :disabled="loading"
-                                required
-                                class="mt-1"
-                            />
-                        </div>
-
-                        <div class="mb-4">
-                            <Label for="email">
-                                {{ $t('common.email') }}
-                                <span class="text-red-500">*</span>
-                            </Label>
-                            <Input
-                                id="email"
-                                v-model="formData.email"
-                                type="email"
-                                :placeholder="$t('contact.form.email.placeholder')"
-                                :disabled="loading"
-                                required
-                                class="mt-1"
-                            />
-                        </div>
-
-                        <div class="mb-4">
-                            <Label for="subject">
-                                {{ $t('contact.form.subject.label') }}
-                                <span class="text-red-500">*</span>
-                            </Label>
-                            <Input
-                                id="subject"
-                                v-model="formData.subject"
-                                type="text"
-                                :placeholder="$t('contact.form.subject.placeholder')"
-                                :disabled="loading"
-                                required
-                                class="mt-1"
-                            />
-                        </div>
-
-                        <div class="mb-6">
-                            <Label for="message">
-                                {{ $t('contact.form.message.label') }}
-                                <span class="text-red-500">*</span>
-                            </Label>
-                            <Textarea
-                                id="message"
-                                v-model="formData.message"
-                                :placeholder="$t('contact.form.message.placeholder')"
-                                :disabled="loading"
-                                rows="6"
-                                required
-                                class="mt-1"
-                            />
-                        </div>
-
-                        <div class="mb-6">
-                            <TurnstileWidget
-                                ref="turnstileWidgetRef"
-                                v-model="turnstileToken"
-                            />
-                        </div>
-
-                        <Button
-                            type="submit"
-                            class="w-full"
-                            :disabled="loading || !isFormValid || !turnstileToken"
-                        >
-                            <span v-if="loading">{{ $t('contact.form.sending') }}</span>
-                            <span v-else>{{ $t('contact.form.submit') }}</span>
-                        </Button>
-
-                        <p
-                            v-if="errorMessage"
-                            class="mt-4 text-sm text-red-600 text-center"
-                        >
-                            {{ errorMessage }}
-                        </p>
-                    </form>
-
-                    <div
-                        v-else
-                        class="text-center py-8"
-                    >
-                        <div class="mb-4 text-green-600">
-                            <svg
-                                class="w-16 h-16 mx-auto"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M5 13l4 4L19 7"
-                                />
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">
-                            {{ $t('contact.success.title') }}
-                        </h3>
-                        <p class="text-gray-700 mb-6">
-                            {{ $t('contact.success.message') }}
-                        </p>
-                        <Button
-                            @click="navigateTo(localePath('/resumes'))"
-                        >
-                            {{ $t('contact.success.keepBuilding') }}
-                        </Button>
-                    </div>
-                </CardContent>
-            </Card>
-
-            <div class="mt-8 text-center text-sm text-gray-600">
-                <p>
-                    {{ $t('contact.alternative.text') }}
-                    <a
-                        class="text-green-700 hover:text-green-ink font-medium underline"
-                        href="mailto:contact@resumeforfree.com"
-                    >
-                        contact@resumeforfree.com
-                    </a>
+            <UCard>
+                <p class="text-default mb-8 text-center">
+                    {{ $t('contact.description') }}
                 </p>
-            </div>
+
+                <UForm
+                    v-if="!formSubmitted"
+                    :schema="schema"
+                    :state="formData"
+                    class="space-y-4"
+                    @submit="onSubmit"
+                >
+                    <UFormField
+                        name="name"
+                        :label="$t('common.name')"
+                        required
+                    >
+                        <UInput
+                            v-model="formData.name"
+                            :placeholder="$t('contact.form.name.placeholder')"
+                            :disabled="loading"
+                            class="w-full"
+                        />
+                    </UFormField>
+
+                    <UFormField
+                        name="email"
+                        :label="$t('common.email')"
+                        required
+                    >
+                        <UInput
+                            v-model="formData.email"
+                            type="email"
+                            :placeholder="$t('contact.form.email.placeholder')"
+                            :disabled="loading"
+                            class="w-full"
+                        />
+                    </UFormField>
+
+                    <UFormField
+                        name="subject"
+                        :label="$t('contact.form.subject.label')"
+                        required
+                    >
+                        <UInput
+                            v-model="formData.subject"
+                            :placeholder="$t('contact.form.subject.placeholder')"
+                            :disabled="loading"
+                            class="w-full"
+                        />
+                    </UFormField>
+
+                    <UFormField
+                        name="message"
+                        :label="$t('contact.form.message.label')"
+                        required
+                    >
+                        <UTextarea
+                            v-model="formData.message"
+                            :placeholder="$t('contact.form.message.placeholder')"
+                            :disabled="loading"
+                            :rows="6"
+                            class="w-full"
+                        />
+                    </UFormField>
+
+                    <TurnstileWidget
+                        ref="turnstileWidgetRef"
+                        v-model="turnstileToken"
+                    />
+
+                    <UAlert
+                        v-if="errorMessage"
+                        color="error"
+                        variant="soft"
+                        icon="i-lucide-circle-x"
+                        :description="errorMessage"
+                    />
+
+                    <UButton
+                        type="submit"
+                        block
+                        size="lg"
+                        :loading="loading"
+                        :disabled="!turnstileToken"
+                        :label="loading ? $t('contact.form.sending') : $t('contact.form.submit')"
+                    />
+                </UForm>
+
+                <div
+                    v-else
+                    class="text-center py-8"
+                >
+                    <UIcon
+                        name="i-lucide-circle-check"
+                        class="size-16 text-secondary mx-auto mb-4"
+                    />
+                    <h2 class="text-xl font-semibold text-highlighted mb-2">
+                        {{ $t('contact.success.title') }}
+                    </h2>
+                    <p class="text-default mb-6">
+                        {{ $t('contact.success.message') }}
+                    </p>
+                    <UButton
+                        :label="$t('contact.success.keepBuilding')"
+                        @click="navigateTo(localePath('/resumes'))"
+                    />
+                </div>
+            </UCard>
+
+            <p class="mt-8 text-center text-sm text-toned">
+                {{ $t('contact.alternative.text') }}
+                <ULink
+                    to="mailto:contact@resumeforfree.com"
+                    class="text-secondary font-medium underline"
+                >
+                    contact@resumeforfree.com
+                </ULink>
+            </p>
         </div>
-    </main>
+    </UContainer>
 </template>
 
 <script lang="ts" setup>
-import { toast } from 'vue-sonner';
-import { Card, CardContent } from '~/components/ui/card';
-import { Input } from '~/components/ui/input';
-import { Textarea } from '~/components/ui/textarea';
-import { Label } from '~/components/ui/label';
-import { Button } from '~/components/ui/button';
+import * as z from 'zod';
+import type { FormSubmitEvent } from '@nuxt/ui';
 import TurnstileWidget from '~/components/elements/TurnstileWidget.vue';
 
 const { t } = useI18n();
+const notify = useNotify();
 const localePath = useLocalePath();
 
-const formData = ref({
+const schema = z.object({
+    name: z.string().min(1, t('validation.nameRequired', 'Name is required')),
+    email: z.email(t('validation.invalidEmail', 'Enter a valid email address')),
+    subject: z.string().min(1, t('contact.form.subject.label')),
+    message: z.string().min(1, t('contact.form.message.label')),
+});
+
+type Schema = z.output<typeof schema>;
+
+const formData = reactive<Partial<Schema>>({
     name: '',
     email: '',
     subject: '',
@@ -177,17 +159,8 @@ const loading = ref(false);
 const formSubmitted = ref(false);
 const errorMessage = ref('');
 
-const isFormValid = computed(() => {
-    return formData.value.name.trim() !== ''
-        && formData.value.email.trim() !== ''
-        && formData.value.subject.trim() !== ''
-        && formData.value.message.trim() !== '';
-});
-
-const handleSubmit = async () => {
-    if (!isFormValid.value || !turnstileToken.value) {
-        return;
-    }
+async function onSubmit(event: FormSubmitEvent<Schema>) {
+    if (!turnstileToken.value) return;
 
     loading.value = true;
     errorMessage.value = '';
@@ -195,17 +168,11 @@ const handleSubmit = async () => {
     try {
         await $fetch('/api/contact/submit', {
             method: 'POST',
-            body: {
-                name: formData.value.name,
-                email: formData.value.email,
-                subject: formData.value.subject,
-                message: formData.value.message,
-                turnstileToken: turnstileToken.value,
-            },
+            body: { ...event.data, turnstileToken: turnstileToken.value },
         });
 
         formSubmitted.value = true;
-        toast.success(t('contact.success.toast'));
+        notify.success(t('contact.success.toast'));
     }
     catch (error: unknown) {
         console.error('Contact form submission error:', error);
@@ -221,7 +188,7 @@ const handleSubmit = async () => {
             errorMessage.value = t('contact.errors.generic');
         }
 
-        toast.error(errorMessage.value);
+        notify.error(errorMessage.value);
 
         turnstileWidgetRef.value?.reset();
         turnstileToken.value = null;
@@ -229,7 +196,7 @@ const handleSubmit = async () => {
     finally {
         loading.value = false;
     }
-};
+}
 
 useHead({
     title: t('contact.seo.title'),

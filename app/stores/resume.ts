@@ -1182,8 +1182,9 @@ export const useResumeStore = defineStore('resume', {
             }
 
             if (orphanedCount > 0 && import.meta.client) {
-                const { toast } = await import('vue-sonner');
-                toast.info(`${orphanedCount} resume${orphanedCount > 1 ? 's' : ''} removed from cloud sync`);
+                useNuxtApp().$notify.info(
+                    `${orphanedCount} resume${orphanedCount > 1 ? 's' : ''} removed from cloud sync`,
+                );
             }
         },
         findLocalResumeByServerId(serverId: string): string | null {

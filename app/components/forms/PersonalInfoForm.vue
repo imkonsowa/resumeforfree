@@ -10,65 +10,77 @@
     >
         <PhotoUploader class="mb-6" />
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="space-y-2">
-                <Label for="firstName">{{ t('forms.personalInfo.firstName') }}</Label>
-                <Input
-                    id="firstName"
+            <UFormField
+                name="firstName"
+                :label="t('forms.personalInfo.firstName')"
+            >
+                <UInput
                     :model-value="resumeStore.resumeData.firstName"
                     :placeholder="t('forms.personalInfo.firstName')"
+                    class="w-full"
                     @update:model-value="(value) => resumeStore.updateField('firstName', value)"
                 />
-            </div>
-            <div class="space-y-2">
-                <Label for="lastName">{{ t('forms.personalInfo.lastName') }}</Label>
-                <Input
-                    id="lastName"
+            </UFormField>
+            <UFormField
+                name="lastName"
+                :label="t('forms.personalInfo.lastName')"
+            >
+                <UInput
                     :model-value="resumeStore.resumeData.lastName"
                     :placeholder="t('forms.personalInfo.lastName')"
+                    class="w-full"
                     @update:model-value="(value) => resumeStore.updateField('lastName', value)"
                 />
-            </div>
-            <div class="space-y-2">
-                <Label for="position">{{ t('forms.personalInfo.position') }}</Label>
-                <Input
-                    id="position"
+            </UFormField>
+            <UFormField
+                name="position"
+                :label="t('forms.personalInfo.position')"
+            >
+                <UInput
                     :model-value="resumeStore.resumeData.position"
                     :placeholder="t('forms.personalInfo.position')"
+                    class="w-full"
                     @update:model-value="(value) => resumeStore.updateField('position', value)"
                 />
-            </div>
-            <div class="space-y-2">
-                <Label for="location">{{ t('common.location') }}</Label>
-                <Input
-                    id="location"
+            </UFormField>
+            <UFormField
+                name="location"
+                :label="t('common.location')"
+            >
+                <UInput
                     :model-value="resumeStore.resumeData.location"
                     :placeholder="t('common.locationPlaceholder')"
+                    class="w-full"
                     @update:model-value="(value) => resumeStore.updateField('location', value)"
                 />
-            </div>
+            </UFormField>
         </div>
         <div class="mt-6 space-y-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="space-y-2">
-                    <Label for="email">{{ t('common.emailAddress') }}</Label>
-                    <Input
-                        id="email"
+                <UFormField
+                    name="email"
+                    :label="t('common.emailAddress')"
+                >
+                    <UInput
                         :model-value="resumeStore.resumeData.email"
                         :placeholder="t('common.emailAddress')"
                         type="email"
+                        class="w-full"
                         @update:model-value="(value) => resumeStore.updateField('email', value)"
                     />
-                </div>
-                <div class="space-y-2">
-                    <Label for="phone">{{ t('forms.personalInfo.phone') }}</Label>
-                    <Input
-                        id="phone"
+                </UFormField>
+                <UFormField
+                    name="phone"
+                    :label="t('forms.personalInfo.phone')"
+                >
+                    <UInput
                         :model-value="resumeStore.resumeData.phone"
                         :placeholder="t('forms.personalInfo.phone')"
                         type="tel"
+                        class="w-full"
                         @update:model-value="(value) => resumeStore.updateField('phone', value)"
                     />
-                </div>
+                </UFormField>
             </div>
         </div>
         <div class="mt-6 space-y-4">
@@ -77,15 +89,15 @@
                 section-key="profile"
                 @update="(value) => setSectionHeader('profile', value)"
             />
-            <div class="space-y-2">
-                <Textarea
-                    id="summary"
-                    :model-value="resumeStore.resumeData.summary"
-                    :placeholder="t('forms.personalInfo.summary')"
-                    rows="4"
-                    @update:model-value="(value) => resumeStore.updateField('summary', value)"
-                />
-            </div>
+            <UTextarea
+                :model-value="resumeStore.resumeData.summary"
+                :placeholder="t('forms.personalInfo.summary')"
+                :rows="4"
+                autoresize
+                :maxrows="10"
+                class="w-full"
+                @update:model-value="(value) => resumeStore.updateField('summary', value)"
+            />
         </div>
         <div class="mt-6 space-y-4">
             <div class="flex justify-between items-center">
@@ -94,14 +106,15 @@
                     section-key="socialLinks"
                     @update="(value) => setSectionHeader('socialLinks', value)"
                 />
-                <Button
+                <UButton
                     size="sm"
+                    color="neutral"
                     variant="outline"
+                    icon="i-lucide-plus"
                     @click="resumeStore.addSocialLink"
                 >
-                    <Plus class="w-4 h-4 mr-2" />
                     {{ t('forms.personalInfo.addSocialLink') }}
-                </Button>
+                </UButton>
             </div>
             <div class="space-y-3">
                 <div
@@ -109,33 +122,28 @@
                     :key="linkIndex"
                     class="space-y-2"
                 >
-                    <div class="flex items-center space-x-2 md:space-x-2">
+                    <div class="flex items-center gap-2 md:gap-2">
                         <div class="flex-none">
-                            <component
-                                :is="getPlatformIcon(link.platform)"
-                                class="w-5 h-5 text-gray-600"
+                            <UIcon
+                                :name="getPlatformIcon(link.platform)"
+                                class="w-5 h-5 text-toned"
                             />
                         </div>
-                        <div class="w-32 md:w-40">
-                            <select
-                                :value="link.platform"
-                                class="w-full px-3 py-2 border rounded-md border-gray-300 focus:border-green focus:ring-green-50 focus:ring-[3px] text-sm"
-                                @change="(e) => resumeStore.updateSocialLink(linkIndex, 'platform', (e.target as HTMLSelectElement).value)"
-                            >
-                                <option
-                                    v-for="platform in SOCIAL_PLATFORMS"
-                                    :key="platform.value"
-                                    :value="platform.value"
-                                >
-                                    {{ platform.label }}
-                                </option>
-                            </select>
-                        </div>
+                        <USelectMenu
+                            :model-value="link.platform"
+                            :items="SOCIAL_PLATFORMS"
+                            value-key="value"
+                            label-key="label"
+                            :search-input="false"
+                            class="w-32 md:w-40"
+                            @update:model-value="(value) => resumeStore.updateSocialLink(linkIndex, 'platform', value)"
+                        />
                         <div class="flex-1">
-                            <Input
+                            <UInput
                                 :model-value="link.url"
                                 :placeholder="t('forms.personalInfo.url')"
                                 type="url"
+                                class="w-full"
                                 @update:model-value="(value) => resumeStore.updateSocialLink(linkIndex, 'url', value)"
                             />
                         </div>
@@ -143,62 +151,63 @@
                             v-if="link.platform === 'other'"
                             class="w-32"
                         >
-                            <Input
+                            <UInput
                                 :model-value="link.customLabel || ''"
                                 :placeholder="t('forms.personalInfo.customLabel')"
+                                class="w-full"
                                 @update:model-value="(value) => resumeStore.updateSocialLink(linkIndex, 'customLabel', value)"
                             />
                         </div>
-                        <div class="hidden md:flex items-center space-x-1">
-                            <Button
+                        <div class="hidden md:flex items-center gap-1">
+                            <UButton
                                 :disabled="linkIndex === 0"
                                 size="sm"
+                                color="neutral"
                                 variant="outline"
+                                icon="i-lucide-chevron-up"
                                 @click="resumeStore.moveSocialLink(linkIndex, linkIndex - 1)"
-                            >
-                                <ChevronUp class="w-4 h-4" />
-                            </Button>
-                            <Button
+                            />
+                            <UButton
                                 :disabled="linkIndex === resumeStore.resumeData.socialLinks.length - 1"
                                 size="sm"
+                                color="neutral"
                                 variant="outline"
+                                icon="i-lucide-chevron-down"
                                 @click="resumeStore.moveSocialLink(linkIndex, linkIndex + 1)"
-                            >
-                                <ChevronDown class="w-4 h-4" />
-                            </Button>
-                            <Button
+                            />
+                            <UButton
                                 size="sm"
+                                color="neutral"
                                 variant="outline"
+                                icon="i-lucide-trash-2"
                                 @click="handleRemoveSocialLink(linkIndex)"
-                            >
-                                <Trash2 class="w-4 h-4" />
-                            </Button>
+                            />
                         </div>
                     </div>
-                    <div class="flex md:hidden items-center justify-center space-x-2">
-                        <Button
+                    <div class="flex md:hidden items-center justify-center gap-2">
+                        <UButton
                             :disabled="linkIndex === 0"
                             size="sm"
+                            color="neutral"
                             variant="outline"
+                            icon="i-lucide-chevron-up"
                             @click="resumeStore.moveSocialLink(linkIndex, linkIndex - 1)"
-                        >
-                            <ChevronUp class="w-4 h-4" />
-                        </Button>
-                        <Button
+                        />
+                        <UButton
                             :disabled="linkIndex === resumeStore.resumeData.socialLinks.length - 1"
                             size="sm"
+                            color="neutral"
                             variant="outline"
+                            icon="i-lucide-chevron-down"
                             @click="resumeStore.moveSocialLink(linkIndex, linkIndex + 1)"
-                        >
-                            <ChevronDown class="w-4 h-4" />
-                        </Button>
-                        <Button
+                        />
+                        <UButton
                             size="sm"
+                            color="neutral"
                             variant="outline"
+                            icon="i-lucide-trash-2"
                             @click="handleRemoveSocialLink(linkIndex)"
-                        >
-                            <Trash2 class="w-4 h-4" />
-                        </Button>
+                        />
                     </div>
                 </div>
             </div>
@@ -216,24 +225,6 @@
 </template>
 
 <script lang="ts" setup>
-import { Input } from '~/components/ui/input';
-import { Label } from '~/components/ui/label';
-import { Textarea } from '~/components/ui/textarea';
-import { Button } from '~/components/ui/button';
-import {
-    BookOpen,
-    ChevronDown,
-    ChevronUp,
-    Dribbble,
-    Edit3,
-    Github,
-    Globe,
-    Link,
-    Linkedin,
-    Plus,
-    Trash2,
-    Twitter,
-} from 'lucide-vue-next';
 import FormContainer from '~/components/elements/FormContainer.vue';
 import ConfirmationModal from '~/components/elements/ConfirmationModal.vue';
 import EditableHeader from '~/components/elements/EditableHeader.vue';
@@ -242,15 +233,15 @@ import PhotoUploader from '~/components/elements/PhotoUploader.vue';
 const { t } = useResumeT();
 
 const SOCIAL_PLATFORMS = computed(() => [
-    { value: 'linkedin', label: t('platforms.linkedin'), icon: Linkedin },
-    { value: 'github', label: t('platforms.github'), icon: Github },
-    { value: 'twitter', label: t('platforms.twitter'), icon: Twitter },
-    { value: 'portfolio', label: t('platforms.portfolio'), icon: Globe },
-    { value: 'dribbble', label: t('platforms.dribbble'), icon: Dribbble },
-    { value: 'medium', label: t('platforms.medium'), icon: BookOpen },
-    { value: 'devto', label: t('platforms.devto'), icon: Edit3 },
-    { value: 'personal', label: t('platforms.personal'), icon: Globe },
-    { value: 'other', label: t('platforms.other'), icon: Link },
+    { value: 'linkedin', label: t('platforms.linkedin'), icon: 'i-lucide-linkedin' },
+    { value: 'github', label: t('platforms.github'), icon: 'i-lucide-github' },
+    { value: 'twitter', label: t('platforms.twitter'), icon: 'i-lucide-twitter' },
+    { value: 'portfolio', label: t('platforms.portfolio'), icon: 'i-lucide-globe' },
+    { value: 'dribbble', label: t('platforms.dribbble'), icon: 'i-lucide-dribbble' },
+    { value: 'medium', label: t('platforms.medium'), icon: 'i-lucide-book-open' },
+    { value: 'devto', label: t('platforms.devto'), icon: 'i-lucide-pen-line' },
+    { value: 'personal', label: t('platforms.personal'), icon: 'i-lucide-globe' },
+    { value: 'other', label: t('platforms.other'), icon: 'i-lucide-link' },
 ]);
 
 const resumeStore = useResumeStore();
@@ -260,7 +251,7 @@ const profileHeader = getSectionHeader('profile');
 const socialLinksHeader = getSectionHeader('socialLinks');
 const getPlatformIcon = (platform: string) => {
     const found = SOCIAL_PLATFORMS.value.find(p => p.value === platform);
-    return found?.icon || Link;
+    return found?.icon || 'i-lucide-link';
 };
 const handleRemoveSocialLink = async (index: number) => {
     const confirmed = await confirmation.confirm({

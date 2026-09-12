@@ -1,44 +1,45 @@
 <template>
-    <Card class="relative mb-6 form-card">
-        <CardHeader>
-            <CardTitle class="flex justify-between items-center">
-                <span>{{ title }}</span>
+    <UCard class="relative mb-6 form-card">
+        <template #header>
+            <div class="flex justify-between items-center gap-2">
+                <span class="text-highlighted font-semibold">{{ title }}</span>
                 <div class="flex items-center gap-2">
-                    <div
+                    <UButtonGroup
                         v-if="canMoveUp || canMoveDown"
-                        class="flex items-center gap-1"
-                    >
-                        <Button
-                            :disabled="!canMoveUp"
-                            size="sm"
-                            variant="outline"
-                            @click="emit('move-up')"
-                        >
-                            <ChevronUp class="w-4 h-4" />
-                        </Button>
-                        <Button
-                            :disabled="!canMoveDown"
-                            size="sm"
-                            variant="outline"
-                            @click="emit('move-down')"
-                        >
-                            <ChevronDown class="w-4 h-4" />
-                        </Button>
-                    </div>
-                    <Button
                         size="sm"
-                        variant="outline"
-                        @click="handleRemove"
                     >
-                        <Trash2 class="w-4 h-4" />
-                    </Button>
+                        <UButton
+                            :disabled="!canMoveUp"
+                            icon="i-lucide-chevron-up"
+                            color="neutral"
+                            variant="outline"
+                            :aria-label="t('common.moveUp', 'Move up')"
+                            @click="emit('move-up')"
+                        />
+                        <UButton
+                            :disabled="!canMoveDown"
+                            icon="i-lucide-chevron-down"
+                            color="neutral"
+                            variant="outline"
+                            :aria-label="t('common.moveDown', 'Move down')"
+                            @click="emit('move-down')"
+                        />
+                    </UButtonGroup>
+                    <UButton
+                        size="sm"
+                        icon="i-lucide-trash-2"
+                        color="error"
+                        variant="ghost"
+                        :aria-label="t('common.delete', 'Delete')"
+                        @click="handleRemove"
+                    />
                 </div>
-            </CardTitle>
-        </CardHeader>
-        <CardContent>
-            <slot />
-        </CardContent>
-    </Card>
+            </div>
+        </template>
+
+        <slot />
+    </UCard>
+
     <ConfirmationModal
         :cancel-text="confirmation.cancelText.value"
         :confirm-text="confirmation.confirmText.value"
@@ -51,9 +52,6 @@
 </template>
 
 <script lang="ts" setup>
-import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/card';
-import { Button } from '~/components/ui/button';
-import { ChevronDown, ChevronUp, Trash2 } from 'lucide-vue-next';
 import ConfirmationModal from '~/components/elements/ConfirmationModal.vue';
 
 interface Props {
@@ -74,13 +72,16 @@ const emit = defineEmits<{
     'move-up': [];
     'move-down': [];
 }>();
+
+const { t } = useI18n();
 const confirmation = useConfirmation();
+
 const handleRemove = async () => {
     const confirmed = await confirmation.confirm({
         title: props.confirmTitle,
         message: props.confirmMessage,
-        confirmText: 'Delete',
-        cancelText: 'Cancel',
+        confirmText: t('common.delete', 'Delete'),
+        cancelText: t('common.cancel', 'Cancel'),
     });
     if (confirmed) {
         emit('remove');

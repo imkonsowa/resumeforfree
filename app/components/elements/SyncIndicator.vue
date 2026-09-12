@@ -9,35 +9,43 @@
     >
         <div
             v-if="show"
-            class="fixed top-4 right-4 z-50 flex items-center gap-2 px-3 py-2 rounded-lg shadow-lg border backdrop-blur-sm"
+            class="fixed top-4 end-4 z-50 flex items-center gap-2 px-3 py-2 rounded-lg shadow-lg border backdrop-blur-sm"
             :class="indicatorClasses"
         >
             <template v-if="isSyncing">
-                <Loader2 class="w-4 h-4 animate-spin" />
-                <span class="text-sm font-medium">Syncing...</span>
+                <UIcon
+                    name="i-lucide-loader-circle"
+                    class="w-4 h-4 animate-spin"
+                />
+                <span class="text-sm font-medium">{{ t('builder.syncing') }}</span>
             </template>
             <template v-else-if="showSuccess">
-                <CheckCircle class="w-4 h-4" />
-                <span class="text-sm font-medium">Saved</span>
+                <UIcon
+                    name="i-lucide-check-circle"
+                    class="w-4 h-4"
+                />
+                <span class="text-sm font-medium">{{ t('common.saved', 'Saved') }}</span>
             </template>
             <template v-else-if="showError">
-                <AlertCircle class="w-4 h-4" />
-                <span class="text-sm font-medium">Sync failed</span>
+                <UIcon
+                    name="i-lucide-alert-circle"
+                    class="w-4 h-4"
+                />
+                <span class="text-sm font-medium">{{ t('common.syncFailed', 'Sync failed') }}</span>
             </template>
         </div>
     </Transition>
 </template>
 
 <script lang="ts" setup>
-import { CheckCircle, AlertCircle, Loader2 } from 'lucide-vue-next';
-
+const props = defineProps<Props>();
+const { t } = useI18n();
 interface Props {
     isSyncing: boolean;
     lastSyncSuccess: boolean;
     lastSyncTime: Date | null;
     errorMessage?: string;
 }
-const props = defineProps<Props>();
 const showSuccess = ref(false);
 const showError = ref(false);
 const successTimeout = ref<number>();
@@ -76,15 +84,15 @@ const show = computed(() =>
 );
 const indicatorClasses = computed(() => {
     if (props.isSyncing) {
-        return 'bg-green-50 border-green-200 text-green-ink';
+        return 'bg-secondary/10 border-secondary/30 text-secondary';
     }
     else if (showSuccess.value) {
-        return 'bg-green-50 border-green-200 text-green-800';
+        return 'bg-secondary/10 border-secondary/30 text-secondary';
     }
     else if (showError.value) {
-        return 'bg-red-50 border-red-200 text-red-800';
+        return 'bg-error/10 border-error/30 text-error';
     }
-    return 'bg-gray-50 border-gray-200 text-gray-800';
+    return 'bg-muted border-default text-default';
 });
 onUnmounted(() => {
     if (successTimeout.value) {

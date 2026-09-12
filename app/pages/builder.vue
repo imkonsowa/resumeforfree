@@ -1,7 +1,5 @@
 <script lang="ts" setup>
 import { useResumeStore } from '~/stores/resume';
-import { Download, EyeIcon, FileText } from 'lucide-vue-next';
-import { Button } from '~/components/ui/button';
 import ZoomControls from '~/components/elements/ZoomControls.vue';
 import ResumeBuilderHeader from '~/components/elements/ResumeBuilderHeader.vue';
 import ResumeLanguageSelector from '~/components/elements/ResumeLanguageSelector.vue';
@@ -303,7 +301,7 @@ const orderedSections = computed(() => {
 <template>
     <ClientOnly>
         <div
-            class="bg-gray-50 min-h-screen"
+            class="bg-muted min-h-screen"
             :dir="resumeLanguageDir"
         >
             <SyncIndicator
@@ -318,24 +316,29 @@ const orderedSections = computed(() => {
             >
                 <div class="max-w-md w-full text-center space-y-6">
                     <div class="space-y-4">
-                        <div class="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
-                            <FileText class="w-8 h-8 text-green-700" />
+                        <div class="mx-auto w-16 h-16 bg-secondary/15 rounded-full flex items-center justify-center">
+                            <UIcon
+                                name="i-lucide-file-text"
+                                class="w-8 h-8 text-secondary"
+                            />
                         </div>
                         <div>
-                            <h2 class="text-2xl font-semibold text-gray-900 mb-2">
+                            <h2 class="text-2xl font-semibold text-highlighted mb-2">
                                 {{ t('builder.noResumeSelected') }}
                             </h2>
-                            <p class="text-gray-600">
+                            <p class="text-toned">
                                 {{ t('builder.noResumeDescription') }}
                             </p>
                         </div>
                     </div>
                     <div>
                         <NuxtLink to="/resumes">
-                            <Button class="w-full">
-                                <FileText class="w-4 h-4 mr-2" />
+                            <UButton
+                                class="w-full"
+                                icon="i-lucide-file-text"
+                            >
                                 {{ t('builder.goToResumesPage') }} →
-                            </Button>
+                            </UButton>
                         </NuxtLink>
                     </div>
                 </div>
@@ -361,7 +364,7 @@ const orderedSections = computed(() => {
                     </div>
                 </div>
                 <div
-                    class="hidden lg:block fixed top-16 right-0 w-1/2 h-[calc(100vh-64px)] border-l border-gray-200 bg-gray-50 overflow-y-auto z-10"
+                    class="hidden lg:block fixed top-16 end-0 w-1/2 h-[calc(100vh-64px)] border-s border-default bg-muted overflow-y-auto z-10"
                 >
                     <div class="p-4 lg:p-8 pt-[calc(2rem+4rem)]">
                         <ClientOnly>
@@ -371,88 +374,74 @@ const orderedSections = computed(() => {
                 </div>
                 <div
                     v-if="!showMobilePreview"
-                    class="lg:hidden fixed bottom-[calc(1.5rem_+_env(safe-area-inset-bottom))] right-[calc(1.5rem_+_env(safe-area-inset-right))] z-40 flex items-center gap-2"
+                    class="lg:hidden fixed bottom-[calc(1.5rem_+_env(safe-area-inset-bottom))] end-[calc(1.5rem_+_env(safe-area-inset-right))] z-40 flex items-center gap-2"
                 >
                     <ResumeLanguageSelector
                         v-if="resumeStore.activeResume"
                         :model-value="resumeStore.activeResume.language"
-                        button-class="bg-black text-white border-black hover:bg-gray-800 shadow-lg"
+                        button-variant="solid"
+                        button-class="shadow-lg"
                         @update="(code) => resumeStore.setResumeLanguage(resumeStore.activeResume!.id, code)"
                     />
-                    <Button
-                        class="h-8 w-8 p-0 bg-black text-white border-black hover:bg-gray-800 shadow-lg"
-                        variant="outline"
+                    <UButton
                         size="sm"
+                        icon="i-lucide-eye"
+                        class="shadow-lg"
+                        :aria-label="t('common.preview')"
                         @click="showMobilePreview = true"
-                    >
-                        <EyeIcon class="h-4 w-4" />
-                        <span class="sr-only">{{ t('common.preview') }}</span>
-                    </Button>
-                    <Button
-                        :disabled="isDownloading"
-                        class="h-8 w-8 p-0 bg-black text-white border-black hover:bg-gray-800 shadow-lg"
-                        variant="outline"
+                    />
+                    <UButton
                         size="sm"
+                        icon="i-lucide-download"
+                        class="shadow-lg"
+                        :loading="isDownloading"
+                        :aria-label="t('builder.download')"
                         @click="handleQuickDownload"
-                    >
-                        <Download class="h-4 w-4" />
-                        <span class="sr-only">{{ t('builder.download') }}</span>
-                    </Button>
+                    />
                     <InvisibleTurnstile ref="turnstileRef" />
                 </div>
-                <div
-                    v-if="showMobilePreview"
-                    class="lg:hidden fixed inset-0 z-50 overflow-y-auto bg-black/50"
+                <UModal
+                    v-model:open="showMobilePreview"
+                    :title="t('builder.resumePreview')"
+                    fullscreen
+                    class="lg:hidden"
                 >
-                    <div class="flex items-center justify-center min-h-screen p-4">
-                        <div class="bg-white rounded-lg max-w-full w-full max-h-[90vh] flex flex-col">
-                            <div class="p-4 border-b border-gray-200 flex justify-between items-center">
-                                <h3 class="text-lg font-medium">
-                                    {{ t('builder.resumePreview') }}
-                                </h3>
-                                <div class="flex items-center gap-2">
-                                    <ResumeLanguageSelector
-                                        v-if="resumeStore.activeResume"
-                                        :model-value="resumeStore.activeResume.language"
-                                        @update="(code) => resumeStore.setResumeLanguage(resumeStore.activeResume!.id, code)"
-                                    />
-                                    <ZoomControls
-                                        :max-zoom="maxZoom"
-                                        :min-zoom="minZoom"
-                                        :zoom-level="zoomLevel"
-                                        :zoom-step="zoomStep"
-                                        @zoom-in="zoomIn"
-                                        @zoom-out="zoomOut"
-                                    />
-                                    <button
-                                        class="text-gray-400 hover:text-gray-600 p-2"
-                                        @click="showMobilePreview = false"
-                                    >
-                                        <span class="sr-only">Close</span>
-                                        <svg
-                                            class="h-6 w-6"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path
-                                                d="M6 18L18 6M6 6l12 12"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="2"
-                                            />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="overflow-auto flex-1 p-4">
-                                <div class="mobile-preview-wrapper">
-                                    <ResumePreview />
-                                </div>
+                    <template #header>
+                        <div class="flex items-center justify-between w-full gap-2">
+                            <h3 class="text-lg font-medium text-highlighted">
+                                {{ t('builder.resumePreview') }}
+                            </h3>
+                            <div class="flex items-center gap-2">
+                                <ResumeLanguageSelector
+                                    v-if="resumeStore.activeResume"
+                                    :model-value="resumeStore.activeResume.language"
+                                    @update="(code) => resumeStore.setResumeLanguage(resumeStore.activeResume!.id, code)"
+                                />
+                                <ZoomControls
+                                    :max-zoom="maxZoom"
+                                    :min-zoom="minZoom"
+                                    :zoom-level="zoomLevel"
+                                    :zoom-step="zoomStep"
+                                    @zoom-in="zoomIn"
+                                    @zoom-out="zoomOut"
+                                />
+                                <UButton
+                                    color="neutral"
+                                    variant="ghost"
+                                    icon="i-lucide-x"
+                                    :aria-label="t('common.close')"
+                                    @click="showMobilePreview = false"
+                                />
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </template>
+
+                    <template #body>
+                        <div class="mobile-preview-wrapper">
+                            <ResumePreview />
+                        </div>
+                    </template>
+                </UModal>
             </div>
         </div>
         <FirstTimeBuilderModal

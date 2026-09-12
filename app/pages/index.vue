@@ -1,17 +1,5 @@
 <script lang="ts" setup>
-import {
-    ArrowRight,
-    Check,
-    ChevronDown,
-    Cloud,
-    Download,
-    Layers,
-    Lock,
-    Shield,
-    WifiOff,
-    X,
-    Zap,
-} from 'lucide-vue-next';
+import type { AccordionItem, PricingTableSection, PricingTableTier } from '@nuxt/ui';
 import {
     createFAQStructuredData,
     createOrganizationStructuredData,
@@ -53,31 +41,58 @@ const faqItems = faqKeys.map(key => ({
     answer: t(`homepage.faq.items.${key}.answer`),
 }));
 
-const openFaqIndex = ref<number>(0);
-const toggleFaq = (index: number) => {
-    openFaqIndex.value = openFaqIndex.value === index ? -1 : index;
-};
+const faqAccordionItems = computed<AccordionItem[]>(() =>
+    faqItems.map(item => ({ label: item.question, content: item.answer })),
+);
 
 const comparisonRows = [
-    { key: 'pdfDownload', us: 'yes', canva: 'yes', zety: 'no', resumeio: 'no' },
-    { key: 'noAccount', us: 'yes', canva: 'no', zety: 'no', resumeio: 'no' },
-    { key: 'noWatermark', us: 'yes', canva: 'yes', zety: 'no', resumeio: 'no' },
-    { key: 'noAds', us: 'yes', canva: 'no', zety: 'no', resumeio: 'yes' },
-    { key: 'dataOnDevice', us: 'yes', canva: 'no', zety: 'no', resumeio: 'no' },
-    { key: 'worksOffline', us: 'yes', canva: 'no', zety: 'no', resumeio: 'no' },
-    { key: 'unlimitedDownloads', us: 'yes', canva: 'yes', zety: 'no', resumeio: 'no' },
-    { key: 'noTrial', us: 'yes', canva: 'no', zety: 'no', resumeio: 'no' },
+    { key: 'pdfDownload', us: true, canva: true, zety: false, resumeio: false },
+    { key: 'noAccount', us: true, canva: false, zety: false, resumeio: false },
+    { key: 'noWatermark', us: true, canva: true, zety: false, resumeio: false },
+    { key: 'noAds', us: true, canva: false, zety: false, resumeio: true },
+    { key: 'dataOnDevice', us: true, canva: false, zety: false, resumeio: false },
+    { key: 'worksOffline', us: true, canva: false, zety: false, resumeio: false },
+    { key: 'unlimitedDownloads', us: true, canva: true, zety: false, resumeio: false },
+    { key: 'noTrial', us: true, canva: false, zety: false, resumeio: false },
 ] as const;
 
+const comparisonTiers = computed<PricingTableTier[]>(() => [
+    {
+        id: 'us',
+        title: t('homepage.comparison.headers.us'),
+        price: '$0',
+        highlight: true,
+        button: { label: t('homepage.hero.ctaBuild'), to: localePath('/builder') },
+    },
+    { id: 'canva', title: t('homepage.comparison.headers.canva') },
+    { id: 'zety', title: t('homepage.comparison.headers.zety') },
+    { id: 'resumeio', title: t('homepage.comparison.headers.resumeio') },
+]);
+
+const comparisonSections = computed<PricingTableSection[]>(() => [{
+    title: t('homepage.comparison.headers.feature'),
+    features: comparisonRows.map(row => ({
+        id: row.key,
+        title: t(`homepage.comparison.rows.${row.key}`),
+        tiers: { us: row.us, canva: row.canva, zety: row.zety, resumeio: row.resumeio },
+    })),
+}]);
+
+const steps = computed(() => [
+    { title: t('homepage.howItWorks.step1.title'), body: t('homepage.howItWorks.step1.description') },
+    { title: t('homepage.howItWorks.step2.title'), body: t('homepage.howItWorks.step2.description') },
+    { title: t('homepage.howItWorks.step3.title'), body: t('homepage.howItWorks.step3.description') },
+]);
+
 const featureItems = [
-    { icon: Check, title: t('homepage.features.free.title'), body: t('homepage.features.free.description') },
-    { icon: Lock, title: t('homepage.features.privacy.title'), body: t('homepage.features.privacy.description') },
-    { icon: Shield, title: t('homepage.features.noRegistration.title'), body: t('homepage.features.noRegistration.description') },
-    { icon: Download, title: t('homepage.features.unlimitedDownloads.title'), body: t('homepage.features.unlimitedDownloads.description') },
-    { icon: Layers, title: t('homepage.features.unlimitedResumes.title'), body: t('homepage.features.unlimitedResumes.description') },
-    { icon: WifiOff, title: t('homepage.features.offline.title'), body: t('homepage.features.offline.description') },
-    { icon: Zap, title: t('homepage.features.atsOptimized.title'), body: t('homepage.features.atsOptimized.description') },
-    { icon: Cloud, title: t('homepage.features.cloudSync.title'), body: t('homepage.features.cloudSync.description') },
+    { icon: 'i-lucide-check', title: t('homepage.features.free.title'), body: t('homepage.features.free.description') },
+    { icon: 'i-lucide-lock', title: t('homepage.features.privacy.title'), body: t('homepage.features.privacy.description') },
+    { icon: 'i-lucide-shield', title: t('homepage.features.noRegistration.title'), body: t('homepage.features.noRegistration.description') },
+    { icon: 'i-lucide-download', title: t('homepage.features.unlimitedDownloads.title'), body: t('homepage.features.unlimitedDownloads.description') },
+    { icon: 'i-lucide-layers', title: t('homepage.features.unlimitedResumes.title'), body: t('homepage.features.unlimitedResumes.description') },
+    { icon: 'i-lucide-wifi-off', title: t('homepage.features.offline.title'), body: t('homepage.features.offline.description') },
+    { icon: 'i-lucide-zap', title: t('homepage.features.atsOptimized.title'), body: t('homepage.features.atsOptimized.description') },
+    { icon: 'i-lucide-cloud', title: t('homepage.features.cloudSync.title'), body: t('homepage.features.cloudSync.description') },
 ] as const;
 
 useHead({
@@ -168,362 +183,170 @@ useHead({
 </script>
 
 <template>
-    <main>
-        <section class="border-b border-rule py-[72px] md:py-[88px]">
-            <div class="max-w-[1180px] mx-auto px-6">
-                <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-16 items-center">
-                    <div>
-                        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-50 border border-green-200 text-xs font-medium text-green-700 mb-5">
-                            <span class="w-1.5 h-1.5 rounded-full bg-green shrink-0" />
-                            {{ formatNumber(stats.users) }} {{ $t('homepage.hero.stat1Label') }} · {{ formatNumber(stats.downloads) }} {{ $t('homepage.hero.stat2Label') }}
-                        </div>
+    <div>
+        <UPageHero
+            orientation="horizontal"
+            :ui="{
+                title: 'text-4xl sm:text-5xl lg:text-6xl leading-[1.05]',
+                description: 'text-lg text-toned max-w-xl',
+                headline: 'mb-6',
+            }"
+            :title="$t('homepage.hero.title')"
+            :description="$t('homepage.hero.sub')"
+        >
+            <template #headline>
+                <UBadge
+                    color="secondary"
+                    variant="subtle"
+                    size="lg"
+                >
+                    {{ $t('homepage.hero.note') }}
+                </UBadge>
+            </template>
 
-                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight text-ink">
-                            {{ $t('homepage.hero.title') }}
-                        </h1>
-                        <p class="text-lg text-ink-3 mt-4 max-w-xl leading-relaxed">
-                            {{ $t('homepage.hero.sub') }}
-                        </p>
+            <template #footer>
+                <UButton
+                    :to="localePath('/builder')"
+                    :label="$t('homepage.hero.ctaBuild')"
+                    trailing-icon="i-lucide-arrow-right"
+                    size="xl"
+                    color="secondary"
+                />
 
-                        <div class="flex flex-wrap gap-2.5 mt-7">
-                            <NuxtLink :to="localePath('/builder')">
-                                <button class="inline-flex items-center gap-2 h-[46px] px-[22px] rounded-lg bg-green text-white font-medium text-[15px] hover:bg-green-600 transition-colors">
-                                    {{ $t('homepage.hero.ctaBuild') }}
-                                    <ArrowRight class="w-4 h-4" />
-                                </button>
-                            </NuxtLink>
-                        </div>
-
-                        <p class="text-sm text-ink-4 mt-3.5">
-                            {{ $t('homepage.hero.note') }}
-                        </p>
-
-                        <p class="text-xs text-ink-4 mt-2">
-                            {{ $t('homepage.termsAgreement') }}
-                            <NuxtLink
-                                :to="localePath('/terms')"
-                                class="text-green-700 underline underline-offset-2 hover:text-green-ink"
-                            >
-                                {{ $t('homepage.termsLink') }}
-                            </NuxtLink>
-                        </p>
-
-                        <div class="mt-10 pt-6 border-t border-rule grid grid-cols-3 gap-8">
-                            <div>
-                                <div class="text-[22px] font-bold tracking-tight text-ink">
-                                    {{ formatNumber(stats.users) }}
-                                </div>
-                                <div class="text-xs text-ink-4 mt-0.5">
-                                    {{ $t('homepage.hero.stat1Label') }}
-                                </div>
-                            </div>
-                            <div>
-                                <div class="text-[22px] font-bold tracking-tight text-ink">
-                                    {{ formatNumber(stats.downloads) }}
-                                </div>
-                                <div class="text-xs text-ink-4 mt-0.5">
-                                    {{ $t('homepage.hero.stat2Label') }}
-                                </div>
-                            </div>
-                            <div>
-                                <div class="text-[22px] font-bold tracking-tight text-ink">
-                                    $0
-                                </div>
-                                <div class="text-xs text-ink-4 mt-0.5">
-                                    {{ $t('homepage.hero.stat3Label') }}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hidden lg:flex justify-center">
-                        <object
-                            :data="sampleResumeSrc"
-                            type="image/svg+xml"
-                            :aria-label="$t('homepage.sampleResume.alt')"
-                            class="w-[420px] aspect-[596/842] rounded-[10px] border border-rule bg-white pointer-events-none"
-                            style="box-shadow: 0 1px 2px rgb(11 18 32 / 0.04), 0 20px 40px -12px rgb(11 18 32 / 0.12);"
-                        />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-[88px] bg-white">
-            <div class="max-w-[1180px] mx-auto px-6">
-                <div class="max-w-[620px] mb-12">
-                    <div class="text-xs uppercase tracking-widest font-semibold text-green-700 mb-3">
-                        {{ $t('homepage.features.eyebrow') }}
-                    </div>
-                    <h2 class="text-[clamp(28px,3.5vw,40px)] font-semibold tracking-tight leading-tight text-ink">
-                        {{ $t('homepage.features.sectionTitle') }}
-                    </h2>
-                    <p class="text-base text-ink-3 mt-3.5">
-                        {{ $t('homepage.features.sub') }}
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <div
-                        v-for="item in featureItems"
-                        :key="item.title"
-                        class="bg-white border border-rule rounded-[10px] p-[22px]"
+                <p class="text-xs text-muted mt-4">
+                    {{ $t('homepage.termsAgreement') }}
+                    <ULink
+                        :to="localePath('/terms')"
+                        class="text-secondary underline underline-offset-2"
                     >
-                        <div class="w-9 h-9 rounded-lg bg-green-50 flex items-center justify-center mb-4">
-                            <component
-                                :is="item.icon"
-                                class="w-[18px] h-[18px] text-green-700"
-                            />
-                        </div>
-                        <h3 class="text-[15px] font-semibold tracking-tight text-ink">
-                            {{ item.title }}
-                        </h3>
-                        <p class="text-sm text-ink-3 leading-relaxed mt-1.5">
-                            {{ item.body }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                        {{ $t('homepage.termsLink') }}
+                    </ULink>
+                </p>
 
-        <section class="py-[88px] bg-bg-2 border-t border-b border-rule">
-            <div class="max-w-[1180px] mx-auto px-6">
-                <div class="text-center max-w-[640px] mx-auto mb-12">
-                    <div class="text-xs uppercase tracking-widest font-semibold text-green-700 mb-3">
-                        {{ $t('homepage.howItWorks.eyebrow') }}
-                    </div>
-                    <h2 class="text-[clamp(28px,3.5vw,40px)] font-semibold tracking-tight leading-tight text-ink">
-                        {{ $t('homepage.howItWorks.title') }}
-                    </h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <dl class="mt-10 pt-8 border-t border-default grid grid-cols-3 gap-6 max-w-md">
                     <div
-                        v-for="step in [
-                            { n: '1', title: t('homepage.howItWorks.step1.title'), body: t('homepage.howItWorks.step1.description') },
-                            { n: '2', title: t('homepage.howItWorks.step2.title'), body: t('homepage.howItWorks.step2.description') },
-                            { n: '3', title: t('homepage.howItWorks.step3.title'), body: t('homepage.howItWorks.step3.description') },
+                        v-for="stat in [
+                            { value: formatNumber(stats.users), label: $t('homepage.hero.stat1Label') },
+                            { value: formatNumber(stats.downloads), label: $t('homepage.hero.stat2Label') },
+                            { value: '$0', label: $t('homepage.hero.stat3Label') },
                         ]"
-                        :key="step.n"
-                        class="bg-white border border-rule rounded-[10px] p-7"
+                        :key="stat.label"
                     >
-                        <div class="w-8 h-8 rounded-full bg-ink text-white flex items-center justify-center text-sm font-semibold mb-[18px]">
-                            {{ step.n }}
-                        </div>
-                        <h3 class="text-[17px] font-semibold tracking-tight text-ink">
+                        <dt class="text-2xl font-bold tracking-tight text-highlighted tabular-nums">
+                            {{ stat.value }}
+                        </dt>
+                        <dd class="text-xs text-muted mt-1">
+                            {{ stat.label }}
+                        </dd>
+                    </div>
+                </dl>
+            </template>
+
+            <object
+                :data="sampleResumeSrc"
+                type="image/svg+xml"
+                :aria-label="$t('homepage.sampleResume.alt')"
+                class="w-full max-w-[460px] mx-auto aspect-[596/842] rounded-lg ring ring-default bg-white shadow-2xl pointer-events-none"
+            />
+        </UPageHero>
+
+        <UPageSection
+            :title="$t('homepage.features.sectionTitle')"
+            :description="$t('homepage.features.sub')"
+            :features="featureItems.map(f => ({ title: f.title, description: f.body, icon: f.icon }))"
+            :ui="{ features: 'lg:grid-cols-4' }"
+        />
+
+        <UPageSection
+            :title="$t('homepage.howItWorks.title')"
+            class="bg-muted border-y border-default"
+        >
+            <ol class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+                <li
+                    v-for="(step, index) in steps"
+                    :key="step.title"
+                    class="relative md:ps-0"
+                >
+                    <div class="flex items-baseline gap-3">
+                        <span class="text-4xl font-bold tabular-nums text-secondary/40 leading-none">
+                            {{ index + 1 }}
+                        </span>
+                        <h3 class="text-lg font-semibold tracking-tight text-highlighted">
                             {{ step.title }}
                         </h3>
-                        <p class="text-sm text-ink-3 mt-2 leading-relaxed">
-                            {{ step.body }}
-                        </p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-[88px] bg-white">
-            <div class="max-w-[980px] mx-auto px-6">
-                <div class="text-center mb-10">
-                    <div class="text-xs uppercase tracking-widest font-semibold text-green-700 mb-3">
-                        {{ $t('homepage.comparison.eyebrow') }}
-                    </div>
-                    <h2 class="text-[clamp(28px,3.5vw,40px)] font-semibold tracking-tight leading-tight text-ink">
-                        {{ $t('homepage.comparison.title') }}
-                    </h2>
-                    <p class="text-[15px] text-ink-3 mt-2.5">
-                        {{ $t('homepage.comparison.caption') }}
+                    <p class="text-sm text-toned leading-relaxed mt-3">
+                        {{ step.body }}
                     </p>
-                </div>
+                </li>
+            </ol>
+        </UPageSection>
 
-                <div class="bg-white border border-rule rounded-[10px] overflow-hidden">
-                    <div class="overflow-x-auto">
-                        <table class="w-full border-collapse text-sm">
-                            <thead>
-                                <tr>
-                                    <th class="py-4 px-[18px] text-left text-[13px] font-semibold text-ink bg-bg-2 border-b border-rule">
-                                        {{ t('homepage.comparison.headers.feature') }}
-                                    </th>
-                                    <th class="py-4 px-[18px] text-center text-[13px] font-semibold text-green-700 bg-green-50 border-b border-rule">
-                                        {{ t('homepage.comparison.headers.us') }}
-                                    </th>
-                                    <th class="py-4 px-[18px] text-center text-[13px] font-semibold text-ink bg-bg-2 border-b border-rule">
-                                        {{ t('homepage.comparison.headers.canva') }}
-                                    </th>
-                                    <th class="py-4 px-[18px] text-center text-[13px] font-semibold text-ink bg-bg-2 border-b border-rule">
-                                        {{ t('homepage.comparison.headers.zety') }}
-                                    </th>
-                                    <th class="py-4 px-[18px] text-center text-[13px] font-semibold text-ink bg-bg-2 border-b border-rule">
-                                        {{ t('homepage.comparison.headers.resumeio') }}
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr
-                                    v-for="(row, ri) in comparisonRows"
-                                    :key="row.key"
-                                    :class="ri < comparisonRows.length - 1 ? 'border-b border-rule-soft' : ''"
-                                >
-                                    <td class="py-3.5 px-[18px] text-sm text-ink-2">
-                                        {{ $t(`homepage.comparison.rows.${row.key}`) }}
-                                    </td>
-                                    <td class="py-3.5 px-[18px] text-center bg-green-50/60">
-                                        <Check
-                                            v-if="row.us === 'yes'"
-                                            class="w-[17px] h-[17px] text-green-600 mx-auto"
-                                            :stroke-width="2.4"
-                                        />
-                                        <X
-                                            v-else
-                                            class="w-[17px] h-[17px] text-destructive mx-auto"
-                                            :stroke-width="2.2"
-                                        />
-                                    </td>
-                                    <td class="py-3.5 px-[18px] text-center">
-                                        <Check
-                                            v-if="row.canva === 'yes'"
-                                            class="w-[17px] h-[17px] text-green-600 mx-auto"
-                                            :stroke-width="2.4"
-                                        />
-                                        <X
-                                            v-else
-                                            class="w-[17px] h-[17px] text-destructive mx-auto"
-                                            :stroke-width="2.2"
-                                        />
-                                    </td>
-                                    <td class="py-3.5 px-[18px] text-center">
-                                        <Check
-                                            v-if="row.zety === 'yes'"
-                                            class="w-[17px] h-[17px] text-green-600 mx-auto"
-                                            :stroke-width="2.4"
-                                        />
-                                        <X
-                                            v-else
-                                            class="w-[17px] h-[17px] text-destructive mx-auto"
-                                            :stroke-width="2.2"
-                                        />
-                                    </td>
-                                    <td class="py-3.5 px-[18px] text-center">
-                                        <Check
-                                            v-if="row.resumeio === 'yes'"
-                                            class="w-[17px] h-[17px] text-green-600 mx-auto"
-                                            :stroke-width="2.4"
-                                        />
-                                        <X
-                                            v-else
-                                            class="w-[17px] h-[17px] text-destructive mx-auto"
-                                            :stroke-width="2.2"
-                                        />
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+        <UPageSection
+            :title="$t('homepage.comparison.title')"
+            :description="$t('homepage.comparison.caption')"
+        >
+            <UPricingTable
+                :tiers="comparisonTiers"
+                :sections="comparisonSections"
+                :caption="$t('homepage.comparison.title')"
+            />
+            <p class="text-xs text-muted mt-4 text-center">
+                {{ $t('homepage.comparison.footnote') }}
+            </p>
+        </UPageSection>
+
+        <UPageSection
+            :title="$t('homepage.whyBuilt.sectionTitle')"
+            class="bg-muted border-y border-default"
+        >
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-base leading-relaxed text-default max-w-4xl">
+                <p>{{ $t('homepage.whyBuilt.paragraph1') }}</p>
+                <div class="space-y-4">
+                    <p>{{ $t('homepage.whyBuilt.paragraph2') }}</p>
+                    <p>{{ $t('homepage.whyBuilt.paragraph3') }}</p>
                 </div>
-                <p class="text-xs text-ink-4 mt-3 text-center">
-                    {{ t('homepage.comparison.footnote') }}
+            </div>
+        </UPageSection>
+
+        <UPageSection
+            orientation="horizontal"
+            :title="$t('homepage.faq.title')"
+            :ui="{ container: 'lg:items-start' }"
+        >
+            <template #description>
+                <p class="text-base text-toned">
+                    {{ $t('homepage.faq.contactIntro') }}
+                    <ULink
+                        :to="localePath('/contact')"
+                        class="text-secondary underline underline-offset-2"
+                    >{{ $t('homepage.faq.contactLinkContact') }}</ULink>
+                    {{ $t('common.or', 'or') }}
+                    <ULink
+                        to="https://github.com/imkonsowa/resume-builder/issues"
+                        target="_blank"
+                        class="text-secondary underline underline-offset-2"
+                    >{{ $t('homepage.faq.contactLinkGithub') }}</ULink>.
                 </p>
-            </div>
-        </section>
+            </template>
 
-        <section class="py-[88px] bg-bg-2 border-t border-b border-rule">
-            <div
-                class="max-w-[980px] mx-auto px-6"
-                style="max-width: 780px;"
-            >
-                <div class="text-xs uppercase tracking-widest font-semibold text-green-700 mb-3">
-                    {{ $t('homepage.whyBuilt.eyebrow') }}
-                </div>
-                <h2 class="text-[clamp(28px,3.5vw,38px)] font-semibold tracking-tight leading-snug text-ink mb-6">
-                    {{ $t('homepage.whyBuilt.sectionTitle') }}
-                </h2>
+            <UAccordion
+                :items="faqAccordionItems"
+                :default-value="'0'"
+            />
+        </UPageSection>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-base leading-[1.65] text-ink-2">
-                    <p>{{ t('homepage.whyBuilt.paragraph1') }}</p>
-                    <p>
-                        {{ t('homepage.whyBuilt.paragraph2') }}
-                        <br><br>
-                        {{ t('homepage.whyBuilt.paragraph3') }}
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-[88px] bg-white">
-            <div class="max-w-[1180px] mx-auto px-6">
-                <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-[72px]">
-                    <div>
-                        <div class="text-xs uppercase tracking-widest font-semibold text-green-700 mb-3">
-                            {{ $t('homepage.faq.eyebrow') }}
-                        </div>
-                        <h2 class="text-[clamp(26px,3vw,36px)] font-semibold tracking-tight leading-snug text-ink">
-                            {{ $t('homepage.faq.title') }}
-                        </h2>
-                        <p class="text-[14.5px] text-ink-3 mt-3.5">
-                            {{ $t('homepage.faq.contactIntro') }}
-                            <NuxtLink
-                                :to="localePath('/contact')"
-                                class="text-green-700 underline underline-offset-2 hover:text-green-600"
-                            >
-                                {{ $t('homepage.faq.contactLinkContact') }}
-                            </NuxtLink>
-                            or
-                            <a
-                                href="https://github.com/imkonsowa/resume-builder/issues"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="text-green-700 underline underline-offset-2 hover:text-green-600"
-                            >{{ $t('homepage.faq.contactLinkGithub') }}</a>.
-                        </p>
-                    </div>
-
-                    <div class="bg-white border border-rule rounded-[10px] overflow-hidden">
-                        <div
-                            v-for="(item, index) in faqItems"
-                            :key="index"
-                            :class="index < faqItems.length - 1 ? 'border-b border-rule-soft' : ''"
-                        >
-                            <button
-                                class="w-full text-left px-[22px] py-[18px] flex items-center justify-between gap-4 cursor-pointer"
-                                :aria-expanded="openFaqIndex === index"
-                                @click="toggleFaq(index)"
-                            >
-                                <span class="text-[15px] font-medium text-ink pe-4">{{ item.question }}</span>
-                                <ChevronDown
-                                    class="w-[17px] h-[17px] text-ink-4 shrink-0 transition-transform duration-200"
-                                    :class="{ 'rotate-180': openFaqIndex === index }"
-                                />
-                            </button>
-                            <div
-                                class="overflow-hidden transition-all duration-[250ms] ease-in-out"
-                                :style="openFaqIndex === index ? 'max-height: 240px' : 'max-height: 0'"
-                            >
-                                <p class="px-[22px] pb-5 text-[14.5px] text-ink-3 leading-[1.6]">
-                                    {{ item.answer }}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-[88px] bg-bg-2 border-t border-rule">
-            <div class="max-w-[640px] mx-auto px-6 text-center">
-                <h2 class="text-[clamp(30px,4vw,44px)] font-semibold tracking-tight leading-tight text-ink">
-                    {{ t('homepage.finalCta.title') }}
-                </h2>
-                <p class="text-[17px] text-ink-3 mt-3.5">
-                    {{ $t('homepage.finalCta.sub') }}
-                </p>
-                <div class="flex flex-wrap gap-2.5 justify-center mt-6">
-                    <NuxtLink :to="localePath('/builder')">
-                        <button class="inline-flex items-center gap-2 h-[46px] px-[22px] rounded-lg bg-green text-white font-medium text-[15px] hover:bg-green-600 transition-colors">
-                            {{ $t('homepage.finalCta.ctaBuild') }}
-                            <ArrowRight class="w-4 h-4" />
-                        </button>
-                    </NuxtLink>
-                </div>
-            </div>
-        </section>
-    </main>
+        <UPageCTA
+            :title="$t('homepage.finalCta.title')"
+            :description="$t('homepage.finalCta.sub')"
+            variant="subtle"
+            :links="[{
+                label: $t('homepage.finalCta.ctaBuild'),
+                to: localePath('/builder'),
+                trailingIcon: 'i-lucide-arrow-right',
+                size: 'xl',
+                color: 'secondary',
+            }]"
+        />
+    </div>
 </template>
