@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { useResumeStore } from '~/stores/resume';
-import { EyeIcon, FileText } from 'lucide-vue-next';
+import { Download, EyeIcon, FileText } from 'lucide-vue-next';
 import { Button } from '~/components/ui/button';
 import ZoomControls from '~/components/elements/ZoomControls.vue';
 import ResumeBuilderHeader from '~/components/elements/ResumeBuilderHeader.vue';
@@ -16,6 +16,7 @@ import LanguagesForm from '~/components/forms/LanguagesForm.vue';
 import VolunteeringForm from '~/components/forms/VolunteeringForm.vue';
 import CertificatesForm from '~/components/forms/CertificatesForm.vue';
 import ResumePreview from '~/components/elements/ResumePreview.vue';
+import InvisibleTurnstile from '~/components/elements/InvisibleTurnstile.vue';
 import FirstTimeBuilderModal from '~/components/elements/FirstTimeBuilderModal.vue';
 import CloudSyncPromptModal from '~/components/elements/CloudSyncPromptModal.vue';
 import SyncIndicator from '~/components/elements/SyncIndicator.vue';
@@ -157,6 +158,34 @@ watch(() => resumeStore.activeResumeId, (newResumeId) => {
     }
 });
 const showMobilePreview = ref(false);
+
+const { downloadPDF } = useResumeGenerator();
+const turnstileRef = ref<InstanceType<typeof InvisibleTurnstile> | null>(null);
+const isDownloading = ref(false);
+const downloadError = ref('');
+
+const handleQuickDownload = async () => {
+    if (!resumeStore.activeResume || isDownloading.value) return;
+    isDownloading.value = true;
+    downloadError.value = '';
+    try {
+        await downloadPDF(resumeStore.activeResume);
+        const token = await turnstileRef.value?.getToken();
+        $fetch('/api/increase-downloads-count', {
+            method: 'POST',
+            body: { turnstileToken: token },
+        })
+            .catch(console.debug)
+            .finally(() => turnstileRef.value?.reset());
+    }
+    catch (err) {
+        downloadError.value = err instanceof Error ? err.message : 'Failed to download PDF';
+        console.error('PDF download error:', err);
+    }
+    finally {
+        isDownloading.value = false;
+    }
+};
 const showFirstTimeModal = ref(false);
 const showCloudSyncModal = ref(false);
 const zoomLevel = ref(1);
@@ -359,6 +388,17 @@ const orderedSections = computed(() => {
                         <EyeIcon class="h-4 w-4" />
                         <span class="sr-only">{{ t('common.preview') }}</span>
                     </Button>
+                    <Button
+                        :disabled="isDownloading"
+                        class="h-8 w-8 p-0 bg-black text-white border-black hover:bg-gray-800 shadow-lg"
+                        variant="outline"
+                        size="sm"
+                        @click="handleQuickDownload"
+                    >
+                        <Download class="h-4 w-4" />
+                        <span class="sr-only">{{ t('builder.download') }}</span>
+                    </Button>
+                    <InvisibleTurnstile ref="turnstileRef" />
                 </div>
                 <div
                     v-if="showMobilePreview"
