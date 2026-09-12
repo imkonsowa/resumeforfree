@@ -66,6 +66,10 @@ useHead({
         <UPageHero
             :title="t('qa.title')"
             :description="t('qa.subtitle')"
+            :ui="{
+                container: 'py-16 sm:py-20 lg:py-24 gap-8',
+                title: 'text-4xl sm:text-5xl',
+            }"
         >
             <template #headline>
                 <UBadge

@@ -26,19 +26,23 @@
                             :search-input="false"
                             size="sm"
                             class="w-56"
+                            :ui="{ base: 'h-9' }"
                         />
                     </div>
                     <UButton
                         size="sm"
                         color="neutral"
                         variant="outline"
+                        class="h-9"
                         icon="i-lucide-sliders-horizontal"
                         :label="t('builder.settings')"
                         @click="showSettingsModal = true"
                     />
-                    <UButtonGroup size="sm">
+                    <div class="inline-flex items-center rounded-md overflow-hidden">
                         <UButton
+                            size="sm"
                             color="secondary"
+                            class="rounded-none h-9"
                             icon="i-lucide-download"
                             @click="handleDownload"
                         >
@@ -49,25 +53,30 @@
                             :content="{ align: 'end' }"
                         >
                             <UButton
+                                size="sm"
                                 color="secondary"
+                                class="rounded-none h-9 px-2"
                                 icon="i-lucide-more-vertical"
-                                :aria-label="t('builder.download')"
+                                :aria-label="t('builder.downloadOptions', 'Download options')"
                             />
                         </UDropdownMenu>
-                    </UButtonGroup>
+                    </div>
                 </div>
                 <div class="md:hidden flex gap-2">
                     <UButton
                         size="sm"
                         color="neutral"
                         variant="outline"
+                        class="h-9"
                         icon="i-lucide-settings"
                         :aria-label="t('builder.settings')"
                         @click="showSettingsModal = true"
                     />
-                    <UButtonGroup size="sm">
+                    <div class="inline-flex items-center rounded-md overflow-hidden">
                         <UButton
+                            size="sm"
                             color="secondary"
+                            class="rounded-none h-9"
                             icon="i-lucide-download"
                             :label="t('builder.download')"
                             @click="handleDownload"
@@ -77,12 +86,14 @@
                             :content="{ align: 'end' }"
                         >
                             <UButton
+                                size="sm"
                                 color="secondary"
+                                class="rounded-none h-9 px-2"
                                 icon="i-lucide-more-vertical"
-                                :aria-label="t('builder.download')"
+                                :aria-label="t('builder.downloadOptions', 'Download options')"
                             />
                         </UDropdownMenu>
-                    </UButtonGroup>
+                    </div>
                 </div>
             </div>
             <UCard

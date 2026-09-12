@@ -398,7 +398,8 @@
         },
         "previewErrorDetailed": "Preview failed: {detail}",
         "zoomIn": "Zoom in",
-        "zoomOut": "Zoom out"
+        "zoomOut": "Zoom out",
+        "downloadOptions": "Download options"
     },
     "settings": {
         "title": "Resume Settings",

@@ -54,7 +54,8 @@
         "confirm": "Onayla",
         "expand": "Genişlet",
         "collapse": "Daralt",
-        "moreActions": "Diğer işlemler"
+        "moreActions": "Diğer işlemler",
+        "copy": "Kopyala"
     },
     "languageModal": {
         "title": "Dilinizi Seçin",
@@ -396,7 +397,9 @@
             "resetZoom": "Yakınlaştırmayı Sıfırla"
         },
         "zoomIn": "Yakınlaştır",
-        "zoomOut": "Uzaklaştır"
+        "zoomOut": "Uzaklaştır",
+        "downloadOptions": "İndirme seçenekleri",
+        "previewErrorDetailed": "Önizleme başarısız: {detail}"
     },
     "settings": {
         "title": "Özgeçmiş Ayarları",
@@ -418,6 +421,10 @@
         "language": {
             "label": "Dil",
             "description": "Özgeçmişiniz için dili seçin"
+        },
+        "sectionHeaderLine": {
+            "label": "Bölüm başlığı çizgisi",
+            "description": "Her bölüm başlığının altına ince bir ayırıcı çizgi ekle"
         }
     },
     "forms": {
@@ -440,7 +447,6 @@
                 "label": "Profil Fotoğrafı",
                 "upload": "Fotoğraf Yükle",
                 "remove": "Kaldır",
-                "note": "Fotoğraflar varsayılan olarak yuvarlatılmış köşelerle oluşturulur.",
                 "roundedToggle": "Yuvarlak fotoğraf",
                 "invalidType": "Dosya JPG veya PNG olmalıdır",
                 "tooLarge": "Dosya 512 KB'dan küçük olmalıdır",
@@ -882,5 +888,24 @@
         "conversational": "Konuşma düzeyi",
         "basic": "Temel",
         "beginner": "Başlangıç"
+    },
+    "apiTokens": {
+        "title": "API Anahtarları",
+        "description": "Harici bir aracının API üzerinden özgeçmişinizi güncelleyebilmesi için kısa ömürlü bir anahtar oluşturun. Anahtarlar varsayılan olarak 24 saat sonra sona erer.",
+        "name": "Anahtar adı",
+        "namePlaceholder": "örn. Özgeçmiş aracısı",
+        "expiresInHours": "Geçerlilik süresi (saat)",
+        "generate": "Anahtar oluştur",
+        "copyNow": "Bu anahtarı şimdi kopyalayın — tekrar gösterilemez.",
+        "copied": "Kopyalandı",
+        "empty": "Henüz API anahtarınız yok.",
+        "active": "Etkin",
+        "inactive": "Etkin değil",
+        "expires": "Sona eriyor",
+        "lastUsed": "Son kullanım",
+        "revoke": "İptal et",
+        "loadFailed": "Anahtarlarınız yüklenemedi.",
+        "createFailed": "Anahtar oluşturulamadı.",
+        "revokeFailed": "Anahtar iptal edilemedi."
     }
 }

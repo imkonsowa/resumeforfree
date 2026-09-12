@@ -398,7 +398,8 @@
         },
         "previewErrorDetailed": "فشلت المعاينة: {detail}",
         "zoomIn": "تكبير",
-        "zoomOut": "تصغير"
+        "zoomOut": "تصغير",
+        "downloadOptions": "خيارات التنزيل"
     },
     "settings": {
         "title": "إعدادات السيرة الذاتية",

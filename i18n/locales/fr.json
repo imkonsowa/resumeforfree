@@ -54,7 +54,8 @@
         "confirm": "Confirmer",
         "expand": "Développer",
         "collapse": "Réduire",
-        "moreActions": "Plus d'actions"
+        "moreActions": "Plus d'actions",
+        "copy": "Copier"
     },
     "languageModal": {
         "title": "Sélectionnez votre langue",
@@ -396,7 +397,9 @@
             "resetZoom": "Réinitialiser le Zoom"
         },
         "zoomIn": "Zoom avant",
-        "zoomOut": "Zoom arrière"
+        "zoomOut": "Zoom arrière",
+        "downloadOptions": "Options de téléchargement",
+        "previewErrorDetailed": "Échec de l'aperçu : {detail}"
     },
     "settings": {
         "title": "Paramètres du CV",
@@ -418,6 +421,10 @@
         "language": {
             "label": "Langue",
             "description": "Choisissez la langue de votre CV"
+        },
+        "sectionHeaderLine": {
+            "label": "Ligne de titre de section",
+            "description": "Ajouter un fin trait de séparation sous chaque titre de section"
         }
     },
     "forms": {
@@ -440,7 +447,6 @@
                 "label": "Photo de Profil",
                 "upload": "Télécharger une Photo",
                 "remove": "Retirer",
-                "note": "Par défaut, les photos sont affichées avec des coins arrondis.",
                 "roundedToggle": "Photo arrondie",
                 "invalidType": "Le fichier doit être un JPG ou PNG",
                 "tooLarge": "Le fichier doit faire moins de 512 Ko",
@@ -882,5 +888,24 @@
         "conversational": "Conversationnel",
         "basic": "Basique",
         "beginner": "Débutant"
+    },
+    "apiTokens": {
+        "title": "Jetons API",
+        "description": "Créez un jeton de courte durée pour qu'un agent externe puisse mettre à jour votre CV via l'API. Les jetons expirent après 24 heures par défaut.",
+        "name": "Nom du jeton",
+        "namePlaceholder": "ex. Agent CV",
+        "expiresInHours": "Expire dans (heures)",
+        "generate": "Générer un jeton",
+        "copyNow": "Copiez ce jeton maintenant — il ne pourra plus être affiché.",
+        "copied": "Copié",
+        "empty": "Vous n'avez pas encore de jeton API.",
+        "active": "Actif",
+        "inactive": "Inactif",
+        "expires": "Expire le",
+        "lastUsed": "Dernière utilisation",
+        "revoke": "Révoquer",
+        "loadFailed": "Impossible de charger vos jetons.",
+        "createFailed": "Impossible de créer le jeton.",
+        "revokeFailed": "Impossible de révoquer le jeton."
     }
 }
