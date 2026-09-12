@@ -38,10 +38,11 @@ export default defineNuxtConfig({
 
     css: ['~/assets/css/main.css'],
 
-    ui: {
-        theme: {
-            colors: ['primary', 'secondary', 'info', 'success', 'warning', 'error'],
-        },
+    site: {
+        url: 'https://resumeforfree.com',
+        name: 'Resume For Free',
+        description: 'Build professional resumes for free. No servers, no registration, no payments. Unlimited downloads and resumes with complete privacy.',
+        defaultLocale: 'en',
     },
 
     colorMode: {
@@ -51,15 +52,10 @@ export default defineNuxtConfig({
         storageKey: 'rff-color-mode',
     },
 
-    icon: {
-        provider: 'iconify',
-    },
-
-    site: {
-        url: 'https://resumeforfree.com',
-        name: 'Resume For Free',
-        description: 'Build professional resumes for free. No servers, no registration, no payments. Unlimited downloads and resumes with complete privacy.',
-        defaultLocale: 'en',
+    ui: {
+        theme: {
+            colors: ['primary', 'secondary', 'info', 'success', 'warning', 'error'],
+        },
     },
 
     runtimeConfig: {
@@ -125,6 +121,10 @@ export default defineNuxtConfig({
             cookieKey: 'i18n_redirected',
             redirectOn: 'root',
         },
+    },
+
+    icon: {
+        provider: 'iconify',
     },
 
     piniaPluginPersistedstate: {

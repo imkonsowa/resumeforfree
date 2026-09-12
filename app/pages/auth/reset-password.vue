@@ -5,12 +5,11 @@ import type { AuthFormField, FormSubmitEvent } from '@nuxt/ui';
 const { t } = useI18n();
 const localePath = useLocalePath();
 const route = useRoute();
-const router = useRouter();
 
 const token = computed(() => route.query.token as string | undefined);
 const loading = ref(false);
 const error = ref('');
-const success = ref(false);
+const notify = useNotify();
 
 const schema = z.object({
     password: z.string().min(6, t('auth.newPasswordMinLength')),
@@ -40,8 +39,9 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         });
 
         if (response.success) {
-            success.value = true;
-            setTimeout(() => router.push(localePath('/auth/login')), 2000);
+            notify.success(t('auth.resetPasswordSuccess'));
+            await navigateTo(localePath('/auth/login'));
+            return;
         }
     }
     catch (err: unknown) {
@@ -66,15 +66,7 @@ useHead({
     <div class="flex min-h-dvh items-center justify-center p-4">
         <UPageCard class="w-full max-w-md">
             <UAlert
-                v-if="success"
-                color="success"
-                variant="soft"
-                icon="i-lucide-circle-check"
-                :description="$t('auth.resetPasswordSuccess')"
-            />
-
-            <UAlert
-                v-else-if="!token"
+                v-if="!token"
                 color="error"
                 variant="soft"
                 icon="i-lucide-circle-alert"

@@ -45,7 +45,17 @@
         "organizationUrl": "رابط المنظمة",
         "emailAddress": "عنوان البريد الإلكتروني",
         "tryAgain": "حاول مرة أخرى",
-        "copy": "نسخ"
+        "copy": "نسخ",
+        "month": "الشهر",
+        "year": "السنة",
+        "moveUp": "تحريك لأعلى",
+        "moveDown": "تحريك لأسفل",
+        "confirmAction": "تأكيد الإجراء",
+        "confirmMessage": "هل أنت متأكد أنك تريد المتابعة؟",
+        "confirm": "تأكيد",
+        "expand": "توسيع",
+        "collapse": "طي",
+        "moreActions": "إجراءات أخرى"
     },
     "languageModal": {
         "title": "اختر لغتك",
@@ -386,7 +396,9 @@
             "zoomOut": "تصغير",
             "resetZoom": "استعادة الحجم الطبيعي"
         },
-        "previewErrorDetailed": "فشلت المعاينة: {detail}"
+        "previewErrorDetailed": "فشلت المعاينة: {detail}",
+        "zoomIn": "تكبير",
+        "zoomOut": "تصغير"
     },
     "settings": {
         "title": "إعدادات السيرة الذاتية",
@@ -542,7 +554,11 @@
     "validation": {
         "required": "هذا الحقل مطلوب",
         "email": "يرجى إدخال عنوان بريد إلكتروني صحيح",
-        "url": "يرجى إدخال رابط إلكتروني صحيح"
+        "url": "يرجى إدخال رابط إلكتروني صحيح",
+        "invalidEmail": "أدخل بريدًا إلكترونيًا صالحًا",
+        "passwordRequired": "كلمة المرور مطلوبة",
+        "nameRequired": "الاسم مطلوب",
+        "passwordMinLength": "يجب أن تتكون كلمة المرور من 6 أحرف على الأقل"
     },
     "notifications": {
         "resumeCreated": "تم إنشاء السيرة الذاتية بنجاح!",
@@ -790,7 +806,15 @@
                 "message": "هل أنت متأكد من رغبتك في إزالة السيرة الذاتية \"{name}\" من السحابة؟ ستبقى السيرة محفوظة على جهازك لكنها لن تُزامن بعد الآن.",
                 "confirmButton": "إزالة من السحابة"
             },
-            "cancel": "إلغاء"
+            "cancel": "إلغاء",
+            "import": {
+                "title": "استيراد السير الذاتية",
+                "foundCount": "تم العثور على {count} سيرة ذاتية في الملف",
+                "duplicateWarning": "يوجد {count} سيرة ذاتية بأسماء مطابقة بالفعل. تم إلغاء تحديدها افتراضيًا.",
+                "itemCount": "{count} عنصر",
+                "selectedCount": "تم تحديد {count} سيرة ذاتية للاستيراد",
+                "importSelected": "استيراد المحدد"
+            }
         },
         "toast": {
             "creatingInCloud": "جاري إنشاء السيرة الذاتية في السحابة...",

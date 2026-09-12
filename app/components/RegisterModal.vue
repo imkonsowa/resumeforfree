@@ -1,195 +1,119 @@
-<template>
-    <Dialog
-        v-model:open="isOpen"
-        @update:open="handleClose"
-    >
-        <DialogContent class="sm:max-w-md">
-            <DialogHeader>
-                <DialogTitle>Create Account</DialogTitle>
-                <DialogDescription>
-                    Create a free account to save and access your resumes
-                </DialogDescription>
-            </DialogHeader>
-            <form
-                class="space-y-4"
-                @submit.prevent="handleRegister"
-            >
-                <div class="space-y-2">
-                    <label for="reg-name">Name</label>
-                    <UInput
-                        id="reg-name"
-                        v-model="name"
-                        type="text"
-                        placeholder="Enter your name"
-                        required
-                        :disabled="loading"
-                    />
-                </div>
-                <div class="space-y-2">
-                    <label for="reg-email">Email</label>
-                    <UInput
-                        id="reg-email"
-                        v-model="email"
-                        type="email"
-                        placeholder="Enter your email"
-                        required
-                        :disabled="loading"
-                    />
-                </div>
-                <div class="space-y-2">
-                    <label for="reg-password">Password</label>
-                    <UInput
-                        id="reg-password"
-                        v-model="password"
-                        type="password"
-                        placeholder="Create a password (min 8 characters)"
-                        required
-                        minlength="8"
-                        :disabled="loading"
-                    />
-                </div>
-                <div class="space-y-2">
-                    <label for="reg-password-confirm">Confirm Password</label>
-                    <UInput
-                        id="reg-password-confirm"
-                        v-model="passwordConfirm"
-                        type="password"
-                        placeholder="Confirm your password"
-                        required
-                        :disabled="loading"
-                    />
-                </div>
-                <TurnstileWidget
-                    v-model="turnstileToken"
-                />
-                <UButton
-                    type="submit"
-                    class="w-full"
-                    :disabled="loading || !isFormValid || !turnstileToken"
-                >
-                    <UIcon name="i-lucide-loader-circle"
-                        v-if="loading"
-                        class="mr-2 h-4 w-4 animate-spin"
-                    />
-                    Create Account
-                </UButton>
-                <div
-                    v-if="error"
-                    class="text-sm text-red-600 text-center"
-                >
-                    {{ error }}
-                </div>
-                <div
-                    v-if="success"
-                    class="text-sm text-secondary text-center"
-                >
-                    {{ success }}
-                </div>
-            </form>
-            <div class="text-center text-sm text-muted">
-                Already have an account?
-                <button
-                    type="button"
-                    class="text-primary hover:underline"
-                    @click="switchToLogin"
-                >
-                    Sign in
-                </button>
-            </div>
-        </DialogContent>
-    </Dialog>
-</template>
-
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue';
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import TurnstileWidget from '@/components/elements/TurnstileWidget.vue';
+import * as z from 'zod';
+import type { AuthFormField, FormSubmitEvent } from '@nuxt/ui';
+import TurnstileWidget from '~/components/elements/TurnstileWidget.vue';
 
-interface Props {
-    open: boolean;
-}
-interface Emits {
-    (e: 'update:open', value: boolean): void;
-    (e: 'switch-to-login'): void;
-}
-const props = defineProps<Props>();
-const emit = defineEmits<Emits>();
+const emit = defineEmits<{ 'switch-to-login': [] }>();
+
+const isOpen = defineModel<boolean>('open', { required: true });
+
+const { t } = useI18n();
 const authStore = useAuthStore();
-const isOpen = ref(props.open);
-const name = ref('');
-const email = ref('');
-const password = ref('');
-const passwordConfirm = ref('');
+const notify = useNotify();
+
 const turnstileToken = ref<string | null>(null);
 const loading = ref(false);
 const error = ref('');
-const success = ref('');
-const isFormValid = computed(() => {
-    return name.value
-        && email.value
-        && password.value
-        && password.value.length >= 8
-        && passwordConfirm.value
-        && password.value === passwordConfirm.value;
+
+const schema = z.object({
+    name: z.string().min(1, t('validation.nameRequired', 'Name is required')),
+    email: z.email(t('validation.invalidEmail', 'Enter a valid email address')),
+    password: z.string().min(6, t('validation.passwordMinLength', 'Password must be at least 6 characters')),
+    passwordConfirm: z.string().min(1, t('auth.confirmPassword')),
+}).refine(data => data.password === data.passwordConfirm, {
+    message: t('auth.passwordsDoNotMatch'),
+    path: ['passwordConfirm'],
 });
-watch(() => props.open, (newValue) => {
-    isOpen.value = newValue;
-});
-watch(isOpen, (newValue) => {
-    emit('update:open', newValue);
-});
-watch([password, passwordConfirm], () => {
-    if (password.value && passwordConfirm.value && password.value !== passwordConfirm.value) {
-        error.value = 'Passwords do not match';
-    }
-    else {
+
+type Schema = z.output<typeof schema>;
+
+const fields = computed<AuthFormField[]>(() => [
+    { name: 'name', type: 'text', label: t('common.name'), placeholder: t('auth.enterName'), required: true },
+    { name: 'email', type: 'email', label: t('common.email'), placeholder: t('auth.enterEmail'), required: true },
+    { name: 'password', type: 'password', label: t('auth.password'), placeholder: t('auth.createPasswordPlaceholder'), required: true },
+    { name: 'passwordConfirm', type: 'password', label: t('auth.confirmPassword'), placeholder: t('auth.confirmPasswordPlaceholder'), required: true },
+]);
+
+watch(isOpen, (open) => {
+    if (!open) {
+        turnstileToken.value = null;
         error.value = '';
+        loading.value = false;
     }
 });
-const handleClose = () => {
-    if (!loading.value) {
-        isOpen.value = false;
-        resetForm();
-    }
-};
-const resetForm = () => {
-    name.value = '';
-    email.value = '';
-    password.value = '';
-    passwordConfirm.value = '';
-    turnstileToken.value = null;
-    error.value = '';
-    success.value = '';
-    loading.value = false;
-};
-const handleRegister = async () => {
-    if (loading.value || !isFormValid.value || !turnstileToken.value) return;
+
+async function onSubmit(event: FormSubmitEvent<Schema>) {
+    if (loading.value || !turnstileToken.value) return;
+
     loading.value = true;
     error.value = '';
-    success.value = '';
+
     const result = await authStore.register({
-        email: email.value,
-        password: password.value,
-        passwordConfirm: passwordConfirm.value,
-        name: name.value,
+        email: event.data.email,
+        password: event.data.password,
+        passwordConfirm: event.data.passwordConfirm,
+        name: event.data.name,
         turnstileToken: turnstileToken.value,
     });
+
     if (result.success) {
-        success.value = 'Account created successfully! You are now signed in.';
-        setTimeout(() => {
-            isOpen.value = false;
-            resetForm();
-        }, 2000);
+        notify.success(t('auth.accountCreatedSuccess'));
+        isOpen.value = false;
+        return;
     }
-    else {
-        error.value = result.error || 'Registration failed';
-        turnstileToken.value = null;
-    }
+
+    error.value = result.error || t('auth.registrationFailed');
+    turnstileToken.value = null;
     loading.value = false;
-};
-const switchToLogin = () => {
+}
+
+function switchToLogin() {
     isOpen.value = false;
-    resetForm();
     emit('switch-to-login');
-};
+}
 </script>
+
+<template>
+    <UModal
+        v-model:open="isOpen"
+        :dismissible="!loading"
+        :title="t('auth.createAccount')"
+        :description="t('auth.createAccountDescription')"
+    >
+        <template #body>
+            <UAuthForm
+                :schema="schema"
+                :fields="fields"
+                :submit="{
+                    label: t('auth.createAccount'),
+                    loading,
+                    disabled: !turnstileToken,
+                    block: true,
+                }"
+                @submit="onSubmit"
+            >
+                <template #validation>
+                    <TurnstileWidget v-model="turnstileToken" />
+                    <UAlert
+                        v-if="error"
+                        color="error"
+                        variant="soft"
+                        icon="i-lucide-circle-x"
+                        :description="error"
+                    />
+                </template>
+
+                <template #footer>
+                    {{ t('auth.alreadyHaveAccount') }}
+                    <UButton
+                        variant="link"
+                        color="secondary"
+                        class="p-0"
+                        :label="t('auth.signIn')"
+                        @click="switchToLogin"
+                    />
+                </template>
+            </UAuthForm>
+        </template>
+    </UModal>
+</template>

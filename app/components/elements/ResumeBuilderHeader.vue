@@ -9,38 +9,54 @@
             <div class="flex items-center space-x-2">
                 <UButton
                     v-if="authStore.isLoggedIn && activeResume"
-                    size="sm" color="neutral" variant="outline"
+                    size="sm"
+                    color="neutral"
+                    variant="outline"
                     class="flex items-center gap-2 min-w-fit"
                     :disabled="!canSyncToCloud || isAnySyncing"
                     @click="handleCloudSync"
                 >
-                    <UIcon name="i-lucide-loader-circle"
+                    <UIcon
                         v-if="isAnySyncing"
+                        name="i-lucide-loader-circle"
                         class="h-4 w-4 animate-spin"
                     />
-                    <UIcon name="i-lucide-cloud"
+                    <UIcon
                         v-else
+                        name="i-lucide-cloud"
                         class="h-4 w-4"
                     />
                     <span class="hidden sm:inline whitespace-nowrap">{{ isAnySyncing ? syncingText : syncButtonText }}</span>
                     <span class="sm:hidden whitespace-nowrap">{{ isAnySyncing ? (activeResume.serverId ? t('builder.updating') : t('builder.syncing')) : (activeResume.serverId ? t('builder.update') : t('common.sync')) }}</span>
                 </UButton>
                 <UButton
-                    size="sm" color="neutral" variant="outline"
-                    @click="settingsStore.expandAllSections()" icon="i-lucide-chevron-down">
-<span class="ml-1 sm:hidden">{{ t('builder.expand') }}</span>
-</UButton>
+                    size="sm"
+                    color="neutral"
+                    variant="outline"
+                    icon="i-lucide-chevron-down"
+                    @click="settingsStore.expandAllSections()"
+                >
+                    <span class="ml-1 sm:hidden">{{ t('builder.expand') }}</span>
+                </UButton>
                 <UButton
-                    size="sm" color="neutral" variant="outline"
-                    @click="settingsStore.collapseAllSections()" icon="i-lucide-chevron-up">
-<span class="ml-1 sm:hidden">{{ t('builder.collapse') }}</span>
-</UButton>
+                    size="sm"
+                    color="neutral"
+                    variant="outline"
+                    icon="i-lucide-chevron-up"
+                    @click="settingsStore.collapseAllSections()"
+                >
+                    <span class="ml-1 sm:hidden">{{ t('builder.collapse') }}</span>
+                </UButton>
                 <UButton
                     class="flex items-center gap-2"
-                    size="sm" color="neutral" variant="outline"
-                    @click="showStepper = true" icon="i-lucide-list">
-{{ t('builder.sections') }}
-</UButton>
+                    size="sm"
+                    color="neutral"
+                    variant="outline"
+                    icon="i-lucide-list"
+                    @click="showStepper = true"
+                >
+                    {{ t('builder.sections') }}
+                </UButton>
             </div>
         </div>
     </div>

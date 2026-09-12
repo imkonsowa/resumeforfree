@@ -1,134 +1,110 @@
-<template>
-    <Dialog
-        v-model:open="isOpen"
-        @update:open="handleClose"
-    >
-        <DialogContent class="sm:max-w-md">
-            <DialogHeader>
-                <DialogTitle>Sign In</DialogTitle>
-                <DialogDescription>
-                    Sign in to your account to access your resumes
-                </DialogDescription>
-            </DialogHeader>
-            <form
-                class="space-y-4"
-                @submit.prevent="handleLogin"
-            >
-                <div class="space-y-2">
-                    <label for="email">Email</label>
-                    <UInput
-                        id="email"
-                        v-model="email"
-                        type="email"
-                        placeholder="Enter your email"
-                        required
-                        :disabled="loading"
-                    />
-                </div>
-                <div class="space-y-2">
-                    <label for="password">Password</label>
-                    <UInput
-                        id="password"
-                        v-model="password"
-                        type="password"
-                        placeholder="Enter your password"
-                        required
-                        :disabled="loading"
-                    />
-                </div>
-                <TurnstileWidget
-                    v-model="turnstileToken"
-                />
-                <UButton
-                    type="submit"
-                    class="w-full"
-                    :disabled="loading || !turnstileToken"
-                >
-                    <UIcon name="i-lucide-loader-circle"
-                        v-if="loading"
-                        class="mr-2 h-4 w-4 animate-spin"
-                    />
-                    Sign In
-                </UButton>
-                <div
-                    v-if="error"
-                    class="text-sm text-red-600 text-center"
-                >
-                    {{ error }}
-                </div>
-            </form>
-            <div class="text-center text-sm text-muted">
-                Don't have an account?
-                <button
-                    type="button"
-                    class="text-primary hover:underline"
-                    @click="switchToRegister"
-                >
-                    Sign up
-                </button>
-            </div>
-        </DialogContent>
-    </Dialog>
-</template>
-
 <script setup lang="ts">
-import { ref, watch } from 'vue';
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import TurnstileWidget from '@/components/elements/TurnstileWidget.vue';
+import * as z from 'zod';
+import type { AuthFormField, FormSubmitEvent } from '@nuxt/ui';
+import TurnstileWidget from '~/components/elements/TurnstileWidget.vue';
 
-interface Props {
-    open: boolean;
-}
-interface Emits {
-    (e: 'update:open', value: boolean): void;
-    (e: 'switch-to-register'): void;
-}
-const props = defineProps<Props>();
-const emit = defineEmits<Emits>();
+const emit = defineEmits<{ 'switch-to-register': [] }>();
+
+const isOpen = defineModel<boolean>('open', { required: true });
+
+const { t } = useI18n();
 const authStore = useAuthStore();
-const isOpen = ref(props.open);
-const email = ref('');
-const password = ref('');
+
 const turnstileToken = ref<string | null>(null);
 const loading = ref(false);
 const error = ref('');
-watch(() => props.open, (newValue) => {
-    isOpen.value = newValue;
+
+const schema = z.object({
+    email: z.email(t('validation.invalidEmail', 'Enter a valid email address')),
+    password: z.string().min(1, t('validation.passwordRequired', 'Password is required')),
 });
-watch(isOpen, (newValue) => {
-    emit('update:open', newValue);
-});
-const handleClose = () => {
-    if (!loading.value) {
-        isOpen.value = false;
-        resetForm();
-    }
-};
-const resetForm = () => {
-    email.value = '';
-    password.value = '';
+
+type Schema = z.output<typeof schema>;
+
+const fields = computed<AuthFormField[]>(() => [
+    { name: 'email', type: 'email', label: t('common.email'), placeholder: t('auth.enterEmail'), required: true },
+    { name: 'password', type: 'password', label: t('auth.password'), placeholder: t('auth.enterPassword'), required: true },
+]);
+
+function reset() {
     turnstileToken.value = null;
     error.value = '';
     loading.value = false;
-};
-const handleLogin = async () => {
+}
+
+watch(isOpen, (open) => {
+    if (!open) reset();
+});
+
+async function onSubmit(event: FormSubmitEvent<Schema>) {
     if (loading.value || !turnstileToken.value) return;
+
     loading.value = true;
     error.value = '';
-    const result = await authStore.login({ email: email.value, password: password.value, turnstileToken: turnstileToken.value });
+
+    const result = await authStore.login({
+        email: event.data.email,
+        password: event.data.password,
+        turnstileToken: turnstileToken.value,
+    });
+
     if (result.success) {
         isOpen.value = false;
-        resetForm();
+        return;
     }
-    else {
-        error.value = result.error || 'Login failed';
-        turnstileToken.value = null;
-    }
+
+    error.value = result.error || t('auth.loginFailed');
+    turnstileToken.value = null;
     loading.value = false;
-};
-const switchToRegister = () => {
+}
+
+function switchToRegister() {
     isOpen.value = false;
-    resetForm();
     emit('switch-to-register');
-};
+}
 </script>
+
+<template>
+    <UModal
+        v-model:open="isOpen"
+        :dismissible="!loading"
+        :title="t('auth.signIn')"
+        :description="t('auth.signInDescription')"
+    >
+        <template #body>
+            <UAuthForm
+                :schema="schema"
+                :fields="fields"
+                :submit="{
+                    label: t('auth.signIn'),
+                    loading,
+                    disabled: !turnstileToken,
+                    block: true,
+                }"
+                @submit="onSubmit"
+            >
+                <template #validation>
+                    <TurnstileWidget v-model="turnstileToken" />
+                    <UAlert
+                        v-if="error"
+                        color="error"
+                        variant="soft"
+                        icon="i-lucide-circle-x"
+                        :description="error"
+                    />
+                </template>
+
+                <template #footer>
+                    {{ t('auth.dontHaveAccount') }}
+                    <UButton
+                        variant="link"
+                        color="secondary"
+                        class="p-0"
+                        :label="t('auth.signUp')"
+                        @click="switchToRegister"
+                    />
+                </template>
+            </UAuthForm>
+        </template>
+    </UModal>
+</template>

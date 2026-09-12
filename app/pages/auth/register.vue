@@ -6,18 +6,13 @@ import TurnstileWidget from '~/components/elements/TurnstileWidget.vue';
 const { t } = useI18n();
 const localePath = useLocalePath();
 const authStore = useAuthStore();
-const router = useRouter();
 
 const turnstileToken = ref<string | null>(null);
 const turnstileWidgetRef = ref();
 const loading = ref(false);
 const error = ref('');
-const success = ref('');
+const notify = useNotify();
 
-/*
- * The password-match check lives in the schema rather than a watcher, so
- * UAuthForm surfaces it inline on the confirm field like any other error.
- */
 const schema = z.object({
     name: z.string().min(1, t('validation.nameRequired', 'Name is required')),
     email: z.email(t('validation.invalidEmail', 'Enter a valid email address')),
@@ -51,7 +46,6 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
     loading.value = true;
     error.value = '';
-    success.value = '';
 
     const result = await authStore.register({
         email: event.data.email,
@@ -62,13 +56,12 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     });
 
     if (result.success) {
-        success.value = t('auth.accountCreatedSuccess');
-        setTimeout(() => router.push(localePath('/resumes')), 1500);
-    }
-    else {
-        error.value = result.error || t('auth.registrationFailed');
+        notify.success(t('auth.accountCreatedSuccess'));
+        await navigateTo(localePath('/resumes'));
+        return;
     }
 
+    error.value = result.error || t('auth.registrationFailed');
     loading.value = false;
     turnstileWidgetRef.value?.reset();
 }
@@ -112,13 +105,6 @@ useHead({
                         variant="soft"
                         icon="i-lucide-circle-x"
                         :description="error"
-                    />
-                    <UAlert
-                        v-if="success"
-                        color="success"
-                        variant="soft"
-                        icon="i-lucide-circle-check"
-                        :description="success"
                     />
                 </template>
 

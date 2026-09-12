@@ -1,13 +1,6 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
-/*
- * Brand palettes.
- *
- * `ink` is the near-black editorial scale the product has always used for
- * primary actions; `brand` is the green accent. Both need all 11 shades so
- * Nuxt UI can derive hover/active/ring states from them.
- */
 @theme static {
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-mono: 'JetBrains Mono', ui-monospace, monospace;
@@ -39,10 +32,9 @@
 }
 
 :root {
-    --ui-radius: 0.625rem;
+    --ui-radius: 0.25rem;
     --ui-container: 80rem;
 
-    /* Primary reads as near-black in light mode, near-white in dark. */
     --ui-primary: var(--ui-color-primary-900);
 }
 
@@ -64,27 +56,15 @@
         @apply font-semibold tracking-tight text-highlighted;
     }
 
-    /*
-     * Carries the typography shadcn's <Label> used to apply, so standalone
-     * labels outside a UFormField still read correctly.
-     */
     label {
         @apply text-sm font-medium text-default;
     }
 
-    /*
-     * Arabic needs its own face. Scoped to :lang so an Arabic string inside an
-     * otherwise English page still renders correctly, and vice versa.
-     */
     :lang(ar) {
         font-family: var(--font-arabic);
     }
 }
 
-/*
- * Isolate bidirectional runs so an email or phone number embedded in Arabic
- * copy does not reorder. The Typst templates do the same thing server-side.
- */
 .bidi-isolate {
     unicode-bidi: isolate;
 }

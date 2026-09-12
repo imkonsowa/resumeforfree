@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import { Card, CardContent } from '~/components/ui/card';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '~/components/ui/accordion';
+import type { AccordionItem } from '@nuxt/ui';
 import { createFAQStructuredData } from '~/composables/useSEO';
 
 const { t } = useI18n();
+const localePath = useLocalePath();
 
 const qKeys = [
     'isFree', 'signUp', 'pdfExport', 'privacy', 'atsFriendly', 'differentFromOthers',
@@ -16,181 +16,99 @@ const faqs = qKeys.map(key => ({
     answer: t(`qa.questions.${key}.answer`),
 }));
 
-const faqCategories = [
+const toItems = (entries: typeof faqs): AccordionItem[] =>
+    entries.map(faq => ({ label: faq.question, content: faq.answer }));
+
+const faqCategories = computed(() => [
     {
         title: t('qa.categories.gettingStarted'),
         icon: 'i-lucide-help-circle',
-        faqs: faqs.slice(0, 6),
+        items: toItems(faqs.slice(0, 6)),
     },
     {
         title: t('qa.categories.features'),
-        icon: 'i-lucide-check-circle',
-        faqs: faqs.slice(6, 12),
+        icon: 'i-lucide-circle-check',
+        items: toItems(faqs.slice(6, 12)),
     },
     {
         title: t('qa.categories.technical'),
-        icon: 'i-lucide-help-circle',
-        faqs: faqs.slice(12),
+        icon: 'i-lucide-settings',
+        items: toItems(faqs.slice(12)),
     },
-];
+]);
+
+const pageTitle = `Free Resume Builder FAQ - ${t('qa.title')} ${t('qa.titleHighlight')} | Resume For Free`;
 
 useHead({
-    title: `Free Resume Builder FAQ - ${t('qa.title')} ${t('qa.titleHighlight')} | Resume For Free`,
+    title: pageTitle,
     meta: [
-        {
-            name: 'description',
-            content: t('qa.subtitle'),
-        },
-        {
-            name: 'keywords',
-            content: 'resume builder FAQ, free resume questions, PDF export help, Typst resume, privacy resume builder, resume builder help',
-        },
-        {
-            name: 'robots',
-            content: 'index, follow',
-        },
-        {
-            property: 'og:type',
-            content: 'website',
-        },
-        {
-            property: 'og:site_name',
-            content: 'Resume For Free',
-        },
-        {
-            property: 'og:title',
-            content: `Free Resume Builder FAQ - ${t('qa.title')} ${t('qa.titleHighlight')} | Resume For Free`,
-        },
-        {
-            property: 'og:description',
-            content: t('qa.subtitle'),
-        },
-        {
-            property: 'og:url',
-            content: 'https://resumeforfree.com/qa',
-        },
-        {
-            property: 'og:image',
-            content: 'https://resumeforfree.com/og-image.png',
-        },
-        {
-            name: 'twitter:card',
-            content: 'summary_large_image',
-        },
-        {
-            name: 'twitter:title',
-            content: `Free Resume Builder FAQ - ${t('qa.title')} ${t('qa.titleHighlight')} | Resume For Free`,
-        },
-        {
-            name: 'twitter:description',
-            content: t('qa.subtitle'),
-        },
-        {
-            name: 'twitter:image',
-            content: 'https://resumeforfree.com/og-image.png',
-        },
+        { name: 'description', content: t('qa.subtitle') },
+        { name: 'keywords', content: 'resume builder FAQ, free resume questions, PDF export help, Typst resume, privacy resume builder, resume builder help' },
+        { name: 'robots', content: 'index, follow' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'Resume For Free' },
+        { property: 'og:title', content: pageTitle },
+        { property: 'og:description', content: t('qa.subtitle') },
+        { property: 'og:url', content: 'https://resumeforfree.com/qa' },
+        { property: 'og:image', content: 'https://resumeforfree.com/og-image.png' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: pageTitle },
+        { name: 'twitter:description', content: t('qa.subtitle') },
+        { name: 'twitter:image', content: 'https://resumeforfree.com/og-image.png' },
     ],
-    link: [
-        {
-            rel: 'canonical',
-            href: 'https://resumeforfree.com/qa',
-        },
-    ],
-    script: [
-        {
-            type: 'application/ld+json',
-            children: JSON.stringify(createFAQStructuredData(faqs)),
-        },
-    ],
+    link: [{ rel: 'canonical', href: 'https://resumeforfree.com/qa' }],
+    script: [{ type: 'application/ld+json', children: JSON.stringify(createFAQStructuredData(faqs)) }],
 });
 </script>
 
 <template>
-    <div class="min-h-screen bg-default">
-        <div class="border-b bg-muted/40">
-            <div class="container mx-auto px-4 py-16 text-center">
+    <div>
+        <UPageHero
+            :title="t('qa.title')"
+            :description="t('qa.subtitle')"
+        >
+            <template #headline>
                 <UBadge
-                    class="mb-4"
-                    variant="secondary"
-                >
-                    {{ t('qa.badge') }}
-                </UBadge>
-                <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-                    {{ t('qa.title') }}
-                    <span class="text-primary"> {{ t('qa.titleHighlight') }}</span>
-                </h1>
-                <p class="text-xl text-muted max-w-2xl mx-auto leading-relaxed">
-                    {{ t('qa.subtitle') }}
-                </p>
-            </div>
-        </div>
+                    color="secondary"
+                    variant="subtle"
+                    :label="t('qa.badge')"
+                />
+            </template>
+        </UPageHero>
 
-        <div class="container mx-auto px-4 py-16">
+        <UPageSection>
             <div class="space-y-12">
-                <div
+                <section
                     v-for="category in faqCategories"
                     :key="category.title"
                 >
                     <div class="flex items-center gap-3 mb-6">
-                        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                            <component
-                                :is="category.icon"
-                                class="h-5 w-5 text-primary"
-                            />
-                        </div>
+                        <UIcon
+                            :name="category.icon"
+                            class="size-5 text-primary"
+                        />
                         <h2 class="text-2xl font-semibold tracking-tight">
                             {{ category.title }}
                         </h2>
                     </div>
 
-                    <Card>
-                        <CardContent class="p-6">
-                            <Accordion
-                                class="w-full"
-                                collapsible
-                                type="single"
-                            >
-                                <AccordionItem
-                                    v-for="(faq, index) in category.faqs"
-                                    :key="index"
-                                    :value="`item-${category.title}-${index}`"
-                                    class="border-b last:border-b-0"
-                                >
-                                    <AccordionTrigger class="text-left hover:no-underline">
-                                        <span class="font-medium">{{ faq.question }}</span>
-                                    </AccordionTrigger>
-                                    <AccordionContent class="text-muted leading-relaxed">
-                                        {{ faq.answer }}
-                                    </AccordionContent>
-                                </AccordionItem>
-                            </Accordion>
-                        </CardContent>
-                    </Card>
-                </div>
+                    <UPageCard variant="subtle">
+                        <UAccordion :items="category.items" />
+                    </UPageCard>
+                </section>
             </div>
-        </div>
+        </UPageSection>
 
-        <div class="border-t bg-muted/40">
-            <div class="container mx-auto px-4 py-16 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                    {{ t('qa.ctaTitle') }}
-                </h2>
-                <p class="text-xl text-muted mb-8 max-w-2xl mx-auto">
-                    {{ t('qa.ctaSubtitle') }}
-                </p>
-                <UButton
-                    as-child
-                    class="h-12 px-8"
-                    size="lg" trailing-icon="i-lucide-arrow-right">
-<NuxtLink
-                        class="inline-flex items-center gap-2"
-                        to="/builder"
-                    >
-                        {{ t('common.startBuilding') }}
-                        
-                    </NuxtLink>
-</UButton>
-            </div>
-        </div>
+        <UPageCTA
+            :title="t('qa.ctaTitle')"
+            :description="t('qa.ctaSubtitle')"
+            variant="subtle"
+            :links="[{
+                label: t('common.startBuilding'),
+                to: localePath('/builder'),
+                trailingIcon: 'i-lucide-arrow-right',
+                size: 'lg',
+            }]"
+        />
     </div>
 </template>

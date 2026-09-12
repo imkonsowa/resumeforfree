@@ -188,7 +188,7 @@ export const generateSkillsContent = (skills: SkillItem[]): SectionContent[] => 
     return skills
         .filter(skill => skill.title.trim() || skill.description.trim())
         .map((skill) => {
-            let content = '';
+            let content: string;
             if (!skill.title.trim()) {
                 content = escapeTypstText(skill.description);
             }
@@ -251,7 +251,7 @@ export const generateSocialLinksContent = (data: ResumeData): SectionContent[] =
     const socialLinks = (data?.socialLinks || [])
         .filter(link => link.platform && link.url && link.url.trim() !== '');
     return socialLinks.map((link) => {
-        let linkText = '';
+        let linkText: string;
         if (link.platform === 'other' && link.customLabel) {
             linkText = link.customLabel;
         }

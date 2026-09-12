@@ -45,7 +45,17 @@
         "organizationUrl": "Organization Website URL",
         "emailAddress": "Email Address",
         "tryAgain": "Try Again",
-        "copy": "Copy"
+        "copy": "Copy",
+        "month": "Month",
+        "year": "Year",
+        "moveUp": "Move up",
+        "moveDown": "Move down",
+        "confirmAction": "Confirm action",
+        "confirmMessage": "Are you sure you want to proceed?",
+        "confirm": "Confirm",
+        "expand": "Expand",
+        "collapse": "Collapse",
+        "moreActions": "More actions"
     },
     "languageModal": {
         "title": "Select Your Language",
@@ -386,7 +396,9 @@
             "zoomOut": "Zoom Out",
             "resetZoom": "Reset Zoom"
         },
-        "previewErrorDetailed": "Preview failed: {detail}"
+        "previewErrorDetailed": "Preview failed: {detail}",
+        "zoomIn": "Zoom in",
+        "zoomOut": "Zoom out"
     },
     "settings": {
         "title": "Resume Settings",
@@ -542,7 +554,11 @@
     "validation": {
         "required": "This field is required",
         "email": "Please enter a valid email address",
-        "url": "Please enter a valid URL"
+        "url": "Please enter a valid URL",
+        "invalidEmail": "Enter a valid email address",
+        "passwordRequired": "Password is required",
+        "nameRequired": "Name is required",
+        "passwordMinLength": "Password must be at least 6 characters"
     },
     "notifications": {
         "resumeCreated": "Resume created successfully",
@@ -790,7 +806,15 @@
                 "message": "Are you sure you want to remove \"{name}\" from the cloud? The resume will remain on your device but will no longer be synced.",
                 "confirmButton": "Remove from Cloud"
             },
-            "cancel": "Cancel"
+            "cancel": "Cancel",
+            "import": {
+                "title": "Import resumes",
+                "foundCount": "{count} resume(s) found in file",
+                "duplicateWarning": "{count} resume(s) with matching names already exist. These are unchecked by default.",
+                "itemCount": "{count} items",
+                "selectedCount": "{count} resume(s) selected for import",
+                "importSelected": "Import selected"
+            }
         },
         "toast": {
             "creatingInCloud": "Creating resume in cloud...",

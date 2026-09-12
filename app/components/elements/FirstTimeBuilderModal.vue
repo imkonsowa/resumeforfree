@@ -1,94 +1,90 @@
-<template>
-    <Dialog
-        :open="isOpen"
-        @update:open="$emit('close')"
-    >
-        <DialogContent class="max-w-[95vw] sm:max-w-md mx-4 sm:mx-auto">
-            <DialogHeader class="pb-2">
-                <DialogTitle class="flex items-center gap-2 text-lg">
-                    <UIcon name="i-lucide-cloud" class="w-5 h-5 text-secondary" />
-                    <span>{{ $t('resumes.modals.firstTime.title') }}</span>
-                </DialogTitle>
-                <DialogDescription class="text-sm leading-relaxed pt-1">
-                    {{ $t('resumes.modals.firstTime.description') }}
-                </DialogDescription>
-            </DialogHeader>
-            <div class="space-y-3 py-3">
-                <ul class="text-sm text-muted space-y-1.5">
-                    <li class="flex items-center gap-2">
-                        <UIcon name="i-lucide-check" class="w-4 h-4 text-primary flex-shrink-0" />
-                        <span>{{ $t('resumes.modals.firstTime.accessAnywhere') }}</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <UIcon name="i-lucide-check" class="w-4 h-4 text-primary flex-shrink-0" />
-                        <span>{{ $t('resumes.modals.firstTime.autoBackup') }}</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <UIcon name="i-lucide-check" class="w-4 h-4 text-primary flex-shrink-0" />
-                        <span>{{ $t('resumes.modals.firstTime.freeResumes') }}</span>
-                    </li>
-                </ul>
-            </div>
-            <DialogFooter class="!flex-col space-y-3 pt-2">
-                <div class="flex gap-2 w-full">
-                    <UButton
-                        class="flex-1"
-                        @click="$emit('register', dontShowAgain)" icon="i-lucide-user-plus">
-{{ $t('resumes.modals.firstTime.signUp') }}
-</UButton>
-                    <UButton color="neutral" variant="outline"
-                        class="flex-1"
-                        @click="$emit('login', dontShowAgain)" icon="i-lucide-log-in">
-{{ $t('resumes.modals.firstTime.login') }}
-</UButton>
-                </div>
-                <UButton color="neutral" variant="outline"
-                    class="w-full"
-                    @click="$emit('continueLocally', dontShowAgain)"
-                >
-                    {{ $t('resumes.modals.firstTime.continueLocally') }}
-                </UButton>
-                <div class="flex items-center justify-center gap-2 pt-1">
-                    <UCheckbox
-                        id="dont-show-again"
-                        v-model="dontShowAgain"
-                    />
-                    <label
-                        for="dont-show-again"
-                        class="text-xs text-muted cursor-pointer"
-                    >
-                        {{ $t('resumes.modals.firstTime.dontShowAgain') }}
-                    </label>
-                </div>
-            </DialogFooter>
-        </DialogContent>
-    </Dialog>
-</template>
-
 <script lang="ts" setup>
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '~/components/ui/dialog';
+const props = defineProps<{ isOpen: boolean }>();
 
-interface Props {
-    isOpen: boolean;
-}
-const props = defineProps<Props>();
-defineEmits<{
+const emit = defineEmits<{
     close: [];
     register: [dontShowAgain: boolean];
     login: [dontShowAgain: boolean];
     continueLocally: [dontShowAgain: boolean];
 }>();
+
+const { t } = useI18n();
+
 const dontShowAgain = ref(false);
-watch(() => props.isOpen, (isOpen) => {
-    if (isOpen) {
-        dontShowAgain.value = false;
-    }
+
+const open = computed({
+    get: () => props.isOpen,
+    set: (value) => {
+        if (!value) emit('close');
+    },
 });
+
+watch(() => props.isOpen, (isOpen) => {
+    if (isOpen) dontShowAgain.value = false;
+});
+
+const benefits = computed(() => [
+    t('resumes.modals.firstTime.accessAnywhere'),
+    t('resumes.modals.firstTime.autoBackup'),
+    t('resumes.modals.firstTime.freeResumes'),
+]);
 </script>
+
+<template>
+    <UModal
+        v-model:open="open"
+        :title="t('resumes.modals.firstTime.title')"
+        :description="t('resumes.modals.firstTime.description')"
+        :ui="{ footer: 'flex-col items-stretch gap-3' }"
+    >
+        <template #body>
+            <ul class="text-sm text-muted space-y-1.5">
+                <li
+                    v-for="benefit in benefits"
+                    :key="benefit"
+                    class="flex items-center gap-2"
+                >
+                    <UIcon
+                        name="i-lucide-check"
+                        class="size-4 text-secondary shrink-0"
+                    />
+                    <span>{{ benefit }}</span>
+                </li>
+            </ul>
+        </template>
+
+        <template #footer>
+            <div class="flex gap-2 w-full">
+                <UButton
+                    class="flex-1 justify-center"
+                    icon="i-lucide-user-plus"
+                    :label="t('resumes.modals.firstTime.signUp')"
+                    @click="emit('register', dontShowAgain)"
+                />
+                <UButton
+                    class="flex-1 justify-center"
+                    color="neutral"
+                    variant="outline"
+                    icon="i-lucide-log-in"
+                    :label="t('resumes.modals.firstTime.login')"
+                    @click="emit('login', dontShowAgain)"
+                />
+            </div>
+
+            <UButton
+                color="neutral"
+                variant="ghost"
+                block
+                :label="t('resumes.modals.firstTime.continueLocally')"
+                @click="emit('continueLocally', dontShowAgain)"
+            />
+
+            <UCheckbox
+                v-model="dontShowAgain"
+                :label="t('resumes.modals.firstTime.dontShowAgain')"
+                :ui="{ label: 'text-xs text-muted' }"
+                class="justify-center"
+            />
+        </template>
+    </UModal>
+</template>

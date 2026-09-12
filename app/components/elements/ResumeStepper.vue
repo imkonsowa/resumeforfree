@@ -14,8 +14,12 @@
                     <h3 class="text-lg font-semibold">
                         Resume Sections
                     </h3>
-                    <UButton color="neutral" variant="ghost"
-                        @click="showStepper = false" icon="i-lucide-x" />
+                    <UButton
+                        color="neutral"
+                        variant="ghost"
+                        icon="i-lucide-x"
+                        @click="showStepper = false"
+                    />
                 </div>
                 <div class="space-y-3">
                     <button
@@ -76,7 +80,10 @@
                             @drop="onDrop($event, index)"
                         >
                             <div class="flex-shrink-0">
-                                <UIcon name="i-lucide-grip-vertical" class="w-4 h-4 text-dimmed" />
+                                <UIcon
+                                    name="i-lucide-grip-vertical"
+                                    class="w-4 h-4 text-dimmed"
+                                />
                             </div>
                             <div class="flex-shrink-0">
                                 <div

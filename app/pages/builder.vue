@@ -317,7 +317,10 @@ const orderedSections = computed(() => {
                 <div class="max-w-md w-full text-center space-y-6">
                     <div class="space-y-4">
                         <div class="mx-auto w-16 h-16 bg-secondary/15 rounded-full flex items-center justify-center">
-                            <UIcon name="i-lucide-file-text" class="w-8 h-8 text-secondary" />
+                            <UIcon
+                                name="i-lucide-file-text"
+                                class="w-8 h-8 text-secondary"
+                            />
                         </div>
                         <div>
                             <h2 class="text-2xl font-semibold text-highlighted mb-2">
@@ -330,9 +333,12 @@ const orderedSections = computed(() => {
                     </div>
                     <div>
                         <NuxtLink to="/resumes">
-                            <UButton class="w-full" icon="i-lucide-file-text">
-{{ t('builder.goToResumesPage') }} →
-</UButton>
+                            <UButton
+                                class="w-full"
+                                icon="i-lucide-file-text"
+                            >
+                                {{ t('builder.goToResumesPage') }} →
+                            </UButton>
                         </NuxtLink>
                     </div>
                 </div>
@@ -373,22 +379,25 @@ const orderedSections = computed(() => {
                     <ResumeLanguageSelector
                         v-if="resumeStore.activeResume"
                         :model-value="resumeStore.activeResume.language"
-                        button-class="bg-black text-white border-black hover:bg-inverted shadow-lg"
+                        button-variant="solid"
+                        button-class="shadow-lg"
                         @update="(code) => resumeStore.setResumeLanguage(resumeStore.activeResume!.id, code)"
                     />
                     <UButton
-                        class="h-8 w-8 p-0 bg-black text-white border-black hover:bg-inverted shadow-lg" color="neutral" variant="outline"
                         size="sm"
-                        @click="showMobilePreview = true" icon="i-lucide-eye">
-<span class="sr-only">{{ t('common.preview') }}</span>
-</UButton>
+                        icon="i-lucide-eye"
+                        class="shadow-lg"
+                        :aria-label="t('common.preview')"
+                        @click="showMobilePreview = true"
+                    />
                     <UButton
-                        :disabled="isDownloading"
-                        class="h-8 w-8 p-0 bg-black text-white border-black hover:bg-inverted shadow-lg" color="neutral" variant="outline"
                         size="sm"
-                        @click="handleQuickDownload" icon="i-lucide-download">
-<span class="sr-only">{{ t('builder.download') }}</span>
-</UButton>
+                        icon="i-lucide-download"
+                        class="shadow-lg"
+                        :loading="isDownloading"
+                        :aria-label="t('builder.download')"
+                        @click="handleQuickDownload"
+                    />
                     <InvisibleTurnstile ref="turnstileRef" />
                 </div>
                 <div
@@ -396,7 +405,7 @@ const orderedSections = computed(() => {
                     class="lg:hidden fixed inset-0 z-50 overflow-y-auto bg-black/50"
                 >
                     <div class="flex items-center justify-center min-h-screen p-4">
-                        <div class="bg-white rounded-lg max-w-full w-full max-h-[90vh] flex flex-col">
+                        <div class="bg-default rounded-lg max-w-full w-full max-h-[90vh] flex flex-col">
                             <div class="p-4 border-b border-default flex justify-between items-center">
                                 <h3 class="text-lg font-medium">
                                     {{ t('builder.resumePreview') }}

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
+import type { NavigationMenuItem } from '@nuxt/ui';
 import ApiTokensPanel from '~/components/elements/ApiTokensPanel.vue';
 
 const { t } = useI18n();
@@ -18,6 +18,12 @@ useHead({
 });
 
 const activeSection = ref<'personal' | 'password' | 'tokens'>('personal');
+
+const sectionItems = computed<NavigationMenuItem[]>(() => [
+    { label: t('profile.personalInformation'), icon: 'i-lucide-user', value: 'personal' },
+    { label: t('auth.changePassword'), icon: 'i-lucide-lock', value: 'password' },
+    { label: t('apiTokens.title'), icon: 'i-lucide-key-round', value: 'tokens' },
+]);
 const isChangingPassword = ref(false);
 const showCurrentPassword = ref(false);
 const showNewPassword = ref(false);
@@ -108,50 +114,28 @@ useHead({
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                     <div class="md:col-span-1">
-                        <Card>
-                            <CardContent class="p-4">
-                                <nav class="space-y-1">
-                                    <button
-                                        class="w-full flex items-center gap-3 px-3 py-2 text-sm rounded-md transition-colors text-left"
-                                        :class="activeSection === 'personal' ? 'bg-secondary/10 text-secondary font-medium' : 'text-default hover:bg-elevated'"
-                                        @click="activeSection = 'personal'"
-                                    >
-                                        <UIcon name="i-lucide-user" class="w-4 h-4" />
-                                        {{ $t('profile.personalInformation') }}
-                                    </button>
-                                    <button
-                                        class="w-full flex items-center gap-3 px-3 py-2 text-sm rounded-md transition-colors text-left"
-                                        :class="activeSection === 'password' ? 'bg-secondary/10 text-secondary font-medium' : 'text-default hover:bg-elevated'"
-                                        @click="activeSection = 'password'"
-                                    >
-                                        <UIcon name="i-lucide-lock" class="w-4 h-4" />
-                                        {{ $t('auth.changePassword') }}
-                                    </button>
-                                    <button
-                                        class="w-full flex items-center gap-3 px-3 py-2 text-sm rounded-md transition-colors text-left"
-                                        :class="activeSection === 'tokens' ? 'bg-secondary/10 text-secondary font-medium' : 'text-default hover:bg-elevated'"
-                                        @click="activeSection = 'tokens'"
-                                    >
-                                        <UIcon name="i-lucide-key-round" class="w-4 h-4" />
-                                        {{ $t('apiTokens.title') }}
-                                    </button>
-                                </nav>
-                            </CardContent>
-                        </Card>
+                        <UNavigationMenu
+                            v-model="activeSection"
+                            :items="sectionItems"
+                            orientation="vertical"
+                        />
                     </div>
 
                     <div class="md:col-span-3">
-                        <Card v-if="activeSection === 'personal'">
-                            <CardHeader>
-                                <CardTitle class="flex items-center gap-2">
-                                    <UIcon name="i-lucide-user" class="w-5 h-5" />
+                        <UCard v-if="activeSection === 'personal'">
+                            <template #header>
+                                <div class="flex items-center gap-2 text-highlighted font-semibold">
+                                    <UIcon
+                                        name="i-lucide-user"
+                                        class="size-5"
+                                    />
                                     {{ $t('profile.personalInformation') }}
-                                </CardTitle>
-                                <CardDescription>
+                                </div>
+                                <p class="mt-1 text-muted text-sm">
                                     {{ $t('profile.viewAndManage') }}
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent class="space-y-8">
+                                </p>
+                            </template>
+                            <div class="space-y-8">
                                 <div class="space-y-6">
                                     <div>
                                         <label
@@ -190,20 +174,23 @@ useHead({
                                         </div>
                                     </div>
                                 </div>
-                            </CardContent>
-                        </Card>
+                            </div>
+                        </UCard>
 
-                        <Card v-if="activeSection === 'password'">
-                            <CardHeader>
-                                <CardTitle class="flex items-center gap-2">
-                                    <UIcon name="i-lucide-lock" class="w-5 h-5" />
+                        <UCard v-if="activeSection === 'password'">
+                            <template #header>
+                                <div class="flex items-center gap-2 text-highlighted font-semibold">
+                                    <UIcon
+                                        name="i-lucide-lock"
+                                        class="size-5"
+                                    />
                                     {{ $t('auth.changePassword') }}
-                                </CardTitle>
-                                <CardDescription>
+                                </div>
+                                <p class="mt-1 text-muted text-sm">
                                     {{ $t('profile.updatePasswordDescription') }}
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent>
+                                </p>
+                            </template>
+                            <div>
                                 <form
                                     class="space-y-6"
                                     @submit.prevent="handleChangePassword"
@@ -252,12 +239,14 @@ useHead({
                                                 class="absolute inset-y-0 right-0 pr-3 flex items-center"
                                                 @click="showCurrentPassword = !showCurrentPassword"
                                             >
-                                                <UIcon name="i-lucide-eye"
+                                                <UIcon
                                                     v-if="!showCurrentPassword"
+                                                    name="i-lucide-eye"
                                                     class="w-4 h-4 text-dimmed"
                                                 />
-                                                <UIcon name="i-lucide-eye-off"
+                                                <UIcon
                                                     v-else
+                                                    name="i-lucide-eye-off"
                                                     class="w-4 h-4 text-dimmed"
                                                 />
                                             </button>
@@ -285,12 +274,14 @@ useHead({
                                                 class="absolute inset-y-0 right-0 pr-3 flex items-center"
                                                 @click="showNewPassword = !showNewPassword"
                                             >
-                                                <UIcon name="i-lucide-eye"
+                                                <UIcon
                                                     v-if="!showNewPassword"
+                                                    name="i-lucide-eye"
                                                     class="w-4 h-4 text-dimmed"
                                                 />
-                                                <UIcon name="i-lucide-eye-off"
+                                                <UIcon
                                                     v-else
+                                                    name="i-lucide-eye-off"
                                                     class="w-4 h-4 text-dimmed"
                                                 />
                                             </button>
@@ -320,12 +311,14 @@ useHead({
                                                 class="absolute inset-y-0 right-0 pr-3 flex items-center"
                                                 @click="showConfirmPassword = !showConfirmPassword"
                                             >
-                                                <UIcon name="i-lucide-eye"
+                                                <UIcon
                                                     v-if="!showConfirmPassword"
+                                                    name="i-lucide-eye"
                                                     class="w-4 h-4 text-dimmed"
                                                 />
-                                                <UIcon name="i-lucide-eye-off"
+                                                <UIcon
                                                     v-else
+                                                    name="i-lucide-eye-off"
                                                     class="w-4 h-4 text-dimmed"
                                                 />
                                             </button>
@@ -336,11 +329,15 @@ useHead({
                                         <UButton
                                             type="submit"
                                             :disabled="isChangingPassword"
-                                            class="flex items-center gap-2" icon="i-lucide-lock">
-{{ isChangingPassword ? $t('auth.changingPassword') : $t('auth.changePassword') }}
-</UButton>
+                                            class="flex items-center gap-2"
+                                            icon="i-lucide-lock"
+                                        >
+                                            {{ isChangingPassword ? $t('auth.changingPassword') : $t('auth.changePassword') }}
+                                        </UButton>
                                         <UButton
-                                            type="button" color="neutral" variant="outline"
+                                            type="button"
+                                            color="neutral"
+                                            variant="outline"
                                             :disabled="isChangingPassword"
                                             @click="passwordForm = { currentPassword: '', newPassword: '', confirmPassword: '' }; passwordErrors = []"
                                         >
@@ -348,8 +345,8 @@ useHead({
                                         </UButton>
                                     </div>
                                 </form>
-                            </CardContent>
-                        </Card>
+                            </div>
+                        </UCard>
 
                         <ApiTokensPanel v-if="activeSection === 'tokens'" />
                     </div>

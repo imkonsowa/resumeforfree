@@ -174,9 +174,12 @@ useHead({
 
                         <div class="flex flex-wrap gap-2.5 mt-7">
                             <NuxtLink :to="localePath('/builder')">
-                                <button class="inline-flex items-center gap-2 h-[46px] px-[22px] rounded-lg bg-secondary text-white font-medium text-[15px] hover:bg-secondary transition-colors">
+                                <button class="inline-flex items-center gap-2 h-[46px] px-[22px] rounded-lg bg-secondary text-inverted font-medium text-[15px] hover:bg-secondary transition-colors">
                                     {{ $t('homepage.hero.ctaBuild') }}
-                                    <UIcon name="i-lucide-arrow-right" class="w-4 h-4" />
+                                    <UIcon
+                                        name="i-lucide-arrow-right"
+                                        class="w-4 h-4"
+                                    />
                                 </button>
                             </NuxtLink>
                         </div>
@@ -236,7 +239,7 @@ useHead({
             </div>
         </section>
 
-        <section class="py-[88px] bg-white">
+        <section class="py-[88px] bg-default">
             <div class="max-w-[1180px] mx-auto px-6">
                 <div class="max-w-[620px] mb-12">
                     <div class="text-xs uppercase tracking-widest font-semibold text-secondary mb-3">
@@ -254,11 +257,11 @@ useHead({
                     <div
                         v-for="item in featureItems"
                         :key="item.title"
-                        class="bg-white border border-default rounded-[10px] p-[22px]"
+                        class="bg-elevated border border-default rounded-[10px] p-[22px]"
                     >
                         <div class="w-9 h-9 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
-                            <component
-                                :is="item.icon"
+                            <UIcon
+                                :name="item.icon"
                                 class="w-[18px] h-[18px] text-secondary"
                             />
                         </div>
@@ -292,9 +295,9 @@ useHead({
                             { n: '3', title: t('homepage.howItWorks.step3.title'), body: t('homepage.howItWorks.step3.description') },
                         ]"
                         :key="step.n"
-                        class="bg-white border border-default rounded-[10px] p-7"
+                        class="bg-elevated border border-default rounded-[10px] p-7"
                     >
-                        <div class="w-8 h-8 rounded-full bg-inverted text-white flex items-center justify-center text-sm font-semibold mb-[18px]">
+                        <div class="w-8 h-8 rounded-full bg-inverted text-inverted flex items-center justify-center text-sm font-semibold mb-[18px]">
                             {{ step.n }}
                         </div>
                         <h3 class="text-[17px] font-semibold tracking-tight text-highlighted">
@@ -308,7 +311,7 @@ useHead({
             </div>
         </section>
 
-        <section class="py-[88px] bg-white">
+        <section class="py-[88px] bg-default">
             <div class="max-w-[980px] mx-auto px-6">
                 <div class="text-center mb-10">
                     <div class="text-xs uppercase tracking-widest font-semibold text-secondary mb-3">
@@ -322,7 +325,7 @@ useHead({
                     </p>
                 </div>
 
-                <div class="bg-white border border-default rounded-[10px] overflow-hidden">
+                <div class="bg-elevated border border-default rounded-[10px] overflow-hidden">
                     <div class="overflow-x-auto">
                         <table class="w-full border-collapse text-sm">
                             <thead>
@@ -354,49 +357,57 @@ useHead({
                                         {{ $t(`homepage.comparison.rows.${row.key}`) }}
                                     </td>
                                     <td class="py-3.5 px-[18px] text-center bg-secondary/10">
-                                        <UIcon name="i-lucide-check"
+                                        <UIcon
                                             v-if="row.us === 'yes'"
+                                            name="i-lucide-check"
                                             class="w-[17px] h-[17px] text-secondary mx-auto"
                                             :stroke-width="2.4"
                                         />
-                                        <UIcon name="i-lucide-x"
+                                        <UIcon
                                             v-else
+                                            name="i-lucide-x"
                                             class="w-[17px] h-[17px] text-error mx-auto"
                                             :stroke-width="2.2"
                                         />
                                     </td>
                                     <td class="py-3.5 px-[18px] text-center">
-                                        <UIcon name="i-lucide-check"
+                                        <UIcon
                                             v-if="row.canva === 'yes'"
+                                            name="i-lucide-check"
                                             class="w-[17px] h-[17px] text-secondary mx-auto"
                                             :stroke-width="2.4"
                                         />
-                                        <UIcon name="i-lucide-x"
+                                        <UIcon
                                             v-else
+                                            name="i-lucide-x"
                                             class="w-[17px] h-[17px] text-error mx-auto"
                                             :stroke-width="2.2"
                                         />
                                     </td>
                                     <td class="py-3.5 px-[18px] text-center">
-                                        <UIcon name="i-lucide-check"
+                                        <UIcon
                                             v-if="row.zety === 'yes'"
+                                            name="i-lucide-check"
                                             class="w-[17px] h-[17px] text-secondary mx-auto"
                                             :stroke-width="2.4"
                                         />
-                                        <UIcon name="i-lucide-x"
+                                        <UIcon
                                             v-else
+                                            name="i-lucide-x"
                                             class="w-[17px] h-[17px] text-error mx-auto"
                                             :stroke-width="2.2"
                                         />
                                     </td>
                                     <td class="py-3.5 px-[18px] text-center">
-                                        <UIcon name="i-lucide-check"
+                                        <UIcon
                                             v-if="row.resumeio === 'yes'"
+                                            name="i-lucide-check"
                                             class="w-[17px] h-[17px] text-secondary mx-auto"
                                             :stroke-width="2.4"
                                         />
-                                        <UIcon name="i-lucide-x"
+                                        <UIcon
                                             v-else
+                                            name="i-lucide-x"
                                             class="w-[17px] h-[17px] text-error mx-auto"
                                             :stroke-width="2.2"
                                         />
@@ -435,7 +446,7 @@ useHead({
             </div>
         </section>
 
-        <section class="py-[88px] bg-white">
+        <section class="py-[88px] bg-default">
             <div class="max-w-[1180px] mx-auto px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-[72px]">
                     <div>
@@ -463,7 +474,7 @@ useHead({
                         </p>
                     </div>
 
-                    <div class="bg-white border border-default rounded-[10px] overflow-hidden">
+                    <div class="bg-elevated border border-default rounded-[10px] overflow-hidden">
                         <div
                             v-for="(item, index) in faqItems"
                             :key="index"
@@ -475,7 +486,8 @@ useHead({
                                 @click="toggleFaq(index)"
                             >
                                 <span class="text-[15px] font-medium text-highlighted pe-4">{{ item.question }}</span>
-                                <UIcon name="i-lucide-chevron-down"
+                                <UIcon
+                                    name="i-lucide-chevron-down"
                                     class="w-[17px] h-[17px] text-muted shrink-0 transition-transform duration-200"
                                     :class="{ 'rotate-180': openFaqIndex === index }"
                                 />
@@ -504,9 +516,12 @@ useHead({
                 </p>
                 <div class="flex flex-wrap gap-2.5 justify-center mt-6">
                     <NuxtLink :to="localePath('/builder')">
-                        <button class="inline-flex items-center gap-2 h-[46px] px-[22px] rounded-lg bg-secondary text-white font-medium text-[15px] hover:bg-secondary transition-colors">
+                        <button class="inline-flex items-center gap-2 h-[46px] px-[22px] rounded-lg bg-secondary text-inverted font-medium text-[15px] hover:bg-secondary transition-colors">
                             {{ $t('homepage.finalCta.ctaBuild') }}
-                            <UIcon name="i-lucide-arrow-right" class="w-4 h-4" />
+                            <UIcon
+                                name="i-lucide-arrow-right"
+                                class="w-4 h-4"
+                            />
                         </button>
                     </NuxtLink>
                 </div>

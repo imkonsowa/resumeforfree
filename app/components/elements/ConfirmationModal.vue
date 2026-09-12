@@ -1,72 +1,67 @@
-<template>
-    <div
-        v-if="isOpen"
-        class="fixed inset-0 z-50 flex items-center justify-center"
-        @click="handleCancel"
-    >
-        <div class="absolute inset-0 bg-black/50" />
-        <div
-            class="relative bg-white border rounded-lg shadow-xl p-6 w-96 max-w-[90vw]"
-            @click.stop
-        >
-            <div class="space-y-4">
-                <div class="flex items-center space-x-3">
-                    <div class="flex-shrink-0">
-                        <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
-                            <UIcon name="i-lucide-alert-triangle" class="w-6 h-6 text-red-600" />
-                        </div>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-lg font-semibold text-highlighted">
-                            {{ title }}
-                        </h3>
-                    </div>
-                </div>
-                <div class="text-toned">
-                    <p>{{ message }}</p>
-                </div>
-                <div class="flex gap-3 pt-4">
-                    <UButton
-                        class="flex-1" color="error" variant="solid"
-                        @click="handleConfirm"
-                    >
-                        {{ confirmText }}
-                    </UButton>
-                    <UButton
-                        class="flex-1" color="neutral" variant="outline"
-                        @click="handleCancel"
-                    >
-                        {{ cancelText }}
-                    </UButton>
-                </div>
-            </div>
-        </div>
-    </div>
-</template>
-
 <script lang="ts" setup>
-
-interface Props {
+const props = withDefaults(defineProps<{
     isOpen: boolean;
     title?: string;
     message?: string;
     confirmText?: string;
     cancelText?: string;
-}
-const _props = withDefaults(defineProps<Props>(), {
-    title: 'Confirm Action',
-    message: 'Are you sure you want to proceed?',
-    confirmText: 'Confirm',
-    cancelText: 'Cancel',
+}>(), {
+    title: undefined,
+    message: undefined,
+    confirmText: undefined,
+    cancelText: undefined,
 });
-const emit = defineEmits<{
-    confirm: [];
-    cancel: [];
-}>();
-const handleConfirm = () => {
-    emit('confirm');
-};
-const handleCancel = () => {
-    emit('cancel');
-};
+
+const emit = defineEmits<{ confirm: []; cancel: [] }>();
+
+const { t } = useI18n();
+
+const open = computed({
+    get: () => props.isOpen,
+    set: (value) => {
+        if (!value) emit('cancel');
+    },
+});
+
+const labels = computed(() => ({
+    title: props.title || t('common.confirmAction', 'Confirm action'),
+    message: props.message || t('common.confirmMessage', 'Are you sure you want to proceed?'),
+    confirm: props.confirmText || t('common.confirm', 'Confirm'),
+    cancel: props.cancelText || t('common.cancel', 'Cancel'),
+}));
 </script>
+
+<template>
+    <UModal
+        v-model:open="open"
+        :title="labels.title"
+        :description="labels.message"
+        :ui="{ footer: 'justify-end' }"
+    >
+        <template #body>
+            <div class="flex items-start gap-3">
+                <UIcon
+                    name="i-lucide-triangle-alert"
+                    class="size-6 shrink-0 text-error"
+                />
+                <p class="text-toned">
+                    {{ labels.message }}
+                </p>
+            </div>
+        </template>
+
+        <template #footer>
+            <UButton
+                color="neutral"
+                variant="outline"
+                :label="labels.cancel"
+                @click="emit('cancel')"
+            />
+            <UButton
+                color="error"
+                :label="labels.confirm"
+                @click="emit('confirm')"
+            />
+        </template>
+    </UModal>
+</template>

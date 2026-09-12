@@ -1,12 +1,12 @@
 <template>
     <main class="min-h-screen flex flex-col items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
         <div class="w-full max-w-2xl mx-auto">
-            <h1 class="text-4xl font-bold text-black mb-8 text-center">
+            <h1 class="text-4xl font-bold text-highlighted mb-8 text-center">
                 {{ $t('contact.title') }}
             </h1>
 
-            <Card class="p-6 sm:p-8">
-                <CardContent class="pt-0">
+            <UCard>
+                <div>
                     <p class="text-default mb-8 text-center">
                         {{ $t('contact.description') }}
                     </p>
@@ -129,13 +129,12 @@
                             {{ $t('contact.success.message') }}
                         </p>
                         <UButton
+                            :label="$t('contact.success.keepBuilding')"
                             @click="navigateTo(localePath('/resumes'))"
-                        >
-                            {{ $t('contact.success.keepBuilding') }}
-                        </UButton>
+                        />
                     </div>
-                </CardContent>
-            </Card>
+                </div>
+            </UCard>
 
             <div class="mt-8 text-center text-sm text-toned">
                 <p>
@@ -153,7 +152,6 @@
 </template>
 
 <script lang="ts" setup>
-import { Card, CardContent } from '~/components/ui/card';
 import TurnstileWidget from '~/components/elements/TurnstileWidget.vue';
 
 const { t } = useI18n();

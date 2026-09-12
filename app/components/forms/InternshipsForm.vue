@@ -21,40 +21,40 @@
             @move-down="resumeStore.moveInternship(index, index + 1)"
         >
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div class="space-y-2">
-                    <label>{{ t('common.position') }}</label>
+                <UFormField :label="t('common.position')">
                     <UInput
                         :model-value="internship.position"
                         :placeholder="t('common.position')"
+                        class="w-full"
                         @update:model-value="(value) => resumeStore.updateInternship(index, 'position', value)"
                     />
-                </div>
-                <div class="space-y-2">
-                    <label>{{ t('common.company') }}</label>
+                </UFormField>
+                <UFormField :label="t('common.company')">
                     <UInput
                         :model-value="internship.company"
                         :placeholder="t('common.company')"
+                        class="w-full"
                         @update:model-value="(value) => resumeStore.updateInternship(index, 'company', value)"
                     />
-                </div>
+                </UFormField>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div class="space-y-2">
-                    <label>{{ t('common.location') }}</label>
+                <UFormField :label="t('common.location')">
                     <UInput
                         :model-value="internship.location"
                         :placeholder="t('common.locationPlaceholder')"
+                        class="w-full"
                         @update:model-value="(value) => resumeStore.updateInternship(index, 'location', value)"
                     />
-                </div>
-                <div class="space-y-2">
-                    <label>{{ t('common.companyUrl') }}</label>
+                </UFormField>
+                <UFormField :label="t('common.companyUrl')">
                     <UInput
                         :model-value="internship.companyUrl || ''"
                         :placeholder="t('common.companyUrl')"
+                        class="w-full"
                         @update:model-value="(value) => resumeStore.updateInternship(index, 'companyUrl', value)"
                     />
-                </div>
+                </UFormField>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div class="space-y-2">
@@ -71,39 +71,39 @@
                         :label="t('common.endDate')"
                         @update:model-value="(value) => resumeStore.updateInternship(index, 'endDate', value)"
                     />
-                    <div class="flex items-center space-x-2 mt-2">
-                        <UCheckbox
-                            :id="`present-${index}`"
-                            :model-value="internship.isPresent"
-                            @update:model-value="(value) => {
-                                resumeStore.updateInternship(index, 'isPresent', value);
-                                if (value) resumeStore.updateInternship(index, 'endDate', '');
-                            }"
-                        />
-                        <label
-                            :for="`present-${index}`"
-                            class="text-sm"
-                        >{{ t('common.present') }}</label>
-                    </div>
+                    <UCheckbox
+                        :model-value="internship.isPresent"
+                        :label="t('common.present')"
+                        @update:model-value="(value) => {
+                            resumeStore.updateInternship(index, 'isPresent', value);
+                            if (value) resumeStore.updateInternship(index, 'endDate', '');
+                        }"
+                    />
                 </div>
             </div>
-            <div class="space-y-2 mb-4">
-                <label>{{ t('common.description') }}</label>
+            <UFormField :label="t('common.description')">
                 <UTextarea
                     :model-value="internship.description"
                     :placeholder="t('common.description')"
                     rows="3"
+                    class="w-full"
                     @update:model-value="(value) => resumeStore.updateInternship(index, 'description', value)"
                 />
-            </div>
+            </UFormField>
             <div class="space-y-4">
                 <div class="flex justify-between items-center">
-                    <label>{{ t('common.achievements') }}</label>
+                    <h4 class="text-sm font-medium text-default">
+                        {{ t('common.achievements') }}
+                    </h4>
                     <UButton
-                        size="sm" color="neutral" variant="outline"
-                        @click="resumeStore.addInternshipAchievement(index)" icon="i-lucide-plus">
-{{ t('common.addAchievement') }}
-</UButton>
+                        size="sm"
+                        color="neutral"
+                        variant="outline"
+                        icon="i-lucide-plus"
+                        @click="resumeStore.addInternshipAchievement(index)"
+                    >
+                        {{ t('common.addAchievement') }}
+                    </UButton>
                 </div>
                 <div class="space-y-2">
                     <div
@@ -122,29 +122,53 @@
                             <div class="hidden md:flex items-center space-x-1">
                                 <UButton
                                     :disabled="achievementIndex === 0"
-                                    size="sm" color="neutral" variant="outline"
-                                    @click="resumeStore.moveInternshipAchievement(index, achievementIndex, achievementIndex - 1)" icon="i-lucide-chevron-up" />
+                                    size="sm"
+                                    color="neutral"
+                                    variant="outline"
+                                    icon="i-lucide-chevron-up"
+                                    @click="resumeStore.moveInternshipAchievement(index, achievementIndex, achievementIndex - 1)"
+                                />
                                 <UButton
                                     :disabled="achievementIndex === internship.achievements.length - 1"
-                                    size="sm" color="neutral" variant="outline"
-                                    @click="resumeStore.moveInternshipAchievement(index, achievementIndex, achievementIndex + 1)" icon="i-lucide-chevron-down" />
+                                    size="sm"
+                                    color="neutral"
+                                    variant="outline"
+                                    icon="i-lucide-chevron-down"
+                                    @click="resumeStore.moveInternshipAchievement(index, achievementIndex, achievementIndex + 1)"
+                                />
                                 <UButton
-                                    size="sm" color="neutral" variant="outline"
-                                    @click="resumeStore.removeInternshipAchievement(index, achievementIndex)" icon="i-lucide-trash-2" />
+                                    size="sm"
+                                    color="neutral"
+                                    variant="outline"
+                                    icon="i-lucide-trash-2"
+                                    @click="resumeStore.removeInternshipAchievement(index, achievementIndex)"
+                                />
                             </div>
                         </div>
                         <div class="flex md:hidden items-center justify-center space-x-2">
                             <UButton
                                 :disabled="achievementIndex === 0"
-                                size="sm" color="neutral" variant="outline"
-                                @click="resumeStore.moveInternshipAchievement(index, achievementIndex, achievementIndex - 1)" icon="i-lucide-chevron-up" />
+                                size="sm"
+                                color="neutral"
+                                variant="outline"
+                                icon="i-lucide-chevron-up"
+                                @click="resumeStore.moveInternshipAchievement(index, achievementIndex, achievementIndex - 1)"
+                            />
                             <UButton
                                 :disabled="achievementIndex === internship.achievements.length - 1"
-                                size="sm" color="neutral" variant="outline"
-                                @click="resumeStore.moveInternshipAchievement(index, achievementIndex, achievementIndex + 1)" icon="i-lucide-chevron-down" />
+                                size="sm"
+                                color="neutral"
+                                variant="outline"
+                                icon="i-lucide-chevron-down"
+                                @click="resumeStore.moveInternshipAchievement(index, achievementIndex, achievementIndex + 1)"
+                            />
                             <UButton
-                                size="sm" color="neutral" variant="outline"
-                                @click="resumeStore.removeInternshipAchievement(index, achievementIndex)" icon="i-lucide-trash-2" />
+                                size="sm"
+                                color="neutral"
+                                variant="outline"
+                                icon="i-lucide-trash-2"
+                                @click="resumeStore.removeInternshipAchievement(index, achievementIndex)"
+                            />
                         </div>
                     </div>
                 </div>

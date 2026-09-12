@@ -387,7 +387,10 @@ useHead({
                     class="mb-6 p-4 bg-secondary/10 border border-secondary/30 rounded-[10px]"
                 >
                     <div class="flex items-start gap-3">
-                        <UIcon name="i-lucide-cloud" class="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                        <UIcon
+                            name="i-lucide-cloud"
+                            class="w-5 h-5 text-secondary mt-0.5 flex-shrink-0"
+                        />
                         <div class="flex-1">
                             <h3 class="text-sm font-semibold text-secondary mb-1">
                                 {{ $t('resumes.banner.saveToCloud') }}
@@ -398,16 +401,19 @@ useHead({
                             <div class="flex gap-2">
                                 <UButton
                                     size="sm"
-                                    class="bg-secondary hover:bg-secondary text-white"
-                                    @click="router.push(localePath('/auth/register'))" icon="i-lucide-user-plus">
-{{ $t('resumes.banner.registerFree') }}
-</UButton>
+                                    color="secondary"
+                                    icon="i-lucide-user-plus"
+                                    :label="$t('resumes.banner.registerFree')"
+                                    @click="router.push(localePath('/auth/register'))"
+                                />
                                 <UButton
-                                    size="sm" color="neutral" variant="outline"
-                                    class="border-default bg-white text-highlighted hover:bg-muted"
-                                    @click="router.push(localePath('/auth/login'))" icon="i-lucide-log-in">
-{{ $t('resumes.banner.login') }}
-</UButton>
+                                    size="sm"
+                                    color="neutral"
+                                    variant="outline"
+                                    icon="i-lucide-log-in"
+                                    :label="$t('resumes.banner.login')"
+                                    @click="router.push(localePath('/auth/login'))"
+                                />
                             </div>
                         </div>
                     </div>
@@ -417,7 +423,10 @@ useHead({
                     class="mb-6 p-4 bg-secondary/10 border border-secondary/30 rounded-lg"
                 >
                     <div class="flex items-start gap-3">
-                        <UIcon name="i-lucide-check-circle" class="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                        <UIcon
+                            name="i-lucide-check-circle"
+                            class="w-5 h-5 text-secondary mt-0.5 flex-shrink-0"
+                        />
                         <div class="flex-1">
                             <h3 class="text-sm font-medium text-secondary mb-1">
                                 {{ $t('resumes.banner.cloudAvailable') }}
@@ -466,7 +475,9 @@ useHead({
                                 {{ resumeStore.error }}
                             </p>
                             <UButton
-                                size="sm" color="neutral" variant="outline"
+                                size="sm"
+                                color="neutral"
+                                variant="outline"
                                 class="mt-2 border-red-300 text-red-700 hover:bg-red-100"
                                 @click="fetchServerResumesIfLoggedIn"
                             >

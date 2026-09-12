@@ -11,27 +11,38 @@
                     :alt="t('forms.personalInfo.photo.label')"
                     class="size-full object-cover"
                 >
-                <UIcon name="i-lucide-image"
+                <UIcon
                     v-else
+                    name="i-lucide-image"
                     class="w-8 h-8 text-dimmed"
                 />
             </div>
             <div class="flex-1 space-y-2">
-                <label>{{ t('forms.personalInfo.photo.label') }}</label>
+                <h4 class="text-sm font-medium text-default">
+                    {{ t('forms.personalInfo.photo.label') }}
+                </h4>
                 <div class="flex flex-wrap gap-2">
                     <UButton
-                        size="sm" color="neutral" variant="outline"
+                        size="sm"
+                        color="neutral"
+                        variant="outline"
                         :disabled="busy"
-                        @click="onPickClick" icon="i-lucide-upload">
-{{ t('forms.personalInfo.photo.upload') }}
-</UButton>
+                        icon="i-lucide-upload"
+                        @click="onPickClick"
+                    >
+                        {{ t('forms.personalInfo.photo.upload') }}
+                    </UButton>
                     <UButton
                         v-if="hasPhoto"
-                        size="sm" color="neutral" variant="outline"
+                        size="sm"
+                        color="neutral"
+                        variant="outline"
                         :disabled="busy"
-                        @click="onRemoveClick" icon="i-lucide-trash-2">
-{{ t('forms.personalInfo.photo.remove') }}
-</UButton>
+                        icon="i-lucide-trash-2"
+                        @click="onRemoveClick"
+                    >
+                        {{ t('forms.personalInfo.photo.remove') }}
+                    </UButton>
                 </div>
                 <p class="text-xs text-muted">
                     {{ t('forms.personalInfo.photo.constraints') }}
@@ -59,14 +70,12 @@
             >
         </div>
 
-        <Dialog
-            :open="cropOpen"
-            @update:open="onCropDialogToggle"
+        <UModal
+            v-model:open="cropModalOpen"
+            :title="t('forms.personalInfo.photo.cropTitle')"
+            :ui="{ content: 'max-w-xl', footer: 'justify-end' }"
         >
-            <DialogContent class="max-w-xl">
-                <DialogHeader>
-                    <DialogTitle>{{ t('forms.personalInfo.photo.cropTitle') }}</DialogTitle>
-                </DialogHeader>
+            <template #body>
                 <div
                     v-if="cropSrc"
                     class="bg-black/5 rounded overflow-hidden"
@@ -91,28 +100,29 @@
                         {{ t('common.loading') }}
                     </div>
                 </div>
-                <DialogFooter>
-                    <UButton color="neutral" variant="outline"
-                        :disabled="busy"
-                        @click="closeCropDialog"
-                    >
-                        {{ t('common.cancel') }}
-                    </UButton>
-                    <UButton
-                        :disabled="busy || !CropperComponent"
-                        @click="onConfirmCrop"
-                    >
-                        {{ t('common.save') }}
-                    </UButton>
-                </DialogFooter>
-            </DialogContent>
-        </Dialog>
+            </template>
+
+            <template #footer>
+                <UButton
+                    color="neutral"
+                    variant="outline"
+                    :disabled="busy"
+                    :label="t('common.cancel')"
+                    @click="closeCropDialog"
+                />
+                <UButton
+                    :loading="busy"
+                    :disabled="!CropperComponent"
+                    :label="t('common.save')"
+                    @click="onConfirmCrop"
+                />
+            </template>
+        </UModal>
     </div>
 </template>
 
 <script lang="ts" setup>
 import { computed, ref, shallowRef } from 'vue';
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '~/components/ui/dialog';
 import { downscaleAndEncode, validatePhotoFile, type CropResult } from '~/composables/useResumePhoto';
 import type { PhotoShape } from '~/types/resume';
 
@@ -198,9 +208,12 @@ const closeCropDialog = () => {
     cropSrc.value = null;
 };
 
-const onCropDialogToggle = (open: boolean) => {
-    if (!open) closeCropDialog();
-};
+const cropModalOpen = computed({
+    get: () => cropOpen.value,
+    set: (value) => {
+        if (!value) closeCropDialog();
+    },
+});
 
 const onConfirmCrop = async () => {
     if (!cropperRef.value || !resumeStore.activeResumeId) return;

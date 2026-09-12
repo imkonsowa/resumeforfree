@@ -28,7 +28,7 @@ const renderHeaderRows = (data: ResumeData, fontSize: number, isRtl: boolean): s
     const socialLinks = (data?.socialLinks || [])
         .filter(link => link.platform && link.url && link.url.trim() !== '')
         .map((link) => {
-            let linkText = '';
+            let linkText: string;
             if (link.platform === 'other' && link.customLabel) {
                 linkText = link.customLabel;
             }

@@ -73,11 +73,13 @@ watch(
 
 <template>
     <div class="min-h-screen flex flex-col">
-        <UHeader :ui="{ center: 'hidden lg:flex' }">
+        <UHeader
+            :to="localePath('/')"
+            title="ResumeForFree"
+            :ui="{ center: 'hidden lg:flex' }"
+        >
             <template #title>
-                <NuxtLink :to="localePath('/')">
-                    <Wordmark />
-                </NuxtLink>
+                <Wordmark />
             </template>
 
             <UNavigationMenu :items="navItems" />
@@ -96,7 +98,8 @@ watch(
                     :to="REPO_URL"
                     target="_blank"
                     icon="i-lucide-github"
-                    color="neutral" variant="ghost"
+                    color="neutral"
+                    variant="ghost"
                     size="sm"
                     :aria-label="t('navigation.github', 'GitHub')"
                 />
@@ -112,7 +115,8 @@ watch(
                             :to="localePath('/auth/login')"
                             :label="t('navigation.signIn')"
                             icon="i-lucide-log-in"
-                            color="neutral" variant="outline"
+                            color="neutral"
+                            variant="outline"
                             size="sm"
                             class="hidden sm:inline-flex"
                         />
@@ -128,7 +132,8 @@ watch(
                         <UButton
                             :to="localePath('/profile')"
                             icon="i-lucide-user"
-                            color="neutral" variant="ghost"
+                            color="neutral"
+                            variant="ghost"
                             size="sm"
                             class="max-w-[180px]"
                         >
@@ -138,7 +143,8 @@ watch(
                         </UButton>
                         <UButton
                             icon="i-lucide-log-out"
-                            color="neutral" variant="ghost"
+                            color="neutral"
+                            variant="ghost"
                             size="sm"
                             :aria-label="t('navigation.signOut')"
                             @click="handleLogout"
@@ -162,7 +168,8 @@ watch(
                         target="_blank"
                         :label="t('navigation.github', 'GitHub')"
                         icon="i-lucide-github"
-                        color="neutral" variant="ghost"
+                        color="neutral"
+                        variant="ghost"
                         block
                     />
 
@@ -172,7 +179,8 @@ watch(
                                 :to="localePath('/auth/login')"
                                 :label="t('navigation.signIn')"
                                 icon="i-lucide-log-in"
-                                color="neutral" variant="outline"
+                                color="neutral"
+                                variant="outline"
                                 block
                             />
                             <UButton
@@ -188,13 +196,15 @@ watch(
                                 :to="localePath('/profile')"
                                 :label="authStore.currentUser?.name || authStore.currentUser?.email"
                                 icon="i-lucide-user"
-                                color="neutral" variant="ghost"
+                                color="neutral"
+                                variant="ghost"
                                 block
                             />
                             <UButton
                                 :label="t('navigation.signOut')"
                                 icon="i-lucide-log-out"
-                                color="neutral" variant="ghost"
+                                color="neutral"
+                                variant="ghost"
                                 block
                                 @click="handleLogout"
                             />

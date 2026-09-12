@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 const { t, locale: uiLocale, locales } = useI18n();
 const resumeStore = useResumeStore();
 const { hasSeenModal, markModalSeen } = useModalSeen('resumeLangMismatch');
@@ -38,7 +37,10 @@ const dismiss = () => {
             :aria-label="t('common.close')"
             @click="dismiss"
         >
-            <UIcon name="i-lucide-x" class="h-4 w-4" />
+            <UIcon
+                name="i-lucide-x"
+                class="h-4 w-4"
+            />
         </button>
     </div>
 </template>

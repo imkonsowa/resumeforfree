@@ -69,7 +69,7 @@ export const formatExperienceItems = (
 ): string => {
     const inline = config.sections.datesInline === true;
     const formattedItems = sectionContent.map((item) => {
-        let content = '';
+        let content: string;
         if (inline && item.dateText) {
             const titleInner = item.titleContent ? item.titleContent : item.title;
             const titleMarkup = `#text(size: ${fontSize}pt, weight: "bold")[${titleInner}]`;
@@ -103,7 +103,7 @@ export const formatEducationItems = (
 ): string => {
     const inline = config.sections.datesInline === true;
     const formattedItems = sectionContent.map((item) => {
-        let content = '';
+        let content: string;
         if (inline && item.dateText) {
             const titleMarkup = `#text(size: ${fontSize}pt, weight: "bold")[${item.title}]`;
             content = renderInlineTitleAndDate(titleMarkup, item.dateText, fontSize);
@@ -133,7 +133,7 @@ export const formatProjectsItems = (
 ): string => {
     const inline = config.sections.datesInline === true;
     const formattedItems = sectionContent.map((item) => {
-        let content = '';
+        let content: string;
         if (inline && item.dateText) {
             const titleInner = item.titleContent ? item.titleContent : item.title;
             const titleMarkup = `#text(size: ${fontSize}pt, weight: "bold")[${titleInner}]`;
@@ -164,7 +164,7 @@ export const formatCertificatesItems = (
 ): string => {
     const inline = config.sections.datesInline === true;
     const formattedItems = sectionContent.map((item) => {
-        let content = '';
+        let content: string;
         if (inline && item.dateText) {
             const titleInner = item.titleContent ? item.titleContent : item.title;
             const titleMarkup = `#text(size: ${fontSize}pt, weight: "bold")[${titleInner}]`;

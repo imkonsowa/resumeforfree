@@ -32,11 +32,6 @@ const currentLocaleName = computed(() =>
     locales.value.find(l => l.code === locale.value)?.name || locale.value,
 );
 
-/*
- * UDropdownMenu marks the active entry with `checked`, which renders its own
- * indicator — the manual Check icon and ms-6 spacer the shadcn version needed
- * are no longer necessary.
- */
 const menuItems = computed<DropdownMenuItem[]>(() =>
     localesList.value.map(lang => ({
         label: lang.name,

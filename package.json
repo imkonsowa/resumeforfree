@@ -40,7 +40,6 @@
     "@pinia/nuxt": "^1.0.2",
     "@tsndr/cloudflare-worker-jwt": "^3.2.3",
     "@vite-pwa/nuxt": "^1.1.1",
-    "@vuepic/vue-datepicker": "^14.0.0",
     "@vueuse/core": "^14.4.0",
     "bcryptjs": "^3.0.3",
     "drizzle-orm": "^0.45.2",
@@ -63,8 +62,9 @@
     "drizzle-kit": "^0.31.10",
     "eslint": "^10.10.0",
     "happy-dom": "^20.14.5",
-    "typescript": "^7.0.2",
+    "typescript": "^5.9.3",
     "vitest": "^5.0.0",
+    "vue-tsc": "^3.3.11",
     "wrangler": "^4.131.1"
   }
 }

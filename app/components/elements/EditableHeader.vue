@@ -16,13 +16,19 @@
                 class="p-1 text-secondary hover:text-secondary"
                 @click="saveHeader"
             >
-                <UIcon name="i-lucide-check" class="w-4 h-4" />
+                <UIcon
+                    name="i-lucide-check"
+                    class="w-4 h-4"
+                />
             </button>
             <button
                 class="p-1 text-red-600 hover:text-red-700"
                 @click="cancelEdit"
             >
-                <UIcon name="i-lucide-x" class="w-4 h-4" />
+                <UIcon
+                    name="i-lucide-x"
+                    class="w-4 h-4"
+                />
             </button>
         </div>
         <div
@@ -34,14 +40,22 @@
             </h3>
             <UButton
                 class="p-1 h-auto opacity-50 hover:opacity-100"
-                size="sm" color="neutral" variant="ghost"
-                @click="startEdit" icon="i-lucide-square-pen" />
+                size="sm"
+                color="neutral"
+                variant="ghost"
+                icon="i-lucide-square-pen"
+                @click="startEdit"
+            />
             <UButton
                 v-if="canReset"
                 :title="t('common.resetToDefaults')"
                 class="p-1 h-auto opacity-50 hover:opacity-100 text-toned hover:text-highlighted"
-                size="sm" color="neutral" variant="ghost"
-                @click="handleReset" icon="i-lucide-rotate-ccw" />
+                size="sm"
+                color="neutral"
+                variant="ghost"
+                icon="i-lucide-rotate-ccw"
+                @click="handleReset"
+            />
         </div>
     </div>
 </template>

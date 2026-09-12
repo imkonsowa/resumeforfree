@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
-
 interface ApiToken {
     id: string;
     name: string;
@@ -88,77 +86,95 @@ onMounted(loadTokens);
 </script>
 
 <template>
-    <Card>
-        <CardHeader>
-            <CardTitle class="flex items-center gap-2">
-                <UIcon name="i-lucide-key-round" class="w-5 h-5" />
+    <UCard>
+        <template #header>
+            <div class="flex items-center gap-2 text-highlighted font-semibold">
+                <UIcon
+                    name="i-lucide-key-round"
+                    class="size-5"
+                />
                 {{ $t('apiTokens.title') }}
-            </CardTitle>
-            <CardDescription>
-                {{ $t('apiTokens.description') }}
-            </CardDescription>
-        </CardHeader>
-        <CardContent class="space-y-6">
-            <p
-                v-if="error"
-                class="text-sm text-red-600 bg-red-50 border border-red-200 rounded-md p-3"
-            >
-                {{ error }}
-            </p>
-
-            <div
-                v-if="issuedToken"
-                class="rounded-md border border-secondary/30 bg-secondary/10 p-4 space-y-2"
-            >
-                <p class="text-sm font-medium text-secondary">
-                    {{ $t('apiTokens.copyNow') }}
-                </p>
-                <div class="flex items-center gap-2">
-                    <code class="flex-1 text-xs bg-white border border-secondary/30 rounded px-2 py-2 break-all">{{ issuedToken }}</code>
-                    <UButton
-                        size="sm" color="neutral" variant="outline"
-                        @click="copyToken" icon="i-lucide-copy">
-{{ copied ? $t('apiTokens.copied') : $t('common.copy') }}
-</UButton>
-                </div>
             </div>
+            <p class="mt-1 text-muted text-sm">
+                {{ $t('apiTokens.description') }}
+            </p>
+        </template>
+
+        <div class="space-y-6">
+            <UAlert
+                v-if="error"
+                color="error"
+                variant="soft"
+                icon="i-lucide-circle-x"
+                :description="error"
+            />
+
+            <UAlert
+                v-if="issuedToken"
+                color="secondary"
+                variant="soft"
+                icon="i-lucide-key-round"
+                :title="$t('apiTokens.copyNow')"
+            >
+                <template #description>
+                    <div class="flex items-center gap-2 mt-2">
+                        <UKbd
+                            class="flex-1 justify-start font-mono text-xs px-2 py-2 break-all"
+                            :value="issuedToken"
+                        />
+                        <UButton
+                            size="sm"
+                            color="neutral"
+                            variant="outline"
+                            icon="i-lucide-copy"
+                            :label="copied ? $t('apiTokens.copied') : $t('common.copy')"
+                            @click="copyToken"
+                        />
+                    </div>
+                </template>
+            </UAlert>
 
             <div class="grid gap-3 sm:grid-cols-[1fr_auto_auto] sm:items-end">
-                <div class="space-y-1">
-                    <label for="token-name">{{ $t('apiTokens.name') }}</label>
+                <UFormField
+                    name="tokenName"
+                    :label="$t('apiTokens.name')"
+                >
                     <UInput
-                        id="token-name"
                         v-model="newTokenName"
                         :placeholder="$t('apiTokens.namePlaceholder')"
+                        class="w-full"
                     />
-                </div>
-                <div class="space-y-1">
-                    <label for="token-hours">{{ $t('apiTokens.expiresInHours') }}</label>
-                    <UInput
-                        id="token-hours"
-                        v-model.number="newTokenHours"
-                        type="number"
-                        min="1"
-                        max="720"
-                        class="sm:w-28"
-                    />
-                </div>
-                <UButton
-                    :disabled="isCreating"
-                    class="bg-secondary hover:bg-secondary text-white"
-                    @click="createToken"
+                </UFormField>
+                <UFormField
+                    name="tokenHours"
+                    :label="$t('apiTokens.expiresInHours')"
                 >
-                    {{ isCreating ? $t('common.loading') : $t('apiTokens.generate') }}
-                </UButton>
+                    <UInputNumber
+                        v-model="newTokenHours"
+                        :min="1"
+                        :max="720"
+                        class="sm:w-32"
+                    />
+                </UFormField>
+                <UButton
+                    color="secondary"
+                    :loading="isCreating"
+                    :label="$t('apiTokens.generate')"
+                    @click="createToken"
+                />
             </div>
 
             <div class="space-y-2">
-                <p
+                <div
                     v-if="isLoading"
-                    class="text-sm text-muted"
+                    class="space-y-2"
                 >
-                    {{ $t('common.loading') }}
-                </p>
+                    <USkeleton
+                        v-for="n in 2"
+                        :key="n"
+                        class="h-14 w-full"
+                    />
+                </div>
                 <p
                     v-else-if="tokens.length === 0"
                     class="text-sm text-muted"
@@ -182,21 +198,24 @@ onMounted(loadTokens);
                         </p>
                     </div>
                     <div class="flex items-center gap-2 shrink-0">
-                        <span
-                            class="text-xs px-2 py-0.5 rounded-full"
-                            :class="token.active ? 'bg-secondary/15 text-secondary' : 'bg-elevated text-muted'"
-                        >
-                            {{ token.active ? $t('apiTokens.active') : $t('apiTokens.inactive') }}
-                        </span>
+                        <UBadge
+                            :color="token.active ? 'secondary' : 'neutral'"
+                            variant="subtle"
+                            size="sm"
+                            :label="token.active ? $t('apiTokens.active') : $t('apiTokens.inactive')"
+                        />
                         <UButton
                             v-if="token.active"
-                            size="sm" color="neutral" variant="outline"
-                            @click="revokeToken(token.id)" icon="i-lucide-trash-2">
-<span class="sr-only">{{ $t('apiTokens.revoke') }}</span>
-</UButton>
+                            size="sm"
+                            color="error"
+                            variant="ghost"
+                            icon="i-lucide-trash-2"
+                            :aria-label="$t('apiTokens.revoke')"
+                            @click="revokeToken(token.id)"
+                        />
                     </div>
                 </div>
             </div>
-        </CardContent>
-    </Card>
+        </div>
+    </UCard>
 </template>

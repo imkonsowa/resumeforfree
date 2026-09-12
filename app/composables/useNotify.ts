@@ -2,7 +2,6 @@ import type { ToastProps } from '@nuxt/ui';
 
 interface NotifyOptions {
     description?: string;
-    /** Milliseconds. `Infinity` (or 0) keeps the toast until dismissed. */
     duration?: number;
     action?: { label: string; onClick: () => void };
 }
@@ -21,14 +20,6 @@ const ICONS = {
     warning: 'i-lucide-triangle-alert',
 } as const;
 
-/**
- * Thin adapter over Nuxt UI's `useToast`, keeping the
- * `notify.success(message)` shape the app already reads well with.
- *
- * Nuxt UI treats `duration: 0` as "never auto-dismiss", so `Infinity` is
- * translated rather than passed through — it would otherwise be dropped as an
- * invalid number.
- */
 export function useNotify(): Notifier {
     const toast = useToast();
 

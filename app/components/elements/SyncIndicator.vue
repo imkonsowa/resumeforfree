@@ -13,15 +13,24 @@
             :class="indicatorClasses"
         >
             <template v-if="isSyncing">
-                <UIcon name="i-lucide-loader-circle" class="w-4 h-4 animate-spin" />
+                <UIcon
+                    name="i-lucide-loader-circle"
+                    class="w-4 h-4 animate-spin"
+                />
                 <span class="text-sm font-medium">Syncing...</span>
             </template>
             <template v-else-if="showSuccess">
-                <UIcon name="i-lucide-check-circle" class="w-4 h-4" />
+                <UIcon
+                    name="i-lucide-check-circle"
+                    class="w-4 h-4"
+                />
                 <span class="text-sm font-medium">Saved</span>
             </template>
             <template v-else-if="showError">
-                <UIcon name="i-lucide-alert-circle" class="w-4 h-4" />
+                <UIcon
+                    name="i-lucide-alert-circle"
+                    class="w-4 h-4"
+                />
                 <span class="text-sm font-medium">Sync failed</span>
             </template>
         </div>
@@ -29,7 +38,6 @@
 </template>
 
 <script lang="ts" setup>
-
 interface Props {
     isSyncing: boolean;
     lastSyncSuccess: boolean;

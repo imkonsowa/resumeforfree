@@ -1,3 +1,23 @@
+<script lang="ts" setup>
+interface Props {
+    searchQuery: string;
+    resumeCount: number;
+    filteredCount: number;
+}
+
+defineProps<Props>();
+
+defineEmits<{
+    'update:searchQuery': [value: string];
+    'import': [];
+    'export': [];
+    'create': [];
+    'cloudSync': [];
+}>();
+
+const authStore = useAuthStore();
+</script>
+
 <template>
     <div class="flex flex-col lg:flex-row lg:items-center justify-between mb-8 gap-4">
         <div class="flex items-center justify-between">
@@ -17,79 +37,60 @@
                 </ClientOnly>
             </div>
             <UButton
-                class="flex items-center gap-2 lg:hidden"
+                class="lg:hidden"
                 size="sm"
-                @click="$emit('create')" icon="i-lucide-plus">
-<span class="hidden xs:inline">{{ $t('resumes.actions.new') }}</span>
-</UButton>
+                icon="i-lucide-plus"
+                @click="$emit('create')"
+            >
+                <span class="hidden xs:inline">{{ $t('resumes.actions.new') }}</span>
+            </UButton>
         </div>
+
         <div class="flex flex-col sm:flex-row gap-3 sm:items-center">
-            <div class="relative">
-                <UIcon name="i-lucide-search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-dimmed w-4 h-4" />
-                <UInput
-                    :model-value="searchQuery"
-                    class="pl-10 w-full sm:w-64"
-                    :placeholder="$t('resumes.actions.searchPlaceholder')"
-                    @update:model-value="$emit('update:searchQuery', $event)"
-                />
-            </div>
+            <UInput
+                :model-value="searchQuery"
+                icon="i-lucide-search"
+                class="w-full sm:w-64"
+                :placeholder="$t('resumes.actions.searchPlaceholder')"
+                @update:model-value="$emit('update:searchQuery', $event)"
+            />
+
             <div class="flex gap-1 sm:gap-2">
-                <UButton color="neutral" variant="outline"
-                    class="flex items-center gap-1 sm:gap-2"
-                    size="sm"
-                    @click="$emit('import')" icon="i-lucide-upload">
-{{ $t('resumes.actions.import') }}
-</UButton>
                 <UButton
-                    v-if="resumeCount trailing-icon="i-lucide-download">
-0"
+                    color="neutral"
                     variant="outline"
-                    class="flex items-center gap-1 sm:gap-2"
                     size="sm"
+                    icon="i-lucide-upload"
+                    :label="$t('resumes.actions.import')"
+                    @click="$emit('import')"
+                />
+                <UButton
+                    v-if="resumeCount > 0"
+                    color="neutral"
+                    variant="outline"
+                    size="sm"
+                    icon="i-lucide-download"
+                    :label="$t('common.export')"
                     @click="$emit('export')"
-                >
-                    
-                    {{ $t('common.export') }}
-</UButton>
+                />
                 <UButton
-                    v-if="authStore.isLoggedIn && resumeCount trailing-icon="i-lucide-cloud">
-0"
+                    v-if="authStore.isLoggedIn && resumeCount > 0"
+                    color="neutral"
                     variant="outline"
-                    class="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm"
                     size="sm"
+                    icon="i-lucide-cloud"
                     @click="$emit('cloudSync')"
                 >
-                    
                     <span class="sm:hidden">{{ $t('common.sync') }}</span>
                     <span class="hidden sm:inline">{{ $t('resumes.actions.cloudSync') }}</span>
-</UButton>
+                </UButton>
                 <UButton
-                    class="hidden lg:flex items-center gap-2"
-                    @click="$emit('create')" icon="i-lucide-plus">
-{{ $t('resumes.actions.createNew') }}
-</UButton>
+                    class="hidden lg:inline-flex"
+                    icon="i-lucide-plus"
+                    :label="$t('resumes.actions.createNew')"
+                    @click="$emit('create')"
+                />
             </div>
         </div>
     </div>
 </template>
-
-<script lang="ts" setup>
-
-interface Props {
-    searchQuery: string;
-    resumeCount: number;
-    filteredCount: number;
-}
-
-defineProps<Props>();
-
-defineEmits<{
-    'update:searchQuery': [value: string];
-    'import': [];
-    'export': [];
-    'create': [];
-    'cloudSync': [];
-}>();
-
-const authStore = useAuthStore();
-</script>
