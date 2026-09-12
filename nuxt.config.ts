@@ -46,7 +46,7 @@ export default defineNuxtConfig({
     },
 
     colorMode: {
-        preference: 'system',
+        preference: 'light',
         fallback: 'light',
         classSuffix: '',
         storageKey: 'rff-color-mode',
