@@ -1,34 +1,30 @@
 <template>
-    <div class="flex items-center bg-gray-100 rounded-lg p-1">
-        <Button
+    <div class="flex items-center bg-elevated rounded-lg p-1">
+        <UButton
             :disabled="zoomLevel <= minZoom"
             class="h-8 w-8 p-0"
-            size="sm"
-            variant="ghost"
-            @click="zoomOut"
-        >
-            <ZoomOut class="h-4 w-4" />
-            <span class="sr-only">Zoom out</span>
-        </Button>
-        <span class="px-3 text-sm font-medium text-gray-700 min-w-[60px] text-center">
+            size="sm" color="neutral" variant="ghost"
+            @click="zoomOut" icon="i-lucide-zoom-out">
+<span class="sr-only">Zoom out</span>
+</UButton>
+        <span class="px-3 text-sm font-medium text-default min-w-[60px] text-center">
             {{ Math.round(zoomLevel * 100) }}%
         </span>
-        <Button
-            :disabled="zoomLevel >= maxZoom"
+        <UButton
+            :disabled="zoomLevel trailing-icon="i-lucide-zoom-in">
+= maxZoom"
             class="h-8 w-8 p-0"
             size="sm"
             variant="ghost"
             @click="zoomIn"
         >
-            <ZoomIn class="h-4 w-4" />
+            
             <span class="sr-only">Zoom in</span>
-        </Button>
+</UButton>
     </div>
 </template>
 
 <script lang="ts" setup>
-import { ZoomIn, ZoomOut } from 'lucide-vue-next';
-import { Button } from '~/components/ui/button';
 
 interface Props {
     zoomLevel: number;

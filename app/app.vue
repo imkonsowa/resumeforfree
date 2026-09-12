@@ -1,49 +1,34 @@
+<script lang="ts" setup>
+import * as uiLocales from '@nuxt/ui/locale';
+
+const { locale } = useI18n();
+
+/*
+ * UApp propagates `dir` to every Nuxt UI component, so the manual
+ * document.documentElement.dir bookkeeping this file used to do is gone.
+ * useHead still sets lang/dir on <html> for the CSS logical properties and
+ * for assistive tech.
+ */
+const uiLocale = computed(() => uiLocales[locale.value as keyof typeof uiLocales] ?? uiLocales.en);
+
+const localeHead = useLocaleHead({ dir: true, lang: true, seo: true });
+
+useHead(() => ({
+    htmlAttrs: {
+        ...localeHead.value.htmlAttrs,
+        lang: uiLocale.value.code,
+        dir: uiLocale.value.dir,
+    },
+    link: localeHead.value.link ?? [],
+    meta: localeHead.value.meta ?? [],
+}));
+</script>
+
 <template>
-    <div ref="rootEl">
+    <UApp :locale="uiLocale">
         <NuxtRouteAnnouncer />
         <NuxtLayout>
             <NuxtPage />
         </NuxtLayout>
-    </div>
+    </UApp>
 </template>
-
-<script lang="ts" setup>
-const { locale, locales } = useI18n();
-const rootEl = ref<HTMLElement | null>(null);
-
-const localeHead = useLocaleHead({ dir: true, lang: true, seo: true });
-useHead(() => ({
-    htmlAttrs: localeHead.value.htmlAttrs ?? {},
-    link: localeHead.value.link ?? [],
-    meta: localeHead.value.meta ?? [],
-}));
-
-onMounted(() => {
-    updateDirection();
-});
-
-watch(locale, () => {
-    updateDirection();
-});
-
-function updateDirection() {
-    if (import.meta.client) {
-        const localeConfig = locales.value.find(l => l.code === locale.value);
-        const dir = localeConfig?.dir || 'ltr';
-        const isRtl = dir === 'rtl';
-
-        document.documentElement.dir = dir;
-        document.documentElement.lang = locale.value;
-
-        if (rootEl.value) {
-            rootEl.value.dir = dir;
-            if (isRtl) {
-                rootEl.value.classList.add('rtl-mode');
-            }
-            else {
-                rootEl.value.classList.remove('rtl-mode');
-            }
-        }
-    }
-}
-</script>

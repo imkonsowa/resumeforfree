@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-import { Button } from '~/components/ui/button';
-import { Input } from '~/components/ui/input';
-import { Label } from '~/components/ui/label';
-import { Checkbox } from '~/components/ui/checkbox';
-import { Cloud } from 'lucide-vue-next';
 
 interface Props {
     isOpen: boolean;
@@ -80,15 +75,15 @@ const handleEnter = (event: KeyboardEvent) => {
             @click.stop
         >
             <div class="space-y-4">
-                <h3 class="text-lg font-semibold text-gray-900">
+                <h3 class="text-lg font-semibold text-highlighted">
                     {{ $t('resumes.modals.create.title') }}
                 </h3>
                 <div class="space-y-2">
-                    <Label for="resume-name">
+                    <label for="resume-name">
                         {{ $t('resumes.modals.create.resumeName') }}
-                        <span class="text-destructive">*</span>
-                    </Label>
-                    <Input
+                        <span class="text-error">*</span>
+                    </label>
+                    <UInput
                         id="resume-name"
                         ref="nameInputRef"
                         v-model="newResumeName"
@@ -98,33 +93,33 @@ const handleEnter = (event: KeyboardEvent) => {
                     />
                 </div>
                 <div class="space-y-2">
-                    <Label>{{ $t('resumes.modals.create.resumeLanguage') }}</Label>
+                    <label>{{ $t('resumes.modals.create.resumeLanguage') }}</label>
                     <div class="grid grid-cols-2 gap-2">
                         <button
                             v-for="loc in localesList"
                             :key="loc.code"
                             type="button"
-                            class="flex items-center justify-between px-3 py-2 rounded-md border-2 transition-all hover:border-green-600/50 hover:bg-secondary"
-                            :class="selectedLanguage === loc.code ? 'border-green-600 bg-green-50' : 'border-border bg-background'"
+                            class="flex items-center justify-between px-3 py-2 rounded-md border-2 transition-all hover:border-secondary/50 hover:bg-secondary"
+                            :class="selectedLanguage === loc.code ? 'border-secondary bg-secondary/10' : 'border-default bg-default'"
                             @click="selectedLanguage = loc.code"
                         >
                             <span class="text-sm font-medium">{{ loc.name }}</span>
-                            <span class="text-xs text-muted-foreground uppercase">{{ loc.code }}</span>
+                            <span class="text-xs text-muted uppercase">{{ loc.code }}</span>
                         </button>
                     </div>
                 </div>
                 <div class="space-y-3 pt-2">
                     <div class="flex items-center space-x-2">
-                        <Checkbox
+                        <UCheckbox
                             id="navigate-to-builder"
                             v-model="navigateToBuilder"
                         />
-                        <Label
+                        <label
                             class="text-sm font-normal"
                             for="navigate-to-builder"
                         >
                             {{ $t('resumes.modals.create.navigateToBuilder') }}
-                        </Label>
+                        </label>
                     </div>
                     <div
                         v-if="authStore.isLoggedIn"
@@ -134,20 +129,20 @@ const handleEnter = (event: KeyboardEvent) => {
                             v-if="canSaveToCloud"
                             class="flex items-center space-x-2"
                         >
-                            <Checkbox
+                            <UCheckbox
                                 id="save-to-cloud"
                                 v-model="saveToCloud"
                             />
-                            <Label
+                            <label
                                 class="text-sm font-normal flex items-center gap-1"
                                 for="save-to-cloud"
                             >
-                                <Cloud class="w-4 h-4 text-green-700" />
+                                <UIcon name="i-lucide-cloud" class="w-4 h-4 text-secondary" />
                                 {{ $t('resumes.modals.create.saveToCloud') }}
-                            </Label>
+                            </label>
                         </div>
-                        <div class="text-xs text-gray-500 flex items-center gap-1">
-                            <Cloud class="w-3 h-3" />
+                        <div class="text-xs text-muted flex items-center gap-1">
+                            <UIcon name="i-lucide-cloud" class="w-3 h-3" />
                             <span v-if="resumeStore.cloudInfo.remaining > 0">
                                 {{ t('resumes.modals.create.slotsAvailableMessage', {
                                     remaining: resumeStore.cloudInfo.remaining,
@@ -167,20 +162,19 @@ const handleEnter = (event: KeyboardEvent) => {
                     </div>
                 </div>
                 <div class="flex gap-3 pt-4">
-                    <Button
+                    <UButton
                         class="flex-1"
                         :disabled="!isValid"
                         @click="handleConfirm"
                     >
                         {{ $t('resumes.modals.create.createButton') }}
-                    </Button>
-                    <Button
-                        class="flex-1"
-                        variant="outline"
+                    </UButton>
+                    <UButton
+                        class="flex-1" color="neutral" variant="outline"
                         @click="handleCancel"
                     >
                         {{ $t('resumes.modals.cancel') }}
-                    </Button>
+                    </UButton>
                 </div>
             </div>
         </div>

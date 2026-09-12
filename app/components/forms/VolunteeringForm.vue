@@ -13,10 +13,10 @@
                 v-if="templateConfig.canMoveSection('volunteering')"
                 class="flex items-center gap-2"
             >
-                <span class="text-sm text-gray-600">{{ t('forms.volunteering.column') }}:</span>
+                <span class="text-sm text-toned">{{ t('forms.volunteering.column') }}:</span>
                 <select
                     :value="resumeStore.resumeData.sectionPlacement.volunteering"
-                    class="px-2 py-1 text-sm border rounded focus:ring-[3px] focus:ring-green-50 focus:border-green"
+                    class="px-2 py-1 text-sm border rounded focus:ring-[3px] focus:ring-secondary/20 focus:border-secondary"
                     @change="(e) => resumeStore.updateSectionPlacement('volunteering', (e.target as HTMLSelectElement).value as 'left' | 'right')"
                 >
                     <option value="left">
@@ -42,16 +42,16 @@
         >
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div class="space-y-2">
-                    <Label>{{ t('common.position') }}</Label>
-                    <Input
+                    <label>{{ t('common.position') }}</label>
+                    <UInput
                         :model-value="volunteering.position"
                         :placeholder="t('common.position')"
                         @update:model-value="(value) => resumeStore.updateVolunteering(index, 'position', value)"
                     />
                 </div>
                 <div class="space-y-2">
-                    <Label>{{ t('forms.volunteering.organization') }}</Label>
-                    <Input
+                    <label>{{ t('forms.volunteering.organization') }}</label>
+                    <UInput
                         :model-value="volunteering.organization"
                         :placeholder="t('forms.volunteering.organization')"
                         @update:model-value="(value) => resumeStore.updateVolunteering(index, 'organization', value)"
@@ -60,16 +60,16 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div class="space-y-2">
-                    <Label>{{ t('common.location') }}</Label>
-                    <Input
+                    <label>{{ t('common.location') }}</label>
+                    <UInput
                         :model-value="volunteering.location"
                         :placeholder="t('common.locationPlaceholder')"
                         @update:model-value="(value) => resumeStore.updateVolunteering(index, 'location', value)"
                     />
                 </div>
                 <div class="space-y-2">
-                    <Label>{{ t('common.organizationUrl') }}</Label>
-                    <Input
+                    <label>{{ t('common.organizationUrl') }}</label>
+                    <UInput
                         :model-value="volunteering.organizationUrl || ''"
                         :placeholder="t('common.organizationUrl')"
                         @update:model-value="(value) => resumeStore.updateVolunteering(index, 'organizationUrl', value)"
@@ -92,7 +92,7 @@
                         @update:model-value="(value) => resumeStore.updateVolunteering(index, 'endDate', value)"
                     />
                     <div class="flex items-center space-x-2 mt-2">
-                        <Checkbox
+                        <UCheckbox
                             :id="`vol-present-${index}`"
                             :model-value="volunteering.isPresent"
                             @update:model-value="(value) => {
@@ -100,16 +100,16 @@
                                 if (value) resumeStore.updateVolunteering(index, 'endDate', '');
                             }"
                         />
-                        <Label
+                        <label
                             :for="`vol-present-${index}`"
                             class="text-sm"
-                        >{{ t('common.present') }}</Label>
+                        >{{ t('common.present') }}</label>
                     </div>
                 </div>
             </div>
             <div class="space-y-2 mb-4">
-                <Label>{{ t('common.description') }}</Label>
-                <Textarea
+                <label>{{ t('common.description') }}</label>
+                <UTextarea
                     :model-value="volunteering.description"
                     :placeholder="t('common.description')"
                     rows="3"
@@ -118,15 +118,12 @@
             </div>
             <div class="space-y-4">
                 <div class="flex justify-between items-center">
-                    <Label>{{ t('common.achievements') }}</Label>
-                    <Button
-                        size="sm"
-                        variant="outline"
-                        @click="resumeStore.addVolunteeringAchievement(index)"
-                    >
-                        <Plus class="w-4 h-4 mr-2" />
-                        {{ t('common.addAchievement') }}
-                    </Button>
+                    <label>{{ t('common.achievements') }}</label>
+                    <UButton
+                        size="sm" color="neutral" variant="outline"
+                        @click="resumeStore.addVolunteeringAchievement(index)" icon="i-lucide-plus">
+{{ t('common.addAchievement') }}
+</UButton>
                 </div>
                 <div class="space-y-2">
                     <div
@@ -135,7 +132,7 @@
                         class="space-y-2"
                     >
                         <div class="flex items-center space-x-2 md:space-x-2">
-                            <Input
+                            <UInput
                                 :model-value="volunteering.achievements[achievementIndex].text"
                                 class="flex-1"
                                 :placeholder="t('common.achievementPlaceholder')"
@@ -143,55 +140,31 @@
                                 @keydown.enter="resumeStore.addVolunteeringAchievement(index)"
                             />
                             <div class="hidden md:flex items-center space-x-1">
-                                <Button
+                                <UButton
                                     :disabled="achievementIndex === 0"
-                                    size="sm"
-                                    variant="outline"
-                                    @click="resumeStore.moveVolunteeringAchievement(index, achievementIndex, achievementIndex - 1)"
-                                >
-                                    <ChevronUp class="w-4 h-4" />
-                                </Button>
-                                <Button
+                                    size="sm" color="neutral" variant="outline"
+                                    @click="resumeStore.moveVolunteeringAchievement(index, achievementIndex, achievementIndex - 1)" icon="i-lucide-chevron-up" />
+                                <UButton
                                     :disabled="achievementIndex === volunteering.achievements.length - 1"
-                                    size="sm"
-                                    variant="outline"
-                                    @click="resumeStore.moveVolunteeringAchievement(index, achievementIndex, achievementIndex + 1)"
-                                >
-                                    <ChevronDown class="w-4 h-4" />
-                                </Button>
-                                <Button
-                                    size="sm"
-                                    variant="outline"
-                                    @click="resumeStore.removeVolunteeringAchievement(index, achievementIndex)"
-                                >
-                                    <Trash2 class="w-4 h-4" />
-                                </Button>
+                                    size="sm" color="neutral" variant="outline"
+                                    @click="resumeStore.moveVolunteeringAchievement(index, achievementIndex, achievementIndex + 1)" icon="i-lucide-chevron-down" />
+                                <UButton
+                                    size="sm" color="neutral" variant="outline"
+                                    @click="resumeStore.removeVolunteeringAchievement(index, achievementIndex)" icon="i-lucide-trash-2" />
                             </div>
                         </div>
                         <div class="flex md:hidden items-center justify-center space-x-2">
-                            <Button
+                            <UButton
                                 :disabled="achievementIndex === 0"
-                                size="sm"
-                                variant="outline"
-                                @click="resumeStore.moveVolunteeringAchievement(index, achievementIndex, achievementIndex - 1)"
-                            >
-                                <ChevronUp class="w-4 h-4" />
-                            </Button>
-                            <Button
+                                size="sm" color="neutral" variant="outline"
+                                @click="resumeStore.moveVolunteeringAchievement(index, achievementIndex, achievementIndex - 1)" icon="i-lucide-chevron-up" />
+                            <UButton
                                 :disabled="achievementIndex === volunteering.achievements.length - 1"
-                                size="sm"
-                                variant="outline"
-                                @click="resumeStore.moveVolunteeringAchievement(index, achievementIndex, achievementIndex + 1)"
-                            >
-                                <ChevronDown class="w-4 h-4" />
-                            </Button>
-                            <Button
-                                size="sm"
-                                variant="outline"
-                                @click="resumeStore.removeVolunteeringAchievement(index, achievementIndex)"
-                            >
-                                <Trash2 class="w-4 h-4" />
-                            </Button>
+                                size="sm" color="neutral" variant="outline"
+                                @click="resumeStore.moveVolunteeringAchievement(index, achievementIndex, achievementIndex + 1)" icon="i-lucide-chevron-down" />
+                            <UButton
+                                size="sm" color="neutral" variant="outline"
+                                @click="resumeStore.removeVolunteeringAchievement(index, achievementIndex)" icon="i-lucide-trash-2" />
                         </div>
                     </div>
                 </div>
@@ -201,12 +174,6 @@
 </template>
 
 <script lang="ts" setup>
-import { Button } from '~/components/ui/button';
-import { Input } from '~/components/ui/input';
-import { Textarea } from '~/components/ui/textarea';
-import { Label } from '~/components/ui/label';
-import { Checkbox } from '~/components/ui/checkbox';
-import { ChevronDown, ChevronUp, Plus, Trash2 } from 'lucide-vue-next';
 import MonthYearPicker from '~/components/elements/MonthYearPicker.vue';
 import FormCard from '~/components/elements/FormCard.vue';
 import FormContainer from '~/components/elements/FormContainer.vue';

@@ -1,46 +1,43 @@
 <template>
     <div class="text-center py-16">
         <div v-if="type === 'no-resumes'">
-            <FileText class="w-24 h-24 text-gray-300 mx-auto mb-4" />
-            <h2 class="text-2xl font-semibold text-gray-900 mb-2">
+            <UIcon name="i-lucide-file-text" class="w-24 h-24 text-dimmed mx-auto mb-4" />
+            <h2 class="text-2xl font-semibold text-highlighted mb-2">
                 {{ $t('resumes.empty.noResumes') }}
             </h2>
-            <p class="text-gray-600 mb-6">
+            <p class="text-toned mb-6">
                 {{ $t('resumes.empty.createFirst') }}
             </p>
-            <Button
+            <UButton
                 size="lg"
                 @click="$emit('create')"
             >
                 {{ $t('resumes.empty.createFirstButton') }}
-            </Button>
+            </UButton>
         </div>
         <div v-else-if="type === 'no-search-results'">
-            <Search class="w-24 h-24 text-gray-300 mx-auto mb-4" />
-            <h2 class="text-2xl font-semibold text-gray-900 mb-2">
+            <UIcon name="i-lucide-search" class="w-24 h-24 text-dimmed mx-auto mb-4" />
+            <h2 class="text-2xl font-semibold text-highlighted mb-2">
                 {{ $t('resumes.empty.noResults') }}
             </h2>
-            <p class="text-gray-600 mb-6">
+            <p class="text-toned mb-6">
                 {{ $t('resumes.empty.noResultsMessage') }} "{{ searchQuery }}"
             </p>
             <div class="flex gap-3 justify-center">
-                <Button
-                    variant="outline"
+                <UButton color="neutral" variant="outline"
                     @click="$emit('clear-search')"
                 >
                     {{ $t('resumes.empty.clearSearch') }}
-                </Button>
-                <Button @click="$emit('create')">
+                </UButton>
+                <UButton @click="$emit('create')">
                     {{ $t('resumes.empty.createNew') }}
-                </Button>
+                </UButton>
             </div>
         </div>
     </div>
 </template>
 
 <script lang="ts" setup>
-import { Button } from '~/components/ui/button';
-import { FileText, Search } from 'lucide-vue-next';
 
 interface Props {
     type: 'no-resumes' | 'no-search-results';

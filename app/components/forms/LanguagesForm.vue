@@ -13,10 +13,10 @@
                 v-if="templateConfig.canMoveSection('languages')"
                 class="flex items-center gap-2"
             >
-                <span class="text-sm text-gray-600">{{ t('forms.languages.column') }}:</span>
+                <span class="text-sm text-toned">{{ t('forms.languages.column') }}:</span>
                 <select
                     :value="resumeStore.resumeData.sectionPlacement.languages"
-                    class="px-2 py-1 text-sm border rounded focus:ring-[3px] focus:ring-green-50 focus:border-green"
+                    class="px-2 py-1 text-sm border rounded focus:ring-[3px] focus:ring-secondary/20 focus:border-secondary"
                     @change="(e) => resumeStore.updateSectionPlacement('languages', (e.target as HTMLSelectElement).value as 'left' | 'right')"
                 >
                     <option value="left">
@@ -42,8 +42,8 @@
         >
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="space-y-2">
-                    <Label :for="`language-name-${index}`">{{ t('forms.languages.languageName') }}</Label>
-                    <Input
+                    <label :for="`language-name-${index}`">{{ t('forms.languages.languageName') }}</label>
+                    <UInput
                         :id="`language-name-${index}`"
                         :model-value="language.name"
                         :placeholder="t('forms.languages.languageName')"
@@ -51,11 +51,11 @@
                     />
                 </div>
                 <div class="space-y-2">
-                    <Label :for="`language-proficiency-${index}`">{{ t('forms.languages.proficiency') }}</Label>
+                    <label :for="`language-proficiency-${index}`">{{ t('forms.languages.proficiency') }}</label>
                     <select
                         :id="`language-proficiency-${index}`"
                         :value="language.proficiency"
-                        class="w-full px-3 py-2 border rounded-md border-gray-300 shadow-sm focus:border-green focus:ring-green-50 focus:ring-[3px]"
+                        class="w-full px-3 py-2 border rounded-md border-accented shadow-sm focus:border-secondary focus:ring-secondary/20 focus:ring-[3px]"
                         @change="(e) => resumeStore.updateLanguage(index, 'proficiency', (e.target as HTMLSelectElement).value)"
                     >
                         <option value="">
@@ -96,8 +96,6 @@
 </template>
 
 <script lang="ts" setup>
-import { Input } from '~/components/ui/input';
-import { Label } from '~/components/ui/label';
 import FormContainer from '~/components/elements/FormContainer.vue';
 import FormCard from '~/components/elements/FormCard.vue';
 import ConfirmationModal from '~/components/elements/ConfirmationModal.vue';

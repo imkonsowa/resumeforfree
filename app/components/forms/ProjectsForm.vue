@@ -13,10 +13,10 @@
                 v-if="templateConfig.canMoveSection('projects')"
                 class="flex items-center gap-2"
             >
-                <span class="text-sm text-gray-600">{{ t('forms.projects.column') }}:</span>
+                <span class="text-sm text-toned">{{ t('forms.projects.column') }}:</span>
                 <select
                     :value="resumeStore.resumeData.sectionPlacement.projects"
-                    class="px-2 py-1 text-sm border rounded focus:ring-[3px] focus:ring-green-50 focus:border-green"
+                    class="px-2 py-1 text-sm border rounded focus:ring-[3px] focus:ring-secondary/20 focus:border-secondary"
                     @change="(e) => resumeStore.updateSectionPlacement('projects', (e.target as HTMLSelectElement).value as 'left' | 'right')"
                 >
                     <option value="left">
@@ -42,8 +42,8 @@
         >
             <div class="space-y-4">
                 <div class="space-y-2">
-                    <Label :for="`project-title-${index}`">{{ t('forms.projects.projectTitle') }}</Label>
-                    <Input
+                    <label :for="`project-title-${index}`">{{ t('forms.projects.projectTitle') }}</label>
+                    <UInput
                         :id="`project-title-${index}`"
                         :model-value="project.title"
                         :placeholder="t('forms.projects.projectTitle')"
@@ -51,8 +51,8 @@
                     />
                 </div>
                 <div class="space-y-2">
-                    <Label :for="`project-description-${index}`">{{ t('common.description') }}</Label>
-                    <Textarea
+                    <label :for="`project-description-${index}`">{{ t('common.description') }}</label>
+                    <UTextarea
                         :id="`project-description-${index}`"
                         :model-value="project.description"
                         :placeholder="t('common.description')"
@@ -76,7 +76,7 @@
                             @update:model-value="(value) => resumeStore.updateProject(index, 'endDate', value)"
                         />
                         <div class="flex items-center space-x-2 mt-2">
-                            <Checkbox
+                            <UCheckbox
                                 :id="`project-present-${index}`"
                                 :model-value="project.isPresent"
                                 @update:model-value="(value) => {
@@ -84,29 +84,26 @@
                                     if (value) resumeStore.updateProject(index, 'endDate', '');
                                 }"
                             />
-                            <Label
+                            <label
                                 :for="`project-present-${index}`"
                                 class="text-sm"
-                            >{{ t('common.present') }}</Label>
+                            >{{ t('common.present') }}</label>
                         </div>
                     </div>
                 </div>
                 <div class="space-y-2">
                     <div class="flex items-center justify-between">
-                        <Label>{{ t('forms.projects.links') }}</Label>
-                        <Button
-                            type="button"
-                            variant="outline"
+                        <label>{{ t('forms.projects.links') }}</label>
+                        <UButton
+                            type="button" color="neutral" variant="outline"
                             size="sm"
-                            @click="resumeStore.addProjectLink(index)"
-                        >
-                            <Plus class="w-3.5 h-3.5 me-1" />
-                            {{ t('forms.projects.addLink') }}
-                        </Button>
+                            @click="resumeStore.addProjectLink(index)" icon="i-lucide-plus">
+{{ t('forms.projects.addLink') }}
+</UButton>
                     </div>
                     <div
                         v-if="!project.links?.length"
-                        class="text-xs text-gray-500"
+                        class="text-xs text-muted"
                     >
                         {{ t('forms.projects.emptyLinks') }}
                     </div>
@@ -115,42 +112,36 @@
                         :key="linkIndex"
                         class="flex items-start gap-2"
                     >
-                        <Input
+                        <UInput
                             :model-value="link.label"
                             :placeholder="t('forms.projects.linkLabel')"
                             class="flex-1 md:max-w-[180px]"
                             @update:model-value="(value) => resumeStore.updateProjectLink(index, linkIndex, 'label', String(value))"
                         />
-                        <Input
+                        <UInput
                             :model-value="link.url"
                             :placeholder="t('forms.projects.linkUrl')"
                             type="url"
                             class="flex-1"
                             @update:model-value="(value) => resumeStore.updateProjectLink(index, linkIndex, 'url', String(value))"
                         />
-                        <Button
-                            type="button"
-                            variant="ghost"
+                        <UButton
+                            type="button" color="neutral" variant="ghost"
                             size="sm"
                             class="text-red-600 hover:text-red-700"
-                            @click="resumeStore.removeProjectLink(index, linkIndex)"
-                        >
-                            <Trash2 class="w-4 h-4" />
-                            <span class="sr-only">{{ t('forms.projects.removeLink') }}</span>
-                        </Button>
+                            @click="resumeStore.removeProjectLink(index, linkIndex)" icon="i-lucide-trash-2">
+<span class="sr-only">{{ t('forms.projects.removeLink') }}</span>
+</UButton>
                     </div>
                 </div>
                 <div class="space-y-2">
                     <div class="flex items-center justify-between">
-                        <Label>{{ t('common.achievements') }}</Label>
-                        <Button
-                            size="sm"
-                            variant="outline"
-                            @click="resumeStore.addProjectAchievement(index)"
-                        >
-                            <Plus class="w-4 h-4 me-2" />
-                            {{ t('common.addAchievement') }}
-                        </Button>
+                        <label>{{ t('common.achievements') }}</label>
+                        <UButton
+                            size="sm" color="neutral" variant="outline"
+                            @click="resumeStore.addProjectAchievement(index)" icon="i-lucide-plus">
+{{ t('common.addAchievement') }}
+</UButton>
                     </div>
                     <div
                         v-for="(_, achievementIndex) in project.achievements || []"
@@ -158,7 +149,7 @@
                         class="space-y-2"
                     >
                         <div class="flex items-center gap-2">
-                            <Input
+                            <UInput
                                 :model-value="project.achievements[achievementIndex].text"
                                 class="flex-1"
                                 :placeholder="t('common.achievementPlaceholder')"
@@ -166,29 +157,17 @@
                                 @keydown.enter="resumeStore.addProjectAchievement(index)"
                             />
                             <div class="flex items-center gap-1">
-                                <Button
+                                <UButton
                                     :disabled="achievementIndex === 0"
-                                    size="sm"
-                                    variant="outline"
-                                    @click="resumeStore.moveProjectAchievement(index, achievementIndex, achievementIndex - 1)"
-                                >
-                                    <ChevronUp class="w-4 h-4" />
-                                </Button>
-                                <Button
+                                    size="sm" color="neutral" variant="outline"
+                                    @click="resumeStore.moveProjectAchievement(index, achievementIndex, achievementIndex - 1)" icon="i-lucide-chevron-up" />
+                                <UButton
                                     :disabled="achievementIndex === (project.achievements.length - 1)"
-                                    size="sm"
-                                    variant="outline"
-                                    @click="resumeStore.moveProjectAchievement(index, achievementIndex, achievementIndex + 1)"
-                                >
-                                    <ChevronDown class="w-4 h-4" />
-                                </Button>
-                                <Button
-                                    size="sm"
-                                    variant="outline"
-                                    @click="resumeStore.removeProjectAchievement(index, achievementIndex)"
-                                >
-                                    <Trash2 class="w-4 h-4" />
-                                </Button>
+                                    size="sm" color="neutral" variant="outline"
+                                    @click="resumeStore.moveProjectAchievement(index, achievementIndex, achievementIndex + 1)" icon="i-lucide-chevron-down" />
+                                <UButton
+                                    size="sm" color="neutral" variant="outline"
+                                    @click="resumeStore.removeProjectAchievement(index, achievementIndex)" icon="i-lucide-trash-2" />
                             </div>
                         </div>
                     </div>
@@ -208,12 +187,6 @@
 </template>
 
 <script lang="ts" setup>
-import { ChevronDown, ChevronUp, Plus, Trash2 } from 'lucide-vue-next';
-import { Input } from '~/components/ui/input';
-import { Label } from '~/components/ui/label';
-import { Textarea } from '~/components/ui/textarea';
-import { Button } from '~/components/ui/button';
-import { Checkbox } from '~/components/ui/checkbox';
 import MonthYearPicker from '~/components/elements/MonthYearPicker.vue';
 import FormContainer from '~/components/elements/FormContainer.vue';
 import FormCard from '~/components/elements/FormCard.vue';

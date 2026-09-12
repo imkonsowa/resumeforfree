@@ -13,51 +13,41 @@
                 @keyup.escape="cancelEdit"
             >
             <button
-                class="p-1 text-green-600 hover:text-green-700"
+                class="p-1 text-secondary hover:text-secondary"
                 @click="saveHeader"
             >
-                <Check class="w-4 h-4" />
+                <UIcon name="i-lucide-check" class="w-4 h-4" />
             </button>
             <button
                 class="p-1 text-red-600 hover:text-red-700"
                 @click="cancelEdit"
             >
-                <X class="w-4 h-4" />
+                <UIcon name="i-lucide-x" class="w-4 h-4" />
             </button>
         </div>
         <div
             v-else
             class="flex items-center gap-2"
         >
-            <h3 class="text-lg font-semibold text-gray-900">
+            <h3 class="text-lg font-semibold text-highlighted">
                 {{ value }}
             </h3>
-            <Button
+            <UButton
                 class="p-1 h-auto opacity-50 hover:opacity-100"
-                size="sm"
-                variant="ghost"
-                @click="startEdit"
-            >
-                <Edit2 class="w-4 h-4" />
-            </Button>
-            <Button
+                size="sm" color="neutral" variant="ghost"
+                @click="startEdit" icon="i-lucide-square-pen" />
+            <UButton
                 v-if="canReset"
                 :title="t('common.resetToDefaults')"
-                class="p-1 h-auto opacity-50 hover:opacity-100 text-ink-3 hover:text-ink"
-                size="sm"
-                variant="ghost"
-                @click="handleReset"
-            >
-                <RotateCcw class="w-4 h-4" />
-            </Button>
+                class="p-1 h-auto opacity-50 hover:opacity-100 text-toned hover:text-highlighted"
+                size="sm" color="neutral" variant="ghost"
+                @click="handleReset" icon="i-lucide-rotate-ccw" />
         </div>
     </div>
 </template>
 
 <script lang="ts" setup>
 import { computed, nextTick, ref } from 'vue';
-import { Button } from '~/components/ui/button';
-import { Check, Edit2, RotateCcw, X } from 'lucide-vue-next';
 import type { SectionHeaders } from '~/types/resume';
 import { SECTION_TRANSLATION_MAP } from '~/composables/useSectionHeader';
 

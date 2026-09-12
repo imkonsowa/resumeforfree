@@ -1,13 +1,9 @@
 <script lang="ts" setup>
-import { Button } from '~/components/ui/button';
-import { Input } from '~/components/ui/input';
-import { Label } from '~/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
-import { Separator } from '~/components/ui/separator';
-import { User, Lock, Eye, EyeOff, KeyRound } from 'lucide-vue-next';
 import ApiTokensPanel from '~/components/elements/ApiTokensPanel.vue';
 
 const { t } = useI18n();
+const notify = useNotify();
 const localePath = useLocalePath();
 const authStore = useAuthStore();
 
@@ -58,8 +54,6 @@ const handleChangePassword = async () => {
         return;
     }
 
-    const { toast } = await import('vue-sonner');
-
     try {
         isChangingPassword.value = true;
 
@@ -75,13 +69,13 @@ const handleChangePassword = async () => {
             confirmPassword: '',
         };
 
-        toast.success(t('auth.passwordChangedSuccess'));
+        notify.success(t('auth.passwordChangedSuccess'));
     }
     catch (error: unknown) {
         console.error('Password change error:', error);
         const errorMessage = (error as Error)?.message || t('auth.passwordChangeError');
         passwordErrors.value.push(errorMessage);
-        toast.error(errorMessage);
+        notify.error(errorMessage);
     }
     finally {
         isChangingPassword.value = false;
@@ -100,14 +94,14 @@ useHead({
 </script>
 
 <template>
-    <div class="min-h-screen bg-gray-50">
+    <div class="min-h-screen bg-muted">
         <div class="container mx-auto px-4 py-8">
             <div class="max-w-6xl mx-auto">
                 <div class="mb-8">
-                    <h1 class="text-3xl font-bold text-gray-900 mb-2">
+                    <h1 class="text-3xl font-bold text-highlighted mb-2">
                         {{ $t('profile.title') }}
                     </h1>
-                    <p class="text-gray-600">
+                    <p class="text-toned">
                         {{ $t('profile.description') }}
                     </p>
                 </div>
@@ -119,26 +113,26 @@ useHead({
                                 <nav class="space-y-1">
                                     <button
                                         class="w-full flex items-center gap-3 px-3 py-2 text-sm rounded-md transition-colors text-left"
-                                        :class="activeSection === 'personal' ? 'bg-green-50 text-green-ink font-medium' : 'text-gray-700 hover:bg-gray-100'"
+                                        :class="activeSection === 'personal' ? 'bg-secondary/10 text-secondary font-medium' : 'text-default hover:bg-elevated'"
                                         @click="activeSection = 'personal'"
                                     >
-                                        <User class="w-4 h-4" />
+                                        <UIcon name="i-lucide-user" class="w-4 h-4" />
                                         {{ $t('profile.personalInformation') }}
                                     </button>
                                     <button
                                         class="w-full flex items-center gap-3 px-3 py-2 text-sm rounded-md transition-colors text-left"
-                                        :class="activeSection === 'password' ? 'bg-green-50 text-green-ink font-medium' : 'text-gray-700 hover:bg-gray-100'"
+                                        :class="activeSection === 'password' ? 'bg-secondary/10 text-secondary font-medium' : 'text-default hover:bg-elevated'"
                                         @click="activeSection = 'password'"
                                     >
-                                        <Lock class="w-4 h-4" />
+                                        <UIcon name="i-lucide-lock" class="w-4 h-4" />
                                         {{ $t('auth.changePassword') }}
                                     </button>
                                     <button
                                         class="w-full flex items-center gap-3 px-3 py-2 text-sm rounded-md transition-colors text-left"
-                                        :class="activeSection === 'tokens' ? 'bg-green-50 text-green-ink font-medium' : 'text-gray-700 hover:bg-gray-100'"
+                                        :class="activeSection === 'tokens' ? 'bg-secondary/10 text-secondary font-medium' : 'text-default hover:bg-elevated'"
                                         @click="activeSection = 'tokens'"
                                     >
-                                        <KeyRound class="w-4 h-4" />
+                                        <UIcon name="i-lucide-key-round" class="w-4 h-4" />
                                         {{ $t('apiTokens.title') }}
                                     </button>
                                 </nav>
@@ -150,7 +144,7 @@ useHead({
                         <Card v-if="activeSection === 'personal'">
                             <CardHeader>
                                 <CardTitle class="flex items-center gap-2">
-                                    <User class="w-5 h-5" />
+                                    <UIcon name="i-lucide-user" class="w-5 h-5" />
                                     {{ $t('profile.personalInformation') }}
                                 </CardTitle>
                                 <CardDescription>
@@ -160,37 +154,37 @@ useHead({
                             <CardContent class="space-y-8">
                                 <div class="space-y-6">
                                     <div>
-                                        <Label
+                                        <label
                                             for="name"
-                                            class="text-sm font-medium text-gray-700 mb-2 block"
-                                        >{{ $t('common.name') }}</Label>
-                                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200 text-base">
+                                            class="text-sm font-medium text-default mb-2 block"
+                                        >{{ $t('common.name') }}</label>
+                                        <div class="p-4 bg-muted rounded-lg border border-default text-base">
                                             {{ authStore.currentUser?.name || $t('profile.notProvided') }}
                                         </div>
                                     </div>
                                     <div>
-                                        <Label
+                                        <label
                                             for="email"
-                                            class="text-sm font-medium text-gray-700 mb-2 block"
-                                        >{{ $t('common.emailAddress') }}</Label>
-                                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200 text-base">
+                                            class="text-sm font-medium text-default mb-2 block"
+                                        >{{ $t('common.emailAddress') }}</label>
+                                        <div class="p-4 bg-muted rounded-lg border border-default text-base">
                                             {{ authStore.currentUser?.email }}
                                         </div>
                                     </div>
                                 </div>
 
-                                <Separator />
+                                <USeparator />
 
-                                <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                                <div class="bg-secondary/10 border border-secondary/30 rounded-lg p-4">
                                     <div class="flex items-start gap-3">
-                                        <div class="w-5 h-5 text-green-700 mt-0.5">
+                                        <div class="w-5 h-5 text-secondary mt-0.5">
                                             ℹ️
                                         </div>
                                         <div>
-                                            <h4 class="text-sm font-medium text-green-ink mb-1">
+                                            <h4 class="text-sm font-medium text-secondary mb-1">
                                                 {{ $t('profile.accountInformation') }}
                                             </h4>
-                                            <p class="text-sm text-green-700">
+                                            <p class="text-sm text-secondary">
                                                 {{ $t('profile.accountInfoDescription') }}
                                             </p>
                                         </div>
@@ -202,7 +196,7 @@ useHead({
                         <Card v-if="activeSection === 'password'">
                             <CardHeader>
                                 <CardTitle class="flex items-center gap-2">
-                                    <Lock class="w-5 h-5" />
+                                    <UIcon name="i-lucide-lock" class="w-5 h-5" />
                                     {{ $t('auth.changePassword') }}
                                 </CardTitle>
                                 <CardDescription>
@@ -239,12 +233,12 @@ useHead({
                                     </div>
 
                                     <div>
-                                        <Label
+                                        <label
                                             for="current-password"
-                                            class="text-sm font-medium text-gray-700"
-                                        >{{ $t('auth.currentPassword') }}</Label>
+                                            class="text-sm font-medium text-default"
+                                        >{{ $t('auth.currentPassword') }}</label>
                                         <div class="relative mt-1">
-                                            <Input
+                                            <UInput
                                                 id="current-password"
                                                 v-model="passwordForm.currentPassword"
                                                 :type="showCurrentPassword ? 'text' : 'password'"
@@ -258,25 +252,25 @@ useHead({
                                                 class="absolute inset-y-0 right-0 pr-3 flex items-center"
                                                 @click="showCurrentPassword = !showCurrentPassword"
                                             >
-                                                <Eye
+                                                <UIcon name="i-lucide-eye"
                                                     v-if="!showCurrentPassword"
-                                                    class="w-4 h-4 text-gray-400"
+                                                    class="w-4 h-4 text-dimmed"
                                                 />
-                                                <EyeOff
+                                                <UIcon name="i-lucide-eye-off"
                                                     v-else
-                                                    class="w-4 h-4 text-gray-400"
+                                                    class="w-4 h-4 text-dimmed"
                                                 />
                                             </button>
                                         </div>
                                     </div>
 
                                     <div>
-                                        <Label
+                                        <label
                                             for="new-password"
-                                            class="text-sm font-medium text-gray-700"
-                                        >{{ $t('auth.newPassword') }}</Label>
+                                            class="text-sm font-medium text-default"
+                                        >{{ $t('auth.newPassword') }}</label>
                                         <div class="relative mt-1">
-                                            <Input
+                                            <UInput
                                                 id="new-password"
                                                 v-model="passwordForm.newPassword"
                                                 :type="showNewPassword ? 'text' : 'password'"
@@ -291,28 +285,28 @@ useHead({
                                                 class="absolute inset-y-0 right-0 pr-3 flex items-center"
                                                 @click="showNewPassword = !showNewPassword"
                                             >
-                                                <Eye
+                                                <UIcon name="i-lucide-eye"
                                                     v-if="!showNewPassword"
-                                                    class="w-4 h-4 text-gray-400"
+                                                    class="w-4 h-4 text-dimmed"
                                                 />
-                                                <EyeOff
+                                                <UIcon name="i-lucide-eye-off"
                                                     v-else
-                                                    class="w-4 h-4 text-gray-400"
+                                                    class="w-4 h-4 text-dimmed"
                                                 />
                                             </button>
                                         </div>
-                                        <p class="mt-1 text-xs text-gray-500">
+                                        <p class="mt-1 text-xs text-muted">
                                             {{ $t('auth.passwordMinLengthHint') }}
                                         </p>
                                     </div>
 
                                     <div>
-                                        <Label
+                                        <label
                                             for="confirm-password"
-                                            class="text-sm font-medium text-gray-700"
-                                        >{{ $t('auth.confirmNewPassword') }}</Label>
+                                            class="text-sm font-medium text-default"
+                                        >{{ $t('auth.confirmNewPassword') }}</label>
                                         <div class="relative mt-1">
-                                            <Input
+                                            <UInput
                                                 id="confirm-password"
                                                 v-model="passwordForm.confirmPassword"
                                                 :type="showConfirmPassword ? 'text' : 'password'"
@@ -326,35 +320,32 @@ useHead({
                                                 class="absolute inset-y-0 right-0 pr-3 flex items-center"
                                                 @click="showConfirmPassword = !showConfirmPassword"
                                             >
-                                                <Eye
+                                                <UIcon name="i-lucide-eye"
                                                     v-if="!showConfirmPassword"
-                                                    class="w-4 h-4 text-gray-400"
+                                                    class="w-4 h-4 text-dimmed"
                                                 />
-                                                <EyeOff
+                                                <UIcon name="i-lucide-eye-off"
                                                     v-else
-                                                    class="w-4 h-4 text-gray-400"
+                                                    class="w-4 h-4 text-dimmed"
                                                 />
                                             </button>
                                         </div>
                                     </div>
 
                                     <div class="flex gap-3 pt-4">
-                                        <Button
+                                        <UButton
                                             type="submit"
                                             :disabled="isChangingPassword"
-                                            class="flex items-center gap-2"
-                                        >
-                                            <Lock class="w-4 h-4" />
-                                            {{ isChangingPassword ? $t('auth.changingPassword') : $t('auth.changePassword') }}
-                                        </Button>
-                                        <Button
-                                            type="button"
-                                            variant="outline"
+                                            class="flex items-center gap-2" icon="i-lucide-lock">
+{{ isChangingPassword ? $t('auth.changingPassword') : $t('auth.changePassword') }}
+</UButton>
+                                        <UButton
+                                            type="button" color="neutral" variant="outline"
                                             :disabled="isChangingPassword"
                                             @click="passwordForm = { currentPassword: '', newPassword: '', confirmPassword: '' }; passwordErrors = []"
                                         >
                                             {{ $t('auth.clearForm') }}
-                                        </Button>
+                                        </UButton>
                                     </div>
                                 </form>
                             </CardContent>

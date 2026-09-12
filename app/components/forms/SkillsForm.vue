@@ -13,10 +13,10 @@
                 v-if="templateConfig.canMoveSection('skills')"
                 class="flex items-center gap-2"
             >
-                <span class="text-sm text-gray-600">{{ t('forms.skills.column') }}:</span>
+                <span class="text-sm text-toned">{{ t('forms.skills.column') }}:</span>
                 <select
                     :value="resumeStore.resumeData.sectionPlacement.skills"
-                    class="px-2 py-1 text-sm border rounded focus:ring-[3px] focus:ring-green-50 focus:border-green"
+                    class="px-2 py-1 text-sm border rounded focus:ring-[3px] focus:ring-secondary/20 focus:border-secondary"
                     @change="(e) => resumeStore.updateSectionPlacement('skills', (e.target as HTMLSelectElement).value as 'left' | 'right')"
                 >
                     <option value="left">
@@ -42,16 +42,16 @@
         >
             <div class="space-y-4">
                 <div class="space-y-2">
-                    <Label>{{ t('forms.skills.skillTitle') }}</Label>
-                    <Input
+                    <label>{{ t('forms.skills.skillTitle') }}</label>
+                    <UInput
                         :model-value="skill.title"
                         :placeholder="t('forms.skills.skillTitle')"
                         @update:model-value="(value) => resumeStore.updateSkill(index, 'title', value)"
                     />
                 </div>
                 <div class="space-y-2">
-                    <Label>{{ t('common.description') }}</Label>
-                    <Textarea
+                    <label>{{ t('common.description') }}</label>
+                    <UTextarea
                         :model-value="skill.description"
                         :placeholder="t('common.description')"
                         rows="3"
@@ -64,9 +64,6 @@
 </template>
 
 <script lang="ts" setup>
-import { Input } from '~/components/ui/input';
-import { Label } from '~/components/ui/label';
-import { Textarea } from '~/components/ui/textarea';
 import FormCard from '~/components/elements/FormCard.vue';
 import FormContainer from '~/components/elements/FormContainer.vue';
 

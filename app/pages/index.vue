@@ -1,18 +1,5 @@
 <script lang="ts" setup>
 import {
-    ArrowRight,
-    Check,
-    ChevronDown,
-    Cloud,
-    Download,
-    Layers,
-    Lock,
-    Shield,
-    WifiOff,
-    X,
-    Zap,
-} from 'lucide-vue-next';
-import {
     createFAQStructuredData,
     createOrganizationStructuredData,
     createSoftwareApplicationStructuredData,
@@ -70,14 +57,14 @@ const comparisonRows = [
 ] as const;
 
 const featureItems = [
-    { icon: Check, title: t('homepage.features.free.title'), body: t('homepage.features.free.description') },
-    { icon: Lock, title: t('homepage.features.privacy.title'), body: t('homepage.features.privacy.description') },
-    { icon: Shield, title: t('homepage.features.noRegistration.title'), body: t('homepage.features.noRegistration.description') },
-    { icon: Download, title: t('homepage.features.unlimitedDownloads.title'), body: t('homepage.features.unlimitedDownloads.description') },
-    { icon: Layers, title: t('homepage.features.unlimitedResumes.title'), body: t('homepage.features.unlimitedResumes.description') },
-    { icon: WifiOff, title: t('homepage.features.offline.title'), body: t('homepage.features.offline.description') },
-    { icon: Zap, title: t('homepage.features.atsOptimized.title'), body: t('homepage.features.atsOptimized.description') },
-    { icon: Cloud, title: t('homepage.features.cloudSync.title'), body: t('homepage.features.cloudSync.description') },
+    { icon: 'i-lucide-check', title: t('homepage.features.free.title'), body: t('homepage.features.free.description') },
+    { icon: 'i-lucide-lock', title: t('homepage.features.privacy.title'), body: t('homepage.features.privacy.description') },
+    { icon: 'i-lucide-shield', title: t('homepage.features.noRegistration.title'), body: t('homepage.features.noRegistration.description') },
+    { icon: 'i-lucide-download', title: t('homepage.features.unlimitedDownloads.title'), body: t('homepage.features.unlimitedDownloads.description') },
+    { icon: 'i-lucide-layers', title: t('homepage.features.unlimitedResumes.title'), body: t('homepage.features.unlimitedResumes.description') },
+    { icon: 'i-lucide-wifi-off', title: t('homepage.features.offline.title'), body: t('homepage.features.offline.description') },
+    { icon: 'i-lucide-zap', title: t('homepage.features.atsOptimized.title'), body: t('homepage.features.atsOptimized.description') },
+    { icon: 'i-lucide-cloud', title: t('homepage.features.cloudSync.title'), body: t('homepage.features.cloudSync.description') },
 ] as const;
 
 useHead({
@@ -169,67 +156,67 @@ useHead({
 
 <template>
     <main>
-        <section class="border-b border-rule py-[72px] md:py-[88px]">
+        <section class="border-b border-default py-[72px] md:py-[88px]">
             <div class="max-w-[1180px] mx-auto px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-16 items-center">
                     <div>
-                        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-50 border border-green-200 text-xs font-medium text-green-700 mb-5">
-                            <span class="w-1.5 h-1.5 rounded-full bg-green shrink-0" />
+                        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/30 text-xs font-medium text-secondary mb-5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0" />
                             {{ formatNumber(stats.users) }} {{ $t('homepage.hero.stat1Label') }} · {{ formatNumber(stats.downloads) }} {{ $t('homepage.hero.stat2Label') }}
                         </div>
 
-                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight text-ink">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight text-highlighted">
                             {{ $t('homepage.hero.title') }}
                         </h1>
-                        <p class="text-lg text-ink-3 mt-4 max-w-xl leading-relaxed">
+                        <p class="text-lg text-toned mt-4 max-w-xl leading-relaxed">
                             {{ $t('homepage.hero.sub') }}
                         </p>
 
                         <div class="flex flex-wrap gap-2.5 mt-7">
                             <NuxtLink :to="localePath('/builder')">
-                                <button class="inline-flex items-center gap-2 h-[46px] px-[22px] rounded-lg bg-green text-white font-medium text-[15px] hover:bg-green-600 transition-colors">
+                                <button class="inline-flex items-center gap-2 h-[46px] px-[22px] rounded-lg bg-secondary text-white font-medium text-[15px] hover:bg-secondary transition-colors">
                                     {{ $t('homepage.hero.ctaBuild') }}
-                                    <ArrowRight class="w-4 h-4" />
+                                    <UIcon name="i-lucide-arrow-right" class="w-4 h-4" />
                                 </button>
                             </NuxtLink>
                         </div>
 
-                        <p class="text-sm text-ink-4 mt-3.5">
+                        <p class="text-sm text-muted mt-3.5">
                             {{ $t('homepage.hero.note') }}
                         </p>
 
-                        <p class="text-xs text-ink-4 mt-2">
+                        <p class="text-xs text-muted mt-2">
                             {{ $t('homepage.termsAgreement') }}
                             <NuxtLink
                                 :to="localePath('/terms')"
-                                class="text-green-700 underline underline-offset-2 hover:text-green-ink"
+                                class="text-secondary underline underline-offset-2 hover:text-secondary"
                             >
                                 {{ $t('homepage.termsLink') }}
                             </NuxtLink>
                         </p>
 
-                        <div class="mt-10 pt-6 border-t border-rule grid grid-cols-3 gap-8">
+                        <div class="mt-10 pt-6 border-t border-default grid grid-cols-3 gap-8">
                             <div>
-                                <div class="text-[22px] font-bold tracking-tight text-ink">
+                                <div class="text-[22px] font-bold tracking-tight text-highlighted">
                                     {{ formatNumber(stats.users) }}
                                 </div>
-                                <div class="text-xs text-ink-4 mt-0.5">
+                                <div class="text-xs text-muted mt-0.5">
                                     {{ $t('homepage.hero.stat1Label') }}
                                 </div>
                             </div>
                             <div>
-                                <div class="text-[22px] font-bold tracking-tight text-ink">
+                                <div class="text-[22px] font-bold tracking-tight text-highlighted">
                                     {{ formatNumber(stats.downloads) }}
                                 </div>
-                                <div class="text-xs text-ink-4 mt-0.5">
+                                <div class="text-xs text-muted mt-0.5">
                                     {{ $t('homepage.hero.stat2Label') }}
                                 </div>
                             </div>
                             <div>
-                                <div class="text-[22px] font-bold tracking-tight text-ink">
+                                <div class="text-[22px] font-bold tracking-tight text-highlighted">
                                     $0
                                 </div>
-                                <div class="text-xs text-ink-4 mt-0.5">
+                                <div class="text-xs text-muted mt-0.5">
                                     {{ $t('homepage.hero.stat3Label') }}
                                 </div>
                             </div>
@@ -241,7 +228,7 @@ useHead({
                             :data="sampleResumeSrc"
                             type="image/svg+xml"
                             :aria-label="$t('homepage.sampleResume.alt')"
-                            class="w-[420px] aspect-[596/842] rounded-[10px] border border-rule bg-white pointer-events-none"
+                            class="w-[420px] aspect-[596/842] rounded-[10px] border border-default bg-white pointer-events-none"
                             style="box-shadow: 0 1px 2px rgb(11 18 32 / 0.04), 0 20px 40px -12px rgb(11 18 32 / 0.12);"
                         />
                     </div>
@@ -252,13 +239,13 @@ useHead({
         <section class="py-[88px] bg-white">
             <div class="max-w-[1180px] mx-auto px-6">
                 <div class="max-w-[620px] mb-12">
-                    <div class="text-xs uppercase tracking-widest font-semibold text-green-700 mb-3">
+                    <div class="text-xs uppercase tracking-widest font-semibold text-secondary mb-3">
                         {{ $t('homepage.features.eyebrow') }}
                     </div>
-                    <h2 class="text-[clamp(28px,3.5vw,40px)] font-semibold tracking-tight leading-tight text-ink">
+                    <h2 class="text-[clamp(28px,3.5vw,40px)] font-semibold tracking-tight leading-tight text-highlighted">
                         {{ $t('homepage.features.sectionTitle') }}
                     </h2>
-                    <p class="text-base text-ink-3 mt-3.5">
+                    <p class="text-base text-toned mt-3.5">
                         {{ $t('homepage.features.sub') }}
                     </p>
                 </div>
@@ -267,18 +254,18 @@ useHead({
                     <div
                         v-for="item in featureItems"
                         :key="item.title"
-                        class="bg-white border border-rule rounded-[10px] p-[22px]"
+                        class="bg-white border border-default rounded-[10px] p-[22px]"
                     >
-                        <div class="w-9 h-9 rounded-lg bg-green-50 flex items-center justify-center mb-4">
+                        <div class="w-9 h-9 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
                             <component
                                 :is="item.icon"
-                                class="w-[18px] h-[18px] text-green-700"
+                                class="w-[18px] h-[18px] text-secondary"
                             />
                         </div>
-                        <h3 class="text-[15px] font-semibold tracking-tight text-ink">
+                        <h3 class="text-[15px] font-semibold tracking-tight text-highlighted">
                             {{ item.title }}
                         </h3>
-                        <p class="text-sm text-ink-3 leading-relaxed mt-1.5">
+                        <p class="text-sm text-toned leading-relaxed mt-1.5">
                             {{ item.body }}
                         </p>
                     </div>
@@ -286,13 +273,13 @@ useHead({
             </div>
         </section>
 
-        <section class="py-[88px] bg-bg-2 border-t border-b border-rule">
+        <section class="py-[88px] bg-muted border-t border-b border-default">
             <div class="max-w-[1180px] mx-auto px-6">
                 <div class="text-center max-w-[640px] mx-auto mb-12">
-                    <div class="text-xs uppercase tracking-widest font-semibold text-green-700 mb-3">
+                    <div class="text-xs uppercase tracking-widest font-semibold text-secondary mb-3">
                         {{ $t('homepage.howItWorks.eyebrow') }}
                     </div>
-                    <h2 class="text-[clamp(28px,3.5vw,40px)] font-semibold tracking-tight leading-tight text-ink">
+                    <h2 class="text-[clamp(28px,3.5vw,40px)] font-semibold tracking-tight leading-tight text-highlighted">
                         {{ $t('homepage.howItWorks.title') }}
                     </h2>
                 </div>
@@ -305,15 +292,15 @@ useHead({
                             { n: '3', title: t('homepage.howItWorks.step3.title'), body: t('homepage.howItWorks.step3.description') },
                         ]"
                         :key="step.n"
-                        class="bg-white border border-rule rounded-[10px] p-7"
+                        class="bg-white border border-default rounded-[10px] p-7"
                     >
-                        <div class="w-8 h-8 rounded-full bg-ink text-white flex items-center justify-center text-sm font-semibold mb-[18px]">
+                        <div class="w-8 h-8 rounded-full bg-inverted text-white flex items-center justify-center text-sm font-semibold mb-[18px]">
                             {{ step.n }}
                         </div>
-                        <h3 class="text-[17px] font-semibold tracking-tight text-ink">
+                        <h3 class="text-[17px] font-semibold tracking-tight text-highlighted">
                             {{ step.title }}
                         </h3>
-                        <p class="text-sm text-ink-3 mt-2 leading-relaxed">
+                        <p class="text-sm text-toned mt-2 leading-relaxed">
                             {{ step.body }}
                         </p>
                     </div>
@@ -324,35 +311,35 @@ useHead({
         <section class="py-[88px] bg-white">
             <div class="max-w-[980px] mx-auto px-6">
                 <div class="text-center mb-10">
-                    <div class="text-xs uppercase tracking-widest font-semibold text-green-700 mb-3">
+                    <div class="text-xs uppercase tracking-widest font-semibold text-secondary mb-3">
                         {{ $t('homepage.comparison.eyebrow') }}
                     </div>
-                    <h2 class="text-[clamp(28px,3.5vw,40px)] font-semibold tracking-tight leading-tight text-ink">
+                    <h2 class="text-[clamp(28px,3.5vw,40px)] font-semibold tracking-tight leading-tight text-highlighted">
                         {{ $t('homepage.comparison.title') }}
                     </h2>
-                    <p class="text-[15px] text-ink-3 mt-2.5">
+                    <p class="text-[15px] text-toned mt-2.5">
                         {{ $t('homepage.comparison.caption') }}
                     </p>
                 </div>
 
-                <div class="bg-white border border-rule rounded-[10px] overflow-hidden">
+                <div class="bg-white border border-default rounded-[10px] overflow-hidden">
                     <div class="overflow-x-auto">
                         <table class="w-full border-collapse text-sm">
                             <thead>
                                 <tr>
-                                    <th class="py-4 px-[18px] text-left text-[13px] font-semibold text-ink bg-bg-2 border-b border-rule">
+                                    <th class="py-4 px-[18px] text-left text-[13px] font-semibold text-highlighted bg-muted border-b border-default">
                                         {{ t('homepage.comparison.headers.feature') }}
                                     </th>
-                                    <th class="py-4 px-[18px] text-center text-[13px] font-semibold text-green-700 bg-green-50 border-b border-rule">
+                                    <th class="py-4 px-[18px] text-center text-[13px] font-semibold text-secondary bg-secondary/10 border-b border-default">
                                         {{ t('homepage.comparison.headers.us') }}
                                     </th>
-                                    <th class="py-4 px-[18px] text-center text-[13px] font-semibold text-ink bg-bg-2 border-b border-rule">
+                                    <th class="py-4 px-[18px] text-center text-[13px] font-semibold text-highlighted bg-muted border-b border-default">
                                         {{ t('homepage.comparison.headers.canva') }}
                                     </th>
-                                    <th class="py-4 px-[18px] text-center text-[13px] font-semibold text-ink bg-bg-2 border-b border-rule">
+                                    <th class="py-4 px-[18px] text-center text-[13px] font-semibold text-highlighted bg-muted border-b border-default">
                                         {{ t('homepage.comparison.headers.zety') }}
                                     </th>
-                                    <th class="py-4 px-[18px] text-center text-[13px] font-semibold text-ink bg-bg-2 border-b border-rule">
+                                    <th class="py-4 px-[18px] text-center text-[13px] font-semibold text-highlighted bg-muted border-b border-default">
                                         {{ t('homepage.comparison.headers.resumeio') }}
                                     </th>
                                 </tr>
@@ -361,56 +348,56 @@ useHead({
                                 <tr
                                     v-for="(row, ri) in comparisonRows"
                                     :key="row.key"
-                                    :class="ri < comparisonRows.length - 1 ? 'border-b border-rule-soft' : ''"
+                                    :class="ri < comparisonRows.length - 1 ? 'border-b border-muted' : ''"
                                 >
-                                    <td class="py-3.5 px-[18px] text-sm text-ink-2">
+                                    <td class="py-3.5 px-[18px] text-sm text-default">
                                         {{ $t(`homepage.comparison.rows.${row.key}`) }}
                                     </td>
-                                    <td class="py-3.5 px-[18px] text-center bg-green-50/60">
-                                        <Check
+                                    <td class="py-3.5 px-[18px] text-center bg-secondary/10">
+                                        <UIcon name="i-lucide-check"
                                             v-if="row.us === 'yes'"
-                                            class="w-[17px] h-[17px] text-green-600 mx-auto"
+                                            class="w-[17px] h-[17px] text-secondary mx-auto"
                                             :stroke-width="2.4"
                                         />
-                                        <X
+                                        <UIcon name="i-lucide-x"
                                             v-else
-                                            class="w-[17px] h-[17px] text-destructive mx-auto"
+                                            class="w-[17px] h-[17px] text-error mx-auto"
                                             :stroke-width="2.2"
                                         />
                                     </td>
                                     <td class="py-3.5 px-[18px] text-center">
-                                        <Check
+                                        <UIcon name="i-lucide-check"
                                             v-if="row.canva === 'yes'"
-                                            class="w-[17px] h-[17px] text-green-600 mx-auto"
+                                            class="w-[17px] h-[17px] text-secondary mx-auto"
                                             :stroke-width="2.4"
                                         />
-                                        <X
+                                        <UIcon name="i-lucide-x"
                                             v-else
-                                            class="w-[17px] h-[17px] text-destructive mx-auto"
+                                            class="w-[17px] h-[17px] text-error mx-auto"
                                             :stroke-width="2.2"
                                         />
                                     </td>
                                     <td class="py-3.5 px-[18px] text-center">
-                                        <Check
+                                        <UIcon name="i-lucide-check"
                                             v-if="row.zety === 'yes'"
-                                            class="w-[17px] h-[17px] text-green-600 mx-auto"
+                                            class="w-[17px] h-[17px] text-secondary mx-auto"
                                             :stroke-width="2.4"
                                         />
-                                        <X
+                                        <UIcon name="i-lucide-x"
                                             v-else
-                                            class="w-[17px] h-[17px] text-destructive mx-auto"
+                                            class="w-[17px] h-[17px] text-error mx-auto"
                                             :stroke-width="2.2"
                                         />
                                     </td>
                                     <td class="py-3.5 px-[18px] text-center">
-                                        <Check
+                                        <UIcon name="i-lucide-check"
                                             v-if="row.resumeio === 'yes'"
-                                            class="w-[17px] h-[17px] text-green-600 mx-auto"
+                                            class="w-[17px] h-[17px] text-secondary mx-auto"
                                             :stroke-width="2.4"
                                         />
-                                        <X
+                                        <UIcon name="i-lucide-x"
                                             v-else
-                                            class="w-[17px] h-[17px] text-destructive mx-auto"
+                                            class="w-[17px] h-[17px] text-error mx-auto"
                                             :stroke-width="2.2"
                                         />
                                     </td>
@@ -419,25 +406,25 @@ useHead({
                         </table>
                     </div>
                 </div>
-                <p class="text-xs text-ink-4 mt-3 text-center">
+                <p class="text-xs text-muted mt-3 text-center">
                     {{ t('homepage.comparison.footnote') }}
                 </p>
             </div>
         </section>
 
-        <section class="py-[88px] bg-bg-2 border-t border-b border-rule">
+        <section class="py-[88px] bg-muted border-t border-b border-default">
             <div
                 class="max-w-[980px] mx-auto px-6"
                 style="max-width: 780px;"
             >
-                <div class="text-xs uppercase tracking-widest font-semibold text-green-700 mb-3">
+                <div class="text-xs uppercase tracking-widest font-semibold text-secondary mb-3">
                     {{ $t('homepage.whyBuilt.eyebrow') }}
                 </div>
-                <h2 class="text-[clamp(28px,3.5vw,38px)] font-semibold tracking-tight leading-snug text-ink mb-6">
+                <h2 class="text-[clamp(28px,3.5vw,38px)] font-semibold tracking-tight leading-snug text-highlighted mb-6">
                     {{ $t('homepage.whyBuilt.sectionTitle') }}
                 </h2>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-base leading-[1.65] text-ink-2">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-base leading-[1.65] text-default">
                     <p>{{ t('homepage.whyBuilt.paragraph1') }}</p>
                     <p>
                         {{ t('homepage.whyBuilt.paragraph2') }}
@@ -452,17 +439,17 @@ useHead({
             <div class="max-w-[1180px] mx-auto px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-[72px]">
                     <div>
-                        <div class="text-xs uppercase tracking-widest font-semibold text-green-700 mb-3">
+                        <div class="text-xs uppercase tracking-widest font-semibold text-secondary mb-3">
                             {{ $t('homepage.faq.eyebrow') }}
                         </div>
-                        <h2 class="text-[clamp(26px,3vw,36px)] font-semibold tracking-tight leading-snug text-ink">
+                        <h2 class="text-[clamp(26px,3vw,36px)] font-semibold tracking-tight leading-snug text-highlighted">
                             {{ $t('homepage.faq.title') }}
                         </h2>
-                        <p class="text-[14.5px] text-ink-3 mt-3.5">
+                        <p class="text-[14.5px] text-toned mt-3.5">
                             {{ $t('homepage.faq.contactIntro') }}
                             <NuxtLink
                                 :to="localePath('/contact')"
-                                class="text-green-700 underline underline-offset-2 hover:text-green-600"
+                                class="text-secondary underline underline-offset-2 hover:text-secondary"
                             >
                                 {{ $t('homepage.faq.contactLinkContact') }}
                             </NuxtLink>
@@ -471,25 +458,25 @@ useHead({
                                 href="https://github.com/imkonsowa/resume-builder/issues"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="text-green-700 underline underline-offset-2 hover:text-green-600"
+                                class="text-secondary underline underline-offset-2 hover:text-secondary"
                             >{{ $t('homepage.faq.contactLinkGithub') }}</a>.
                         </p>
                     </div>
 
-                    <div class="bg-white border border-rule rounded-[10px] overflow-hidden">
+                    <div class="bg-white border border-default rounded-[10px] overflow-hidden">
                         <div
                             v-for="(item, index) in faqItems"
                             :key="index"
-                            :class="index < faqItems.length - 1 ? 'border-b border-rule-soft' : ''"
+                            :class="index < faqItems.length - 1 ? 'border-b border-muted' : ''"
                         >
                             <button
                                 class="w-full text-left px-[22px] py-[18px] flex items-center justify-between gap-4 cursor-pointer"
                                 :aria-expanded="openFaqIndex === index"
                                 @click="toggleFaq(index)"
                             >
-                                <span class="text-[15px] font-medium text-ink pe-4">{{ item.question }}</span>
-                                <ChevronDown
-                                    class="w-[17px] h-[17px] text-ink-4 shrink-0 transition-transform duration-200"
+                                <span class="text-[15px] font-medium text-highlighted pe-4">{{ item.question }}</span>
+                                <UIcon name="i-lucide-chevron-down"
+                                    class="w-[17px] h-[17px] text-muted shrink-0 transition-transform duration-200"
                                     :class="{ 'rotate-180': openFaqIndex === index }"
                                 />
                             </button>
@@ -497,7 +484,7 @@ useHead({
                                 class="overflow-hidden transition-all duration-[250ms] ease-in-out"
                                 :style="openFaqIndex === index ? 'max-height: 240px' : 'max-height: 0'"
                             >
-                                <p class="px-[22px] pb-5 text-[14.5px] text-ink-3 leading-[1.6]">
+                                <p class="px-[22px] pb-5 text-[14.5px] text-toned leading-[1.6]">
                                     {{ item.answer }}
                                 </p>
                             </div>
@@ -507,19 +494,19 @@ useHead({
             </div>
         </section>
 
-        <section class="py-[88px] bg-bg-2 border-t border-rule">
+        <section class="py-[88px] bg-muted border-t border-default">
             <div class="max-w-[640px] mx-auto px-6 text-center">
-                <h2 class="text-[clamp(30px,4vw,44px)] font-semibold tracking-tight leading-tight text-ink">
+                <h2 class="text-[clamp(30px,4vw,44px)] font-semibold tracking-tight leading-tight text-highlighted">
                     {{ t('homepage.finalCta.title') }}
                 </h2>
-                <p class="text-[17px] text-ink-3 mt-3.5">
+                <p class="text-[17px] text-toned mt-3.5">
                     {{ $t('homepage.finalCta.sub') }}
                 </p>
                 <div class="flex flex-wrap gap-2.5 justify-center mt-6">
                     <NuxtLink :to="localePath('/builder')">
-                        <button class="inline-flex items-center gap-2 h-[46px] px-[22px] rounded-lg bg-green text-white font-medium text-[15px] hover:bg-green-600 transition-colors">
+                        <button class="inline-flex items-center gap-2 h-[46px] px-[22px] rounded-lg bg-secondary text-white font-medium text-[15px] hover:bg-secondary transition-colors">
                             {{ $t('homepage.finalCta.ctaBuild') }}
-                            <ArrowRight class="w-4 h-4" />
+                            <UIcon name="i-lucide-arrow-right" class="w-4 h-4" />
                         </button>
                     </NuxtLink>
                 </div>

@@ -15,8 +15,8 @@
                 @submit.prevent="handleRegister"
             >
                 <div class="space-y-2">
-                    <Label for="reg-name">Name</Label>
-                    <Input
+                    <label for="reg-name">Name</label>
+                    <UInput
                         id="reg-name"
                         v-model="name"
                         type="text"
@@ -26,8 +26,8 @@
                     />
                 </div>
                 <div class="space-y-2">
-                    <Label for="reg-email">Email</Label>
-                    <Input
+                    <label for="reg-email">Email</label>
+                    <UInput
                         id="reg-email"
                         v-model="email"
                         type="email"
@@ -37,8 +37,8 @@
                     />
                 </div>
                 <div class="space-y-2">
-                    <Label for="reg-password">Password</Label>
-                    <Input
+                    <label for="reg-password">Password</label>
+                    <UInput
                         id="reg-password"
                         v-model="password"
                         type="password"
@@ -49,8 +49,8 @@
                     />
                 </div>
                 <div class="space-y-2">
-                    <Label for="reg-password-confirm">Confirm Password</Label>
-                    <Input
+                    <label for="reg-password-confirm">Confirm Password</label>
+                    <UInput
                         id="reg-password-confirm"
                         v-model="passwordConfirm"
                         type="password"
@@ -62,17 +62,17 @@
                 <TurnstileWidget
                     v-model="turnstileToken"
                 />
-                <Button
+                <UButton
                     type="submit"
                     class="w-full"
                     :disabled="loading || !isFormValid || !turnstileToken"
                 >
-                    <Loader2
+                    <UIcon name="i-lucide-loader-circle"
                         v-if="loading"
                         class="mr-2 h-4 w-4 animate-spin"
                     />
                     Create Account
-                </Button>
+                </UButton>
                 <div
                     v-if="error"
                     class="text-sm text-red-600 text-center"
@@ -81,12 +81,12 @@
                 </div>
                 <div
                     v-if="success"
-                    class="text-sm text-green-600 text-center"
+                    class="text-sm text-secondary text-center"
                 >
                     {{ success }}
                 </div>
             </form>
-            <div class="text-center text-sm text-muted-foreground">
+            <div class="text-center text-sm text-muted">
                 Already have an account?
                 <button
                     type="button"
@@ -103,10 +103,6 @@
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Loader2 } from 'lucide-vue-next';
 import TurnstileWidget from '@/components/elements/TurnstileWidget.vue';
 
 interface Props {

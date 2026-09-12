@@ -15,8 +15,8 @@
                 @submit.prevent="handleLogin"
             >
                 <div class="space-y-2">
-                    <Label for="email">Email</Label>
-                    <Input
+                    <label for="email">Email</label>
+                    <UInput
                         id="email"
                         v-model="email"
                         type="email"
@@ -26,8 +26,8 @@
                     />
                 </div>
                 <div class="space-y-2">
-                    <Label for="password">Password</Label>
-                    <Input
+                    <label for="password">Password</label>
+                    <UInput
                         id="password"
                         v-model="password"
                         type="password"
@@ -39,17 +39,17 @@
                 <TurnstileWidget
                     v-model="turnstileToken"
                 />
-                <Button
+                <UButton
                     type="submit"
                     class="w-full"
                     :disabled="loading || !turnstileToken"
                 >
-                    <Loader2
+                    <UIcon name="i-lucide-loader-circle"
                         v-if="loading"
                         class="mr-2 h-4 w-4 animate-spin"
                     />
                     Sign In
-                </Button>
+                </UButton>
                 <div
                     v-if="error"
                     class="text-sm text-red-600 text-center"
@@ -57,7 +57,7 @@
                     {{ error }}
                 </div>
             </form>
-            <div class="text-center text-sm text-muted-foreground">
+            <div class="text-center text-sm text-muted">
                 Don't have an account?
                 <button
                     type="button"
@@ -74,10 +74,6 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Loader2 } from 'lucide-vue-next';
 import TurnstileWidget from '@/components/elements/TurnstileWidget.vue';
 
 interface Props {

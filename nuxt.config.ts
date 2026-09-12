@@ -1,10 +1,8 @@
-import tailwindcss from '@tailwindcss/vite';
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
     modules: [
-        'shadcn-nuxt',
+        '@nuxt/ui',
         '@pinia/nuxt',
         'pinia-plugin-persistedstate/nuxt',
         '@nuxt/eslint',
@@ -38,7 +36,24 @@ export default defineNuxtConfig({
         },
     },
 
-    css: ['~/assets/css/tailwind.css', '~/assets/css/app.css'],
+    css: ['~/assets/css/main.css'],
+
+    ui: {
+        theme: {
+            colors: ['primary', 'secondary', 'info', 'success', 'warning', 'error'],
+        },
+    },
+
+    colorMode: {
+        preference: 'system',
+        fallback: 'light',
+        classSuffix: '',
+        storageKey: 'rff-color-mode',
+    },
+
+    icon: {
+        provider: 'iconify',
+    },
 
     site: {
         url: 'https://resumeforfree.com',
@@ -71,9 +86,6 @@ export default defineNuxtConfig({
     },
 
     vite: {
-        plugins: [
-            tailwindcss(),
-        ],
         optimizeDeps: {
             exclude: [
                 '@myriaddreamin/typst-ts-web-compiler',
@@ -157,11 +169,6 @@ export default defineNuxtConfig({
 
     seo: {
         redirectToCanonicalSiteUrl: true,
-    },
-
-    shadcn: {
-        prefix: '',
-        componentDir: './app/components/ui',
     },
 
     sitemap: {

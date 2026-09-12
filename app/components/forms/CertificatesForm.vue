@@ -14,10 +14,10 @@
                 v-if="templateConfig.canMoveSection('certificates')"
                 class="flex items-center gap-2"
             >
-                <span class="text-sm text-gray-600">{{ t('forms.certificates.column') }}:</span>
+                <span class="text-sm text-toned">{{ t('forms.certificates.column') }}:</span>
                 <select
                     :value="resumeStore.resumeData.sectionPlacement.certificates"
-                    class="px-2 py-1 text-sm border rounded focus:ring-[3px] focus:ring-green-50 focus:border-green"
+                    class="px-2 py-1 text-sm border rounded focus:ring-[3px] focus:ring-secondary/20 focus:border-secondary"
                     @change="(e) => resumeStore.updateSectionPlacement('certificates', (e.target as HTMLSelectElement).value as 'left' | 'right')"
                 >
                     <option value="left">
@@ -43,8 +43,8 @@
         >
             <div class="space-y-4">
                 <div class="space-y-2">
-                    <Label :for="`certificate-title-${index}`">{{ t('forms.certificates.certificateTitle') }}</Label>
-                    <Input
+                    <label :for="`certificate-title-${index}`">{{ t('forms.certificates.certificateTitle') }}</label>
+                    <UInput
                         :id="`certificate-title-${index}`"
                         :model-value="certificate.title"
                         :placeholder="t('forms.certificates.certificateTitle')"
@@ -53,8 +53,8 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="space-y-2">
-                        <Label :for="`certificate-issuer-${index}`">{{ t('forms.certificates.issuer') }}</Label>
-                        <Input
+                        <label :for="`certificate-issuer-${index}`">{{ t('forms.certificates.issuer') }}</label>
+                        <UInput
                             :id="`certificate-issuer-${index}`"
                             :model-value="certificate.issuer"
                             :placeholder="t('forms.certificates.issuer')"
@@ -70,8 +70,8 @@
                     </div>
                 </div>
                 <div class="space-y-2">
-                    <Label :for="`certificate-url-${index}`">{{ t('forms.certificates.url') }}</Label>
-                    <Input
+                    <label :for="`certificate-url-${index}`">{{ t('forms.certificates.url') }}</label>
+                    <UInput
                         :id="`certificate-url-${index}`"
                         :model-value="certificate.url || ''"
                         :placeholder="t('forms.certificates.url')"
@@ -80,8 +80,8 @@
                     />
                 </div>
                 <div class="space-y-2">
-                    <Label :for="`certificate-description-${index}`">{{ t('common.description') }}</Label>
-                    <Textarea
+                    <label :for="`certificate-description-${index}`">{{ t('common.description') }}</label>
+                    <UTextarea
                         :id="`certificate-description-${index}`"
                         :model-value="certificate.description || ''"
                         :placeholder="t('common.description')"
@@ -104,9 +104,6 @@
 </template>
 
 <script lang="ts" setup>
-import { Input } from '~/components/ui/input';
-import { Label } from '~/components/ui/label';
-import { Textarea } from '~/components/ui/textarea';
 import MonthYearPicker from '~/components/elements/MonthYearPicker.vue';
 import FormContainer from '~/components/elements/FormContainer.vue';
 import FormCard from '~/components/elements/FormCard.vue';

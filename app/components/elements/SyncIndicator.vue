@@ -13,15 +13,15 @@
             :class="indicatorClasses"
         >
             <template v-if="isSyncing">
-                <Loader2 class="w-4 h-4 animate-spin" />
+                <UIcon name="i-lucide-loader-circle" class="w-4 h-4 animate-spin" />
                 <span class="text-sm font-medium">Syncing...</span>
             </template>
             <template v-else-if="showSuccess">
-                <CheckCircle class="w-4 h-4" />
+                <UIcon name="i-lucide-check-circle" class="w-4 h-4" />
                 <span class="text-sm font-medium">Saved</span>
             </template>
             <template v-else-if="showError">
-                <AlertCircle class="w-4 h-4" />
+                <UIcon name="i-lucide-alert-circle" class="w-4 h-4" />
                 <span class="text-sm font-medium">Sync failed</span>
             </template>
         </div>
@@ -29,7 +29,6 @@
 </template>
 
 <script lang="ts" setup>
-import { CheckCircle, AlertCircle, Loader2 } from 'lucide-vue-next';
 
 interface Props {
     isSyncing: boolean;
@@ -76,15 +75,15 @@ const show = computed(() =>
 );
 const indicatorClasses = computed(() => {
     if (props.isSyncing) {
-        return 'bg-green-50 border-green-200 text-green-ink';
+        return 'bg-secondary/10 border-secondary/30 text-secondary';
     }
     else if (showSuccess.value) {
-        return 'bg-green-50 border-green-200 text-green-800';
+        return 'bg-secondary/10 border-secondary/30 text-secondary';
     }
     else if (showError.value) {
         return 'bg-red-50 border-red-200 text-red-800';
     }
-    return 'bg-gray-50 border-gray-200 text-gray-800';
+    return 'bg-muted border-default text-default';
 });
 onUnmounted(() => {
     if (successTimeout.value) {

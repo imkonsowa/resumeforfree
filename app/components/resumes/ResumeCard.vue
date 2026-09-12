@@ -1,6 +1,6 @@
 <template>
     <Card
-        :class="{ 'ring-2 ring-green': isActive }"
+        :class="{ 'ring-2 ring-secondary': isActive }"
         class="hover:shadow-lg transition-shadow relative"
     >
         <CardHeader class="pb-4">
@@ -16,16 +16,16 @@
                     @keyup.escape="cancelEdit"
                 >
                 <button
-                    class="p-1 text-green-600 hover:text-green-700"
+                    class="p-1 text-secondary hover:text-secondary"
                     @click="saveEdit"
                 >
-                    <Check class="w-4 h-4" />
+                    <UIcon name="i-lucide-check" class="w-4 h-4" />
                 </button>
                 <button
                     class="p-1 text-red-600 hover:text-red-700"
                     @click="cancelEdit"
                 >
-                    <X class="w-4 h-4" />
+                    <UIcon name="i-lucide-x" class="w-4 h-4" />
                 </button>
             </div>
             <div
@@ -36,16 +36,16 @@
                     {{ resume.name }}
                 </CardTitle>
                 <button
-                    class="p-1 text-gray-400 hover:text-gray-600 transition-colors"
+                    class="p-1 text-dimmed hover:text-toned transition-colors"
                     :title="$t('resumes.card.editNameTitle')"
                     @click="startEdit"
                 >
-                    <PencilIcon class="w-4 h-4" />
+                    <UIcon name="i-lucide-pencil" class="w-4 h-4" />
                 </button>
             </div>
-            <div class="flex items-center justify-between gap-2 text-sm text-gray-500 flex-wrap">
+            <div class="flex items-center justify-between gap-2 text-sm text-muted flex-wrap">
                 <div class="flex items-center gap-2">
-                    <Calendar class="w-4 h-4" />
+                    <UIcon name="i-lucide-calendar" class="w-4 h-4" />
                     <span>{{ $t('resumes.status.updated') }} {{ formatDate(resume.updatedAt) }}</span>
                 </div>
                 <div class="flex items-center gap-2">
@@ -56,84 +56,68 @@
                         button-class="h-7 text-xs px-2"
                         @update="(code) => resumeStore.setResumeLanguage(resume.id, code)"
                     />
-                    <Badge
+                    <UBadge
                         v-if="isActive"
-                        class="bg-green text-white text-xs"
+                        class="bg-secondary text-white text-xs"
                     >
                         {{ $t('resumes.status.active') }}
-                    </Badge>
-                    <Badge
+                    </UBadge>
+                    <UBadge
                         v-if="resume.serverId"
-                        class="bg-green-500 text-white flex items-center gap-1 text-xs"
+                        class="bg-secondary text-white flex items-center gap-1 text-xs"
                     >
-                        <Cloud class="w-3 h-3" />
+                        <UIcon name="i-lucide-cloud" class="w-3 h-3" />
                         {{ $t('resumes.status.synced') }}
-                    </Badge>
+                    </UBadge>
                 </div>
             </div>
         </CardHeader>
         <CardContent class="pt-0">
             <div class="space-y-2 mb-4">
-                <p class="font-medium text-gray-900">
+                <p class="font-medium text-highlighted">
                     {{ resumePreview.fullName }}
                 </p>
-                <p class="text-sm text-gray-600">
+                <p class="text-sm text-toned">
                     {{ resumePreview.position }}
                 </p>
-                <p class="text-xs text-gray-500">
+                <p class="text-xs text-muted">
                     {{ resumePreview.sections }}
                 </p>
             </div>
             <div class="flex gap-2 mt-4">
-                <Button
+                <UButton
                     class="flex items-center gap-1"
-                    size="sm"
-                    variant="outline"
-                    @click="$emit('edit', resume.id)"
-                >
-                    <Edit class="w-3 h-3" />
-                    {{ $t('resumes.card.build') }}
-                </Button>
-                <Button
+                    size="sm" color="neutral" variant="outline"
+                    @click="$emit('edit', resume.id)" icon="i-lucide-square-pen">
+{{ $t('resumes.card.build') }}
+</UButton>
+                <UButton
                     class="flex items-center gap-1"
-                    size="sm"
-                    variant="outline"
-                    @click.stop="$emit('copy', resume.id)"
-                >
-                    <Copy class="w-3 h-3" />
-                    {{ $t('resumes.card.copy') }}
-                </Button>
-                <Button
+                    size="sm" color="neutral" variant="outline"
+                    @click.stop="$emit('copy', resume.id)" icon="i-lucide-copy">
+{{ $t('resumes.card.copy') }}
+</UButton>
+                <UButton
                     class="flex items-center gap-1"
-                    size="sm"
-                    variant="outline"
+                    size="sm" color="neutral" variant="outline"
                     :title="$t('resumes.card.exportTitle')"
-                    @click.stop="$emit('export', resume.id)"
-                >
-                    <Download class="w-3 h-3" />
-                    {{ $t('common.export') }}
-                </Button>
-                <Button
+                    @click.stop="$emit('export', resume.id)" icon="i-lucide-download">
+{{ $t('common.export') }}
+</UButton>
+                <UButton
                     v-if="authStore.isLoggedIn"
                     class="flex items-center gap-1"
-                    size="sm"
-                    variant="outline"
+                    size="sm" color="neutral" variant="outline"
                     :title="$t('resumes.card.syncTitle')"
-                    @click.stop="$emit('sync', resume.id)"
-                >
-                    <Cloud class="w-3 h-3" />
-                    {{ $t('common.sync') }}
-                </Button>
+                    @click.stop="$emit('sync', resume.id)" icon="i-lucide-cloud">
+{{ $t('common.sync') }}
+</UButton>
                 <Popover>
                     <PopoverTrigger as-child>
-                        <Button
-                            size="sm"
-                            variant="outline"
+                        <UButton
+                            size="sm" color="neutral" variant="outline"
                             class="p-2"
-                            @click.stop
-                        >
-                            <MoreVertical class="w-3 h-3" />
-                        </Button>
+                            @click.stop icon="i-lucide-more-vertical" />
                     </PopoverTrigger>
                     <PopoverContent
                         class="w-48 p-1"
@@ -144,14 +128,14 @@
                             class="w-full flex items-center gap-2 px-2 py-1.5 text-sm text-amber-600 hover:bg-amber-50 rounded transition-colors"
                             @click.stop="$emit('disableSync', resume.id)"
                         >
-                            <CloudOff class="w-3 h-3" />
+                            <UIcon name="i-lucide-cloud-off" class="w-3 h-3" />
                             {{ $t('resumes.card.disableSync') }}
                         </button>
                         <button
                             class="w-full flex items-center gap-2 px-2 py-1.5 text-sm text-red-600 hover:bg-red-50 rounded transition-colors"
                             @click.stop="$emit('delete', resume.id)"
                         >
-                            <Trash2 class="w-3 h-3" />
+                            <UIcon name="i-lucide-trash-2" class="w-3 h-3" />
                             {{ $t('resumes.card.delete') }}
                         </button>
                     </PopoverContent>
@@ -162,23 +146,8 @@
 </template>
 
 <script lang="ts" setup>
-import { Button } from '~/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/card';
-import { Badge } from '~/components/ui/badge';
 import { Popover, PopoverContent, PopoverTrigger } from '~/components/ui/popover';
-import {
-    Calendar,
-    Check,
-    Cloud,
-    CloudOff,
-    Copy,
-    Download,
-    Edit,
-    MoreVertical,
-    PencilIcon,
-    Trash2,
-    X,
-} from 'lucide-vue-next';
 import type { Resume } from '~/types/resume';
 import ResumeLanguageSelector from '~/components/elements/ResumeLanguageSelector.vue';
 

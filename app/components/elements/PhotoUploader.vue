@@ -2,7 +2,7 @@
     <div class="space-y-3">
         <div class="flex items-center gap-4">
             <div
-                class="size-20 overflow-hidden bg-gray-100 border border-gray-200 flex items-center justify-center shrink-0"
+                class="size-20 overflow-hidden bg-elevated border border-default flex items-center justify-center shrink-0"
                 :class="isCirclePreview ? 'rounded-full' : 'rounded-md'"
             >
                 <img
@@ -11,49 +11,43 @@
                     :alt="t('forms.personalInfo.photo.label')"
                     class="size-full object-cover"
                 >
-                <ImageIcon
+                <UIcon name="i-lucide-image"
                     v-else
-                    class="w-8 h-8 text-gray-400"
+                    class="w-8 h-8 text-dimmed"
                 />
             </div>
             <div class="flex-1 space-y-2">
-                <Label>{{ t('forms.personalInfo.photo.label') }}</Label>
+                <label>{{ t('forms.personalInfo.photo.label') }}</label>
                 <div class="flex flex-wrap gap-2">
-                    <Button
-                        size="sm"
-                        variant="outline"
+                    <UButton
+                        size="sm" color="neutral" variant="outline"
                         :disabled="busy"
-                        @click="onPickClick"
-                    >
-                        <Upload class="w-4 h-4 mr-2" />
-                        {{ t('forms.personalInfo.photo.upload') }}
-                    </Button>
-                    <Button
+                        @click="onPickClick" icon="i-lucide-upload">
+{{ t('forms.personalInfo.photo.upload') }}
+</UButton>
+                    <UButton
                         v-if="hasPhoto"
-                        size="sm"
-                        variant="outline"
+                        size="sm" color="neutral" variant="outline"
                         :disabled="busy"
-                        @click="onRemoveClick"
-                    >
-                        <Trash2 class="w-4 h-4 mr-2" />
-                        {{ t('forms.personalInfo.photo.remove') }}
-                    </Button>
+                        @click="onRemoveClick" icon="i-lucide-trash-2">
+{{ t('forms.personalInfo.photo.remove') }}
+</UButton>
                 </div>
-                <p class="text-xs text-gray-500">
+                <p class="text-xs text-muted">
                     {{ t('forms.personalInfo.photo.constraints') }}
                 </p>
                 <div class="flex items-center gap-2 pt-1">
-                    <Switch
+                    <USwitch
                         id="photo-shape-switch"
                         :model-value="isCirclePreview"
                         @update:model-value="onShapeToggle"
                     />
-                    <Label
+                    <label
                         for="photo-shape-switch"
-                        class="text-xs text-gray-600 cursor-pointer"
+                        class="text-xs text-toned cursor-pointer"
                     >
                         {{ t('forms.personalInfo.photo.roundedToggle') }}
-                    </Label>
+                    </label>
                 </div>
             </div>
             <input
@@ -92,25 +86,24 @@
                     />
                     <div
                         v-else
-                        class="h-64 flex items-center justify-center text-sm text-gray-500"
+                        class="h-64 flex items-center justify-center text-sm text-muted"
                     >
                         {{ t('common.loading') }}
                     </div>
                 </div>
                 <DialogFooter>
-                    <Button
-                        variant="outline"
+                    <UButton color="neutral" variant="outline"
                         :disabled="busy"
                         @click="closeCropDialog"
                     >
                         {{ t('common.cancel') }}
-                    </Button>
-                    <Button
+                    </UButton>
+                    <UButton
                         :disabled="busy || !CropperComponent"
                         @click="onConfirmCrop"
                     >
                         {{ t('common.save') }}
-                    </Button>
+                    </UButton>
                 </DialogFooter>
             </DialogContent>
         </Dialog>
@@ -119,15 +112,12 @@
 
 <script lang="ts" setup>
 import { computed, ref, shallowRef } from 'vue';
-import { Image as ImageIcon, Trash2, Upload } from 'lucide-vue-next';
-import { Label } from '~/components/ui/label';
-import { Button } from '~/components/ui/button';
-import { Switch } from '~/components/ui/switch';
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '~/components/ui/dialog';
 import { downscaleAndEncode, validatePhotoFile, type CropResult } from '~/composables/useResumePhoto';
 import type { PhotoShape } from '~/types/resume';
 
 const { t } = useResumeT();
+const notify = useNotify();
 const resumeStore = useResumeStore();
 const { attachPhoto, removePhoto } = useResumePhoto();
 
@@ -176,8 +166,7 @@ const ensureCropperLoaded = async () => {
 };
 
 const showError = async (key: string) => {
-    const { toast } = await import('vue-sonner');
-    toast.error(t(key));
+    notify.error(t(key));
 };
 
 const onPickClick = () => {
@@ -229,8 +218,7 @@ const onConfirmCrop = async () => {
     }
     catch (error) {
         console.error('Photo crop/upload failed:', error);
-        const { toast } = await import('vue-sonner');
-        toast.error(error instanceof Error ? error.message : 'Failed to save photo');
+        notify.error(error instanceof Error ? error.message : 'Failed to save photo');
     }
     finally {
         busy.value = false;

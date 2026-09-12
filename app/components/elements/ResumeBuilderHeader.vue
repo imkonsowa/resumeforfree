@@ -2,55 +2,45 @@
     <div class="mb-8">
         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 sm:gap-0">
             <div class="flex items-center space-x-3">
-                <h1 class="text-2xl font-bold text-gray-900">
+                <h1 class="text-2xl font-bold text-highlighted">
                     {{ resumeStore.activeResume?.name || t('builder.defaultTitle') }}
                 </h1>
             </div>
             <div class="flex items-center space-x-2">
-                <Button
+                <UButton
                     v-if="authStore.isLoggedIn && activeResume"
-                    size="sm"
-                    variant="outline"
+                    size="sm" color="neutral" variant="outline"
                     class="flex items-center gap-2 min-w-fit"
                     :disabled="!canSyncToCloud || isAnySyncing"
                     @click="handleCloudSync"
                 >
-                    <Loader2
+                    <UIcon name="i-lucide-loader-circle"
                         v-if="isAnySyncing"
                         class="h-4 w-4 animate-spin"
                     />
-                    <Cloud
+                    <UIcon name="i-lucide-cloud"
                         v-else
                         class="h-4 w-4"
                     />
                     <span class="hidden sm:inline whitespace-nowrap">{{ isAnySyncing ? syncingText : syncButtonText }}</span>
                     <span class="sm:hidden whitespace-nowrap">{{ isAnySyncing ? (activeResume.serverId ? t('builder.updating') : t('builder.syncing')) : (activeResume.serverId ? t('builder.update') : t('common.sync')) }}</span>
-                </Button>
-                <Button
-                    size="sm"
-                    variant="outline"
-                    @click="settingsStore.expandAllSections()"
-                >
-                    <ChevronDown class="h-4 w-4" />
-                    <span class="ml-1 sm:hidden">{{ t('builder.expand') }}</span>
-                </Button>
-                <Button
-                    size="sm"
-                    variant="outline"
-                    @click="settingsStore.collapseAllSections()"
-                >
-                    <ChevronUp class="h-4 w-4" />
-                    <span class="ml-1 sm:hidden">{{ t('builder.collapse') }}</span>
-                </Button>
-                <Button
+                </UButton>
+                <UButton
+                    size="sm" color="neutral" variant="outline"
+                    @click="settingsStore.expandAllSections()" icon="i-lucide-chevron-down">
+<span class="ml-1 sm:hidden">{{ t('builder.expand') }}</span>
+</UButton>
+                <UButton
+                    size="sm" color="neutral" variant="outline"
+                    @click="settingsStore.collapseAllSections()" icon="i-lucide-chevron-up">
+<span class="ml-1 sm:hidden">{{ t('builder.collapse') }}</span>
+</UButton>
+                <UButton
                     class="flex items-center gap-2"
-                    size="sm"
-                    variant="outline"
-                    @click="showStepper = true"
-                >
-                    <ListIcon class="h-4 w-4" />
-                    {{ t('builder.sections') }}
-                </Button>
+                    size="sm" color="neutral" variant="outline"
+                    @click="showStepper = true" icon="i-lucide-list">
+{{ t('builder.sections') }}
+</UButton>
             </div>
         </div>
     </div>
@@ -58,14 +48,13 @@
 </template>
 
 <script lang="ts" setup>
-import { Button } from '~/components/ui/button';
-import { ChevronDown, ChevronUp, ListIcon, Cloud, Loader2 } from 'lucide-vue-next';
 import ResumeStepper from '~/components/elements/ResumeStepper.vue';
 
 const resumeStore = useResumeStore();
 const settingsStore = useSettingsStore();
 const authStore = useAuthStore();
 const { t } = useI18n();
+const notify = useNotify();
 const showStepper = ref<boolean>(false);
 const isSyncing = ref<boolean>(false);
 const { isSyncing: isAutoSyncing } = useAutoSync();
@@ -96,7 +85,6 @@ const syncingText = computed(() => {
 });
 const handleCloudSync = async () => {
     if (!activeResume.value || isAnySyncing.value) return;
-    const { toast } = await import('vue-sonner');
     try {
         isSyncing.value = true;
         await resumeStore.syncResumeToServer(activeResume.value.id);
@@ -105,7 +93,7 @@ const handleCloudSync = async () => {
     catch (error: any) {
         console.error('Failed to sync resume:', error);
         const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-        toast.error(`Failed to sync resume: ${errorMessage}`);
+        notify.error(`Failed to sync resume: ${errorMessage}`);
     }
     finally {
         isSyncing.value = false;

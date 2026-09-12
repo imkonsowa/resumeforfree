@@ -20,31 +20,28 @@
                     <div class="template-selection-desktop">
                         <Popover v-model:open="showTemplateMenu">
                             <PopoverTrigger as-child>
-                                <Button
+                                <UButton
                                     class="h-9"
-                                    size="sm"
-                                    variant="outline"
-                                >
-                                    <span>{{
+                                    size="sm" color="neutral" variant="outline" trailing-icon="i-lucide-chevron-down">
+<span>{{
                                         (availableTemplates?.find(t => t.id === selectedTemplate)?.name || 'Compact')
                                     }} {{ t('builder.template') }}</span>
-                                    <ChevronDown class="w-4 h-4 ms-2" />
-                                </Button>
+</UButton>
                             </PopoverTrigger>
                             <PopoverContent class="w-80">
                                 <div class="space-y-2">
                                     <div
                                         v-for="template in availableTemplates"
                                         :key="template.id"
-                                        :class="selectedTemplate === template.id ? 'bg-accent' : ''"
-                                        class="cursor-pointer rounded-md p-3 hover:bg-accent transition-colors"
+                                        :class="selectedTemplate === template.id ? 'bg-elevated' : ''"
+                                        class="cursor-pointer rounded-md p-3 hover:bg-elevated transition-colors"
                                         @click="handleTemplateSelect(template.id)"
                                     >
                                         <div class="flex flex-col space-y-1">
                                             <div class="font-medium text-sm">
                                                 {{ template.name }}
                                             </div>
-                                            <div class="text-xs text-muted-foreground">
+                                            <div class="text-xs text-muted">
                                                 {{ template.description }}
                                             </div>
                                         </div>
@@ -53,46 +50,37 @@
                             </PopoverContent>
                         </Popover>
                     </div>
-                    <Button
+                    <UButton
                         class="h-9"
-                        size="sm"
-                        variant="outline"
-                        @click="showSettingsModal = true"
-                    >
-                        <SlidersHorizontal class="w-4 h-4 me-2" />
-                        {{ t('builder.settings') }}
-                    </Button>
+                        size="sm" color="neutral" variant="outline"
+                        @click="showSettingsModal = true" icon="i-lucide-sliders-horizontal">
+{{ t('builder.settings') }}
+</UButton>
                     <div class="flex items-center rounded-md overflow-hidden">
-                        <Button
-                            class="rounded-none h-9 bg-green hover:bg-green-600 text-white border-green hover:border-green-600"
+                        <UButton
+                            class="rounded-none h-9 bg-secondary hover:bg-secondary text-white border-secondary hover:border-secondary"
                             size="sm"
-                            @click="handleDownload"
-                        >
-                            <Download class="w-4 h-4 me-2" />
-                            <span class="download-text">{{ t('builder.download') }}</span> {{ t('builder.downloadPDF') }}
-                        </Button>
+                            @click="handleDownload" icon="i-lucide-download">
+<span class="download-text">{{ t('builder.download') }}</span> {{ t('builder.downloadPDF') }}
+</UButton>
                         <Menubar class="border-0 p-0 h-auto flex items-center">
                             <MenubarMenu>
                                 <MenubarTrigger as-child>
-                                    <Button
-                                        class="rounded-none px-2 h-9 bg-green hover:bg-green-600 text-white border-green hover:border-green-600"
-                                        size="sm"
-                                        variant="default"
-                                    >
-                                        <MoreVertical class="w-4 h-4" />
-                                    </Button>
+                                    <UButton
+                                        class="rounded-none px-2 h-9 bg-secondary hover:bg-secondary text-white border-secondary hover:border-secondary"
+                                        size="sm" icon="i-lucide-more-vertical" />
                                 </MenubarTrigger>
                                 <MenubarContent>
                                     <MenubarItem @click="handleDownloadSVG">
-                                        <Download class="w-4 h-4 me-2" />
+                                        <UIcon name="i-lucide-download" class="w-4 h-4 me-2" />
                                         {{ t('builder.downloadAsSVG') }}
                                     </MenubarItem>
                                     <MenubarItem @click="handleDownloadTypst">
-                                        <Download class="w-4 h-4 me-2" />
+                                        <UIcon name="i-lucide-download" class="w-4 h-4 me-2" />
                                         {{ t('builder.downloadAsTypst') }}
                                     </MenubarItem>
                                     <MenubarItem @click="handleDownloadTypstText">
-                                        <Download class="w-4 h-4 me-2" />
+                                        <UIcon name="i-lucide-download" class="w-4 h-4 me-2" />
                                         {{ t('builder.downloadAsText') }}
                                     </MenubarItem>
                                 </MenubarContent>
@@ -101,45 +89,35 @@
                     </div>
                 </div>
                 <div class="md:hidden flex space-x-2">
-                    <Button
+                    <UButton
                         class="h-9"
-                        size="sm"
-                        variant="outline"
-                        @click="showSettingsModal = true"
-                    >
-                        <Settings class="w-4 h-4" />
-                    </Button>
+                        size="sm" color="neutral" variant="outline"
+                        @click="showSettingsModal = true" icon="i-lucide-settings" />
                     <div class="flex items-center rounded-md overflow-hidden">
-                        <Button
-                            class="rounded-none h-9 bg-green hover:bg-green-600 text-white border-green hover:border-green-600"
+                        <UButton
+                            class="rounded-none h-9 bg-secondary hover:bg-secondary text-white border-secondary hover:border-secondary"
                             size="sm"
-                            @click="handleDownload"
-                        >
-                            <Download class="w-4 h-4 me-2" />
-                            {{ t('builder.download') }}
-                        </Button>
+                            @click="handleDownload" icon="i-lucide-download">
+{{ t('builder.download') }}
+</UButton>
                         <Menubar class="border-0 p-0 h-auto flex items-center">
                             <MenubarMenu>
                                 <MenubarTrigger as-child>
-                                    <Button
-                                        class="rounded-none px-2 h-9 bg-green hover:bg-green-600 text-white border-green hover:border-green-600"
-                                        size="sm"
-                                        variant="default"
-                                    >
-                                        <MoreVertical class="w-4 h-4" />
-                                    </Button>
+                                    <UButton
+                                        class="rounded-none px-2 h-9 bg-secondary hover:bg-secondary text-white border-secondary hover:border-secondary"
+                                        size="sm" icon="i-lucide-more-vertical" />
                                 </MenubarTrigger>
                                 <MenubarContent>
                                     <MenubarItem @click="handleDownloadSVG">
-                                        <Download class="w-4 h-4 me-2" />
+                                        <UIcon name="i-lucide-download" class="w-4 h-4 me-2" />
                                         {{ t('builder.downloadAsSVG') }}
                                     </MenubarItem>
                                     <MenubarItem @click="handleDownloadTypst">
-                                        <Download class="w-4 h-4 me-2" />
+                                        <UIcon name="i-lucide-download" class="w-4 h-4 me-2" />
                                         {{ t('builder.downloadAsTypst') }}
                                     </MenubarItem>
                                     <MenubarItem @click="handleDownloadTypstText">
-                                        <Download class="w-4 h-4 me-2" />
+                                        <UIcon name="i-lucide-download" class="w-4 h-4 me-2" />
                                         {{ t('builder.downloadAsText') }}
                                     </MenubarItem>
                                 </MenubarContent>
@@ -150,7 +128,7 @@
             </div>
             <Card class="h-full">
                 <CardContent class="p-0">
-                    <div class="bg-gray-100 rounded-lg overflow-hidden h-full">
+                    <div class="bg-elevated rounded-lg overflow-hidden h-full">
                         <div class="bg-white h-full min-h-[calc(100vh-200px)] flex flex-col">
                             <div
                                 v-if="isLoading && !previewContent"
@@ -158,12 +136,12 @@
                             >
                                 <div class="text-center">
                                     <div
-                                        class="w-16 h-16 border-4 border-gray-300 border-t-green rounded-full animate-spin mx-auto mb-4"
+                                        class="w-16 h-16 border-4 border-accented border-t-secondary rounded-full animate-spin mx-auto mb-4"
                                     />
-                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                                    <h3 class="text-xl font-semibold text-default mb-2">
                                         {{ t('builder.loadingPreview') }}
                                     </h3>
-                                    <p class="text-gray-600">
+                                    <p class="text-toned">
                                         {{ t('builder.loadingPreviewDescription') }}
                                     </p>
                                 </div>
@@ -196,13 +174,12 @@
                                     <p class="text-red-600 mb-4">
                                         {{ error }}
                                     </p>
-                                    <Button
-                                        size="sm"
-                                        variant="outline"
+                                    <UButton
+                                        size="sm" color="neutral" variant="outline"
                                         @click="generatePreview"
                                     >
                                         {{ t('common.tryAgain') }}
-                                    </Button>
+                                    </UButton>
                                 </div>
                             </div>
                             <div
@@ -222,10 +199,10 @@
                             >
                                 <div class="text-center">
                                     <div
-                                        class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
+                                        class="w-16 h-16 bg-secondary/15 rounded-full flex items-center justify-center mx-auto mb-4"
                                     >
                                         <svg
-                                            class="w-8 h-8 text-green-700"
+                                            class="w-8 h-8 text-secondary"
                                             fill="none"
                                             stroke="currentColor"
                                             viewBox="0 0 24 24"
@@ -238,10 +215,10 @@
                                             />
                                         </svg>
                                     </div>
-                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                                    <h3 class="text-xl font-semibold text-default mb-2">
                                         {{ t('builder.initializingTypst') }}
                                     </h3>
-                                    <p class="text-gray-600">
+                                    <p class="text-toned">
                                         {{ t('builder.settingUpCompiler') }}
                                     </p>
                                 </div>
@@ -258,10 +235,8 @@
 
 <script lang="ts" setup>
 import { Card, CardContent } from '~/components/ui/card';
-import { Button } from '~/components/ui/button';
 import { Popover, PopoverContent, PopoverTrigger } from '~/components/ui/popover';
 import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarTrigger } from '~/components/ui/menubar';
-import { ChevronDown, Download, MoreVertical, Settings, SlidersHorizontal } from 'lucide-vue-next';
 import { getTemplateList } from '~/templates';
 import { useResumeGenerator } from '~/composables/useResumeGenerator';
 import { useDebounceFn } from '@vueuse/core';

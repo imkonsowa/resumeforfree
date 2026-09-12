@@ -13,7 +13,7 @@
                     v-if="resumeStore.activeResume"
                     class="space-y-2"
                 >
-                    <Label>{{ t('settings.language.label') }}</Label>
+                    <label>{{ t('settings.language.label') }}</label>
                     <ResumeLanguageSelector
                         :model-value="resumeStore.activeResume.language"
                         size="default"
@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="space-y-2">
-                    <Label for="template">{{ t('settings.template.label') }}</Label>
+                    <label for="template">{{ t('settings.template.label') }}</label>
                     <Select
                         v-model="selectedTemplate"
                         @update:model-value="updateTemplate"
@@ -43,20 +43,20 @@
                                     <div class="font-medium">
                                         {{ template.name }}
                                     </div>
-                                    <div class="text-xs text-muted-foreground">
+                                    <div class="text-xs text-muted">
                                         {{ template.description }}
                                     </div>
                                 </div>
                             </SelectItem>
                         </SelectContent>
                     </Select>
-                    <p class="text-sm text-muted-foreground">
+                    <p class="text-sm text-muted">
                         {{ t('settings.template.description') }}
                     </p>
                 </div>
 
                 <div class="space-y-2">
-                    <Label for="font-family">{{ t('settings.font.label') }}</Label>
+                    <label for="font-family">{{ t('settings.font.label') }}</label>
                     <Select
                         v-model="selectedFont"
                         @update:model-value="updateFont"
@@ -74,15 +74,15 @@
                             </SelectItem>
                         </SelectContent>
                     </Select>
-                    <p class="text-sm text-muted-foreground">
+                    <p class="text-sm text-muted">
                         {{ t('settings.font.description') }}
                     </p>
                 </div>
 
                 <div class="space-y-2">
-                    <Label for="font-size">{{ t('settings.fontSize.label') }}</Label>
+                    <label for="font-size">{{ t('settings.fontSize.label') }}</label>
                     <div class="flex items-center space-x-4">
-                        <Slider
+                        <USlider
                             id="font-size"
                             v-model="fontSize"
                             :max="16"
@@ -93,24 +93,24 @@
                         />
                         <span class="w-12 text-center font-medium">{{ fontSize[0] }}pt</span>
                     </div>
-                    <p class="text-sm text-muted-foreground">
+                    <p class="text-sm text-muted">
                         {{ t('settings.fontSize.description') }}
                     </p>
                 </div>
 
                 <div class="flex items-start justify-between gap-4">
                     <div class="space-y-1">
-                        <Label
+                        <label
                             for="section-header-line"
                             class="cursor-pointer"
                         >
                             {{ t('settings.sectionHeaderLine.label') }}
-                        </Label>
-                        <p class="text-sm text-muted-foreground">
+                        </label>
+                        <p class="text-sm text-muted">
                             {{ t('settings.sectionHeaderLine.description') }}
                         </p>
                     </div>
-                    <Switch
+                    <USwitch
                         id="section-header-line"
                         :model-value="showSectionHeaderLine"
                         @update:model-value="updateShowSectionHeaderLine"
@@ -119,15 +119,14 @@
             </div>
 
             <DialogFooter>
-                <Button
-                    variant="outline"
+                <UButton color="neutral" variant="outline"
                     @click="resetToDefaults"
                 >
                     {{ t('common.resetToDefaults') }}
-                </Button>
-                <Button @click="close">
+                </UButton>
+                <UButton @click="close">
                     {{ t('common.done') }}
-                </Button>
+                </UButton>
             </DialogFooter>
         </DialogContent>
     </Dialog>
@@ -143,10 +142,6 @@ import {
     DialogHeader,
     DialogTitle,
 } from '~/components/ui/dialog';
-import { Button } from '~/components/ui/button';
-import { Label } from '~/components/ui/label';
-import { Slider } from '~/components/ui/slider';
-import { Switch } from '~/components/ui/switch';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '~/components/ui/select';
 import ResumeLanguageSelector from '~/components/elements/ResumeLanguageSelector.vue';
 import { useSettingsStore } from '~/stores/settings';

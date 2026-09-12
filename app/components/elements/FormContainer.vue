@@ -1,8 +1,8 @@
 <template>
-    <Card class="w-full">
-        <CardHeader class="px-4 md:px-6">
-            <div class="flex items-center justify-between">
-                <div class="flex-1">
+    <UCard class="w-full">
+        <template #header>
+            <div class="flex items-center justify-between gap-2">
+                <div class="flex-1 min-w-0">
                     <EditableHeader
                         v-if="props.editable"
                         :value="props.title"
@@ -11,45 +11,45 @@
                     />
                     <h3
                         v-else
-                        class="text-lg font-semibold text-gray-900"
+                        class="text-lg font-semibold text-highlighted"
                     >
                         {{ props.title }}
                     </h3>
                 </div>
-                <div class="flex items-center space-x-2">
-                    <div
+                <div class="flex items-center gap-2">
+                    <slot
                         v-if="$slots['header-actions']"
-                        class="ml-4"
-                    >
-                        <slot name="header-actions" />
-                    </div>
-                    <Button
+                        name="header-actions"
+                    />
+                    <UButton
                         v-if="props.collapsible"
+                        color="neutral"
                         variant="ghost"
                         size="sm"
+                        square
+                        :aria-expanded="!isCollapsed"
+                        :aria-label="isCollapsed ? t('common.expand', 'Expand') : t('common.collapse', 'Collapse')"
                         @click="toggleCollapse"
                     >
-                        <ChevronDown
+                        <UIcon
+                            name="i-lucide-chevron-down"
                             class="w-4 h-4 transition-transform duration-200"
-                            :class="[isCollapsed ? '-rotate-90' : 'rotate-0']"
+                            :class="isCollapsed ? '-rotate-90 rtl:rotate-90' : 'rotate-0'"
                         />
-                    </Button>
+                    </UButton>
                 </div>
             </div>
-        </CardHeader>
-        <CardContent
-            v-if="!isCollapsed"
-            class="px-4 md:px-6"
-        >
+        </template>
+
+        <div v-if="!isCollapsed">
             <div
                 v-if="props.isEmpty"
-                class="text-center py-8 text-muted-foreground"
+                class="text-center py-8 text-muted"
             >
                 {{ props.emptyMessage }}
             </div>
-            <div v-else>
-                <slot />
-            </div>
+            <slot v-else />
+
             <div
                 v-if="props.showAddButton"
                 class="mt-6"
@@ -59,14 +59,11 @@
                     @click="$emit('add')"
                 />
             </div>
-        </CardContent>
-    </Card>
+        </div>
+    </UCard>
 </template>
 
 <script lang="ts" setup>
-import { Card, CardContent, CardHeader } from '~/components/ui/card';
-import { Button } from '~/components/ui/button';
-import { ChevronDown } from 'lucide-vue-next';
 import AddButton from '~/components/elements/AddButton.vue';
 import EditableHeader from '~/components/elements/EditableHeader.vue';
 import type { SectionHeaders } from '~/types/resume';
@@ -86,16 +83,21 @@ const props = withDefaults(defineProps<Props>(), {
     editable: true,
     collapsible: true,
 });
-const _emit = defineEmits<{
+defineEmits<{
     'add': [];
     'edit-title': [value: string];
 }>();
+
+const { t } = useI18n();
 const settingsStore = useSettingsStore();
+
 const typedSectionKey = computed(() => props.sectionKey as keyof SectionHeaders | undefined);
+
 const isCollapsed = computed(() => {
     if (!props.collapsible || !props.sectionKey) return false;
     return settingsStore.sectionCollapsed[props.sectionKey] || false;
 });
+
 const toggleCollapse = () => {
     if (props.collapsible && props.sectionKey) {
         settingsStore.toggleSectionCollapse(props.sectionKey);

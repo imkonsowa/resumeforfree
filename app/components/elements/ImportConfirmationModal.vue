@@ -13,7 +13,7 @@
                 <h3 class="text-lg font-semibold">
                     Import Resumes
                 </h3>
-                <p class="text-sm text-gray-600 mt-1">
+                <p class="text-sm text-toned mt-1">
                     {{ resumesToImport.length }} resume{{ resumesToImport.length !== 1 ? 's' : '' }} found in file
                 </p>
             </div>
@@ -22,7 +22,7 @@
                 class="bg-amber-50 border border-amber-200 rounded-md p-3 mb-4"
             >
                 <div class="flex">
-                    <AlertTriangle class="h-5 w-5 text-amber-600 flex-shrink-0" />
+                    <UIcon name="i-lucide-alert-triangle" class="h-5 w-5 text-amber-600 flex-shrink-0" />
                     <div class="ml-3">
                         <p class="text-sm text-amber-800">
                             {{ duplicateCount }} resume{{ duplicateCount !== 1 ? 's' : '' }} with matching names already
@@ -41,13 +41,13 @@
                     <label
                         class="flex items-center gap-2 p-2 rounded cursor-pointer"
                         :class="[
-                            resume.isDuplicate ? 'bg-amber-50 hover:bg-amber-100' : 'hover:bg-gray-50',
+                            resume.isDuplicate ? 'bg-amber-50 hover:bg-amber-100' : 'hover:bg-muted',
                         ]"
                     >
                         <input
                             v-model="selectedIndexes"
                             :value="index"
-                            class="rounded border-gray-300 text-primary focus:ring-primary"
+                            class="rounded border-accented text-primary focus:ring-primary"
                             type="checkbox"
                         >
                         <div class="flex-1 min-w-0">
@@ -55,45 +55,41 @@
                                 <span class="text-sm font-medium truncate">
                                     {{ resume.name }}
                                 </span>
-                                <Badge
+                                <UBadge
                                     v-if="resume.isDuplicate"
                                     class="bg-amber-100 text-amber-800 text-xs"
                                 >
                                     Duplicate
-                                </Badge>
+                                </UBadge>
                             </div>
-                            <div class="text-xs text-gray-500">
+                            <div class="text-xs text-muted">
                                 {{ resume.itemCount }} items
                             </div>
                         </div>
                     </label>
                 </div>
             </div>
-            <div class="text-sm text-gray-600 mb-4">
+            <div class="text-sm text-toned mb-4">
                 {{ selectedIndexes.length }} resume{{ selectedIndexes.length !== 1 ? 's' : '' }} selected for import
             </div>
             <div class="flex justify-end gap-3">
-                <Button
-                    variant="outline"
+                <UButton color="neutral" variant="outline"
                     @click="handleCancel"
                 >
                     Cancel
-                </Button>
-                <Button
+                </UButton>
+                <UButton
                     :disabled="selectedIndexes.length === 0"
                     @click="handleImport"
                 >
                     Import Selected
-                </Button>
+                </UButton>
             </div>
         </div>
     </div>
 </template>
 
 <script lang="ts" setup>
-import { Button } from '~/components/ui/button';
-import { Badge } from '~/components/ui/badge';
-import { AlertTriangle } from 'lucide-vue-next';
 import type { ImportResumePreview } from '~/types/resume';
 
 interface Props {

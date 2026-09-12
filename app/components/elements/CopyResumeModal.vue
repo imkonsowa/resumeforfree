@@ -1,8 +1,4 @@
 <script lang="ts" setup>
-import { Button } from '~/components/ui/button';
-import { Input } from '~/components/ui/input';
-import { Label } from '~/components/ui/label';
-import { Checkbox } from '~/components/ui/checkbox';
 
 interface Props {
     isOpen: boolean;
@@ -49,12 +45,12 @@ const handleEnter = (event: KeyboardEvent) => {
             @click.stop
         >
             <div class="space-y-4">
-                <h3 class="text-lg font-semibold text-gray-900">
+                <h3 class="text-lg font-semibold text-highlighted">
                     {{ $t('resumes.modals.copy.title') }}
                 </h3>
                 <div class="space-y-2">
-                    <Label for="copy-resume-name">{{ $t('resumes.modals.copy.resumeName') }}</Label>
-                    <Input
+                    <label for="copy-resume-name">{{ $t('resumes.modals.copy.resumeName') }}</label>
+                    <UInput
                         id="copy-resume-name"
                         v-model="copyResumeName"
                         autofocus
@@ -63,31 +59,30 @@ const handleEnter = (event: KeyboardEvent) => {
                     />
                 </div>
                 <div class="flex items-center space-x-2 pt-2">
-                    <Checkbox
+                    <UCheckbox
                         id="copy-navigate-to-builder"
                         v-model="navigateToBuilder"
                     />
-                    <Label
+                    <label
                         class="text-sm font-normal"
                         for="copy-navigate-to-builder"
                     >
                         {{ $t('resumes.modals.copy.navigateToBuilder') }}
-                    </Label>
+                    </label>
                 </div>
                 <div class="flex gap-3 pt-4">
-                    <Button
+                    <UButton
                         class="flex-1"
                         @click="handleConfirm"
                     >
                         {{ $t('resumes.modals.copy.copyButton') }}
-                    </Button>
-                    <Button
-                        class="flex-1"
-                        variant="outline"
+                    </UButton>
+                    <UButton
+                        class="flex-1" color="neutral" variant="outline"
                         @click="handleCancel"
                     >
                         {{ $t('resumes.modals.cancel') }}
-                    </Button>
+                    </UButton>
                 </div>
             </div>
         </div>

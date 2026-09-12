@@ -7,7 +7,7 @@
 
             <Card class="p-6 sm:p-8">
                 <CardContent class="pt-0">
-                    <p class="text-gray-700 mb-8 text-center">
+                    <p class="text-default mb-8 text-center">
                         {{ $t('contact.description') }}
                     </p>
 
@@ -16,11 +16,11 @@
                         @submit.prevent="handleSubmit"
                     >
                         <div class="mb-4">
-                            <Label for="name">
+                            <label for="name">
                                 {{ $t('common.name') }}
                                 <span class="text-red-500">*</span>
-                            </Label>
-                            <Input
+                            </label>
+                            <UInput
                                 id="name"
                                 v-model="formData.name"
                                 type="text"
@@ -32,11 +32,11 @@
                         </div>
 
                         <div class="mb-4">
-                            <Label for="email">
+                            <label for="email">
                                 {{ $t('common.email') }}
                                 <span class="text-red-500">*</span>
-                            </Label>
-                            <Input
+                            </label>
+                            <UInput
                                 id="email"
                                 v-model="formData.email"
                                 type="email"
@@ -48,11 +48,11 @@
                         </div>
 
                         <div class="mb-4">
-                            <Label for="subject">
+                            <label for="subject">
                                 {{ $t('contact.form.subject.label') }}
                                 <span class="text-red-500">*</span>
-                            </Label>
-                            <Input
+                            </label>
+                            <UInput
                                 id="subject"
                                 v-model="formData.subject"
                                 type="text"
@@ -64,11 +64,11 @@
                         </div>
 
                         <div class="mb-6">
-                            <Label for="message">
+                            <label for="message">
                                 {{ $t('contact.form.message.label') }}
                                 <span class="text-red-500">*</span>
-                            </Label>
-                            <Textarea
+                            </label>
+                            <UTextarea
                                 id="message"
                                 v-model="formData.message"
                                 :placeholder="$t('contact.form.message.placeholder')"
@@ -86,14 +86,14 @@
                             />
                         </div>
 
-                        <Button
+                        <UButton
                             type="submit"
                             class="w-full"
                             :disabled="loading || !isFormValid || !turnstileToken"
                         >
                             <span v-if="loading">{{ $t('contact.form.sending') }}</span>
                             <span v-else>{{ $t('contact.form.submit') }}</span>
-                        </Button>
+                        </UButton>
 
                         <p
                             v-if="errorMessage"
@@ -107,7 +107,7 @@
                         v-else
                         class="text-center py-8"
                     >
-                        <div class="mb-4 text-green-600">
+                        <div class="mb-4 text-secondary">
                             <svg
                                 class="w-16 h-16 mx-auto"
                                 fill="none"
@@ -122,26 +122,26 @@
                                 />
                             </svg>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                        <h3 class="text-xl font-semibold text-highlighted mb-2">
                             {{ $t('contact.success.title') }}
                         </h3>
-                        <p class="text-gray-700 mb-6">
+                        <p class="text-default mb-6">
                             {{ $t('contact.success.message') }}
                         </p>
-                        <Button
+                        <UButton
                             @click="navigateTo(localePath('/resumes'))"
                         >
                             {{ $t('contact.success.keepBuilding') }}
-                        </Button>
+                        </UButton>
                     </div>
                 </CardContent>
             </Card>
 
-            <div class="mt-8 text-center text-sm text-gray-600">
+            <div class="mt-8 text-center text-sm text-toned">
                 <p>
                     {{ $t('contact.alternative.text') }}
                     <a
-                        class="text-green-700 hover:text-green-ink font-medium underline"
+                        class="text-secondary hover:text-secondary font-medium underline"
                         href="mailto:contact@resumeforfree.com"
                     >
                         contact@resumeforfree.com
@@ -153,15 +153,11 @@
 </template>
 
 <script lang="ts" setup>
-import { toast } from 'vue-sonner';
 import { Card, CardContent } from '~/components/ui/card';
-import { Input } from '~/components/ui/input';
-import { Textarea } from '~/components/ui/textarea';
-import { Label } from '~/components/ui/label';
-import { Button } from '~/components/ui/button';
 import TurnstileWidget from '~/components/elements/TurnstileWidget.vue';
 
 const { t } = useI18n();
+const notify = useNotify();
 const localePath = useLocalePath();
 
 const formData = ref({
@@ -205,7 +201,7 @@ const handleSubmit = async () => {
         });
 
         formSubmitted.value = true;
-        toast.success(t('contact.success.toast'));
+        notify.success(t('contact.success.toast'));
     }
     catch (error: unknown) {
         console.error('Contact form submission error:', error);
@@ -221,7 +217,7 @@ const handleSubmit = async () => {
             errorMessage.value = t('contact.errors.generic');
         }
 
-        toast.error(errorMessage.value);
+        notify.error(errorMessage.value);
 
         turnstileWidgetRef.value?.reset();
         turnstileToken.value = null;

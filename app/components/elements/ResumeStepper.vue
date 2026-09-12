@@ -7,20 +7,15 @@
         >
             <div class="absolute inset-0 bg-black/50" />
             <div
-                class="relative bg-background border rounded-lg shadow-xl p-6 w-80 max-h-[80vh] overflow-y-auto"
+                class="relative bg-default border rounded-lg shadow-xl p-6 w-80 max-h-[80vh] overflow-y-auto"
                 @click.stop
             >
                 <div class="flex items-center justify-between mb-6">
                     <h3 class="text-lg font-semibold">
                         Resume Sections
                     </h3>
-                    <Button
-                        size="icon"
-                        variant="ghost"
-                        @click="showStepper = false"
-                    >
-                        <XIcon class="h-4 w-4" />
-                    </Button>
+                    <UButton color="neutral" variant="ghost"
+                        @click="showStepper = false" icon="i-lucide-x" />
                 </div>
                 <div class="space-y-3">
                     <button
@@ -28,18 +23,18 @@
                         :key="section.id"
                         :class="[
                             isCurrentSection(section.id)
-                                ? 'bg-primary text-primary-foreground'
-                                : 'text-muted-foreground',
+                                ? 'bg-primary text-inverted'
+                                : 'text-muted',
                         ]"
-                        class="w-full flex items-center gap-3 p-3 rounded-md transition-colors hover:bg-accent hover:text-accent-foreground text-left"
+                        class="w-full flex items-center gap-3 p-3 rounded-md transition-colors hover:bg-elevated hover:text-highlighted text-left"
                         @click="scrollToSection(section.id)"
                     >
                         <div class="flex-shrink-0">
                             <div
                                 :class="[
                                     isCurrentSection(section.id)
-                                        ? 'border-primary-foreground bg-primary-foreground text-primary'
-                                        : 'border-muted-foreground',
+                                        ? 'border-inverted bg-inverted text-primary'
+                                        : 'border-accented',
                                 ]"
                                 class="w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm font-medium"
                             >
@@ -62,18 +57,18 @@
                     >
                         <div
                             v-if="dropZoneIndex === index && draggedIndex !== null && draggedIndex !== index"
-                            class="absolute top-0 left-0 right-0 h-px bg-gray-400 rounded-full z-10 transition-all duration-200"
+                            class="absolute top-0 left-0 right-0 h-px bg-accented rounded-full z-10 transition-all duration-200"
                         />
                         <div
                             :class="[
                                 isCurrentSection(section.id)
-                                    ? 'bg-primary text-primary-foreground'
-                                    : 'text-muted-foreground',
+                                    ? 'bg-primary text-inverted'
+                                    : 'text-muted',
                                 draggedIndex === index ? 'opacity-50' : '',
                                 dropZoneIndex === index && draggedIndex !== null && draggedIndex !== index ? 'transform translate-y-1' : '',
                             ]"
                             :draggable="section.orderable"
-                            class="w-full flex items-center gap-3 p-3 rounded-md transition-colors hover:bg-accent hover:text-accent-foreground text-left cursor-move"
+                            class="w-full flex items-center gap-3 p-3 rounded-md transition-colors hover:bg-elevated hover:text-highlighted text-left cursor-move"
                             @click="scrollToSection(section.id)"
                             @dragend="onDragEnd"
                             @dragover="onDragOver($event, index)"
@@ -81,14 +76,14 @@
                             @drop="onDrop($event, index)"
                         >
                             <div class="flex-shrink-0">
-                                <GripVertical class="w-4 h-4 text-gray-400" />
+                                <UIcon name="i-lucide-grip-vertical" class="w-4 h-4 text-dimmed" />
                             </div>
                             <div class="flex-shrink-0">
                                 <div
                                     :class="[
                                         isCurrentSection(section.id)
-                                            ? 'border-primary-foreground bg-primary-foreground text-primary'
-                                            : 'border-muted-foreground',
+                                            ? 'border-inverted bg-inverted text-primary'
+                                            : 'border-accented',
                                     ]"
                                     class="w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm font-medium"
                                 >
@@ -106,7 +101,7 @@
                         </div>
                         <div
                             v-if="dropZoneIndex === index + 1 && draggedIndex !== null"
-                            class="absolute bottom-0 left-0 right-0 h-px bg-gray-400 rounded-full z-10 transition-all duration-200"
+                            class="absolute bottom-0 left-0 right-0 h-px bg-accented rounded-full z-10 transition-all duration-200"
                         />
                     </div>
                     <div
@@ -116,7 +111,7 @@
                     >
                         <div
                             v-if="dropZoneIndex === orderableSections.length && draggedIndex !== null"
-                            class="absolute top-2 left-0 right-0 h-px bg-gray-400 rounded-full z-10 transition-all duration-200"
+                            class="absolute top-2 left-0 right-0 h-px bg-accented rounded-full z-10 transition-all duration-200"
                         />
                     </div>
                 </div>
@@ -127,8 +122,6 @@
 
 <script lang="ts" setup>
 import { useResumeStore } from '~/stores/resume';
-import { Button } from '~/components/ui/button';
-import { GripVertical, XIcon } from 'lucide-vue-next';
 
 interface Section {
     id: string;

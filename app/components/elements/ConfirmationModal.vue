@@ -13,33 +13,31 @@
                 <div class="flex items-center space-x-3">
                     <div class="flex-shrink-0">
                         <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
-                            <AlertTriangle class="w-6 h-6 text-red-600" />
+                            <UIcon name="i-lucide-alert-triangle" class="w-6 h-6 text-red-600" />
                         </div>
                     </div>
                     <div class="flex-1">
-                        <h3 class="text-lg font-semibold text-gray-900">
+                        <h3 class="text-lg font-semibold text-highlighted">
                             {{ title }}
                         </h3>
                     </div>
                 </div>
-                <div class="text-gray-600">
+                <div class="text-toned">
                     <p>{{ message }}</p>
                 </div>
                 <div class="flex gap-3 pt-4">
-                    <Button
-                        class="flex-1"
-                        variant="destructive"
+                    <UButton
+                        class="flex-1" color="error" variant="solid"
                         @click="handleConfirm"
                     >
                         {{ confirmText }}
-                    </Button>
-                    <Button
-                        class="flex-1"
-                        variant="outline"
+                    </UButton>
+                    <UButton
+                        class="flex-1" color="neutral" variant="outline"
                         @click="handleCancel"
                     >
                         {{ cancelText }}
-                    </Button>
+                    </UButton>
                 </div>
             </div>
         </div>
@@ -47,8 +45,6 @@
 </template>
 
 <script lang="ts" setup>
-import { Button } from '~/components/ui/button';
-import { AlertTriangle } from 'lucide-vue-next';
 
 interface Props {
     isOpen: boolean;

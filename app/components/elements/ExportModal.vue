@@ -13,15 +13,15 @@
                 <h3 class="text-lg font-semibold">
                     {{ $t('resumes.modals.export.title') }}
                 </h3>
-                <p class="text-sm text-gray-600 mt-1">
+                <p class="text-sm text-toned mt-1">
                     {{ $t('resumes.modals.export.description') }}
                 </p>
             </div>
-            <div class="bg-green-50 border border-green-200 rounded-md p-3 mb-4">
+            <div class="bg-secondary/10 border border-secondary/30 rounded-md p-3 mb-4">
                 <div class="flex">
-                    <Info class="h-5 w-5 text-green-700 flex-shrink-0" />
+                    <UIcon name="i-lucide-info" class="h-5 w-5 text-secondary flex-shrink-0" />
                     <div class="ml-3">
-                        <p class="text-sm text-green-700">
+                        <p class="text-sm text-secondary">
                             {{ $t('resumes.modals.export.infoMessage') }}
                         </p>
                     </div>
@@ -31,7 +31,7 @@
                 <label class="flex items-center gap-2 cursor-pointer">
                     <input
                         v-model="selectAll"
-                        class="rounded border-gray-300 text-primary focus:ring-primary"
+                        class="rounded border-accented text-primary focus:ring-primary"
                         type="checkbox"
                         @change="handleSelectAll"
                     >
@@ -42,51 +42,48 @@
                 <label
                     v-for="resume in resumes"
                     :key="resume.id"
-                    class="flex items-center gap-2 cursor-pointer hover:bg-gray-50 p-2 rounded"
+                    class="flex items-center gap-2 cursor-pointer hover:bg-muted p-2 rounded"
                 >
                     <input
                         v-model="selectedResumes"
                         :value="resume.id"
-                        class="rounded border-gray-300 text-primary focus:ring-primary"
+                        class="rounded border-accented text-primary focus:ring-primary"
                         type="checkbox"
                     >
                     <div class="flex-1 min-w-0">
                         <div class="text-sm font-medium truncate">
                             {{ resume.name }}
                         </div>
-                        <div class="text-xs text-gray-500">
+                        <div class="text-xs text-muted">
                             Updated {{ formatDate(resume.updatedAt) }}
                         </div>
                     </div>
                 </label>
             </div>
-            <div class="text-sm text-gray-600 mb-4">
+            <div class="text-sm text-toned mb-4">
                 {{ t('resumes.modals.export.selectedCount', {
                     count: selectedResumes.length,
                     countPlural: selectedResumes.length !== 1 ? t('resumes.resumeCount.resumes') : t('resumes.resumeCount.resume'),
                 }) }}
             </div>
             <div class="flex justify-end gap-3">
-                <Button
-                    variant="outline"
+                <UButton color="neutral" variant="outline"
                     @click="handleCancel"
                 >
                     {{ $t('resumes.modals.cancel') }}
-                </Button>
-                <Button
+                </UButton>
+                <UButton
                     :disabled="selectedResumes.length === 0"
                     @click="handleExport"
                 >
                     {{ $t('common.export') }}
-                </Button>
+                </UButton>
             </div>
         </div>
     </div>
 </template>
 
 <script lang="ts" setup>
-import { Button } from '~/components/ui/button';
-import { Info } from 'lucide-vue-next';
 import type { Resume } from '~/types/resume';
 
 interface Props {

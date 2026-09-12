@@ -2,7 +2,7 @@
     <div class="mb-4">
         <label
             v-if="label"
-            class="block text-sm font-medium text-gray-700 mb-1"
+            class="block text-sm font-medium text-default mb-1"
         >{{ label }}</label>
         <div class="relative">
             <VueDatePicker

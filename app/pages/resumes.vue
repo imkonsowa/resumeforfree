@@ -9,10 +9,9 @@ import ResumesHeader from '~/components/resumes/ResumesHeader.vue';
 import ResumesGrid from '~/components/resumes/ResumesGrid.vue';
 import ResumesEmptyState from '~/components/resumes/ResumesEmptyState.vue';
 import type { ImportResumePreview, Resume } from '~/types/resume';
-import { Button } from '~/components/ui/button';
-import { CheckCircle, Cloud, LogIn, UserPlus } from 'lucide-vue-next';
 
 const { t } = useI18n();
+const notify = useNotify();
 const localePath = useLocalePath();
 const resumeStore = useResumeStore();
 const authStore = useAuthStore();
@@ -38,12 +37,10 @@ const maybeFulfilCloudSyncIntent = async () => {
 
     const { synced, skipped } = await resumeStore.syncLocalOnlyResumes();
     if (synced > 0) {
-        const { toast } = await import('vue-sonner');
-        toast.success(t('notifications.autoSyncedToCloud', { count: synced }));
+        notify.success(t('notifications.autoSyncedToCloud', { count: synced }));
     }
     if (skipped > 0) {
-        const { toast } = await import('vue-sonner');
-        toast.info(t('notifications.cloudLimitReached', { count: skipped }));
+        notify.info(t('notifications.cloudLimitReached', { count: skipped }));
     }
     await useResumePhoto().syncLocalPhotosToServer();
 };
@@ -86,7 +83,6 @@ const getDefaultResumeName = () => {
     return userName ? `${userName} - Resume` : 'Untitled Resume';
 };
 const handleCreateResume = async (name: string, language: string, navigateToBuilder: boolean, saveToCloud: boolean) => {
-    const { toast } = await import('vue-sonner');
     const { defaultResumeSettings, getDefaultFontForLanguage } = await import('~/types/resume');
     const resumeName = name.trim() || getDefaultResumeName();
     const seededSettings = {
@@ -98,7 +94,7 @@ const handleCreateResume = async (name: string, language: string, navigateToBuil
     showCreateModal.value = false;
     if (saveToCloud && authStore.isLoggedIn) {
         try {
-            toast.info(t('resumes.toast.creatingInCloud'));
+            notify.info(t('resumes.notify.creatingInCloud'));
             const api = useApi();
             const resume = resumeStore.resumesList.find(r => r.id === newResumeId);
             if (resume) {
@@ -107,20 +103,20 @@ const handleCreateResume = async (name: string, language: string, navigateToBuil
                     resumeStore.resumes[newResumeId].serverId = newCloudResume.id;
                     resumeStore.resumes[newResumeId].updatedAt = new Date().toISOString();
                 }
-                toast.success(t('resumes.toast.createdAndSaved').replace('{name}', resumeName));
+                notify.success(t('resumes.notify.createdAndSaved').replace('{name}', resumeName));
             }
         }
         catch (error: unknown) {
             console.error('Failed to save resume to cloud:', error);
             const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-            toast.warning(t('resumes.toast.createdLocallyFailed').replace('{name}', resumeName).replace('{error}', errorMessage));
+            notify.warning(t('resumes.notify.createdLocallyFailed').replace('{name}', resumeName).replace('{error}', errorMessage));
         }
     }
     else if (saveToCloud && !authStore.isLoggedIn) {
-        toast.warning(t('resumes.toast.loginToSaveCloud'));
+        notify.warning(t('resumes.notify.loginToSaveCloud'));
     }
     else {
-        toast.success(t('resumes.toast.created').replace('{name}', resumeName));
+        notify.success(t('resumes.notify.created').replace('{name}', resumeName));
     }
     if (navigateToBuilder) {
         router.push(localePath('/builder'));
@@ -152,7 +148,6 @@ const handleCopyResume = (name: string, navigateToBuilder: boolean) => {
     }
 };
 const deleteResume = async (id: string) => {
-    const { toast } = await import('vue-sonner');
     const resume = resumeStore.resumesList.find(r => r.id === id);
     const resumeName = resume?.name || 'this resume';
     const confirmed = await confirmation.confirm({
@@ -167,37 +162,36 @@ const deleteResume = async (id: string) => {
             try {
                 const api = useApi();
                 await api.resumes.delete(resume.serverId);
-                toast.success(t('resumes.toast.deletedFromCloud').replace('{name}', resumeName));
+                notify.success(t('resumes.notify.deletedFromCloud').replace('{name}', resumeName));
             }
             catch (error) {
                 console.error('Failed to delete resume from cloud:', error);
                 const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-                toast.warning(t('resumes.toast.deletedLocallyFailed').replace('{error}', errorMessage));
+                notify.warning(t('resumes.notify.deletedLocallyFailed').replace('{error}', errorMessage));
             }
         }
         else {
-            toast.success(t('resumes.toast.deleted').replace('{name}', resumeName));
+            notify.success(t('resumes.notify.deleted').replace('{name}', resumeName));
         }
     }
 };
 const syncResume = async (id: string) => {
-    const { toast } = await import('vue-sonner');
     if (!authStore.isLoggedIn) {
-        toast.error(t('resumes.toast.loginToSync'));
+        notify.error(t('resumes.notify.loginToSync'));
         return;
     }
     try {
         const api = useApi();
         const resume = resumeStore.resumesList.find(r => r.id === id);
         if (!resume) {
-            toast.error(t('resumes.toast.resumeNotFound'));
+            notify.error(t('resumes.notify.resumeNotFound'));
             return;
         }
-        toast.info(t('resumes.toast.syncingToCloud'));
+        notify.info(t('resumes.notify.syncingToCloud'));
         if (resume.serverId) {
             try {
                 await api.resumes.update(resume.serverId, resume);
-                toast.success(t('resumes.toast.updatedInCloud').replace('{name}', resume.name));
+                notify.success(t('resumes.notify.updatedInCloud').replace('{name}', resume.name));
             }
             catch (error: unknown) {
                 if (error && typeof error === 'object' && 'statusCode' in error && error.statusCode === 404) {
@@ -206,7 +200,7 @@ const syncResume = async (id: string) => {
                         resumeStore.resumes[id].serverId = newResume.id;
                         resumeStore.resumes[id].updatedAt = new Date().toISOString();
                     }
-                    toast.success(t('resumes.toast.syncedNewCopy').replace('{name}', resume.name));
+                    notify.success(t('resumes.notify.syncedNewCopy').replace('{name}', resume.name));
                 }
                 else {
                     throw error;
@@ -219,13 +213,13 @@ const syncResume = async (id: string) => {
                 resumeStore.resumes[id].serverId = newResume.id;
                 resumeStore.resumes[id].updatedAt = new Date().toISOString();
             }
-            toast.success(t('resumes.toast.syncedToCloud').replace('{name}', resume.name));
+            notify.success(t('resumes.notify.syncedToCloud').replace('{name}', resume.name));
         }
     }
     catch (error: unknown) {
         console.error('Failed to sync resume:', error);
         const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-        toast.error(t('resumes.toast.syncFailed').replace('{error}', errorMessage));
+        notify.error(t('resumes.notify.syncFailed').replace('{error}', errorMessage));
     }
 };
 const clearSearch = () => {
@@ -268,32 +262,30 @@ const handleCloudSyncModal = () => {
     showCloudSyncModal.value = true;
 };
 const handleCloudSync = async (resumeIds: string[]) => {
-    const { toast } = await import('vue-sonner');
     if (resumeIds.length === 0) {
         showCloudSyncModal.value = false;
         return;
     }
     try {
         const pluralSuffix = resumeIds.length !== 1 ? t('resumes.resumeCount.resumes') : t('resumes.resumeCount.resume');
-        toast.info(t('resumes.toast.syncingMultiple').replace('{count}', resumeIds.length.toString()).replace('{plural}', pluralSuffix));
+        notify.info(t('resumes.notify.syncingMultiple').replace('{count}', resumeIds.length.toString()).replace('{plural}', pluralSuffix));
         for (const resumeId of resumeIds) {
             await resumeStore.syncResumeToServer(resumeId);
         }
-        toast.success(t('resumes.toast.syncedMultiple').replace('{count}', resumeIds.length.toString()).replace('{plural}', pluralSuffix));
+        notify.success(t('resumes.notify.syncedMultiple').replace('{count}', resumeIds.length.toString()).replace('{plural}', pluralSuffix));
         showCloudSyncModal.value = false;
     }
     catch (error: unknown) {
         console.error('Failed to sync resumes:', error);
         const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-        toast.error(t('resumes.toast.syncMultipleFailed').replace('{error}', errorMessage));
+        notify.error(t('resumes.notify.syncMultipleFailed').replace('{error}', errorMessage));
     }
 };
 const disableCloudSync = async (id: string) => {
-    const { toast } = await import('vue-sonner');
     const resume = resumeStore.resumesList.find(r => r.id === id);
     const resumeName = resume?.name || 'this resume';
     if (!resume?.serverId) {
-        toast.error(t('resumes.toast.resumeNotSynced'));
+        notify.error(t('resumes.notify.resumeNotSynced'));
         return;
     }
     const confirmed = await confirmation.confirm({
@@ -306,12 +298,12 @@ const disableCloudSync = async (id: string) => {
         try {
             const api = useApi();
             await api.resumes.delete(resume.serverId);
-            toast.success(t('resumes.toast.removedFromCloud').replace('{name}', resumeName));
+            notify.success(t('resumes.notify.removedFromCloud').replace('{name}', resumeName));
         }
         catch (error: unknown) {
             console.error('Failed to disable cloud sync:', error);
             const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-            toast.error(t('resumes.toast.removeFailed').replace('{error}', errorMessage));
+            notify.error(t('resumes.notify.removeFailed').replace('{error}', errorMessage));
         }
         finally {
             if (resumeStore.resumes[id]) {
@@ -392,50 +384,45 @@ useHead({
             <ClientOnly>
                 <div
                     v-if="!authStore.isLoggedIn"
-                    class="mb-6 p-4 bg-green-50 border border-green-200 rounded-[10px]"
+                    class="mb-6 p-4 bg-secondary/10 border border-secondary/30 rounded-[10px]"
                 >
                     <div class="flex items-start gap-3">
-                        <Cloud class="w-5 h-5 text-green-700 mt-0.5 flex-shrink-0" />
+                        <UIcon name="i-lucide-cloud" class="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                         <div class="flex-1">
-                            <h3 class="text-sm font-semibold text-green-ink mb-1">
+                            <h3 class="text-sm font-semibold text-secondary mb-1">
                                 {{ $t('resumes.banner.saveToCloud') }}
                             </h3>
-                            <p class="text-sm text-green-700/90 mb-3">
+                            <p class="text-sm text-secondary/90 mb-3">
                                 {{ $t('resumes.banner.registerPrompt') }}
                             </p>
                             <div class="flex gap-2">
-                                <Button
+                                <UButton
                                     size="sm"
-                                    class="bg-green hover:bg-green-600 text-white"
-                                    @click="router.push(localePath('/auth/register'))"
-                                >
-                                    <UserPlus class="w-4 h-4 mr-1" />
-                                    {{ $t('resumes.banner.registerFree') }}
-                                </Button>
-                                <Button
-                                    size="sm"
-                                    variant="outline"
-                                    class="border-rule bg-white text-ink hover:bg-bg-2"
-                                    @click="router.push(localePath('/auth/login'))"
-                                >
-                                    <LogIn class="w-4 h-4 mr-1" />
-                                    {{ $t('resumes.banner.login') }}
-                                </Button>
+                                    class="bg-secondary hover:bg-secondary text-white"
+                                    @click="router.push(localePath('/auth/register'))" icon="i-lucide-user-plus">
+{{ $t('resumes.banner.registerFree') }}
+</UButton>
+                                <UButton
+                                    size="sm" color="neutral" variant="outline"
+                                    class="border-default bg-white text-highlighted hover:bg-muted"
+                                    @click="router.push(localePath('/auth/login'))" icon="i-lucide-log-in">
+{{ $t('resumes.banner.login') }}
+</UButton>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div
                     v-else
-                    class="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg"
+                    class="mb-6 p-4 bg-secondary/10 border border-secondary/30 rounded-lg"
                 >
                     <div class="flex items-start gap-3">
-                        <CheckCircle class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                        <UIcon name="i-lucide-check-circle" class="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                         <div class="flex-1">
-                            <h3 class="text-sm font-medium text-green-900 mb-1">
+                            <h3 class="text-sm font-medium text-secondary mb-1">
                                 {{ $t('resumes.banner.cloudAvailable') }}
                             </h3>
-                            <p class="text-sm text-green-700">
+                            <p class="text-sm text-secondary">
                                 {{ $t('resumes.banner.cloudAvailableDescription') }}
                             </p>
                         </div>
@@ -457,8 +444,8 @@ useHead({
                     class="flex items-center justify-center py-12"
                 >
                     <div class="flex flex-col items-center gap-3">
-                        <div class="animate-spin w-8 h-8 border-4 border-green border-t-transparent rounded-full" />
-                        <p class="text-gray-600">
+                        <div class="animate-spin w-8 h-8 border-4 border-secondary border-t-transparent rounded-full" />
+                        <p class="text-toned">
                             {{ $t('resumes.status.loading') }}
                         </p>
                     </div>
@@ -478,14 +465,13 @@ useHead({
                             <p class="text-sm text-red-700">
                                 {{ resumeStore.error }}
                             </p>
-                            <Button
-                                size="sm"
-                                variant="outline"
+                            <UButton
+                                size="sm" color="neutral" variant="outline"
                                 class="mt-2 border-red-300 text-red-700 hover:bg-red-100"
                                 @click="fetchServerResumesIfLoggedIn"
                             >
                                 {{ $t('common.tryAgain') }}
-                            </Button>
+                            </UButton>
                         </div>
                     </div>
                 </div>
