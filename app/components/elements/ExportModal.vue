@@ -36,8 +36,8 @@ watch(selectedResumes, (value) => {
     selectAll.value = value.length === props.resumes.length && props.resumes.length > 0;
 });
 
-const handleSelectAll = (checked: boolean) => {
-    selectedResumes.value = checked ? props.resumes.map(r => r.id) : [];
+const handleSelectAll = (checked: boolean | 'indeterminate') => {
+    selectedResumes.value = checked === true ? props.resumes.map(r => r.id) : [];
 };
 
 const formatDate = (dateString: string) =>

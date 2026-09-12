@@ -55,7 +55,9 @@ watch(() => settingsStore.selectedTemplate, (value) => {
     selectedTemplate.value = value;
 });
 
-const updateFontSize = (value: number) => settingsStore.setFontSize(value);
+const updateFontSize = (value: number | undefined) => {
+    if (value !== undefined) settingsStore.setFontSize(value);
+};
 const updateFont = (value: string) => settingsStore.setSelectedFont(value);
 const updateTemplate = (value: string) => settingsStore.setSelectedTemplate(value);
 

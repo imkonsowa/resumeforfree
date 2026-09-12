@@ -33,7 +33,7 @@ const dismiss = () => {
         variant="soft"
         class="mb-4"
         :description="t('builder.languageMismatch', { language: resumeLanguageName })"
-        :close="{ 'aria-label': t('common.close') }"
+        close
         @update:open="dismiss"
     />
 </template>

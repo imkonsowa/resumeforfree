@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { NavigationMenuItem } from '@nuxt/ui';
+import type { TabsItem } from '@nuxt/ui';
 import ApiTokensPanel from '~/components/elements/ApiTokensPanel.vue';
 
 const { t } = useI18n();
@@ -19,7 +19,7 @@ useHead({
 
 const activeSection = ref<'personal' | 'password' | 'tokens'>('personal');
 
-const sectionItems = computed<NavigationMenuItem[]>(() => [
+const sectionItems = computed<TabsItem[]>(() => [
     { label: t('profile.personalInformation'), icon: 'i-lucide-user', value: 'personal' },
     { label: t('auth.changePassword'), icon: 'i-lucide-lock', value: 'password' },
     { label: t('apiTokens.title'), icon: 'i-lucide-key-round', value: 'tokens' },
@@ -119,10 +119,12 @@ useHead({
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                     <div class="md:col-span-1">
-                        <UNavigationMenu
+                        <UTabs
                             v-model="activeSection"
                             :items="sectionItems"
                             orientation="vertical"
+                            color="secondary"
+                            :ui="{ list: 'w-full', trigger: 'justify-start grow' }"
                         />
                     </div>
 

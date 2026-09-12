@@ -15,7 +15,7 @@ const emit = defineEmits<{
 
 const { t } = useI18n();
 
-const selectedIndexes = ref<number[]>([]);
+const selectedIndexes = ref<string[]>([]);
 
 const open = computed({
     get: () => props.isOpen,
@@ -29,7 +29,7 @@ watch(() => props.isOpen, (isOpen) => {
         selectedIndexes.value = props.resumesToImport
             .map((resume, index) => ({ resume, index }))
             .filter(({ resume }) => !resume.isDuplicate)
-            .map(({ index }) => index);
+            .map(({ index }) => String(index));
     }
 });
 
@@ -39,7 +39,7 @@ const items = computed(() =>
     props.resumesToImport.map((resume, index) => ({
         label: resume.name,
         description: t('resumes.modals.import.itemCount', { count: resume.itemCount }),
-        value: index,
+        value: String(index),
     })),
 );
 </script>
@@ -84,7 +84,7 @@ const items = computed(() =>
             <UButton
                 :disabled="selectedIndexes.length === 0"
                 :label="t('resumes.modals.import.importSelected')"
-                @click="emit('import', selectedIndexes)"
+                @click="emit('import', selectedIndexes.map(Number))"
             />
         </template>
     </UModal>

@@ -141,7 +141,7 @@
                                     size="sm"
                                     color="neutral"
                                     variant="outline"
-                                    @click="generatePreview"
+                                    @click="generatePreviewInternal"
                                 >
                                     {{ t('common.tryAgain') }}
                                 </UButton>
