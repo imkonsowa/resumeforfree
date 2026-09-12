@@ -124,7 +124,7 @@
                             color="neutral"
                             variant="ghost"
                             size="sm"
-                            class="text-red-600 hover:text-red-700"
+                            class="text-error hover:text-error"
                             icon="i-lucide-trash-2"
                             @click="resumeStore.removeProjectLink(index, linkIndex)"
                         >

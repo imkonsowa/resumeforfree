@@ -36,7 +36,7 @@
                                 <span class="flex items-center gap-1">
                                     <UIcon
                                         name="i-lucide-alert-circle"
-                                        class="w-3 h-3 text-amber-600"
+                                        class="w-3 h-3 text-warning"
                                     />
                                     {{ $t('resumes.status.notSynced') }}
                                 </span>

@@ -453,7 +453,10 @@ useHead({
                     class="flex items-center justify-center py-12"
                 >
                     <div class="flex flex-col items-center gap-3">
-                        <div class="animate-spin w-8 h-8 border-4 border-secondary border-t-transparent rounded-full" />
+                        <UIcon
+                            name="i-lucide-loader-circle"
+                            class="size-8 text-secondary animate-spin"
+                        />
                         <p class="text-toned">
                             {{ $t('resumes.status.loading') }}
                         </p>
@@ -461,24 +464,24 @@ useHead({
                 </div>
                 <div
                     v-else-if="resumeStore.error"
-                    class="bg-red-50 border border-red-200 rounded-lg p-4 mb-6"
+                    class="bg-error/10 border border-error/30 rounded-lg p-4 mb-6"
                 >
                     <div class="flex items-start gap-3">
-                        <div class="w-5 h-5 text-red-600 mt-0.5">
+                        <div class="w-5 h-5 text-error mt-0.5">
                             ⚠️
                         </div>
                         <div>
-                            <h3 class="text-sm font-medium text-red-900 mb-1">
+                            <h3 class="text-sm font-medium text-error mb-1">
                                 {{ $t('resumes.status.failed') }}
                             </h3>
-                            <p class="text-sm text-red-700">
+                            <p class="text-sm text-error">
                                 {{ resumeStore.error }}
                             </p>
                             <UButton
                                 size="sm"
                                 color="neutral"
                                 variant="outline"
-                                class="mt-2 border-red-300 text-red-700 hover:bg-red-100"
+                                class="mt-2 border-error/40 text-error hover:bg-error/15"
                                 @click="fetchServerResumesIfLoggedIn"
                             >
                                 {{ $t('common.tryAgain') }}

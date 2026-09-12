@@ -55,7 +55,10 @@
         "expand": "Développer",
         "collapse": "Réduire",
         "moreActions": "Plus d'actions",
-        "copy": "Copier"
+        "copy": "Copier",
+        "or": "ou",
+        "saved": "Enregistré",
+        "syncFailed": "Échec de la synchronisation"
     },
     "languageModal": {
         "title": "Sélectionnez votre langue",
@@ -362,7 +365,7 @@
         "languageMismatch": "Ce CV est en {language}.",
         "pageTitle": "Créateur de CV Gratuit - Créez et Téléchargez des CV PDF Gratuitement | Sans Inscription",
         "pageDescription": "Créez votre CV et téléchargez-le sous forme de PDF professionnel - totalement gratuitement. Pas de compte, pas de filigrane, pas de limites. Aperçu en temps réel, génération PDF instantanée, et vos données restent sur votre appareil.",
-        "sections": "Sections",
+        "sections": "Sections du CV",
         "resumePreview": "Aperçu du CV",
         "noResumeSelected": "Aucun CV Sélectionné",
         "noResumeDescription": "Pour commencer à créer votre CV, vous devez d'abord créer ou sélectionner un CV. Allez sur votre page de CV pour créer votre premier CV.",
@@ -648,7 +651,8 @@
         "googleOAuthFailed": "La connexion avec Google a échoué. Veuillez réessayer.",
         "googleNoEmail": "Le compte Google n'a fourni aucune adresse e-mail.",
         "googleHandlerError": "Un problème est survenu lors de la connexion Google.",
-        "googleUserCreationFailed": "Impossible de créer votre compte à partir de votre profil Google."
+        "googleUserCreationFailed": "Impossible de créer votre compte à partir de votre profil Google.",
+        "togglePassword": "Afficher/masquer le mot de passe"
     },
     "profile": {
         "title": "Paramètres du Profil",

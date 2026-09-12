@@ -124,10 +124,10 @@
                         >
                             <div class="text-center">
                                 <div
-                                    class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4"
+                                    class="w-16 h-16 bg-error/15 rounded-full flex items-center justify-center mx-auto mb-4"
                                 >
                                     <svg
-                                        class="w-8 h-8 text-red-500"
+                                        class="w-8 h-8 text-error"
                                         fill="none"
                                         stroke="currentColor"
                                         viewBox="0 0 24 24"
@@ -140,10 +140,10 @@
                                         />
                                     </svg>
                                 </div>
-                                <h3 class="text-xl font-semibold text-red-800 mb-2">
+                                <h3 class="text-xl font-semibold text-error mb-2">
                                     {{ t('builder.previewError') }}
                                 </h3>
-                                <p class="text-red-600 mb-4">
+                                <p class="text-error mb-4">
                                     {{ error }}
                                 </p>
                                 <UButton

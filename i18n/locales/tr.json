@@ -55,7 +55,10 @@
         "expand": "Genişlet",
         "collapse": "Daralt",
         "moreActions": "Diğer işlemler",
-        "copy": "Kopyala"
+        "copy": "Kopyala",
+        "or": "veya",
+        "saved": "Kaydedildi",
+        "syncFailed": "Eşitleme başarısız"
     },
     "languageModal": {
         "title": "Dilinizi Seçin",
@@ -362,7 +365,7 @@
         "languageMismatch": "Bu özgeçmiş {language} dilindedir.",
         "pageTitle": "Ücretsiz Özgeçmiş Oluşturucu - Ücretsiz PDF Özgeçmişleri Oluşturun ve İndirin | Kayıt Yok",
         "pageDescription": "Özgeçmişinizi oluşturun ve profesyonel bir PDF olarak indirin - tamamen ücretsiz. Hesap yok, filigran yok, sınır yok. Gerçek zamanlı önizleme, anında PDF oluşturma ve verileriniz cihazınızda kalır.",
-        "sections": "Bölümler",
+        "sections": "Özgeçmiş bölümleri",
         "resumePreview": "Özgeçmiş Önizlemesi",
         "noResumeSelected": "Özgeçmiş Seçilmedi",
         "noResumeDescription": "Özgeçmişinizi oluşturmaya başlamak için önce bir özgeçmiş oluşturmalı veya seçmelisiniz. İlk özgeçmişinizi oluşturmak için özgeçmişler sayfanıza gidin.",
@@ -648,7 +651,8 @@
         "googleOAuthFailed": "Google girişi başarısız oldu. Lütfen tekrar deneyin.",
         "googleNoEmail": "Google hesabı bir e-posta adresi sağlamadı.",
         "googleHandlerError": "Google girişi sırasında bir şeyler ters gitti.",
-        "googleUserCreationFailed": "Google profilinden hesabınız oluşturulamadı."
+        "googleUserCreationFailed": "Google profilinden hesabınız oluşturulamadı.",
+        "togglePassword": "Şifreyi göster/gizle"
     },
     "profile": {
         "title": "Profil Ayarları",

@@ -1,38 +1,62 @@
 <template>
-    <div>
-        <div
-            v-if="showStepper"
-            class="fixed inset-0 z-50 flex items-center justify-center"
-            @click="showStepper = false"
-        >
-            <div class="absolute inset-0 bg-black/50" />
-            <div
-                class="relative bg-default border rounded-lg shadow-xl p-6 w-80 max-h-[80vh] overflow-y-auto"
-                @click.stop
-            >
-                <div class="flex items-center justify-between mb-6">
-                    <h3 class="text-lg font-semibold">
-                        Resume Sections
-                    </h3>
-                    <UButton
-                        color="neutral"
-                        variant="ghost"
-                        icon="i-lucide-x"
-                        @click="showStepper = false"
+    <UModal
+        v-model:open="showStepper"
+        :title="t('builder.sections', 'Resume sections')"
+        :ui="{ content: 'max-w-sm' }"
+    >
+        <template #body>
+            <div class="space-y-3">
+                <UButton
+                    v-for="(section, index) in fixedSections"
+                    :key="section.id"
+                    block
+                    color="neutral"
+                    :variant="isCurrentSection(section.id) ? 'soft' : 'ghost'"
+                    class="justify-start gap-3 p-3"
+                    @click="scrollToSection(section.id)"
+                >
+                    <span
+                        class="size-8 shrink-0 rounded-full border-2 border-accented flex items-center justify-center text-sm font-medium"
+                        :class="isCurrentSection(section.id) ? 'border-primary text-primary' : ''"
+                    >
+                        {{ index + 1 }}
+                    </span>
+                    <span class="flex-1 min-w-0 text-start">
+                        <span class="block text-sm font-medium truncate">{{ section.title }}</span>
+                        <span class="block text-xs text-muted">{{ section.subtitle }}</span>
+                    </span>
+                </UButton>
+                <div
+                    v-for="(section, index) in orderableSections"
+                    :key="section.id"
+                    class="relative"
+                >
+                    <div
+                        v-if="dropZoneIndex === index && draggedIndex !== null && draggedIndex !== index"
+                        class="absolute top-0 left-0 right-0 h-px bg-accented rounded-full z-10 transition-all duration-200"
                     />
-                </div>
-                <div class="space-y-3">
-                    <button
-                        v-for="(section, index) in fixedSections"
-                        :key="section.id"
+                    <div
                         :class="[
                             isCurrentSection(section.id)
                                 ? 'bg-primary text-inverted'
                                 : 'text-muted',
+                            draggedIndex === index ? 'opacity-50' : '',
+                            dropZoneIndex === index && draggedIndex !== null && draggedIndex !== index ? 'transform translate-y-1' : '',
                         ]"
-                        class="w-full flex items-center gap-3 p-3 rounded-md transition-colors hover:bg-elevated hover:text-highlighted text-left"
+                        :draggable="section.orderable"
+                        class="w-full flex items-center gap-3 p-3 rounded-md transition-colors hover:bg-elevated hover:text-highlighted text-left cursor-move"
                         @click="scrollToSection(section.id)"
+                        @dragend="onDragEnd"
+                        @dragover="onDragOver($event, index)"
+                        @dragstart="onDragStart($event, index)"
+                        @drop="onDrop($event, index)"
                     >
+                        <div class="flex-shrink-0">
+                            <UIcon
+                                name="i-lucide-grip-vertical"
+                                class="w-4 h-4 text-dimmed"
+                            />
+                        </div>
                         <div class="flex-shrink-0">
                             <div
                                 :class="[
@@ -42,7 +66,7 @@
                                 ]"
                                 class="w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm font-medium"
                             >
-                                {{ index + 1 }}
+                                {{ fixedSections.length + index + 1 }}
                             </div>
                         </div>
                         <div class="flex-1 min-w-0">
@@ -53,82 +77,31 @@
                                 {{ section.subtitle }}
                             </div>
                         </div>
-                    </button>
-                    <div
-                        v-for="(section, index) in orderableSections"
-                        :key="section.id"
-                        class="relative"
-                    >
-                        <div
-                            v-if="dropZoneIndex === index && draggedIndex !== null && draggedIndex !== index"
-                            class="absolute top-0 left-0 right-0 h-px bg-accented rounded-full z-10 transition-all duration-200"
-                        />
-                        <div
-                            :class="[
-                                isCurrentSection(section.id)
-                                    ? 'bg-primary text-inverted'
-                                    : 'text-muted',
-                                draggedIndex === index ? 'opacity-50' : '',
-                                dropZoneIndex === index && draggedIndex !== null && draggedIndex !== index ? 'transform translate-y-1' : '',
-                            ]"
-                            :draggable="section.orderable"
-                            class="w-full flex items-center gap-3 p-3 rounded-md transition-colors hover:bg-elevated hover:text-highlighted text-left cursor-move"
-                            @click="scrollToSection(section.id)"
-                            @dragend="onDragEnd"
-                            @dragover="onDragOver($event, index)"
-                            @dragstart="onDragStart($event, index)"
-                            @drop="onDrop($event, index)"
-                        >
-                            <div class="flex-shrink-0">
-                                <UIcon
-                                    name="i-lucide-grip-vertical"
-                                    class="w-4 h-4 text-dimmed"
-                                />
-                            </div>
-                            <div class="flex-shrink-0">
-                                <div
-                                    :class="[
-                                        isCurrentSection(section.id)
-                                            ? 'border-inverted bg-inverted text-primary'
-                                            : 'border-accented',
-                                    ]"
-                                    class="w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm font-medium"
-                                >
-                                    {{ fixedSections.length + index + 1 }}
-                                </div>
-                            </div>
-                            <div class="flex-1 min-w-0">
-                                <div class="text-sm font-medium truncate">
-                                    {{ section.title }}
-                                </div>
-                                <div class="text-xs opacity-75">
-                                    {{ section.subtitle }}
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            v-if="dropZoneIndex === index + 1 && draggedIndex !== null"
-                            class="absolute bottom-0 left-0 right-0 h-px bg-accented rounded-full z-10 transition-all duration-200"
-                        />
                     </div>
                     <div
-                        class="h-4 relative"
-                        @dragover="onDragOver($event, orderableSections.length)"
-                        @drop="onDrop($event, orderableSections.length - 1)"
-                    >
-                        <div
-                            v-if="dropZoneIndex === orderableSections.length && draggedIndex !== null"
-                            class="absolute top-2 left-0 right-0 h-px bg-accented rounded-full z-10 transition-all duration-200"
-                        />
-                    </div>
+                        v-if="dropZoneIndex === index + 1 && draggedIndex !== null"
+                        class="absolute bottom-0 left-0 right-0 h-px bg-accented rounded-full z-10 transition-all duration-200"
+                    />
+                </div>
+                <div
+                    class="h-4 relative"
+                    @dragover="onDragOver($event, orderableSections.length)"
+                    @drop="onDrop($event, orderableSections.length - 1)"
+                >
+                    <div
+                        v-if="dropZoneIndex === orderableSections.length && draggedIndex !== null"
+                        class="absolute top-2 left-0 right-0 h-px bg-accented rounded-full z-10 transition-all duration-200"
+                    />
                 </div>
             </div>
-        </div>
-    </div>
+        </template>
+    </UModal>
 </template>
 
 <script lang="ts" setup>
 import { useResumeStore } from '~/stores/resume';
+
+const { t } = useI18n();
 
 interface Section {
     id: string;

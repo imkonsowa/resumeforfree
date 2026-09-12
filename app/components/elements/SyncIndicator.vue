@@ -17,34 +17,35 @@
                     name="i-lucide-loader-circle"
                     class="w-4 h-4 animate-spin"
                 />
-                <span class="text-sm font-medium">Syncing...</span>
+                <span class="text-sm font-medium">{{ t('builder.syncing') }}</span>
             </template>
             <template v-else-if="showSuccess">
                 <UIcon
                     name="i-lucide-check-circle"
                     class="w-4 h-4"
                 />
-                <span class="text-sm font-medium">Saved</span>
+                <span class="text-sm font-medium">{{ t('common.saved', 'Saved') }}</span>
             </template>
             <template v-else-if="showError">
                 <UIcon
                     name="i-lucide-alert-circle"
                     class="w-4 h-4"
                 />
-                <span class="text-sm font-medium">Sync failed</span>
+                <span class="text-sm font-medium">{{ t('common.syncFailed', 'Sync failed') }}</span>
             </template>
         </div>
     </Transition>
 </template>
 
 <script lang="ts" setup>
+const props = defineProps<Props>();
+const { t } = useI18n();
 interface Props {
     isSyncing: boolean;
     lastSyncSuccess: boolean;
     lastSyncTime: Date | null;
     errorMessage?: string;
 }
-const props = defineProps<Props>();
 const showSuccess = ref(false);
 const showError = ref(false);
 const successTimeout = ref<number>();
@@ -89,7 +90,7 @@ const indicatorClasses = computed(() => {
         return 'bg-secondary/10 border-secondary/30 text-secondary';
     }
     else if (showError.value) {
-        return 'bg-red-50 border-red-200 text-red-800';
+        return 'bg-error/10 border-error/30 text-error';
     }
     return 'bg-muted border-default text-default';
 });

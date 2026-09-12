@@ -12,20 +12,12 @@
                     size="sm"
                     color="neutral"
                     variant="outline"
-                    class="flex items-center gap-2 min-w-fit"
-                    :disabled="!canSyncToCloud || isAnySyncing"
+                    class="min-w-fit"
+                    icon="i-lucide-cloud"
+                    :loading="isAnySyncing"
+                    :disabled="!canSyncToCloud"
                     @click="handleCloudSync"
                 >
-                    <UIcon
-                        v-if="isAnySyncing"
-                        name="i-lucide-loader-circle"
-                        class="h-4 w-4 animate-spin"
-                    />
-                    <UIcon
-                        v-else
-                        name="i-lucide-cloud"
-                        class="h-4 w-4"
-                    />
                     <span class="hidden sm:inline whitespace-nowrap">{{ isAnySyncing ? syncingText : syncButtonText }}</span>
                     <span class="sm:hidden whitespace-nowrap">{{ isAnySyncing ? (activeResume.serverId ? t('builder.updating') : t('builder.syncing')) : (activeResume.serverId ? t('builder.update') : t('common.sync')) }}</span>
                 </UButton>

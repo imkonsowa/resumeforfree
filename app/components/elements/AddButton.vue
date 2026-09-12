@@ -1,14 +1,13 @@
 <template>
-    <button
-        class="w-full border-2 border-dashed border-accented hover:border-accented bg-transparent hover:bg-muted text-toned hover:text-default px-4 py-1.5 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+    <UButton
+        block
+        color="neutral"
+        variant="outline"
+        icon="i-lucide-plus"
+        :label="label"
+        class="border-2 border-dashed"
         @click="$emit('click')"
-    >
-        <UIcon
-            name="i-lucide-plus"
-            class="w-4 h-4"
-        />
-        <span class="text-sm font-medium">{{ label }}</span>
-    </button>
+    />
 </template>
 
 <script lang="ts" setup>

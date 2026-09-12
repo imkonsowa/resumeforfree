@@ -400,59 +400,48 @@ const orderedSections = computed(() => {
                     />
                     <InvisibleTurnstile ref="turnstileRef" />
                 </div>
-                <div
-                    v-if="showMobilePreview"
-                    class="lg:hidden fixed inset-0 z-50 overflow-y-auto bg-black/50"
+                <UModal
+                    v-model:open="showMobilePreview"
+                    :title="t('builder.resumePreview')"
+                    fullscreen
+                    class="lg:hidden"
                 >
-                    <div class="flex items-center justify-center min-h-screen p-4">
-                        <div class="bg-default rounded-lg max-w-full w-full max-h-[90vh] flex flex-col">
-                            <div class="p-4 border-b border-default flex justify-between items-center">
-                                <h3 class="text-lg font-medium">
-                                    {{ t('builder.resumePreview') }}
-                                </h3>
-                                <div class="flex items-center gap-2">
-                                    <ResumeLanguageSelector
-                                        v-if="resumeStore.activeResume"
-                                        :model-value="resumeStore.activeResume.language"
-                                        @update="(code) => resumeStore.setResumeLanguage(resumeStore.activeResume!.id, code)"
-                                    />
-                                    <ZoomControls
-                                        :max-zoom="maxZoom"
-                                        :min-zoom="minZoom"
-                                        :zoom-level="zoomLevel"
-                                        :zoom-step="zoomStep"
-                                        @zoom-in="zoomIn"
-                                        @zoom-out="zoomOut"
-                                    />
-                                    <button
-                                        class="text-dimmed hover:text-toned p-2"
-                                        @click="showMobilePreview = false"
-                                    >
-                                        <span class="sr-only">Close</span>
-                                        <svg
-                                            class="h-6 w-6"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path
-                                                d="M6 18L18 6M6 6l12 12"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="2"
-                                            />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="overflow-auto flex-1 p-4">
-                                <div class="mobile-preview-wrapper">
-                                    <ResumePreview />
-                                </div>
+                    <template #header>
+                        <div class="flex items-center justify-between w-full gap-2">
+                            <h3 class="text-lg font-medium text-highlighted">
+                                {{ t('builder.resumePreview') }}
+                            </h3>
+                            <div class="flex items-center gap-2">
+                                <ResumeLanguageSelector
+                                    v-if="resumeStore.activeResume"
+                                    :model-value="resumeStore.activeResume.language"
+                                    @update="(code) => resumeStore.setResumeLanguage(resumeStore.activeResume!.id, code)"
+                                />
+                                <ZoomControls
+                                    :max-zoom="maxZoom"
+                                    :min-zoom="minZoom"
+                                    :zoom-level="zoomLevel"
+                                    :zoom-step="zoomStep"
+                                    @zoom-in="zoomIn"
+                                    @zoom-out="zoomOut"
+                                />
+                                <UButton
+                                    color="neutral"
+                                    variant="ghost"
+                                    icon="i-lucide-x"
+                                    :aria-label="t('common.close')"
+                                    @click="showMobilePreview = false"
+                                />
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </template>
+
+                    <template #body>
+                        <div class="mobile-preview-wrapper">
+                            <ResumePreview />
+                        </div>
+                    </template>
+                </UModal>
             </div>
         </div>
         <FirstTimeBuilderModal

@@ -26,21 +26,14 @@ const dismiss = () => {
 </script>
 
 <template>
-    <div
+    <UAlert
         v-if="show"
         :dir="uiDir"
-        class="mb-4 flex items-center justify-between gap-3 rounded-md border border-secondary/30 bg-secondary/10 px-3 py-2 text-sm text-secondary"
-    >
-        <span>{{ t('builder.languageMismatch', { language: resumeLanguageName }) }}</span>
-        <button
-            class="rounded p-1 text-secondary hover:bg-secondary/15"
-            :aria-label="t('common.close')"
-            @click="dismiss"
-        >
-            <UIcon
-                name="i-lucide-x"
-                class="h-4 w-4"
-            />
-        </button>
-    </div>
+        color="secondary"
+        variant="soft"
+        class="mb-4"
+        :description="t('builder.languageMismatch', { language: resumeLanguageName })"
+        :close="{ 'aria-label': t('common.close') }"
+        @update:open="dismiss"
+    />
 </template>

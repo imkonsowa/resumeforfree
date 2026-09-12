@@ -55,7 +55,10 @@
         "confirm": "تأكيد",
         "expand": "توسيع",
         "collapse": "طي",
-        "moreActions": "إجراءات أخرى"
+        "moreActions": "إجراءات أخرى",
+        "or": "أو",
+        "saved": "تم الحفظ",
+        "syncFailed": "فشلت المزامنة"
     },
     "languageModal": {
         "title": "اختر لغتك",
@@ -362,7 +365,7 @@
         "languageMismatch": "لغة هذه السيرة الذاتية هي {language}.",
         "pageTitle": "أداة إنشاء سير ذاتية مجانية - ابنِ ونزّل سيرتك بصيغة PDF مجاناً | بدون تسجيل",
         "pageDescription": "أنشئ سيرتك الذاتية ونزّلها بتنسيق PDF احترافي، مجاناً وبلا قيود. بدون حسابات أو علامات مائية. معاينة فورية لبياناتك المحفوظة بأمان على جهازك.",
-        "sections": "الأقسام",
+        "sections": "أقسام السيرة الذاتية",
         "resumePreview": "معاينة السيرة الذاتية",
         "noResumeSelected": "لم يتم تحديد سيرة ذاتية",
         "noResumeDescription": "لتبدأ، يرجى إنشاء أو تحديد سيرة ذاتية من صفحة 'سيرك الذاتية'.",
@@ -648,7 +651,8 @@
         "googleOAuthFailed": "فشل تسجيل الدخول بواسطة Google. يرجى المحاولة مجدداً.",
         "googleNoEmail": "حساب Google لم يزودنا بعنوان بريد إلكتروني.",
         "googleHandlerError": "حدث خطأ أثناء محاولة تسجيل الدخول عبر Google.",
-        "googleUserCreationFailed": "تعذر إنشاء حساب باستخدام ملفك الشخصي في Google."
+        "googleUserCreationFailed": "تعذر إنشاء حساب باستخدام ملفك الشخصي في Google.",
+        "togglePassword": "إظهار/إخفاء كلمة المرور"
     },
     "profile": {
         "title": "إعدادات الملف الشخصي",

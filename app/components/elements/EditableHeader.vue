@@ -4,32 +4,31 @@
             v-if="isEditing"
             class="flex items-center gap-2 flex-1"
         >
-            <input
+            <UInput
                 ref="inputRef"
                 v-model="localValue"
                 autofocus
-                class="flex-1 px-2 py-1 border rounded text-lg font-semibold"
+                size="lg"
+                class="flex-1"
                 @keyup.enter="saveHeader"
                 @keyup.escape="cancelEdit"
-            >
-            <button
-                class="p-1 text-secondary hover:text-secondary"
+            />
+            <UButton
+                size="sm"
+                color="secondary"
+                variant="ghost"
+                icon="i-lucide-check"
+                :aria-label="t('common.save')"
                 @click="saveHeader"
-            >
-                <UIcon
-                    name="i-lucide-check"
-                    class="w-4 h-4"
-                />
-            </button>
-            <button
-                class="p-1 text-red-600 hover:text-red-700"
+            />
+            <UButton
+                size="sm"
+                color="error"
+                variant="ghost"
+                icon="i-lucide-x"
+                :aria-label="t('common.cancel')"
                 @click="cancelEdit"
-            >
-                <UIcon
-                    name="i-lucide-x"
-                    class="w-4 h-4"
-                />
-            </button>
+            />
         </div>
         <div
             v-else
@@ -89,13 +88,14 @@ const handleReset = () => {
 };
 const isEditing = ref(false);
 const localValue = ref(props.value);
-const inputRef = ref<HTMLInputElement>();
+const inputRef = ref<{ inputRef?: HTMLInputElement } | null>(null);
 const startEdit = async () => {
     localValue.value = props.value;
     isEditing.value = true;
     await nextTick();
-    inputRef.value?.focus();
-    inputRef.value?.select();
+    const el = inputRef.value?.inputRef;
+    el?.focus();
+    el?.select();
 };
 const saveHeader = () => {
     if (localValue.value.trim() && localValue.value !== props.value) {

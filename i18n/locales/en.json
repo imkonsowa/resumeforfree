@@ -55,7 +55,10 @@
         "confirm": "Confirm",
         "expand": "Expand",
         "collapse": "Collapse",
-        "moreActions": "More actions"
+        "moreActions": "More actions",
+        "or": "or",
+        "saved": "Saved",
+        "syncFailed": "Sync failed"
     },
     "languageModal": {
         "title": "Select Your Language",
@@ -362,7 +365,7 @@
         "languageMismatch": "This resume is in {language}.",
         "pageTitle": "Free Resume Builder - Build & Download PDF Resumes For Free | No Signup",
         "pageDescription": "Build your resume and download it as a professional PDF - completely free. No account, no watermark, no limits. Real-time preview, instant PDF generation, and your data stays on your device.",
-        "sections": "Sections",
+        "sections": "Resume sections",
         "resumePreview": "Resume Preview",
         "noResumeSelected": "No Resume Selected",
         "noResumeDescription": "To start building your resume, you need to create or select a resume first. Go to your resumes page to create your first resume.",
@@ -648,7 +651,8 @@
         "googleOAuthFailed": "Google sign-in failed. Please try again.",
         "googleNoEmail": "Google account did not provide an email address.",
         "googleHandlerError": "Something went wrong during Google sign-in.",
-        "googleUserCreationFailed": "Could not create your account from Google profile."
+        "googleUserCreationFailed": "Could not create your account from Google profile.",
+        "togglePassword": "Toggle password visibility"
     },
     "profile": {
         "title": "Profile Settings",
