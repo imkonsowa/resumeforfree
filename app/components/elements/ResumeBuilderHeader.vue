@@ -1,12 +1,12 @@
 <template>
     <div class="mb-8">
         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 sm:gap-0">
-            <div class="flex items-center space-x-3">
+            <div class="flex items-center gap-3">
                 <h1 class="text-2xl font-bold text-highlighted">
                     {{ resumeStore.activeResume?.name || t('builder.defaultTitle') }}
                 </h1>
             </div>
-            <div class="flex items-center space-x-2">
+            <div class="flex items-center gap-2">
                 <UButton
                     v-if="authStore.isLoggedIn && activeResume"
                     size="sm"
@@ -28,7 +28,7 @@
                     icon="i-lucide-chevron-down"
                     @click="settingsStore.expandAllSections()"
                 >
-                    <span class="ml-1 sm:hidden">{{ t('builder.expand') }}</span>
+                    <span class="ms-1 sm:hidden">{{ t('builder.expand') }}</span>
                 </UButton>
                 <UButton
                     size="sm"
@@ -37,7 +37,7 @@
                     icon="i-lucide-chevron-up"
                     @click="settingsStore.collapseAllSections()"
                 >
-                    <span class="ml-1 sm:hidden">{{ t('builder.collapse') }}</span>
+                    <span class="ms-1 sm:hidden">{{ t('builder.collapse') }}</span>
                 </UButton>
                 <UButton
                     class="flex items-center gap-2"

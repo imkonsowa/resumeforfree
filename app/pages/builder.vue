@@ -364,7 +364,7 @@ const orderedSections = computed(() => {
                     </div>
                 </div>
                 <div
-                    class="hidden lg:block fixed top-16 right-0 w-1/2 h-[calc(100vh-64px)] border-l border-default bg-muted overflow-y-auto z-10"
+                    class="hidden lg:block fixed top-16 end-0 w-1/2 h-[calc(100vh-64px)] border-s border-default bg-muted overflow-y-auto z-10"
                 >
                     <div class="p-4 lg:p-8 pt-[calc(2rem+4rem)]">
                         <ClientOnly>
@@ -374,7 +374,7 @@ const orderedSections = computed(() => {
                 </div>
                 <div
                     v-if="!showMobilePreview"
-                    class="lg:hidden fixed bottom-[calc(1.5rem_+_env(safe-area-inset-bottom))] right-[calc(1.5rem_+_env(safe-area-inset-right))] z-40 flex items-center gap-2"
+                    class="lg:hidden fixed bottom-[calc(1.5rem_+_env(safe-area-inset-bottom))] end-[calc(1.5rem_+_env(safe-area-inset-right))] z-40 flex items-center gap-2"
                 >
                     <ResumeLanguageSelector
                         v-if="resumeStore.activeResume"

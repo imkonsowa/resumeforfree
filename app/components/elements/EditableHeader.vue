@@ -47,7 +47,7 @@
             />
             <UButton
                 v-if="canReset"
-                :title="t('common.resetToDefaults')"
+                :aria-label="t('common.resetToDefaults')"
                 class="p-1 h-auto opacity-50 hover:opacity-100 text-toned hover:text-highlighted"
                 size="sm"
                 color="neutral"

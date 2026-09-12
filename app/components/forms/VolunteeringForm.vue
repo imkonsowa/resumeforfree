@@ -127,7 +127,7 @@
                         :key="achievementIndex"
                         class="space-y-2"
                     >
-                        <div class="flex items-center space-x-2 md:space-x-2">
+                        <div class="flex items-center gap-2 md:gap-2">
                             <UInput
                                 :model-value="volunteering.achievements[achievementIndex].text"
                                 class="flex-1"
@@ -135,7 +135,7 @@
                                 @update:model-value="(value) => resumeStore.updateVolunteeringAchievement(index, achievementIndex, value)"
                                 @keydown.enter="resumeStore.addVolunteeringAchievement(index)"
                             />
-                            <div class="hidden md:flex items-center space-x-1">
+                            <div class="hidden md:flex items-center gap-1">
                                 <UButton
                                     :disabled="achievementIndex === 0"
                                     size="sm"
@@ -161,7 +161,7 @@
                                 />
                             </div>
                         </div>
-                        <div class="flex md:hidden items-center justify-center space-x-2">
+                        <div class="flex md:hidden items-center justify-center gap-2">
                             <UButton
                                 :disabled="achievementIndex === 0"
                                 size="sm"

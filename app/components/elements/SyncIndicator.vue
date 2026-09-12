@@ -9,7 +9,7 @@
     >
         <div
             v-if="show"
-            class="fixed top-4 right-4 z-50 flex items-center gap-2 px-3 py-2 rounded-lg shadow-lg border backdrop-blur-sm"
+            class="fixed top-4 end-4 z-50 flex items-center gap-2 px-3 py-2 rounded-lg shadow-lg border backdrop-blur-sm"
             :class="indicatorClasses"
         >
             <template v-if="isSyncing">

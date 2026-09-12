@@ -33,7 +33,7 @@
                 >
                     <div
                         v-if="dropZoneIndex === index && draggedIndex !== null && draggedIndex !== index"
-                        class="absolute top-0 left-0 right-0 h-px bg-accented rounded-full z-10 transition-all duration-200"
+                        class="absolute top-0 start-0 end-0 h-px bg-accented rounded-full z-10 transition-all duration-200"
                     />
                     <div
                         :class="[
@@ -44,7 +44,7 @@
                             dropZoneIndex === index && draggedIndex !== null && draggedIndex !== index ? 'transform translate-y-1' : '',
                         ]"
                         :draggable="section.orderable"
-                        class="w-full flex items-center gap-3 p-3 rounded-md transition-colors hover:bg-elevated hover:text-highlighted text-left cursor-move"
+                        class="w-full flex items-center gap-3 p-3 rounded-md transition-colors hover:bg-elevated hover:text-highlighted text-start cursor-move"
                         @click="scrollToSection(section.id)"
                         @dragend="onDragEnd"
                         @dragover="onDragOver($event, index)"
@@ -80,7 +80,7 @@
                     </div>
                     <div
                         v-if="dropZoneIndex === index + 1 && draggedIndex !== null"
-                        class="absolute bottom-0 left-0 right-0 h-px bg-accented rounded-full z-10 transition-all duration-200"
+                        class="absolute bottom-0 start-0 end-0 h-px bg-accented rounded-full z-10 transition-all duration-200"
                     />
                 </div>
                 <div
@@ -90,7 +90,7 @@
                 >
                     <div
                         v-if="dropZoneIndex === orderableSections.length && draggedIndex !== null"
-                        class="absolute top-2 left-0 right-0 h-px bg-accented rounded-full z-10 transition-all duration-200"
+                        class="absolute top-2 start-0 end-0 h-px bg-accented rounded-full z-10 transition-all duration-200"
                     />
                 </div>
             </div>

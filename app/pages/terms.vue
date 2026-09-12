@@ -14,7 +14,7 @@ useHead({
     <div
         dir="ltr"
         lang="en"
-        class="min-h-screen py-16 px-4 sm:px-6 lg:px-8 text-left"
+        class="min-h-screen py-16 px-4 sm:px-6 lg:px-8 text-start"
     >
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12">

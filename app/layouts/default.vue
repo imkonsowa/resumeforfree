@@ -85,47 +85,47 @@ watch(
             <UNavigationMenu :items="navItems" />
 
             <template #right>
-                <LanguageSelector
-                    show-icon
-                    responsive
-                    size="sm"
-                    button-variant="ghost"
-                />
+                <div class="hidden lg:flex items-center gap-1.5">
+                    <LanguageSelector
+                        show-icon
+                        size="sm"
+                        button-variant="ghost"
+                    />
 
-                <UColorModeButton />
+                    <UColorModeButton />
 
-                <UButton
-                    :to="REPO_URL"
-                    target="_blank"
-                    icon="i-lucide-github"
-                    color="neutral"
-                    variant="ghost"
-                    size="sm"
-                    :aria-label="t('navigation.github', 'GitHub')"
-                />
+                    <UButton
+                        :to="REPO_URL"
+                        target="_blank"
+                        icon="i-lucide-github"
+                        color="neutral"
+                        variant="ghost"
+                        size="sm"
+                        :aria-label="t('navigation.github', 'GitHub')"
+                    />
 
-                <USeparator
-                    orientation="vertical"
-                    class="h-4 mx-1 hidden sm:block"
-                />
+                    <USeparator
+                        orientation="vertical"
+                        class="h-5 mx-1.5"
+                    />
+                </div>
 
                 <ClientOnly>
                     <template v-if="!authStore.isLoggedIn">
                         <UButton
                             :to="localePath('/auth/login')"
                             :label="t('navigation.signIn')"
-                            icon="i-lucide-log-in"
                             color="neutral"
-                            variant="outline"
+                            variant="ghost"
                             size="sm"
-                            class="hidden sm:inline-flex"
+                            class="hidden lg:inline-flex"
                         />
                         <UButton
                             :to="localePath('/builder')"
                             :label="t('navigation.startBuilding')"
-                            trailing-icon="i-lucide-arrow-right"
                             color="secondary"
                             size="sm"
+                            class="hidden sm:inline-flex"
                         />
                     </template>
                     <template v-else>
@@ -135,9 +135,9 @@ watch(
                             color="neutral"
                             variant="ghost"
                             size="sm"
-                            class="max-w-[180px]"
+                            class="hidden lg:inline-flex max-w-[180px]"
                         >
-                            <span class="truncate hidden sm:inline">
+                            <span class="truncate">
                                 {{ authStore.currentUser?.name || authStore.currentUser?.email }}
                             </span>
                         </UButton>
@@ -146,6 +146,7 @@ watch(
                             color="neutral"
                             variant="ghost"
                             size="sm"
+                            class="hidden lg:inline-flex"
                             :aria-label="t('navigation.signOut')"
                             @click="handleLogout"
                         />
@@ -163,31 +164,23 @@ watch(
                 <USeparator class="my-4" />
 
                 <div class="flex flex-col gap-2">
-                    <UButton
-                        :to="REPO_URL"
-                        target="_blank"
-                        :label="t('navigation.github', 'GitHub')"
-                        icon="i-lucide-github"
-                        color="neutral"
-                        variant="ghost"
-                        block
-                    />
-
                     <ClientOnly>
                         <template v-if="!authStore.isLoggedIn">
+                            <UButton
+                                :to="localePath('/builder')"
+                                :label="t('navigation.startBuilding')"
+                                trailing-icon="i-lucide-arrow-right"
+                                color="secondary"
+                                size="lg"
+                                block
+                            />
                             <UButton
                                 :to="localePath('/auth/login')"
                                 :label="t('navigation.signIn')"
                                 icon="i-lucide-log-in"
                                 color="neutral"
                                 variant="outline"
-                                block
-                            />
-                            <UButton
-                                :to="localePath('/builder')"
-                                :label="t('navigation.startBuilding')"
-                                trailing-icon="i-lucide-arrow-right"
-                                color="secondary"
+                                size="lg"
                                 block
                             />
                         </template>
@@ -197,7 +190,8 @@ watch(
                                 :label="authStore.currentUser?.name || authStore.currentUser?.email"
                                 icon="i-lucide-user"
                                 color="neutral"
-                                variant="ghost"
+                                variant="outline"
+                                size="lg"
                                 block
                             />
                             <UButton
@@ -205,11 +199,33 @@ watch(
                                 icon="i-lucide-log-out"
                                 color="neutral"
                                 variant="ghost"
+                                size="lg"
                                 block
                                 @click="handleLogout"
                             />
                         </template>
                     </ClientOnly>
+                </div>
+
+                <USeparator class="my-4" />
+
+                <div class="flex items-center justify-between gap-2">
+                    <LanguageSelector
+                        show-icon
+                        size="md"
+                        button-variant="outline"
+                    />
+                    <div class="flex items-center gap-1">
+                        <UColorModeButton />
+                        <UButton
+                            :to="REPO_URL"
+                            target="_blank"
+                            icon="i-lucide-github"
+                            color="neutral"
+                            variant="ghost"
+                            :aria-label="t('navigation.github', 'GitHub')"
+                        />
+                    </div>
                 </div>
             </template>
         </UHeader>

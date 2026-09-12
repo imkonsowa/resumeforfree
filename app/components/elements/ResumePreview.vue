@@ -6,7 +6,7 @@
                     <span class="hidden md:inline">{{ t('builder.preview') }}</span>
                     <span class="md:hidden text-base">{{ activeResume?.name }}</span>
                 </h2>
-                <div class="hidden md:flex items-center space-x-3">
+                <div class="hidden md:flex items-center gap-3">
                     <div class="zoom-controls-midscreen">
                         <ZoomControls
                             :max-zoom="maxZoom"
@@ -126,19 +126,10 @@
                                 <div
                                     class="w-16 h-16 bg-error/15 rounded-full flex items-center justify-center mx-auto mb-4"
                                 >
-                                    <svg
-                                        class="w-8 h-8 text-error"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            d="M6 18L18 6M6 6l12 12"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                        />
-                                    </svg>
+                                    <UIcon
+                                        name="i-lucide-x"
+                                        class="size-8 text-error"
+                                    />
                                 </div>
                                 <h3 class="text-xl font-semibold text-error mb-2">
                                     {{ t('builder.previewError') }}
@@ -175,19 +166,10 @@
                                 <div
                                     class="w-16 h-16 bg-secondary/15 rounded-full flex items-center justify-center mx-auto mb-4"
                                 >
-                                    <svg
-                                        class="w-8 h-8 text-secondary"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                        />
-                                    </svg>
+                                    <UIcon
+                                        name="i-lucide-loader-circle"
+                                        class="size-8 text-secondary animate-spin"
+                                    />
                                 </div>
                                 <h3 class="text-xl font-semibold text-default mb-2">
                                     {{ t('builder.initializingTypst') }}
