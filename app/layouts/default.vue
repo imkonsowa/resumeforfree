@@ -73,16 +73,21 @@ watch(
 
 <template>
     <div class="min-h-screen flex flex-col">
-        <UHeader
-            :to="localePath('/')"
-            title="ResumeForFree"
-            :ui="{ center: 'hidden lg:flex' }"
-        >
-            <template #title>
-                <Wordmark />
-            </template>
+        <UHeader :ui="{ left: 'lg:flex-1 flex items-center gap-6 min-w-0' }">
+            <template #left>
+                <NuxtLink
+                    :to="localePath('/')"
+                    aria-label="ResumeForFree"
+                    class="shrink-0"
+                >
+                    <Wordmark />
+                </NuxtLink>
 
-            <UNavigationMenu :items="navItems" />
+                <UNavigationMenu
+                    :items="navItems"
+                    class="hidden lg:flex"
+                />
+            </template>
 
             <template #right>
                 <div class="hidden lg:flex items-center gap-1.5">

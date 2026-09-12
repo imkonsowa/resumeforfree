@@ -104,6 +104,12 @@ export default defineNuxtConfig({
         },
     },
 
+    fonts: {
+        families: [
+            { name: 'Noto Sans Arabic', provider: 'google', weights: [400, 500, 600, 700] },
+        ],
+    },
+
     i18n: {
         defaultLocale: 'en',
         locales: [
