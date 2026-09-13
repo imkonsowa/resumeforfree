@@ -6,6 +6,7 @@ import ResumeLanguageSelector from '~/components/elements/ResumeLanguageSelector
 interface Props {
     resume: Resume;
     isActive: boolean;
+    isDownloading?: boolean;
 }
 
 const props = defineProps<Props>();
@@ -14,6 +15,7 @@ const emit = defineEmits<{
     edit: [id: string];
     copy: [id: string];
     export: [id: string];
+    downloadPdf: [id: string];
     sync: [id: string];
     delete: [id: string];
     rename: [id: string, newName: string];
@@ -206,9 +208,9 @@ const menuItems = computed<DropdownMenuItem[][]>(() => {
                 color="neutral"
                 variant="outline"
                 icon="i-lucide-download"
-                :label="$t('common.export')"
-                :aria-label="$t('resumes.card.exportTitle')"
-                @click.stop="emit('export', resume.id)"
+                :loading="isDownloading"
+                :label="$t('resumes.card.downloadPdf')"
+                @click.stop="emit('downloadPdf', resume.id)"
             />
             <UButton
                 v-if="authStore.isLoggedIn"

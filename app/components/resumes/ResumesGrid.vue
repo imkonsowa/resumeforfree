@@ -5,9 +5,10 @@
             :key="resume.id"
             :resume="resume"
             :is-active="activeResumeId === resume.id"
+            :is-downloading="downloadingId === resume.id"
             @edit="$emit('edit', $event)"
             @copy="$emit('copy', $event)"
-            @export="$emit('export', $event)"
+            @download-pdf="$emit('downloadPdf', $event)"
             @delete="$emit('delete', $event)"
             @sync="$emit('sync', $event)"
             @disable-sync="$emit('disableSync', $event)"
@@ -22,12 +23,13 @@ import type { Resume } from '~/types/resume';
 interface Props {
     resumes: Resume[];
     activeResumeId: string | null;
+    downloadingId?: string | null;
 }
 defineProps<Props>();
 defineEmits<{
     edit: [id: string];
     copy: [id: string];
-    export: [id: string];
+    downloadPdf: [id: string];
     delete: [id: string];
     sync: [id: string];
     disableSync: [id: string];

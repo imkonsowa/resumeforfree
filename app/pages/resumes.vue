@@ -17,7 +17,47 @@ const resumeStore = useResumeStore();
 const authStore = useAuthStore();
 const router = useRouter();
 const confirmation = useConfirmation();
-const { exportResumes, exportSingleResume, parseImportFile, importSelectedResumes } = useResumeImportExport();
+const { exportResumes, parseImportFile, importSelectedResumes } = useResumeImportExport();
+// Warms the Typst compiler while the list is being browsed, so the first
+// download does not pay for the whole WASM load after the click.
+useTypstLoader();
+const { downloadPDF, typstReady } = useResumeGenerator();
+
+const waitForTypst = () => new Promise<void>((resolve, reject) => {
+    if (typstReady.value) return resolve();
+    const timeout = setTimeout(() => {
+        stop();
+        reject(new Error('Typst renderer timed out'));
+    }, 120000);
+    const stop = watch(typstReady, (ready) => {
+        if (!ready) return;
+        clearTimeout(timeout);
+        stop();
+        resolve();
+    });
+});
+
+const downloadingId = ref<string | null>(null);
+
+const handleDownloadPdf = async (resumeId: string) => {
+    if (downloadingId.value) return;
+    const resume = resumeStore.resumesList.find(item => item.id === resumeId);
+    if (!resume) return;
+
+    downloadingId.value = resumeId;
+    try {
+        await waitForTypst();
+        await downloadPDF(resume);
+        $fetch('/api/increase-downloads-count', { method: 'POST', body: {} }).catch(console.debug);
+    }
+    catch (error) {
+        console.error('PDF download error:', error);
+        notify.error(t('resumes.card.downloadPdfFailed'));
+    }
+    finally {
+        downloadingId.value = null;
+    }
+};
 const searchQuery = ref('');
 const fetchServerResumesIfLoggedIn = async () => {
     if (authStore.isLoggedIn) {
@@ -506,9 +546,10 @@ useHead({
                         v-else
                         :resumes="resumes"
                         :active-resume-id="resumeStore.activeResumeId"
+                        :downloading-id="downloadingId"
                         @edit="editResume"
                         @copy="showCopyResumeModal"
-                        @export="exportSingleResume"
+                        @download-pdf="handleDownloadPdf"
                         @delete="deleteResume"
                         @sync="syncResume"
                         @disable-sync="disableCloudSync"

@@ -57,23 +57,6 @@ const authStore = useAuthStore();
 
             <div class="flex gap-1 sm:gap-2">
                 <UButton
-                    color="neutral"
-                    variant="outline"
-                    size="sm"
-                    icon="i-lucide-upload"
-                    :label="$t('resumes.actions.import')"
-                    @click="$emit('import')"
-                />
-                <UButton
-                    v-if="resumeCount > 0"
-                    color="neutral"
-                    variant="outline"
-                    size="sm"
-                    icon="i-lucide-download"
-                    :label="$t('common.export')"
-                    @click="$emit('export')"
-                />
-                <UButton
                     v-if="authStore.isLoggedIn && resumeCount > 0"
                     color="neutral"
                     variant="outline"
