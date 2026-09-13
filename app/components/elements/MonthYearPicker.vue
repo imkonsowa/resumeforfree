@@ -38,24 +38,23 @@ const yearItems = computed(() => {
     );
 });
 
-const parsed = computed(() => {
-    const [year, month] = (props.modelValue || '').split('-');
-    return { year: year || '', month: month || '' };
-});
+const selectedMonth = ref('');
+const selectedYear = ref('');
 
-const selectedMonth = computed({
-    get: () => parsed.value.month,
-    set: value => commit(parsed.value.year, value),
-});
+const combined = computed(() =>
+    selectedYear.value && selectedMonth.value ? `${selectedYear.value}-${selectedMonth.value}` : '',
+);
 
-const selectedYear = computed({
-    get: () => parsed.value.year,
-    set: value => commit(value, parsed.value.month),
-});
+watch(() => props.modelValue, (value) => {
+    if (value === combined.value) return;
+    const [year, month] = (value || '').split('-');
+    selectedYear.value = year || '';
+    selectedMonth.value = month || '';
+}, { immediate: true });
 
-function commit(year: string, month: string) {
-    emit('update:modelValue', year && month ? `${year}-${month}` : '');
-}
+watch(combined, (value) => {
+    if (value !== props.modelValue) emit('update:modelValue', value);
+});
 </script>
 
 <template>
