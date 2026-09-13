@@ -287,6 +287,9 @@ const LEGACY_FONT_ALIASES: Record<string, string> = {
 };
 
 export const getFontsForLanguage = (language: string) => {
+    if (language === 'ur') {
+        return availableFonts.ar;
+    }
     return availableFonts[language as keyof typeof availableFonts] || availableFonts.en;
 };
 

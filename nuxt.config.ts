@@ -107,6 +107,8 @@ export default defineNuxtConfig({
     fonts: {
         families: [
             { name: 'Noto Sans Arabic', provider: 'google', weights: [400, 500, 600, 700] },
+            { name: 'Noto Sans SC', provider: 'google', weights: [400, 500, 600, 700] },
+            { name: 'Noto Sans Devanagari', provider: 'google', weights: [400, 500, 600, 700] },
         ],
     },
 
@@ -117,6 +119,11 @@ export default defineNuxtConfig({
             { code: 'ar', name: 'العربية', file: 'ar.json', language: 'ar-SA', dir: 'rtl' },
             { code: 'tr', name: 'Türkçe', file: 'tr.json', language: 'tr-TR', dir: 'ltr' },
             { code: 'fr', name: 'Français', file: 'fr.json', language: 'fr-FR', dir: 'ltr' },
+            { code: 'de', name: 'Deutsch', file: 'de.json', language: 'de-DE', dir: 'ltr' },
+            { code: 'it', name: 'Italiano', file: 'it.json', language: 'it-IT', dir: 'ltr' },
+            { code: 'zh', name: '中文', file: 'zh.json', language: 'zh-CN', dir: 'ltr' },
+            { code: 'ur', name: 'اردو', file: 'ur.json', language: 'ur-PK', dir: 'rtl' },
+            { code: 'hi', name: 'हिन्दी', file: 'hi.json', language: 'hi-IN', dir: 'ltr' },
         ],
         lazy: true,
         langDir: 'locales',
@@ -187,6 +194,16 @@ export default defineNuxtConfig({
             '/tr/profile',
             '/fr/auth/**',
             '/fr/profile',
+            '/de/auth/**',
+            '/de/profile',
+            '/it/auth/**',
+            '/it/profile',
+            '/zh/auth/**',
+            '/zh/profile',
+            '/ur/auth/**',
+            '/ur/profile',
+            '/hi/auth/**',
+            '/hi/profile',
         ],
         defaults: {
             changefreq: 'weekly',

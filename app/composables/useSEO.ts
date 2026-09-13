@@ -25,7 +25,7 @@ export const createWebsiteStructuredData = () => ({
     'alternateName': 'Resume Builder',
     'description': 'Build professional resumes for free. No servers, no registration, no payments. Unlimited downloads and resumes with complete privacy.',
     'url': SITE_URL,
-    'inLanguage': ['en', 'ar'],
+    'inLanguage': ['en', 'ar', 'tr', 'fr', 'de', 'it', 'zh', 'ur', 'hi'],
     'publisher': {
         '@id': `${SITE_URL}/#organization`,
     },
