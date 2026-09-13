@@ -5,6 +5,7 @@ import {
     createOrganizationStructuredData,
     createSoftwareApplicationStructuredData,
     createWebsiteStructuredData,
+    getOgLocale,
 } from '~/composables/useSEO';
 
 const { t, locale } = useI18n();
@@ -95,84 +96,109 @@ const featureItems = [
     { icon: 'i-lucide-cloud', title: t('homepage.features.cloudSync.title'), body: t('homepage.features.cloudSync.description') },
 ] as const;
 
-useHead({
-    title: t('homepage.heroTitle'),
-    meta: [
-        {
-            name: 'description',
-            content: t('homepage.heroDescription'),
-        },
-        {
-            name: 'keywords',
-            content: 'free resume builder, resume for free, free resume maker, no registration resume builder, privacy resume builder, PDF resume download, resume builder no signup, free CV maker, ATS friendly resume, resume builder no watermark',
-        },
-        {
-            property: 'og:type',
-            content: 'website',
-        },
-        {
-            property: 'og:site_name',
-            content: 'Resume For Free',
-        },
-        {
-            property: 'og:title',
-            content: t('homepage.heroTitle'),
-        },
-        {
-            property: 'og:description',
-            content: t('homepage.heroDescription'),
-        },
-        {
-            property: 'og:url',
-            content: 'https://resumeforfree.com',
-        },
-        {
-            property: 'og:image',
-            content: 'https://resumeforfree.com/og-image.png',
-        },
-        {
-            property: 'og:image:width',
-            content: '1200',
-        },
-        {
-            property: 'og:image:height',
-            content: '630',
-        },
-        {
-            name: 'twitter:card',
-            content: 'summary_large_image',
-        },
-        {
-            name: 'twitter:title',
-            content: t('homepage.heroTitle'),
-        },
-        {
-            name: 'twitter:description',
-            content: t('homepage.heroDescription'),
-        },
-        {
-            name: 'twitter:image',
-            content: 'https://resumeforfree.com/og-image.png',
-        },
-    ],
-    script: [
-        {
-            type: 'application/ld+json',
-            children: JSON.stringify(createWebsiteStructuredData()),
-        },
-        {
-            type: 'application/ld+json',
-            children: JSON.stringify(createSoftwareApplicationStructuredData()),
-        },
-        {
-            type: 'application/ld+json',
-            children: JSON.stringify(createOrganizationStructuredData()),
-        },
-        {
-            type: 'application/ld+json',
-            children: JSON.stringify(createFAQStructuredData(faqItems)),
-        },
-    ],
+const route = useRoute();
+
+const HOMEPAGE_KEYWORDS: Record<string, string> = {
+    en: 'free resume builder, resume for free, free resume maker, no registration resume builder, privacy resume builder, PDF resume download, resume builder no signup, free CV maker, ATS friendly resume, resume builder no watermark',
+    ar: 'إنشاء سيرة ذاتية مجانا, صانع سيرة ذاتية مجاني, سيرة ذاتية بدون تسجيل, سيرة ذاتية بدون علامة مائية, تحميل سيرة ذاتية PDF, سيرة ذاتية متوافقة مع ATS',
+    de: 'kostenloser lebenslauf ersteller, lebenslauf online erstellen kostenlos, lebenslauf ohne anmeldung, cv maker kostenlos, lebenslauf pdf download, ats lebenslauf',
+    it: 'creare curriculum gratis, creatore di curriculum vitae gratis, curriculum senza registrazione, cv maker gratis, scarica cv pdf, curriculum compatibile ats',
+    zh: '免费简历生成器, 在线制作简历, 免费CV制作, 免登录简历制作, 隐私简历生成器, 导出PDF简历, ATS友好简历, 无水印简历制作',
+    ur: 'مفت سی وی بنانے والا, مفت ریزیومے میکر, بغیر رجسٹریشن سی وی, پی ڈی ایف سی وی ڈاؤن لوڈ, اے ٹی ایس دوست سی وی, مفت آن لائن سی وی',
+    hi: 'फ्री रिज्यूमे मेकर, मुफ्त बायोडाटा मेकर, बिना रजिस्ट्रेशन रिज्यूमे, पीडीएफ रिज्यूमे डाउनलोड, एटीएस फ्रेंडली रिज्यूमे, फ्री सीवी मेकर',
+    fr: 'créateur de cv gratuit, faire un cv gratuit en ligne, cv sans inscription, créer cv pdf, cv compatible ats, modèle de cv gratuit',
+    tr: 'ücretsiz özgeçmiş oluşturucu, bedava cv hazırla, kayıtsız özgeçmiş yap, cv indir pdf, ats uyumlu cv, filigransız özgeçmiş',
+};
+
+useHead(() => {
+    const pageUrl = `https://resumeforfree.com${route.path === '/' ? '' : route.path}`;
+    const pageTitle = t('homepage.heroTitle');
+    const pageDescription = t('homepage.heroDescription');
+    const ogLocale = getOgLocale(locale.value);
+
+    return {
+        title: pageTitle,
+        meta: [
+            {
+                name: 'description',
+                content: pageDescription,
+            },
+            {
+                name: 'keywords',
+                content: HOMEPAGE_KEYWORDS[locale.value] || HOMEPAGE_KEYWORDS.en,
+            },
+            {
+                property: 'og:type',
+                content: 'website',
+            },
+            {
+                property: 'og:locale',
+                content: ogLocale,
+            },
+            {
+                property: 'og:site_name',
+                content: 'Resume For Free',
+            },
+            {
+                property: 'og:title',
+                content: pageTitle,
+            },
+            {
+                property: 'og:description',
+                content: pageDescription,
+            },
+            {
+                property: 'og:url',
+                content: pageUrl,
+            },
+            {
+                property: 'og:image',
+                content: 'https://resumeforfree.com/og-image.png',
+            },
+            {
+                property: 'og:image:width',
+                content: '1200',
+            },
+            {
+                property: 'og:image:height',
+                content: '630',
+            },
+            {
+                name: 'twitter:card',
+                content: 'summary_large_image',
+            },
+            {
+                name: 'twitter:title',
+                content: pageTitle,
+            },
+            {
+                name: 'twitter:description',
+                content: pageDescription,
+            },
+            {
+                name: 'twitter:image',
+                content: 'https://resumeforfree.com/og-image.png',
+            },
+        ],
+        script: [
+            {
+                type: 'application/ld+json',
+                children: JSON.stringify(createWebsiteStructuredData()),
+            },
+            {
+                type: 'application/ld+json',
+                children: JSON.stringify(createSoftwareApplicationStructuredData()),
+            },
+            {
+                type: 'application/ld+json',
+                children: JSON.stringify(createOrganizationStructuredData()),
+            },
+            {
+                type: 'application/ld+json',
+                children: JSON.stringify(createFAQStructuredData(faqItems)),
+            },
+        ],
+    };
 });
 </script>
 

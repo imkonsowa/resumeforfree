@@ -22,7 +22,8 @@
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "fonts:manifest": "node scripts/generate-font-manifest.mjs",
-    "wasm:upload": "node scripts/upload-wasm.mjs"
+    "wasm:upload": "node scripts/upload-wasm.mjs",
+    "generate:samples": "node scripts/run-generate-samples.mjs"
   },
   "dependencies": {
     "@cloudflare/workers-types": "^5.20260911.1",

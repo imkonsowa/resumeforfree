@@ -1,0 +1,940 @@
+{
+    "common": {
+        "save": "Speichern",
+        "cancel": "Abbrechen",
+        "delete": "Löschen",
+        "edit": "Bearbeiten",
+        "add": "Hinzufügen",
+        "remove": "Entfernen",
+        "close": "Schließen",
+        "done": "Fertig",
+        "copyFailed": "Kopieren in die Zwischenablage fehlgeschlagen",
+        "link": "Link",
+        "preview": "Vorschau",
+        "download": "Herunterladen",
+        "loading": "Wird geladen...",
+        "error": "Fehler",
+        "success": "Erfolg",
+        "yes": "Ja",
+        "no": "Nein",
+        "language": "Sprache",
+        "buildNow": "Jetzt erstellen",
+        "startBuilding": "Jetzt anfangen",
+        "resetToDefaults": "Auf Standard zurücksetzen",
+        "quickActions": "Schnellaktionen",
+        "actions": "Aktionen",
+        "column": "Spalte",
+        "left": "Links",
+        "right": "Rechts",
+        "location": "Ort",
+        "locationPlaceholder": "Berlin, Deutschland",
+        "present": "Heute",
+        "startDate": "Startdatum",
+        "endDate": "Enddatum",
+        "description": "Beschreibung",
+        "email": "E-Mail",
+        "position": "Position",
+        "achievements": "Erfolge",
+        "addAchievement": "Erfolg hinzufügen",
+        "achievementPlaceholder": "Beschreiben Sie Ihre wichtigsten Erfolge und Wirkung",
+        "name": "Name",
+        "sync": "Synchronisieren",
+        "export": "Exportieren",
+        "company": "Unternehmen",
+        "companyUrl": "Unternehmens-Website URL",
+        "organizationUrl": "Organisations-Website URL",
+        "emailAddress": "E-Mail-Adresse",
+        "tryAgain": "Erneut versuchen",
+        "copy": "Kopieren",
+        "month": "Monat",
+        "year": "Jahr",
+        "moveUp": "Nach oben verschieben",
+        "moveDown": "Nach unten verschieben",
+        "confirmAction": "Aktion bestätigen",
+        "confirmMessage": "Sind Sie sicher, dass Sie fortfahren möchten?",
+        "confirm": "Bestätigen",
+        "expand": "Aufklappen",
+        "collapse": "Zuklappen",
+        "moreActions": "Weitere Aktionen",
+        "or": "oder",
+        "saved": "Gespeichert",
+        "syncFailed": "Synchronisierung fehlgeschlagen"
+    },
+    "languageModal": {
+        "title": "Sprache auswählen",
+        "description": "Wählen Sie Ihre bevorzugte Sprache für den Lebenslauf-Editor",
+        "resumeTitle": "Lebenslauf-Sprache wählen",
+        "resumeDescription": "Wählen Sie die Sprache für diesen Lebenslauf. Diese Auswahl ist dauerhaft und kann nach der Erstellung nicht mehr geändert werden."
+    },
+    "navigation": {
+        "home": "Startseite",
+        "builder": "Editor",
+        "qa": "F&A",
+        "help": "Hilfe",
+        "resumes": "Ihre Lebensläufe",
+        "contact": "Kontakt",
+        "github": "GitHub",
+        "signIn": "Anmelden",
+        "signUp": "Registrieren",
+        "signOut": "Abmelden",
+        "profile": "Profil",
+        "startBuilding": "Jetzt erstellen",
+        "openMenu": "Menü öffnen",
+        "closeMenu": "Menü schließen"
+    },
+    "footer": {
+        "tagline": "Ein Lebenslauf-Editor, der dauerhaft kostenlos bleibt. Im Browser mit Typst erstellt. Kein Konto, kein Tracking.",
+        "productHeading": "Produkt",
+        "productLinks": {
+            "builder": "Editor",
+            "yourResumes": "Ihre Lebensläufe",
+            "cloudSync": "Cloud-Synchronisierung"
+        },
+        "resourcesHeading": "Ressourcen",
+        "supportHeading": "Support",
+        "supportLinks": {
+            "terms": "Nutzungsbedingungen",
+            "privacy": "Datenschutz"
+        },
+        "copyright": "© 2026 ResumeForFree · Erstellt mit Typst.ts & Nuxt von {author}",
+        "noTracking": "Keine Cookies. Kein Tracking."
+    },
+    "homepage": {
+        "title": "Erstellen Sie Ihren Lebenslauf",
+        "subtitle": "Kostenlos",
+        "heroTitle": "Kostenloser Lebenslauf-Editor - Ohne Registrierung, ohne Wasserzeichen | Resume For Free",
+        "heroDescription": "Erstellen und laden Sie professionelle Lebensläufe kostenlos herunter. Kein Konto erforderlich, keine Wasserzeichen, keine versteckten Gebühren. Ihre Daten bleiben auf Ihrem Gerät. Unbegrenzte PDF-Downloads.",
+        "heroSubheadline": "Kein Konto. Kein Wasserzeichen. Kein „Upgrade zum Herunterladen“. Einfach ein Lebenslauf-Editor, der hält, was er verspricht.",
+        "hero": {
+            "badge": "10.247 Nutzer · 55.812 PDFs heruntergeladen",
+            "title": "Der kostenlose Lebenslauf-Editor, der für immer kostenlos bleibt.",
+            "sub": "Erstellen, prüfen und laden Sie ein ATS-optimiertes PDF direkt im Browser herunter. Kein Konto. Kein Wasserzeichen. Kein Upgrade zum Herunterladen.",
+            "ctaBuild": "Meinen Lebenslauf erstellen",
+            "ctaSample": "Beispiel-PDF ansehen",
+            "note": "Keine Registrierung · Keine Kreditkarte · Dauert ca. 5 Minuten",
+            "stat1Label": "Erstellte Lebensläufe",
+            "stat2Label": "Heruntergeladene PDFs",
+            "stat3Label": "Dauerhafte Kosten"
+        },
+        "sampleResume": {
+            "alt": "Vorschau des Musterlebenslaufs",
+            "name": "Omar Al-Masry",
+            "title": "Senior Software Engineer | Backend | Cloud",
+            "profile": "Backend-Entwickler mit mehr als 8 Jahren Erfahrung im Aufbau hochperformanter verteilter Systeme. Spezialisiert auf Cloud-native Infrastruktur, Observability und Datenverarbeitung in großem Maßstab.",
+            "location": "Remote",
+            "experience": {
+                "heading": "Berufserfahrung",
+                "roleLine": "Senior Software Engineer bei Acme Corp, Remote",
+                "dateRange": "Jan 2023 - Heute",
+                "bullet1": "Aufbau einer Multi-Region-Datenpipeline mit 2 Mrd. Events pro Tag.",
+                "bullet2": "Leitung der Backend-Architektur einer geschäftskritischen Analyseplattform."
+            },
+            "skills": {
+                "heading": "Technische Kenntnisse",
+                "langLabel": "Sprachen",
+                "langValue": "Golang, JavaScript, Python, PHP",
+                "cloudLabel": "Cloud",
+                "cloudValue": "Docker, Kubernetes, AWS, GCP",
+                "dbLabel": "Datenbanken",
+                "dbValue": "PostgreSQL, Redis, ElasticSearch"
+            },
+            "education": {
+                "heading": "Ausbildung",
+                "degreeLine": "B.Sc. Informatik, Staatliche Universität",
+                "date": "2015"
+            }
+        },
+        "features": {
+            "free": {
+                "title": "Tatsächlich kostenlos",
+                "description": "Keine Testphase, keine Kreditkarte, kein „Premium“-Modell. Kostenlos bedeutet kostenlos."
+            },
+            "privacy": {
+                "title": "Ihre Daten bleiben auf Ihrem Gerät",
+                "description": "Alles wird lokal in Ihrem Browser gespeichert. Wir erfassen, speichern oder verkaufen Ihre persönlichen Daten nicht."
+            },
+            "noRegistration": {
+                "title": "Kein Konto erforderlich",
+                "description": "Website öffnen, Lebenslauf ausfüllen, PDF herunterladen. Keine E-Mail, keine Anmeldung, keine Verifizierung."
+            },
+            "unlimitedDownloads": {
+                "title": "Unbegrenzte PDF-Downloads",
+                "description": "Laden Sie Ihren Lebenslauf so oft herunter, wie Sie möchten. Keine täglichen Limits, keine Zähler."
+            },
+            "atsOptimized": {
+                "title": "ATS-optimierte Ausgabe",
+                "description": "Gesetzt mit Typst – echter auswählbarer Text, eingebettete Schriften, saubere Struktur. Besteht gängige Bewerber-Tracking-Systeme."
+            },
+            "unlimitedResumes": {
+                "title": "Mehrere Lebensläufe",
+                "description": "Erstellen Sie verschiedene Lebensläufe für unterschiedliche Bewerbungen. Passen Sie jeden individuell an, ohne von vorne zu beginnen."
+            },
+            "offline": {
+                "title": "Funktioniert offline",
+                "description": "Einmal laden und ohne Internet weiterarbeiten. Erstellen Sie Ihren Lebenslauf im Flugzeug, im Zug oder wo immer Sie möchten."
+            },
+            "cloudSync": {
+                "title": "Optionale Cloud-Synchronisierung",
+                "description": "Erstellen Sie ein kostenloses Konto, um bis zu 3 Lebensläufe in der Cloud zu sichern und geräteübergreifend abzurufen. Völlig optional – alles funktioniert auch ohne."
+            },
+            "eyebrow": "Funktionen",
+            "sectionTitle": "Alles, was Sie für einen professionellen Lebenslauf brauchen. Nichts hinter einer Bezahlschranke.",
+            "sub": "Funktionen, die Mitbewerber kostenpflichtigen Tarifen vorbehalten, sind bei uns standardmäßig für alle enthalten."
+        },
+        "howItWorks": {
+            "title": "So funktioniert es",
+            "subtitle": "Drei Schritte. Keine Kontoerstellung dazwischen.",
+            "eyebrow": "Ablauf",
+            "step1": {
+                "title": "Vorlage wählen",
+                "description": "Wählen Sie ein klares, professionelles Layout. Keine verspielten Designs, die Personalverantwortliche verwirren."
+            },
+            "step2": {
+                "title": "Daten eingeben",
+                "description": "Geben Sie Ihre Berufserfahrung, Ausbildung und Fähigkeiten ein. Sehen Sie die Aktualisierung in der Echtzeit-Vorschau."
+            },
+            "step3": {
+                "title": "PDF herunterladen",
+                "description": "Laden Sie Ihr sauberes, ATS-konformes PDF sofort herunter. Kein Wasserzeichen. Keine Bezahlaufforderung."
+            }
+        },
+        "comparison": {
+            "title": "Wie wir im Vergleich abschneiden",
+            "subtitle": "Wir haben nachgesehen, damit Sie es nicht müssen.",
+            "eyebrow": "Vergleich",
+            "caption": "Basierend auf den kostenlosen Tarifen der Mitbewerber im April 2026. Preise können sich ändern.",
+            "headers": {
+                "feature": "Funktion",
+                "us": "Resume For Free",
+                "canva": "Canva",
+                "zety": "Zety",
+                "resumeio": "Resume.io"
+            },
+            "rows": {
+                "pdfDownload": "Kostenloser PDF-Download",
+                "noAccount": "Kein Konto erforderlich",
+                "noWatermark": "Kein Wasserzeichen",
+                "noAds": "Keine Werbung beim Erstellen",
+                "dataOnDevice": "Daten bleiben auf Ihrem Gerät",
+                "worksOffline": "Funktioniert offline",
+                "unlimitedDownloads": "Unbegrenzte Downloads",
+                "noTrial": "Keine Abo-Falle nach Testphase"
+            },
+            "values": {
+                "free": "Kostenlos",
+                "paid": "Kostenpflichtig",
+                "yes": "Ja",
+                "no": "Nein",
+                "limited": "Eingeschränkt"
+            },
+            "footnote": "Vergleich basiert auf den kostenlosen Tarifen vom April 2026. Mitbewerber können Preise ändern."
+        },
+        "whyBuilt": {
+            "title": "Warum wir diesen Editor gebaut haben",
+            "eyebrow": "Unsere Mission",
+            "sectionTitle": "Warum wir diesen Editor gebaut haben",
+            "bylineRole": "Gründer & Entwickler",
+            "paragraph1": "Sie verbringen 45 Minuten damit, Ihre beruflichen Stationen sorgfältig einzutragen. Sie klicken auf „Herunterladen“ – und plötzlich fordert ein Pop-up Ihre Kreditkarte für 2,95 $ für eine 14-tägige Testphase, die sich stillschweigend in ein monatliches Abo für 24,95 $ verwandelt.",
+            "paragraph2": "Dieses Werkzeug existiert, weil das nicht normal sein sollte. Ihr Lebenslauf wird komplett in Ihrem Browser mit Typst gesetzt, einer modernen Schriftsatz-Engine. Es gibt keinen Server, der Dokumente für Sie berechnet, daher entstehen uns keine laufenden Kosten pro Dokument – und genau deshalb kann es dauerhaft kostenlos bleiben.",
+            "paragraph3": "Keine Investoren, keine Wachstumsziele, kein Grund, Sie zur Kontoerstellung zu drängen. Einfach ein Werkzeug, das seine Aufgabe zuverlässig erfüllt."
+        },
+        "faq": {
+            "title": "Häufig gestellte Fragen",
+            "eyebrow": "F&A",
+            "contactIntro": "Haben Sie weitere Fragen? Kontaktieren Sie uns über unsere",
+            "contactLinkContact": "Kontaktseite",
+            "contactLinkGithub": "GitHub Repository",
+            "items": {
+                "reallyFree": {
+                    "question": "Ist dieser Dienst wirklich kostenlos? Was ist der Haken?",
+                    "answer": "Es gibt keinen Haken. Die PDF-Erstellung erfolgt in Ihrem Browser über WebAssembly, sodass für uns keine Serverkosten pro Dokument anfallen. Das Hosting der statischen Seite ist extrem günstig. Das ist das gesamte Geschäftsmodell – es gibt keines."
+                },
+                "dataStorage": {
+                    "question": "Wo werden meine Daten gespeichert?",
+                    "answer": "Im lokalen Speicher Ihres Browsers. Ihre Lebenslaufdaten verlassen Ihr Gerät niemals, es sei denn, Sie erstellen ausdrücklich ein Konto und aktivieren die Cloud-Synchronisierung. Wir tracken Sie nicht, betreiben keine Analysen und verkaufen keine Daten."
+                },
+                "needAccount": {
+                    "question": "Muss ich ein Konto erstellen?",
+                    "answer": "Nein. Sie können unbegrenzt viele Lebensläufe ohne Konto erstellen, bearbeiten und herunterladen. Wenn Sie geräteübergreifend arbeiten möchten, können Sie optional ein kostenloses Konto für bis zu 3 Cloud-Lebensläufe erstellen."
+                },
+                "pdfQuality": {
+                    "question": "Ist das PDF wirklich gut oder nur ein Screenshot?",
+                    "answer": "Es ist ein echtes PDF mit sauberem Vektortext, eingebetteten Schriften und markierbaren Inhalten. Wir nutzen Typst (LaTeX-Qualität ohne steile Lernkurve). Das Ergebnis ist besser als bei den meisten kostenpflichtigen Anbietern."
+                },
+                "atsFriendly": {
+                    "question": "Sind die Lebensläufe ATS-konform?",
+                    "answer": "Ja. Die PDFs verwenden sauberes Textrendering mit Standardschriften. Keine Textbilder, keine verwirrenden mehrspaltigen Layouts, keine unsichtbaren Elemente. ATS-Systeme können sie problemlos parsen."
+                },
+                "differentFromOthers": {
+                    "question": "Wie unterscheidet sich das von Canva oder Zety?",
+                    "answer": "Canva erfordert ein Konto und zeigt Werbung. Zety lässt Sie kostenlos erstellen, verlangt aber Geld für den Download. Beide speichern Ihre Daten auf ihren Servern. Wir verlangen kein Konto, kein Geld, keine Werbung und Ihre Daten bleiben bei Ihnen."
+                },
+                "offlineWork": {
+                    "question": "Funktioniert es auch offline?",
+                    "answer": "Ja. Nach dem ersten Laden speichert der Service Worker alles zwischen. Sie können Lebensläufe komplett ohne Internetverbindung erstellen und herunterladen."
+                },
+                "multipleResumes": {
+                    "question": "Kann ich mehrere Lebensläufe anlegen?",
+                    "answer": "Ja, unbegrenzt viele. Erstellen Sie verschiedene Versionen für unterschiedliche Stellenbewerbungen oder Branchen. Es gibt keine Obergrenze."
+                }
+            }
+        },
+        "finalCta": {
+            "title": "Bereit für Ihren Lebenslauf?",
+            "subtitle": "Keine Registrierung. Dauert ca. 10 Minuten.",
+            "sub": "Für immer kostenlos. Keine Registrierung. Dauert etwa 5 Minuten.",
+            "ctaBuild": "Jetzt anfangen",
+            "ctaSample": "Muster-PDF ansehen"
+        },
+        "termsAgreement": "Mit der Nutzung stimmen Sie unseren",
+        "termsLink": "Nutzungsbedingungen zu"
+    },
+    "qa": {
+        "title": "Häufige Fragen",
+        "titleHighlight": "Beantwortet",
+        "subtitle": "Klare Antworten darauf, wie der Lebenslauf-Editor funktioniert, was er kostet (nichts) und wo Ihre Daten bleiben.",
+        "badge": "Häufig gestellte Fragen",
+        "ctaTitle": "Bereit, Ihren Lebenslauf zu erstellen?",
+        "ctaSubtitle": "Keine Registrierung. Dauert etwa 10 Minuten.",
+        "categories": {
+            "gettingStarted": "Erste Schritte",
+            "features": "Funktionen & Möglichkeiten",
+            "technical": "Technik & Support"
+        },
+        "questions": {
+            "isFree": {
+                "question": "Ist das wirklich kostenlos? Was ist der Haken?",
+                "answer": "Es gibt keinen Haken. Die PDF-Erstellung erfolgt in Ihrem Browser über WebAssembly, sodass für uns keine Serverkosten pro Dokument anfallen. Das Hosting der statischen Seite ist extrem günstig. Das ist das gesamte Geschäftsmodell – es gibt keines."
+            },
+            "signUp": {
+                "question": "Muss ich ein Konto anlegen?",
+                "answer": "Nein. Sie können unbegrenzt viele Lebensläufe ohne Konto erstellen, bearbeiten und herunterladen. Wenn Sie geräteübergreifend arbeiten möchten, können Sie optional ein kostenloses Konto für bis zu 3 Cloud-Lebensläufe erstellen."
+            },
+            "pdfExport": {
+                "question": "Ist das PDF wirklich hochwertig oder nur ein Screenshot?",
+                "answer": "Es ist ein echtes PDF mit sauberem Vektortext, eingebetteten Schriften und markierbaren Inhalten. Wir nutzen Typst (LaTeX-Qualität ohne Lernkurve). Das Ergebnis übertrifft die meisten Bezahlprogramme."
+            },
+            "privacy": {
+                "question": "Wo werden meine Daten gespeichert?",
+                "answer": "Im lokalen Speicher Ihres Browsers. Ihre Lebenslaufdaten verlassen Ihr Gerät niemals, es sei denn, Sie erstellen ausdrücklich ein Konto und aktivieren die Cloud-Synchronisierung. Wir tracken Sie nicht, betreiben keine Analysen und verkaufen keine Daten."
+            },
+            "atsFriendly": {
+                "question": "Sind die Lebensläufe ATS-konform?",
+                "answer": "Ja. Die PDFs verwenden sauberes Textrendering mit Standardschriften. Keine Textbilder, keine verwirrenden mehrspaltigen Layouts, keine unsichtbaren Elemente. ATS-Systeme können sie problemlos parsen."
+            },
+            "differentFromOthers": {
+                "question": "Wie unterscheidet sich das von Canva oder Zety?",
+                "answer": "Canva erfordert ein Konto und blendet Upsells ein. Zety lässt Sie kostenlos erstellen, verlangt aber Geld für den PDF-Download. Beide speichern Ihre Daten auf ihren Servern. Wir verlangen kein Konto, kein Geld, keine Werbung und Ihre Daten bleiben bei Ihnen."
+            },
+            "mobile": {
+                "question": "Funktioniert es auf dem Smartphone?",
+                "answer": "Ja. Der Editor ist vollständig responsiv. Auf Mobilgeräten gibt es einen schwebenden Button für die Vollbild-Vorschau, damit Sie beim Bearbeiten jederzeit das Ergebnis prüfen können."
+            },
+            "offline": {
+                "question": "Funktioniert es auch ohne Internet?",
+                "answer": "Ja. Nach dem ersten Laden speichert der Service Worker alles zwischen. Sie können Lebensläufe komplett ohne Internetverbindung erstellen und herunterladen."
+            },
+            "importExport": {
+                "question": "Kann ich meine Lebenslaufdaten sichern oder übertragen?",
+                "answer": "Ja. Exportieren Sie Ihren Lebenslauf als JSON-Datei und importieren Sie ihn auf einem beliebigen anderen Gerät oder Browser. Ihre Daten, Ihre Datei, kein Konto nötig."
+            },
+            "sections": {
+                "question": "Welche Abschnitte kann ich hinzufügen?",
+                "answer": "Persönliche Daten, Berufserfahrung, Ausbildung, Fähigkeiten, Ehrenamt und Links. Jeder Abschnitt unterstützt mehrere Einträge und lässt sich per Drag & Drop sortieren."
+            },
+            "customize": {
+                "question": "Kann ich Schriftarten und Vorlagen anpassen?",
+                "answer": "Ja. Mehrere Schriftarten (Roboto, Calibri, Geist und Noto Naskh Arabic für RTL) sowie verschiedene Vorlagen stehen bereit. Vorlage oder Schriftart wählen – die Vorschau aktualisiert sich sofort."
+            },
+            "cloudSync": {
+                "question": "Wie funktioniert die Cloud-Synchronisierung?",
+                "answer": "Erstellen Sie ein kostenloses Konto und Ihre Lebensläufe synchronisieren sich automatisch zwischen Ihren Geräten (bis zu 3 Cloud-Lebensläufe). Lokale Lebensläufe auf Ihrem Gerät sind immer unbegrenzt."
+            },
+            "browsers": {
+                "question": "Welche Browser werden unterstützt?",
+                "answer": "Chrome, Firefox, Safari und Edge – jeder moderne Browser, der WebAssembly unterstützt. Nutzen Sie die aktuellste Version für das beste Nutzererlebnis."
+            },
+            "support": {
+                "question": "Wie kann ich einen Fehler melden oder ein Feature anfragen?",
+                "answer": "Eröffnen Sie ein Issue in unserem GitHub-Repository. Das Projekt ist Open Source – Sie können sich auch gerne direkt beteiligen."
+            }
+        }
+    },
+    "builder": {
+        "title": "Lebenslauf-Editor",
+        "languageMismatch": "Dieser Lebenslauf ist auf {language} verfasst.",
+        "pageTitle": "Kostenloser Lebenslauf-Editor - Lebensläufe als PDF erstellen & herunterladen | Ohne Registrierung",
+        "pageDescription": "Erstellen und laden Sie Ihren Lebenslauf als professionelles PDF herunter – komplett kostenlos. Kein Konto, kein Wasserzeichen, keine Einschränkungen. Echtzeit-Vorschau, sofortige PDF-Erstellung und Ihre Daten bleiben auf Ihrem Gerät.",
+        "sections": "Abschnitte",
+        "resumePreview": "Lebenslauf-Vorschau",
+        "noResumeSelected": "Kein Lebenslauf ausgewählt",
+        "noResumeDescription": "Um mit der Bearbeitung zu beginnen, müssen Sie zuerst einen Lebenslauf erstellen oder auswählen. Gehen Sie zu Ihrer Lebenslauf-Übersicht, um Ihren ersten Lebenslauf anzulegen.",
+        "goToResumesPage": "Zur Lebenslauf-Übersicht",
+        "defaultTitle": "Resume For Free",
+        "expand": "Aufklappen",
+        "collapse": "Zuklappen",
+        "syncToCloud": "In Cloud sichern",
+        "updateCloud": "Cloud aktualisieren",
+        "syncingToCloud": "Wird in Cloud gesichert...",
+        "updatingCloud": "Cloud wird aktualisiert...",
+        "update": "Aktualisieren",
+        "syncing": "Wird synchronisiert...",
+        "updating": "Wird aktualisiert...",
+        "preview": "Vorschau",
+        "settings": "Einstellungen",
+        "download": "Herunterladen",
+        "downloadPDF": "PDF",
+        "downloadAs": "Herunterladen als {format}",
+        "downloadAsSVG": "Als SVG herunterladen",
+        "downloadAsTypst": "Als Typst herunterladen",
+        "downloadAsText": "Als Text herunterladen",
+        "template": "Vorlage",
+        "loadingPreview": "Vorschau wird geladen",
+        "loadingPreviewDescription": "Bitte warten, das Laden des Typst-Compilers kann bei langsameren Verbindungen einen Moment dauern...",
+        "previewError": "Fehler beim Erstellen der Vorschau. Bitte prüfen Sie Ihre Eingaben auf ungewöhnliche Zeichen.",
+        "initializingTypst": "Typst wird initialisiert",
+        "settingUpCompiler": "Der Compiler wird eingerichtet...",
+        "zoomControls": {
+            "zoomIn": "Vergrößern",
+            "zoomOut": "Verkleinern",
+            "resetZoom": "Zurücksetzen"
+        },
+        "previewErrorDetailed": "Vorschau fehlgeschlagen: {detail}",
+        "zoomIn": "Vergrößern",
+        "zoomOut": "Verkleinern",
+        "downloadOptions": "Download-Optionen"
+    },
+    "settings": {
+        "title": "Lebenslauf-Einstellungen",
+        "description": "Passen Sie das Erscheinungsbild Ihres Lebenslaufs an",
+        "template": {
+            "label": "Vorlage",
+            "placeholder": "Vorlage auswählen",
+            "description": "Wählen Sie das Layout für Ihren Lebenslauf"
+        },
+        "font": {
+            "label": "Schriftart",
+            "placeholder": "Schriftart auswählen",
+            "description": "Wählen Sie die Schriftart für Ihren Lebenslauf"
+        },
+        "fontSize": {
+            "label": "Schriftgröße",
+            "description": "Basisschriftgröße anpassen (Standard: 14pt)"
+        },
+        "language": {
+            "label": "Sprache",
+            "description": "Wählen Sie die Sprache für Ihren Lebenslauf"
+        },
+        "sectionHeaderLine": {
+            "label": "Trennlinie unter Abschnitten",
+            "description": "Fügt eine feine Trennlinie unter jeder Abschnittsüberschrift ein"
+        }
+    },
+    "forms": {
+        "personalInfo": {
+            "title": "Persönliche Daten",
+            "profile": "Profil",
+            "firstName": "Vorname",
+            "lastName": "Nachname",
+            "phone": "Telefonnummer",
+            "position": "Berufsbezeichnung / Titel",
+            "summary": "Kurzbeschreibung / Profil",
+            "socialLinks": "Soziale Links & Profile",
+            "addSocialLink": "Link hinzufügen",
+            "socialLinksEmpty": "Noch keine Links hinzugefügt. Klicken Sie auf „Link hinzufügen“, um zu beginnen.",
+            "platform": "Plattform",
+            "url": "URL",
+            "customLabel": "Individuelle Bezeichnung",
+            "selectPlatform": "Plattform auswählen",
+            "photo": {
+                "label": "Bewerbungsfoto",
+                "upload": "Foto hochladen",
+                "remove": "Entfernen",
+                "roundedToggle": "Rundes Foto",
+                "invalidType": "Datei muss JPG oder PNG sein",
+                "tooLarge": "Datei darf maximal 512 KB groß sein",
+                "cropTitle": "Foto zuschneiden",
+                "constraints": "JPG oder PNG, max. 512 KB"
+            }
+        },
+        "experience": {
+            "title": "Berufserfahrung",
+            "addExperience": "Erfahrung hinzufügen",
+            "emptyMessage": "Noch keine Berufserfahrung eingetragen. Klicken Sie auf „Erfahrung hinzufügen“.",
+            "deleteConfirm": {
+                "title": "Erfahrung löschen",
+                "message": "Möchten Sie diesen Eintrag wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+            }
+        },
+        "internships": {
+            "title": "Praktika",
+            "addInternship": "Praktikum hinzufügen",
+            "emptyMessage": "Noch keine Praktika eingetragen. Klicken Sie auf „Praktikum hinzufügen“.",
+            "deleteConfirm": {
+                "title": "Praktikum löschen",
+                "message": "Möchten Sie dieses Praktikum wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+            }
+        },
+        "education": {
+            "title": "Ausbildung",
+            "addEducation": "Ausbildung hinzufügen",
+            "emptyMessage": "Noch keine Ausbildung eingetragen. Klicken Sie auf „Ausbildung hinzufügen“.",
+            "institution": "Bildungseinrichtung",
+            "degree": "Abschluss",
+            "fieldOfStudy": "Fachrichtung",
+            "graduationScore": "Abschlussnote",
+            "deleteConfirm": {
+                "title": "Ausbildung löschen",
+                "message": "Möchten Sie diesen Ausbildungseintrag wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+            }
+        },
+        "skills": {
+            "title": "Fähigkeiten",
+            "addSkill": "Fähigkeit hinzufügen",
+            "emptyMessage": "Noch keine Fähigkeiten hinzugefügt. Klicken Sie auf „Fähigkeit hinzufügen“.",
+            "skillTitle": "Kategorie / Bereich",
+            "column": "Spalte",
+            "deleteConfirm": {
+                "title": "Fähigkeit löschen",
+                "message": "Möchten Sie diese Fähigkeit wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+            }
+        },
+        "projects": {
+            "title": "Projekte",
+            "addProject": "Projekt hinzufügen",
+            "emptyMessage": "Fügen Sie Ihre wichtigsten Projekte hinzu, um Ihre Arbeit zu präsentieren.",
+            "projectTitle": "Projekttitel",
+            "projectUrl": "Projekt-URL",
+            "links": "Links",
+            "addLink": "Link hinzufügen",
+            "removeLink": "Link entfernen",
+            "linkLabel": "Bezeichnung (z. B. GitHub)",
+            "linkUrl": "URL",
+            "emptyLinks": "Noch keine Links. Fügen Sie GitHub, Live-Demo oder Blogbeiträge hinzu.",
+            "column": "Spalte",
+            "deleteConfirm": {
+                "title": "Projekt löschen",
+                "message": "Möchten Sie dieses Projekt wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+            }
+        },
+        "languages": {
+            "title": "Sprachen",
+            "addLanguage": "Sprache hinzufügen",
+            "emptyMessage": "Noch keine Sprachen eingetragen. Klicken Sie auf „Sprache hinzufügen“.",
+            "languageName": "Sprache",
+            "proficiency": "Niveau",
+            "column": "Spalte",
+            "deleteConfirm": {
+                "title": "Sprache löschen",
+                "message": "Möchten Sie diese Sprache wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+            }
+        },
+        "volunteering": {
+            "title": "Ehrenamt",
+            "addVolunteering": "Ehrenamtliche Tätigkeit hinzufügen",
+            "emptyMessage": "Noch kein Ehrenamt eingetragen. Klicken Sie auf „Ehrenamtliche Tätigkeit hinzufügen“.",
+            "organization": "Organisation",
+            "column": "Spalte",
+            "deleteConfirm": {
+                "title": "Ehrenamt löschen",
+                "message": "Möchten Sie diese Tätigkeit wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+            }
+        },
+        "certificates": {
+            "title": "Zertifikate",
+            "addCertificate": "Zertifikat hinzufügen",
+            "emptyMessage": "Noch keine Zertifikate hinzugefügt. Klicken Sie auf „Zertifikat hinzufügen“.",
+            "certificateTitle": "Zertifikatstitel",
+            "issuer": "Aussteller",
+            "date": "Ausstellungsdatum",
+            "url": "Zertifikats-URL",
+            "column": "Spalte",
+            "deleteConfirm": {
+                "title": "Zertifikat löschen",
+                "message": "Möchten Sie dieses Zertifikat wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+            }
+        }
+    },
+    "validation": {
+        "required": "Dieses Feld ist erforderlich",
+        "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        "url": "Bitte geben Sie eine gültige URL ein",
+        "invalidEmail": "Gültige E-Mail-Adresse eingeben",
+        "passwordRequired": "Passwort ist erforderlich",
+        "nameRequired": "Name ist erforderlich",
+        "passwordMinLength": "Das Passwort muss mindestens 6 Zeichen lang sein"
+    },
+    "notifications": {
+        "resumeCreated": "Lebenslauf erfolgreich erstellt",
+        "resumeDeleted": "Lebenslauf erfolgreich gelöscht",
+        "resumeDuplicated": "Lebenslauf erfolgreich dupliziert",
+        "dataImported": "Daten erfolgreich importiert",
+        "dataExported": "Daten erfolgreich exportiert",
+        "settingsReset": "Einstellungen auf Standard zurückgesetzt",
+        "autoSyncedToCloud": "{count} Lebenslauf in der Cloud gesichert | {count} Lebensläufe in der Cloud gesichert",
+        "cloudLimitReached": "Cloud-Limit erreicht – {count} Lebenslauf lokal behalten | Cloud-Limit erreicht – {count} Lebensläufe lokal behalten",
+        "updateAvailable": "Eine neue Version ist verfügbar",
+        "updateAvailableDescription": "Aktualisieren Sie die Seite, um die neuesten Verbesserungen zu laden.",
+        "updateRefresh": "Aktualisieren"
+    },
+    "platforms": {
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "twitter": "X (Twitter)",
+        "portfolio": "Portfolio",
+        "dribbble": "Dribbble",
+        "medium": "Medium",
+        "devto": "Dev.to",
+        "personal": "Persönlich",
+        "other": "Sonstiges"
+    },
+    "template": {
+        "at": " bei ",
+        "present": "Heute",
+        "grade": "Note:",
+        "separator": ", ",
+        "from": " von "
+    },
+    "auth": {
+        "signIn": "Anmelden",
+        "signUp": "Registrieren",
+        "signOut": "Abmelden",
+        "createAccount": "Konto erstellen",
+        "password": "Passwort",
+        "confirmPassword": "Passwort bestätigen",
+        "currentPassword": "Aktuelles Passwort",
+        "newPassword": "Neues Passwort",
+        "enterEmail": "E-Mail-Adresse eingeben",
+        "enterPassword": "Passwort eingeben",
+        "enterName": "Namen eingeben",
+        "enterCurrentPassword": "Geben Sie Ihr aktuelles Passwort ein",
+        "enterNewPassword": "Geben Sie Ihr neues Passwort ein",
+        "confirmNewPassword": "Neues Passwort bestätigen",
+        "createPasswordPlaceholder": "Passwort erstellen (mind. 6 Zeichen)",
+        "confirmPasswordPlaceholder": "Passwort bestätigen",
+        "signInDescription": "Melden Sie sich an, um auf Ihre Lebensläufe zuzugreifen",
+        "createAccountDescription": "Erstellen Sie ein kostenloses Konto zur Cloud-Sicherung Ihrer Lebensläufe",
+        "dontHaveAccount": "Noch kein Konto?",
+        "alreadyHaveAccount": "Bereits ein Konto vorhanden?",
+        "passwordsDoNotMatch": "Die Passwörter stimmen nicht überein",
+        "loginFailed": "Anmeldung fehlgeschlagen",
+        "registrationFailed": "Registrierung fehlgeschlagen",
+        "accountCreatedSuccess": "Konto erfolgreich erstellt! Weiterleitung...",
+        "passwordChangedSuccess": "Passwort erfolgreich geändert",
+        "passwordChangeError": "Fehler beim Ändern des Passworts",
+        "currentPasswordRequired": "Aktuelles Passwort ist erforderlich",
+        "newPasswordRequired": "Neues Passwort ist erforderlich",
+        "newPasswordMinLength": "Neues Passwort muss mindestens 8 Zeichen lang sein",
+        "newPasswordsDoNotMatch": "Die neuen Passwörter stimmen nicht überein",
+        "changingPassword": "Passwort wird geändert...",
+        "changePassword": "Passwort ändern",
+        "clearForm": "Formular leeren",
+        "passwordMinLengthHint": "Das Passwort muss mindestens 8 Zeichen lang sein",
+        "forgotPassword": "Passwort vergessen?",
+        "forgotPasswordTitle": "Passwort zurücksetzen",
+        "forgotPasswordDescription": "Geben Sie Ihre E-Mail-Adresse ein, um einen Link zum Zurücksetzen zu erhalten",
+        "sendResetLink": "Link zum Zurücksetzen senden",
+        "sendingResetLink": "Wird gesendet...",
+        "resetLinkSent": "Link gesendet!",
+        "resetLinkSentDescription": "Überprüfen Sie Ihren Posteingang für den Reset-Link. Prüfen Sie auch den Spam-Ordner.",
+        "resetPassword": "Passwort zurücksetzen",
+        "resettingPassword": "Wird zurückgesetzt...",
+        "resetPasswordDescription": "Geben Sie unten Ihr neues Passwort ein",
+        "resetPasswordSuccess": "Passwort erfolgreich zurückgesetzt! Weiterleitung...",
+        "resetPasswordError": "Fehler beim Zurücksetzen des Passworts",
+        "invalidResetLink": "Ungültiger oder abgelaufener Reset-Link",
+        "backToSignIn": "Zurück zur Anmeldung",
+        "tooManyRequests": "Zu viele Anfragen. Bitte versuchen Sie es später erneut.",
+        "rateLimitWait": "Bitte warten Sie einen Moment, bevor Sie einen weiteren Link anfordern.",
+        "continueWithGoogle": "Mit Google fortfahren",
+        "orContinueWith": "oder fortfahren mit",
+        "googleOAuthFailed": "Google-Anmeldung fehlgeschlagen. Bitte erneut versuchen.",
+        "googleNoEmail": "Das Google-Konto hat keine E-Mail-Adresse übermittelt.",
+        "googleHandlerError": "Bei der Google-Anmeldung ist ein Fehler aufgetreten.",
+        "googleUserCreationFailed": "Konto konnte aus dem Google-Profil nicht erstellt werden.",
+        "togglePassword": "Passwort-Sichtbarkeit umschalten"
+    },
+    "profile": {
+        "title": "Profil-Einstellungen",
+        "description": "Verwalten Sie Ihre Kontoeinstellungen und Präferenzen",
+        "personalInformation": "Persönliche Informationen",
+        "viewAndManage": "Kontodetails anzeigen und bearbeiten",
+        "notProvided": "Nicht angegeben",
+        "accountInformation": "Kontoinformationen",
+        "accountInfoDescription": "Mit Ihrem Konto können Sie bis zu 3 Lebensläufe in der Cloud sichern.",
+        "updatePasswordDescription": "Aktualisieren Sie Ihr Passwort regelmäßig für maximale Sicherheit",
+        "pleaseFixErrors": "Bitte beheben Sie die folgenden Fehler:"
+    },
+    "resumes": {
+        "pageTitle": "Ihre Lebensläufe - Kostenlos erstellen & verwalten | Resume For Free",
+        "pageDescription": "Verwalten Sie unbegrenzt viele Lebensläufe an einem Ort. Kostenlos erstellen, bearbeiten, duplizieren und organisieren. Keine Speicherlimits, voller Datenschutz.",
+        "title": "Ihre Lebensläufe",
+        "resumeCount": {
+            "total": "gesamt",
+            "of": "von",
+            "resume": "Lebenslauf",
+            "resumes": "Lebensläufe"
+        },
+        "actions": {
+            "new": "Neu",
+            "import": "Importieren",
+            "cloudSync": "Cloud-Sync",
+            "createNew": "Neuen Lebenslauf anlegen",
+            "searchPlaceholder": "Lebensläufe durchsuchen..."
+        },
+        "banner": {
+            "saveToCloud": "Lebensläufe in der Cloud sichern",
+            "registerPrompt": "Erstellen Sie ein kostenloses Konto, um bis zu 3 Lebensläufe in der Cloud zu sichern und geräteübergreifend abzurufen. Verlieren Sie nie wieder Ihre Daten!",
+            "registerFree": "Kostenlos registrieren",
+            "login": "Anmelden",
+            "cloudAvailable": "Cloud-Speicher verfügbar",
+            "cloudAvailableDescription": "Sie können jetzt bis zu 3 Lebensläufe in der Cloud sichern. Nutzen Sie den Button „Cloud-Sync“, um Ihre Lebensläufe zu synchronisieren."
+        },
+        "status": {
+            "loading": "Lebensläufe werden geladen...",
+            "failed": "Fehler beim Laden der Lebensläufe",
+            "active": "Aktiv",
+            "synced": "Synchronisiert",
+            "notSynced": "Nicht synchronisiert",
+            "updated": "Aktualisiert"
+        },
+        "card": {
+            "editNameTitle": "Namen bearbeiten",
+            "noName": "Kein Name angegeben",
+            "noPosition": "Keine Position angegeben",
+            "noSections": "Keine Abschnitte hinzugefügt",
+            "experience": "Erfahrung",
+            "experiences": "Erfahrungen",
+            "education": "Ausbildung",
+            "skill": "Fähigkeit",
+            "skills": "Fähigkeiten",
+            "build": "Bearbeiten",
+            "copy": "Duplizieren",
+            "exportTitle": "Lebenslauf exportieren",
+            "syncTitle": "In Cloud sichern",
+            "disableSync": "Cloud-Sync deaktivieren",
+            "delete": "Löschen",
+            "downloadPdf": "PDF herunterladen",
+            "downloadPdfFailed": "PDF konnte nicht generiert werden. Bitte versuchen Sie es erneut."
+        },
+        "empty": {
+            "noResumes": "Noch keine Lebensläufe vorhanden",
+            "createFirst": "Erstellen Sie Ihren ersten Lebenslauf, um loszulegen",
+            "createFirstButton": "Ersten Lebenslauf erstellen",
+            "noResults": "Keine Lebensläufe gefunden",
+            "noResultsMessage": "Keine Lebensläufe stimmen mit Ihrer Suche überein nach",
+            "clearSearch": "Suche löschen",
+            "createNew": "Neuen Lebenslauf anlegen"
+        },
+        "modals": {
+            "firstTime": {
+                "title": "In Cloud sichern?",
+                "description": "Ihre Daten werden standardmäßig lokal gespeichert. Erstellen Sie ein kostenloses Konto für geräteübergreifende Synchronisierung.",
+                "accessAnywhere": "Von jedem Gerät abrufbar",
+                "autoBackup": "Automatische Sicherung",
+                "freeResumes": "Bis zu 3 Lebensläufe kostenlos",
+                "signUp": "Registrieren",
+                "login": "Anmelden",
+                "continueLocally": "Lokal im Browser speichern",
+                "dontShowAgain": "Nicht mehr anzeigen"
+            },
+            "create": {
+                "title": "Neuen Lebenslauf anlegen",
+                "resumeName": "Name des Lebenslaufs",
+                "enterName": "z. B. Softwareentwickler 2026",
+                "navigateToBuilder": "Direkt zum Editor wechseln",
+                "saveToCloud": "In Cloud sichern",
+                "slotsAvailableMessage": "{remaining} von {limit} Cloud-Plätzen verfügbar",
+                "noSlotsAvailableMessage": "Keine Cloud-Plätze verfügbar ({count}/{limit} belegt)",
+                "createButton": "Lebenslauf anlegen",
+                "resumeLanguage": "Sprache des Lebenslaufs"
+            },
+            "copy": {
+                "title": "Lebenslauf duplizieren",
+                "resumeName": "Name der Kopie",
+                "enterName": "Namen eingeben",
+                "navigateToBuilder": "Direkt zur Kopie im Editor wechseln",
+                "copyButton": "Duplizieren"
+            },
+            "export": {
+                "title": "Lebensläufe exportieren",
+                "description": "Wählen Sie die Lebensläufe aus, die Sie als JSON exportieren möchten",
+                "infoMessage": "Dies exportiert die Daten als JSON-Dateien zur Sicherung oder Übertragung. Um fertige PDFs herunterzuladen, nutzen Sie bitte den Download-Button im Editor.",
+                "selectAll": "Alle auswählen",
+                "selected": "ausgewählt",
+                "selectedCount": "{count} {countPlural} ausgewählt"
+            },
+            "cloudSync": {
+                "title": "Cloud-Synchronisierung",
+                "description": "Sie haben {count}/{limit} Lebensläufe in der Cloud. Noch {remaining} {remainingPlural} verfügbar.",
+                "slot": "Platz",
+                "slots": "Plätze",
+                "allSynced": "Alle Lebensläufe sind synchronisiert",
+                "unsyncHint": "Nutzen Sie „Cloud-Sync deaktivieren“ im Menü, um die Synchronisierung aufzuheben.",
+                "limitExceeded": "Speicherlimit erreicht",
+                "limitExceededMessage": "Sie versuchen {count} neue {countPlural} zu synchronisieren, haben aber nur noch {remaining} {remainingPlural} frei. Bitte wählen Sie weniger aus oder löschen Sie vorhandene Cloud-Lebensläufe.",
+                "deselectAll": "Auswahl aufheben",
+                "selectAll": "Alle auswählen",
+                "syncButton": "{count} {countPlural} synchronisieren",
+                "exp": "Berufserf.",
+                "edu": "Ausbildung",
+                "projects": "Projekte",
+                "noSections": "Keine Abschnitte"
+            },
+            "cloudSyncPrompt": {
+                "title": "Lebenslauf in Cloud sichern?",
+                "description": "Ihr Lebenslauf ist aktuell nur lokal gespeichert. Möchten Sie ihn in der Cloud sichern?",
+                "benefits": {
+                    "title": "Vorteile der Cloud-Sicherung",
+                    "accessAnywhere": "Zugriff von jedem Gerät",
+                    "autoBackup": "Automatische Sicherung und Schutz",
+                    "realTimeSync": "Echtzeit-Synchronisierung",
+                    "neverLose": "Arbeitsfortschritt nie verlieren"
+                },
+                "limit": {
+                    "title": "Cloud-Speicherlimit",
+                    "description": "Mit Ihrem kostenlosen Konto können Sie bis zu 3 Lebensläufe in der Cloud sichern. Sie haben aktuell noch {remaining} Platz/Plätze frei."
+                },
+                "local": {
+                    "title": "Mit lokalem Speicher fortfahren",
+                    "description": "Ihr Lebenslauf bleibt lokal in diesem Browser gespeichert. Sie können die Cloud-Sicherung jederzeit aktivieren."
+                },
+                "dontAskAgain": "Für diesen Lebenslauf nicht mehr fragen",
+                "enableSync": "Cloud-Sync aktivieren",
+                "keepLocal": "Nur lokal behalten"
+            },
+            "delete": {
+                "title": "Lebenslauf löschen",
+                "message": "Sind Sie sicher, dass Sie „{name}“ löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+                "confirmButton": "Löschen"
+            },
+            "disableSync": {
+                "title": "Cloud-Sync deaktivieren",
+                "message": "Möchten Sie „{name}“ wirklich aus der Cloud entfernen? Das Dokument bleibt auf Ihrem Gerät erhalten.",
+                "confirmButton": "Aus Cloud entfernen"
+            },
+            "cancel": "Abbrechen",
+            "import": {
+                "title": "Lebensläufe importieren",
+                "foundCount": "{count} Lebenslauf/Lebensläufe in Datei gefunden",
+                "duplicateWarning": "{count} Lebenslauf/Lebensläufe mit demselben Namen existieren bereits. Diese sind standardmäßig abgewählt.",
+                "itemCount": "{count} Einträge",
+                "selectedCount": "{count} Lebenslauf/Lebensläufe zum Import ausgewählt",
+                "importSelected": "Ausgewählte importieren"
+            }
+        },
+        "toast": {
+            "creatingInCloud": "Lebenslauf wird in Cloud erstellt...",
+            "createdAndSaved": "Lebenslauf „{name}“ erstellt und in der Cloud gesichert",
+            "createdLocallyFailed": "Lebenslauf „{name}“ lokal erstellt, Cloud-Sicherung fehlgeschlagen: {error}",
+            "loginToSaveCloud": "Bitte melden Sie sich an, um Lebensläufe in der Cloud zu sichern",
+            "created": "Lebenslauf „{name}“ erstellt",
+            "deletedFromCloud": "Lebenslauf „{name}“ aus der Cloud gelöscht",
+            "deletedLocallyFailed": "Lokal gelöscht, Cloud-Löschung fehlgeschlagen: {error}",
+            "deleted": "Lebenslauf „{name}“ gelöscht",
+            "loginToSync": "Bitte anmelden, um Lebensläufe zu synchronisieren",
+            "resumeNotFound": "Lebenslauf nicht gefunden",
+            "syncingToCloud": "Wird in Cloud synchronisiert...",
+            "updatedInCloud": "Lebenslauf „{name}“ in der Cloud aktualisiert",
+            "syncedNewCopy": "Lebenslauf „{name}“ synchronisiert (neue Kopie angelegt)",
+            "syncedToCloud": "Lebenslauf „{name}“ mit Cloud synchronisiert",
+            "syncFailed": "Synchronisierung fehlgeschlagen: {error}",
+            "removedFromCloud": "„{name}“ aus Cloud entfernt und Synchronisierung deaktiviert",
+            "removeFailed": "Entfernen aus Cloud fehlgeschlagen: {error}. Lokal deaktiviert.",
+            "syncingMultiple": "Synchronisiere {count} Lebenslauf{plural}...",
+            "syncedMultiple": "{count} Lebenslauf{plural} erfolgreich synchronisiert",
+            "syncMultipleFailed": "Synchronisierung fehlgeschlagen: {error}",
+            "resumeNotSynced": "Lebenslauf ist nicht mit der Cloud synchronisiert"
+        },
+        "notify": {
+            "created": "„{name}“ erstellt",
+            "createdAndSaved": "„{name}“ erstellt und in der Cloud gesichert",
+            "createdLocallyFailed": "„{name}“ wurde nur lokal gespeichert: {error}",
+            "creatingInCloud": "Lebenslauf wird in der Cloud erstellt…",
+            "deleted": "Lebenslauf gelöscht",
+            "deletedFromCloud": "Lebenslauf aus der Cloud gelöscht",
+            "deletedLocallyFailed": "Auf diesem Gerät gelöscht, verbleibt in der Cloud: {error}",
+            "loginToSaveCloud": "Anmelden, um diesen Lebenslauf in der Cloud zu sichern",
+            "loginToSync": "Anmelden, um Lebensläufe zu synchronisieren",
+            "removedFromCloud": "Aus der Cloud entfernt",
+            "removeFailed": "Konnte nicht aus der Cloud entfernt werden",
+            "resumeNotFound": "Lebenslauf nicht gefunden",
+            "resumeNotSynced": "Dieser Lebenslauf ist noch nicht mit der Cloud synchronisiert",
+            "syncedMultiple": "{count} Lebensläufe mit der Cloud synchronisiert",
+            "syncedNewCopy": "Als neue Cloud-Kopie synchronisiert",
+            "syncedToCloud": "Mit der Cloud synchronisiert",
+            "syncFailed": "Synchronisierung fehlgeschlagen. Bitte erneut versuchen.",
+            "syncingMultiple": "Synchronisiere {count} Lebensläufe…",
+            "syncingToCloud": "Wird mit der Cloud synchronisiert…",
+            "syncMultipleFailed": "Einige Lebensläufe konnten nicht synchronisiert werden",
+            "updatedInCloud": "Cloud-Kopie aktualisiert"
+        }
+    },
+    "contact": {
+        "title": "Kontaktieren Sie uns",
+        "description": "Haben Sie eine Frage oder Feedback? Wir freuen uns von Ihnen zu hören. Füllen Sie das Formular aus und wir melden uns schnellstmöglich bei Ihnen.",
+        "form": {
+            "name": {
+                "placeholder": "Geben Sie Ihren Namen ein"
+            },
+            "email": {
+                "placeholder": "Geben Sie Ihre E-Mail-Adresse ein"
+            },
+            "subject": {
+                "label": "Betreff",
+                "placeholder": "Worum geht es?"
+            },
+            "message": {
+                "label": "Nachricht",
+                "placeholder": "Erzählen Sie uns mehr über Ihr Anliegen..."
+            },
+            "submit": "Nachricht senden",
+            "sending": "Wird gesendet..."
+        },
+        "success": {
+            "title": "Nachricht erfolgreich gesendet!",
+            "message": "Vielen Dank für Ihre Nachricht. Wir werden uns schnellstmöglich bei Ihnen melden.",
+            "toast": "Nachricht erfolgreich gesendet",
+            "keepBuilding": "Weiter bearbeiten"
+        },
+        "errors": {
+            "validation": "Bitte überprüfen Sie Ihre Eingaben und versuchen Sie es erneut",
+            "rateLimit": "Zu viele Anfragen. Bitte versuchen Sie es in einer Stunde erneut.",
+            "generic": "Senden der Nachricht fehlgeschlagen. Bitte später erneut versuchen."
+        },
+        "alternative": {
+            "text": "Sie können uns auch direkt erreichen unter"
+        },
+        "seo": {
+            "title": "Kontakt - Hilfe bei Resume For Free | Support",
+            "description": "Benötigen Sie Hilfe bei unserem kostenlosen Lebenslauf-Editor? Kontaktieren Sie unser Support-Team."
+        }
+    },
+    "proficiency": {
+        "native": "Muttersprache",
+        "fluent": "Verhandlungssicher",
+        "proficient": "Sehr gut / Fließend",
+        "conversational": "Gute Kenntnisse",
+        "basic": "Grundkenntnisse",
+        "beginner": "Anfänger"
+    },
+    "apiTokens": {
+        "title": "API-Tokens",
+        "description": "Erstellen Sie ein kurzlebiges Token, damit ein externer Agent Ihren Lebenslauf über die API aktualisieren kann. Tokens laufen standardmäßig nach 24 Stunden ab.",
+        "name": "Token-Name",
+        "namePlaceholder": "z. B. Resume-Agent",
+        "expiresInHours": "Gültig für (Stunden)",
+        "generate": "Token generieren",
+        "copyNow": "Kopieren Sie dieses Token jetzt – es kann nicht erneut angezeigt werden.",
+        "copied": "Kopiert",
+        "empty": "Sie haben noch keine API-Tokens angelegt.",
+        "active": "Aktiv",
+        "inactive": "Inaktiv",
+        "expires": "Läuft ab",
+        "lastUsed": "Zuletzt verwendet",
+        "revoke": "Widerrufen",
+        "loadFailed": "Ihre Tokens konnten nicht geladen werden.",
+        "createFailed": "Das Token konnte nicht erstellt werden.",
+        "revokeFailed": "Das Token konnte nicht widerrufen werden."
+    }
+}

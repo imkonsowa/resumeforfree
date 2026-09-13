@@ -1,0 +1,105 @@
+{
+    "version": "v1",
+    "firstName": "Thomas",
+    "lastName": "Laurent",
+    "email": "thomas.laurent@example.com",
+    "phone": "+33 1 23 45 67 89",
+    "position": "Ingénieur Logiciel Senior",
+    "location": "Paris, France",
+    "summary": "Ingénieur logiciel senior avec plus de 10 ans d'expérience dans la conception d'architectures backend haute performance pour la fintech, le e-commerce et le traitement de données.",
+    "experiences": [
+        {
+            "company": "Delta Tech",
+            "position": "Ingénieur Logiciel Senior",
+            "location": "Paris, France",
+            "startDate": "2024-07",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                { "text": "Conception et déploiement d'un pipeline asynchrone pour le chargement des catalogues de produits." },
+                { "text": "Refonte du workflow de traitement des paiements, réduisant le temps d'exécution de 65%." }
+            ]
+        },
+        {
+            "company": "XYZ Digital",
+            "position": "Développeur Backend",
+            "location": "Lyon, France",
+            "startDate": "2022-02",
+            "endDate": "2024-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                { "text": "Développement d'une plateforme de visioconférence utilisant Golang, WebRTC et Livekit." },
+                { "text": "Résolution des problèmes critiques de synchronisation vidéo et d'optimisation de flux." }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Université Paris-Saclay",
+            "degree": "Licence en Informatique",
+            "fieldOfStudy": "",
+            "location": "Paris, France",
+            "startDate": "2015-10",
+            "endDate": "2020-09",
+            "isPresent": false,
+            "description": "Spécialisation en architecture logicielle, réseaux, systèmes distribués et algorithmique avancée.",
+            "graduationScore": "Mention Bien",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        { "title": "Langages de Programmation", "description": "Golang, TypeScript, Python, PHP" },
+        { "title": "Architecture Logicielle", "description": "Microservices, Monolithes Modulaires, DDD, Event-Driven" },
+        { "title": "Cloud & Infrastructure", "description": "Docker, Kubernetes, AWS, GCP, CI/CD" },
+        { "title": "Bases de Données", "description": "PostgreSQL, Redis, ElasticSearch, MongoDB" }
+    ],
+    "socialLinks": [
+        { "platform": "linkedin", "url": "https://linkedin.com" },
+        { "platform": "github", "url": "https://github.com" },
+        { "platform": "personal", "url": "https://example.com" }
+    ],
+    "projects": [
+        {
+            "title": "Plateforme E-Commerce",
+            "description": "Développement d'une plateforme e-commerce scalable gérant plus de 100 000 commandes par jour.",
+            "startDate": "2025-01",
+            "endDate": "",
+            "isPresent": true,
+            "links": [{ "platform": "other", "url": "https://example.com", "label": "Aperçu" }],
+            "achievements": [
+                { "text": "Partage direct de fichiers en peer-to-peer entre microservices" },
+                { "text": "Création d'un outil CLI en Golang pour l'automatisation des sessions" }
+            ]
+        }
+    ],
+    "languages": [
+        { "name": "Français", "proficiency": "Langue maternelle" },
+        { "name": "Anglais", "proficiency": "Courant" }
+    ],
+    "certificates": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "education": 1,
+        "skills": 2,
+        "experience": 3,
+        "projects": 4,
+        "languages": 5,
+        "internships": 6,
+        "volunteering": 7,
+        "certificates": 8,
+        "socialLinks": 9
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right"
+    }
+}

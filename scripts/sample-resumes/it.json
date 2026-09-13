@@ -1,0 +1,105 @@
+{
+    "version": "v1",
+    "firstName": "Marco",
+    "lastName": "Rossi",
+    "email": "marco.rossi@example.com",
+    "phone": "+39 02 1234567",
+    "position": "Ingegnere del Software Senior",
+    "location": "Milano, Italia",
+    "summary": "Ingegnere del software senior con oltre 10 anni di esperienza nella progettazione e sviluppo di architetture backend ad alte prestazioni in ambito fintech, e-commerce e flussi dati.",
+    "experiences": [
+        {
+            "company": "Delta Sistemi",
+            "position": "Ingegnere del Software Senior",
+            "location": "Milano, Italia",
+            "startDate": "2024-07",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                { "text": "Progettato e implementato una pipeline asincrona per il caricamento dei cataloghi prodotti." },
+                { "text": "Riscritto il flusso di elaborazione dei pagamenti, riducendo i tempi del 65%." }
+            ]
+        },
+        {
+            "company": "XYZ Digital",
+            "position": "Sviluppatore Backend",
+            "location": "Roma, Italia",
+            "startDate": "2022-02",
+            "endDate": "2024-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                { "text": "Contribuito alla piattaforma di videoconferenza utilizzando Golang, WebRTC e Livekit." },
+                { "text": "Risolto criticità di sincronizzazione dei flussi video in tempo reale." }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Politecnico di Milano",
+            "degree": "Laurea in Ingegneria Informatica",
+            "fieldOfStudy": "",
+            "location": "Milano, Italia",
+            "startDate": "2015-10",
+            "endDate": "2020-09",
+            "isPresent": false,
+            "description": "Studi incentrati su architettura degli elaboratori, reti, sistemi distribuiti, algoritmi e strutture dati.",
+            "graduationScore": "110 e Lode",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        { "title": "Linguaggi di Programmazione", "description": "Golang, TypeScript, Python, PHP" },
+        { "title": "Architettura Software", "description": "Microservizi, Monoliti Modulari, DDD, Event-Driven" },
+        { "title": "Cloud & Infrastruttura", "description": "Docker, Kubernetes, AWS, GCP, CI/CD" },
+        { "title": "Database", "description": "PostgreSQL, Redis, ElasticSearch, MongoDB" }
+    ],
+    "socialLinks": [
+        { "platform": "linkedin", "url": "https://linkedin.com" },
+        { "platform": "github", "url": "https://github.com" },
+        { "platform": "personal", "url": "https://example.com" }
+    ],
+    "projects": [
+        {
+            "title": "Piattaforma E-Commerce Scalabile",
+            "description": "Sviluppo di una piattaforma e-commerce ad alto traffico per oltre 100.000 ordini giornalieri.",
+            "startDate": "2025-01",
+            "endDate": "",
+            "isPresent": true,
+            "links": [{ "platform": "other", "url": "https://example.com", "label": "Anteprima" }],
+            "achievements": [
+                { "text": "Condivisione diretta peer-to-peer di file tra microservizi" },
+                { "text": "CLI sviluppata in Golang per la gestione automatizzata delle sessioni" }
+            ]
+        }
+    ],
+    "languages": [
+        { "name": "Italiano", "proficiency": "Madrelingua" },
+        { "name": "Inglese", "proficiency": "Fluente" }
+    ],
+    "certificates": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "education": 1,
+        "skills": 2,
+        "experience": 3,
+        "projects": 4,
+        "languages": 5,
+        "internships": 6,
+        "volunteering": 7,
+        "certificates": 8,
+        "socialLinks": 9
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right"
+    }
+}

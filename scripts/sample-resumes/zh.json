@@ -1,0 +1,105 @@
+{
+    "version": "v1",
+    "firstName": "李",
+    "lastName": "华",
+    "email": "li.hua@example.com",
+    "phone": "+86 10 8888 8888",
+    "position": "高级软件工程师",
+    "location": "北京，中国",
+    "summary": "拥有 10 年以上高并发后端架构经验的高级软件工程师，专注金融科技、大规模电商平台、分布式数据管道与 AI 工程化落地。",
+    "experiences": [
+        {
+            "company": "达塔科技",
+            "position": "高级软件工程师",
+            "location": "北京，中国",
+            "startDate": "2024-07",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                { "text": "设计并搭建了商品海量信息的异步上传与流式处理管道。" },
+                { "text": "重构核心交易与支付流程，系统响应耗时缩短 65%。" }
+            ]
+        },
+        {
+            "company": "XYZ 互联技术",
+            "position": "后端开发工程师",
+            "location": "上海，中国",
+            "startDate": "2022-02",
+            "endDate": "2024-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                { "text": "使用 Golang、WebRTC 与 Livekit 深度参与实时音视频会议平台建设。" },
+                { "text": "攻坚并解决了弱网环境下多端音视频数据同步与丢包重传难题。" }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "清华大学",
+            "degree": "计算机科学与技术学士",
+            "fieldOfStudy": "",
+            "location": "北京，中国",
+            "startDate": "2015-10",
+            "endDate": "2020-09",
+            "isPresent": false,
+            "description": "深入学习计算机体系结构、计算机网络、操作系统、分布式计算、算法与数据结构。",
+            "graduationScore": "专业前 5%",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        { "title": "编程语言", "description": "Golang, TypeScript, Python, PHP" },
+        { "title": "系统架构", "description": "微服务架构, 领域驱动设计 (DDD), 事件驱动, 分布式系统" },
+        { "title": "云原生与运维", "description": "Docker, Kubernetes, AWS, 阿里云, CI/CD" },
+        { "title": "数据库技术", "description": "PostgreSQL, Redis, ElasticSearch, MongoDB" }
+    ],
+    "socialLinks": [
+        { "platform": "linkedin", "url": "https://linkedin.com" },
+        { "platform": "github", "url": "https://github.com" },
+        { "platform": "personal", "url": "https://example.com" }
+    ],
+    "projects": [
+        {
+            "title": "高并发电商中台系统",
+            "description": "主导设计支撑日均 10 万单以上业务量的高可用电子商务交易系统。",
+            "startDate": "2025-01",
+            "endDate": "",
+            "isPresent": true,
+            "links": [{ "platform": "other", "url": "https://example.com", "label": "预览项目" }],
+            "achievements": [
+                { "text": "实现了微服务间高效的点对点数据传输与大文件分块同步。" },
+                { "text": "基于 Golang 开发自动化会话同步的轻量级 CLI 工具链。" }
+            ]
+        }
+    ],
+    "languages": [
+        { "name": "中文", "proficiency": "母语" },
+        { "name": "英语", "proficiency": "熟练工作语言" }
+    ],
+    "certificates": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "education": 1,
+        "skills": 2,
+        "experience": 3,
+        "projects": 4,
+        "languages": 5,
+        "internships": 6,
+        "volunteering": 7,
+        "certificates": 8,
+        "socialLinks": 9
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right"
+    }
+}

@@ -1,0 +1,105 @@
+{
+    "version": "v1",
+    "firstName": "محمد",
+    "lastName": "احمد",
+    "email": "ahmad@example.com",
+    "phone": "+92 42 1234567",
+    "position": "سینئر سافٹ ویئر انجینئر",
+    "location": "لاہور، پاکستان",
+    "summary": "فن ٹیک، ای کامرس، ڈیٹا پائپ لائنز اور اے آئی سسٹمز میں بیک اینڈ کی تیاری کا 10 سال سے زائد کا تجربہ رکھنے والے سینئر سافٹ ویئر انجینئر۔",
+    "experiences": [
+        {
+            "company": "ڈیلٹا سسٹمز",
+            "position": "سینئر سافٹ ویئر انجینئر",
+            "location": "لاہور، پاکستان",
+            "startDate": "2024-07",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                { "text": "پروڈکٹ کی معلومات کی متوازی اور غیر ہم وقت ساز اپ لوڈنگ پائپ لائن تیار کی۔" },
+                { "text": "ادائیگی کے ورک فلو کو ازسرنو ترتیب دیا جس سے پراسیسنگ کا وقت 65 فیصد کم ہو گیا۔" }
+            ]
+        },
+        {
+            "company": "ایکس وائی زیڈ ٹیکنالوجیز",
+            "position": "سافٹ ویئر انجینئر",
+            "location": "ریاض، سعودی عرب",
+            "startDate": "2022-02",
+            "endDate": "2024-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                { "text": "گولینگ اور ویب آر ٹی سی کا استعمال کرتے ہوئے ویڈیو کانفرنسنگ پلیٹ فارم کی تیاری میں حصہ لیا۔" },
+                { "text": "ویڈیو کالز میں ڈیٹا کی ترسیل اور سنکرونائزیشن کے مسائل کو کامیابی سے حل کیا۔" }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "یونیورسٹی آف انجینئرنگ اینڈ ٹیکنالوجی، لاہور",
+            "degree": "بی ایس کمپیوٹر انجینئرنگ",
+            "fieldOfStudy": "",
+            "location": "لاہور، پاکستان",
+            "startDate": "2015-10",
+            "endDate": "2020-09",
+            "isPresent": false,
+            "description": "کمپیوٹر آرکیٹیکچر، نیٹ ورکنگ، ڈیٹا سٹرکچرز اور الگورتھم کی جامع تعلیم حاصل کی۔",
+            "graduationScore": "فرسٹ ڈویژن",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        { "title": "پروگرامنگ زبانیں", "description": "Golang, TypeScript, Python, PHP" },
+        { "title": "سافٹ ویئر آرکیٹیکچر", "description": "Microservices, Modular Monolithic, DDD, Event Driven" },
+        { "title": "کلاؤڈ اور انفراسٹرکچر", "description": "Docker, Kubernetes, AWS, GCP, CI/CD" },
+        { "title": "ڈیٹا بیس", "description": "PostgreSQL, Redis, ElasticSearch, MongoDB" }
+    ],
+    "socialLinks": [
+        { "platform": "linkedin", "url": "https://linkedin.com" },
+        { "platform": "github", "url": "https://github.com" },
+        { "platform": "personal", "url": "https://example.com" }
+    ],
+    "projects": [
+        {
+            "title": "ای کامرس پلیٹ فارم",
+            "description": "روزانہ ایک لاکھ سے زائد آرڈرز سنبھالنے والے بڑے ای کامرس پلیٹ فارم کی تیاری۔",
+            "startDate": "2025-01",
+            "endDate": "",
+            "isPresent": true,
+            "links": [{ "platform": "other", "url": "https://example.com", "label": "پریویو" }],
+            "achievements": [
+                { "text": "سروسز کے درمیان پیئر ٹو پیئر فائل شیئرنگ سسٹم کا قیام" },
+                { "text": "سیشن مینجمنٹ کے لیے گولینگ پر مبنی سی ایل آئی ٹول تیار کیا" }
+            ]
+        }
+    ],
+    "languages": [
+        { "name": "اردو", "proficiency": "مادری زبان" },
+        { "name": "انگریزی", "proficiency": "ماہرانہ" }
+    ],
+    "certificates": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "education": 1,
+        "skills": 2,
+        "experience": 3,
+        "projects": 4,
+        "languages": 5,
+        "internships": 6,
+        "volunteering": 7,
+        "certificates": 8,
+        "socialLinks": 9
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right"
+    }
+}

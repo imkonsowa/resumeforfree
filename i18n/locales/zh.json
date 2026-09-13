@@ -1,0 +1,940 @@
+{
+    "common": {
+        "save": "保存",
+        "cancel": "取消",
+        "delete": "删除",
+        "edit": "编辑",
+        "add": "添加",
+        "remove": "移除",
+        "close": "关闭",
+        "done": "完成",
+        "copyFailed": "复制到剪贴板失败",
+        "link": "链接",
+        "preview": "预览",
+        "download": "下载",
+        "loading": "加载中...",
+        "error": "错误",
+        "success": "成功",
+        "yes": "是",
+        "no": "否",
+        "language": "语言",
+        "buildNow": "立即制作",
+        "startBuilding": "开始制作",
+        "resetToDefaults": "恢复默认值",
+        "quickActions": "快捷操作",
+        "actions": "操作",
+        "column": "栏",
+        "left": "左",
+        "right": "右",
+        "location": "地点",
+        "locationPlaceholder": "北京，中国",
+        "present": "至今",
+        "startDate": "开始日期",
+        "endDate": "结束日期",
+        "description": "描述",
+        "email": "电子邮箱",
+        "position": "职位",
+        "achievements": "成果",
+        "addAchievement": "添加成果",
+        "achievementPlaceholder": "描述您的关键成就和影响力",
+        "name": "姓名",
+        "sync": "同步",
+        "export": "导出",
+        "company": "公司",
+        "companyUrl": "公司网址",
+        "organizationUrl": "机构网址",
+        "emailAddress": "邮箱地址",
+        "tryAgain": "重试",
+        "copy": "复制",
+        "month": "月",
+        "year": "年",
+        "moveUp": "上移",
+        "moveDown": "下移",
+        "confirmAction": "确认操作",
+        "confirmMessage": "您确定要继续吗？",
+        "confirm": "确认",
+        "expand": "展开",
+        "collapse": "收起",
+        "moreActions": "更多操作",
+        "or": "或",
+        "saved": "已保存",
+        "syncFailed": "同步失败"
+    },
+    "languageModal": {
+        "title": "选择您的语言",
+        "description": "为简历生成器选择您的首选界面语言",
+        "resumeTitle": "选择简历语言",
+        "resumeDescription": "选择此简历的语言。此选择为永久设定，创建后不可更改。"
+    },
+    "navigation": {
+        "home": "首页",
+        "builder": "编辑器",
+        "qa": "问答",
+        "help": "帮助",
+        "resumes": "我的简历",
+        "contact": "联系我们",
+        "github": "GitHub",
+        "signIn": "登录",
+        "signUp": "注册",
+        "signOut": "退出登录",
+        "profile": "个人资料",
+        "startBuilding": "开始制作",
+        "openMenu": "打开菜单",
+        "closeMenu": "关闭菜单"
+    },
+    "footer": {
+        "tagline": "永久免费的简历生成器。在浏览器中通过 Typst 生成。无需账户，绝无追踪。",
+        "productHeading": "产品",
+        "productLinks": {
+            "builder": "编辑器",
+            "yourResumes": "我的简历",
+            "cloudSync": "云端同步"
+        },
+        "resourcesHeading": "资源",
+        "supportHeading": "支持",
+        "supportLinks": {
+            "terms": "使用条款",
+            "privacy": "隐私政策"
+        },
+        "copyright": "© 2026 ResumeForFree · 由 {author} 使用 Typst.ts 和 Nuxt 构建",
+        "noTracking": "无 Cookie。绝无追踪。"
+    },
+    "homepage": {
+        "title": "制作您的个人简历",
+        "subtitle": "完全免费",
+        "heroTitle": "免费在线简历生成器 - 免注册、无水印、无套路 | Resume For Free",
+        "heroDescription": "免费制作并下载专业简历。无需注册账号，绝无水印，绝无隐藏收费。您的所有数据保留在本地设备上。支持无限次 PDF 下载。",
+        "heroSubheadline": "无需账号。绝无水印。绝不要求“升级后才可下载”。一款名副其实、纯粹好用的免费简历工具。",
+        "hero": {
+            "badge": "10,247 位用户 · 已下载 55,812 份 PDF",
+            "title": "永久承诺完全免费的在线简历生成器。",
+            "sub": "在浏览器中直接编辑、实时预览并导出符合 ATS 规范的高清 PDF。无需注册，绝无水印，下载无需付费。",
+            "ctaBuild": "开始制作我的简历",
+            "ctaSample": "查看示例 PDF",
+            "note": "免注册 · 免信用卡 · 约 5 分钟即可完成",
+            "stat1Label": "已制作简历数",
+            "stat2Label": "已下载 PDF 份数",
+            "stat3Label": "终生使用费用"
+        },
+        "sampleResume": {
+            "alt": "简历范例预览",
+            "name": "奥马尔·马斯里 (Omar Al-Masry)",
+            "title": "资深后端开发工程师 | 云原生 | 分布式架构",
+            "profile": "拥有 8 年以上高性能分布式系统研发经验的资深工程师。深耕云原生基础架构、系统可观测性与海量数据流式计算。",
+            "location": "远程办公",
+            "experience": {
+                "heading": "工作经历",
+                "roleLine": "Acme Corp · 资深后端开发工程师 (远程)",
+                "dateRange": "2023年1月 - 至今",
+                "bullet1": "设计并搭建多区域数据管道，每日支撑处理超过 20 亿条事件日志。",
+                "bullet2": "主导核心实时分析平台架构演进，系统可用性提升至 99.99%。"
+            },
+            "skills": {
+                "heading": "专业技能",
+                "langLabel": "编程语言",
+                "langValue": "Golang, JavaScript, Python, PHP",
+                "cloudLabel": "云原生与运维",
+                "cloudValue": "Docker, Kubernetes, AWS, GCP",
+                "dbLabel": "数据库存储",
+                "dbValue": "PostgreSQL, Redis, ElasticSearch"
+            },
+            "education": {
+                "heading": "教育背景",
+                "degreeLine": "计算机科学与技术 · 工学学士 · 国立大学",
+                "date": "2015"
+            }
+        },
+        "features": {
+            "free": {
+                "title": "真正永久免费",
+                "description": "没有试用期套路，无需绑定信用卡，没有付费高级会员。免费就是彻底的免费。"
+            },
+            "privacy": {
+                "title": "数据完全保留在本地",
+                "description": "所有数据存储在您浏览器的本地存储空间中。我们绝不收集、上传或出售您的个人隐私信息。"
+            },
+            "noRegistration": {
+                "title": "无需注册任何账号",
+                "description": "打开网页即可开始填写，直接下载 PDF。不需要邮箱验证，不需要繁琐流程。"
+            },
+            "unlimitedDownloads": {
+                "title": "无限次 PDF 下载",
+                "description": "随心所欲下载您的简历。没有任何每日额度限制，也没有下载次数限制。"
+            },
+            "atsOptimized": {
+                "title": "针对 ATS 招聘系统深度优化",
+                "description": "基于专业排版引擎 Typst 渲染，真实可复制的矢量文本与内置字体，轻松通过各类企业人才筛选系统。"
+            },
+            "unlimitedResumes": {
+                "title": "支持创建多份简历",
+                "description": "为不同的求职目标或行业量身定制不同的简历版本，无需每次重新开始。"
+            },
+            "offline": {
+                "title": "支持全功能离线使用",
+                "description": "首次加载后即可脱网运行。无论是在飞机、地铁还是断网环境下，均可顺畅编辑。"
+            },
+            "cloudSync": {
+                "title": "可选的云端多端同步",
+                "description": "可选注册免费账户，将多达 3 份简历备份到云端并在多设备间无缝切换。完全自愿，不登录也可正常使用全部功能。"
+            },
+            "eyebrow": "产品特性",
+            "sectionTitle": "打造专业求职简历所需的一切功能，绝无付费壁垒。",
+            "sub": "其他商业平台作为付费增值的功能，在我们这里对所有人默认完全开放。"
+        },
+        "howItWorks": {
+            "title": "使用流程",
+            "subtitle": "只需 3 步，全程无需注册账号。",
+            "eyebrow": "制作步骤",
+            "step1": {
+                "title": "选择心仪模板",
+                "description": "挑选清晰大方的专业排版，避免华而不实的花哨设计干扰 HR 快速阅读。"
+            },
+            "step2": {
+                "title": "填写个人信息",
+                "description": "轻松录入工作经验、教育经历和专业技能，并在右侧实时预览效果。"
+            },
+            "step3": {
+                "title": "导出高清 PDF",
+                "description": "一键获取高清晰度、无水印、排版工整的优质矢量 PDF 文档。"
+            }
+        },
+        "comparison": {
+            "title": "与市面付费简历工具的诚实对比",
+            "subtitle": "我们进行了详细核对，让您不再上当受骗。",
+            "eyebrow": "竞品对比",
+            "caption": "基于 2026 年 4 月各平台免费层级政策整理。定价或规则可能随时变动。",
+            "headers": {
+                "feature": "对比维度",
+                "us": "Resume For Free",
+                "canva": "Canva (可画)",
+                "zety": "Zety",
+                "resumeio": "Resume.io"
+            },
+            "rows": {
+                "pdfDownload": "免费下载高清 PDF",
+                "noAccount": "无需注册任何账号",
+                "noWatermark": "无任何烦人水印",
+                "noAds": "制作过程零广告打扰",
+                "dataOnDevice": "数据仅保留在用户本地",
+                "worksOffline": "完全支持离线编辑",
+                "unlimitedDownloads": "无限制无限次下载",
+                "noTrial": "绝无自动扣费试用套路"
+            },
+            "values": {
+                "free": "完全免费",
+                "paid": "收费 / 限制",
+                "yes": "是",
+                "no": "否",
+                "limited": "有限制"
+            },
+            "footnote": "数据基于 2026 年 4 月各产品公开政策，竞品或将调整其收费规则。"
+        },
+        "whyBuilt": {
+            "title": "我们为何开发这款工具",
+            "eyebrow": "初衷与使命",
+            "sectionTitle": "我们为何开发这款工具",
+            "bylineRole": "发起人与软件工程师",
+            "paragraph1": "你花了 45 分钟字斟句酌地填好了所有履历，兴高采烈地点击“下载”，屏幕却突然弹出一个弹窗：要求你支付 2.95 美元以开启 14 天试用，而试用期一过就会悄悄按每月 24.95 美元自动扣费。",
+            "paragraph2": "这种商业模式不仅令人反感，更是在求职者最焦虑的人生节点趁火打劫。本工具正是为了终结这种套路而生。它直接在您的浏览器中利用现代排版引擎 Typst 实时生成，我们无需为每份 PDF 承担昂贵的服务器渲染成本，因此能够堂堂正正、毫无保留地永久免费。",
+            "paragraph3": "没有投资人催促商业变现，没有虚荣的用户增长指标，更没有任何理由逼迫您注册账号。这只是一款回归纯粹工具本质的良心产品。"
+        },
+        "faq": {
+            "title": "常见问题解答",
+            "eyebrow": "问答",
+            "contactIntro": "还有其他疑问？欢迎随时通过我们的",
+            "contactLinkContact": "联系页面",
+            "contactLinkGithub": "GitHub 开源仓库",
+            "items": {
+                "reallyFree": {
+                    "question": "这真的是完全免费的吗？有什么隐藏套路吗？",
+                    "answer": "没有任何套路。PDF 渲染全部通过 WebAssembly 在您的本机浏览器内完成，因此不会产生后端算力成本。托管纯静态网站成本极低。这就是我们的“商业模式”——根本没有商业变现。"
+                },
+                "dataStorage": {
+                    "question": "我的简历数据存放在哪里？",
+                    "answer": "完全保存在您浏览器的本地缓存中。除非您主动注册账户开启云端备份，否则您的数据绝不会离开您的电脑。我们不追踪、不统计、更绝不出售用户数据。"
+                },
+                "needAccount": {
+                    "question": "我必须注册账号才能下载简历吗？",
+                    "answer": "完全不需要。您可以直接自由编辑并下载无限次。如果您需要在不同电脑间同步简历，可以自愿注册一个免费账号，支持同步最多 3 份简历到云端。"
+                },
+                "pdfQuality": {
+                    "question": "导出的 PDF 质量如何？是网页截图转成的吗？",
+                    "answer": "这是纯正的专业级矢量 PDF，字体完美嵌入，所有文字均可精准选中与复制。我们采用前沿排版引擎 Typst（媲美 LaTeX 的出版级排版精度），效果远超普通商业软件。"
+                },
+                "atsFriendly": {
+                    "question": "生成的简历能够顺利通过 ATS 系统的筛选吗？",
+                    "answer": "可以。导出的文档具备规范的字符编码和标准的层级结构，没有容易引起解析错误的表格错位或文字转图片，企业招聘管理系统可顺畅提取内容。"
+                },
+                "differentFromOthers": {
+                    "question": "相比 Canva 或 Zety 有什么优势？",
+                    "answer": "Canva 需要注册并且充斥各种内购推广；Zety 允许免费填写但在下载最后一步强制收费。而我们无需登录、零收费、零广告、数据牢牢掌控在您自己手中。"
+                },
+                "offlineWork": {
+                    "question": "没有网络时还可以继续使用吗？",
+                    "answer": "支持。首次打开网站后，Service Worker 会将所需静态文件离线缓存。即使在断网状态下，编辑与 PDF 导出依然完全正常。"
+                },
+                "multipleResumes": {
+                    "question": "我可以同时保存多份不同的简历吗？",
+                    "answer": "完全可以，数量无限制。您可以为不同行业、岗位或投递语言分别创建独立简历，随时随地快速切换。"
+                }
+            }
+        },
+        "finalCta": {
+            "title": "准备好制作您的全新简历了吗？",
+            "subtitle": "无需注册，约 10 分钟即可搞定。",
+            "sub": "永久免费 · 免注册 · 仅需 5 分钟",
+            "ctaBuild": "开始制作",
+            "ctaSample": "查看示例 PDF"
+        },
+        "termsAgreement": "使用本网站即代表您同意我们的",
+        "termsLink": "服务条款"
+    },
+    "qa": {
+        "title": "常见疑问解答",
+        "titleHighlight": "全面解答",
+        "subtitle": "关于工具运作原理、永久免费承诺与隐私保护机制的真诚解答。",
+        "badge": "常见问题",
+        "ctaTitle": "准备好开始制作了吗？",
+        "ctaSubtitle": "无需注册，约 10 分钟即可完成。",
+        "categories": {
+            "gettingStarted": "快速上手",
+            "features": "功能与使用",
+            "technical": "技术与支持"
+        },
+        "questions": {
+            "isFree": {
+                "question": "这真的是完全免费的吗？有什么隐藏套路吗？",
+                "answer": "没有任何套路。所有 PDF 均使用 WebAssembly 在您的本地浏览器中渲染完成，我们无需承担昂贵的服务器算力开销。纯静态网页的维护成本极低，这就是我们能保持永久免费的原因。"
+            },
+            "signUp": {
+                "question": "我必须注册账号才能使用吗？",
+                "answer": "不需要。您可以直接编辑并下载任意多份简历。如果您需要在多台设备之间同步，可以选择注册一个免费账号，支持多设备同步最多 3 份简历。"
+            },
+            "pdfExport": {
+                "question": "导出的 PDF 清晰度如何？是截图转换的吗？",
+                "answer": "这是真正的矢量排版 PDF，字体完全内嵌，字迹清晰锐利，文本可自由复制与搜索。底层排版由 Typst 驱动，达到出版物级别的印刷精度。"
+            },
+            "privacy": {
+                "question": "我的简历内容会存储在哪里？",
+                "answer": "保存在您浏览器的本地存储（Local Storage）中。除非您主动登录并启用云端同步，否则任何信息都不会离开您的设备。我们绝不收集任何个人敏感信息。"
+            },
+            "atsFriendly": {
+                "question": "导出的简历能顺利通过企业 ATS 筛选吗？",
+                "answer": "完全可以。PDF 拥有极其规范的排版层级和可解析文本，无混乱多栏排版，无透明遮挡元素，能被各大企业招聘系统精准识别解析。"
+            },
+            "differentFromOthers": {
+                "question": "它与市场上其他商业简历工具有何不同？",
+                "answer": "市面许多工具以“免费”为诱饵，在用户花费大量时间填完后要求充值才能下载。我们从一开始就彻底透明：免注册、无水印、完全免费、隐私完全属于您。"
+            },
+            "mobile": {
+                "question": "支持在手机或平板上使用吗？",
+                "answer": "支持。网站具有良好的移动端自适应能力，移动设备上带有悬浮全屏预览按钮，让您在手机上也能实时把控简历版式。"
+            },
+            "offline": {
+                "question": "支持在没有网络连接时使用吗？",
+                "answer": "支持。应用具备 Progressive Web App (PWA) 离线缓存能力，在离线状态下编辑和导出均可照常运行。"
+            },
+            "importExport": {
+                "question": "我能备份或迁移自己的简历数据吗？",
+                "answer": "可以。您可以随时将简历导出为 JSON 文件进行安全备份，并在任何其他电脑或浏览器中一键导入恢复。"
+            },
+            "sections": {
+                "question": "简历支持添加哪些内容模块？",
+                "answer": "支持个人信息、工作经历、教育背景、专业技能、项目经验、语言能力、证书荣誉、志愿经历与实习经历等，所有模块支持自由拖拽排序。"
+            },
+            "customize": {
+                "question": "可以自定义字体和排版样式吗？",
+                "answer": "可以。我们提供包括 Roboto、Calibri、Geist 以及中文字体支持在内的多种经典字体选项与精美模板，切换即可实时呈现。"
+            },
+            "cloudSync": {
+                "question": "云端同步功能是如何工作的？",
+                "answer": "只要注册一个免费账户，您的简历就会在多台登录设备间自动保持同步。免费账户支持云端存储 3 份简历，本地设备上的简历数量则始终不设上限。"
+            },
+            "browsers": {
+                "question": "推荐使用什么浏览器打开？",
+                "answer": "推荐使用 Chrome、Edge、Firefox、Safari 等现代浏览器。只要支持 WebAssembly 技术的浏览器均可获得流畅体验。"
+            },
+            "support": {
+                "question": "如何提交建议、反馈或遇到问题寻求帮助？",
+                "answer": "您可以通过我们的 GitHub 开源仓库提交 Issue 或参与讨论，欢迎社区共同改进和贡献代码。"
+            }
+        }
+    },
+    "builder": {
+        "title": "简历制作器",
+        "languageMismatch": "当前简历语言设定为 {language}。",
+        "pageTitle": "免费在线简历生成器 - 免费排版并导出 PDF 简历 | 免注册",
+        "pageDescription": "在线制作您的个人简历并导出为高质量 PDF 文档——完全免费。无需账号，绝无水印，不限次数。实时渲染预览，极速 PDF 导出，全部数据保存在您自己的设备上。",
+        "sections": "简历板块",
+        "resumePreview": "简历预览",
+        "noResumeSelected": "未选择任何简历",
+        "noResumeDescription": "要开始制作简历，您需要先创建或选择一份简历。请前往“我的简历”页面创建您的第一份简历。",
+        "goToResumesPage": "前往我的简历页面",
+        "defaultTitle": "Resume For Free",
+        "expand": "展开",
+        "collapse": "收起",
+        "syncToCloud": "同步到云端",
+        "updateCloud": "更新云端",
+        "syncingToCloud": "正在同步到云端...",
+        "updatingCloud": "正在更新云端...",
+        "update": "更新",
+        "syncing": "正在同步...",
+        "updating": "正在更新...",
+        "preview": "实时预览",
+        "settings": "简历版式设置",
+        "download": "下载",
+        "downloadPDF": "PDF 格式",
+        "downloadAs": "下载为 {format}",
+        "downloadAsSVG": "下载为 SVG 矢量图",
+        "downloadAsTypst": "下载为 Typst 源码",
+        "downloadAsText": "下载为纯文本",
+        "template": "简历模板",
+        "loadingPreview": "正在渲染预览",
+        "loadingPreviewDescription": "正在加载 Typst 排版编译器，在慢速网络下可能需要少许时间，请稍候...",
+        "previewError": "预览渲染失败，请检查简历输入内容中是否包含异常特殊字符。",
+        "initializingTypst": "初始化 Typst",
+        "settingUpCompiler": "正在配置简历编译器...",
+        "zoomControls": {
+            "zoomIn": "放大",
+            "zoomOut": "缩小",
+            "resetZoom": "重置比例"
+        },
+        "previewErrorDetailed": "渲染预览失败: {detail}",
+        "zoomIn": "放大",
+        "zoomOut": "缩小",
+        "downloadOptions": "导出选项"
+    },
+    "settings": {
+        "title": "简历设置",
+        "description": "自定义您的简历排版与外观",
+        "template": {
+            "label": "排版模板",
+            "placeholder": "选择一款模板",
+            "description": "为您的简历挑选适宜的布局结构"
+        },
+        "font": {
+            "label": "字体系列",
+            "placeholder": "选择字体",
+            "description": "选择用于简历正文与标题的字体"
+        },
+        "fontSize": {
+            "label": "基础字号",
+            "description": "调整简历基准字号大小 (默认: 14pt)"
+        },
+        "language": {
+            "label": "简历语言",
+            "description": "选择简历文本及日期的语言规则"
+        },
+        "sectionHeaderLine": {
+            "label": "板块分割线下划线",
+            "description": "在每个板块大标题下方添加一条细致的分割线"
+        }
+    },
+    "forms": {
+        "personalInfo": {
+            "title": "个人信息",
+            "profile": "个人简介",
+            "firstName": "名字",
+            "lastName": "姓氏",
+            "phone": "联系电话",
+            "position": "期望职位 / 当前头衔",
+            "summary": "个人总结 / 职业简述",
+            "socialLinks": "社交主页与外链",
+            "addSocialLink": "添加链接",
+            "socialLinksEmpty": "尚未添加任何链接。点击“添加链接”开始添加。",
+            "platform": "平台",
+            "url": "网址链接",
+            "customLabel": "自定义标签",
+            "selectPlatform": "选择平台",
+            "photo": {
+                "label": "证件照片",
+                "upload": "上传照片",
+                "remove": "移除照片",
+                "roundedToggle": "圆形头像",
+                "invalidType": "仅支持上传 JPG 或 PNG 格式图片",
+                "tooLarge": "图片大小不能超过 512 KB",
+                "cropTitle": "裁剪照片",
+                "constraints": "JPG 或 PNG 格式，最大 512 KB"
+            }
+        },
+        "experience": {
+            "title": "工作经历",
+            "addExperience": "添加工作经历",
+            "emptyMessage": "尚未添加工作经历。点击“添加工作经历”开始填写。",
+            "deleteConfirm": {
+                "title": "删除工作经历",
+                "message": "确定要删除此条工作经历吗？此操作无法撤回。"
+            }
+        },
+        "internships": {
+            "title": "实习经历",
+            "addInternship": "添加实习经历",
+            "emptyMessage": "尚未添加实习经历。点击“添加实习经历”开始填写。",
+            "deleteConfirm": {
+                "title": "删除实习经历",
+                "message": "确定要删除此条实习经历吗？此操作无法撤回。"
+            }
+        },
+        "education": {
+            "title": "教育背景",
+            "addEducation": "添加教育经历",
+            "emptyMessage": "尚未添加教育经历。点击“添加教育经历”开始填写。",
+            "institution": "毕业院校 / 机构",
+            "degree": "所获学位 / 学历",
+            "fieldOfStudy": "专业领域",
+            "graduationScore": "绩点 / 毕业成绩",
+            "deleteConfirm": {
+                "title": "删除教育经历",
+                "message": "确定要删除此条教育经历吗？此操作无法撤回。"
+            }
+        },
+        "skills": {
+            "title": "专业技能",
+            "addSkill": "添加技能项",
+            "emptyMessage": "尚未添加任何技能。点击“添加技能项”开始填写。",
+            "skillTitle": "技能分类 / 标题",
+            "column": "布局栏",
+            "deleteConfirm": {
+                "title": "删除技能",
+                "message": "确定要删除该技能项吗？此操作无法撤回。"
+            }
+        },
+        "projects": {
+            "title": "项目经验",
+            "addProject": "添加项目",
+            "emptyMessage": "添加您参与过的重点项目以充分展示您的实战能力。",
+            "projectTitle": "项目名称",
+            "projectUrl": "项目主页 / 演示链接",
+            "links": "相关链接",
+            "addLink": "添加链接",
+            "removeLink": "删除链接",
+            "linkLabel": "标签名 (例如: GitHub)",
+            "linkUrl": "URL 地址",
+            "emptyLinks": "暂无链接。可以添加项目源码、线上演示或技术博客。",
+            "column": "布局栏",
+            "deleteConfirm": {
+                "title": "删除项目",
+                "message": "确定要删除此项目吗？此操作无法撤回。"
+            }
+        },
+        "languages": {
+            "title": "语言能力",
+            "addLanguage": "添加语言",
+            "emptyMessage": "尚未添加语言技能。点击“添加语言”开始填写。",
+            "languageName": "语言名称",
+            "proficiency": "熟练程度",
+            "column": "布局栏",
+            "deleteConfirm": {
+                "title": "删除语言",
+                "message": "确定要删除该语言项吗？此操作无法撤回。"
+            }
+        },
+        "volunteering": {
+            "title": "志愿服务与社会活动",
+            "addVolunteering": "添加志愿经历",
+            "emptyMessage": "尚未添加志愿经历。点击“添加志愿经历”开始填写。",
+            "organization": "志愿机构 / 组织",
+            "column": "布局栏",
+            "deleteConfirm": {
+                "title": "删除志愿经历",
+                "message": "确定要删除该志愿服务记录吗？此操作无法撤回。"
+            }
+        },
+        "certificates": {
+            "title": "资格证书与荣誉",
+            "addCertificate": "添加证书",
+            "emptyMessage": "尚未添加证书。点击“添加证书”开始填写。",
+            "certificateTitle": "证书名称",
+            "issuer": "颁发机构",
+            "date": "颁发日期",
+            "url": "核验网址",
+            "column": "布局栏",
+            "deleteConfirm": {
+                "title": "删除证书",
+                "message": "确定要删除该证书记录吗？此操作无法撤回。"
+            }
+        }
+    },
+    "validation": {
+        "required": "此字段为必填项",
+        "email": "请输入有效的邮箱地址",
+        "url": "请输入有效的网址链接",
+        "invalidEmail": "请输入有效的电子邮箱",
+        "passwordRequired": "密码不能为空",
+        "nameRequired": "姓名不能为空",
+        "passwordMinLength": "密码长度不能少于 6 个字符"
+    },
+    "notifications": {
+        "resumeCreated": "简历创建成功",
+        "resumeDeleted": "简历已成功删除",
+        "resumeDuplicated": "简历复制成功",
+        "dataImported": "数据导入成功",
+        "dataExported": "数据导出成功",
+        "settingsReset": "设置已恢复为默认值",
+        "autoSyncedToCloud": "已将 {count} 份简历自动备份至云端",
+        "cloudLimitReached": "已达云端上限：{count} 份简历仅保留在本地设备",
+        "updateAvailable": "发现新版本可用",
+        "updateAvailableDescription": "刷新页面以载入最新的优化改进。",
+        "updateRefresh": "刷新页面"
+    },
+    "platforms": {
+        "linkedin": "领英 (LinkedIn)",
+        "github": "GitHub",
+        "twitter": "X (Twitter)",
+        "portfolio": "作品集 (Portfolio)",
+        "dribbble": "Dribbble",
+        "medium": "Medium",
+        "devto": "Dev.to",
+        "personal": "个人主页",
+        "other": "其他网站"
+    },
+    "template": {
+        "at": " · ",
+        "present": "至今",
+        "grade": "成绩:",
+        "separator": "，",
+        "from": " 来自 "
+    },
+    "auth": {
+        "signIn": "登录",
+        "signUp": "注册",
+        "signOut": "退出登录",
+        "createAccount": "创建账号",
+        "password": "密码",
+        "confirmPassword": "确认密码",
+        "currentPassword": "当前密码",
+        "newPassword": "新密码",
+        "enterEmail": "输入您的邮箱",
+        "enterPassword": "输入您的密码",
+        "enterName": "输入您的姓名",
+        "enterCurrentPassword": "输入当前密码",
+        "enterNewPassword": "输入新密码",
+        "confirmNewPassword": "确认新密码",
+        "createPasswordPlaceholder": "设置密码 (至少 6 位)",
+        "confirmPasswordPlaceholder": "再次输入密码",
+        "signInDescription": "登录您的账号以同步和管理云端简历",
+        "createAccountDescription": "注册免费账号以跨设备保存和同步简历",
+        "dontHaveAccount": "还没有账号？",
+        "alreadyHaveAccount": "已有账号？",
+        "passwordsDoNotMatch": "两次输入的密码不一致",
+        "loginFailed": "登录失败",
+        "registrationFailed": "注册失败",
+        "accountCreatedSuccess": "账号创建成功！正在跳转...",
+        "passwordChangedSuccess": "密码修改成功",
+        "passwordChangeError": "修改密码失败",
+        "currentPasswordRequired": "必须提供当前密码",
+        "newPasswordRequired": "必须提供新密码",
+        "newPasswordMinLength": "新密码长度至少需要 8 个字符",
+        "newPasswordsDoNotMatch": "新密码与确认密码不匹配",
+        "changingPassword": "正在修改密码...",
+        "changePassword": "修改密码",
+        "clearForm": "清空表单",
+        "passwordMinLengthHint": "密码长度必须至少为 8 位",
+        "forgotPassword": "忘记密码？",
+        "forgotPasswordTitle": "重置您的密码",
+        "forgotPasswordDescription": "输入您的注册邮箱，我们将向您发送密码重置链接",
+        "sendResetLink": "发送重置链接",
+        "sendingResetLink": "正在发送...",
+        "resetLinkSent": "重置邮件已发送！",
+        "resetLinkSentDescription": "请检查您的收件箱以获取密码重置链接。如果未收到，请检查垃圾邮件夹。",
+        "resetPassword": "重置密码",
+        "resettingPassword": "正在重置...",
+        "resetPasswordDescription": "请在下方输入您的新密码",
+        "resetPasswordSuccess": "密码重置成功！正在跳转...",
+        "resetPasswordError": "重置密码失败",
+        "invalidResetLink": "重置链接无效或已过期",
+        "backToSignIn": "返回登录",
+        "tooManyRequests": "请求过于频繁，请稍后再试。",
+        "rateLimitWait": "请稍候再请求新的重置链接。",
+        "continueWithGoogle": "使用 Google 账号继续",
+        "orContinueWith": "或使用以下方式继续",
+        "googleOAuthFailed": "Google 登录失败，请重试。",
+        "googleNoEmail": "Google 账号未提供邮箱地址。",
+        "googleHandlerError": "Google 登录过程中发生错误。",
+        "googleUserCreationFailed": "无法通过 Google 资料创建账号。",
+        "togglePassword": "切换密码可见性"
+    },
+    "profile": {
+        "title": "个人资料设置",
+        "description": "管理您的账户偏好与安全设置",
+        "personalInformation": "个人基本信息",
+        "viewAndManage": "查看并编辑您的账户详情",
+        "notProvided": "未提供",
+        "accountInformation": "账户概况",
+        "accountInfoDescription": "您的免费账户支持在云端存储并同步最多 3 份简历。",
+        "updatePasswordDescription": "定期更新密码有助于保护您的账户安全",
+        "pleaseFixErrors": "请修正以下错误："
+    },
+    "resumes": {
+        "pageTitle": "我的简历 - 免费创建与高效管理 | Resume For Free",
+        "pageDescription": "一站式集中管理您的全部简历。免费创建、编辑、复制和整理求职简历。不设存储限制，数据完全私密。",
+        "title": "我的简历",
+        "resumeCount": {
+            "total": "总计",
+            "of": "共",
+            "resume": "份简历",
+            "resumes": "份简历"
+        },
+        "actions": {
+            "new": "新建",
+            "import": "导入",
+            "cloudSync": "云端同步",
+            "createNew": "创建新简历",
+            "searchPlaceholder": "搜索简历..."
+        },
+        "banner": {
+            "saveToCloud": "将简历安全保存到云端",
+            "registerPrompt": "注册一个免费账户即可将多达 3 份简历备份到云端，并在任何浏览器中无缝访问。再也不用担心数据丢失！",
+            "registerFree": "免费注册",
+            "login": "登录账号",
+            "cloudAvailable": "云端存储已就绪",
+            "cloudAvailableDescription": "您现在可以将多达 3 份简历同步到云端并在任何设备间访问。点击“云端同步”按钮即可开始。"
+        },
+        "status": {
+            "loading": "正在加载简历...",
+            "failed": "加载简历失败",
+            "active": "编辑中",
+            "synced": "已同步",
+            "notSynced": "未同步",
+            "updated": "已更新"
+        },
+        "card": {
+            "editNameTitle": "重命名简历",
+            "noName": "未命名简历",
+            "noPosition": "未指定求职意向",
+            "noSections": "尚未添加任何内容板块",
+            "experience": "段工作经历",
+            "experiences": "段工作经历",
+            "education": "段教育背景",
+            "skill": "项技能",
+            "skills": "项技能",
+            "build": "编辑简历",
+            "copy": "复制副本",
+            "exportTitle": "导出此简历",
+            "syncTitle": "备份至云端",
+            "disableSync": "关闭云端同步",
+            "delete": "删除简历",
+            "downloadPdf": "导出 PDF",
+            "downloadPdfFailed": "无法生成 PDF。请重试。"
+        },
+        "empty": {
+            "noResumes": "暂无简历",
+            "createFirst": "创建您的第一份简历以开始使用",
+            "createFirstButton": "创建第一份简历",
+            "noResults": "未找到简历",
+            "noResultsMessage": "没有符合搜索条件的简历：",
+            "clearSearch": "清除搜索",
+            "createNew": "立即创建新简历"
+        },
+        "modals": {
+            "firstTime": {
+                "title": "是否备份至云端？",
+                "description": "您的简历默认保存在本机浏览器中。注册一个免费账号可在不同设备间同步。",
+                "accessAnywhere": "随时随地跨设备访问",
+                "autoBackup": "云端自动加密备份",
+                "freeResumes": "永久免费支持 3 份简历",
+                "signUp": "立即注册",
+                "login": "登录已有账号",
+                "continueLocally": "仅保留在本地浏览器",
+                "dontShowAgain": "不再提示此弹窗"
+            },
+            "create": {
+                "title": "创建新简历",
+                "resumeName": "简历名称",
+                "enterName": "例如: 前端开发工程师求职简历",
+                "navigateToBuilder": "创建完成后直接进入编辑页面",
+                "saveToCloud": "同时备份保存到云端",
+                "slotsAvailableMessage": "云端存储槽位：剩余 {remaining} 个 (上限 {limit} 个)",
+                "noSlotsAvailableMessage": "云端槽位已满 (已使用 {count}/{limit})",
+                "createButton": "创建简历",
+                "resumeLanguage": "简历语言设置"
+            },
+            "copy": {
+                "title": "复制简历副本",
+                "resumeName": "副本名称",
+                "enterName": "请输入新副本简历名称",
+                "navigateToBuilder": "复制后直接跳转编辑副本",
+                "copyButton": "确认复制"
+            },
+            "export": {
+                "title": "批量导出简历",
+                "description": "勾选需要导出为 JSON 备份文件的简历",
+                "infoMessage": "此操作会将简历数据打包导出为 JSON 文件以便备份或迁移。如需下载排版好的 PDF 文件，请在编辑器页面点击下载按钮。",
+                "selectAll": "全选",
+                "selected": "已选择",
+                "selectedCount": "已选择 {count} {countPlural}"
+            },
+            "cloudSync": {
+                "title": "云端简历同步",
+                "description": "您已在云端存储 {count}/{limit} 份简历，还剩 {remaining} {remainingPlural} 配额。",
+                "slot": "个配额",
+                "slots": "个配额",
+                "allSynced": "全部本地简历均已同步至云端",
+                "unsyncHint": "您可以在卡片菜单中选择“关闭云端同步”以释放云端空间。",
+                "limitExceeded": "超出云端存储配额",
+                "limitExceededMessage": "您尝试同步 {count} 个新 {countPlural}，但剩余可用配额仅有 {remaining} {remainingPlural}。请取消勾选部分项目或先从云端清理已有简历。",
+                "deselectAll": "取消全选",
+                "selectAll": "全选",
+                "syncButton": "同步所选 {count} {countPlural}",
+                "exp": "工作经历",
+                "edu": "教育背景",
+                "projects": "项目经验",
+                "noSections": "暂无板块"
+            },
+            "cloudSyncPrompt": {
+                "title": "是否将这份简历备份到云端？",
+                "description": "当前简历仅保存在本地设备上。您希望将其安全同步到云端吗？",
+                "benefits": {
+                    "title": "开启云端同步的好处",
+                    "accessAnywhere": "可在任何电脑或移动设备上随取随用",
+                    "autoBackup": "自动加密多重备份，防止意外丢失",
+                    "realTimeSync": "多端实时无缝同步最新修改",
+                    "neverLose": "永不丢失您的辛苦撰写成果"
+                },
+                "limit": {
+                    "title": "云端容量配额说明",
+                    "description": "免费账户支持在云端存储多达 3 份简历。您当前尚有 {remaining} 个可用存储配额。"
+                },
+                "local": {
+                    "title": "继续仅在本地保存",
+                    "description": "简历将仅留在当前浏览器的本地存储中。您可以随时在设置中开启云端同步。"
+                },
+                "dontAskAgain": "对此份简历不再询问",
+                "enableSync": "立即开启云端同步",
+                "keepLocal": "仅在本地保留"
+            },
+            "delete": {
+                "title": "删除简历确认",
+                "message": "您确定要彻底删除简历“{name}”吗？此操作无法撤销恢复。",
+                "confirmButton": "确认删除"
+            },
+            "disableSync": {
+                "title": "关闭云端同步",
+                "message": "确定要从云端移除“{name}”吗？简历仍将完好保存在您的本机设备上，但不再进行云端备份。",
+                "confirmButton": "从云端移除"
+            },
+            "cancel": "取消",
+            "import": {
+                "title": "导入简历文件",
+                "foundCount": "在文件中成功识别到 {count} 份简历",
+                "duplicateWarning": "发现 {count} 份简历与本地同名，默认已取消勾选以防覆盖。",
+                "itemCount": "共 {count} 项",
+                "selectedCount": "已选择 {count} 份简历进行导入",
+                "importSelected": "导入所选简历"
+            }
+        },
+        "toast": {
+            "creatingInCloud": "正在云端创建简历...",
+            "createdAndSaved": "简历“{name}”已成功创建并备份至云端",
+            "createdLocallyFailed": "简历“{name}”已在本地创建，但云端保存失败: {error}",
+            "loginToSaveCloud": "请先登录账号以保存简历至云端",
+            "created": "简历“{name}”已成功创建",
+            "deletedFromCloud": "已从云端删除简历“{name}”",
+            "deletedLocallyFailed": "已从本地删除，但从云端清理失败: {error}",
+            "deleted": "简历“{name}”已成功删除",
+            "loginToSync": "请先登录以同步您的简历",
+            "resumeNotFound": "未找到对应的简历记录",
+            "syncingToCloud": "正在将简历同步至云端...",
+            "updatedInCloud": "云端简历“{name}”已成功更新",
+            "syncedNewCopy": "已将简历“{name}”作为新副本同步到云端",
+            "syncedToCloud": "简历“{name}”已成功同步至云端",
+            "syncFailed": "同步简历失败: {error}",
+            "removedFromCloud": "已从云端移除“{name}”并停止同步",
+            "removeFailed": "从云端移除失败: {error}，本地已停止同步。",
+            "syncingMultiple": "正在将 {count} 份简历{plural}同步至云端...",
+            "syncedMultiple": "已成功同步 {count} 份简历{plural}至云端",
+            "syncMultipleFailed": "批量同步简历失败: {error}",
+            "resumeNotSynced": "该简历尚未开启云端同步"
+        },
+        "notify": {
+            "created": "已创建“{name}”",
+            "createdAndSaved": "已创建“{name}”并同步至云端",
+            "createdLocallyFailed": "“{name}”仅成功保存在本地: {error}",
+            "creatingInCloud": "正在云端创建您的简历…",
+            "deleted": "简历已删除",
+            "deletedFromCloud": "已从云端移除该简历",
+            "deletedLocallyFailed": "本地已删除，但云端备份仍保留: {error}",
+            "loginToSaveCloud": "登录即可将该简历备份至云端",
+            "loginToSync": "登录账号以同步管理您的简历",
+            "removedFromCloud": "已从云端移除",
+            "removeFailed": "无法从云端移除该简历",
+            "resumeNotFound": "未找到简历",
+            "resumeNotSynced": "该简历尚未同步到云端",
+            "syncedMultiple": "已将 {count} 份简历同步至云端",
+            "syncedNewCopy": "已作为新的云端副本同步",
+            "syncedToCloud": "已同步到云端",
+            "syncFailed": "同步失败，请重试。",
+            "syncingMultiple": "正在同步 {count} 份简历…",
+            "syncingToCloud": "正在同步到云端…",
+            "syncMultipleFailed": "部分简历未能成功同步",
+            "updatedInCloud": "云端副本已更新"
+        }
+    },
+    "contact": {
+        "title": "联系我们",
+        "description": "有任何疑问、功能建议或使用反馈？欢迎随时与我们联系。请填写下表，我们会尽快给您答复。",
+        "form": {
+            "name": {
+                "placeholder": "请输入您的姓名"
+            },
+            "email": {
+                "placeholder": "请输入您的邮箱地址"
+            },
+            "subject": {
+                "label": "主题",
+                "placeholder": "请简要说明主题"
+            },
+            "message": {
+                "label": "详细内容",
+                "placeholder": "请详细描述您的问题或反馈建议..."
+            },
+            "submit": "发送留言",
+            "sending": "正在发送..."
+        },
+        "success": {
+            "title": "信息已成功发送！",
+            "message": "感谢您的宝贵留言，我们将在收到后尽快与您取得联系。",
+            "toast": "留言已成功发送",
+            "keepBuilding": "继续制作简历"
+        },
+        "errors": {
+            "validation": "请检查表单填写内容后重试",
+            "rateLimit": "操作过于频繁，请一小时后再试。",
+            "generic": "发送留言失败，请稍后重试。"
+        },
+        "alternative": {
+            "text": "您也可以直接发送邮件至"
+        },
+        "seo": {
+            "title": "联系我们 - Resume For Free 官方技术支持与帮助",
+            "description": "使用免费简历生成器遇到问题？联系我们的技术支持团队以获取帮助。"
+        }
+    },
+    "proficiency": {
+        "native": "母语",
+        "fluent": "精通",
+        "proficient": "熟练",
+        "conversational": "良好 / 日常会话",
+        "basic": "基础",
+        "beginner": "入门"
+    },
+    "apiTokens": {
+        "title": "API 访问令牌",
+        "description": "生成短期令牌以允许外部 AI Agent 或自动化脚本通过 API 更新您的简历。令牌默认在 24 小时后自动失效。",
+        "name": "令牌名称",
+        "namePlaceholder": "例如: Resume Agent",
+        "expiresInHours": "有效期 (小时)",
+        "generate": "生成令牌",
+        "copyNow": "请立即复制并保存此令牌，离开后将无法再次查看。",
+        "copied": "已复制到剪贴板",
+        "empty": "您目前尚未创建任何 API 令牌。",
+        "active": "有效",
+        "inactive": "已失效",
+        "expires": "到期时间",
+        "lastUsed": "最近使用",
+        "revoke": "撤销令牌",
+        "loadFailed": "加载令牌列表失败。",
+        "createFailed": "创建令牌失败。",
+        "revokeFailed": "撤销令牌失败。"
+    }
+}

@@ -132,8 +132,10 @@
 import * as z from 'zod';
 import type { FormSubmitEvent } from '@nuxt/ui';
 import TurnstileWidget from '~/components/elements/TurnstileWidget.vue';
+import { getOgLocale } from '~/composables/useSEO';
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
+const route = useRoute();
 const notify = useNotify();
 const localePath = useLocalePath();
 
@@ -198,7 +200,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     }
 }
 
-useHead({
+useHead(() => ({
     title: t('contact.seo.title'),
     meta: [
         {
@@ -218,6 +220,10 @@ useHead({
             content: 'website',
         },
         {
+            property: 'og:locale',
+            content: getOgLocale(locale.value),
+        },
+        {
             property: 'og:site_name',
             content: 'Resume For Free',
         },
@@ -231,7 +237,7 @@ useHead({
         },
         {
             property: 'og:url',
-            content: 'https://resumeforfree.com/contact',
+            content: `https://resumeforfree.com${route.path}`,
         },
         {
             property: 'og:image',
@@ -254,5 +260,5 @@ useHead({
             content: 'https://resumeforfree.com/og-image.png',
         },
     ],
-});
+}));
 </script>

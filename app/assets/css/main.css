@@ -5,6 +5,8 @@
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-mono: 'JetBrains Mono', ui-monospace, monospace;
     --font-arabic: 'Inter', 'Noto Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+    --font-cjk: 'Inter', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    --font-devanagari: 'Inter', 'Noto Sans Devanagari', 'Segoe UI', sans-serif;
 
     --color-ink-50: #F7F8FA;
     --color-ink-100: #EEF0F4;
@@ -65,8 +67,17 @@
      * scans stylesheets for family names to emit @font-face, and cannot see
      * through a custom property.
      */
-    :lang(ar) {
+    :lang(ar),
+    :lang(ur) {
         font-family: 'Inter', 'Noto Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+    }
+
+    :lang(zh) {
+        font-family: 'Inter', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    }
+
+    :lang(hi) {
+        font-family: 'Inter', 'Noto Sans Devanagari', 'Segoe UI', sans-serif;
     }
 }
 

@@ -1,0 +1,105 @@
+{
+    "version": "v1",
+    "firstName": "عمر",
+    "lastName": "المصرى",
+    "email": "omar@example.com",
+    "phone": "+2010932345",
+    "position": "مهندس برمجيات أول",
+    "location": "القاهرة، مصر",
+    "summary": "مهندس برمجيات بخبرة ممتدة لأكثر من عشر سنوات فى بناء تطبيقات الواجهة الخلفية فى مجالات التقنية المالية، التجارة الإليكترونية، ومعالجة البيانات، وإدارة الفرق.",
+    "experiences": [
+        {
+            "company": "دلتا",
+            "position": "مهندس برمجيات أول",
+            "location": "القاهرة، مصر",
+            "startDate": "2024-07",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                { "text": "بنيت نظام معالجة بيانات المنتجات غير متزامن فى منصة التجارة الإليكترونية." },
+                { "text": "أعدت كتابة نظام معالجة المدفوعات، مما رفع الكفاءة بنسبة 65%" }
+            ]
+        },
+        {
+            "company": "XYZ",
+            "position": "مهندس برمجيات أول",
+            "location": "القاهرة، مصر",
+            "startDate": "2022-02",
+            "endDate": "2024-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                { "text": "ساهمت ببناء خدمة اتصالات مرئية باستخدام لغة Golang وبروتوكول WebRTC." },
+                { "text": "ساهمت فى تحسين جودة الفيديو أثناء الاتصالات وحل مشكلات التزامن." }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "جامعة القاهرة",
+            "degree": "بكالوريوس هندسة الحاسب",
+            "fieldOfStudy": "",
+            "location": "القاهرة، مصر",
+            "startDate": "2015-10",
+            "endDate": "2020-09",
+            "isPresent": false,
+            "description": "درست معمارية الحاسب، هندسة الشبكات، الإليكترونيات، معالجة الاشارات، لغات البرمجة، هياكل البيانات والخوارزميات",
+            "graduationScore": "جيد",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        { "title": "لغات البرمجة", "description": "Golang, JavaScript, Python, PHP" },
+        { "title": "المعمارية البرمجية", "description": "Microservices, Modular Monolithic, DDD, Event Driven" },
+        { "title": "السحابة والبنية التحتية", "description": "On-Premises, Docker, Kubernetes, AWS, GCP" },
+        { "title": "قواعد البيانات", "description": "PostgreSQL, Redis, ElasticSearch, NoSQL" }
+    ],
+    "socialLinks": [
+        { "platform": "linkedin", "url": "https://linkedin.com" },
+        { "platform": "github", "url": "https://github.com" },
+        { "platform": "personal", "url": "https://example.com" }
+    ],
+    "projects": [
+        {
+            "title": "منصة التجارة الإليكترونية",
+            "description": "أعمل حالياً على بناء منصة تجارة اليكترونية تعالج أكثر من 100 ألف طلب يومياً.",
+            "startDate": "2025-01",
+            "endDate": "",
+            "isPresent": true,
+            "links": [{ "platform": "other", "url": "https://example.com", "label": "معاينة" }],
+            "achievements": [
+                { "text": "مشاركة مباشرة للملفات بين الخوادم السحابية" },
+                { "text": "أداة سطر أوامر مبنية بلغة Golang لمزامنة الجلسات" }
+            ]
+        }
+    ],
+    "languages": [
+        { "name": "العربية", "proficiency": "اللغة الأم" },
+        { "name": "الإنجليزية", "proficiency": "متقدم" }
+    ],
+    "certificates": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "education": 1,
+        "skills": 2,
+        "experience": 3,
+        "projects": 4,
+        "languages": 5,
+        "internships": 6,
+        "volunteering": 7,
+        "certificates": 8,
+        "socialLinks": 9
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right"
+    }
+}

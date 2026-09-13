@@ -1,0 +1,105 @@
+{
+    "version": "v1",
+    "firstName": "राहुल",
+    "lastName": "शर्मा",
+    "email": "rahul.sharma@example.com",
+    "phone": "+91 11 1234 5678",
+    "position": "सीनियर सॉफ्टवेयर इंजीनियर",
+    "location": "नई दिल्ली, भारत",
+    "summary": "फिनटेक, ई-कॉमर्स, डेटा पाइपलाइन और एआई वर्कफ़्लो में 10 से अधिक वर्षों के अनुभव वाले सीनियर सॉफ्टवेयर इंजीनियर। बड़े पैमाने के बैकएंड सिस्टम बनाने में विशेषज्ञ।",
+    "experiences": [
+        {
+            "company": "डेल्टा टेक्नोलॉजीज",
+            "position": "सीनियर सॉफ्टवेयर इंजीनियर",
+            "location": "नई दिल्ली, भारत",
+            "startDate": "2024-07",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                { "text": "उत्पाद विवरण के लिए अतुल्यकालिक (asynchronous) फ़ाइल अपलोड पाइपलाइन का निर्माण किया।" },
+                { "text": "भुगतान प्रसंस्करण वर्कफ़्लो को पुनर्गठित किया, जिससे प्रोसेसिंग समय में 65% की कमी आई।" }
+            ]
+        },
+        {
+            "company": "एक्सवाईज़ेड सॉल्यूशंस",
+            "position": "बैकएंड सॉफ्टवेयर इंजीनियर",
+            "location": "बेंगलुरु, भारत",
+            "startDate": "2022-02",
+            "endDate": "2024-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                { "text": "Golang, WebRTC और Livekit का उपयोग करके वीडियो कॉन्फ्रेंसिंग प्लेटफ़ॉर्म में योगदान दिया।" },
+                { "text": "वीडियो कॉन्फ्रेंसिंग में डेटा सिंक्रोनाइज़ेशन और विलंबता की समस्याओं का समाधान किया।" }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "भारतीय प्रौद्योगिकी संस्थान (आईआईटी) दिल्ली",
+            "degree": "बी.टेक, कंप्यूटर इंजीनियरिंग",
+            "fieldOfStudy": "",
+            "location": "नई दिल्ली, भारत",
+            "startDate": "2015-10",
+            "endDate": "2020-09",
+            "isPresent": false,
+            "description": "कंप्यूटर आर्किटेक्चर, नेटवर्क इंजीनियरिंग, डेटा संरचनाएं और एल्गोरिदम में गहन अध्ययन।",
+            "graduationScore": "प्रथम श्रेणी (First Class)",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        { "title": "प्रोग्रामिंग भाषाएं", "description": "Golang, TypeScript, Python, PHP" },
+        { "title": "सॉफ्टवेयर आर्किटेक्चर", "description": "Microservices, Modular Monolithic, DDD, Event Driven" },
+        { "title": "क्लाउड और इंफ्रास्ट्रक्चर", "description": "Docker, Kubernetes, AWS, GCP, CI/CD" },
+        { "title": "डेटाबेस", "description": "PostgreSQL, Redis, ElasticSearch, MongoDB" }
+    ],
+    "socialLinks": [
+        { "platform": "linkedin", "url": "https://linkedin.com" },
+        { "platform": "github", "url": "https://github.com" },
+        { "platform": "personal", "url": "https://example.com" }
+    ],
+    "projects": [
+        {
+            "title": "ई-कॉमर्स प्लेटफ़ॉर्म",
+            "description": "प्रतिदिन 1 लाख से अधिक ऑर्डर प्रबंधित करने वाले उच्च-स्केल ई-कॉमर्स प्लेटफ़ॉर्म का निर्माण।",
+            "startDate": "2025-01",
+            "endDate": "",
+            "isPresent": true,
+            "links": [{ "platform": "other", "url": "https://example.com", "label": "पूर्वावलोकन" }],
+            "achievements": [
+                { "text": "सर्वरों के बीच सीधा पीयर-टू-पीयर फ़ाइल साझाकरण सिस्टम विकसित किया" },
+                { "text": "सत्र प्रबंधन के लिए Golang में सीएलआई (CLI) टूल तैयार किया" }
+            ]
+        }
+    ],
+    "languages": [
+        { "name": "हिन्दी", "proficiency": "मातृभाषा" },
+        { "name": "अंग्रेजी", "proficiency": "कुशल" }
+    ],
+    "certificates": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "education": 1,
+        "skills": 2,
+        "experience": 3,
+        "projects": 4,
+        "languages": 5,
+        "internships": 6,
+        "volunteering": 7,
+        "certificates": 8,
+        "socialLinks": 9
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right"
+    }
+}

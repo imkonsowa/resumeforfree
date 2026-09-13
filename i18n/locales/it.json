@@ -1,0 +1,940 @@
+{
+    "common": {
+        "save": "Salva",
+        "cancel": "Annulla",
+        "delete": "Elimina",
+        "edit": "Modifica",
+        "add": "Aggiungi",
+        "remove": "Rimuovi",
+        "close": "Chiudi",
+        "done": "Fatto",
+        "copyFailed": "Copia negli appunti non riuscita",
+        "link": "Link",
+        "preview": "Anteprima",
+        "download": "Scarica",
+        "loading": "Caricamento in corso...",
+        "error": "Errore",
+        "success": "Operazione riuscita",
+        "yes": "Sì",
+        "no": "No",
+        "language": "Lingua",
+        "buildNow": "Crea ora",
+        "startBuilding": "Inizia a creare",
+        "resetToDefaults": "Ripristina impostazioni predefinite",
+        "quickActions": "Azioni rapide",
+        "actions": "Azioni",
+        "column": "Colonna",
+        "left": "Sinistra",
+        "right": "Destra",
+        "location": "Località",
+        "locationPlaceholder": "Roma, Italia",
+        "present": "Presente",
+        "startDate": "Data di inizio",
+        "endDate": "Data di fine",
+        "description": "Descrizione",
+        "email": "Email",
+        "position": "Posizione",
+        "achievements": "Traguardi",
+        "addAchievement": "Aggiungi traguardo",
+        "achievementPlaceholder": "Descrivi i tuoi traguardi principali e l'impatto ottenuto",
+        "name": "Nome",
+        "sync": "Sincronizza",
+        "export": "Esporta",
+        "company": "Azienda",
+        "companyUrl": "URL sito web aziendale",
+        "organizationUrl": "URL sito web organizzazione",
+        "emailAddress": "Indirizzo email",
+        "tryAgain": "Riprova",
+        "copy": "Copia",
+        "month": "Mese",
+        "year": "Anno",
+        "moveUp": "Sposta su",
+        "moveDown": "Sposta giù",
+        "confirmAction": "Conferma azione",
+        "confirmMessage": "Sei sicuro di voler procedere?",
+        "confirm": "Conferma",
+        "expand": "Espandi",
+        "collapse": "Comprimi",
+        "moreActions": "Altre azioni",
+        "or": "o",
+        "saved": "Salvato",
+        "syncFailed": "Sincronizzazione non riuscita"
+    },
+    "languageModal": {
+        "title": "Seleziona la tua lingua",
+        "description": "Scegli la tua lingua preferita per il generatore di curriculum",
+        "resumeTitle": "Seleziona la lingua del curriculum",
+        "resumeDescription": "Scegli la lingua per questo curriculum. Questa selezione è definitiva e non potrà essere modificata dopo la creazione."
+    },
+    "navigation": {
+        "home": "Home",
+        "builder": "Editor",
+        "qa": "Domande e risposte",
+        "help": "Aiuto",
+        "resumes": "I tuoi curriculum",
+        "contact": "Contatti",
+        "github": "GitHub",
+        "signIn": "Accedi",
+        "signUp": "Registrati",
+        "signOut": "Esci",
+        "profile": "Profilo",
+        "startBuilding": "Inizia subito",
+        "openMenu": "Apri menu",
+        "closeMenu": "Chiudi menu"
+    },
+    "footer": {
+        "tagline": "Un generatore di curriculum che rimane gratuito per sempre. Creato nel browser con Typst. Nessun account, nessun tracciamento.",
+        "productHeading": "Prodotto",
+        "productLinks": {
+            "builder": "Editor",
+            "yourResumes": "I tuoi curriculum",
+            "cloudSync": "Sincronizzazione cloud"
+        },
+        "resourcesHeading": "Risorse",
+        "supportHeading": "Supporto",
+        "supportLinks": {
+            "terms": "Termini di servizio",
+            "privacy": "Privacy"
+        },
+        "copyright": "© 2026 ResumeForFree · Creato con Typst.ts e Nuxt da {author}",
+        "noTracking": "Nessun cookie. Nessun tracciamento."
+    },
+    "homepage": {
+        "title": "Crea il tuo curriculum",
+        "subtitle": "Gratis",
+        "heroTitle": "Generatore di curriculum gratuito - Senza registrazione, senza filigrane | Resume For Free",
+        "heroDescription": "Crea e scarica curriculum professionali gratuitamente. Nessun account richiesto, nessuna filigrana, nessun costo nascosto. I tuoi dati restano sul tuo dispositivo. Download PDF illimitati.",
+        "heroSubheadline": "Nessun account. Nessuna filigrana. Nessun \"paga per scaricare\". Solo un generatore di curriculum che fa esattamente quello che promette.",
+        "hero": {
+            "badge": "10.247 utenti · 55.812 PDF scaricati",
+            "title": "Il generatore di curriculum gratuito che rimane gratis per sempre.",
+            "sub": "Crea, visualizza in anteprima e scarica un PDF pronto per i sistemi ATS direttamente nel tuo browser. Nessun account. Nessuna filigrana. Nessun costo per scaricare.",
+            "ctaBuild": "Crea il mio curriculum",
+            "ctaSample": "Guarda un PDF di esempio",
+            "note": "Nessuna registrazione · Nessuna carta di credito · Richiede circa 5 minuti",
+            "stat1Label": "Curriculum creati",
+            "stat2Label": "PDF scaricati",
+            "stat3Label": "Costo totale"
+        },
+        "sampleResume": {
+            "alt": "Anteprima del curriculum di esempio",
+            "name": "Omar Al-Masry",
+            "title": "Senior Software Engineer | Backend | Cloud",
+            "profile": "Ingegnere backend con oltre 8 anni di esperienza nella realizzazione di sistemi distribuiti ad alte prestazioni. Specializzato in infrastrutture cloud-native, osservabilità ed elaborazione dati su larga scala.",
+            "location": "Da remoto",
+            "experience": {
+                "heading": "Esperienza lavorativa",
+                "roleLine": "Senior Software Engineer presso Acme Corp, Da remoto",
+                "dateRange": "Gen 2023 - Presente",
+                "bullet1": "Creazione di una pipeline di dati multi-regione che elabora 2 miliardi di eventi al giorno.",
+                "bullet2": "Guida dell'architettura backend per una piattaforma analitica mission-critical."
+            },
+            "skills": {
+                "heading": "Competenze tecniche",
+                "langLabel": "Linguaggi",
+                "langValue": "Golang, JavaScript, Python, PHP",
+                "cloudLabel": "Cloud",
+                "cloudValue": "Docker, Kubernetes, AWS, GCP",
+                "dbLabel": "Database",
+                "dbValue": "PostgreSQL, Redis, ElasticSearch"
+            },
+            "education": {
+                "heading": "Istruzione",
+                "degreeLine": "Laurea in Informatica, Università Statale",
+                "date": "2015"
+            }
+        },
+        "features": {
+            "free": {
+                "title": "Davvero gratuito",
+                "description": "Nessun periodo di prova, nessuna carta di credito, nessun livello \"premium\". Gratuito significa gratuito."
+            },
+            "privacy": {
+                "title": "I tuoi dati restano sul tuo dispositivo",
+                "description": "Tutto viene memorizzato nel browser. Non raccogliamo, memorizziamo né vendiamo le tue informazioni personali."
+            },
+            "noRegistration": {
+                "title": "Nessun account richiesto",
+                "description": "Apri il sito, compila il curriculum, scarica il PDF. Nessuna email, nessuna registrazione, nessuna verifica."
+            },
+            "unlimitedDownloads": {
+                "title": "Download di PDF illimitati",
+                "description": "Scarica il tuo curriculum quante volte vuoi. Nessun limite giornaliero, nessun contatore."
+            },
+            "atsOptimized": {
+                "title": "Ottimizzato per ATS",
+                "description": "Impaginato con Typst: testo reale selezionabile, font incorporati, struttura pulita. Supera i principali sistemi di tracciamento candidati."
+            },
+            "unlimitedResumes": {
+                "title": "Curriculum multipli",
+                "description": "Crea curriculum distinti per diverse candidature di lavoro. Personalizza ciascuno senza dover ricominciare da capo."
+            },
+            "offline": {
+                "title": "Funziona offline",
+                "description": "Carica il sito una volta e funzionerà anche senza connessione internet. Crea il tuo curriculum in aereo, in treno o ovunque tu sia."
+            },
+            "cloudSync": {
+                "title": "Sincronizzazione cloud opzionale",
+                "description": "Crea un account gratuito per salvare fino a 3 curriculum nel cloud e accedervi da qualsiasi dispositivo. Completamente facoltativo: tutto funziona anche senza."
+            },
+            "eyebrow": "Funzionalità",
+            "sectionTitle": "Tutto ciò di cui hai bisogno per creare un curriculum professionale. Niente dietro paywall.",
+            "sub": "Le funzionalità che i concorrenti riservano ai piani a pagamento sono incluse, per impostazione predefinita, per tutti."
+        },
+        "howItWorks": {
+            "title": "Come funziona",
+            "subtitle": "Tre semplici passaggi. Nessuna registrazione nel mezzo.",
+            "eyebrow": "Come funziona",
+            "step1": {
+                "title": "Scegli un modello",
+                "description": "Scegli un layout chiaro e professionale. Nessun design vistoso che confonda i selezionatori."
+            },
+            "step2": {
+                "title": "Inserisci i tuoi dati",
+                "description": "Aggiungi la tua esperienza, istruzione e competenze. Guarda l'aggiornamento in tempo reale nell'anteprima."
+            },
+            "step3": {
+                "title": "Scarica il PDF",
+                "description": "Scarica subito il tuo PDF pulito e conforme agli ATS. Nessuna filigrana. Nessuna richiesta di pagamento."
+            }
+        },
+        "comparison": {
+            "title": "Confronto con le alternative a pagamento",
+            "subtitle": "Abbiamo verificato noi per evitarti sorprese.",
+            "eyebrow": "Confronto",
+            "caption": "Basato sui piani gratuiti della concorrenza ad aprile 2026. I prezzi possono variare.",
+            "headers": {
+                "feature": "Funzionalità",
+                "us": "Resume For Free",
+                "canva": "Canva",
+                "zety": "Zety",
+                "resumeio": "Resume.io"
+            },
+            "rows": {
+                "pdfDownload": "Download PDF gratuito",
+                "noAccount": "Nessun account richiesto",
+                "noWatermark": "Nessuna filigrana",
+                "noAds": "Nessuna pubblicità durante la creazione",
+                "dataOnDevice": "I dati restano sul tuo dispositivo",
+                "worksOffline": "Funziona offline",
+                "unlimitedDownloads": "Download illimitati",
+                "noTrial": "Nessuna prova con addebito automatico"
+            },
+            "values": {
+                "free": "Gratis",
+                "paid": "A pagamento",
+                "yes": "Sì",
+                "no": "No",
+                "limited": "Limitato"
+            },
+            "footnote": "Confronto basato sui piani gratuiti ad aprile 2026. I concorrenti potrebbero modificare i prezzi."
+        },
+        "whyBuilt": {
+            "title": "Perché abbiamo creato questo strumento",
+            "eyebrow": "La nostra missione",
+            "sectionTitle": "Perché abbiamo creato questo strumento",
+            "bylineRole": "Fondatore e sviluppatore",
+            "paragraph1": "Passi 45 minuti a inserire attentamente la tua storia lavorativa. Clicchi su \"Scarica\" e all'improvviso compare un pop-up che chiede la carta di credito per 2,95 € per una prova di 14 giorni che si trasforma in un abbonamento mensile da 24,95 €.",
+            "paragraph2": "Questo strumento esiste perché tutto ciò non dovrebbe essere la normalità. Il tuo curriculum viene creato interamente nel browser con Typst, un motore di impaginazione all'avanguardia. Nessun server genera il documento, quindi per noi non ci sono costi di elaborazione per singolo file: ecco perché può restare davvero gratuito senza trucchi.",
+            "paragraph3": "Nessun investitore da soddisfare, nessun obiettivo di crescita aggressivo, nessun motivo per obbligarti a creare un account. Semplicemente uno strumento che fa il suo dovere."
+        },
+        "faq": {
+            "title": "Domande frequenti",
+            "eyebrow": "FAQ",
+            "contactIntro": "Hai altre domande? Contattaci tramite la nostra",
+            "contactLinkContact": "pagina dei contatti",
+            "contactLinkGithub": "repository GitHub",
+            "items": {
+                "reallyFree": {
+                    "question": "Questo servizio è davvero gratuito? Qual è il trucco?",
+                    "answer": "Non c'è alcun trucco. La generazione del PDF avviene nel browser tramite WebAssembly, quindi non paghiamo costi di calcolo per documento. Mantenere il sito statico è estremamente economico. È tutto qui: non c'è nessun secondo fine."
+                },
+                "dataStorage": {
+                    "question": "Dove vengono salvati i miei dati?",
+                    "answer": "Nella memoria locale del tuo browser. I dati del curriculum non lasciano mai il tuo dispositivo a meno che tu non decida esplicitamente di registrarti per la sincronizzazione cloud. Non ti tracciamo, non usiamo analytics e non vendiamo informazioni."
+                },
+                "needAccount": {
+                    "question": "Devo creare un account?",
+                    "answer": "No. Puoi creare, modificare e scaricare tutti i curriculum che desideri senza registrazione. Se vuoi accedere ai documenti da più dispositivi, puoi creare un account gratuito per sincronizzarne fino a 3."
+                },
+                "pdfQuality": {
+                    "question": "Il PDF è di buona qualità o è uno screenshot?",
+                    "answer": "È un vero PDF vettoriale con testo selezionabile e font incorporati. Usiamo Typst, un motore tipografico professionale (qualità stile LaTeX ma facilissimo da usare). Il risultato supera la maggior parte dei servizi commerciali."
+                },
+                "atsFriendly": {
+                    "question": "I curriculum sono adatti ai sistemi ATS?",
+                    "answer": "Sì. I PDF usano testo pulito con font standard. Niente immagini di testo, niente layout a colonne che confondono i software di selezione, nessun elemento nascosto. I sistemi ATS li leggono senza problemi."
+                },
+                "differentFromOthers": {
+                    "question": "In cosa è diverso da Canva o Zety?",
+                    "answer": "Canva richiede un account e mostra pubblicità. Zety permette di compilare gratis ma fa pagare il download del PDF. Entrambi memorizzano i dati sui loro server. Noi non chiediamo account, non facciamo pagare nulla, non mostriamo pubblicità e lasciamo i dati sul tuo dispositivo."
+                },
+                "offlineWork": {
+                    "question": "Funziona anche offline?",
+                    "answer": "Sì. Dopo il primo caricamento, il service worker memorizza tutto. Puoi compilare e scaricare curriculum anche senza connessione internet."
+                },
+                "multipleResumes": {
+                    "question": "Posso creare più curriculum?",
+                    "answer": "Sì, illimitati. Crea versioni diverse per candidature e settori differenti. Non c'è alcun limite."
+                }
+            }
+        },
+        "finalCta": {
+            "title": "Pronto a creare il tuo curriculum?",
+            "subtitle": "Nessuna registrazione. Richiede circa 10 minuti.",
+            "sub": "Gratuito per sempre. Nessuna registrazione. Richiede circa 5 minuti.",
+            "ctaBuild": "Inizia subito",
+            "ctaSample": "Vedi PDF di esempio"
+        },
+        "termsAgreement": "Continuando, accetti i nostri",
+        "termsLink": "Termini di servizio"
+    },
+    "qa": {
+        "title": "Domande e risposte",
+        "titleHighlight": "Risposte chiare",
+        "subtitle": "Risposte dirette su come funziona il generatore di curriculum, quanto costa (niente) e dove vanno a finire i tuoi dati.",
+        "badge": "Domande frequenti",
+        "ctaTitle": "Pronto a creare il tuo curriculum?",
+        "ctaSubtitle": "Nessuna registrazione. Richiede circa 10 minuti.",
+        "categories": {
+            "gettingStarted": "Per iniziare",
+            "features": "Funzionalità",
+            "technical": "Tecnologia e supporto"
+        },
+        "questions": {
+            "isFree": {
+                "question": "È davvero gratuito? Qual è il trucco?",
+                "answer": "Non c'è alcun trucco. La generazione del PDF avviene nel browser tramite WebAssembly, quindi non sosteniamo costi per documento. Mantenere il sito è economico: non c'è alcun modello di monetizzazione nascosto."
+            },
+            "signUp": {
+                "question": "Devo creare un account?",
+                "answer": "No. Puoi creare e scaricare curriculum illimitati senza registrarti. Se desideri lavorare da più dispositivi, puoi creare un account gratuito per salvare fino a 3 curriculum nel cloud."
+            },
+            "pdfExport": {
+                "question": "Il PDF è di qualità o è una semplice immagine?",
+                "answer": "È un vero PDF vettoriale con font incorporati e testo selezionabile. Usiamo Typst, garantendo una precisione tipografica impeccabile."
+            },
+            "privacy": {
+                "question": "Dove vengono salvati i miei dati?",
+                "answer": "Nella memoria locale del tuo browser. I tuoi dati non lasciano mai il dispositivo a meno che tu non scelga di sincronizzarli con il cloud. Nessun tracciamento, nessuna vendita di dati."
+            },
+            "atsFriendly": {
+                "question": "I curriculum sono compatibili con i filtri ATS?",
+                "answer": "Sì. Il testo è pulito e conforme agli standard usati dai software di selezione del personale."
+            },
+            "differentFromOthers": {
+                "question": "In cosa si differenzia da Canva o Zety?",
+                "answer": "Nessun account obbligatorio, nessun tentativo di vendita di abbonamenti durante il download, nessuna pubblicità e completa privacy."
+            },
+            "mobile": {
+                "question": "Funziona anche su smartphone?",
+                "answer": "Sì, l'interfaccia è completamente adattabile. Su mobile è presente un pulsante fluttuante per visualizzare l'anteprima a schermo intero durante la modifica."
+            },
+            "offline": {
+                "question": "Posso usarlo senza connessione a internet?",
+                "answer": "Sì. Una volta caricata la pagina, l'applicazione funziona perfettamente anche in modalità offline."
+            },
+            "importExport": {
+                "question": "Posso eseguire un backup dei miei dati?",
+                "answer": "Certamente. Puoi esportare il curriculum come file JSON e importarlo su qualsiasi altro computer o browser."
+            },
+            "sections": {
+                "question": "Quali sezioni posso inserire?",
+                "answer": "Dati personali, esperienza lavorativa, istruzione, competenze, volontariato e link. Puoi riordinare le sezioni facilmente con il drag & drop."
+            },
+            "customize": {
+                "question": "Posso personalizzare caratteri e modelli?",
+                "answer": "Sì. Sono disponibili diversi modelli e font tipografici con aggiornamento istantaneo dell'anteprima."
+            },
+            "cloudSync": {
+                "question": "Come funziona la sincronizzazione nel cloud?",
+                "answer": "Creando un account gratuito potrai sincronizzare fino a 3 curriculum tra tutti i tuoi dispositivi. I salvataggi locali restano illimitati."
+            },
+            "browsers": {
+                "question": "Quali browser sono supportati?",
+                "answer": "Chrome, Firefox, Safari ed Edge: qualunque browser moderno che supporti WebAssembly."
+            },
+            "support": {
+                "question": "Come posso segnalare un problema o proporre una funzionalità?",
+                "answer": "Puoi aprire una segnalazione (issue) sul nostro repository GitHub. Il progetto è open source e aperto ai contributi."
+            }
+        }
+    },
+    "builder": {
+        "title": "Editor del curriculum",
+        "languageMismatch": "Questo curriculum è in {language}.",
+        "pageTitle": "Generatore di curriculum gratuito - Crea e scarica curriculum in PDF | Senza registrazione",
+        "pageDescription": "Crea il tuo curriculum e scaricalo come PDF professionale, completamente gratis. Nessun account, nessuna filigrana, nessun limite. Anteprima in tempo reale, generazione immediata e dati sul tuo dispositivo.",
+        "sections": "Sezioni del curriculum",
+        "resumePreview": "Anteprima curriculum",
+        "noResumeSelected": "Nessun curriculum selezionato",
+        "noResumeDescription": "Per iniziare a creare il tuo curriculum, devi prima crearne o selezionarne uno. Vai alla pagina dei tuoi curriculum per iniziare.",
+        "goToResumesPage": "Vai ai curriculum",
+        "defaultTitle": "Resume For Free",
+        "expand": "Espandi",
+        "collapse": "Comprimi",
+        "syncToCloud": "Sincronizza su cloud",
+        "updateCloud": "Aggiorna cloud",
+        "syncingToCloud": "Sincronizzazione su cloud in corso...",
+        "updatingCloud": "Aggiornamento cloud in corso...",
+        "update": "Aggiorna",
+        "syncing": "Sincronizzazione in corso...",
+        "updating": "Aggiornamento in corso...",
+        "preview": "Anteprima",
+        "settings": "Impostazioni curriculum",
+        "download": "Scarica",
+        "downloadPDF": "PDF",
+        "downloadAs": "Scarica come {format}",
+        "downloadAsSVG": "Scarica come SVG",
+        "downloadAsTypst": "Scarica come Typst",
+        "downloadAsText": "Scarica come testo",
+        "template": "Modello",
+        "loadingPreview": "Caricamento anteprima",
+        "loadingPreviewDescription": "Attendere: il caricamento del modulo e del compilatore Typst può richiedere tempo su connessioni lente...",
+        "previewError": "Impossibile generare l'anteprima. Verifica che non siano presenti caratteri insoliti.",
+        "initializingTypst": "Inizializzazione di Typst",
+        "settingUpCompiler": "Configurazione del compilatore in corso...",
+        "zoomControls": {
+            "zoomIn": "Ingrandisci",
+            "zoomOut": "Rimpicciolisci",
+            "resetZoom": "Reimposta zoom"
+        },
+        "previewErrorDetailed": "Anteprima non riuscita: {detail}",
+        "zoomIn": "Ingrandisci",
+        "zoomOut": "Rimpicciolisci",
+        "downloadOptions": "Opzioni di download"
+    },
+    "settings": {
+        "title": "Impostazioni curriculum",
+        "description": "Personalizza l'aspetto del tuo curriculum",
+        "template": {
+            "label": "Modello",
+            "placeholder": "Seleziona un modello",
+            "description": "Scegli il modello di layout per il tuo curriculum"
+        },
+        "font": {
+            "label": "Carattere",
+            "placeholder": "Seleziona un carattere",
+            "description": "Scegli il tipo di carattere per il tuo curriculum"
+        },
+        "fontSize": {
+            "label": "Dimensione del carattere",
+            "description": "Regola la dimensione di base del carattere (predefinita: 14pt)"
+        },
+        "language": {
+            "label": "Lingua",
+            "description": "Scegli la lingua per il tuo curriculum"
+        },
+        "sectionHeaderLine": {
+            "label": "Linea di separazione intestazione",
+            "description": "Aggiunge una sottile linea di divisione sotto ogni titolo di sezione"
+        }
+    },
+    "forms": {
+        "personalInfo": {
+            "title": "Informazioni personali",
+            "profile": "Profilo",
+            "firstName": "Nome",
+            "lastName": "Cognome",
+            "phone": "Numero di telefono",
+            "position": "Ruolo / Posizione",
+            "summary": "Profilo professionale",
+            "socialLinks": "Social e collegamenti",
+            "addSocialLink": "Aggiungi collegamento",
+            "socialLinksEmpty": "Nessun collegamento inserito. Fai clic su 'Aggiungi collegamento' per iniziare.",
+            "platform": "Piattaforma",
+            "url": "URL",
+            "customLabel": "Etichetta personalizzata",
+            "selectPlatform": "Seleziona piattaforma",
+            "photo": {
+                "label": "Foto del profilo",
+                "upload": "Carica foto",
+                "remove": "Rimuovi",
+                "roundedToggle": "Foto rotonda",
+                "invalidType": "Il file deve essere in formato JPG o PNG",
+                "tooLarge": "Il file deve avere una dimensione inferiore a 512 KB",
+                "cropTitle": "Ritaglia la tua foto",
+                "constraints": "JPG o PNG, massimo 512 KB"
+            }
+        },
+        "experience": {
+            "title": "Esperienza lavorativa",
+            "addExperience": "Aggiungi esperienza",
+            "emptyMessage": "Nessuna esperienza lavorativa inserita. Fai clic su 'Aggiungi esperienza'.",
+            "deleteConfirm": {
+                "title": "Elimina esperienza",
+                "message": "Sei sicuro di voler eliminare questa esperienza lavorativa? Questa azione non può essere annullata."
+            }
+        },
+        "internships": {
+            "title": "Tirocini",
+            "addInternship": "Aggiungi tirocinio",
+            "emptyMessage": "Nessun tirocinio inserito. Fai clic su 'Aggiungi tirocinio'.",
+            "deleteConfirm": {
+                "title": "Elimina tirocinio",
+                "message": "Sei sicuro di voler eliminare questo tirocinio? Questa azione non può essere annullata."
+            }
+        },
+        "education": {
+            "title": "Istruzione e formazione",
+            "addEducation": "Aggiungi istruzione",
+            "emptyMessage": "Nessun titolo di studio inserito. Fai clic su 'Aggiungi istruzione'.",
+            "institution": "Istituto / Università",
+            "degree": "Titolo di studio",
+            "fieldOfStudy": "Campo di studi",
+            "graduationScore": "Votazione finale",
+            "deleteConfirm": {
+                "title": "Elimina istruzione",
+                "message": "Sei sicuro di voler eliminare questo percorso di studi? Questa azione non può essere annullata."
+            }
+        },
+        "skills": {
+            "title": "Competenze",
+            "addSkill": "Aggiungi competenza",
+            "emptyMessage": "Nessuna competenza inserita. Fai clic su 'Aggiungi competenza'.",
+            "skillTitle": "Competenza / Categoria",
+            "column": "Colonna",
+            "deleteConfirm": {
+                "title": "Elimina competenza",
+                "message": "Sei sicuro di voler eliminare questa competenza? Questa azione non può essere annullata."
+            }
+        },
+        "projects": {
+            "title": "Progetti",
+            "addProject": "Aggiungi progetto",
+            "emptyMessage": "Aggiungi i tuoi progetti più rilevanti per mostrare il tuo lavoro.",
+            "projectTitle": "Titolo del progetto",
+            "projectUrl": "URL del progetto",
+            "links": "Collegamenti",
+            "addLink": "Aggiungi link",
+            "removeLink": "Rimuovi link",
+            "linkLabel": "Etichetta (es. GitHub)",
+            "linkUrl": "URL",
+            "emptyLinks": "Nessun link. Aggiungi GitHub, demo live, articoli di blog, ecc.",
+            "column": "Colonna",
+            "deleteConfirm": {
+                "title": "Elimina progetto",
+                "message": "Sei sicuro di voler eliminare questo progetto? Questa azione non può essere annullata."
+            }
+        },
+        "languages": {
+            "title": "Lingue",
+            "addLanguage": "Aggiungi lingua",
+            "emptyMessage": "Nessuna lingua inserita. Fai clic su 'Aggiungi lingua'.",
+            "languageName": "Lingua",
+            "proficiency": "Livello di competenza",
+            "column": "Colonna",
+            "deleteConfirm": {
+                "title": "Elimina lingua",
+                "message": "Sei sicuro di voler eliminare questa lingua? Questa azione non può essere annullata."
+            }
+        },
+        "volunteering": {
+            "title": "Volontariato",
+            "addVolunteering": "Aggiungi esperienza di volontariato",
+            "emptyMessage": "Nessuna esperienza di volontariato inserita. Fai clic su 'Aggiungi esperienza di volontariato'.",
+            "organization": "Organizzazione",
+            "column": "Colonna",
+            "deleteConfirm": {
+                "title": "Elimina volontariato",
+                "message": "Sei sicuro di voler eliminare questa esperienza di volontariato? Questa azione non può essere annullata."
+            }
+        },
+        "certificates": {
+            "title": "Certificazioni",
+            "addCertificate": "Aggiungi certificazione",
+            "emptyMessage": "Nessuna certificazione inserita. Fai clic su 'Aggiungi certificazione'.",
+            "certificateTitle": "Titolo del certificato",
+            "issuer": "Ente emittente",
+            "date": "Data di rilascio",
+            "url": "URL del certificato",
+            "column": "Colonna",
+            "deleteConfirm": {
+                "title": "Elimina certificato",
+                "message": "Sei sicuro di voler eliminare questo certificato? Questa azione non può essere annullata."
+            }
+        }
+    },
+    "validation": {
+        "required": "Questo campo è obbligatorio",
+        "email": "Inserisci un indirizzo email valido",
+        "url": "Inserisci un URL valido",
+        "invalidEmail": "Inserisci un'email valida",
+        "passwordRequired": "La password è obbligatoria",
+        "nameRequired": "Il nome è obbligatorio",
+        "passwordMinLength": "La password deve contenere almeno 6 caratteri"
+    },
+    "notifications": {
+        "resumeCreated": "Curriculum creato con successo",
+        "resumeDeleted": "Curriculum eliminato con successo",
+        "resumeDuplicated": "Curriculum duplicato con successo",
+        "dataImported": "Dati importati con successo",
+        "dataExported": "Dati esportati con successo",
+        "settingsReset": "Impostazioni ripristinate ai valori predefiniti",
+        "autoSyncedToCloud": "{count} curriculum salvato nel cloud | {count} curriculum salvati nel cloud",
+        "cloudLimitReached": "Limite cloud raggiunto: {count} curriculum mantenuto in locale | Limite cloud raggiunto: {count} curriculum mantenuti in locale",
+        "updateAvailable": "È disponibile una nuova versione",
+        "updateAvailableDescription": "Ricarica per caricare gli ultimi miglioramenti.",
+        "updateRefresh": "Ricarica"
+    },
+    "platforms": {
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "twitter": "X (Twitter)",
+        "portfolio": "Portfolio",
+        "dribbble": "Dribbble",
+        "medium": "Medium",
+        "devto": "Dev.to",
+        "personal": "Personale",
+        "other": "Altro"
+    },
+    "template": {
+        "at": " presso ",
+        "present": "Presente",
+        "grade": "Votazione:",
+        "separator": ", ",
+        "from": " da "
+    },
+    "auth": {
+        "signIn": "Accedi",
+        "signUp": "Registrati",
+        "signOut": "Esci",
+        "createAccount": "Crea account",
+        "password": "Password",
+        "confirmPassword": "Conferma password",
+        "currentPassword": "Password attuale",
+        "newPassword": "Nuova password",
+        "enterEmail": "Inserisci la tua email",
+        "enterPassword": "Inserisci la tua password",
+        "enterName": "Inserisci il tuo nome",
+        "enterCurrentPassword": "Inserisci la tua password attuale",
+        "enterNewPassword": "Inserisci la tua nuova password",
+        "confirmNewPassword": "Conferma la nuova password",
+        "createPasswordPlaceholder": "Crea una password (min. 6 caratteri)",
+        "confirmPasswordPlaceholder": "Conferma la tua password",
+        "signInDescription": "Accedi al tuo account per visualizzare i tuoi curriculum",
+        "createAccountDescription": "Crea un account gratuito per salvare e sincronizzare i tuoi curriculum",
+        "dontHaveAccount": "Non hai un account?",
+        "alreadyHaveAccount": "Hai già un account?",
+        "passwordsDoNotMatch": "Le password non corrispondono",
+        "loginFailed": "Accesso non riuscito",
+        "registrationFailed": "Registrazione non riuscita",
+        "accountCreatedSuccess": "Account creato con successo! Reindirizzamento...",
+        "passwordChangedSuccess": "Password modificata con successo",
+        "passwordChangeError": "Modifica password non riuscita",
+        "currentPasswordRequired": "La password attuale è obbligatoria",
+        "newPasswordRequired": "La nuova password è obbligatoria",
+        "newPasswordMinLength": "La nuova password deve contenere almeno 8 caratteri",
+        "newPasswordsDoNotMatch": "Le nuove password non corrispondono",
+        "changingPassword": "Modifica password in corso...",
+        "changePassword": "Cambia password",
+        "clearForm": "Cancella modulo",
+        "passwordMinLengthHint": "La password deve contenere almeno 8 caratteri",
+        "forgotPassword": "Password dimenticata?",
+        "forgotPasswordTitle": "Reimposta la tua password",
+        "forgotPasswordDescription": "Inserisci il tuo indirizzo email e ti invieremo un link per reimpostare la password",
+        "sendResetLink": "Invia link di reimpostazione",
+        "sendingResetLink": "Invio in corso...",
+        "resetLinkSent": "Link inviato!",
+        "resetLinkSentDescription": "Controlla la tua casella email per reimpostare la password. Verifica anche nello spam.",
+        "resetPassword": "Reimposta password",
+        "resettingPassword": "Reimpostazione in corso...",
+        "resetPasswordDescription": "Inserisci la tua nuova password qui sotto",
+        "resetPasswordSuccess": "Password reimpostata con successo! Reindirizzamento...",
+        "resetPasswordError": "Reimpostazione password non riuscita",
+        "invalidResetLink": "Link di reimpostazione non valido o scaduto",
+        "backToSignIn": "Torna all'accesso",
+        "tooManyRequests": "Troppe richieste. Riprova più tardi.",
+        "rateLimitWait": "Attendi prima di richiedere un altro link di reimpostazione.",
+        "continueWithGoogle": "Continua con Google",
+        "orContinueWith": "oppure continua con",
+        "googleOAuthFailed": "Accesso con Google non riuscito. Riprova.",
+        "googleNoEmail": "L'account Google non ha fornito un indirizzo email.",
+        "googleHandlerError": "Si è verificato un errore durante l'accesso con Google.",
+        "googleUserCreationFailed": "Impossibile creare l'account dal profilo Google.",
+        "togglePassword": "Mostra/nascondi password"
+    },
+    "profile": {
+        "title": "Impostazioni profilo",
+        "description": "Gestisci le impostazioni e le preferenze del tuo account",
+        "personalInformation": "Informazioni personali",
+        "viewAndManage": "Visualizza e gestisci i dettagli del tuo account",
+        "notProvided": "Non fornito",
+        "accountInformation": "Informazioni account",
+        "accountInfoDescription": "Il tuo account ti consente di sincronizzare fino a 3 curriculum nel cloud.",
+        "updatePasswordDescription": "Aggiorna la tua password per proteggere il tuo account",
+        "pleaseFixErrors": "Correggi i seguenti errori:"
+    },
+    "resumes": {
+        "pageTitle": "I tuoi curriculum - Crea e gestisci curriculum gratuiti | Resume For Free",
+        "pageDescription": "Gestisci curriculum illimitati in un unico posto. Crea, modifica, duplica e organizza curriculum professionali gratis. Nessun limite di spazio, massima privacy.",
+        "title": "I tuoi curriculum",
+        "resumeCount": {
+            "total": "totale",
+            "of": "di",
+            "resume": "curriculum",
+            "resumes": "curriculum"
+        },
+        "actions": {
+            "new": "Nuovo",
+            "import": "Importa",
+            "cloudSync": "Sincronizzazione cloud",
+            "createNew": "Crea nuovo curriculum",
+            "searchPlaceholder": "Cerca tra i curriculum..."
+        },
+        "banner": {
+            "saveToCloud": "Salva i tuoi curriculum nel cloud",
+            "registerPrompt": "Registrati gratuitamente per salvare fino a 3 curriculum nel cloud e accedervi da qualsiasi browser. Non perdere mai più il tuo lavoro!",
+            "registerFree": "Registrati gratis",
+            "login": "Accedi",
+            "cloudAvailable": "Spazio cloud disponibile",
+            "cloudAvailableDescription": "Ora puoi salvare fino a 3 curriculum nel cloud. Usa il pulsante 'Sincronizzazione cloud' per iniziare."
+        },
+        "status": {
+            "loading": "Caricamento curriculum in corso...",
+            "failed": "Caricamento curriculum non riuscito",
+            "active": "Attivo",
+            "synced": "Sincronizzato",
+            "notSynced": "Non sincronizzato",
+            "updated": "Aggiornato"
+        },
+        "card": {
+            "editNameTitle": "Modifica nome",
+            "noName": "Nessun nome specificato",
+            "noPosition": "Nessuna posizione specificata",
+            "noSections": "Nessuna sezione aggiunta",
+            "experience": "esperienza",
+            "experiences": "esperienze",
+            "education": "istruzione",
+            "skill": "competenza",
+            "skills": "competenze",
+            "build": "Modifica",
+            "copy": "Duplica",
+            "exportTitle": "Esporta curriculum",
+            "syncTitle": "Sincronizza su cloud",
+            "disableSync": "Disattiva sincronizzazione cloud",
+            "delete": "Elimina",
+            "downloadPdf": "Scarica PDF",
+            "downloadPdfFailed": "Impossibile generare il PDF. Riprova."
+        },
+        "empty": {
+            "noResumes": "Nessun curriculum presente",
+            "createFirst": "Crea il tuo primo curriculum per iniziare",
+            "createFirstButton": "Crea il tuo primo curriculum",
+            "noResults": "Nessun curriculum trovato",
+            "noResultsMessage": "Nessun curriculum corrisponde alla tua ricerca per",
+            "clearSearch": "Cancella ricerca",
+            "createNew": "Crea nuovo curriculum"
+        },
+        "modals": {
+            "firstTime": {
+                "title": "Salvare nel cloud?",
+                "description": "I tuoi dati vengono salvati localmente. Crea un account gratuito per sincronizzarli tra dispositivi.",
+                "accessAnywhere": "Accedi da qualsiasi dispositivo",
+                "autoBackup": "Backup automatico",
+                "freeResumes": "Fino a 3 curriculum gratuiti",
+                "signUp": "Registrati",
+                "login": "Accedi",
+                "continueLocally": "Salva nel browser locale",
+                "dontShowAgain": "Non mostrare più"
+            },
+            "create": {
+                "title": "Crea nuovo curriculum",
+                "resumeName": "Nome del curriculum",
+                "enterName": "es. Software Engineer 2026",
+                "navigateToBuilder": "Vai all'editor dopo la creazione",
+                "saveToCloud": "Salva nel cloud",
+                "slotsAvailableMessage": "{remaining} di {limit} spazi cloud disponibili",
+                "noSlotsAvailableMessage": "Nessuno spazio cloud disponibile ({count}/{limit} utilizzati)",
+                "createButton": "Crea curriculum",
+                "resumeLanguage": "Lingua del curriculum"
+            },
+            "copy": {
+                "title": "Copia curriculum",
+                "resumeName": "Nome del curriculum",
+                "enterName": "Inserisci nome curriculum",
+                "navigateToBuilder": "Vai all'editor dopo la copia",
+                "copyButton": "Copia curriculum"
+            },
+            "export": {
+                "title": "Esporta curriculum",
+                "description": "Seleziona i curriculum da esportare in formato JSON",
+                "infoMessage": "Esporta i dati dei curriculum come file JSON per backup o trasferimento. Per scaricare i PDF, usa il pulsante di download nell'editor.",
+                "selectAll": "Seleziona tutti",
+                "selected": "selezionati",
+                "selectedCount": "{count} {countPlural} selezionati"
+            },
+            "cloudSync": {
+                "title": "Sincronizzazione cloud",
+                "description": "Hai {count}/{limit} curriculum nel cloud. {remaining} {remainingPlural} rimanenti.",
+                "slot": "spazio",
+                "slots": "spazi",
+                "allSynced": "Tutti i curriculum sono sincronizzati nel cloud",
+                "unsyncHint": "Usa 'Disattiva sincronizzazione cloud' dal menu per rimuovere la sincronizzazione.",
+                "limitExceeded": "Limite di spazio superato",
+                "limitExceededMessage": "Stai tentando di sincronizzare {count} nuovi {countPlural}, ma hai solo {remaining} {remainingPlural} rimanenti.",
+                "deselectAll": "Deseleziona tutti",
+                "selectAll": "Seleziona tutti",
+                "syncButton": "Sincronizza {count} {countPlural}",
+                "exp": "esp",
+                "edu": "istr",
+                "projects": "progetti",
+                "noSections": "Nessuna sezione"
+            },
+            "cloudSyncPrompt": {
+                "title": "Salvare il curriculum nel cloud?",
+                "description": "Il tuo curriculum è salvato localmente. Desideri sincronizzarlo nel cloud?",
+                "benefits": {
+                    "title": "Vantaggi della sincronizzazione cloud",
+                    "accessAnywhere": "Accedi da qualsiasi dispositivo",
+                    "autoBackup": "Backup automatico e protezione",
+                    "realTimeSync": "Sincronizzazione in tempo reale",
+                    "neverLose": "Non perdi mai il tuo lavoro"
+                },
+                "limit": {
+                    "title": "Limite spazio cloud",
+                    "description": "Puoi salvare fino a 3 curriculum nel cloud con il tuo account gratuito. Attualmente hai {remaining} spazio/i disponibile/i."
+                },
+                "local": {
+                    "title": "Continua con la memoria locale",
+                    "description": "Il tuo curriculum rimarrà salvato localmente in questo browser. Puoi attivare la sincronizzazione cloud in qualsiasi momento."
+                },
+                "dontAskAgain": "Non chiedermelo più per questo curriculum",
+                "enableSync": "Attiva sincronizzazione cloud",
+                "keepLocal": "Mantieni solo in locale"
+            },
+            "delete": {
+                "title": "Elimina curriculum",
+                "message": "Sei sicuro di voler eliminare \"{name}\"? Questa azione non può essere annullata.",
+                "confirmButton": "Elimina"
+            },
+            "disableSync": {
+                "title": "Disattiva sincronizzazione cloud",
+                "message": "Sei sicuro di voler rimuovere \"{name}\" dal cloud? Il curriculum rimarrà sul tuo dispositivo.",
+                "confirmButton": "Rimuovi dal cloud"
+            },
+            "cancel": "Annulla",
+            "import": {
+                "title": "Importa curriculum",
+                "foundCount": "{count} curriculum trovati nel file",
+                "duplicateWarning": "{count} curriculum hanno lo stesso nome di quelli esistenti.",
+                "itemCount": "{count} elementi",
+                "selectedCount": "{count} curriculum selezionati per l'importazione",
+                "importSelected": "Importa selezionati"
+            }
+        },
+        "toast": {
+            "creatingInCloud": "Creazione curriculum nel cloud in corso...",
+            "createdAndSaved": "Curriculum \"{name}\" creato e salvato nel cloud",
+            "createdLocallyFailed": "Curriculum \"{name}\" creato localmente, ma salvataggio nel cloud non riuscito: {error}",
+            "loginToSaveCloud": "Accedi per salvare i curriculum nel cloud",
+            "created": "Curriculum \"{name}\" creato",
+            "deletedFromCloud": "Curriculum \"{name}\" eliminato dal cloud",
+            "deletedLocallyFailed": "Eliminato localmente, ma eliminazione dal cloud non riuscita: {error}",
+            "deleted": "Curriculum \"{name}\" eliminato",
+            "loginToSync": "Accedi per sincronizzare i curriculum",
+            "resumeNotFound": "Curriculum non trovato",
+            "syncingToCloud": "Sincronizzazione curriculum su cloud in corso...",
+            "updatedInCloud": "Curriculum \"{name}\" aggiornato nel cloud",
+            "syncedNewCopy": "Curriculum \"{name}\" sincronizzato nel cloud (creata nuova copia)",
+            "syncedToCloud": "Curriculum \"{name}\" sincronizzato nel cloud",
+            "syncFailed": "Sincronizzazione non riuscita: {error}",
+            "removedFromCloud": "\"{name}\" rimosso dal cloud e sincronizzazione disattivata",
+            "removeFailed": "Rimozione dal cloud non riuscita: {error}. Disattivata localmente.",
+            "syncingMultiple": "Sincronizzazione di {count} curriculum{plural} in corso...",
+            "syncedMultiple": "{count} curriculum{plural} sincronizzati con successo nel cloud",
+            "syncMultipleFailed": "Sincronizzazione curriculum non riuscita: {error}",
+            "resumeNotSynced": "Il curriculum non è sincronizzato nel cloud"
+        },
+        "notify": {
+            "created": "\"{name}\" creato",
+            "createdAndSaved": "\"{name}\" creato e salvato nel cloud",
+            "createdLocallyFailed": "\"{name}\" salvato solo su questo dispositivo: {error}",
+            "creatingInCloud": "Creazione del curriculum nel cloud…",
+            "deleted": "Curriculum eliminato",
+            "deletedFromCloud": "Curriculum eliminato dal cloud",
+            "deletedLocallyFailed": "Eliminato su questo dispositivo, ma rimane la copia cloud: {error}",
+            "loginToSaveCloud": "Accedi per salvare questo curriculum nel cloud",
+            "loginToSync": "Accedi per sincronizzare i tuoi curriculum",
+            "removedFromCloud": "Rimosso dal cloud",
+            "removeFailed": "Impossibile rimuovere questo curriculum dal cloud",
+            "resumeNotFound": "Curriculum non trovato",
+            "resumeNotSynced": "Questo curriculum non è ancora sincronizzato nel cloud",
+            "syncedMultiple": "{count} curriculum sincronizzati nel cloud",
+            "syncedNewCopy": "Sincronizzato come nuova copia cloud",
+            "syncedToCloud": "Sincronizzato nel cloud",
+            "syncFailed": "Sincronizzazione non riuscita. Riprova.",
+            "syncingMultiple": "Sincronizzazione di {count} curriculum in corso…",
+            "syncingToCloud": "Sincronizzazione nel cloud…",
+            "syncMultipleFailed": "Alcuni curriculum non sono stati sincronizzati",
+            "updatedInCloud": "Copia cloud aggiornata"
+        }
+    },
+    "contact": {
+        "title": "Contattaci",
+        "description": "Hai una domanda o un commento? Ci farebbe piacere sentirti. Compila il modulo sottostante e ti risponderemo al più presto.",
+        "form": {
+            "name": {
+                "placeholder": "Inserisci il tuo nome"
+            },
+            "email": {
+                "placeholder": "Inserisci il tuo indirizzo email"
+            },
+            "subject": {
+                "label": "Oggetto",
+                "placeholder": "Di cosa si tratta?"
+            },
+            "message": {
+                "label": "Messaggio",
+                "placeholder": "Raccontaci di più sulla tua richiesta o feedback..."
+            },
+            "submit": "Invia messaggio",
+            "sending": "Invio in corso..."
+        },
+        "success": {
+            "title": "Messaggio inviato con successo!",
+            "message": "Grazie per averci contattato. Ti risponderemo al più presto.",
+            "toast": "Messaggio inviato con successo",
+            "keepBuilding": "Continua a modificare"
+        },
+        "errors": {
+            "validation": "Verifica i dati inseriti e riprova",
+            "rateLimit": "Troppe richieste. Riprova tra un'ora.",
+            "generic": "Impossibile inviare il messaggio. Riprova più tardi."
+        },
+        "alternative": {
+            "text": "Puoi anche contattarci direttamente a"
+        },
+        "seo": {
+            "title": "Contattaci - Assistenza per Resume For Free | Supporto",
+            "description": "Hai bisogno di aiuto con il nostro generatore di curriculum gratuito? Contatta il team di supporto."
+        }
+    },
+    "proficiency": {
+        "native": "Madrelingua",
+        "fluent": "Fluente",
+        "proficient": "Avanzato",
+        "conversational": "Intermedio",
+        "basic": "Elementare",
+        "beginner": "Principiante"
+    },
+    "apiTokens": {
+        "title": "Token API",
+        "description": "Crea un token a breve scadenza per consentire a un agente esterno di aggiornare il tuo curriculum tramite API. I token scadono dopo 24 ore per impostazione predefinita.",
+        "name": "Nome token",
+        "namePlaceholder": "es. Agente curriculum",
+        "expiresInHours": "Scade tra (ore)",
+        "generate": "Genera token",
+        "copyNow": "Copia questo token adesso: non potrà essere mostrato di nuovo.",
+        "copied": "Copiato",
+        "empty": "Non hai ancora token API.",
+        "active": "Attivo",
+        "inactive": "Inattivo",
+        "expires": "Scadenza",
+        "lastUsed": "Ultimo utilizzo",
+        "revoke": "Revoca",
+        "loadFailed": "Impossibile caricare i token.",
+        "createFailed": "Impossibile creare il token.",
+        "revokeFailed": "Impossibile revocare il token."
+    }
+}
