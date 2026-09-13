@@ -21,6 +21,10 @@ const FONT_FILES = [
     'ar/plex-sans-arabic-bold.ttf',
     'ar/tajawal-regular.ttf',
     'ar/tajawal-bold.ttf',
+    'zh/noto-sans-sc-regular.ttf',
+    'zh/noto-sans-sc-bold.ttf',
+    'hi/noto-sans-devanagari-regular.ttf',
+    'hi/noto-sans-devanagari-bold.ttf',
 ];
 
 const wasmPath = resolve(root, 'node_modules/@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm');

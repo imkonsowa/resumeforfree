@@ -280,6 +280,12 @@ export const availableFonts = {
         { name: 'IBM Plex Arabic', family: 'IBM Plex Sans Arabic' },
         { name: 'Tajawal', family: 'Tajawal' },
     ],
+    zh: [
+        { name: 'Noto Sans SC', family: 'Noto Sans SC' },
+    ],
+    hi: [
+        { name: 'Noto Sans Devanagari', family: 'Noto Sans Devanagari' },
+    ],
 };
 
 const LEGACY_FONT_ALIASES: Record<string, string> = {
