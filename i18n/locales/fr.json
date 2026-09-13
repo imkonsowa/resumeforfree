@@ -709,11 +709,13 @@
             "skill": "compétence",
             "skills": "compétences",
             "build": "Créer",
-            "copy": "Copier",
+            "copy": "Dupliquer",
             "exportTitle": "Exporter le CV",
             "syncTitle": "Synchroniser sur le cloud",
             "disableSync": "Désactiver la Synchro Cloud",
-            "delete": "Supprimer"
+            "delete": "Supprimer",
+            "downloadPdf": "Télécharger le PDF",
+            "downloadPdfFailed": "Impossible de générer le PDF. Réessayez."
         },
         "empty": {
             "noResumes": "Aucun CV pour l'instant",
@@ -843,6 +845,29 @@
             "syncedMultiple": "{count} CV synchronisés avec succès sur le cloud",
             "syncMultipleFailed": "Échec de la synchronisation des CV : {error}",
             "resumeNotSynced": "Le CV n'est pas synchronisé sur le cloud"
+        },
+        "notify": {
+            "created": "« {name} » créé",
+            "createdAndSaved": "« {name} » créé et enregistré dans le cloud",
+            "createdLocallyFailed": "« {name} » n'a été enregistré que sur cet appareil : {error}",
+            "creatingInCloud": "Création de votre CV dans le cloud…",
+            "deleted": "CV supprimé",
+            "deletedFromCloud": "CV supprimé du cloud",
+            "deletedLocallyFailed": "Supprimé sur cet appareil, mais la copie cloud subsiste : {error}",
+            "loginToSaveCloud": "Connectez-vous pour enregistrer ce CV dans le cloud",
+            "loginToSync": "Connectez-vous pour synchroniser vos CV",
+            "removedFromCloud": "Retiré du cloud",
+            "removeFailed": "Impossible de retirer ce CV du cloud",
+            "resumeNotFound": "CV introuvable",
+            "resumeNotSynced": "Ce CV n'est pas encore synchronisé avec le cloud",
+            "syncedMultiple": "{count} CV synchronisés avec le cloud",
+            "syncedNewCopy": "Synchronisé en tant que nouvelle copie cloud",
+            "syncedToCloud": "Synchronisé avec le cloud",
+            "syncFailed": "Échec de la synchronisation. Réessayez.",
+            "syncingMultiple": "Synchronisation de {count} CV…",
+            "syncingToCloud": "Synchronisation avec le cloud…",
+            "syncMultipleFailed": "Certains CV n'ont pas pu être synchronisés",
+            "updatedInCloud": "Copie cloud mise à jour"
         }
     },
     "contact": {

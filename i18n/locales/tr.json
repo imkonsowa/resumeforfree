@@ -709,11 +709,13 @@
             "skill": "beceri",
             "skills": "beceri",
             "build": "Oluştur",
-            "copy": "Kopyala",
+            "copy": "Çoğalt",
             "exportTitle": "Özgeçmişi dışa aktar",
             "syncTitle": "Buluta senkronize et",
             "disableSync": "Bulut Senkronizasyonunu Devre Dışı Bırak",
-            "delete": "Sil"
+            "delete": "Sil",
+            "downloadPdf": "PDF'yi indir",
+            "downloadPdfFailed": "PDF oluşturulamadı. Lütfen tekrar deneyin."
         },
         "empty": {
             "noResumes": "Henüz özgeçmiş yok",
@@ -843,6 +845,29 @@
             "syncedMultiple": "{count} özgeçmiş başarıyla buluta senkronize edildi",
             "syncMultipleFailed": "Özgeçmişler senkronize edilemedi: {error}",
             "resumeNotSynced": "Özgeçmiş buluta senkronize edilmedi"
+        },
+        "notify": {
+            "created": "\"{name}\" oluşturuldu",
+            "createdAndSaved": "\"{name}\" oluşturuldu ve buluta kaydedildi",
+            "createdLocallyFailed": "\"{name}\" yalnızca bu cihaza kaydedildi: {error}",
+            "creatingInCloud": "Özgeçmişiniz bulutta oluşturuluyor…",
+            "deleted": "Özgeçmiş silindi",
+            "deletedFromCloud": "Özgeçmiş buluttan silindi",
+            "deletedLocallyFailed": "Bu cihazdan silindi, ancak bulut kopyası duruyor: {error}",
+            "loginToSaveCloud": "Bu özgeçmişi buluta kaydetmek için giriş yapın",
+            "loginToSync": "Özgeçmişlerinizi eşitlemek için giriş yapın",
+            "removedFromCloud": "Buluttan kaldırıldı",
+            "removeFailed": "Bu özgeçmiş buluttan kaldırılamadı",
+            "resumeNotFound": "Özgeçmiş bulunamadı",
+            "resumeNotSynced": "Bu özgeçmiş henüz bulutla eşitlenmedi",
+            "syncedMultiple": "{count} özgeçmiş bulutla eşitlendi",
+            "syncedNewCopy": "Yeni bir bulut kopyası olarak eşitlendi",
+            "syncedToCloud": "Bulutla eşitlendi",
+            "syncFailed": "Eşitleme başarısız. Lütfen tekrar deneyin.",
+            "syncingMultiple": "{count} özgeçmiş eşitleniyor…",
+            "syncingToCloud": "Bulutla eşitleniyor…",
+            "syncMultipleFailed": "Bazı özgeçmişler eşitlenemedi",
+            "updatedInCloud": "Bulut kopyası güncellendi"
         }
     },
     "contact": {

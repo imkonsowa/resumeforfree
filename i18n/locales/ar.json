@@ -709,11 +709,13 @@
             "skill": "مهارة",
             "skills": "مهارات",
             "build": "إنشاء",
-            "copy": "نسخ",
+            "copy": "نسخة مطابقة",
             "exportTitle": "تصدير السيرة الذاتية",
             "syncTitle": "مزامنة إلى السحابة",
             "disableSync": "إيقاف المزامنة السحابية",
-            "delete": "حذف"
+            "delete": "حذف",
+            "downloadPdf": "تنزيل PDF",
+            "downloadPdfFailed": "تعذر إنشاء ملف PDF. حاول مرة أخرى."
         },
         "empty": {
             "noResumes": "لا توجد أى سير ذاتية حتى الآن",
@@ -843,6 +845,29 @@
             "syncedMultiple": "تمت مزامنة {count} سير ذاتية بنجاح",
             "syncMultipleFailed": "فشلت مزامنة السير الذاتية: {error}",
             "resumeNotSynced": "السيرة الذاتية غير متزامنة مع السحابة"
+        },
+        "notify": {
+            "created": "تم إنشاء \"{name}\"",
+            "createdAndSaved": "تم إنشاء \"{name}\" وحفظها في السحابة",
+            "createdLocallyFailed": "تم حفظ \"{name}\" على هذا الجهاز فقط: {error}",
+            "creatingInCloud": "جارٍ إنشاء سيرتك الذاتية في السحابة…",
+            "deleted": "تم حذف السيرة الذاتية",
+            "deletedFromCloud": "تم حذف السيرة الذاتية من السحابة",
+            "deletedLocallyFailed": "تم الحذف من هذا الجهاز، لكن النسخة السحابية ما زالت موجودة: {error}",
+            "loginToSaveCloud": "سجّل الدخول لحفظ هذه السيرة في السحابة",
+            "loginToSync": "سجّل الدخول لمزامنة سيرك الذاتية",
+            "removedFromCloud": "تمت الإزالة من السحابة",
+            "removeFailed": "تعذرت إزالة هذه السيرة من السحابة",
+            "resumeNotFound": "لم يتم العثور على السيرة الذاتية",
+            "resumeNotSynced": "لم تتم مزامنة هذه السيرة مع السحابة بعد",
+            "syncedMultiple": "تمت مزامنة {count} سيرة ذاتية مع السحابة",
+            "syncedNewCopy": "تمت المزامنة كنسخة سحابية جديدة",
+            "syncedToCloud": "تمت المزامنة مع السحابة",
+            "syncFailed": "فشلت المزامنة. حاول مرة أخرى.",
+            "syncingMultiple": "جارٍ مزامنة {count} سيرة ذاتية…",
+            "syncingToCloud": "جارٍ المزامنة مع السحابة…",
+            "syncMultipleFailed": "تعذرت مزامنة بعض السير الذاتية",
+            "updatedInCloud": "تم تحديث النسخة السحابية"
         }
     },
     "contact": {

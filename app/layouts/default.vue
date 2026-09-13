@@ -128,6 +128,7 @@ watch(
                         <UButton
                             :to="localePath('/builder')"
                             :label="t('navigation.startBuilding')"
+                            icon="i-lucide-file-plus"
                             color="secondary"
                             size="sm"
                             class="hidden sm:inline-flex"
@@ -174,7 +175,7 @@ watch(
                             <UButton
                                 :to="localePath('/builder')"
                                 :label="t('navigation.startBuilding')"
-                                trailing-icon="i-lucide-arrow-right"
+                                icon="i-lucide-file-plus"
                                 color="secondary"
                                 size="lg"
                                 block

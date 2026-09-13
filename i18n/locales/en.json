@@ -709,11 +709,13 @@
             "skill": "skill",
             "skills": "skills",
             "build": "Build",
-            "copy": "Copy",
+            "copy": "Duplicate",
             "exportTitle": "Export resume",
             "syncTitle": "Sync to cloud",
             "disableSync": "Disable Cloud Sync",
-            "delete": "Delete"
+            "delete": "Delete",
+            "downloadPdf": "Download PDF",
+            "downloadPdfFailed": "Could not generate the PDF. Please try again."
         },
         "empty": {
             "noResumes": "No resumes yet",
@@ -843,6 +845,29 @@
             "syncedMultiple": "Successfully synced {count} resume{plural} to cloud",
             "syncMultipleFailed": "Failed to sync resumes: {error}",
             "resumeNotSynced": "Resume is not synced to cloud"
+        },
+        "notify": {
+            "created": "\"{name}\" created",
+            "createdAndSaved": "\"{name}\" created and saved to the cloud",
+            "createdLocallyFailed": "\"{name}\" was saved on this device only: {error}",
+            "creatingInCloud": "Creating your resume in the cloud…",
+            "deleted": "Resume deleted",
+            "deletedFromCloud": "Resume deleted from the cloud",
+            "deletedLocallyFailed": "Deleted on this device, but the cloud copy remains: {error}",
+            "loginToSaveCloud": "Sign in to save this resume to the cloud",
+            "loginToSync": "Sign in to sync your resumes",
+            "removedFromCloud": "Removed from the cloud",
+            "removeFailed": "Could not remove this resume from the cloud",
+            "resumeNotFound": "Resume not found",
+            "resumeNotSynced": "This resume is not synced to the cloud yet",
+            "syncedMultiple": "{count} resumes synced to the cloud",
+            "syncedNewCopy": "Synced as a new cloud copy",
+            "syncedToCloud": "Synced to the cloud",
+            "syncFailed": "Sync failed. Please try again.",
+            "syncingMultiple": "Syncing {count} resumes…",
+            "syncingToCloud": "Syncing to the cloud…",
+            "syncMultipleFailed": "Some resumes could not be synced",
+            "updatedInCloud": "Cloud copy updated"
         }
     },
     "contact": {
