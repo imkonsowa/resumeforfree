@@ -336,7 +336,7 @@ const debouncedGeneratePreview = useDebounceFn(() => {
 }, 100);
 const activeResumeLanguage = computed(() => resumeStore.activeResumeLanguage);
 watch(
-    [resumeData, selectedTemplate, selectedFont, fontSize, photoShape, showSectionHeaderLine, activeResumeLanguage],
+    [resumeData, selectedTemplate, selectedFont, fontSize, photoShape, showSectionHeaderLine, activeResumeLanguage, () => settingsStore.lastUpdated],
     () => {
         debouncedGeneratePreview();
     },

@@ -120,8 +120,11 @@ if (import.meta.client && resumeStore.activeResumeLanguage) {
 
 watch(
     () => resumeStore.activeResumeLanguage,
-    (lang) => {
-        if (lang) loadLocaleMessages(lang).catch(err => console.error('[builder] locale load failed:', err));
+    async (lang) => {
+        if (lang) {
+            await loadLocaleMessages(lang).catch(err => console.error('[builder] locale load failed:', err));
+            settingsStore.updateTimestamp();
+        }
     },
 );
 
