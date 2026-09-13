@@ -1,0 +1,105 @@
+{
+    "version": "v1",
+    "firstName": "Ahmet",
+    "lastName": "Yılmaz",
+    "email": "ahmet.yilmaz@example.com",
+    "phone": "+90 212 123 4567",
+    "position": "Kıdemli Yazılım Mühendisi",
+    "location": "İstanbul, Türkiye",
+    "summary": "Fintek, e-ticaret, veri hatları ve yapay zeka sistemlerinde 10 yıldan fazla backend geliştirme deneyimine sahip kıdemli yazılım mühendisi.",
+    "experiences": [
+        {
+            "company": "Delta Yazılım",
+            "position": "Kıdemli Yazılım Mühendisi",
+            "location": "İstanbul, Türkiye",
+            "startDate": "2024-07",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                { "text": "Ürün bilgileri için eşzamansız (asynchronous) dosya yükleme hattı geliştirdi." },
+                { "text": "Ödeme akışını yeniden yapılandırarak işlem süresini %65 oranında azalttı." }
+            ]
+        },
+        {
+            "company": "XYZ Teknoloji",
+            "position": "Backend Yazılım Mühendisi",
+            "location": "Ankara, Türkiye",
+            "startDate": "2022-02",
+            "endDate": "2024-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                { "text": "Golang, WebRTC ve Livekit kullanarak görüntülü görüşme platformunun geliştirilmesine katkıda bulundu." },
+                { "text": "Video konferans veri senkronizasyonu ve gecikme sorunlarını çözdü." }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "İstanbul Teknik Üniversitesi",
+            "degree": "Bilgisayar Mühendisliği Lisans",
+            "fieldOfStudy": "",
+            "location": "İstanbul, Türkiye",
+            "startDate": "2015-10",
+            "endDate": "2020-09",
+            "isPresent": false,
+            "description": "Bilgisayar mimarisi, ağ mühendisliği, dağıtık sistemler, veri yapıları ve algoritmalar üzerine yoğunlaştı.",
+            "graduationScore": "İyi Derece",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        { "title": "Programlama Dilleri", "description": "Golang, TypeScript, Python, PHP" },
+        { "title": "Yazılım Mimarisi", "description": "Mikroservisler, Modüler Monolitik, DDD, Event-Driven" },
+        { "title": "Bulut & Altyapı", "description": "Docker, Kubernetes, AWS, GCP, CI/CD" },
+        { "title": "Veritabanları", "description": "PostgreSQL, Redis, ElasticSearch, MongoDB" }
+    ],
+    "socialLinks": [
+        { "platform": "linkedin", "url": "https://linkedin.com" },
+        { "platform": "github", "url": "https://github.com" },
+        { "platform": "personal", "url": "https://example.com" }
+    ],
+    "projects": [
+        {
+            "title": "E-Ticaret Platformu",
+            "description": "Günde 100 binden fazla siparişi işleyen yüksek ölçekli e-ticaret platformunun geliştirilmesi.",
+            "startDate": "2025-01",
+            "endDate": "",
+            "isPresent": true,
+            "links": [{ "platform": "other", "url": "https://example.com", "label": "Önizleme" }],
+            "achievements": [
+                { "text": "Servisler arasında doğrudan peer-to-peer dosya paylaşım altyapısı" },
+                { "text": "Oturum senkronizasyonu için Golang ile geliştirilmiş CLI aracı" }
+            ]
+        }
+    ],
+    "languages": [
+        { "name": "Türkçe", "proficiency": "Ana Dil" },
+        { "name": "İngilizce", "proficiency": "İleri Düzey" }
+    ],
+    "certificates": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "education": 1,
+        "skills": 2,
+        "experience": 3,
+        "projects": 4,
+        "languages": 5,
+        "internships": 6,
+        "volunteering": 7,
+        "certificates": 8,
+        "socialLinks": 9
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right"
+    }
+}

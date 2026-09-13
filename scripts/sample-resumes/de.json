@@ -1,0 +1,105 @@
+{
+    "version": "v1",
+    "firstName": "Max",
+    "lastName": "Mustermann",
+    "email": "max.mustermann@example.com",
+    "phone": "+49 30 12345678",
+    "position": "Senior Softwareentwickler",
+    "location": "Berlin, Deutschland",
+    "summary": "Senior Softwareentwickler mit über 10 Jahren Erfahrung im Aufbau robuster Backend-Systeme in den Bereichen Fintech, E-Commerce, Daten-Pipelines und KI-Workflows.",
+    "experiences": [
+        {
+            "company": "Delta Technologies",
+            "position": "Senior Softwareentwickler",
+            "location": "Berlin, Deutschland",
+            "startDate": "2024-07",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                { "text": "Entwicklung einer asynchronen Pipeline für den Upload von Produktdaten." },
+                { "text": "Überarbeitung des Zahlungs-Workflows mit einer Reduzierung der Verarbeitungszeit um 65%." }
+            ]
+        },
+        {
+            "company": "XYZ Cloud",
+            "position": "Softwareentwickler Backend",
+            "location": "München, Deutschland",
+            "startDate": "2022-02",
+            "endDate": "2024-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                { "text": "Mitwirkung an einer Videokonferenz-Plattform mit Golang, WebRTC und Livekit." },
+                { "text": "Behebung komplexer Daten-Synchronisationsprobleme bei Live-Übertragungen." }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Technische Universität Berlin",
+            "degree": "Bachelor of Science in Informatik",
+            "fieldOfStudy": "",
+            "location": "Berlin, Deutschland",
+            "startDate": "2015-10",
+            "endDate": "2020-09",
+            "isPresent": false,
+            "description": "Schwerpunkte: Rechnerarchitektur, Netzwerktechnik, Verteilte Systeme, Algorithmen und Datenstrukturen.",
+            "graduationScore": "Sehr gut",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        { "title": "Programmiersprachen", "description": "Golang, TypeScript, Python, PHP" },
+        { "title": "Software-Architektur", "description": "Microservices, Modulare Monolithen, DDD, Event-Driven" },
+        { "title": "Cloud & Infrastruktur", "description": "Docker, Kubernetes, AWS, GCP, CI/CD" },
+        { "title": "Datenbanken", "description": "PostgreSQL, Redis, ElasticSearch, MongoDB" }
+    ],
+    "socialLinks": [
+        { "platform": "linkedin", "url": "https://linkedin.com" },
+        { "platform": "github", "url": "https://github.com" },
+        { "platform": "personal", "url": "https://example.com" }
+    ],
+    "projects": [
+        {
+            "title": "E-Commerce Plattform",
+            "description": "Aufbau einer hochverfügbaren E-Commerce-Plattform für über 100.000 Bestellungen täglich.",
+            "startDate": "2025-01",
+            "endDate": "",
+            "isPresent": true,
+            "links": [{ "platform": "other", "url": "https://example.com", "label": "Vorschau" }],
+            "achievements": [
+                { "text": "Direkte Peer-to-Peer Dateiverteilung zwischen Microservices" },
+                { "text": "Entwicklung eines CLI-Tools in Golang zur automatisierten Sitzungssynchronisation" }
+            ]
+        }
+    ],
+    "languages": [
+        { "name": "Deutsch", "proficiency": "Muttersprache" },
+        { "name": "Englisch", "proficiency": "Verhandlungssicher" }
+    ],
+    "certificates": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "education": 1,
+        "skills": 2,
+        "experience": 3,
+        "projects": 4,
+        "languages": 5,
+        "internships": 6,
+        "volunteering": 7,
+        "certificates": 8,
+        "socialLinks": 9
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right"
+    }
+}

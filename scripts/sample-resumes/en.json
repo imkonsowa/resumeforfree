@@ -1,0 +1,105 @@
+{
+    "version": "v1",
+    "firstName": "Omar",
+    "lastName": "Al-Masri",
+    "email": "email@example.com",
+    "phone": "+20109323456",
+    "position": "Senior Software Engineer",
+    "location": "Cairo, Egypt",
+    "summary": "Senior software engineer with 10+ years of experience in building backend system across fintech, e-commerce, data pipelines and AI workflows.",
+    "experiences": [
+        {
+            "company": "Delta",
+            "position": "Senior Software Engineer",
+            "location": "Cairo, Egypt",
+            "startDate": "2024-07",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                { "text": "Built asynchronous files upload pipeline of product information." },
+                { "text": "Refactored the payments workflow, decreasing processing time by 65%" }
+            ]
+        },
+        {
+            "company": "XYZ",
+            "position": "Senior Software Engineer",
+            "location": "Riyadh, Saudi Arabia",
+            "startDate": "2022-02",
+            "endDate": "2024-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                { "text": "Contributed to video conferencing platform using Golang, WebRTC and Livekit." },
+                { "text": "Resolved data synchronization issues in video conferencing." }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Cairo University",
+            "degree": "Bachelor of Computer Engineering",
+            "fieldOfStudy": "",
+            "location": "Cairo, Egypt",
+            "startDate": "2015-10",
+            "endDate": "2020-09",
+            "isPresent": false,
+            "description": "Studied Computer Architecture, Networks Engineering, Electronics, Signal Processing, Java, OOP, Algorithms and Data Structures.",
+            "graduationScore": "Good",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        { "title": "Programming Languages", "description": "Golang, JavaScript, Python and PHP" },
+        { "title": "Architecture", "description": "Microservices, Modular Monolithic, DDD, Event Driven" },
+        { "title": "Cloud & Infrastructure", "description": "On-Premises, Docker, Kubernetes, AWS, GCP and Airgapped" },
+        { "title": "Databases", "description": "PostgreSQL, Redis, ElasticSearch, NoSQL" }
+    ],
+    "socialLinks": [
+        { "platform": "linkedin", "url": "https://linkedin.com" },
+        { "platform": "github", "url": "https://github.com" },
+        { "platform": "personal", "url": "https://example.com" }
+    ],
+    "projects": [
+        {
+            "title": "E-Commerce Project Example",
+            "description": "Building E-commerce platform that serve 100k orders daily.",
+            "startDate": "2025-01",
+            "endDate": "",
+            "isPresent": true,
+            "links": [{ "platform": "other", "url": "https://example.com", "label": "Preview" }],
+            "achievements": [
+                { "text": "Direct files sharing between peers" },
+                { "text": "CLI built in golang for sharing files in sessions" }
+            ]
+        }
+    ],
+    "languages": [
+        { "name": "Arabic", "proficiency": "Native" },
+        { "name": "English", "proficiency": "Proficient" }
+    ],
+    "certificates": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "education": 1,
+        "skills": 2,
+        "experience": 3,
+        "projects": 4,
+        "languages": 5,
+        "internships": 6,
+        "volunteering": 7,
+        "certificates": 8,
+        "socialLinks": 9
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right"
+    }
+}
