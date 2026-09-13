@@ -9,8 +9,10 @@ import ResumesHeader from '~/components/resumes/ResumesHeader.vue';
 import ResumesGrid from '~/components/resumes/ResumesGrid.vue';
 import ResumesEmptyState from '~/components/resumes/ResumesEmptyState.vue';
 import type { ImportResumePreview, Resume } from '~/types/resume';
+import { getOgLocale } from '~/composables/useSEO';
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
+const route = useRoute();
 const notify = useNotify();
 const localePath = useLocalePath();
 const resumeStore = useResumeStore();
@@ -351,7 +353,7 @@ const disableCloudSync = async (id: string) => {
         }
     }
 };
-useHead({
+useHead(() => ({
     title: t('resumes.pageTitle'),
     meta: [
         {
@@ -371,6 +373,10 @@ useHead({
             content: 'website',
         },
         {
+            property: 'og:locale',
+            content: getOgLocale(locale.value),
+        },
+        {
             property: 'og:site_name',
             content: 'Resume For Free',
         },
@@ -384,7 +390,7 @@ useHead({
         },
         {
             property: 'og:url',
-            content: 'https://resumeforfree.com/resumes',
+            content: `https://resumeforfree.com${route.path}`,
         },
         {
             property: 'og:image',
@@ -407,7 +413,7 @@ useHead({
             content: 'https://resumeforfree.com/og-image.png',
         },
     ],
-});
+}));
 </script>
 
 <template>

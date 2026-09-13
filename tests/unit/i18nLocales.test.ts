@@ -3,6 +3,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { availableFonts, getFontsForLanguage } from '~/types/resume';
 import { isRtlLocale, getLocaleDirection } from '~/composables/useLocale';
+import { getOgLocale } from '~/composables/useSEO';
 
 const root = resolve(__dirname, '../..');
 const localesDir = resolve(root, 'i18n/locales');
@@ -119,6 +120,13 @@ describe('i18n Locale System', () => {
         it.each(ALL_LOCALES)('has sample-resume-%s.svg in public directory', (locale) => {
             const svgPath = resolve(root, `public/sample-resume-${locale}.svg`);
             expect(existsSync(svgPath), `Missing ${svgPath}`).toBe(true);
+        });
+    });
+
+    describe('SEO & OpenGraph Locale Mapping', () => {
+        it.each(ALL_LOCALES)('returns valid OpenGraph locale for %s', (locale) => {
+            const ogLocale = getOgLocale(locale);
+            expect(ogLocale).toMatch(/^[a-z]{2}_[A-Z]{2}$/);
         });
     });
 });

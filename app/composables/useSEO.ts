@@ -91,3 +91,18 @@ export const createFAQStructuredData = (faqs: Array<{ question: string; answer: 
         },
     })),
 });
+
+export const getOgLocale = (localeCode: string): string => {
+    const map: Record<string, string> = {
+        en: 'en_US',
+        ar: 'ar_SA',
+        tr: 'tr_TR',
+        fr: 'fr_FR',
+        de: 'de_DE',
+        it: 'it_IT',
+        zh: 'zh_CN',
+        ur: 'ur_PK',
+        hi: 'hi_IN',
+    };
+    return map[localeCode] || 'en_US';
+};

@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 import type { AccordionItem } from '@nuxt/ui';
-import { createFAQStructuredData } from '~/composables/useSEO';
+import { createFAQStructuredData, getOgLocale } from '~/composables/useSEO';
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const localePath = useLocalePath();
+const route = useRoute();
 
 const qKeys = [
     'isFree', 'signUp', 'pdfExport', 'privacy', 'atsFriendly', 'differentFromOthers',
@@ -37,26 +38,43 @@ const faqCategories = computed(() => [
     },
 ]);
 
-const pageTitle = `Free Resume Builder FAQ - ${t('qa.title')} ${t('qa.titleHighlight')} | Resume For Free`;
+const QA_KEYWORDS: Record<string, string> = {
+    en: 'resume builder FAQ, free resume questions, PDF export help, Typst resume, privacy resume builder, resume builder help',
+    ar: 'الأسئلة الشائعة حول السيرة الذاتية, أسئلة صانع السيرة الذاتية, مساعدة تصدير PDF, خصوصية السيرة الذاتية',
+    de: 'lebenslauf faq, fragen zum lebenslauf-ersteller, hilfe pdf export, kostenloser lebenslauf fragen',
+    it: 'faq curriculum vitae, domande creatore cv, supporto esportazione pdf, assistenza cv gratis',
+    zh: '简历生成器常见问题, 制作简历问答, PDF导出帮助, 免费简历帮助, 隐私简历',
+    ur: 'سی وی بنانے سے متعلق سوالات, مفت ریزیومے کے سوالات, پی ڈی ایف ایکسپورٹ مدد, سی وی پرائیویسی',
+    hi: 'रिज्यूमे मेकर एफएक्यू, फ्री बायोडाटा से जुड़े सवाल, पीडीएफ एक्सपोर्ट सहायता, रिज्यूमे हेल्प',
+    fr: 'faq créateur de cv, questions cv gratuit, aide export pdf, assistance modèle cv',
+    tr: 'özgeçmiş sss, cv oluşturucu soruları, pdf dışa aktarma yardımı, ücretsiz cv yardım',
+};
 
-useHead({
-    title: pageTitle,
-    meta: [
-        { name: 'description', content: t('qa.subtitle') },
-        { name: 'keywords', content: 'resume builder FAQ, free resume questions, PDF export help, Typst resume, privacy resume builder, resume builder help' },
-        { name: 'robots', content: 'index, follow' },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'Resume For Free' },
-        { property: 'og:title', content: pageTitle },
-        { property: 'og:description', content: t('qa.subtitle') },
-        { property: 'og:url', content: 'https://resumeforfree.com/qa' },
-        { property: 'og:image', content: 'https://resumeforfree.com/og-image.png' },
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: pageTitle },
-        { name: 'twitter:description', content: t('qa.subtitle') },
-        { name: 'twitter:image', content: 'https://resumeforfree.com/og-image.png' },
-    ],
-    script: [{ type: 'application/ld+json', children: JSON.stringify(createFAQStructuredData(faqs)) }],
+useHead(() => {
+    const pageTitle = `${t('qa.title')} ${t('qa.titleHighlight')} | Resume For Free`;
+    const pageUrl = `https://resumeforfree.com${route.path}`;
+    const ogLocale = getOgLocale(locale.value);
+
+    return {
+        title: pageTitle,
+        meta: [
+            { name: 'description', content: t('qa.subtitle') },
+            { name: 'keywords', content: QA_KEYWORDS[locale.value] || QA_KEYWORDS.en },
+            { name: 'robots', content: 'index, follow' },
+            { property: 'og:type', content: 'website' },
+            { property: 'og:locale', content: ogLocale },
+            { property: 'og:site_name', content: 'Resume For Free' },
+            { property: 'og:title', content: pageTitle },
+            { property: 'og:description', content: t('qa.subtitle') },
+            { property: 'og:url', content: pageUrl },
+            { property: 'og:image', content: 'https://resumeforfree.com/og-image.png' },
+            { name: 'twitter:card', content: 'summary_large_image' },
+            { name: 'twitter:title', content: pageTitle },
+            { name: 'twitter:description', content: t('qa.subtitle') },
+            { name: 'twitter:image', content: 'https://resumeforfree.com/og-image.png' },
+        ],
+        script: [{ type: 'application/ld+json', children: JSON.stringify(createFAQStructuredData(faqs)) }],
+    };
 });
 </script>
 

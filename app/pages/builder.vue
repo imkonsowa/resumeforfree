@@ -19,11 +19,13 @@ import FirstTimeBuilderModal from '~/components/elements/FirstTimeBuilderModal.v
 import CloudSyncPromptModal from '~/components/elements/CloudSyncPromptModal.vue';
 import SyncIndicator from '~/components/elements/SyncIndicator.vue';
 import LanguageMismatchAlert from '~/components/elements/LanguageMismatchAlert.vue';
+import { getOgLocale } from '~/composables/useSEO';
 
-const { t, loadLocaleMessages } = useI18n({ useScope: 'global' });
+const { t, locale, loadLocaleMessages } = useI18n({ useScope: 'global' });
 const localePath = useLocalePath();
+const route = useRoute();
 
-useHead({
+useHead(() => ({
     title: t('builder.pageTitle'),
     meta: [
         {
@@ -43,6 +45,10 @@ useHead({
             content: 'website',
         },
         {
+            property: 'og:locale',
+            content: getOgLocale(locale.value),
+        },
+        {
             property: 'og:site_name',
             content: 'Resume For Free',
         },
@@ -56,7 +62,7 @@ useHead({
         },
         {
             property: 'og:url',
-            content: 'https://resumeforfree.com/builder',
+            content: `https://resumeforfree.com${route.path}`,
         },
         {
             property: 'og:image',
@@ -79,7 +85,7 @@ useHead({
             content: 'https://resumeforfree.com/og-image.png',
         },
     ],
-});
+}));
 const resumeStore = useResumeStore();
 const settingsStore = useSettingsStore();
 const authStore = useAuthStore();
