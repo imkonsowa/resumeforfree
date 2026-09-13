@@ -18,8 +18,6 @@ const authStore = useAuthStore();
 const router = useRouter();
 const confirmation = useConfirmation();
 const { exportResumes, parseImportFile, importSelectedResumes } = useResumeImportExport();
-// Warms the Typst compiler while the list is being browsed, so the first
-// download does not pay for the whole WASM load after the click.
 useTypstLoader();
 const { downloadPDF, typstReady } = useResumeGenerator();
 
@@ -407,12 +405,6 @@ useHead({
         {
             name: 'twitter:image',
             content: 'https://resumeforfree.com/og-image.png',
-        },
-    ],
-    link: [
-        {
-            rel: 'canonical',
-            href: 'https://resumeforfree.com/resumes',
         },
     ],
 });

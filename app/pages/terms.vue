@@ -7,6 +7,12 @@ useHead({
             content: 'Terms and conditions for using the Resume For Free application.',
         },
     ],
+    link: [
+        {
+            rel: 'canonical',
+            href: 'https://resumeforfree.com/terms',
+        },
+    ],
 });
 </script>
 

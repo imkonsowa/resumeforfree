@@ -170,7 +170,7 @@ export default defineNuxtConfig({
 
     robots: {
         allow: '/',
-        disallow: ['/api/', '/_nuxt/'],
+        disallow: ['/api/'],
     },
 
     seo: {

@@ -155,12 +155,6 @@ useHead({
             content: 'https://resumeforfree.com/og-image.png',
         },
     ],
-    link: [
-        {
-            rel: 'canonical',
-            href: 'https://resumeforfree.com',
-        },
-    ],
     script: [
         {
             type: 'application/ld+json',

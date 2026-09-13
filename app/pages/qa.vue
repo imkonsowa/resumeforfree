@@ -56,7 +56,6 @@ useHead({
         { name: 'twitter:description', content: t('qa.subtitle') },
         { name: 'twitter:image', content: 'https://resumeforfree.com/og-image.png' },
     ],
-    link: [{ rel: 'canonical', href: 'https://resumeforfree.com/qa' }],
     script: [{ type: 'application/ld+json', children: JSON.stringify(createFAQStructuredData(faqs)) }],
 });
 </script>
