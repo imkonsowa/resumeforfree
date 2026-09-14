@@ -8,6 +8,7 @@ export interface DateRangeInput {
     endDate?: string;
     isPresent?: boolean;
     t?: TranslateFunction;
+    locale?: string;
 }
 
 export interface TemplateColumnLayout {

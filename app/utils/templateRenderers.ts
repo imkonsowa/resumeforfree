@@ -34,7 +34,7 @@ export const SOCIAL_PLATFORM_LABELS = {
     devto: 'Dev.to',
     personal: 'Personal',
 } as const;
-export const generateExperienceContent = (experiences: Experience[], t?: TranslateFunction): SectionContent[] => {
+export const generateExperienceContent = (experiences: Experience[], t?: TranslateFunction, locale?: string): SectionContent[] => {
     return experiences.map((experience) => {
         const at = t ? t('template.at') : ' at ';
         const separator = t ? t('template.separator') : ', ';
@@ -46,7 +46,7 @@ export const generateExperienceContent = (experiences: Experience[], t?: Transla
             at,
             separator,
         );
-        const dateInput = { startDate: experience.startDate, endDate: experience.endDate, isPresent: experience.isPresent, t };
+        const dateInput = { startDate: experience.startDate, endDate: experience.endDate, isPresent: experience.isPresent, t, locale };
         const achievements = experience.achievements
             .filter(achievement => achievement.text && achievement.text.trim() !== '')
             .map(achievement => achievement.text);
@@ -61,7 +61,7 @@ export const generateExperienceContent = (experiences: Experience[], t?: Transla
         };
     });
 };
-export const generateInternshipsContent = (internships: Internship[], t?: TranslateFunction): SectionContent[] => {
+export const generateInternshipsContent = (internships: Internship[], t?: TranslateFunction, locale?: string): SectionContent[] => {
     return internships.map((internship) => {
         const at = t ? t('template.at') : ' at ';
         const separator = t ? t('template.separator') : ', ';
@@ -73,7 +73,7 @@ export const generateInternshipsContent = (internships: Internship[], t?: Transl
             at,
             separator,
         );
-        const dateInput = { startDate: internship.startDate, endDate: internship.endDate, isPresent: internship.isPresent, t };
+        const dateInput = { startDate: internship.startDate, endDate: internship.endDate, isPresent: internship.isPresent, t, locale };
         const achievements = internship.achievements
             .filter(achievement => achievement.text && achievement.text.trim() !== '')
             .map(achievement => achievement.text);
@@ -88,7 +88,7 @@ export const generateInternshipsContent = (internships: Internship[], t?: Transl
         };
     });
 };
-export const generateEducationContent = (education: Education[], t?: TranslateFunction): SectionContent[] => {
+export const generateEducationContent = (education: Education[], t?: TranslateFunction, locale?: string): SectionContent[] => {
     return education.map((edu) => {
         const at = t ? t('template.at') : ' at ';
         const separator = t ? t('template.separator') : ', ';
@@ -96,7 +96,7 @@ export const generateEducationContent = (education: Education[], t?: TranslateFu
         const title = edu.degree && edu.institution
             ? `${edu.degree}${at}${edu.institution}${edu.location ? separator + edu.location : ''}`
             : `${edu.degree || edu.institution}${edu.location ? separator + edu.location : ''}`;
-        const dateInput = { startDate: edu.startDate, endDate: edu.endDate, isPresent: edu.isPresent || false, t };
+        const dateInput = { startDate: edu.startDate, endDate: edu.endDate, isPresent: edu.isPresent || false, t, locale };
         let description = '';
         if (edu.graduationScore && edu.graduationScore.trim()) {
             description += `*${gradeLabel}* ${escapeTypstText(edu.graduationScore)}`;
@@ -117,7 +117,7 @@ export const generateEducationContent = (education: Education[], t?: TranslateFu
         };
     });
 };
-export const generateVolunteeringContent = (volunteering: Volunteering[], t?: TranslateFunction): SectionContent[] => {
+export const generateVolunteeringContent = (volunteering: Volunteering[], t?: TranslateFunction, locale?: string): SectionContent[] => {
     return volunteering.map((vol) => {
         const at = t ? t('template.at') : ' at ';
         const separator = t ? t('template.separator') : ', ';
@@ -129,7 +129,7 @@ export const generateVolunteeringContent = (volunteering: Volunteering[], t?: Tr
             at,
             separator,
         );
-        const dateInput = { startDate: vol.startDate, endDate: vol.endDate, isPresent: vol.isPresent, t };
+        const dateInput = { startDate: vol.startDate, endDate: vol.endDate, isPresent: vol.isPresent, t, locale };
         const achievements = vol.achievements
             .filter(achievement => achievement.text && achievement.text.trim() !== '')
             .map(achievement => achievement.text);
@@ -144,7 +144,7 @@ export const generateVolunteeringContent = (volunteering: Volunteering[], t?: Tr
         };
     });
 };
-export const generateProjectsContent = (projects: Project[], t?: TranslateFunction): SectionContent[] => {
+export const generateProjectsContent = (projects: Project[], t?: TranslateFunction, locale?: string): SectionContent[] => {
     return projects
         .filter((project) => {
             const hasLinks = Array.isArray(project.links) && project.links.length > 0;
@@ -169,6 +169,7 @@ export const generateProjectsContent = (projects: Project[], t?: TranslateFuncti
                 endDate: project.endDate,
                 isPresent: project.isPresent,
                 t,
+                locale,
             };
             const achievements = (project.achievements || [])
                 .filter(a => a.text && a.text.trim() !== '')
@@ -264,7 +265,7 @@ export const generateSocialLinksContent = (data: ResumeData): SectionContent[] =
         };
     });
 };
-export const generateCertificatesContent = (certificates: Certificate[], t?: TranslateFunction): SectionContent[] => {
+export const generateCertificatesContent = (certificates: Certificate[], t?: TranslateFunction, locale?: string): SectionContent[] => {
     const linkLabel = t ? t('common.link') : 'Link';
     const fromLabel = t ? t('template.from') : ' from ';
     return certificates
@@ -275,7 +276,7 @@ export const generateCertificatesContent = (certificates: Certificate[], t?: Tra
             const titleContent = certLink
                 ? `${escapeTypstText(title)} · ${certLink}`
                 : undefined;
-            const dateInput = { startDate: cert.date };
+            const dateInput = { startDate: cert.date, locale };
             const description = cert.description?.trim() ? escapeTypstText(cert.description) : '';
             return {
                 title,

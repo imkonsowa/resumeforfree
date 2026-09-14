@@ -680,7 +680,9 @@
             "import": "आयात करें",
             "cloudSync": "क्लाउड सिंक",
             "createNew": "नया रिज्यूमे बनाएं",
-            "searchPlaceholder": "रिज्यूमे खोजें..."
+            "searchPlaceholder": "रिज्यूमे खोजें...",
+            "importJson": "JSON आयात करें",
+            "exportJson": "JSON निर्यात करें"
         },
         "banner": {
             "saveToCloud": "अपने रिज्यूमे को क्लाउड में सहेजें",

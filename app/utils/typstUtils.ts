@@ -39,29 +39,34 @@ export const convertSubHeader = (title: string, size = '14pt'): string => {
     if (!title) return '';
     return `#block(below: 1em)[#text("${escapeTypstString(title)}", size: ${size}, weight: "bold")]`;
 };
-export const formatDateToMonthYear = (date: string): string => {
+export const formatDateToMonthYear = (date: string, locale = 'en'): string => {
     if (!date) return '';
     const parts = date.split('-');
     if (parts.length === 2) {
         const year = parseInt(parts[0]);
         const month = parseInt(parts[1]) - 1;
         const dateObj = new Date(year, month);
-        return dateObj.toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-        });
+        try {
+            return dateObj.toLocaleDateString(`${locale}-u-nu-latn`, {
+                year: 'numeric',
+                month: 'long',
+            });
+        }
+        catch {
+            return dateObj.toLocaleDateString('en', { year: 'numeric', month: 'long' });
+        }
     }
     return date;
 };
-export const formatDateRangeText = ({ startDate, endDate, isPresent, t }: DateRangeInput): string => {
+export const formatDateRangeText = ({ startDate, endDate, isPresent, t, locale }: DateRangeInput): string => {
     if (!startDate && !endDate && !isPresent) return '';
     const presentText = t ? t('template.present') : 'Present';
     let dateText = '';
     if (startDate) {
-        dateText = formatDateToMonthYear(startDate);
+        dateText = formatDateToMonthYear(startDate, locale);
     }
     if (endDate && !isPresent) {
-        dateText += dateText ? ` - ${formatDateToMonthYear(endDate)}` : formatDateToMonthYear(endDate);
+        dateText += dateText ? ` - ${formatDateToMonthYear(endDate, locale)}` : formatDateToMonthYear(endDate, locale);
     }
     if (isPresent) {
         dateText += dateText ? ` - ${presentText}` : presentText;

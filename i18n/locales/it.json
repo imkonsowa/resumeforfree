@@ -680,7 +680,9 @@
             "import": "Importa",
             "cloudSync": "Sincronizzazione cloud",
             "createNew": "Crea nuovo curriculum",
-            "searchPlaceholder": "Cerca tra i curriculum..."
+            "searchPlaceholder": "Cerca tra i curriculum...",
+            "importJson": "Importa JSON",
+            "exportJson": "Esporta JSON"
         },
         "banner": {
             "saveToCloud": "Salva i tuoi curriculum nel cloud",

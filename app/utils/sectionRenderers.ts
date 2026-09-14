@@ -44,7 +44,7 @@ export const renderSharedExperience: SectionRenderer = (data: ResumeData, contex
         return '';
     }
 
-    const sectionContent = generateExperienceContent(data.experiences, context.t);
+    const sectionContent = generateExperienceContent(data.experiences, context.t, context.locale);
     const formattedContent = formatExperienceItems(sectionContent, context.config, context.fontSize);
     const headerText = getLocalizedSectionHeader('experience', data, context);
 
@@ -56,7 +56,7 @@ export const renderSharedInternships: SectionRenderer = (data: ResumeData, conte
         return '';
     }
 
-    const sectionContent = generateInternshipsContent(data.internships, context.t);
+    const sectionContent = generateInternshipsContent(data.internships, context.t, context.locale);
     const formattedContent = formatExperienceItems(sectionContent, context.config, context.fontSize);
     const headerText = getLocalizedSectionHeader('internships', data, context);
 
@@ -68,7 +68,7 @@ export const renderSharedEducation: SectionRenderer = (data: ResumeData, context
         return '';
     }
 
-    const sectionContent = generateEducationContent(data.education, context.t);
+    const sectionContent = generateEducationContent(data.education, context.t, context.locale);
     const formattedContent = formatEducationItems(sectionContent, context.config, context.fontSize);
     const headerText = getLocalizedSectionHeader('education', data, context);
 
@@ -80,7 +80,7 @@ export const renderSharedVolunteering: SectionRenderer = (data: ResumeData, cont
         return '';
     }
 
-    const sectionContent = generateVolunteeringContent(data.volunteering, context.t);
+    const sectionContent = generateVolunteeringContent(data.volunteering, context.t, context.locale);
     const formattedContent = formatExperienceItems(sectionContent, context.config, context.fontSize);
     const headerText = getLocalizedSectionHeader('volunteering', data, context);
 
@@ -92,7 +92,7 @@ export const renderSharedProjects: SectionRenderer = (data: ResumeData, context:
         return '';
     }
 
-    const sectionContent = generateProjectsContent(data.projects, context.t);
+    const sectionContent = generateProjectsContent(data.projects, context.t, context.locale);
     if (sectionContent.length === 0) return '';
 
     const formattedContent = formatProjectsItems(sectionContent, context.config, context.fontSize);
@@ -181,7 +181,7 @@ export const renderSharedCertificates: SectionRenderer = (data: ResumeData, cont
         return '';
     }
 
-    const sectionContent = generateCertificatesContent(data.certificates, context.t);
+    const sectionContent = generateCertificatesContent(data.certificates, context.t, context.locale);
     if (sectionContent.length === 0) return '';
 
     const formattedContent = formatCertificatesItems(sectionContent, context.config, context.fontSize);

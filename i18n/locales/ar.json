@@ -680,7 +680,9 @@
             "import": "استيراد",
             "cloudSync": "مزامنة سحابية",
             "createNew": "إنشاء سيرة ذاتية جديدة",
-            "searchPlaceholder": "ابحث في سيرك الذاتية..."
+            "searchPlaceholder": "ابحث في سيرك الذاتية...",
+            "importJson": "استيراد JSON",
+            "exportJson": "تصدير JSON"
         },
         "banner": {
             "saveToCloud": "احفظ سيرك الذاتية في السحابة",
