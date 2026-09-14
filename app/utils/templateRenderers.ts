@@ -34,8 +34,19 @@ export const SOCIAL_PLATFORM_LABELS = {
     devto: 'Dev.to',
     personal: 'Personal',
 } as const;
+const isBlankValue = (value: unknown): boolean => {
+    if (value === null || value === undefined) return true;
+    if (typeof value === 'string') return value.trim() === '';
+    if (typeof value === 'boolean') return true;
+    if (Array.isArray(value)) return value.every(isBlankValue);
+    if (typeof value === 'object') return Object.values(value as Record<string, unknown>).every(isBlankValue);
+    return false;
+};
+
+export const hasSectionItemContent = (item: unknown): boolean => !isBlankValue(item);
+
 export const generateExperienceContent = (experiences: Experience[], t?: TranslateFunction, locale?: string): SectionContent[] => {
-    return experiences.map((experience) => {
+    return experiences.filter(hasSectionItemContent).map((experience) => {
         const at = t ? t('template.at') : ' at ';
         const separator = t ? t('template.separator') : ', ';
         const titleContent = buildPositionAtCompanyContent(
@@ -62,7 +73,7 @@ export const generateExperienceContent = (experiences: Experience[], t?: Transla
     });
 };
 export const generateInternshipsContent = (internships: Internship[], t?: TranslateFunction, locale?: string): SectionContent[] => {
-    return internships.map((internship) => {
+    return internships.filter(hasSectionItemContent).map((internship) => {
         const at = t ? t('template.at') : ' at ';
         const separator = t ? t('template.separator') : ', ';
         const titleContent = buildPositionAtCompanyContent(
@@ -89,7 +100,7 @@ export const generateInternshipsContent = (internships: Internship[], t?: Transl
     });
 };
 export const generateEducationContent = (education: Education[], t?: TranslateFunction, locale?: string): SectionContent[] => {
-    return education.map((edu) => {
+    return education.filter(hasSectionItemContent).map((edu) => {
         const at = t ? t('template.at') : ' at ';
         const separator = t ? t('template.separator') : ', ';
         const gradeLabel = t ? t('template.grade') : 'Grade:';
@@ -118,7 +129,7 @@ export const generateEducationContent = (education: Education[], t?: TranslateFu
     });
 };
 export const generateVolunteeringContent = (volunteering: Volunteering[], t?: TranslateFunction, locale?: string): SectionContent[] => {
-    return volunteering.map((vol) => {
+    return volunteering.filter(hasSectionItemContent).map((vol) => {
         const at = t ? t('template.at') : ' at ';
         const separator = t ? t('template.separator') : ', ';
         const titleContent = buildPositionAtCompanyContent(
