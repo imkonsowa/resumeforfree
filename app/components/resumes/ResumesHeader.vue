@@ -1,13 +1,15 @@
 <script lang="ts" setup>
+import type { DropdownMenuItem } from '@nuxt/ui';
+
 interface Props {
     searchQuery: string;
     resumeCount: number;
     filteredCount: number;
 }
 
-defineProps<Props>();
+const props = defineProps<Props>();
 
-defineEmits<{
+const emit = defineEmits<{
     'update:searchQuery': [value: string];
     'import': [];
     'export': [];
@@ -15,7 +17,22 @@ defineEmits<{
     'cloudSync': [];
 }>();
 
+const { t } = useI18n();
 const authStore = useAuthStore();
+
+const jsonMenuItems = computed<DropdownMenuItem[][]>(() => [[
+    {
+        label: t('resumes.actions.importJson'),
+        icon: 'i-lucide-upload',
+        onSelect: () => emit('import'),
+    },
+    {
+        label: t('resumes.actions.exportJson'),
+        icon: 'i-lucide-download',
+        disabled: props.resumeCount === 0,
+        onSelect: () => emit('export'),
+    },
+]]);
 </script>
 
 <template>
@@ -73,6 +90,18 @@ const authStore = useAuthStore();
                     :label="$t('resumes.actions.createNew')"
                     @click="$emit('create')"
                 />
+                <UDropdownMenu
+                    :items="jsonMenuItems"
+                    :content="{ align: 'end' }"
+                >
+                    <UButton
+                        color="neutral"
+                        variant="outline"
+                        size="sm"
+                        icon="i-lucide-more-vertical"
+                        :aria-label="$t('common.moreActions')"
+                    />
+                </UDropdownMenu>
             </div>
         </div>
     </div>

@@ -680,7 +680,9 @@
             "import": "Importer",
             "cloudSync": "Synchro Cloud",
             "createNew": "Créer un Nouveau CV",
-            "searchPlaceholder": "Rechercher des CV..."
+            "searchPlaceholder": "Rechercher des CV...",
+            "importJson": "Importer le JSON",
+            "exportJson": "Exporter le JSON"
         },
         "banner": {
             "saveToCloud": "Enregistrez Vos CV sur le Cloud",

@@ -680,7 +680,9 @@
             "import": "导入",
             "cloudSync": "云端同步",
             "createNew": "创建新简历",
-            "searchPlaceholder": "搜索简历..."
+            "searchPlaceholder": "搜索简历...",
+            "importJson": "导入 JSON",
+            "exportJson": "导出 JSON"
         },
         "banner": {
             "saveToCloud": "将简历安全保存到云端",

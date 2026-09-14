@@ -680,7 +680,9 @@
             "import": "Import",
             "cloudSync": "Cloud Sync",
             "createNew": "Create New Resume",
-            "searchPlaceholder": "Search resumes..."
+            "searchPlaceholder": "Search resumes...",
+            "importJson": "Import JSON",
+            "exportJson": "Export JSON"
         },
         "banner": {
             "saveToCloud": "Save Your Resumes to the Cloud",

@@ -680,7 +680,9 @@
             "import": "امپورٹ",
             "cloudSync": "کلاؤڈ سنک",
             "createNew": "نئی سی وی بنائیں",
-            "searchPlaceholder": "سی وی تلاش کریں..."
+            "searchPlaceholder": "سی وی تلاش کریں...",
+            "importJson": "JSON درآمد کریں",
+            "exportJson": "JSON برآمد کریں"
         },
         "banner": {
             "saveToCloud": "اپنی سی ویز کلاؤڈ میں محفوظ کریں",

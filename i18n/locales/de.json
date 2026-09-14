@@ -680,7 +680,9 @@
             "import": "Importieren",
             "cloudSync": "Cloud-Sync",
             "createNew": "Neuen Lebenslauf anlegen",
-            "searchPlaceholder": "Lebensläufe durchsuchen..."
+            "searchPlaceholder": "Lebensläufe durchsuchen...",
+            "importJson": "JSON importieren",
+            "exportJson": "JSON exportieren"
         },
         "banner": {
             "saveToCloud": "Lebensläufe in der Cloud sichern",
