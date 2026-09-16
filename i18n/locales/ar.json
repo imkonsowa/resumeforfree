@@ -679,10 +679,20 @@
             "new": "جديد",
             "import": "استيراد",
             "cloudSync": "مزامنة سحابية",
+            "splitView": "عرض مقسّم",
             "createNew": "إنشاء سيرة ذاتية جديدة",
             "searchPlaceholder": "ابحث في سيرك الذاتية...",
             "importJson": "استيراد JSON",
             "exportJson": "تصدير JSON"
+        },
+        "splitView": {
+            "title": "عرض مقسّم",
+            "description": "قارن سيرتين ذاتيتين جنبًا إلى جنب",
+            "syncScroll": "تزامن التمرير",
+            "swap": "تبديل الجانبين",
+            "selectResume": "اختر سيرة ذاتية",
+            "rendering": "جارٍ إنشاء المعاينة...",
+            "failed": "تعذّر عرض هذه السيرة الذاتية"
         },
         "banner": {
             "saveToCloud": "احفظ سيرك الذاتية في السحابة",

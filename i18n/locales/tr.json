@@ -679,10 +679,20 @@
             "new": "Yeni",
             "import": "İçe Aktar",
             "cloudSync": "Bulut Senkronizasyonu",
+            "splitView": "Bölünmüş görünüm",
             "createNew": "Yeni Özgeçmiş Oluştur",
             "searchPlaceholder": "Özgeçmişleri ara...",
             "importJson": "JSON içe aktar",
             "exportJson": "JSON dışa aktar"
+        },
+        "splitView": {
+            "title": "Bölünmüş görünüm",
+            "description": "İki özgeçmişi yan yana karşılaştırın",
+            "syncScroll": "Kaydırmayı eşitle",
+            "swap": "Tarafları değiştir",
+            "selectResume": "Bir özgeçmiş seçin",
+            "rendering": "Önizleme oluşturuluyor...",
+            "failed": "Bu özgeçmiş görüntülenemedi"
         },
         "banner": {
             "saveToCloud": "Özgeçmişlerinizi Buluta Kaydedin",

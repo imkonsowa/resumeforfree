@@ -679,10 +679,20 @@
             "new": "نیا",
             "import": "امپورٹ",
             "cloudSync": "کلاؤڈ سنک",
+            "splitView": "تقسیم شدہ منظر",
             "createNew": "نئی سی وی بنائیں",
             "searchPlaceholder": "سی وی تلاش کریں...",
             "importJson": "JSON درآمد کریں",
             "exportJson": "JSON برآمد کریں"
+        },
+        "splitView": {
+            "title": "تقسیم شدہ منظر",
+            "description": "دو سی ویز کا ساتھ ساتھ موازنہ کریں",
+            "syncScroll": "اسکرول ہم آہنگ کریں",
+            "swap": "اطراف بدلیں",
+            "selectResume": "ایک سی وی منتخب کریں",
+            "rendering": "پیش منظر تیار ہو رہا ہے...",
+            "failed": "یہ سی وی دکھایا نہیں جا سکا"
         },
         "banner": {
             "saveToCloud": "اپنی سی ویز کلاؤڈ میں محفوظ کریں",

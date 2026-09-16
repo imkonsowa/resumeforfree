@@ -679,10 +679,20 @@
             "new": "Nuovo",
             "import": "Importa",
             "cloudSync": "Sincronizzazione cloud",
+            "splitView": "Vista affiancata",
             "createNew": "Crea nuovo curriculum",
             "searchPlaceholder": "Cerca tra i curriculum...",
             "importJson": "Importa JSON",
             "exportJson": "Esporta JSON"
+        },
+        "splitView": {
+            "title": "Vista affiancata",
+            "description": "Confronta due curriculum affiancati",
+            "syncScroll": "Scorrimento sincronizzato",
+            "swap": "Inverti i lati",
+            "selectResume": "Seleziona un curriculum",
+            "rendering": "Generazione dell'anteprima...",
+            "failed": "Impossibile visualizzare questo curriculum"
         },
         "banner": {
             "saveToCloud": "Salva i tuoi curriculum nel cloud",

@@ -8,6 +8,7 @@ import CloudSyncModal from '~/components/elements/CloudSyncModal.vue';
 import ResumesHeader from '~/components/resumes/ResumesHeader.vue';
 import ResumesGrid from '~/components/resumes/ResumesGrid.vue';
 import ResumesEmptyState from '~/components/resumes/ResumesEmptyState.vue';
+import SplitViewModal from '~/components/resumes/SplitViewModal.vue';
 import type { ImportResumePreview, Resume } from '~/types/resume';
 import { getOgLocale } from '~/composables/useSEO';
 
@@ -113,6 +114,7 @@ const showExportModal = ref(false);
 const showImportModal = ref(false);
 const importPreviews = ref<ImportResumePreview[]>([]);
 const showCloudSyncModal = ref(false);
+const showSplitViewModal = ref(false);
 const importInputRef = ref<HTMLInputElement>();
 const createNewResume = () => {
     showCreateModal.value = true;
@@ -484,6 +486,7 @@ useHead(() => ({
                 @export="handleExportModal"
                 @create="createNewResume"
                 @cloud-sync="handleCloudSyncModal"
+                @split-view="showSplitViewModal = true"
             />
             <ClientOnly>
                 <div
@@ -581,6 +584,12 @@ useHead(() => ({
                     :resumes="resumes"
                     @close="showCloudSyncModal = false"
                     @sync="handleCloudSync"
+                />
+                <SplitViewModal
+                    :is-open="showSplitViewModal"
+                    :resumes="resumes"
+                    :initial-left-id="resumeStore.activeResumeId"
+                    @close="showSplitViewModal = false"
                 />
                 <ConfirmationModal
                     :cancel-text="confirmation.cancelText.value"

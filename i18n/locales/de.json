@@ -679,10 +679,20 @@
             "new": "Neu",
             "import": "Importieren",
             "cloudSync": "Cloud-Sync",
+            "splitView": "Geteilte Ansicht",
             "createNew": "Neuen Lebenslauf anlegen",
             "searchPlaceholder": "Lebensläufe durchsuchen...",
             "importJson": "JSON importieren",
             "exportJson": "JSON exportieren"
+        },
+        "splitView": {
+            "title": "Geteilte Ansicht",
+            "description": "Zwei Lebensläufe nebeneinander vergleichen",
+            "syncScroll": "Scrollen synchronisieren",
+            "swap": "Seiten tauschen",
+            "selectResume": "Lebenslauf auswählen",
+            "rendering": "Vorschau wird erstellt...",
+            "failed": "Dieser Lebenslauf konnte nicht angezeigt werden"
         },
         "banner": {
             "saveToCloud": "Lebensläufe in der Cloud sichern",
