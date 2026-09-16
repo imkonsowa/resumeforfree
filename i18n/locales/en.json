@@ -679,10 +679,20 @@
             "new": "New",
             "import": "Import",
             "cloudSync": "Cloud Sync",
+            "splitView": "Split view",
             "createNew": "Create New Resume",
             "searchPlaceholder": "Search resumes...",
             "importJson": "Import JSON",
             "exportJson": "Export JSON"
+        },
+        "splitView": {
+            "title": "Split view",
+            "description": "Compare two resumes side by side",
+            "syncScroll": "Sync scroll",
+            "swap": "Swap sides",
+            "selectResume": "Select a resume",
+            "rendering": "Rendering preview...",
+            "failed": "Could not render this resume"
         },
         "banner": {
             "saveToCloud": "Save Your Resumes to the Cloud",

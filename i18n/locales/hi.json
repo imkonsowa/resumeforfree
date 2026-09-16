@@ -679,10 +679,20 @@
             "new": "नया",
             "import": "आयात करें",
             "cloudSync": "क्लाउड सिंक",
+            "splitView": "स्प्लिट व्यू",
             "createNew": "नया रिज्यूमे बनाएं",
             "searchPlaceholder": "रिज्यूमे खोजें...",
             "importJson": "JSON आयात करें",
             "exportJson": "JSON निर्यात करें"
+        },
+        "splitView": {
+            "title": "स्प्लिट व्यू",
+            "description": "दो रिज्यूमे की साथ-साथ तुलना करें",
+            "syncScroll": "स्क्रॉल सिंक करें",
+            "swap": "पक्ष बदलें",
+            "selectResume": "एक रिज्यूमे चुनें",
+            "rendering": "पूर्वावलोकन बन रहा है...",
+            "failed": "यह रिज्यूमे प्रदर्शित नहीं किया जा सका"
         },
         "banner": {
             "saveToCloud": "अपने रिज्यूमे को क्लाउड में सहेजें",

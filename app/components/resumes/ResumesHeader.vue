@@ -15,6 +15,7 @@ const emit = defineEmits<{
     'export': [];
     'create': [];
     'cloudSync': [];
+    'splitView': [];
 }>();
 
 const { t } = useI18n();
@@ -84,6 +85,19 @@ const jsonMenuItems = computed<DropdownMenuItem[][]>(() => [[
                     <span class="sm:hidden">{{ $t('common.sync') }}</span>
                     <span class="hidden sm:inline">{{ $t('resumes.actions.cloudSync') }}</span>
                 </UButton>
+                <ClientOnly>
+                    <UButton
+                        v-if="resumeCount > 1"
+                        color="neutral"
+                        variant="outline"
+                        size="sm"
+                        icon="i-lucide-columns-2"
+                        :aria-label="$t('resumes.actions.splitView')"
+                        @click="$emit('splitView')"
+                    >
+                        <span class="hidden sm:inline">{{ $t('resumes.actions.splitView') }}</span>
+                    </UButton>
+                </ClientOnly>
                 <UButton
                     class="hidden lg:inline-flex"
                     icon="i-lucide-plus"
