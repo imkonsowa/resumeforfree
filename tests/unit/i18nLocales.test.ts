@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { availableFonts, getFontsForLanguage } from '~/types/resume';
+import { availableFonts, getDefaultFontForLanguage, getFontsForLanguage, resolveFontFamily } from '~/types/resume';
 import { isRtlLocale, getLocaleDirection } from '~/composables/useLocale';
 import { getOgLocale } from '~/composables/useSEO';
 
@@ -113,6 +113,14 @@ describe('i18n Locale System', () => {
             const urFonts = getFontsForLanguage('ur');
             expect(urFonts).toEqual(availableFonts.ar);
             expect(urFonts.some(f => f.family === 'Noto Naskh Arabic')).toBe(true);
+        });
+
+        it('defaults new Arabic resumes to IBM Plex Sans Arabic without re-fonting existing ones', () => {
+            expect(getDefaultFontForLanguage('ar')).toBe('IBM Plex Sans Arabic');
+            expect(getDefaultFontForLanguage('ur')).toBe('Noto Naskh Arabic');
+            expect(getDefaultFontForLanguage('en')).toBe('Calibri');
+            expect(resolveFontFamily('Naskh', 'ar')).toBe('Noto Naskh Arabic');
+            expect(resolveFontFamily('Calibri', 'ar')).toBe('Noto Naskh Arabic');
         });
     });
 
