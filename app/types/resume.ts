@@ -306,7 +306,13 @@ export const resolveFontFamily = (font: string, language: string): string => {
     return fonts[0]?.family || 'Calibri';
 };
 
+const DEFAULT_FONT_BY_LANGUAGE: Record<string, string> = {
+    ar: 'IBM Plex Sans Arabic',
+};
+
 export const getDefaultFontForLanguage = (language: string) => {
     const fonts = getFontsForLanguage(language);
+    const preferred = DEFAULT_FONT_BY_LANGUAGE[language];
+    if (preferred && fonts.some(f => f.family === preferred)) return preferred;
     return fonts[0]?.family || 'Calibri';
 };
