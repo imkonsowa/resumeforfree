@@ -110,10 +110,13 @@ function renderLinks(data: ResumeData, context: RendererContext): SimpleSection 
     );
 }
 
-function renderSimpleSection(section: SimpleSection, fontSize: number, isFirst: boolean): string {
+const LETTER_SPACED_LOCALES = new Set(['en', 'fr', 'de', 'it', 'tr']);
+
+function renderSimpleSection(section: SimpleSection, fontSize: number, isFirst: boolean, locale: string): string {
     if (!section.rows.length) return '';
 
-    const label = `#text(size: ${fontSize + SECTION_HEADER_SIZE_OFFSET}pt, weight: "bold", tracking: 0.08em)[${escapeTypstText(section.label)}]`;
+    const tracking = LETTER_SPACED_LOCALES.has(locale) ? ', tracking: 0.08em' : '';
+    const label = `#text(size: ${fontSize + SECTION_HEADER_SIZE_OFFSET}pt, weight: "bold"${tracking})[${escapeTypstText(section.label)}]`;
 
     const cells: string[] = [];
     section.rows.forEach((row, idx) => {
@@ -231,7 +234,7 @@ const parse = ({ data, font, locale, t, fontSize, photoShape }: TemplateParseInp
     for (const key of [...fixedOrder, ...orderedDataSections]) {
         const section = sectionMap[key]();
         if (!section) continue;
-        const out = renderSimpleSection(section, fontSize, first);
+        const out = renderSimpleSection(section, fontSize, first, locale);
         if (out) {
             rendered.push(out);
             first = false;
