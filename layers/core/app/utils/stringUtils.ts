@@ -3,7 +3,7 @@ export function escapeTypstText(text: string): string {
     let cleaned = text.toString().trim();
     cleaned = cleaned
         .replace(/\r\n?/g, '\n')
-        .replace(/^(?:[^\S\n]|[\u200B-\u200D\u2060])+$/gm, '')
+        .replace(/^[^\S\n]+$/gm, '')
         .replace(/\n{3,}/g, '\n\n')
         .replace(/[""]/g, '"')
         .replace(/['']/g, '\'');
