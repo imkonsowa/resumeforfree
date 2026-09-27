@@ -2,8 +2,6 @@ name: CI
 
 on:
   workflow_dispatch:
-  push:
-    branches: [feat/core-layer-1-core]
 
 permissions:
   contents: read
