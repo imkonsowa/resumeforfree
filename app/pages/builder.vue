@@ -4,6 +4,7 @@ import ZoomControls from '~/components/elements/ZoomControls.vue';
 import ResumeBuilderHeader from '~/components/elements/ResumeBuilderHeader.vue';
 import ResumeLanguageSelector from '~/components/elements/ResumeLanguageSelector.vue';
 import { getLocaleDirection } from '#layers/core/app/utils/localeDirection';
+import { defaultResumeSettings, getDefaultFontForLanguage } from '#layers/core/app/types/resume';
 import PersonalInfoForm from '~/components/forms/PersonalInfoForm.vue';
 import ExperienceForm from '~/components/forms/ExperienceForm.vue';
 import InternshipsForm from '~/components/forms/InternshipsForm.vue';
@@ -135,6 +136,13 @@ onMounted(async () => {
         await resumeStore.fetchServerResumes().catch((err) => {
             console.error('[builder] server fetch failed:', err);
         });
+    }
+    if (resumeStore.resumeCount === 0) {
+        const newResumeId = resumeStore.createResume({
+            language: locale.value,
+            settings: { ...defaultResumeSettings, selectedFont: getDefaultFontForLanguage(locale.value) },
+        });
+        resumeStore.setActiveResume(newResumeId);
     }
     checkOtherModals();
 });
