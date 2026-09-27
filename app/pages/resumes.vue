@@ -145,20 +145,20 @@ const handleCreateResume = async (name: string, language: string, navigateToBuil
                     resumeStore.resumes[newResumeId].serverId = newCloudResume.id;
                     resumeStore.resumes[newResumeId].updatedAt = new Date().toISOString();
                 }
-                notify.success(t('resumes.notify.createdAndSaved').replace('{name}', resumeName));
+                notify.success(t('resumes.notify.createdAndSaved', { name: resumeName }));
             }
         }
         catch (error: unknown) {
             console.error('Failed to save resume to cloud:', error);
             const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-            notify.warning(t('resumes.notify.createdLocallyFailed').replace('{name}', resumeName).replace('{error}', errorMessage));
+            notify.warning(t('resumes.notify.createdLocallyFailed', { name: resumeName, error: errorMessage }));
         }
     }
     else if (saveToCloud && !authStore.isLoggedIn) {
         notify.warning(t('resumes.notify.loginToSaveCloud'));
     }
     else {
-        notify.success(t('resumes.notify.created').replace('{name}', resumeName));
+        notify.success(t('resumes.notify.created', { name: resumeName }));
     }
     if (navigateToBuilder) {
         router.push(localePath('/builder'));
@@ -194,7 +194,7 @@ const deleteResume = async (id: string) => {
     const resumeName = resume?.name || 'this resume';
     const confirmed = await confirmation.confirm({
         title: t('resumes.modals.delete.title'),
-        message: t('resumes.modals.delete.message').replace('{name}', resumeName),
+        message: t('resumes.modals.delete.message', { name: resumeName }),
         confirmText: t('resumes.modals.delete.confirmButton'),
         cancelText: t('resumes.modals.cancel'),
     });
@@ -204,16 +204,16 @@ const deleteResume = async (id: string) => {
             try {
                 const api = useApi();
                 await api.resumes.delete(resume.serverId);
-                notify.success(t('resumes.notify.deletedFromCloud').replace('{name}', resumeName));
+                notify.success(t('resumes.notify.deletedFromCloud', { name: resumeName }));
             }
             catch (error) {
                 console.error('Failed to delete resume from cloud:', error);
                 const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-                notify.warning(t('resumes.notify.deletedLocallyFailed').replace('{error}', errorMessage));
+                notify.warning(t('resumes.notify.deletedLocallyFailed', { error: errorMessage }));
             }
         }
         else {
-            notify.success(t('resumes.notify.deleted').replace('{name}', resumeName));
+            notify.success(t('resumes.notify.deleted', { name: resumeName }));
         }
     }
 };
@@ -233,7 +233,7 @@ const syncResume = async (id: string) => {
         if (resume.serverId) {
             try {
                 await api.resumes.update(resume.serverId, resume);
-                notify.success(t('resumes.notify.updatedInCloud').replace('{name}', resume.name));
+                notify.success(t('resumes.notify.updatedInCloud', { name: resume.name }));
             }
             catch (error: unknown) {
                 if (error && typeof error === 'object' && 'statusCode' in error && error.statusCode === 404) {
@@ -242,7 +242,7 @@ const syncResume = async (id: string) => {
                         resumeStore.resumes[id].serverId = newResume.id;
                         resumeStore.resumes[id].updatedAt = new Date().toISOString();
                     }
-                    notify.success(t('resumes.notify.syncedNewCopy').replace('{name}', resume.name));
+                    notify.success(t('resumes.notify.syncedNewCopy', { name: resume.name }));
                 }
                 else {
                     throw error;
@@ -255,13 +255,13 @@ const syncResume = async (id: string) => {
                 resumeStore.resumes[id].serverId = newResume.id;
                 resumeStore.resumes[id].updatedAt = new Date().toISOString();
             }
-            notify.success(t('resumes.notify.syncedToCloud').replace('{name}', resume.name));
+            notify.success(t('resumes.notify.syncedToCloud', { name: resume.name }));
         }
     }
     catch (error: unknown) {
         console.error('Failed to sync resume:', error);
         const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-        notify.error(t('resumes.notify.syncFailed').replace('{error}', errorMessage));
+        notify.error(t('resumes.notify.syncFailed', { error: errorMessage }));
     }
 };
 const clearSearch = () => {
@@ -310,17 +310,17 @@ const handleCloudSync = async (resumeIds: string[]) => {
     }
     try {
         const pluralSuffix = resumeIds.length !== 1 ? t('resumes.resumeCount.resumes') : t('resumes.resumeCount.resume');
-        notify.info(t('resumes.notify.syncingMultiple').replace('{count}', resumeIds.length.toString()).replace('{plural}', pluralSuffix));
+        notify.info(t('resumes.notify.syncingMultiple', { count: resumeIds.length, plural: pluralSuffix }));
         for (const resumeId of resumeIds) {
             await resumeStore.syncResumeToServer(resumeId);
         }
-        notify.success(t('resumes.notify.syncedMultiple').replace('{count}', resumeIds.length.toString()).replace('{plural}', pluralSuffix));
+        notify.success(t('resumes.notify.syncedMultiple', { count: resumeIds.length, plural: pluralSuffix }));
         showCloudSyncModal.value = false;
     }
     catch (error: unknown) {
         console.error('Failed to sync resumes:', error);
         const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-        notify.error(t('resumes.notify.syncMultipleFailed').replace('{error}', errorMessage));
+        notify.error(t('resumes.notify.syncMultipleFailed', { error: errorMessage }));
     }
 };
 const disableCloudSync = async (id: string) => {
@@ -332,7 +332,7 @@ const disableCloudSync = async (id: string) => {
     }
     const confirmed = await confirmation.confirm({
         title: t('resumes.modals.disableSync.title'),
-        message: t('resumes.modals.disableSync.message').replace('{name}', resumeName),
+        message: t('resumes.modals.disableSync.message', { name: resumeName }),
         confirmText: t('resumes.modals.disableSync.confirmButton'),
         cancelText: t('resumes.modals.cancel'),
     });
@@ -340,12 +340,12 @@ const disableCloudSync = async (id: string) => {
         try {
             const api = useApi();
             await api.resumes.delete(resume.serverId);
-            notify.success(t('resumes.notify.removedFromCloud').replace('{name}', resumeName));
+            notify.success(t('resumes.notify.removedFromCloud', { name: resumeName }));
         }
         catch (error: unknown) {
             console.error('Failed to disable cloud sync:', error);
             const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-            notify.error(t('resumes.notify.removeFailed').replace('{error}', errorMessage));
+            notify.error(t('resumes.notify.removeFailed', { error: errorMessage }));
         }
         finally {
             if (resumeStore.resumes[id]) {
