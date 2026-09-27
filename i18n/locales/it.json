@@ -386,7 +386,7 @@
         "downloadAs": "Scarica come {format}",
         "downloadAsSVG": "Scarica come SVG",
         "downloadAsTypst": "Scarica come Typst",
-        "downloadAsText": "Scarica come testo",
+        "downloadAsText": "Scarica il sorgente Typst come .txt",
         "template": "Modello",
         "loadingPreview": "Caricamento anteprima",
         "loadingPreviewDescription": "Attendere: il caricamento del modulo e del compilatore Typst può richiedere tempo su connessioni lente...",

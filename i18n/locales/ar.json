@@ -386,7 +386,7 @@
         "downloadAs": "تنزيل بصيغة {format}",
         "downloadAsSVG": "تنزيل بصيغة SVG",
         "downloadAsTypst": "تنزيل بصيغة Typst",
-        "downloadAsText": "تنزيل كنص",
+        "downloadAsText": "تنزيل مصدر Typst بصيغة ‎.txt",
         "template": "القالب",
         "loadingPreview": "جاري تحميل المعاينة",
         "loadingPreviewDescription": "يرجى الانتظار، قد يستغرق إعداد محرك Typst بضع لحظات إذا كان الاتصال بطيئاً...",

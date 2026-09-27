@@ -386,7 +386,7 @@
         "downloadAs": "下载为 {format}",
         "downloadAsSVG": "下载为 SVG 矢量图",
         "downloadAsTypst": "下载为 Typst 源码",
-        "downloadAsText": "下载为纯文本",
+        "downloadAsText": "将 Typst 源码下载为 .txt",
         "template": "简历模板",
         "loadingPreview": "正在渲染预览",
         "loadingPreviewDescription": "正在加载 Typst 排版编译器，在慢速网络下可能需要少许时间，请稍候...",

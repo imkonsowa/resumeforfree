@@ -386,7 +386,7 @@
         "downloadAs": "Download as {format}",
         "downloadAsSVG": "Download as SVG",
         "downloadAsTypst": "Download as Typst",
-        "downloadAsText": "Download as Text",
+        "downloadAsText": "Download Typst source as .txt",
         "template": "Template",
         "loadingPreview": "Loading Preview",
         "loadingPreviewDescription": "Please wait as fetching Typst module and compiler takes time on slow networks ...",

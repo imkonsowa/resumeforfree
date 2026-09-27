@@ -386,7 +386,7 @@
         "downloadAs": "{format} Olarak İndir",
         "downloadAsSVG": "SVG Olarak İndir",
         "downloadAsTypst": "Typst Olarak İndir",
-        "downloadAsText": "Metin Olarak İndir",
+        "downloadAsText": "Typst kaynağını .txt olarak indir",
         "template": "Şablon",
         "loadingPreview": "Önizleme Yükleniyor",
         "loadingPreviewDescription": "Yavaş ağlarda Typst modülü ve derleyicisinin getirilmesi zaman alacağından lütfen bekleyin...",

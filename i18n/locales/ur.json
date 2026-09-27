@@ -386,7 +386,7 @@
         "downloadAs": "بطور {format} ڈاؤن لوڈ کریں",
         "downloadAsSVG": "بطور SVG ڈاؤن لوڈ کریں",
         "downloadAsTypst": "بطور Typst ڈاؤن لوڈ کریں",
-        "downloadAsText": "بطور ٹیکسٹ ڈاؤن لوڈ کریں",
+        "downloadAsText": "Typst سورس بطور ‎.txt ڈاؤن لوڈ کریں",
         "template": "ٹیمپلیٹ",
         "loadingPreview": "پیش نظارہ لوڈ ہو رہا ہے",
         "loadingPreviewDescription": "براہ کرم انتظار کریں، سست انٹرنیٹ پر Typst کمپائلر لوڈ ہونے میں تھوڑا وقت لے سکتا ہے...",

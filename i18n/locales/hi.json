@@ -386,7 +386,7 @@
         "downloadAs": "{format} के रूप में डाउनलोड करें",
         "downloadAsSVG": "SVG के रूप में डाउनलोड करें",
         "downloadAsTypst": "Typst के रूप में डाउनलोड करें",
-        "downloadAsText": "टेक्स्ट के रूप में डाउनलोड करें",
+        "downloadAsText": "Typst स्रोत .txt के रूप में डाउनलोड करें",
         "template": "टेम्प्लेट",
         "loadingPreview": "पूर्वावलोकन लोड हो रहा है",
         "loadingPreviewDescription": "कृपया प्रतीक्षा करें, धीमे नेटवर्क पर Typst कंपाइलर लोड होने में थोड़ा समय लग सकता है...",
