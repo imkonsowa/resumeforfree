@@ -33,7 +33,7 @@
     "@myriaddreamin/typst-ts-renderer": "^0.7.0",
     "@myriaddreamin/typst-ts-web-compiler": "^0.7.0",
     "@myriaddreamin/typst.ts": "^0.7.0",
-    "@nuxt/ui": "^4.11.1",
+    "@nuxt/ui": "^4.11.2",
     "@nuxtjs/i18n": "^10.6.0",
     "@nuxtjs/robots": "^6.2.2",
     "@nuxtjs/sitemap": "^8.5.0",
