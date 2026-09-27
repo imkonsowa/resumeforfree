@@ -97,7 +97,12 @@ watch(
                         button-variant="ghost"
                     />
 
-                    <UColorModeButton />
+                    <ClientOnly>
+                        <UColorModeButton />
+                        <template #fallback>
+                            <span class="inline-block size-8" />
+                        </template>
+                    </ClientOnly>
 
                     <UButton
                         :to="REPO_URL"
@@ -222,7 +227,12 @@ watch(
                         button-variant="outline"
                     />
                     <div class="flex items-center gap-1">
-                        <UColorModeButton />
+                        <ClientOnly>
+                            <UColorModeButton />
+                            <template #fallback>
+                                <span class="inline-block size-8" />
+                            </template>
+                        </ClientOnly>
                         <UButton
                             :to="REPO_URL"
                             target="_blank"
