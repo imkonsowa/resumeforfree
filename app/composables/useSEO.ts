@@ -106,3 +106,6 @@ export const getOgLocale = (localeCode: string): string => {
     };
     return map[localeCode] || 'en_US';
 };
+
+export const absolutePageUrl = (path: string): string =>
+    `https://resumeforfree.com${path.replace(/\/+$/, '')}`;

@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import type { AccordionItem, PricingTableSection, PricingTableTier } from '@nuxt/ui';
 import {
+    absolutePageUrl,
     createFAQStructuredData,
     createOrganizationStructuredData,
     createSoftwareApplicationStructuredData,
@@ -111,7 +112,7 @@ const HOMEPAGE_KEYWORDS: Record<string, string> = {
 };
 
 useHead(() => {
-    const pageUrl = `https://resumeforfree.com${route.path === '/' ? '' : route.path}`;
+    const pageUrl = absolutePageUrl(route.path);
     const pageTitle = t('homepage.heroTitle');
     const pageDescription = t('homepage.heroDescription');
     const ogLocale = getOgLocale(locale.value);

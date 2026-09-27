@@ -20,7 +20,7 @@ import FirstTimeBuilderModal from '~/components/elements/FirstTimeBuilderModal.v
 import CloudSyncPromptModal from '~/components/elements/CloudSyncPromptModal.vue';
 import SyncIndicator from '~/components/elements/SyncIndicator.vue';
 import LanguageMismatchAlert from '~/components/elements/LanguageMismatchAlert.vue';
-import { getOgLocale } from '~/composables/useSEO';
+import { absolutePageUrl, getOgLocale } from '~/composables/useSEO';
 
 const { t, locale, loadLocaleMessages } = useI18n({ useScope: 'global' });
 const localePath = useLocalePath();
@@ -59,7 +59,7 @@ useHead(() => ({
         },
         {
             property: 'og:url',
-            content: `https://resumeforfree.com${route.path}`,
+            content: absolutePageUrl(route.path),
         },
         {
             property: 'og:image',

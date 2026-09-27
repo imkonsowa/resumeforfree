@@ -10,7 +10,7 @@ import ResumesGrid from '~/components/resumes/ResumesGrid.vue';
 import ResumesEmptyState from '~/components/resumes/ResumesEmptyState.vue';
 import SplitViewModal from '~/components/resumes/SplitViewModal.vue';
 import type { ImportResumePreview, Resume } from '#layers/core/app/types/resume';
-import { getOgLocale } from '~/composables/useSEO';
+import { absolutePageUrl, getOgLocale } from '~/composables/useSEO';
 
 const { t, locale } = useI18n();
 const route = useRoute();
@@ -390,7 +390,7 @@ useHead(() => ({
         },
         {
             property: 'og:url',
-            content: `https://resumeforfree.com${route.path}`,
+            content: absolutePageUrl(route.path),
         },
         {
             property: 'og:image',
