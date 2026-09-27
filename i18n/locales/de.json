@@ -418,7 +418,7 @@
         },
         "fontSize": {
             "label": "Schriftgröße",
-            "description": "Basisschriftgröße anpassen (Standard: 14pt)"
+            "description": "Basisschriftgröße anpassen (Standard: {size}pt)"
         },
         "language": {
             "label": "Sprache",

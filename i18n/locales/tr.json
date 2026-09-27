@@ -418,7 +418,7 @@
         },
         "fontSize": {
             "label": "Yazı Boyutu",
-            "description": "Özgeçmişiniz için temel yazı boyutunu ayarlayın (varsayılan: 14pt)"
+            "description": "Özgeçmişiniz için temel yazı boyutunu ayarlayın (varsayılan: {size}pt)"
         },
         "language": {
             "label": "Dil",

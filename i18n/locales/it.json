@@ -418,7 +418,7 @@
         },
         "fontSize": {
             "label": "Dimensione del carattere",
-            "description": "Regola la dimensione di base del carattere (predefinita: 14pt)"
+            "description": "Regola la dimensione di base del carattere (predefinita: {size}pt)"
         },
         "language": {
             "label": "Lingua",

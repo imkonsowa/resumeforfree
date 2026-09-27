@@ -418,7 +418,7 @@
         },
         "fontSize": {
             "label": "基础字号",
-            "description": "调整简历基准字号大小 (默认: 14pt)"
+            "description": "调整简历基准字号大小 (默认: {size}pt)"
         },
         "language": {
             "label": "简历语言",

@@ -418,7 +418,7 @@
         },
         "fontSize": {
             "label": "Taille de Police",
-            "description": "Ajustez la taille de police de base de votre CV (défaut : 14pt)"
+            "description": "Ajustez la taille de police de base de votre CV (défaut : {size}pt)"
         },
         "language": {
             "label": "Langue",

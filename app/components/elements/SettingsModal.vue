@@ -3,6 +3,7 @@ import ResumeLanguageSelector from '~/components/elements/ResumeLanguageSelector
 import { useSettingsStore } from '~/stores/settings';
 import { useResumeStore } from '~/stores/resume';
 import { getTemplateList } from '#layers/core/app/templates';
+import { defaultResumeSettings, getDefaultFontForLanguage } from '#layers/core/app/types/resume';
 
 const props = defineProps<{ modelValue: boolean }>();
 
@@ -62,11 +63,10 @@ const updateFont = (value: string) => settingsStore.setSelectedFont(value);
 const updateTemplate = (value: string) => settingsStore.setSelectedTemplate(value);
 
 const resetToDefaults = () => {
-    fontSize.value = 14;
-    selectedFont.value = 'Calibri';
-    selectedTemplate.value = 'compact';
-    settingsStore.setFontSize(14);
-    settingsStore.setSelectedTemplate('compact');
+    settingsStore.setSelectedTemplate(defaultResumeSettings.selectedTemplate);
+    settingsStore.setSelectedFont(getDefaultFontForLanguage(resumeStore.activeResumeLanguage));
+    settingsStore.setFontSize(defaultResumeSettings.fontSize);
+    settingsStore.setShowSectionHeaderLine(defaultResumeSettings.showSectionHeaderLine);
 };
 </script>
 
@@ -127,7 +127,7 @@ const resetToDefaults = () => {
                 <UFormField
                     name="fontSize"
                     :label="t('settings.fontSize.label')"
-                    :description="t('settings.fontSize.description')"
+                    :description="t('settings.fontSize.description', { size: defaultResumeSettings.fontSize })"
                 >
                     <div class="flex items-center gap-4">
                         <USlider
