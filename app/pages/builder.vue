@@ -465,6 +465,18 @@ const orderedSections = computed(() => {
             @enable-sync="handleEnableSync"
             @continue-locally="handleContinueWithoutSync"
         />
+        <template #fallback>
+            <div class="bg-muted min-h-screen flex items-center justify-center p-4">
+                <div class="max-w-xl text-center space-y-3">
+                    <h1 class="text-2xl font-semibold text-highlighted">
+                        {{ t('builder.title') }}
+                    </h1>
+                    <p class="text-toned">
+                        {{ t('builder.pageDescription') }}
+                    </p>
+                </div>
+            </div>
+        </template>
     </ClientOnly>
 </template>
 
