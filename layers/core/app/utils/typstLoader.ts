@@ -2,6 +2,7 @@ import { $typst } from '@myriaddreamin/typst.ts';
 import { disableDefaultFontAssets } from '@myriaddreamin/typst.ts/dist/esm/options.init.mjs';
 import { version as TYPST_VERSION } from '@myriaddreamin/typst.ts/package.json';
 
+import type {} from '#layers/core/app/types/global';
 import type { TypstLoaderState } from '#layers/core/app/types/typst';
 import { buildLazyFonts, loadFontManifest } from '#layers/core/app/utils/fontLoader';
 

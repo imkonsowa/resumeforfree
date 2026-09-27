@@ -1,8 +1,3 @@
-import { fileURLToPath } from 'node:url';
-import { dirname, join } from 'node:path';
-
-const currentDir = dirname(fileURLToPath(import.meta.url));
-
 export default defineNuxtConfig({
     $meta: {
         name: 'core',
@@ -15,12 +10,6 @@ export default defineNuxtConfig({
                 '@myriaddreamin/typst-ts-renderer',
                 '@myriaddreamin/typst.ts',
             ],
-        },
-    },
-
-    typescript: {
-        tsConfig: {
-            include: [join(currentDir, 'app/types/global.d.ts')],
         },
     },
 
