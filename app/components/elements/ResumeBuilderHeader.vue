@@ -26,6 +26,7 @@
                     color="neutral"
                     variant="outline"
                     icon="i-lucide-chevron-down"
+                    :aria-label="t('builder.expand')"
                     @click="settingsStore.expandAllSections()"
                 >
                     <span class="ms-1 sm:hidden">{{ t('builder.expand') }}</span>
@@ -35,6 +36,7 @@
                     color="neutral"
                     variant="outline"
                     icon="i-lucide-chevron-up"
+                    :aria-label="t('builder.collapse')"
                     @click="settingsStore.collapseAllSections()"
                 >
                     <span class="ms-1 sm:hidden">{{ t('builder.collapse') }}</span>

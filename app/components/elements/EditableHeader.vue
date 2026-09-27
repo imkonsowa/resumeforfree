@@ -43,6 +43,7 @@
                 color="neutral"
                 variant="ghost"
                 icon="i-lucide-square-pen"
+                :aria-label="t('common.edit')"
                 @click="startEdit"
             />
             <UButton
