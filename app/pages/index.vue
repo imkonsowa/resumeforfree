@@ -236,7 +236,7 @@ useHead(() => {
                 <p class="text-xs text-muted mt-4">
                     {{ $t('homepage.termsAgreement') }}
                     <ULink
-                        :to="localePath('/terms')"
+                        to="/terms"
                         class="text-secondary underline underline-offset-2"
                     >
                         {{ $t('homepage.termsLink') }}

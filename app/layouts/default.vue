@@ -41,7 +41,7 @@ const footerColumns = computed<FooterColumn[]>(() => [
         label: t('footer.supportHeading'),
         children: [
             { label: t('navigation.contact'), to: localePath('/contact') },
-            { label: t('footer.supportLinks.terms'), to: localePath('/terms') },
+            { label: t('footer.supportLinks.terms'), to: '/terms' },
         ],
     },
 ]);

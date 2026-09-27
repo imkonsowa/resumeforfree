@@ -79,6 +79,7 @@ export default defineNuxtConfig({
 
     routeRules: {
         ...Object.fromEntries(privatePaths.map(path => [path, { robots: false }])),
+        ...Object.fromEntries(prefixedLocales.map(locale => [`/${locale}/terms`, { redirect: { to: '/terms', statusCode: 301 } }])),
     },
 
     future: {
