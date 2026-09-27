@@ -1,4 +1,4 @@
-import type { ImportResumePreview } from '~/types/resume';
+import type { ImportResumePreview } from '#layers/core/app/types/resume';
 
 export const useResumeImportExport = () => {
     const resumeStore = useResumeStore();

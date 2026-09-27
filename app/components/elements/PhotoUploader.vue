@@ -124,7 +124,7 @@
 <script lang="ts" setup>
 import { computed, ref, shallowRef } from 'vue';
 import { downscaleAndEncode, validatePhotoFile, type CropResult } from '~/composables/useResumePhoto';
-import type { PhotoShape } from '~/types/resume';
+import type { PhotoShape } from '#layers/core/app/types/resume';
 
 const { t } = useResumeT();
 const notify = useNotify();

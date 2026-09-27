@@ -9,7 +9,6 @@
         "close": "बंद करें",
         "done": "पूर्ण",
         "copyFailed": "क्लिपबोर्ड पर कॉपी करने में विफल",
-        "link": "लिंक",
         "preview": "पूर्वावलोकन",
         "download": "डाउनलोड करें",
         "loading": "लोड हो रहा है...",
@@ -432,14 +431,11 @@
     },
     "forms": {
         "personalInfo": {
-            "title": "व्यक्तिगत जानकारी",
-            "profile": "प्रोफ़ाइल",
             "firstName": "पहला नाम",
             "lastName": "अंतिम नाम",
             "phone": "फ़ोन नंबर",
             "position": "पद / शीर्षक",
             "summary": "पेशेवर सारांश",
-            "socialLinks": "सोशल लिंक्स",
             "addSocialLink": "सोशल लिंक जोड़ें",
             "socialLinksEmpty": "अभी तक कोई सोशल लिंक नहीं जोड़ा गया है।",
             "platform": "प्लेटफ़ॉर्म",
@@ -458,7 +454,6 @@
             }
         },
         "experience": {
-            "title": "कार्य अनुभव",
             "addExperience": "अनुभव जोड़ें",
             "emptyMessage": "अभी तक कोई अनुभव नहीं जोड़ा गया है।",
             "deleteConfirm": {
@@ -467,7 +462,6 @@
             }
         },
         "internships": {
-            "title": "इंटर्नशिप",
             "addInternship": "इंटर्नशिप जोड़ें",
             "emptyMessage": "अभी तक कोई इंटर्नशिप नहीं जोड़ी गई है।",
             "deleteConfirm": {
@@ -476,7 +470,6 @@
             }
         },
         "education": {
-            "title": "शिक्षा",
             "addEducation": "शिक्षा जोड़ें",
             "emptyMessage": "अभी तक कोई शिक्षा नहीं जोड़ी गई है।",
             "institution": "संस्थान / विश्वविद्यालय",
@@ -489,7 +482,6 @@
             }
         },
         "skills": {
-            "title": "कौशल",
             "addSkill": "कौशल जोड़ें",
             "emptyMessage": "अभी तक कोई कौशल नहीं जोड़ा गया है।",
             "skillTitle": "कौशल / श्रेणी",
@@ -500,7 +492,6 @@
             }
         },
         "projects": {
-            "title": "परियोजनाएं",
             "addProject": "परियोजना जोड़ें",
             "emptyMessage": "अपने उल्लेखनीय प्रोजेक्ट जोड़ें।",
             "projectTitle": "परियोजना शीर्षक",
@@ -518,7 +509,6 @@
             }
         },
         "languages": {
-            "title": "भाषाएं",
             "addLanguage": "भाषा जोड़ें",
             "emptyMessage": "अभी तक कोई भाषा नहीं जोड़ी गई है।",
             "languageName": "भाषा का नाम",
@@ -530,7 +520,6 @@
             }
         },
         "volunteering": {
-            "title": "स्वयंसेवा",
             "addVolunteering": "स्वयंसेवा अनुभव जोड़ें",
             "emptyMessage": "अभी तक कोई स्वयंसेवा अनुभव नहीं जोड़ा गया है।",
             "organization": "संगठन",
@@ -541,7 +530,6 @@
             }
         },
         "certificates": {
-            "title": "प्रमाणपत्र",
             "addCertificate": "प्रमाणपत्र जोड़ें",
             "emptyMessage": "अभी तक कोई प्रमाणपत्र नहीं जोड़ा गया है।",
             "certificateTitle": "प्रमाणपत्र शीर्षक",
@@ -587,13 +575,6 @@
         "devto": "Dev.to",
         "personal": "व्यक्तिगत",
         "other": "अन्य"
-    },
-    "template": {
-        "at": " में ",
-        "present": "वर्तमान",
-        "grade": "ग्रेड:",
-        "separator": ", ",
-        "from": " से "
     },
     "auth": {
         "signIn": "साइन इन करें",
@@ -898,14 +879,6 @@
             "title": "संपर्क करें - Resume For Free सहायता",
             "description": "हमारे मुफ़्त रिज्यूमे बिल्डर के संबंध में सहायता चाहिए? हमारी सहायता टीम से संपर्क करें।"
         }
-    },
-    "proficiency": {
-        "native": "मातृभाषा",
-        "fluent": "धाराप्रवाह",
-        "proficient": "दक्ष / उत्कृष्ट",
-        "conversational": "बोलचाल का ज्ञान",
-        "basic": "बुनियादी",
-        "beginner": "शुरुआती"
     },
     "apiTokens": {
         "title": "API टोकन",

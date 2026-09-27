@@ -9,7 +9,6 @@
         "close": "بند کریں",
         "done": "مکمل",
         "copyFailed": "کلپ بورڈ پر کاپی کرنے میں ناکامی",
-        "link": "لنک",
         "preview": "پیش نظارہ",
         "download": "ڈاؤن لوڈ کریں",
         "loading": "لوڈ ہو رہا ہے...",
@@ -432,14 +431,11 @@
     },
     "forms": {
         "personalInfo": {
-            "title": "ذاتی معلومات",
-            "profile": "پروفائل",
             "firstName": "پہلا نام",
             "lastName": "آخری نام",
             "phone": "فون نمبر",
             "position": "عہدہ / ٹائٹل",
             "summary": "پیشہ ورانہ خلاصہ",
-            "socialLinks": "سوشل لنکس",
             "addSocialLink": "سوشل لنک شامل کریں",
             "socialLinksEmpty": "ابھی تک کوئی سوشل لنک شامل نہیں کیا گیا۔ شروع کرنے کے لیے 'سوشل لنک شامل کریں' پر کلک کریں۔",
             "platform": "پلیٹ فارم",
@@ -458,7 +454,6 @@
             }
         },
         "experience": {
-            "title": "تجربہ",
             "addExperience": "تجربہ شامل کریں",
             "emptyMessage": "ابھی تک کوئی تجربہ شامل نہیں کیا گیا۔ شروع کرنے کے لیے 'تجربہ شامل کریں' پر کلک کریں۔",
             "deleteConfirm": {
@@ -467,7 +462,6 @@
             }
         },
         "internships": {
-            "title": "انٹرن شپس",
             "addInternship": "انٹرن شپ شامل کریں",
             "emptyMessage": "ابھی تک کوئی انٹرن شپ شامل نہیں کی گئی۔",
             "deleteConfirm": {
@@ -476,7 +470,6 @@
             }
         },
         "education": {
-            "title": "تعلیم",
             "addEducation": "تعلیم شامل کریں",
             "emptyMessage": "ابھی تک کوئی تعلیم شامل نہیں کی گئی۔",
             "institution": "ادارہ / یونیورسٹی",
@@ -489,7 +482,6 @@
             }
         },
         "skills": {
-            "title": "مہارتیں",
             "addSkill": "مہارت شامل کریں",
             "emptyMessage": "ابھی تک کوئی مہارت شامل نہیں کی گئی۔",
             "skillTitle": "مہارت / کیٹیگری",
@@ -500,7 +492,6 @@
             }
         },
         "projects": {
-            "title": "پراجیکٹس",
             "addProject": "پراجیکٹ شامل کریں",
             "emptyMessage": "اپنے نمایاں پراجیکٹس شامل کریں۔",
             "projectTitle": "پراجیکٹ کا عنوان",
@@ -518,7 +509,6 @@
             }
         },
         "languages": {
-            "title": "زبانیں",
             "addLanguage": "زبان شامل کریں",
             "emptyMessage": "ابھی تک کوئی زبان شامل نہیں کی گئی۔",
             "languageName": "زبان کا نام",
@@ -530,7 +520,6 @@
             }
         },
         "volunteering": {
-            "title": "رضاکارانہ خدمات",
             "addVolunteering": "رضاکارانہ تجربہ شامل کریں",
             "emptyMessage": "ابھی تک کوئی رضاکارانہ تجربہ شامل نہیں کیا گیا۔",
             "organization": "تنظیم",
@@ -541,7 +530,6 @@
             }
         },
         "certificates": {
-            "title": "سرٹیفیکیٹس",
             "addCertificate": "سرٹیفیکیٹ شامل کریں",
             "emptyMessage": "ابھی تک کوئی سرٹیفیکیٹ شامل نہیں کیا گیا۔",
             "certificateTitle": "سرٹیفیکیٹ کا عنوان",
@@ -587,13 +575,6 @@
         "devto": "Dev.to",
         "personal": "ذاتی ویب سائٹ",
         "other": "دیگر"
-    },
-    "template": {
-        "at": " بمقام ",
-        "present": "موجودہ",
-        "grade": "گریڈ:",
-        "separator": "، ",
-        "from": " از "
     },
     "auth": {
         "signIn": "سائن ان",
@@ -898,14 +879,6 @@
             "title": "رابطہ کریں - Resume For Free سپورٹ",
             "description": "ہمارے مفت سی وی بلڈر کے ساتھ مدد درکار ہے؟ ہماری سپورٹ ٹیم سے رابطہ کریں۔"
         }
-    },
-    "proficiency": {
-        "native": "مادری زبان",
-        "fluent": "روانی کے ساتھ",
-        "proficient": "ماہرانہ",
-        "conversational": "گفتگو کی حد تک",
-        "basic": "بنیادی",
-        "beginner": "ابتدائی"
     },
     "apiTokens": {
         "title": "API ٹوکنز",

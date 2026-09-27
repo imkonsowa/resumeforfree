@@ -2,7 +2,7 @@
 import ResumeLanguageSelector from '~/components/elements/ResumeLanguageSelector.vue';
 import { useSettingsStore } from '~/stores/settings';
 import { useResumeStore } from '~/stores/resume';
-import { getTemplateList } from '~/templates';
+import { getTemplateList } from '#layers/core/app/templates';
 
 const props = defineProps<{ modelValue: boolean }>();
 

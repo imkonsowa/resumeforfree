@@ -18,7 +18,7 @@
 
 <script lang="ts" setup>
 import ResumeCard from './ResumeCard.vue';
-import type { Resume } from '~/types/resume';
+import type { Resume } from '#layers/core/app/types/resume';
 
 interface Props {
     resumes: Resume[];

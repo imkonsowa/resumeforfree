@@ -1,0 +1,51 @@
+{
+    "template": {
+        "at": " chez ",
+        "present": "Présent",
+        "grade": "Note :",
+        "separator": ", ",
+        "from": " de "
+    },
+    "proficiency": {
+        "native": "Langue maternelle",
+        "fluent": "Courant",
+        "proficient": "Compétent",
+        "conversational": "Conversationnel",
+        "basic": "Basique",
+        "beginner": "Débutant"
+    },
+    "common": {
+        "link": "Lien"
+    },
+    "forms": {
+        "personalInfo": {
+            "title": "Informations Personnelles",
+            "profile": "Profil",
+            "socialLinks": "Liens Sociaux"
+        },
+        "projects": {
+            "title": "Projets"
+        },
+        "languages": {
+            "title": "Langues"
+        },
+        "experience": {
+            "title": "Expérience"
+        },
+        "internships": {
+            "title": "Stages"
+        },
+        "education": {
+            "title": "Éducation"
+        },
+        "skills": {
+            "title": "Compétences"
+        },
+        "volunteering": {
+            "title": "Bénévolat"
+        },
+        "certificates": {
+            "title": "Certificats"
+        }
+    }
+}

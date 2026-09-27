@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
-import type { UserSettings, ResumeSettings, PhotoShape } from '~/types/resume';
-import { defaultUserSettings, defaultResumeSettings, getFontsForLanguage, resolveFontFamily } from '~/types/resume';
+import type { UserSettings, ResumeSettings, PhotoShape } from '#layers/core/app/types/resume';
+import { defaultUserSettings, defaultResumeSettings, getFontsForLanguage, resolveFontFamily } from '#layers/core/app/types/resume';
 
 export const useSettingsStore = defineStore('settings', {
     state: () => ({

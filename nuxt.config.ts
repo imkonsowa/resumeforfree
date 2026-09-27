@@ -82,13 +82,6 @@ export default defineNuxtConfig({
     },
 
     vite: {
-        optimizeDeps: {
-            exclude: [
-                '@myriaddreamin/typst-ts-web-compiler',
-                '@myriaddreamin/typst-ts-renderer',
-                '@myriaddreamin/typst.ts',
-            ],
-        },
         build: {
             target: 'esnext',
         },

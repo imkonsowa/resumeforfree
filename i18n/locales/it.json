@@ -9,7 +9,6 @@
         "close": "Chiudi",
         "done": "Fatto",
         "copyFailed": "Copia negli appunti non riuscita",
-        "link": "Link",
         "preview": "Anteprima",
         "download": "Scarica",
         "loading": "Caricamento in corso...",
@@ -432,14 +431,11 @@
     },
     "forms": {
         "personalInfo": {
-            "title": "Informazioni personali",
-            "profile": "Profilo",
             "firstName": "Nome",
             "lastName": "Cognome",
             "phone": "Numero di telefono",
             "position": "Ruolo / Posizione",
             "summary": "Profilo professionale",
-            "socialLinks": "Social e collegamenti",
             "addSocialLink": "Aggiungi collegamento",
             "socialLinksEmpty": "Nessun collegamento inserito. Fai clic su 'Aggiungi collegamento' per iniziare.",
             "platform": "Piattaforma",
@@ -458,7 +454,6 @@
             }
         },
         "experience": {
-            "title": "Esperienza lavorativa",
             "addExperience": "Aggiungi esperienza",
             "emptyMessage": "Nessuna esperienza lavorativa inserita. Fai clic su 'Aggiungi esperienza'.",
             "deleteConfirm": {
@@ -467,7 +462,6 @@
             }
         },
         "internships": {
-            "title": "Tirocini",
             "addInternship": "Aggiungi tirocinio",
             "emptyMessage": "Nessun tirocinio inserito. Fai clic su 'Aggiungi tirocinio'.",
             "deleteConfirm": {
@@ -476,7 +470,6 @@
             }
         },
         "education": {
-            "title": "Istruzione e formazione",
             "addEducation": "Aggiungi istruzione",
             "emptyMessage": "Nessun titolo di studio inserito. Fai clic su 'Aggiungi istruzione'.",
             "institution": "Istituto / Università",
@@ -489,7 +482,6 @@
             }
         },
         "skills": {
-            "title": "Competenze",
             "addSkill": "Aggiungi competenza",
             "emptyMessage": "Nessuna competenza inserita. Fai clic su 'Aggiungi competenza'.",
             "skillTitle": "Competenza / Categoria",
@@ -500,7 +492,6 @@
             }
         },
         "projects": {
-            "title": "Progetti",
             "addProject": "Aggiungi progetto",
             "emptyMessage": "Aggiungi i tuoi progetti più rilevanti per mostrare il tuo lavoro.",
             "projectTitle": "Titolo del progetto",
@@ -518,7 +509,6 @@
             }
         },
         "languages": {
-            "title": "Lingue",
             "addLanguage": "Aggiungi lingua",
             "emptyMessage": "Nessuna lingua inserita. Fai clic su 'Aggiungi lingua'.",
             "languageName": "Lingua",
@@ -530,7 +520,6 @@
             }
         },
         "volunteering": {
-            "title": "Volontariato",
             "addVolunteering": "Aggiungi esperienza di volontariato",
             "emptyMessage": "Nessuna esperienza di volontariato inserita. Fai clic su 'Aggiungi esperienza di volontariato'.",
             "organization": "Organizzazione",
@@ -541,7 +530,6 @@
             }
         },
         "certificates": {
-            "title": "Certificazioni",
             "addCertificate": "Aggiungi certificazione",
             "emptyMessage": "Nessuna certificazione inserita. Fai clic su 'Aggiungi certificazione'.",
             "certificateTitle": "Titolo del certificato",
@@ -587,13 +575,6 @@
         "devto": "Dev.to",
         "personal": "Personale",
         "other": "Altro"
-    },
-    "template": {
-        "at": " presso ",
-        "present": "Presente",
-        "grade": "Votazione:",
-        "separator": ", ",
-        "from": " da "
     },
     "auth": {
         "signIn": "Accedi",
@@ -898,14 +879,6 @@
             "title": "Contattaci - Assistenza per Resume For Free | Supporto",
             "description": "Hai bisogno di aiuto con il nostro generatore di curriculum gratuito? Contatta il team di supporto."
         }
-    },
-    "proficiency": {
-        "native": "Madrelingua",
-        "fluent": "Fluente",
-        "proficient": "Avanzato",
-        "conversational": "Intermedio",
-        "basic": "Elementare",
-        "beginner": "Principiante"
     },
     "apiTokens": {
         "title": "Token API",

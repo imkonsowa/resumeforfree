@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Resume } from '~/types/resume';
+import type { Resume } from '#layers/core/app/types/resume';
 
 interface Props {
     isOpen: boolean;

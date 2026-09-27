@@ -1,6 +1,6 @@
 import { computed } from 'vue';
-import type { SectionHeaders } from '~/types/resume';
-import { SECTION_TRANSLATION_MAP } from '~/utils/sectionHeaders';
+import type { SectionHeaders } from '#layers/core/app/types/resume';
+import { SECTION_TRANSLATION_MAP } from '#layers/core/app/utils/sectionHeaders';
 
 export function useSectionHeader() {
     const { t } = useI18n({ useScope: 'global' });

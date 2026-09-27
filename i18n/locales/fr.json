@@ -9,7 +9,6 @@
         "close": "Fermer",
         "done": "Terminé",
         "copyFailed": "Échec de la copie dans le presse-papiers",
-        "link": "Lien",
         "preview": "Aperçu",
         "download": "Télécharger",
         "loading": "Chargement...",
@@ -432,14 +431,11 @@
     },
     "forms": {
         "personalInfo": {
-            "title": "Informations Personnelles",
-            "profile": "Profil",
             "firstName": "Prénom",
             "lastName": "Nom de famille",
             "phone": "Numéro de téléphone",
             "position": "Poste/Titre",
             "summary": "Résumé Professionnel",
-            "socialLinks": "Liens Sociaux",
             "addSocialLink": "Ajouter un Lien Social",
             "socialLinksEmpty": "Aucun lien social ajouté pour l'instant. Cliquez sur 'Ajouter un Lien Social' pour commencer.",
             "platform": "Plateforme",
@@ -458,7 +454,6 @@
             }
         },
         "experience": {
-            "title": "Expérience",
             "addExperience": "Ajouter une Expérience",
             "emptyMessage": "Aucune expérience ajoutée pour l'instant. Cliquez sur 'Ajouter une Expérience' pour commencer.",
             "deleteConfirm": {
@@ -467,7 +462,6 @@
             }
         },
         "internships": {
-            "title": "Stages",
             "addInternship": "Ajouter un Stage",
             "emptyMessage": "Aucun stage ajouté pour l'instant. Cliquez sur 'Ajouter un Stage' pour commencer.",
             "deleteConfirm": {
@@ -476,7 +470,6 @@
             }
         },
         "education": {
-            "title": "Éducation",
             "addEducation": "Ajouter une Éducation",
             "emptyMessage": "Aucune éducation ajoutée pour l'instant. Cliquez sur 'Ajouter une Éducation' pour commencer.",
             "institution": "Établissement",
@@ -489,7 +482,6 @@
             }
         },
         "skills": {
-            "title": "Compétences",
             "addSkill": "Ajouter une Compétence",
             "emptyMessage": "Aucune compétence ajoutée pour l'instant. Cliquez sur 'Ajouter une Compétence' pour commencer.",
             "skillTitle": "Compétence/Catégorie",
@@ -500,7 +492,6 @@
             }
         },
         "projects": {
-            "title": "Projets",
             "addProject": "Ajouter un Projet",
             "emptyMessage": "Ajoutez vos projets notables pour présenter votre travail.",
             "projectTitle": "Titre du Projet",
@@ -518,7 +509,6 @@
             }
         },
         "languages": {
-            "title": "Langues",
             "addLanguage": "Ajouter une Langue",
             "emptyMessage": "Aucune langue ajoutée pour l'instant. Cliquez sur 'Ajouter une Langue' pour commencer.",
             "languageName": "Langue",
@@ -530,7 +520,6 @@
             }
         },
         "volunteering": {
-            "title": "Bénévolat",
             "addVolunteering": "Ajouter une Expérience de Bénévolat",
             "emptyMessage": "Aucune expérience de bénévolat ajoutée pour l'instant. Cliquez sur 'Ajouter une Expérience de Bénévolat' pour commencer.",
             "organization": "Organisation",
@@ -541,7 +530,6 @@
             }
         },
         "certificates": {
-            "title": "Certificats",
             "addCertificate": "Ajouter un Certificat",
             "emptyMessage": "Aucun certificat ajouté pour l'instant. Cliquez sur 'Ajouter un Certificat' pour commencer.",
             "certificateTitle": "Titre du Certificat",
@@ -587,13 +575,6 @@
         "devto": "Dev.to",
         "personal": "Personnel",
         "other": "Autre"
-    },
-    "template": {
-        "at": " chez ",
-        "present": "Présent",
-        "grade": "Note :",
-        "separator": ", ",
-        "from": " de "
     },
     "auth": {
         "signIn": "Se Connecter",
@@ -898,14 +879,6 @@
             "title": "Contactez-Nous - Obtenez de l'Aide avec Resume For Free | Support",
             "description": "Besoin d'aide avec notre créateur de CV gratuit ? Contactez notre équipe de support pour obtenir de l'aide concernant la création de CV professionnels. Service client rapide et amical."
         }
-    },
-    "proficiency": {
-        "native": "Langue maternelle",
-        "fluent": "Courant",
-        "proficient": "Compétent",
-        "conversational": "Conversationnel",
-        "basic": "Basique",
-        "beginner": "Débutant"
     },
     "apiTokens": {
         "title": "Jetons API",

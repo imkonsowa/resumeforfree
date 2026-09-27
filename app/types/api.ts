@@ -1,4 +1,4 @@
-import type { Resume } from './resume';
+import type { Resume } from '#layers/core/app/types/resume';
 
 export interface LoginRequest {
     email: string;

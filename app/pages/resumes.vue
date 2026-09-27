@@ -9,7 +9,7 @@ import ResumesHeader from '~/components/resumes/ResumesHeader.vue';
 import ResumesGrid from '~/components/resumes/ResumesGrid.vue';
 import ResumesEmptyState from '~/components/resumes/ResumesEmptyState.vue';
 import SplitViewModal from '~/components/resumes/SplitViewModal.vue';
-import type { ImportResumePreview, Resume } from '~/types/resume';
+import type { ImportResumePreview, Resume } from '#layers/core/app/types/resume';
 import { getOgLocale } from '~/composables/useSEO';
 
 const { t, locale } = useI18n();
@@ -125,7 +125,7 @@ const getDefaultResumeName = () => {
     return userName ? `${userName} - Resume` : 'Untitled Resume';
 };
 const handleCreateResume = async (name: string, language: string, navigateToBuilder: boolean, saveToCloud: boolean) => {
-    const { defaultResumeSettings, getDefaultFontForLanguage } = await import('~/types/resume');
+    const { defaultResumeSettings, getDefaultFontForLanguage } = await import('#layers/core/app/types/resume');
     const resumeName = name.trim() || getDefaultResumeName();
     const seededSettings = {
         ...defaultResumeSettings,

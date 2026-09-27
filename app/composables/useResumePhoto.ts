@@ -1,4 +1,4 @@
-import type { LocalResumePhoto, ResumePhoto } from '~/types/resume';
+import type { LocalResumePhoto, ResumePhoto } from '#layers/core/app/types/resume';
 
 const ALLOWED_MIMES = new Set(['image/jpeg', 'image/png']);
 const MAX_BYTES = 512 * 1024;

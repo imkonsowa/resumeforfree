@@ -1,0 +1,51 @@
+{
+    "template": {
+        "at": " presso ",
+        "present": "Presente",
+        "grade": "Votazione:",
+        "separator": ", ",
+        "from": " da "
+    },
+    "proficiency": {
+        "native": "Madrelingua",
+        "fluent": "Fluente",
+        "proficient": "Avanzato",
+        "conversational": "Intermedio",
+        "basic": "Elementare",
+        "beginner": "Principiante"
+    },
+    "common": {
+        "link": "Link"
+    },
+    "forms": {
+        "personalInfo": {
+            "title": "Informazioni personali",
+            "profile": "Profilo",
+            "socialLinks": "Social e collegamenti"
+        },
+        "projects": {
+            "title": "Progetti"
+        },
+        "languages": {
+            "title": "Lingue"
+        },
+        "experience": {
+            "title": "Esperienza lavorativa"
+        },
+        "internships": {
+            "title": "Tirocini"
+        },
+        "education": {
+            "title": "Istruzione e formazione"
+        },
+        "skills": {
+            "title": "Competenze"
+        },
+        "volunteering": {
+            "title": "Volontariato"
+        },
+        "certificates": {
+            "title": "Certificazioni"
+        }
+    }
+}

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { DropdownMenuItem } from '@nuxt/ui';
-import type { Resume } from '~/types/resume';
+import type { Resume } from '#layers/core/app/types/resume';
 import ResumeLanguageSelector from '~/components/elements/ResumeLanguageSelector.vue';
 
 interface Props {

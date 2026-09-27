@@ -97,7 +97,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { Resume } from '~/types/resume';
+import type { Resume } from '#layers/core/app/types/resume';
 
 const props = defineProps<Props>();
 

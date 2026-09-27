@@ -66,7 +66,7 @@
 <script lang="ts" setup>
 import AddButton from '~/components/elements/AddButton.vue';
 import EditableHeader from '~/components/elements/EditableHeader.vue';
-import type { SectionHeaders } from '~/types/resume';
+import type { SectionHeaders } from '#layers/core/app/types/resume';
 
 interface Props {
     title: string;

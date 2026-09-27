@@ -1,0 +1,51 @@
+{
+    "template": {
+        "at": " بمقام ",
+        "present": "موجودہ",
+        "grade": "گریڈ:",
+        "separator": "، ",
+        "from": " از "
+    },
+    "proficiency": {
+        "native": "مادری زبان",
+        "fluent": "روانی کے ساتھ",
+        "proficient": "ماہرانہ",
+        "conversational": "گفتگو کی حد تک",
+        "basic": "بنیادی",
+        "beginner": "ابتدائی"
+    },
+    "common": {
+        "link": "لنک"
+    },
+    "forms": {
+        "personalInfo": {
+            "title": "ذاتی معلومات",
+            "profile": "پروفائل",
+            "socialLinks": "سوشل لنکس"
+        },
+        "projects": {
+            "title": "پراجیکٹس"
+        },
+        "languages": {
+            "title": "زبانیں"
+        },
+        "experience": {
+            "title": "تجربہ"
+        },
+        "internships": {
+            "title": "انٹرن شپس"
+        },
+        "education": {
+            "title": "تعلیم"
+        },
+        "skills": {
+            "title": "مہارتیں"
+        },
+        "volunteering": {
+            "title": "رضاکارانہ خدمات"
+        },
+        "certificates": {
+            "title": "سرٹیفیکیٹس"
+        }
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "template": {
+        "at": " bei ",
+        "present": "Heute",
+        "grade": "Note:",
+        "separator": ", ",
+        "from": " von "
+    },
+    "proficiency": {
+        "native": "Muttersprache",
+        "fluent": "Verhandlungssicher",
+        "proficient": "Sehr gut / Fließend",
+        "conversational": "Gute Kenntnisse",
+        "basic": "Grundkenntnisse",
+        "beginner": "Anfänger"
+    },
+    "common": {
+        "link": "Link"
+    },
+    "forms": {
+        "personalInfo": {
+            "title": "Persönliche Daten",
+            "profile": "Profil",
+            "socialLinks": "Soziale Links & Profile"
+        },
+        "projects": {
+            "title": "Projekte"
+        },
+        "languages": {
+            "title": "Sprachen"
+        },
+        "experience": {
+            "title": "Berufserfahrung"
+        },
+        "internships": {
+            "title": "Praktika"
+        },
+        "education": {
+            "title": "Ausbildung"
+        },
+        "skills": {
+            "title": "Fähigkeiten"
+        },
+        "volunteering": {
+            "title": "Ehrenamt"
+        },
+        "certificates": {
+            "title": "Zertifikate"
+        }
+    }
+}

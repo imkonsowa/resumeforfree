@@ -61,8 +61,8 @@
 
 <script lang="ts" setup>
 import { computed, nextTick, ref } from 'vue';
-import type { SectionHeaders } from '~/types/resume';
-import { SECTION_TRANSLATION_MAP } from '~/utils/sectionHeaders';
+import type { SectionHeaders } from '#layers/core/app/types/resume';
+import { SECTION_TRANSLATION_MAP } from '#layers/core/app/utils/sectionHeaders';
 
 interface Props {
     value: string;

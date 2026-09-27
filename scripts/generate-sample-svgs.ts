@@ -1,14 +1,14 @@
 import { readFileSync, writeFileSync, unlinkSync, statSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { execSync } from 'node:child_process';
-import { compactTemplate } from '../app/templates/compact';
-import type { ResumeData } from '../app/types/resume';
+import { compactTemplate } from '#layers/core/app/templates/compact';
+import type { ResumeData } from '#layers/core/app/types/resume';
 
 const ROOT = resolve(__dirname, '..');
 const SAMPLES_DIR = resolve(ROOT, 'scripts/sample-resumes');
 const LOCALES_DIR = resolve(ROOT, 'i18n/locales');
 const PUBLIC_DIR = resolve(ROOT, 'public');
-const FONTS_DIR = resolve(ROOT, 'public/fonts');
+const FONTS_DIR = resolve(ROOT, 'layers/core/public/fonts');
 
 const LOCALES = ['en', 'ar', 'de', 'it', 'zh', 'ur', 'hi', 'fr', 'tr'] as const;
 

@@ -9,7 +9,6 @@
         "close": "关闭",
         "done": "完成",
         "copyFailed": "复制到剪贴板失败",
-        "link": "链接",
         "preview": "预览",
         "download": "下载",
         "loading": "加载中...",
@@ -432,14 +431,11 @@
     },
     "forms": {
         "personalInfo": {
-            "title": "个人信息",
-            "profile": "个人简介",
             "firstName": "名字",
             "lastName": "姓氏",
             "phone": "联系电话",
             "position": "期望职位 / 当前头衔",
             "summary": "个人总结 / 职业简述",
-            "socialLinks": "社交主页与外链",
             "addSocialLink": "添加链接",
             "socialLinksEmpty": "尚未添加任何链接。点击“添加链接”开始添加。",
             "platform": "平台",
@@ -458,7 +454,6 @@
             }
         },
         "experience": {
-            "title": "工作经历",
             "addExperience": "添加工作经历",
             "emptyMessage": "尚未添加工作经历。点击“添加工作经历”开始填写。",
             "deleteConfirm": {
@@ -467,7 +462,6 @@
             }
         },
         "internships": {
-            "title": "实习经历",
             "addInternship": "添加实习经历",
             "emptyMessage": "尚未添加实习经历。点击“添加实习经历”开始填写。",
             "deleteConfirm": {
@@ -476,7 +470,6 @@
             }
         },
         "education": {
-            "title": "教育背景",
             "addEducation": "添加教育经历",
             "emptyMessage": "尚未添加教育经历。点击“添加教育经历”开始填写。",
             "institution": "毕业院校 / 机构",
@@ -489,7 +482,6 @@
             }
         },
         "skills": {
-            "title": "专业技能",
             "addSkill": "添加技能项",
             "emptyMessage": "尚未添加任何技能。点击“添加技能项”开始填写。",
             "skillTitle": "技能分类 / 标题",
@@ -500,7 +492,6 @@
             }
         },
         "projects": {
-            "title": "项目经验",
             "addProject": "添加项目",
             "emptyMessage": "添加您参与过的重点项目以充分展示您的实战能力。",
             "projectTitle": "项目名称",
@@ -518,7 +509,6 @@
             }
         },
         "languages": {
-            "title": "语言能力",
             "addLanguage": "添加语言",
             "emptyMessage": "尚未添加语言技能。点击“添加语言”开始填写。",
             "languageName": "语言名称",
@@ -530,7 +520,6 @@
             }
         },
         "volunteering": {
-            "title": "志愿服务与社会活动",
             "addVolunteering": "添加志愿经历",
             "emptyMessage": "尚未添加志愿经历。点击“添加志愿经历”开始填写。",
             "organization": "志愿机构 / 组织",
@@ -541,7 +530,6 @@
             }
         },
         "certificates": {
-            "title": "资格证书与荣誉",
             "addCertificate": "添加证书",
             "emptyMessage": "尚未添加证书。点击“添加证书”开始填写。",
             "certificateTitle": "证书名称",
@@ -587,13 +575,6 @@
         "devto": "Dev.to",
         "personal": "个人主页",
         "other": "其他网站"
-    },
-    "template": {
-        "at": " · ",
-        "present": "至今",
-        "grade": "成绩:",
-        "separator": "，",
-        "from": " 来自 "
     },
     "auth": {
         "signIn": "登录",
@@ -898,14 +879,6 @@
             "title": "联系我们 - Resume For Free 官方技术支持与帮助",
             "description": "使用免费简历生成器遇到问题？联系我们的技术支持团队以获取帮助。"
         }
-    },
-    "proficiency": {
-        "native": "母语",
-        "fluent": "精通",
-        "proficient": "熟练",
-        "conversational": "良好 / 日常会话",
-        "basic": "基础",
-        "beginner": "入门"
     },
     "apiTokens": {
         "title": "API 访问令牌",

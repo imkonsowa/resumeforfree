@@ -3,7 +3,7 @@ import { useResumeStore } from '~/stores/resume';
 import ZoomControls from '~/components/elements/ZoomControls.vue';
 import ResumeBuilderHeader from '~/components/elements/ResumeBuilderHeader.vue';
 import ResumeLanguageSelector from '~/components/elements/ResumeLanguageSelector.vue';
-import { getLocaleDirection } from '~/utils/localeDirection';
+import { getLocaleDirection } from '#layers/core/app/utils/localeDirection';
 import PersonalInfoForm from '~/components/forms/PersonalInfoForm.vue';
 import ExperienceForm from '~/components/forms/ExperienceForm.vue';
 import InternshipsForm from '~/components/forms/InternshipsForm.vue';

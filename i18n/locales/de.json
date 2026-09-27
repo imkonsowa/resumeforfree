@@ -9,7 +9,6 @@
         "close": "Schließen",
         "done": "Fertig",
         "copyFailed": "Kopieren in die Zwischenablage fehlgeschlagen",
-        "link": "Link",
         "preview": "Vorschau",
         "download": "Herunterladen",
         "loading": "Wird geladen...",
@@ -432,14 +431,11 @@
     },
     "forms": {
         "personalInfo": {
-            "title": "Persönliche Daten",
-            "profile": "Profil",
             "firstName": "Vorname",
             "lastName": "Nachname",
             "phone": "Telefonnummer",
             "position": "Berufsbezeichnung / Titel",
             "summary": "Kurzbeschreibung / Profil",
-            "socialLinks": "Soziale Links & Profile",
             "addSocialLink": "Link hinzufügen",
             "socialLinksEmpty": "Noch keine Links hinzugefügt. Klicken Sie auf „Link hinzufügen“, um zu beginnen.",
             "platform": "Plattform",
@@ -458,7 +454,6 @@
             }
         },
         "experience": {
-            "title": "Berufserfahrung",
             "addExperience": "Erfahrung hinzufügen",
             "emptyMessage": "Noch keine Berufserfahrung eingetragen. Klicken Sie auf „Erfahrung hinzufügen“.",
             "deleteConfirm": {
@@ -467,7 +462,6 @@
             }
         },
         "internships": {
-            "title": "Praktika",
             "addInternship": "Praktikum hinzufügen",
             "emptyMessage": "Noch keine Praktika eingetragen. Klicken Sie auf „Praktikum hinzufügen“.",
             "deleteConfirm": {
@@ -476,7 +470,6 @@
             }
         },
         "education": {
-            "title": "Ausbildung",
             "addEducation": "Ausbildung hinzufügen",
             "emptyMessage": "Noch keine Ausbildung eingetragen. Klicken Sie auf „Ausbildung hinzufügen“.",
             "institution": "Bildungseinrichtung",
@@ -489,7 +482,6 @@
             }
         },
         "skills": {
-            "title": "Fähigkeiten",
             "addSkill": "Fähigkeit hinzufügen",
             "emptyMessage": "Noch keine Fähigkeiten hinzugefügt. Klicken Sie auf „Fähigkeit hinzufügen“.",
             "skillTitle": "Kategorie / Bereich",
@@ -500,7 +492,6 @@
             }
         },
         "projects": {
-            "title": "Projekte",
             "addProject": "Projekt hinzufügen",
             "emptyMessage": "Fügen Sie Ihre wichtigsten Projekte hinzu, um Ihre Arbeit zu präsentieren.",
             "projectTitle": "Projekttitel",
@@ -518,7 +509,6 @@
             }
         },
         "languages": {
-            "title": "Sprachen",
             "addLanguage": "Sprache hinzufügen",
             "emptyMessage": "Noch keine Sprachen eingetragen. Klicken Sie auf „Sprache hinzufügen“.",
             "languageName": "Sprache",
@@ -530,7 +520,6 @@
             }
         },
         "volunteering": {
-            "title": "Ehrenamt",
             "addVolunteering": "Ehrenamtliche Tätigkeit hinzufügen",
             "emptyMessage": "Noch kein Ehrenamt eingetragen. Klicken Sie auf „Ehrenamtliche Tätigkeit hinzufügen“.",
             "organization": "Organisation",
@@ -541,7 +530,6 @@
             }
         },
         "certificates": {
-            "title": "Zertifikate",
             "addCertificate": "Zertifikat hinzufügen",
             "emptyMessage": "Noch keine Zertifikate hinzugefügt. Klicken Sie auf „Zertifikat hinzufügen“.",
             "certificateTitle": "Zertifikatstitel",
@@ -587,13 +575,6 @@
         "devto": "Dev.to",
         "personal": "Persönlich",
         "other": "Sonstiges"
-    },
-    "template": {
-        "at": " bei ",
-        "present": "Heute",
-        "grade": "Note:",
-        "separator": ", ",
-        "from": " von "
     },
     "auth": {
         "signIn": "Anmelden",
@@ -898,14 +879,6 @@
             "title": "Kontakt - Hilfe bei Resume For Free | Support",
             "description": "Benötigen Sie Hilfe bei unserem kostenlosen Lebenslauf-Editor? Kontaktieren Sie unser Support-Team."
         }
-    },
-    "proficiency": {
-        "native": "Muttersprache",
-        "fluent": "Verhandlungssicher",
-        "proficient": "Sehr gut / Fließend",
-        "conversational": "Gute Kenntnisse",
-        "basic": "Grundkenntnisse",
-        "beginner": "Anfänger"
     },
     "apiTokens": {
         "title": "API-Tokens",
