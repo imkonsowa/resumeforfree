@@ -13,6 +13,11 @@ describe('escapeTypstText', () => {
             expect(result).toBe('Kafka\n\nDocker');
         });
 
+        it('treats lines holding only zero-width characters as blank', () => {
+            const result = escapeTypstText('Kafka' + '\n\u200b\ufeff\u2060'.repeat(10) + '\nDocker');
+            expect(result).toBe('Kafka\n\nDocker');
+        });
+
         it('keeps single line breaks and indentation inside lines', () => {
             const result = escapeTypstText('Kafka\n  Docker');
             expect(result).toBe('Kafka\n  Docker');
