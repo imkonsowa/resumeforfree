@@ -113,7 +113,7 @@ const open = computed({
     },
 });
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 interface Props {
     isOpen: boolean;
@@ -133,7 +133,7 @@ const cloudInfo = computed(() => {
     };
 });
 const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
+    return new Date(dateString).toLocaleDateString(locale.value, {
         year: 'numeric',
         month: 'short',
         day: 'numeric',
@@ -148,7 +148,7 @@ const getSectionCount = (resume: Resume): string => {
     if (data.education?.length) sections.push(`${data.education.length} ${t('resumes.modals.cloudSync.edu')}`);
     if (data.skills?.length) sections.push(`${data.skills.length} ${t('resumes.card.skills')}`);
     if (data.projects?.length) sections.push(`${data.projects.length} ${t('resumes.modals.cloudSync.projects')}`);
-    return sections.join(', ') || t('resumes.modals.cloudSync.noSections');
+    return new Intl.ListFormat(locale.value, { style: 'short', type: 'unit' }).format(sections) || t('resumes.modals.cloudSync.noSections');
 };
 const getNewResumesCount = (): number => {
     return selectedResumes.value.filter((id) => {

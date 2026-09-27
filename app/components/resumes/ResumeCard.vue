@@ -22,7 +22,7 @@ const emit = defineEmits<{
     disableSync: [id: string];
 }>();
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 const resumeStore = useResumeStore();
 const authStore = useAuthStore();
@@ -41,12 +41,12 @@ const resumePreview = computed(() => {
     return {
         fullName: fullName || t('resumes.card.noName'),
         position,
-        sections: sections.join(', ') || t('resumes.card.noSections'),
+        sections: new Intl.ListFormat(locale.value, { style: 'short', type: 'unit' }).format(sections) || t('resumes.card.noSections'),
     };
 });
 
 const formatDate = (dateString: string) =>
-    new Date(dateString).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+    new Date(dateString).toLocaleDateString(locale.value, { year: 'numeric', month: 'short', day: 'numeric' });
 
 const startEdit = () => {
     isEditing.value = true;

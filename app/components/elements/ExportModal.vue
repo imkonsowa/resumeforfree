@@ -13,7 +13,7 @@ const emit = defineEmits<{
     export: [resumeIds: string[]];
 }>();
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 const selectedResumes = ref<string[]>([]);
 const selectAll = ref(true);
@@ -41,7 +41,7 @@ const handleSelectAll = (checked: boolean | 'indeterminate') => {
 };
 
 const formatDate = (dateString: string) =>
-    new Date(dateString).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+    new Date(dateString).toLocaleDateString(locale.value, { year: 'numeric', month: 'short', day: 'numeric' });
 </script>
 
 <template>
