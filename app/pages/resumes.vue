@@ -183,6 +183,7 @@ const handleCopyResume = (name: string, navigateToBuilder: boolean) => {
             resumeStore.setActiveResume(newResumeId);
             showCopyModal.value = false;
             resumeToCopy.value = null;
+            notify.success(t('resumes.notify.copied', { name: resumeName }));
             if (navigateToBuilder) {
                 router.push(localePath('/builder'));
             }
@@ -288,12 +289,13 @@ const handleFileSelect = async (event: Event) => {
     }
     else {
         console.error('Failed to parse file:', result.error);
+        notify.error(t('resumes.notify.importFailed'));
     }
     input.value = '';
 };
 const handleImportConfirm = (selectedIndexes: number[]) => {
     const importedCount = importSelectedResumes(importPreviews.value, selectedIndexes);
-    console.log(`Successfully imported ${importedCount} resume${importedCount !== 1 ? 's' : ''}`);
+    notify.success(t('resumes.notify.imported', { count: importedCount }, importedCount));
     showImportModal.value = false;
     importPreviews.value = [];
 };

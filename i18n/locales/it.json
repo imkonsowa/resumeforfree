@@ -840,7 +840,10 @@
             "syncingMultiple": "Sincronizzazione di {count} {plural} in corso...",
             "syncingToCloud": "Sincronizzazione curriculum su cloud in corso...",
             "syncMultipleFailed": "Sincronizzazione curriculum non riuscita: {error}",
-            "updatedInCloud": "Curriculum \"{name}\" aggiornato nel cloud"
+            "updatedInCloud": "Curriculum \"{name}\" aggiornato nel cloud",
+            "copied": "Copia \"{name}\" creata",
+            "imported": "Nessun curriculum importato | {count} curriculum importato | {count} curriculum importati",
+            "importFailed": "Questo file non è un'esportazione di curriculum valida"
         }
     },
     "contact": {

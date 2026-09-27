@@ -840,7 +840,10 @@
             "syncingMultiple": "Syncing {count} {plural} to cloud...",
             "syncingToCloud": "Syncing resume to cloud...",
             "syncMultipleFailed": "Failed to sync resumes: {error}",
-            "updatedInCloud": "Resume \"{name}\" updated in cloud"
+            "updatedInCloud": "Resume \"{name}\" updated in cloud",
+            "copied": "Copy \"{name}\" created",
+            "imported": "No resumes imported | {count} resume imported | {count} resumes imported",
+            "importFailed": "This file is not a valid resume export"
         }
     },
     "contact": {

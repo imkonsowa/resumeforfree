@@ -840,7 +840,10 @@
             "syncingMultiple": "Synchronisation de {count} CV sur le cloud...",
             "syncingToCloud": "Synchronisation du CV sur le cloud...",
             "syncMultipleFailed": "Échec de la synchronisation des CV : {error}",
-            "updatedInCloud": "CV \"{name}\" mis à jour sur le cloud"
+            "updatedInCloud": "CV \"{name}\" mis à jour sur le cloud",
+            "copied": "Copie \"{name}\" créée",
+            "imported": "Aucun CV importé | {count} CV importé | {count} CV importés",
+            "importFailed": "Ce fichier n'est pas un export de CV valide"
         }
     },
     "contact": {

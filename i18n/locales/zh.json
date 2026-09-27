@@ -840,7 +840,10 @@
             "syncingMultiple": "正在将 {count} {plural}同步至云端...",
             "syncingToCloud": "正在将简历同步至云端...",
             "syncMultipleFailed": "批量同步简历失败: {error}",
-            "updatedInCloud": "云端简历“{name}”已成功更新"
+            "updatedInCloud": "云端简历“{name}”已成功更新",
+            "copied": "已创建副本“{name}”",
+            "imported": "未导入任何简历 | 已导入 {count} 份简历 | 已导入 {count} 份简历",
+            "importFailed": "此文件不是有效的简历导出文件"
         }
     },
     "contact": {

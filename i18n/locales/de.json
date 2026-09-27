@@ -840,7 +840,10 @@
             "syncingMultiple": "Synchronisiere {count} {plural}...",
             "syncingToCloud": "Wird in Cloud synchronisiert...",
             "syncMultipleFailed": "Synchronisierung fehlgeschlagen: {error}",
-            "updatedInCloud": "Lebenslauf „{name}“ in der Cloud aktualisiert"
+            "updatedInCloud": "Lebenslauf „{name}“ in der Cloud aktualisiert",
+            "copied": "Kopie „{name}“ erstellt",
+            "imported": "Keine Lebensläufe importiert | {count} Lebenslauf importiert | {count} Lebensläufe importiert",
+            "importFailed": "Diese Datei ist kein gültiger Lebenslauf-Export"
         }
     },
     "contact": {

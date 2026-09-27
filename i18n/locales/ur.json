@@ -840,7 +840,10 @@
             "syncingMultiple": "{count} {plural} کلاؤڈ پر ہم آہنگ ہو رہی ہیں...",
             "syncingToCloud": "کلاؤڈ پر ہم آہنگ ہو رہی ہے...",
             "syncMultipleFailed": "ہم آہنگی میں ناکامی: {error}",
-            "updatedInCloud": "سی وی \"{name}\" کلاؤڈ میں اپ ڈیٹ ہو گئی"
+            "updatedInCloud": "سی وی \"{name}\" کلاؤڈ میں اپ ڈیٹ ہو گئی",
+            "copied": "کاپی \"{name}\" بن گئی",
+            "imported": "کوئی سی وی درآمد نہیں ہوئی | {count} سی وی درآمد ہوئی | {count} سی ویز درآمد ہوئیں",
+            "importFailed": "یہ فائل درست سی وی ایکسپورٹ نہیں ہے"
         }
     },
     "contact": {

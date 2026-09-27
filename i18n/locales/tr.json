@@ -840,7 +840,10 @@
             "syncingMultiple": "{count} özgeçmiş buluta senkronize ediliyor...",
             "syncingToCloud": "Özgeçmiş buluta senkronize ediliyor...",
             "syncMultipleFailed": "Özgeçmişler senkronize edilemedi: {error}",
-            "updatedInCloud": "\"{name}\" özgeçmişi bulutta güncellendi"
+            "updatedInCloud": "\"{name}\" özgeçmişi bulutta güncellendi",
+            "copied": "\"{name}\" kopyası oluşturuldu",
+            "imported": "Hiç özgeçmiş içe aktarılmadı | {count} özgeçmiş içe aktarıldı | {count} özgeçmiş içe aktarıldı",
+            "importFailed": "Bu dosya geçerli bir özgeçmiş dışa aktarımı değil"
         }
     },
     "contact": {
