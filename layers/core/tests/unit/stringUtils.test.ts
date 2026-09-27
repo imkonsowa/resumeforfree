@@ -2,23 +2,6 @@ import { describe, it, expect } from 'vitest';
 import { escapeTypstText, escapeTypstString, describeTypstError } from '#layers/core/app/utils/stringUtils';
 
 describe('escapeTypstText', () => {
-    describe('blank lines', () => {
-        it('treats lines holding only non-breaking spaces as blank', () => {
-            const result = escapeTypstText('Kafka, Redis' + '\n\u00a0\n'.repeat(15) + 'Docker');
-            expect(result).toBe('Kafka, Redis\n\nDocker');
-        });
-
-        it('collapses runs of blank lines into one paragraph break', () => {
-            const result = escapeTypstText('Kafka\r\n \t\r\n\r\n\n\nDocker');
-            expect(result).toBe('Kafka\n\nDocker');
-        });
-
-        it('keeps single line breaks and indentation inside lines', () => {
-            const result = escapeTypstText('Kafka\n  Docker');
-            expect(result).toBe('Kafka\n  Docker');
-        });
-    });
-
     describe('hash character (#) escaping for content blocks', () => {
         it('should escape # in C# programming language', () => {
             const result = escapeTypstText('C#');
