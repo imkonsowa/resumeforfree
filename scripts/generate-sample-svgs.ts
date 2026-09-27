@@ -7,6 +7,7 @@ import type { ResumeData } from '#layers/core/app/types/resume';
 const ROOT = resolve(__dirname, '..');
 const SAMPLES_DIR = resolve(ROOT, 'scripts/sample-resumes');
 const LOCALES_DIR = resolve(ROOT, 'i18n/locales');
+const CORE_LOCALES_DIR = resolve(ROOT, 'layers/core/i18n/locales');
 const PUBLIC_DIR = resolve(ROOT, 'public');
 const FONTS_DIR = resolve(ROOT, 'layers/core/public/fonts');
 
@@ -25,7 +26,25 @@ const FONT_MAP: Record<string, string> = {
     hi: 'Kohinoor Devanagari',
 };
 
-const getTranslator = (localeDict: Record<string, unknown>) => {
+type LocaleDict = Record<string, unknown>;
+
+const mergeLocales = (base: LocaleDict, override: LocaleDict): LocaleDict => {
+    const merged: LocaleDict = { ...base };
+    for (const [key, value] of Object.entries(override)) {
+        const existing = merged[key];
+        merged[key] = value && typeof value === 'object' && existing && typeof existing === 'object'
+            ? mergeLocales(existing as LocaleDict, value as LocaleDict)
+            : value;
+    }
+    return merged;
+};
+
+const loadLocale = (locale: string): LocaleDict => mergeLocales(
+    JSON.parse(readFileSync(resolve(CORE_LOCALES_DIR, `${locale}.json`), 'utf8')) as LocaleDict,
+    JSON.parse(readFileSync(resolve(LOCALES_DIR, `${locale}.json`), 'utf8')) as LocaleDict,
+);
+
+const getTranslator = (localeDict: LocaleDict) => {
     return (key: string): string => {
         const parts = key.split('.');
         let cur: unknown = localeDict;
@@ -46,7 +65,6 @@ async function generateSampleSvgs() {
 
     for (const locale of LOCALES) {
         const resumePath = resolve(SAMPLES_DIR, `${locale}.json`);
-        const localePath = resolve(LOCALES_DIR, `${locale}.json`);
         const outSvgPath = resolve(PUBLIC_DIR, `sample-resume-${locale}.svg`);
         const tmpTypPath = resolve(SAMPLES_DIR, `.tmp-${locale}.typ`);
 
@@ -56,8 +74,7 @@ async function generateSampleSvgs() {
         }
 
         const resumeData = JSON.parse(readFileSync(resumePath, 'utf8')) as ResumeData;
-        const localeDict = JSON.parse(readFileSync(localePath, 'utf8')) as Record<string, unknown>;
-        const t = getTranslator(localeDict);
+        const t = getTranslator(loadLocale(locale));
         const font = FONT_MAP[locale] || 'Calibri';
 
         const typstContent = compactTemplate.parse({
