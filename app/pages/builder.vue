@@ -90,12 +90,13 @@ useHead(() => ({
 const resumeStore = useResumeStore();
 const settingsStore = useSettingsStore();
 const authStore = useAuthStore();
-const { hasSeenModal, markModalSeen } = useModalSeen('firstTimeBuilder');
+const { hasSeenModal, markModalSeen, hasSeenThisSession, markSeenThisSession } = useModalSeen('firstTimeBuilder');
 const { startAutoSync, stopAutoSync, isSyncing, lastSyncSuccess, lastSyncTime, lastSyncError } = useAutoSync();
 useTypstLoader();
 
 const checkOtherModals = () => {
-    if (!hasSeenModal() && !authStore.isAuthenticated && resumeStore.resumeCount > 0) {
+    if (!hasSeenModal() && !hasSeenThisSession() && !authStore.isAuthenticated && resumeStore.resumeCount > 0) {
+        markSeenThisSession();
         showFirstTimeModal.value = true;
         return;
     }
