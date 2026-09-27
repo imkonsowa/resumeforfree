@@ -60,7 +60,6 @@ useHead(() => {
         meta: [
             { name: 'description', content: t('qa.subtitle') },
             { name: 'keywords', content: QA_KEYWORDS[locale.value] || QA_KEYWORDS.en },
-            { name: 'robots', content: 'index, follow' },
             { property: 'og:type', content: 'website' },
             { property: 'og:locale', content: ogLocale },
             { property: 'og:site_name', content: 'Resume For Free' },

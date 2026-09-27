@@ -212,10 +212,6 @@ useHead(() => ({
             content: 'resume builder support, contact resume help, customer service, resume builder assistance, help with resume',
         },
         {
-            name: 'robots',
-            content: 'index, follow',
-        },
-        {
             property: 'og:type',
             content: 'website',
         },

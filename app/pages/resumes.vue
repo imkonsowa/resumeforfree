@@ -369,10 +369,6 @@ useHead(() => ({
             content: 'resume management, multiple resumes, organize resumes, duplicate resume, resume dashboard, free resume storage',
         },
         {
-            name: 'robots',
-            content: 'index, follow',
-        },
-        {
             property: 'og:type',
             content: 'website',
         },

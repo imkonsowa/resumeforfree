@@ -1,5 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
+const prefixedLocales = ['ar', 'tr', 'fr', 'de', 'it', 'zh', 'ur', 'hi'];
+const withLocalePrefixes = (path: string) => [path, ...prefixedLocales.map(locale => `/${locale}${path}`)];
+const privatePaths = ['/auth/**', '/profile'].flatMap(withLocalePrefixes);
+
 export default defineNuxtConfig({
     modules: [
         '@nuxt/ui',
@@ -29,7 +33,6 @@ export default defineNuxtConfig({
                 { charset: 'utf-8' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
                 { name: 'format-detection', content: 'telephone=no' },
-                { name: 'robots', content: 'index, follow' },
                 { name: 'author', content: 'Resume For Free' },
                 { name: 'theme-color', content: '#3b82f6' },
             ],
@@ -73,6 +76,11 @@ export default defineNuxtConfig({
             invisibleSecretKey: process.env.NUXT_TURNSTILE_INVISIBLE_SECRET_KEY || '1x0000000000000000000000000000000BB',
         },
     },
+
+    routeRules: {
+        ...Object.fromEntries(privatePaths.map(path => [path, { robots: false }])),
+    },
+
     future: {
         compatibilityVersion: 4,
     },
@@ -178,26 +186,7 @@ export default defineNuxtConfig({
     },
 
     sitemap: {
-        exclude: [
-            '/auth/**',
-            '/profile',
-            '/ar/auth/**',
-            '/ar/profile',
-            '/tr/auth/**',
-            '/tr/profile',
-            '/fr/auth/**',
-            '/fr/profile',
-            '/de/auth/**',
-            '/de/profile',
-            '/it/auth/**',
-            '/it/profile',
-            '/zh/auth/**',
-            '/zh/profile',
-            '/ur/auth/**',
-            '/ur/profile',
-            '/hi/auth/**',
-            '/hi/profile',
-        ],
+        exclude: privatePaths,
         defaults: {
             changefreq: 'weekly',
             priority: 0.7,

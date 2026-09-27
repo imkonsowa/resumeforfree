@@ -38,10 +38,6 @@ useHead(() => ({
             content: 'resume builder, CV maker, professional resume, free resume template, PDF resume, online resume builder, privacy resume maker',
         },
         {
-            name: 'robots',
-            content: 'index, follow',
-        },
-        {
             property: 'og:type',
             content: 'website',
         },

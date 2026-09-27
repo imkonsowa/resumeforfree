@@ -13,7 +13,6 @@ if (!authStore.isLoggedIn) {
 
 useHead({
     meta: [
-        { name: 'robots', content: 'noindex, follow' },
     ],
 });
 
