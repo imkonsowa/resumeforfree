@@ -41,7 +41,10 @@
             </div>
         </template>
 
-        <div v-if="!isCollapsed">
+        <template
+            v-if="!isCollapsed"
+            #default
+        >
             <div
                 v-if="props.isEmpty"
                 class="text-center py-8 text-muted"
@@ -59,7 +62,7 @@
                     @click="$emit('add')"
                 />
             </div>
-        </div>
+        </template>
     </UCard>
 </template>
 
