@@ -401,7 +401,10 @@
         "previewErrorDetailed": "Anteprima non riuscita: {detail}",
         "zoomIn": "Ingrandisci",
         "zoomOut": "Rimpicciolisci",
-        "downloadOptions": "Opzioni di download"
+        "downloadOptions": "Opzioni di download",
+        "stepper": {
+            "entries": "Nessuna voce | {count} voce | {count} voci"
+        }
     },
     "settings": {
         "title": "Impostazioni curriculum",

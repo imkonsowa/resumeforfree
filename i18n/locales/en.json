@@ -401,7 +401,10 @@
         "previewErrorDetailed": "Preview failed: {detail}",
         "zoomIn": "Zoom in",
         "zoomOut": "Zoom out",
-        "downloadOptions": "Download options"
+        "downloadOptions": "Download options",
+        "stepper": {
+            "entries": "No entries | {count} entry | {count} entries"
+        }
     },
     "settings": {
         "title": "Resume Settings",

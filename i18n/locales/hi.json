@@ -401,7 +401,10 @@
         "previewErrorDetailed": "पूर्वावलोकन विफल: {detail}",
         "zoomIn": "बड़ा करें",
         "zoomOut": "छोटा करें",
-        "downloadOptions": "डाउनलोड विकल्प"
+        "downloadOptions": "डाउनलोड विकल्प",
+        "stepper": {
+            "entries": "कोई प्रविष्टि नहीं | {count} प्रविष्टि | {count} प्रविष्टियाँ"
+        }
     },
     "settings": {
         "title": "रिज्यूमे सेटिंग्स",

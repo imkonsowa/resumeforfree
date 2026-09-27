@@ -401,7 +401,10 @@
         "zoomIn": "Zoom avant",
         "zoomOut": "Zoom arrière",
         "downloadOptions": "Options de téléchargement",
-        "previewErrorDetailed": "Échec de l'aperçu : {detail}"
+        "previewErrorDetailed": "Échec de l'aperçu : {detail}",
+        "stepper": {
+            "entries": "Aucune entrée | {count} entrée | {count} entrées"
+        }
     },
     "settings": {
         "title": "Paramètres du CV",

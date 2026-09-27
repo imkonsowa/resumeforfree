@@ -401,7 +401,10 @@
         "previewErrorDetailed": "پیش نظارہ ناکام: {detail}",
         "zoomIn": "بڑا کریں",
         "zoomOut": "چھوٹا کریں",
-        "downloadOptions": "ڈاؤن لوڈ کے اختیارات"
+        "downloadOptions": "ڈاؤن لوڈ کے اختیارات",
+        "stepper": {
+            "entries": "کوئی اندراج نہیں | {count} اندراج | {count} اندراجات"
+        }
     },
     "settings": {
         "title": "سی وی کی ترتیبات",

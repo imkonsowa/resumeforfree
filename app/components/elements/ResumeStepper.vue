@@ -1,7 +1,7 @@
 <template>
     <UModal
         v-model:open="showStepper"
-        :title="t('builder.sections', 'Resume sections')"
+        :title="t('builder.sections')"
         :ui="{ content: 'max-w-sm' }"
     >
         <template #body>
@@ -44,8 +44,7 @@
                             dropZoneIndex === index && draggedIndex !== null && draggedIndex !== index ? 'transform translate-y-1' : '',
                         ]"
                         :draggable="section.orderable"
-                        class="w-full flex items-center gap-3 p-3 rounded-md transition-colors hover:bg-elevated hover:text-highlighted text-start cursor-move"
-                        @click="scrollToSection(section.id)"
+                        class="w-full flex items-center gap-3 p-3 rounded-md transition-colors hover:bg-elevated hover:text-highlighted cursor-move"
                         @dragend="onDragEnd"
                         @dragover="onDragOver($event, index)"
                         @dragstart="onDragStart($event, index)"
@@ -57,25 +56,51 @@
                                 class="w-4 h-4 text-dimmed"
                             />
                         </div>
-                        <div class="flex-shrink-0">
+                        <button
+                            type="button"
+                            class="flex flex-1 min-w-0 items-center gap-3 text-start rounded-md focus-visible:outline-2 focus-visible:outline-primary"
+                            @click="scrollToSection(section.id)"
+                        >
                             <div
                                 :class="[
                                     isCurrentSection(section.id)
                                         ? 'border-inverted bg-inverted text-primary'
                                         : 'border-accented',
                                 ]"
-                                class="w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm font-medium"
+                                class="w-8 h-8 shrink-0 rounded-full border-2 flex items-center justify-center text-sm font-medium"
                             >
                                 {{ fixedSections.length + index + 1 }}
                             </div>
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <div class="text-sm font-medium truncate">
-                                {{ section.title }}
+                            <div class="flex-1 min-w-0">
+                                <div class="text-sm font-medium truncate">
+                                    {{ section.title }}
+                                </div>
+                                <div class="text-xs opacity-75">
+                                    {{ section.subtitle }}
+                                </div>
                             </div>
-                            <div class="text-xs opacity-75">
-                                {{ section.subtitle }}
-                            </div>
+                        </button>
+                        <div class="flex shrink-0 items-center gap-1">
+                            <UButton
+                                :disabled="index === 0"
+                                size="xs"
+                                color="neutral"
+                                variant="ghost"
+                                class="text-inherit"
+                                icon="i-lucide-chevron-up"
+                                :aria-label="`${t('common.moveUp')}: ${section.title}`"
+                                @click.stop="moveSection(index, index - 1)"
+                            />
+                            <UButton
+                                :disabled="index === orderableSections.length - 1"
+                                size="xs"
+                                color="neutral"
+                                variant="ghost"
+                                class="text-inherit"
+                                icon="i-lucide-chevron-down"
+                                :aria-label="`${t('common.moveDown')}: ${section.title}`"
+                                @click.stop="moveSection(index, index + 1)"
+                            />
                         </div>
                     </div>
                     <div
@@ -110,75 +135,38 @@ interface Section {
     orderable?: boolean;
 }
 const resumeStore = useResumeStore();
+const { getSectionHeader } = useSectionHeader();
+const entriesLabel = (count: number) => t('builder.stepper.entries', { count }, count);
+const fullName = computed(() => [resumeStore.resumeData.firstName, resumeStore.resumeData.lastName].filter(Boolean).join(' '));
 const fixedSections = computed<Section[]>(() => [
     {
         id: 'personal-info',
-        title: 'Personal Info',
-        subtitle: `${resumeStore.resumeData.firstName || 'Your'} details`,
+        title: getSectionHeader('personalInfo').value,
+        subtitle: fullName.value,
         orderable: false,
     },
 ]);
 const orderableSections = computed<Section[]>(() => {
-    const sectionOrder = resumeStore.resumeData.sectionOrder;
+    const data = resumeStore.resumeData;
+    const sectionOrder = data.sectionOrder;
     const sectionsData = [
-        {
-            id: 'experience',
-            title: 'Experience',
-            subtitle: `${resumeStore.resumeData.experiences.length} ${resumeStore.resumeData.experiences.length === 1 ? 'job' : 'jobs'}`,
+        { id: 'experience', header: 'experience', count: data.experiences.length, order: sectionOrder.experience },
+        { id: 'internships', header: 'internships', count: data.internships.length, order: sectionOrder.internships },
+        { id: 'education', header: 'education', count: data.education.length, order: sectionOrder.education },
+        { id: 'skills', header: 'skills', count: data.skills.length, order: sectionOrder.skills },
+        { id: 'projects', header: 'projects', count: data.projects.length, order: sectionOrder.projects ?? 6 },
+        { id: 'languages', header: 'languages', count: data.languages.length, order: sectionOrder.languages ?? 7 },
+        { id: 'volunteering', header: 'volunteering', count: data.volunteering.length, order: sectionOrder.volunteering },
+        { id: 'certificates', header: 'certificates', count: data.certificates.length, order: sectionOrder.certificates },
+    ] as const;
+    return [...sectionsData]
+        .sort((a, b) => a.order - b.order)
+        .map(section => ({
+            id: section.id,
+            title: getSectionHeader(section.header).value,
+            subtitle: entriesLabel(section.count),
             orderable: true,
-            order: sectionOrder.experience,
-        },
-        {
-            id: 'internships',
-            title: 'Internships',
-            subtitle: `${resumeStore.resumeData.internships.length} ${resumeStore.resumeData.internships.length === 1 ? 'internship' : 'internships'}`,
-            orderable: true,
-            order: sectionOrder.internships,
-        },
-        {
-            id: 'education',
-            title: 'Education',
-            subtitle: `${resumeStore.resumeData.education.length} ${resumeStore.resumeData.education.length === 1 ? 'degree' : 'degrees'}`,
-            orderable: true,
-            order: sectionOrder.education,
-        },
-        {
-            id: 'skills',
-            title: 'Skills',
-            subtitle: `${resumeStore.resumeData.skills.length} ${resumeStore.resumeData.skills.length === 1 ? 'skill' : 'skills'}`,
-            orderable: true,
-            order: sectionOrder.skills,
-        },
-        {
-            id: 'projects',
-            title: 'Projects',
-            subtitle: `${resumeStore.resumeData.projects.length} ${resumeStore.resumeData.projects.length === 1 ? 'project' : 'projects'}`,
-            orderable: true,
-            order: sectionOrder.projects ?? 6,
-        },
-        {
-            id: 'languages',
-            title: 'Languages',
-            subtitle: `${resumeStore.resumeData.languages.length} ${resumeStore.resumeData.languages.length === 1 ? 'language' : 'languages'}`,
-            orderable: true,
-            order: sectionOrder.languages ?? 7,
-        },
-        {
-            id: 'volunteering',
-            title: 'Volunteering',
-            subtitle: `${resumeStore.resumeData.volunteering.length} ${resumeStore.resumeData.volunteering.length === 1 ? 'role' : 'roles'}`,
-            orderable: true,
-            order: sectionOrder.volunteering,
-        },
-        {
-            id: 'certificates',
-            title: 'Certificates',
-            subtitle: `${resumeStore.resumeData.certificates.length} ${resumeStore.resumeData.certificates.length === 1 ? 'certificate' : 'certificates'}`,
-            orderable: true,
-            order: sectionOrder.certificates,
-        },
-    ];
-    return sectionsData.sort((a, b) => a.order - b.order);
+        }));
 });
 const sections = computed<Section[]>(() => [
     ...fixedSections.value,
@@ -218,22 +206,23 @@ const onDragOver = (event: DragEvent, index: number) => {
     }
     dropZoneIndex.value = index;
 };
-const onDrop = (event: DragEvent, dropIndex: number) => {
-    event.preventDefault();
-    if (draggedIndex.value === null) return;
-    const dragIndex = draggedIndex.value;
-    if (dragIndex === dropIndex) return;
+const moveSection = (fromIndex: number, toIndex: number) => {
     const sections = orderableSections.value;
-    const draggedSection = sections[dragIndex];
-    if (!draggedSection.orderable) return;
+    if (fromIndex === toIndex || toIndex < 0 || toIndex >= sections.length) return;
+    const sectionIds = sections.map(section => section.id);
+    const movedIds = sectionIds.splice(fromIndex, 1);
+    sectionIds.splice(toIndex, 0, ...movedIds);
     const newOrder = { ...resumeStore.resumeData.sectionOrder };
-    const sectionIds = sections.map(s => s.id);
-    sectionIds.splice(dragIndex, 1);
-    sectionIds.splice(dropIndex, 0, draggedSection.id);
     sectionIds.forEach((sectionId, index) => {
         newOrder[sectionId as keyof typeof newOrder] = index + 1;
     });
     resumeStore.updateSectionOrder(newOrder);
+};
+const onDrop = (event: DragEvent, dropIndex: number) => {
+    event.preventDefault();
+    if (draggedIndex.value !== null) {
+        moveSection(draggedIndex.value, dropIndex);
+    }
     draggedIndex.value = null;
     dropZoneIndex.value = null;
 };

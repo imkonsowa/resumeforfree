@@ -401,7 +401,10 @@
         "previewErrorDetailed": "فشلت المعاينة: {detail}",
         "zoomIn": "تكبير",
         "zoomOut": "تصغير",
-        "downloadOptions": "خيارات التنزيل"
+        "downloadOptions": "خيارات التنزيل",
+        "stepper": {
+            "entries": "لا توجد عناصر | عنصر واحد | {count} عناصر"
+        }
     },
     "settings": {
         "title": "إعدادات السيرة الذاتية",

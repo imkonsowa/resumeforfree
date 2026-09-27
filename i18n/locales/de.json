@@ -401,7 +401,10 @@
         "previewErrorDetailed": "Vorschau fehlgeschlagen: {detail}",
         "zoomIn": "Vergrößern",
         "zoomOut": "Verkleinern",
-        "downloadOptions": "Download-Optionen"
+        "downloadOptions": "Download-Optionen",
+        "stepper": {
+            "entries": "Keine Einträge | {count} Eintrag | {count} Einträge"
+        }
     },
     "settings": {
         "title": "Lebenslauf-Einstellungen",

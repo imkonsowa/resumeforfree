@@ -401,7 +401,10 @@
         "zoomIn": "Yakınlaştır",
         "zoomOut": "Uzaklaştır",
         "downloadOptions": "İndirme seçenekleri",
-        "previewErrorDetailed": "Önizleme başarısız: {detail}"
+        "previewErrorDetailed": "Önizleme başarısız: {detail}",
+        "stepper": {
+            "entries": "Kayıt yok | {count} kayıt | {count} kayıt"
+        }
     },
     "settings": {
         "title": "Özgeçmiş Ayarları",

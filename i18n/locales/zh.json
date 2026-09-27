@@ -401,7 +401,10 @@
         "previewErrorDetailed": "渲染预览失败: {detail}",
         "zoomIn": "放大",
         "zoomOut": "缩小",
-        "downloadOptions": "导出选项"
+        "downloadOptions": "导出选项",
+        "stepper": {
+            "entries": "无条目 | {count} 个条目 | {count} 个条目"
+        }
     },
     "settings": {
         "title": "简历设置",
