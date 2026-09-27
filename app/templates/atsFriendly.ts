@@ -3,7 +3,7 @@ import type { SectionStyle, Template, TemplateParseInput, TemplateRenderConfig }
 import { escapeTypstText } from '~/utils/stringUtils';
 import { convertEmail, convertLink, LATIN_FONT_STACK } from '~/utils/typstUtils';
 import { RendererContext } from '~/utils/rendererContext';
-import { isRtlLocale } from '~/composables/useLocale';
+import { isRtlLocale } from '~/utils/localeDirection';
 import { getSharedSectionRenderers, renderProfilePhoto } from '~/utils/sectionRenderers';
 
 const ATS_BLUE = 'rgb("#1d4ed8")';

@@ -2,7 +2,7 @@ import type { ResumeData, SectionHeaders } from '~/types/resume';
 import type { SectionRenderer } from '~/types/template';
 import { ITEMS_SPACING, PHOTO_SIZE } from './typstUtils';
 import { escapeTypstText } from '~/utils/stringUtils';
-import { SECTION_TRANSLATION_MAP } from '~/composables/useSectionHeader';
+import { SECTION_TRANSLATION_MAP } from '~/utils/sectionHeaders';
 import type { RendererContext } from './rendererContext';
 import {
     generateCertificatesContent,

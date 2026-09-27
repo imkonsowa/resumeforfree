@@ -3,8 +3,8 @@ import type { SectionContent, Template, TemplateParseInput, TemplateRenderConfig
 import { escapeTypstText } from '~/utils/stringUtils';
 import { convertEmail, convertLink, convertList, LATIN_FONT_STACK, renderDescription, renderTemplateSubHeader, renderTemplateSubHeaderContent, SECTION_HEADER_SIZE_OFFSET, SECTION_SPACING } from '~/utils/typstUtils';
 import { RendererContext } from '~/utils/rendererContext';
-import { isRtlLocale } from '~/composables/useLocale';
-import { SECTION_TRANSLATION_MAP } from '~/composables/useSectionHeader';
+import { isRtlLocale } from '~/utils/localeDirection';
+import { SECTION_TRANSLATION_MAP } from '~/utils/sectionHeaders';
 import {
     generateCertificatesContent,
     generateEducationContent,

@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { availableFonts, getDefaultFontForLanguage, getFontsForLanguage, resolveFontFamily } from '~/types/resume';
-import { isRtlLocale, getLocaleDirection } from '~/composables/useLocale';
+import { isRtlLocale, getLocaleDirection } from '~/utils/localeDirection';
 import { getOgLocale } from '~/composables/useSEO';
 
 const root = resolve(__dirname, '../..');

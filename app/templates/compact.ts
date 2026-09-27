@@ -5,7 +5,7 @@ import { escapeTypstText } from '~/utils/stringUtils';
 import { convertEmail, convertLink, LATIN_FONT_STACK } from '~/utils/typstUtils';
 import { getSharedSectionRenderers, renderProfilePhoto } from '~/utils/sectionRenderers';
 import { RendererContext } from '~/utils/rendererContext';
-import { isRtlLocale } from '~/composables/useLocale';
+import { isRtlLocale } from '~/utils/localeDirection';
 
 const renderHeaderRows = (data: ResumeData, fontSize: number, isRtl: boolean): string[] => {
     const rows: string[] = [];

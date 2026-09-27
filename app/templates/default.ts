@@ -5,7 +5,7 @@ import { escapeTypstText } from '~/utils/stringUtils';
 import { convertGrid, SECTION_SPACING } from '~/utils/typstUtils';
 import { getSharedSectionRenderers, renderProfilePhoto } from '~/utils/sectionRenderers';
 import { RendererContext } from '~/utils/rendererContext';
-import { isRtlLocale } from '~/composables/useLocale';
+import { isRtlLocale } from '~/utils/localeDirection';
 
 const convertResumeHeader = (data: ResumeData, context: RendererContext, sharedRenderers: ReturnType<typeof getSharedSectionRenderers>) => {
     const fullName = `${escapeTypstText(data?.firstName || '')} ${escapeTypstText(data?.lastName || '')}`.trim();
