@@ -58,7 +58,7 @@ npm run test:e2e    # Playwright — Typst WASM compilation in browser
 
 ## Architecture
 
-Templates in `app/templates/` export a `parse()` function that takes resume data and returns a Typst markup string. That string is compiled to SVG (preview) or PDF (download) by `window.$typst` on the client.
+The resume engine lives in the core layer at `layers/core/` (see its README). Templates in `layers/core/app/templates/` export a `parse()` function that takes resume data and returns a Typst markup string. That string is compiled to SVG (preview) or PDF (download) by `window.$typst` on the client.
 
 Typst.ts is excluded from Vite `optimizeDeps` and gated behind `import.meta.client`. The server never touches it.
 
