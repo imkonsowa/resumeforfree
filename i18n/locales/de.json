@@ -648,7 +648,18 @@
         "accountInformation": "Kontoinformationen",
         "accountInfoDescription": "Mit Ihrem Konto können Sie bis zu 3 Lebensläufe in der Cloud sichern.",
         "updatePasswordDescription": "Aktualisieren Sie Ihr Passwort regelmäßig für maximale Sicherheit",
-        "pleaseFixErrors": "Bitte beheben Sie die folgenden Fehler:"
+        "pleaseFixErrors": "Bitte beheben Sie die folgenden Fehler:",
+        "deleteAccount": "Konto löschen",
+        "deleteAccountDescription": "Lösche dein Konto und alles, was in der Cloud gespeichert ist, dauerhaft",
+        "deleteAccountWarningTitle": "Das lässt sich nicht rückgängig machen",
+        "deleteAccountWarning": "Dein Konto, deine Cloud-Lebensläufe, Fotos, Einstellungen und API-Tokens werden endgültig gelöscht. In diesem Browser gespeicherte Lebensläufe bleiben erhalten.",
+        "confirmEmail": "Gib zur Bestätigung deine E-Mail-Adresse ein",
+        "password": "Dein Passwort",
+        "googleNoPassword": "Du hast dich mit Google angemeldet, daher ist kein Passwort nötig.",
+        "deleteAccountButton": "Mein Konto löschen",
+        "accountDeleted": "Dein Konto wurde gelöscht",
+        "deleteAccountError": "Dein Konto konnte nicht gelöscht werden",
+        "emailMismatch": "Die E-Mail-Adresse stimmt nicht mit deinem Konto überein"
     },
     "resumes": {
         "pageTitle": "Ihre Lebensläufe - Kostenlos erstellen & verwalten | Resume For Free",

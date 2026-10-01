@@ -648,7 +648,18 @@
         "accountInformation": "معلومات الحساب",
         "accountInfoDescription": "يتيح لك حسابك مزامنة ما يصل إلى 3 سير ذاتية في السحابة.",
         "updatePasswordDescription": "قم بتحديث كلمة مرورك للحفاظ على أمان حسابك",
-        "pleaseFixErrors": "يرجى إصلاح الأخطاء التالية أولاً:"
+        "pleaseFixErrors": "يرجى إصلاح الأخطاء التالية أولاً:",
+        "deleteAccount": "حذف الحساب",
+        "deleteAccountDescription": "احذف حسابك وكل ما هو محفوظ في السحابة نهائيًا",
+        "deleteAccountWarningTitle": "لا يمكن التراجع عن هذا",
+        "deleteAccountWarning": "سيُحذف حسابك وسيرك الذاتية السحابية وصورك وإعداداتك ورموز API نهائيًا. تبقى السير الذاتية المحفوظة في هذا المتصفح كما هي.",
+        "confirmEmail": "اكتب بريدك الإلكتروني للتأكيد",
+        "password": "كلمة المرور",
+        "googleNoPassword": "سجّلت الدخول عبر Google، لذا لا حاجة لكلمة مرور.",
+        "deleteAccountButton": "احذف حسابي",
+        "accountDeleted": "تم حذف حسابك",
+        "deleteAccountError": "تعذّر حذف حسابك",
+        "emailMismatch": "البريد الإلكتروني لا يطابق حسابك"
     },
     "resumes": {
         "pageTitle": "سيرك الذاتية - أنشئ وأدِر سيرك الذاتية مجاناً | Resume For Free",

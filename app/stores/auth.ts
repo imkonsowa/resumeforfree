@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import type { User } from '~/types/user';
-import type { LoginRequest, RegisterRequest } from '~/types/api';
+import type { DeleteAccountRequest, LoginRequest, RegisterRequest } from '~/types/api';
 
 interface AuthState {
     user: User | null;
@@ -103,6 +103,12 @@ export const useAuthStore = defineStore('auth', {
                         error: error?.message || 'Logout failed',
                     };
                 });
+        },
+        async deleteAccount(payload: DeleteAccountRequest) {
+            const api = useApi();
+            await api.auth.deleteAccount(payload);
+            useResumeStore().unlinkFromCloud();
+            this.clearAuth();
         },
         async refreshAuth() {
             const api = useApi();

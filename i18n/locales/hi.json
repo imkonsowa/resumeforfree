@@ -648,7 +648,18 @@
         "accountInformation": "खाता जानकारी",
         "accountInfoDescription": "आपका खाता आपको क्लाउड में 3 रिज्यूमे तक सिंक करने की अनुमति देता है।",
         "updatePasswordDescription": "सुरक्षा के लिए अपना पासवर्ड अपडेट करें",
-        "pleaseFixErrors": "कृपया निम्नलिखित त्रुटियों को ठीक करें:"
+        "pleaseFixErrors": "कृपया निम्नलिखित त्रुटियों को ठीक करें:",
+        "deleteAccount": "खाता हटाएँ",
+        "deleteAccountDescription": "अपना खाता और क्लाउड में सहेजी गई हर चीज़ स्थायी रूप से हटाएँ",
+        "deleteAccountWarningTitle": "इसे पूर्ववत नहीं किया जा सकता",
+        "deleteAccountWarning": "आपका खाता, क्लाउड रिज़्यूमे, फ़ोटो, सेटिंग्स और API टोकन हमेशा के लिए हटा दिए जाएँगे। इस ब्राउज़र में सहेजे गए रिज़्यूमे यहीं रहेंगे।",
+        "confirmEmail": "पुष्टि के लिए अपना ईमेल लिखें",
+        "password": "आपका पासवर्ड",
+        "googleNoPassword": "आपने Google से साइन इन किया है, इसलिए पासवर्ड की ज़रूरत नहीं है।",
+        "deleteAccountButton": "मेरा खाता हटाएँ",
+        "accountDeleted": "आपका खाता हटा दिया गया",
+        "deleteAccountError": "आपका खाता हटाया नहीं जा सका",
+        "emailMismatch": "ईमेल आपके खाते से मेल नहीं खाता"
     },
     "resumes": {
         "pageTitle": "आपके रिज्यूमे - मुफ़्त रिज्यूमे बनाएं और प्रबंधित करें | Resume For Free",

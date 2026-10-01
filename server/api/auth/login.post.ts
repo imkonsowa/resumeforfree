@@ -105,6 +105,7 @@ export default defineEventHandler(async (event) => {
         email: user.email,
         name: user.name,
         verified: user.verified,
+        authProvider: user.auth_provider,
     };
     setAuthCookies(event, token, publicUser);
     return {

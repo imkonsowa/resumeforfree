@@ -648,7 +648,18 @@
         "accountInformation": "Account Information",
         "accountInfoDescription": "Your account allows you to sync up to 3 resumes to the cloud.",
         "updatePasswordDescription": "Update your password to keep your account secure",
-        "pleaseFixErrors": "Please fix the following errors:"
+        "pleaseFixErrors": "Please fix the following errors:",
+        "deleteAccount": "Delete account",
+        "deleteAccountDescription": "Permanently delete your account and everything stored in the cloud",
+        "deleteAccountWarningTitle": "This can't be undone",
+        "deleteAccountWarning": "Your account, cloud resumes, photos, settings and API tokens are deleted for good. Resumes saved in this browser stay here.",
+        "confirmEmail": "Type your email to confirm",
+        "password": "Your password",
+        "googleNoPassword": "You signed in with Google, so no password is needed.",
+        "deleteAccountButton": "Delete my account",
+        "accountDeleted": "Your account was deleted",
+        "deleteAccountError": "Couldn't delete your account",
+        "emailMismatch": "The email doesn't match your account"
     },
     "resumes": {
         "pageTitle": "Your Resumes - Create & Manage Free Resumes | Resume For Free",

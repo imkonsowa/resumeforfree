@@ -1,4 +1,4 @@
-import type { ChangePasswordRequest, LoginRequest, RegisterRequest, ResumeCreateRequest, ResumeUpdateRequest } from '~/types/api';
+import type { ChangePasswordRequest, DeleteAccountRequest, LoginRequest, RegisterRequest, ResumeCreateRequest, ResumeUpdateRequest } from '~/types/api';
 
 export const useApi = () => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -35,6 +35,12 @@ export const useApi = () => {
             },
             async changePassword(payload: ChangePasswordRequest) {
                 return await $fetch('/api/auth/change-password', {
+                    method: 'POST',
+                    body: payload,
+                }).catch(handleError);
+            },
+            async deleteAccount(payload: DeleteAccountRequest) {
+                return await $fetch('/api/auth/delete-account', {
                     method: 'POST',
                     body: payload,
                 }).catch(handleError);

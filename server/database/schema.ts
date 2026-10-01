@@ -1,6 +1,7 @@
 import { sqliteTable, text, integer, index } from 'drizzle-orm/sqlite-core';
 import { sql } from 'drizzle-orm';
 import type { ResumeData, ResumeSettings, UserSettings } from '#layers/core/app/types/resume';
+import type { AuthProvider } from '~/types/user';
 
 export const users = sqliteTable('users', {
     id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID().replace(/-/g, '')),
@@ -66,6 +67,7 @@ export interface UserModel {
     password_hash: string;
     name?: string;
     verified: boolean;
+    auth_provider?: AuthProvider;
     verification_token?: string;
     verification_sent_at?: string;
     created_at: string;

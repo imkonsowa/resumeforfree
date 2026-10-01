@@ -285,6 +285,14 @@ export const useResumeStore = defineStore('resume', {
                 this.resumes[id].updatedAt = new Date().toISOString();
             }
         },
+        unlinkFromCloud(): void {
+            for (const resume of Object.values(this.resumes)) {
+                resume.serverId = undefined;
+                if (resume.data.photo?.source === 'r2') {
+                    resume.data.photo = undefined;
+                }
+            }
+        },
         deleteResume(id: string): void {
             if (this.resumes[id]) {
                 const { [id]: deletedResume, ...remainingResumes } = this.resumes;

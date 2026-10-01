@@ -16,12 +16,13 @@ useHead({
     ],
 });
 
-const activeSection = ref<'personal' | 'password' | 'tokens'>('personal');
+const activeSection = ref<'personal' | 'password' | 'tokens' | 'delete'>('personal');
 
 const sectionItems = computed<TabsItem[]>(() => [
     { label: t('profile.personalInformation'), icon: 'i-lucide-user', value: 'personal' },
     { label: t('auth.changePassword'), icon: 'i-lucide-lock', value: 'password' },
     { label: t('apiTokens.title'), icon: 'i-lucide-key-round', value: 'tokens' },
+    { label: t('profile.deleteAccount'), icon: 'i-lucide-trash-2', value: 'delete' },
 ]);
 const isChangingPassword = ref(false);
 const showCurrentPassword = ref(false);
@@ -89,6 +90,43 @@ const handleChangePassword = async () => {
     }
     finally {
         isChangingPassword.value = false;
+    }
+};
+
+const isGoogleAccount = computed(() => authStore.currentUser?.authProvider === 'google');
+const isDeletingAccount = ref(false);
+const showDeletePassword = ref(false);
+const deleteForm = ref({ email: '', password: '' });
+const deleteError = ref('');
+
+const emailMatches = computed(() =>
+    deleteForm.value.email.trim().toLowerCase() === authStore.currentUser?.email.toLowerCase(),
+);
+const canDeleteAccount = computed(() =>
+    emailMatches.value && (isGoogleAccount.value || deleteForm.value.password.length > 0),
+);
+
+const handleDeleteAccount = async () => {
+    deleteError.value = '';
+    if (!emailMatches.value) {
+        deleteError.value = t('profile.emailMismatch');
+        return;
+    }
+
+    try {
+        isDeletingAccount.value = true;
+        await authStore.deleteAccount({
+            email: deleteForm.value.email.trim(),
+            password: isGoogleAccount.value ? undefined : deleteForm.value.password,
+        });
+        notify.success(t('profile.accountDeleted'));
+        await navigateTo(localePath('/'));
+    }
+    catch (error: unknown) {
+        deleteError.value = (error as Error)?.message || t('profile.deleteAccountError');
+    }
+    finally {
+        isDeletingAccount.value = false;
     }
 };
 
@@ -303,6 +341,96 @@ useHead({
                         </UCard>
 
                         <ApiTokensPanel v-if="activeSection === 'tokens'" />
+
+                        <UCard v-if="activeSection === 'delete'">
+                            <template #header>
+                                <div class="flex items-center gap-2 text-error font-semibold">
+                                    <UIcon
+                                        name="i-lucide-trash-2"
+                                        class="size-5"
+                                    />
+                                    {{ $t('profile.deleteAccount') }}
+                                </div>
+                                <p class="mt-1 text-muted text-sm">
+                                    {{ $t('profile.deleteAccountDescription') }}
+                                </p>
+                            </template>
+                            <UForm
+                                :state="deleteForm"
+                                class="space-y-6"
+                                @submit="handleDeleteAccount"
+                            >
+                                <UAlert
+                                    color="error"
+                                    variant="soft"
+                                    icon="i-lucide-triangle-alert"
+                                    :title="$t('profile.deleteAccountWarningTitle')"
+                                    :description="$t('profile.deleteAccountWarning')"
+                                />
+
+                                <UFormField
+                                    name="email"
+                                    :label="$t('profile.confirmEmail')"
+                                >
+                                    <UInput
+                                        v-model="deleteForm.email"
+                                        type="email"
+                                        autocomplete="off"
+                                        :placeholder="authStore.currentUser?.email"
+                                        :disabled="isDeletingAccount"
+                                        class="w-full"
+                                    />
+                                </UFormField>
+
+                                <UFormField
+                                    v-if="!isGoogleAccount"
+                                    name="password"
+                                    :label="$t('profile.password')"
+                                >
+                                    <UInput
+                                        v-model="deleteForm.password"
+                                        :type="showDeletePassword ? 'text' : 'password'"
+                                        autocomplete="current-password"
+                                        :placeholder="$t('auth.enterCurrentPassword')"
+                                        :disabled="isDeletingAccount"
+                                        class="w-full"
+                                    >
+                                        <template #trailing>
+                                            <UButton
+                                                color="neutral"
+                                                variant="link"
+                                                size="sm"
+                                                :icon="showDeletePassword ? 'i-lucide-eye-off' : 'i-lucide-eye'"
+                                                :aria-label="$t('auth.togglePassword')"
+                                                @click="showDeletePassword = !showDeletePassword"
+                                            />
+                                        </template>
+                                    </UInput>
+                                </UFormField>
+                                <p
+                                    v-else
+                                    class="text-sm text-muted"
+                                >
+                                    {{ $t('profile.googleNoPassword') }}
+                                </p>
+
+                                <UAlert
+                                    v-if="deleteError"
+                                    color="error"
+                                    variant="subtle"
+                                    :description="deleteError"
+                                />
+
+                                <UButton
+                                    type="submit"
+                                    color="error"
+                                    icon="i-lucide-trash-2"
+                                    :loading="isDeletingAccount"
+                                    :disabled="!canDeleteAccount"
+                                    :label="$t('profile.deleteAccountButton')"
+                                />
+                            </UForm>
+                        </UCard>
                     </div>
                 </div>
             </div>
