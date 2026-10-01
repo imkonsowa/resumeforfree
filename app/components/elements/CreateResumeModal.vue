@@ -1,13 +1,14 @@
 <script lang="ts" setup>
 interface Props {
     isOpen: boolean;
+    showNavigateOption?: boolean;
 }
 interface Emits {
     (e: 'close'): void;
     (e: 'confirm', name: string, language: string, navigateToBuilder: boolean, saveToCloud: boolean): void;
 }
 
-const props = defineProps<Props>();
+const props = withDefaults(defineProps<Props>(), { showNavigateOption: true });
 const emit = defineEmits<Emits>();
 
 const { t, locales } = useI18n();
@@ -93,6 +94,7 @@ const handleConfirm = () => {
 
                 <div class="space-y-3 pt-2">
                     <UCheckbox
+                        v-if="showNavigateOption"
                         v-model="navigateToBuilder"
                         :label="t('resumes.modals.create.navigateToBuilder')"
                     />

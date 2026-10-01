@@ -4,7 +4,6 @@ import ZoomControls from '~/components/elements/ZoomControls.vue';
 import ResumeBuilderHeader from '~/components/elements/ResumeBuilderHeader.vue';
 import ResumeLanguageSelector from '~/components/elements/ResumeLanguageSelector.vue';
 import { getLocaleDirection } from '#layers/core/app/utils/localeDirection';
-import { defaultResumeSettings, getDefaultFontForLanguage } from '#layers/core/app/types/resume';
 import PersonalInfoForm from '~/components/forms/PersonalInfoForm.vue';
 import ExperienceForm from '~/components/forms/ExperienceForm.vue';
 import InternshipsForm from '~/components/forms/InternshipsForm.vue';
@@ -18,6 +17,7 @@ import ResumePreview from '~/components/elements/ResumePreview.vue';
 import InvisibleTurnstile from '~/components/elements/InvisibleTurnstile.vue';
 import FirstTimeBuilderModal from '~/components/elements/FirstTimeBuilderModal.vue';
 import CloudSyncPromptModal from '~/components/elements/CloudSyncPromptModal.vue';
+import CreateResumeModal from '~/components/elements/CreateResumeModal.vue';
 import SyncIndicator from '~/components/elements/SyncIndicator.vue';
 import LanguageMismatchAlert from '~/components/elements/LanguageMismatchAlert.vue';
 import { absolutePageUrl, getOgLocale } from '~/composables/useSEO';
@@ -86,12 +86,16 @@ useHead(() => ({
 const resumeStore = useResumeStore();
 const settingsStore = useSettingsStore();
 const authStore = useAuthStore();
-const { hasSeenModal, markModalSeen, hasSeenThisSession, markSeenThisSession } = useModalSeen('firstTimeBuilder');
+const { hasSeenModal, markModalSeen, hasSeenThisSession, markSeenThisSession, snoozeModal, isSnoozed } = useModalSeen('firstTimeBuilder');
+const SAVE_PROMPT_SNOOZE_MS = 7 * 24 * 60 * 60 * 1000;
 const { startAutoSync, stopAutoSync, isSyncing, lastSyncSuccess, lastSyncTime, lastSyncError } = useAutoSync();
 useTypstLoader();
 
+const shouldPromptToSave = () =>
+    !authStore.isAuthenticated && !hasSeenModal() && !isSnoozed() && !hasSeenThisSession();
+
 const checkOtherModals = () => {
-    if (!hasSeenModal() && !hasSeenThisSession() && !authStore.isAuthenticated && resumeStore.resumeCount > 0) {
+    if (shouldPromptToSave() && resumeStore.resumeCount > 0) {
         markSeenThisSession();
         showFirstTimeModal.value = true;
         return;
@@ -135,11 +139,8 @@ onMounted(async () => {
         });
     }
     if (resumeStore.resumeCount === 0) {
-        const newResumeId = resumeStore.createResume({
-            language: locale.value,
-            settings: { ...defaultResumeSettings, selectedFont: getDefaultFontForLanguage(locale.value) },
-        });
-        resumeStore.setActiveResume(newResumeId);
+        showCreateModal.value = true;
+        return;
     }
     checkOtherModals();
 });
@@ -192,6 +193,21 @@ const handleQuickDownload = async () => {
         isDownloading.value = false;
     }
 };
+const showCreateModal = ref(false);
+const { createResume } = useCreateResume();
+
+const handleCreateModalClose = () => {
+    showCreateModal.value = false;
+    navigateTo(localePath('/resumes'));
+};
+
+const handleCreateResume = async (name: string, language: string, _navigateToBuilder: boolean, saveToCloud: boolean) => {
+    showCreateModal.value = false;
+    await loadLocaleMessages(language).catch(err => console.error('[builder] locale load failed:', err));
+    await createResume(name, language, saveToCloud);
+    checkOtherModals();
+};
+
 const showFirstTimeModal = ref(false);
 const showCloudSyncModal = ref(false);
 const zoomLevel = ref(1);
@@ -218,11 +234,15 @@ watch(showMobilePreview, (newValue) => {
 });
 const handleFirstTimeModalClose = () => {
     showFirstTimeModal.value = false;
+    snoozeModal(SAVE_PROMPT_SNOOZE_MS);
 };
 const handleContinueLocally = (dontShowAgain: boolean) => {
     showFirstTimeModal.value = false;
     if (dontShowAgain) {
         markModalSeen();
+    }
+    else {
+        snoozeModal(SAVE_PROMPT_SNOOZE_MS);
     }
 };
 const handleRegister = (dontShowAgain: boolean) => {
@@ -452,6 +472,12 @@ const orderedSections = computed(() => {
                 </UModal>
             </div>
         </div>
+        <CreateResumeModal
+            :is-open="showCreateModal"
+            :show-navigate-option="false"
+            @close="handleCreateModalClose"
+            @confirm="handleCreateResume"
+        />
         <FirstTimeBuilderModal
             :is-open="showFirstTimeModal"
             @close="handleFirstTimeModalClose"

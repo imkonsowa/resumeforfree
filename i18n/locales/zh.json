@@ -732,7 +732,7 @@
                 "freeResumes": "永久免费支持 3 份简历",
                 "signUp": "立即注册",
                 "login": "登录已有账号",
-                "continueLocally": "仅保留在本地浏览器",
+                "continueLocally": "在浏览器中离线继续",
                 "dontShowAgain": "不再提示此弹窗"
             },
             "create": {

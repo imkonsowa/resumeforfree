@@ -732,7 +732,7 @@
                 "freeResumes": "3 özgeçmişe kadar ücretsiz",
                 "signUp": "Kayıt Ol",
                 "login": "Giriş Yap",
-                "continueLocally": "Yerel tarayıcıya kaydet",
+                "continueLocally": "Tarayıcıda çevrimdışı devam et",
                 "dontShowAgain": "Tekrar gösterme"
             },
             "create": {
