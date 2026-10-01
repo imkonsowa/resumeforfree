@@ -45,6 +45,7 @@
         "emailAddress": "E-posta Adresi",
         "tryAgain": "Tekrar Dene",
         "month": "Ay",
+        "noMonth": "Ay yok",
         "year": "Yıl",
         "moveUp": "Yukarı taşı",
         "moveDown": "Aşağı taşı",

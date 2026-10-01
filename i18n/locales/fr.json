@@ -45,6 +45,7 @@
         "emailAddress": "Adresse e-mail",
         "tryAgain": "Réessayer",
         "month": "Mois",
+        "noMonth": "Sans mois",
         "year": "Année",
         "moveUp": "Monter",
         "moveDown": "Descendre",

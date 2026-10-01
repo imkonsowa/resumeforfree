@@ -46,6 +46,7 @@
         "tryAgain": "重试",
         "copy": "复制",
         "month": "月",
+        "noMonth": "不填月份",
         "year": "年",
         "moveUp": "上移",
         "moveDown": "下移",
