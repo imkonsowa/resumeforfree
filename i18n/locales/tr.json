@@ -648,7 +648,18 @@
         "accountInformation": "Hesap Bilgileri",
         "accountInfoDescription": "Hesabınız, 3 adede kadar özgeçmişi buluta senkronize etmenize olanak tanır.",
         "updatePasswordDescription": "Hesabınızı güvende tutmak için şifrenizi güncelleyin",
-        "pleaseFixErrors": "Lütfen aşağıdaki hataları düzeltin:"
+        "pleaseFixErrors": "Lütfen aşağıdaki hataları düzeltin:",
+        "deleteAccount": "Hesabı sil",
+        "deleteAccountDescription": "Hesabını ve bulutta saklanan her şeyi kalıcı olarak sil",
+        "deleteAccountWarningTitle": "Bu işlem geri alınamaz",
+        "deleteAccountWarning": "Hesabın, buluttaki özgeçmişlerin, fotoğrafların, ayarların ve API anahtarların kalıcı olarak silinir. Bu tarayıcıda kayıtlı özgeçmişler burada kalır.",
+        "confirmEmail": "Onaylamak için e-postanı yaz",
+        "password": "Şifren",
+        "googleNoPassword": "Google ile giriş yaptın, bu yüzden şifre gerekmiyor.",
+        "deleteAccountButton": "Hesabımı sil",
+        "accountDeleted": "Hesabın silindi",
+        "deleteAccountError": "Hesabın silinemedi",
+        "emailMismatch": "E-posta hesabınla eşleşmiyor"
     },
     "resumes": {
         "pageTitle": "Özgeçmişleriniz - Ücretsiz Özgeçmişler Oluşturun ve Yönetin | Resume For Free",

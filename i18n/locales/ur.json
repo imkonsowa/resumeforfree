@@ -648,7 +648,18 @@
         "accountInformation": "اکاؤنٹ کی معلومات",
         "accountInfoDescription": "آپ کا اکاؤنٹ آپ کو کلاؤڈ میں 3 تک سی ویز سنک کرنے کی اجازت دیتا ہے۔",
         "updatePasswordDescription": "سیکیورٹی کے لیے اپنا پاس ورڈ اپ ڈیٹ کریں",
-        "pleaseFixErrors": "براہ کرم درج ذیل غلطیاں درست کریں:"
+        "pleaseFixErrors": "براہ کرم درج ذیل غلطیاں درست کریں:",
+        "deleteAccount": "اکاؤنٹ حذف کریں",
+        "deleteAccountDescription": "اپنا اکاؤنٹ اور کلاؤڈ میں محفوظ ہر چیز مستقل طور پر حذف کریں",
+        "deleteAccountWarningTitle": "اسے واپس نہیں کیا جا سکتا",
+        "deleteAccountWarning": "آپ کا اکاؤنٹ، کلاؤڈ ریزیومے، تصاویر، ترتیبات اور API ٹوکن ہمیشہ کے لیے حذف ہو جائیں گے۔ اس براؤزر میں محفوظ ریزیومے یہیں رہیں گے۔",
+        "confirmEmail": "تصدیق کے لیے اپنا ای میل لکھیں",
+        "password": "آپ کا پاس ورڈ",
+        "googleNoPassword": "آپ نے Google سے سائن ان کیا ہے، اس لیے پاس ورڈ کی ضرورت نہیں۔",
+        "deleteAccountButton": "میرا اکاؤنٹ حذف کریں",
+        "accountDeleted": "آپ کا اکاؤنٹ حذف کر دیا گیا",
+        "deleteAccountError": "آپ کا اکاؤنٹ حذف نہیں ہو سکا",
+        "emailMismatch": "ای میل آپ کے اکاؤنٹ سے میل نہیں کھاتی"
     },
     "resumes": {
         "pageTitle": "آپ کی سی ویز - مفت سی وی بنائیں اور سنبھالیں | Resume For Free",

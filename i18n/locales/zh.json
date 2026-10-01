@@ -648,7 +648,18 @@
         "accountInformation": "账户概况",
         "accountInfoDescription": "您的免费账户支持在云端存储并同步最多 3 份简历。",
         "updatePasswordDescription": "定期更新密码有助于保护您的账户安全",
-        "pleaseFixErrors": "请修正以下错误："
+        "pleaseFixErrors": "请修正以下错误：",
+        "deleteAccount": "删除账户",
+        "deleteAccountDescription": "永久删除你的账户以及云端存储的所有内容",
+        "deleteAccountWarningTitle": "此操作无法撤销",
+        "deleteAccountWarning": "你的账户、云端简历、照片、设置和 API 令牌将被永久删除。保存在此浏览器中的简历会保留。",
+        "confirmEmail": "输入你的邮箱以确认",
+        "password": "你的密码",
+        "googleNoPassword": "你是通过 Google 登录的，无需密码。",
+        "deleteAccountButton": "删除我的账户",
+        "accountDeleted": "你的账户已删除",
+        "deleteAccountError": "无法删除你的账户",
+        "emailMismatch": "邮箱与你的账户不匹配"
     },
     "resumes": {
         "pageTitle": "我的简历 - 免费创建与高效管理 | Resume For Free",

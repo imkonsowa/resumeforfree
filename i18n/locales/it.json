@@ -648,7 +648,18 @@
         "accountInformation": "Informazioni account",
         "accountInfoDescription": "Il tuo account ti consente di sincronizzare fino a 3 curriculum nel cloud.",
         "updatePasswordDescription": "Aggiorna la tua password per proteggere il tuo account",
-        "pleaseFixErrors": "Correggi i seguenti errori:"
+        "pleaseFixErrors": "Correggi i seguenti errori:",
+        "deleteAccount": "Elimina account",
+        "deleteAccountDescription": "Elimina definitivamente il tuo account e tutto ciò che è salvato nel cloud",
+        "deleteAccountWarningTitle": "Questa azione è irreversibile",
+        "deleteAccountWarning": "Il tuo account, i curriculum nel cloud, le foto, le impostazioni e i token API verranno eliminati per sempre. I curriculum salvati in questo browser restano qui.",
+        "confirmEmail": "Digita la tua email per confermare",
+        "password": "La tua password",
+        "googleNoPassword": "Hai effettuato l'accesso con Google, quindi non serve una password.",
+        "deleteAccountButton": "Elimina il mio account",
+        "accountDeleted": "Il tuo account è stato eliminato",
+        "deleteAccountError": "Impossibile eliminare il tuo account",
+        "emailMismatch": "L'email non corrisponde al tuo account"
     },
     "resumes": {
         "pageTitle": "I tuoi curriculum - Crea e gestisci curriculum gratuiti | Resume For Free",

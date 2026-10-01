@@ -14,6 +14,11 @@ export interface RegisterRequest {
     turnstileToken?: string;
 }
 
+export interface DeleteAccountRequest {
+    email: string;
+    password?: string;
+}
+
 export interface ChangePasswordRequest {
     currentPassword: string;
     newPassword: string;

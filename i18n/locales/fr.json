@@ -648,7 +648,18 @@
         "accountInformation": "Informations du Compte",
         "accountInfoDescription": "Votre compte vous permet de synchroniser jusqu'à 3 CV sur le cloud.",
         "updatePasswordDescription": "Mettez à jour votre mot de passe pour sécuriser votre compte",
-        "pleaseFixErrors": "Veuillez corriger les erreurs suivantes :"
+        "pleaseFixErrors": "Veuillez corriger les erreurs suivantes :",
+        "deleteAccount": "Supprimer le compte",
+        "deleteAccountDescription": "Supprimez définitivement votre compte et tout ce qui est stocké dans le cloud",
+        "deleteAccountWarningTitle": "Cette action est irréversible",
+        "deleteAccountWarning": "Votre compte, vos CV dans le cloud, vos photos, vos paramètres et vos jetons API seront supprimés définitivement. Les CV enregistrés dans ce navigateur sont conservés.",
+        "confirmEmail": "Saisissez votre e-mail pour confirmer",
+        "password": "Votre mot de passe",
+        "googleNoPassword": "Vous vous êtes connecté avec Google, aucun mot de passe n'est nécessaire.",
+        "deleteAccountButton": "Supprimer mon compte",
+        "accountDeleted": "Votre compte a été supprimé",
+        "deleteAccountError": "Impossible de supprimer votre compte",
+        "emailMismatch": "L'e-mail ne correspond pas à votre compte"
     },
     "resumes": {
         "pageTitle": "Vos CV - Créez & Gérez des CV Gratuits | Resume For Free",
