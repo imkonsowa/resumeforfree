@@ -121,6 +121,7 @@ export default defineEventHandler(async (event) => {
         email: email,
         name: name || email.split('@')[0],
         verified: true,
+        authProvider: 'email' as const,
     };
     setAuthCookies(event, token, publicUser);
     return {

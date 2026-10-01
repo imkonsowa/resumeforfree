@@ -84,6 +84,7 @@ export default defineOAuthGoogleEventHandler({
                 email: user.email as string,
                 name: (user.name as string) || undefined,
                 verified: Boolean(user.verified),
+                authProvider: user.auth_provider === 'google' ? 'google' : 'email',
             });
 
             return sendRedirect(event, '/resumes');
