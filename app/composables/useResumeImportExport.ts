@@ -55,12 +55,14 @@ export const useResumeImportExport = () => {
                         }
                         const itemCount
                             = (resumeData.data.experiences?.length || 0)
+                                + (resumeData.data.internships?.length || 0)
                                 + (resumeData.data.education?.length || 0)
                                 + (resumeData.data.skills?.length || 0)
                                 + (resumeData.data.projects?.length || 0)
                                 + (resumeData.data.languages?.length || 0)
                                 + (resumeData.data.volunteering?.length || 0)
-                                + (resumeData.data.certificates?.length || 0);
+                                + (resumeData.data.certificates?.length || 0)
+                                + (resumeData.data.socialLinks?.length || 0);
                         return {
                             name: resumeData.name,
                             language: resumeData.language || 'en',
