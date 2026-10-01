@@ -119,47 +119,10 @@ const importInputRef = ref<HTMLInputElement>();
 const createNewResume = () => {
     showCreateModal.value = true;
 };
-const getDefaultResumeName = () => {
-    if (!authStore.isLoggedIn) return 'Untitled Resume';
-    const userName = authStore.user?.name?.trim();
-    return userName ? `${userName} - Resume` : 'Untitled Resume';
-};
+const { createResume, defaultResumeName } = useCreateResume();
 const handleCreateResume = async (name: string, language: string, navigateToBuilder: boolean, saveToCloud: boolean) => {
-    const { defaultResumeSettings, getDefaultFontForLanguage } = await import('#layers/core/app/types/resume');
-    const resumeName = name.trim() || getDefaultResumeName();
-    const seededSettings = {
-        ...defaultResumeSettings,
-        selectedFont: getDefaultFontForLanguage(language),
-    };
-    const newResumeId = resumeStore.createResume({ name: resumeName, language, settings: seededSettings });
-    resumeStore.setActiveResume(newResumeId);
     showCreateModal.value = false;
-    if (saveToCloud && authStore.isLoggedIn) {
-        try {
-            notify.info(t('resumes.notify.creatingInCloud'));
-            const api = useApi();
-            const resume = resumeStore.resumesList.find(r => r.id === newResumeId);
-            if (resume) {
-                const newCloudResume = await api.resumes.create(resume);
-                if (resumeStore.resumes[newResumeId] && newCloudResume) {
-                    resumeStore.resumes[newResumeId].serverId = newCloudResume.id;
-                    resumeStore.resumes[newResumeId].updatedAt = new Date().toISOString();
-                }
-                notify.success(t('resumes.notify.createdAndSaved', { name: resumeName }));
-            }
-        }
-        catch (error: unknown) {
-            console.error('Failed to save resume to cloud:', error);
-            const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-            notify.warning(t('resumes.notify.createdLocallyFailed', { name: resumeName, error: errorMessage }));
-        }
-    }
-    else if (saveToCloud && !authStore.isLoggedIn) {
-        notify.warning(t('resumes.notify.loginToSaveCloud'));
-    }
-    else {
-        notify.success(t('resumes.notify.created', { name: resumeName }));
-    }
+    await createResume(name, language, saveToCloud);
     if (navigateToBuilder) {
         router.push(localePath('/builder'));
     }
@@ -177,7 +140,7 @@ const showCopyResumeModal = (id: string) => {
 };
 const handleCopyResume = (name: string, navigateToBuilder: boolean) => {
     if (resumeToCopy.value) {
-        const resumeName = name.trim() || getDefaultResumeName();
+        const resumeName = name.trim() || defaultResumeName();
         const newResumeId = resumeStore.duplicateResume(resumeToCopy.value.id, resumeName);
         if (newResumeId) {
             resumeStore.setActiveResume(newResumeId);
