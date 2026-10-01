@@ -21,8 +21,8 @@
     "test:unit": "vitest run --config vitest.config.ts",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "fonts:manifest": "node scripts/generate-font-manifest.mjs",
-    "wasm:upload": "node scripts/upload-wasm.mjs",
+    "fonts:manifest": "node layers/core/scripts/generate-font-manifest.mjs",
+    "wasm:upload": "node layers/core/scripts/upload-wasm.mjs",
     "generate:samples": "node scripts/run-generate-samples.mjs"
   },
   "dependencies": {
@@ -33,7 +33,7 @@
     "@myriaddreamin/typst-ts-renderer": "^0.7.0",
     "@myriaddreamin/typst-ts-web-compiler": "^0.7.0",
     "@myriaddreamin/typst.ts": "^0.7.0",
-    "@nuxt/ui": "^4.11.1",
+    "@nuxt/ui": "^4.11.2",
     "@nuxtjs/i18n": "^10.6.0",
     "@nuxtjs/robots": "^6.2.2",
     "@nuxtjs/sitemap": "^8.5.0",

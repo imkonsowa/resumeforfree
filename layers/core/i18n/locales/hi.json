@@ -1,0 +1,51 @@
+{
+    "template": {
+        "at": " में ",
+        "present": "वर्तमान",
+        "grade": "ग्रेड:",
+        "separator": ", ",
+        "from": " से "
+    },
+    "proficiency": {
+        "native": "मातृभाषा",
+        "fluent": "धाराप्रवाह",
+        "proficient": "दक्ष / उत्कृष्ट",
+        "conversational": "बोलचाल का ज्ञान",
+        "basic": "बुनियादी",
+        "beginner": "शुरुआती"
+    },
+    "common": {
+        "link": "लिंक"
+    },
+    "forms": {
+        "personalInfo": {
+            "title": "व्यक्तिगत जानकारी",
+            "profile": "प्रोफ़ाइल",
+            "socialLinks": "सोशल लिंक्स"
+        },
+        "projects": {
+            "title": "परियोजनाएं"
+        },
+        "languages": {
+            "title": "भाषाएं"
+        },
+        "experience": {
+            "title": "कार्य अनुभव"
+        },
+        "internships": {
+            "title": "इंटर्नशिप"
+        },
+        "education": {
+            "title": "शिक्षा"
+        },
+        "skills": {
+            "title": "कौशल"
+        },
+        "volunteering": {
+            "title": "स्वयंसेवा"
+        },
+        "certificates": {
+            "title": "प्रमाणपत्र"
+        }
+    }
+}

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { AccordionItem } from '@nuxt/ui';
-import { createFAQStructuredData, getOgLocale } from '~/composables/useSEO';
+import { absolutePageUrl, createFAQStructuredData, getOgLocale } from '~/composables/useSEO';
 
 const { t, locale } = useI18n();
 const localePath = useLocalePath();
@@ -52,7 +52,7 @@ const QA_KEYWORDS: Record<string, string> = {
 
 useHead(() => {
     const pageTitle = `${t('qa.title')} ${t('qa.titleHighlight')} | Resume For Free`;
-    const pageUrl = `https://resumeforfree.com${route.path}`;
+    const pageUrl = absolutePageUrl(route.path);
     const ogLocale = getOgLocale(locale.value);
 
     return {
@@ -60,7 +60,6 @@ useHead(() => {
         meta: [
             { name: 'description', content: t('qa.subtitle') },
             { name: 'keywords', content: QA_KEYWORDS[locale.value] || QA_KEYWORDS.en },
-            { name: 'robots', content: 'index, follow' },
             { property: 'og:type', content: 'website' },
             { property: 'og:locale', content: ogLocale },
             { property: 'og:site_name', content: 'Resume For Free' },

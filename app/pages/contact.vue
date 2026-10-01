@@ -132,7 +132,7 @@
 import * as z from 'zod';
 import type { FormSubmitEvent } from '@nuxt/ui';
 import TurnstileWidget from '~/components/elements/TurnstileWidget.vue';
-import { getOgLocale } from '~/composables/useSEO';
+import { absolutePageUrl, getOgLocale } from '~/composables/useSEO';
 
 const { t, locale } = useI18n();
 const route = useRoute();
@@ -212,10 +212,6 @@ useHead(() => ({
             content: 'resume builder support, contact resume help, customer service, resume builder assistance, help with resume',
         },
         {
-            name: 'robots',
-            content: 'index, follow',
-        },
-        {
             property: 'og:type',
             content: 'website',
         },
@@ -237,7 +233,7 @@ useHead(() => ({
         },
         {
             property: 'og:url',
-            content: `https://resumeforfree.com${route.path}`,
+            content: absolutePageUrl(route.path),
         },
         {
             property: 'og:image',

@@ -3,7 +3,7 @@ import { resolve } from 'path';
 import { describe, it, expect } from 'vitest';
 import { PERSONAL_FIELDS, SECTION_SPECS } from '~~/server/utils/resumeSections';
 
-const source = readFileSync(resolve(__dirname, '../../app/types/resume.ts'), 'utf8');
+const source = readFileSync(resolve(__dirname, '../../layers/core/app/types/resume.ts'), 'utf8');
 
 const SECTION_TO_INTERFACE: Record<string, string> = {
     experiences: 'Experience',
@@ -19,7 +19,7 @@ const SECTION_TO_INTERFACE: Record<string, string> = {
 
 function interfaceBody(name: string): string {
     const match = source.match(new RegExp(`export interface ${name} \\{([\\s\\S]*?)\\n\\}`));
-    if (!match) throw new Error(`interface ${name} not found in app/types/resume.ts`);
+    if (!match) throw new Error(`interface ${name} not found in layers/core/app/types/resume.ts`);
     return match[1]!;
 }
 
@@ -47,7 +47,7 @@ describe('API request schemas match the resume structure', () => {
 
             expect(
                 Object.keys(exposed).sort(),
-                `API schema for "${section}" has drifted from ${interfaceName} in app/types/resume.ts — `
+                `API schema for "${section}" has drifted from ${interfaceName} in layers/core/app/types/resume.ts — `
                 + 'add or remove the field in server/utils/resumeSections.ts',
             ).toEqual(Object.keys(actual).sort());
 

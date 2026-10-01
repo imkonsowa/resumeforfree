@@ -57,7 +57,6 @@ useHead({
     title: `${t('auth.resetPassword')} - Resume For Free`,
     meta: [
         { name: 'description', content: t('auth.resetPasswordDescription') },
-        { name: 'robots', content: 'noindex, follow' },
     ],
 });
 </script>

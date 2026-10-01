@@ -90,7 +90,10 @@
                     @update:model-value="(value) => resumeStore.updateInternship(index, 'description', value)"
                 />
             </UFormField>
-            <div class="space-y-4">
+            <div
+                class="space-y-4"
+                data-focus-group
+            >
                 <div class="flex justify-between items-center">
                     <h4 class="text-sm font-medium text-default">
                         {{ t('common.achievements') }}
@@ -100,7 +103,7 @@
                         color="neutral"
                         variant="outline"
                         icon="i-lucide-plus"
-                        @click="resumeStore.addInternshipAchievement(index)"
+                        @click="addAndFocusLastInput($event, () => resumeStore.addInternshipAchievement(index))"
                     >
                         {{ t('common.addAchievement') }}
                     </UButton>
@@ -117,7 +120,7 @@
                                 class="flex-1"
                                 :placeholder="t('common.achievementPlaceholder')"
                                 @update:model-value="(value) => resumeStore.updateInternshipAchievement(index, achievementIndex, value)"
-                                @keydown.enter="resumeStore.addInternshipAchievement(index)"
+                                @keydown.enter="addAndFocusLastInput($event, () => resumeStore.addInternshipAchievement(index))"
                             />
                             <div class="hidden md:flex items-center gap-1">
                                 <UButton
@@ -126,6 +129,7 @@
                                     color="neutral"
                                     variant="outline"
                                     icon="i-lucide-chevron-up"
+                                    :aria-label="t('common.moveUp')"
                                     @click="resumeStore.moveInternshipAchievement(index, achievementIndex, achievementIndex - 1)"
                                 />
                                 <UButton
@@ -134,6 +138,7 @@
                                     color="neutral"
                                     variant="outline"
                                     icon="i-lucide-chevron-down"
+                                    :aria-label="t('common.moveDown')"
                                     @click="resumeStore.moveInternshipAchievement(index, achievementIndex, achievementIndex + 1)"
                                 />
                                 <UButton
@@ -141,6 +146,7 @@
                                     color="neutral"
                                     variant="outline"
                                     icon="i-lucide-trash-2"
+                                    :aria-label="t('common.delete')"
                                     @click="resumeStore.removeInternshipAchievement(index, achievementIndex)"
                                 />
                             </div>
@@ -152,6 +158,7 @@
                                 color="neutral"
                                 variant="outline"
                                 icon="i-lucide-chevron-up"
+                                :aria-label="t('common.moveUp')"
                                 @click="resumeStore.moveInternshipAchievement(index, achievementIndex, achievementIndex - 1)"
                             />
                             <UButton
@@ -160,6 +167,7 @@
                                 color="neutral"
                                 variant="outline"
                                 icon="i-lucide-chevron-down"
+                                :aria-label="t('common.moveDown')"
                                 @click="resumeStore.moveInternshipAchievement(index, achievementIndex, achievementIndex + 1)"
                             />
                             <UButton
@@ -167,6 +175,7 @@
                                 color="neutral"
                                 variant="outline"
                                 icon="i-lucide-trash-2"
+                                :aria-label="t('common.delete')"
                                 @click="resumeStore.removeInternshipAchievement(index, achievementIndex)"
                             />
                         </div>

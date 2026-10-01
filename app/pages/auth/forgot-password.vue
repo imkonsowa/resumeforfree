@@ -54,7 +54,6 @@ useHead({
     title: `${t('auth.forgotPasswordTitle')} - Resume For Free`,
     meta: [
         { name: 'description', content: t('auth.forgotPasswordDescription') },
-        { name: 'robots', content: 'noindex, follow' },
     ],
 });
 </script>

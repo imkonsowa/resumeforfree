@@ -1,6 +1,6 @@
 import { sqliteTable, text, integer, index } from 'drizzle-orm/sqlite-core';
 import { sql } from 'drizzle-orm';
-import type { ResumeData, ResumeSettings, UserSettings } from '~/types/resume';
+import type { ResumeData, ResumeSettings, UserSettings } from '#layers/core/app/types/resume';
 
 export const users = sqliteTable('users', {
     id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID().replace(/-/g, '')),

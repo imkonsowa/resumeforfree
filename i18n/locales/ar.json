@@ -9,7 +9,6 @@
         "close": "إغلاق",
         "done": "تم",
         "copyFailed": "فشل النسخ إلى الحافظة",
-        "link": "رابط",
         "preview": "معاينة",
         "download": "تنزيل",
         "loading": "جاري التحميل...",
@@ -47,6 +46,7 @@
         "tryAgain": "حاول مرة أخرى",
         "copy": "نسخ",
         "month": "الشهر",
+        "noMonth": "بدون شهر",
         "year": "السنة",
         "moveUp": "تحريك لأعلى",
         "moveDown": "تحريك لأسفل",
@@ -387,7 +387,7 @@
         "downloadAs": "تنزيل بصيغة {format}",
         "downloadAsSVG": "تنزيل بصيغة SVG",
         "downloadAsTypst": "تنزيل بصيغة Typst",
-        "downloadAsText": "تنزيل كنص",
+        "downloadAsText": "تنزيل مصدر Typst بصيغة ‎.txt",
         "template": "القالب",
         "loadingPreview": "جاري تحميل المعاينة",
         "loadingPreviewDescription": "يرجى الانتظار، قد يستغرق إعداد محرك Typst بضع لحظات إذا كان الاتصال بطيئاً...",
@@ -402,7 +402,10 @@
         "previewErrorDetailed": "فشلت المعاينة: {detail}",
         "zoomIn": "تكبير",
         "zoomOut": "تصغير",
-        "downloadOptions": "خيارات التنزيل"
+        "downloadOptions": "خيارات التنزيل",
+        "stepper": {
+            "entries": "لا توجد عناصر | عنصر واحد | {count} عناصر"
+        }
     },
     "settings": {
         "title": "إعدادات السيرة الذاتية",
@@ -419,7 +422,7 @@
         },
         "fontSize": {
             "label": "حجم الخط",
-            "description": "اضبط الحجم الأساسي للخط (الافتراضي: 14pt)"
+            "description": "اضبط الحجم الأساسي للخط (الافتراضي: {size}pt)"
         },
         "language": {
             "label": "اللغة",
@@ -432,14 +435,11 @@
     },
     "forms": {
         "personalInfo": {
-            "title": "المعلومات الشخصية",
-            "profile": "النبذة الشخصية",
             "firstName": "الاسم الأول",
             "lastName": "اسم العائلة",
             "phone": "رقم الهاتف",
             "position": "المسمى الوظيفي",
             "summary": "الخلاصة المهنية",
-            "socialLinks": "الروابط الشخصية والاجتماعية",
             "addSocialLink": "إضافة رابط",
             "socialLinksEmpty": "لم تُضف أى روابط بعد. اضغط على 'إضافة رابط' للبدء.",
             "platform": "المنصة",
@@ -458,7 +458,6 @@
             }
         },
         "experience": {
-            "title": "الخبرة العملية",
             "addExperience": "إضافة خبرة",
             "emptyMessage": "لم تُضف أى خبرات عملية بعد. اضغط على 'إضافة خبرة' للبدء.",
             "deleteConfirm": {
@@ -467,7 +466,6 @@
             }
         },
         "internships": {
-            "title": "التدريب المهني",
             "addInternship": "إضافة تدريب",
             "emptyMessage": "لم تُضف أى فترات تدريب بعد. اضغط على 'إضافة تدريب' للبدء.",
             "deleteConfirm": {
@@ -476,7 +474,6 @@
             }
         },
         "education": {
-            "title": "التعليم",
             "addEducation": "إضافة مؤهل علمي",
             "emptyMessage": "لم تُضف أى مؤهلات علمية بعد. اضغط على 'إضافة مؤهل علمي' للبدء.",
             "institution": "المؤسسة التعليمية",
@@ -489,7 +486,6 @@
             }
         },
         "skills": {
-            "title": "المهارات",
             "addSkill": "إضافة مهارة",
             "emptyMessage": "لم تُضف أى مهارات بعد. اضغط على 'إضافة مهارة' للبدء.",
             "skillTitle": "المهارة / فئة المهارات",
@@ -500,7 +496,6 @@
             }
         },
         "projects": {
-            "title": "المشاريع",
             "addProject": "إضافة مشروع",
             "emptyMessage": "أضف أبرز مشاريعك لإبراز أعمالك السابقة.",
             "projectTitle": "اسم المشروع",
@@ -518,7 +513,6 @@
             }
         },
         "languages": {
-            "title": "اللغات",
             "addLanguage": "إضافة لغة",
             "emptyMessage": "لم تُضف أى لغات بعد. اضغط على 'إضافة لغة' للبدء.",
             "languageName": "اللغة",
@@ -530,7 +524,6 @@
             }
         },
         "volunteering": {
-            "title": "الأعمال التطوعية",
             "addVolunteering": "إضافة عمل تطوعي",
             "emptyMessage": "لم تُضف أى أعمال تطوعية بعد. اضغط على 'إضافة عمل تطوعي' للبدء.",
             "organization": "الجهة التطوعية",
@@ -541,7 +534,6 @@
             }
         },
         "certificates": {
-            "title": "الشهادات",
             "addCertificate": "إضافة شهادة",
             "emptyMessage": "لم تُضف أى شهادات بعد. اضغط على 'إضافة شهادة' للبدء.",
             "certificateTitle": "اسم الشهادة",
@@ -587,13 +579,6 @@
         "devto": "Dev.to",
         "personal": "موقع شخصي",
         "other": "أخرى"
-    },
-    "template": {
-        "at": " في ",
-        "present": "حتى الآن",
-        "grade": "المعدل:",
-        "separator": "، ",
-        "from": " من "
     },
     "auth": {
         "signIn": "تسجيل الدخول",
@@ -856,7 +841,10 @@
             "syncingMultiple": "جاري مزامنة {count} سير ذاتية...",
             "syncingToCloud": "جاري مزامنة السيرة الذاتية...",
             "syncMultipleFailed": "فشلت مزامنة السير الذاتية: {error}",
-            "updatedInCloud": "تم تحديث السيرة الذاتية \"{name}\" في السحابة"
+            "updatedInCloud": "تم تحديث السيرة الذاتية \"{name}\" في السحابة",
+            "copied": "تم إنشاء النسخة \"{name}\"",
+            "imported": "لم يتم استيراد أي سيرة ذاتية | تم استيراد سيرة ذاتية واحدة | تم استيراد {count} سير ذاتية",
+            "importFailed": "هذا الملف ليس ملف تصدير صالحاً للسير الذاتية"
         }
     },
     "contact": {
@@ -898,14 +886,6 @@
             "title": "تواصل معنا - الدعم الفني لأداة السيرة الذاتية المجانية",
             "description": "هل تحتاج إلى مساعدة في استخدام أداة السيرة الذاتية؟ تواصل مع فريق الدعم الفني لمساعدتك في الحصول على سيرة ذاتية احترافية."
         }
-    },
-    "proficiency": {
-        "native": "اللغة الأم",
-        "fluent": "إتقان",
-        "proficient": "متمكن",
-        "conversational": "محادثة",
-        "basic": "أساسي",
-        "beginner": "مبتدئ"
     },
     "apiTokens": {
         "title": "رموز الواجهة البرمجية",

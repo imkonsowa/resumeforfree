@@ -29,10 +29,30 @@ export const useModalSeen = (modalName: string) => {
             console.warn(`Failed to reset modal state for "${modalName}":`, error);
         }
     };
+    const hasSeenThisSession = (): boolean => {
+        if (typeof window === 'undefined') return false;
+        try {
+            return sessionStorage.getItem(getStorageKey(modalName)) === 'true';
+        }
+        catch {
+            return false;
+        }
+    };
+    const markSeenThisSession = (): void => {
+        if (typeof window === 'undefined') return;
+        try {
+            sessionStorage.setItem(getStorageKey(modalName), 'true');
+        }
+        catch (error) {
+            console.warn(`Failed to save session modal state for "${modalName}":`, error);
+        }
+    };
     return {
         hasSeenModal,
         markModalSeen,
         resetModalState,
+        hasSeenThisSession,
+        markSeenThisSession,
     };
 };
 export const useModalSeenUtilities = () => {

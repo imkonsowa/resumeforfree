@@ -1,7 +1,7 @@
-import type { Template } from '~/types/template';
-import type { TemplateColumnLayout } from '~/types/resume';
-import { defaultTemplate } from '~/templates/default';
-import { compactTemplate } from '~/templates/compact';
+import type { Template } from '#layers/core/app/types/template';
+import type { TemplateColumnLayout } from '#layers/core/app/types/resume';
+import { defaultTemplate } from '#layers/core/app/templates/default';
+import { compactTemplate } from '#layers/core/app/templates/compact';
 
 export const useTemplate = () => {
     const settingsStore = useSettingsStore();

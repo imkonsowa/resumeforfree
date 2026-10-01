@@ -106,7 +106,10 @@
                     @update:model-value="(value) => resumeStore.updateVolunteering(index, 'description', value)"
                 />
             </UFormField>
-            <div class="space-y-4">
+            <div
+                class="space-y-4"
+                data-focus-group
+            >
                 <div class="flex justify-between items-center">
                     <h4 class="text-sm font-medium text-default">
                         {{ t('common.achievements') }}
@@ -116,7 +119,7 @@
                         color="neutral"
                         variant="outline"
                         icon="i-lucide-plus"
-                        @click="resumeStore.addVolunteeringAchievement(index)"
+                        @click="addAndFocusLastInput($event, () => resumeStore.addVolunteeringAchievement(index))"
                     >
                         {{ t('common.addAchievement') }}
                     </UButton>
@@ -133,7 +136,7 @@
                                 class="flex-1"
                                 :placeholder="t('common.achievementPlaceholder')"
                                 @update:model-value="(value) => resumeStore.updateVolunteeringAchievement(index, achievementIndex, value)"
-                                @keydown.enter="resumeStore.addVolunteeringAchievement(index)"
+                                @keydown.enter="addAndFocusLastInput($event, () => resumeStore.addVolunteeringAchievement(index))"
                             />
                             <div class="hidden md:flex items-center gap-1">
                                 <UButton
@@ -142,6 +145,7 @@
                                     color="neutral"
                                     variant="outline"
                                     icon="i-lucide-chevron-up"
+                                    :aria-label="t('common.moveUp')"
                                     @click="resumeStore.moveVolunteeringAchievement(index, achievementIndex, achievementIndex - 1)"
                                 />
                                 <UButton
@@ -150,6 +154,7 @@
                                     color="neutral"
                                     variant="outline"
                                     icon="i-lucide-chevron-down"
+                                    :aria-label="t('common.moveDown')"
                                     @click="resumeStore.moveVolunteeringAchievement(index, achievementIndex, achievementIndex + 1)"
                                 />
                                 <UButton
@@ -157,6 +162,7 @@
                                     color="neutral"
                                     variant="outline"
                                     icon="i-lucide-trash-2"
+                                    :aria-label="t('common.delete')"
                                     @click="resumeStore.removeVolunteeringAchievement(index, achievementIndex)"
                                 />
                             </div>
@@ -168,6 +174,7 @@
                                 color="neutral"
                                 variant="outline"
                                 icon="i-lucide-chevron-up"
+                                :aria-label="t('common.moveUp')"
                                 @click="resumeStore.moveVolunteeringAchievement(index, achievementIndex, achievementIndex - 1)"
                             />
                             <UButton
@@ -176,6 +183,7 @@
                                 color="neutral"
                                 variant="outline"
                                 icon="i-lucide-chevron-down"
+                                :aria-label="t('common.moveDown')"
                                 @click="resumeStore.moveVolunteeringAchievement(index, achievementIndex, achievementIndex + 1)"
                             />
                             <UButton
@@ -183,6 +191,7 @@
                                 color="neutral"
                                 variant="outline"
                                 icon="i-lucide-trash-2"
+                                :aria-label="t('common.delete')"
                                 @click="resumeStore.removeVolunteeringAchievement(index, achievementIndex)"
                             />
                         </div>

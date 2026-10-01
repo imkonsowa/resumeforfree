@@ -1,0 +1,51 @@
+{
+    "template": {
+        "at": " at ",
+        "present": "Present",
+        "grade": "Grade:",
+        "separator": ", ",
+        "from": " from "
+    },
+    "proficiency": {
+        "native": "Native",
+        "fluent": "Fluent",
+        "proficient": "Proficient",
+        "conversational": "Conversational",
+        "basic": "Basic",
+        "beginner": "Beginner"
+    },
+    "common": {
+        "link": "Link"
+    },
+    "forms": {
+        "personalInfo": {
+            "title": "Personal Information",
+            "profile": "Profile",
+            "socialLinks": "Social Links"
+        },
+        "projects": {
+            "title": "Projects"
+        },
+        "languages": {
+            "title": "Languages"
+        },
+        "experience": {
+            "title": "Experience"
+        },
+        "internships": {
+            "title": "Internships"
+        },
+        "education": {
+            "title": "Education"
+        },
+        "skills": {
+            "title": "Skills"
+        },
+        "volunteering": {
+            "title": "Volunteering"
+        },
+        "certificates": {
+            "title": "Certificates"
+        }
+    }
+}

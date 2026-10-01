@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { Resume } from '~/types/resume';
-import { isRtlLocale } from '~/composables/useLocale';
+import type { Resume } from '#layers/core/app/types/resume';
+import { isRtlLocale } from '#layers/core/app/utils/localeDirection';
 
 type Side = 'left' | 'right';
 

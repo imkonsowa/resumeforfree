@@ -1,16 +1,12 @@
 <script lang="ts" setup>
+defineI18nRoute({ locales: ['en'] });
+
 useHead({
     title: 'Terms and Conditions - Resume For Free',
     meta: [
         {
             name: 'description',
             content: 'Terms and conditions for using the Resume For Free application.',
-        },
-    ],
-    link: [
-        {
-            rel: 'canonical',
-            href: 'https://resumeforfree.com/terms',
         },
     ],
 });

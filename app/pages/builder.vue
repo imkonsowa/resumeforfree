@@ -3,7 +3,8 @@ import { useResumeStore } from '~/stores/resume';
 import ZoomControls from '~/components/elements/ZoomControls.vue';
 import ResumeBuilderHeader from '~/components/elements/ResumeBuilderHeader.vue';
 import ResumeLanguageSelector from '~/components/elements/ResumeLanguageSelector.vue';
-import { getLocaleDirection } from '~/composables/useLocale';
+import { getLocaleDirection } from '#layers/core/app/utils/localeDirection';
+import { defaultResumeSettings, getDefaultFontForLanguage } from '#layers/core/app/types/resume';
 import PersonalInfoForm from '~/components/forms/PersonalInfoForm.vue';
 import ExperienceForm from '~/components/forms/ExperienceForm.vue';
 import InternshipsForm from '~/components/forms/InternshipsForm.vue';
@@ -19,7 +20,7 @@ import FirstTimeBuilderModal from '~/components/elements/FirstTimeBuilderModal.v
 import CloudSyncPromptModal from '~/components/elements/CloudSyncPromptModal.vue';
 import SyncIndicator from '~/components/elements/SyncIndicator.vue';
 import LanguageMismatchAlert from '~/components/elements/LanguageMismatchAlert.vue';
-import { getOgLocale } from '~/composables/useSEO';
+import { absolutePageUrl, getOgLocale } from '~/composables/useSEO';
 
 const { t, locale, loadLocaleMessages } = useI18n({ useScope: 'global' });
 const localePath = useLocalePath();
@@ -35,10 +36,6 @@ useHead(() => ({
         {
             name: 'keywords',
             content: 'resume builder, CV maker, professional resume, free resume template, PDF resume, online resume builder, privacy resume maker',
-        },
-        {
-            name: 'robots',
-            content: 'index, follow',
         },
         {
             property: 'og:type',
@@ -62,7 +59,7 @@ useHead(() => ({
         },
         {
             property: 'og:url',
-            content: `https://resumeforfree.com${route.path}`,
+            content: absolutePageUrl(route.path),
         },
         {
             property: 'og:image',
@@ -89,12 +86,13 @@ useHead(() => ({
 const resumeStore = useResumeStore();
 const settingsStore = useSettingsStore();
 const authStore = useAuthStore();
-const { hasSeenModal, markModalSeen } = useModalSeen('firstTimeBuilder');
+const { hasSeenModal, markModalSeen, hasSeenThisSession, markSeenThisSession } = useModalSeen('firstTimeBuilder');
 const { startAutoSync, stopAutoSync, isSyncing, lastSyncSuccess, lastSyncTime, lastSyncError } = useAutoSync();
 useTypstLoader();
 
 const checkOtherModals = () => {
-    if (!hasSeenModal() && !authStore.isAuthenticated && resumeStore.resumeCount > 0) {
+    if (!hasSeenModal() && !hasSeenThisSession() && !authStore.isAuthenticated && resumeStore.resumeCount > 0) {
+        markSeenThisSession();
         showFirstTimeModal.value = true;
         return;
     }
@@ -135,6 +133,13 @@ onMounted(async () => {
         await resumeStore.fetchServerResumes().catch((err) => {
             console.error('[builder] server fetch failed:', err);
         });
+    }
+    if (resumeStore.resumeCount === 0) {
+        const newResumeId = resumeStore.createResume({
+            language: locale.value,
+            settings: { ...defaultResumeSettings, selectedFont: getDefaultFontForLanguage(locale.value) },
+        });
+        resumeStore.setActiveResume(newResumeId);
     }
     checkOtherModals();
 });
@@ -460,6 +465,18 @@ const orderedSections = computed(() => {
             @enable-sync="handleEnableSync"
             @continue-locally="handleContinueWithoutSync"
         />
+        <template #fallback>
+            <div class="bg-muted min-h-screen flex items-center justify-center p-4">
+                <div class="max-w-xl text-center space-y-3">
+                    <h1 class="text-2xl font-semibold text-highlighted">
+                        {{ t('builder.title') }}
+                    </h1>
+                    <p class="text-toned">
+                        {{ t('builder.pageDescription') }}
+                    </p>
+                </div>
+            </div>
+        </template>
     </ClientOnly>
 </template>
 

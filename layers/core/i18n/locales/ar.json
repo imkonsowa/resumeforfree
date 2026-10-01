@@ -1,0 +1,51 @@
+{
+    "template": {
+        "at": " في ",
+        "present": "حتى الآن",
+        "grade": "المعدل:",
+        "separator": "، ",
+        "from": " من "
+    },
+    "proficiency": {
+        "native": "اللغة الأم",
+        "fluent": "إتقان",
+        "proficient": "متمكن",
+        "conversational": "محادثة",
+        "basic": "أساسي",
+        "beginner": "مبتدئ"
+    },
+    "common": {
+        "link": "رابط"
+    },
+    "forms": {
+        "personalInfo": {
+            "title": "المعلومات الشخصية",
+            "profile": "النبذة الشخصية",
+            "socialLinks": "الروابط الشخصية والاجتماعية"
+        },
+        "projects": {
+            "title": "المشاريع"
+        },
+        "languages": {
+            "title": "اللغات"
+        },
+        "experience": {
+            "title": "الخبرة العملية"
+        },
+        "internships": {
+            "title": "التدريب المهني"
+        },
+        "education": {
+            "title": "التعليم"
+        },
+        "skills": {
+            "title": "المهارات"
+        },
+        "volunteering": {
+            "title": "الأعمال التطوعية"
+        },
+        "certificates": {
+            "title": "الشهادات"
+        }
+    }
+}

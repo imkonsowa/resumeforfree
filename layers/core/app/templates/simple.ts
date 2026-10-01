@@ -1,0 +1,267 @@
+import type { ResumeData, SectionHeaders, SectionOrder } from '#layers/core/app/types/resume';
+import type { SectionContent, Template, TemplateParseInput, TemplateRenderConfig } from '#layers/core/app/types/template';
+import { escapeTypstText } from '#layers/core/app/utils/stringUtils';
+import { convertEmail, convertLink, convertList, LATIN_FONT_STACK, renderDescription, renderTemplateSubHeader, renderTemplateSubHeaderContent, SECTION_HEADER_SIZE_OFFSET, SECTION_SPACING } from '#layers/core/app/utils/typstUtils';
+import { RendererContext } from '#layers/core/app/utils/rendererContext';
+import { isRtlLocale } from '#layers/core/app/utils/localeDirection';
+import { SECTION_TRANSLATION_MAP } from '#layers/core/app/utils/sectionHeaders';
+import {
+    generateCertificatesContent,
+    generateEducationContent,
+    generateExperienceContent,
+    generateInternshipsContent,
+    generateProjectsContent,
+    generateVolunteeringContent,
+} from '#layers/core/app/utils/templateRenderers';
+import { renderProfilePhoto, renderSharedLanguagesBody, renderSharedProfileBody, renderSharedSkillsBody } from '#layers/core/app/utils/sectionRenderers';
+
+const SIMPLE_LAYOUT_CONFIG: TemplateRenderConfig = {
+    layout: 'single-column',
+    sections: { spacing: 'joined', itemSpacing: '', joinSeparator: '\n\n' },
+    socialLinks: { orientation: 'horizontal', placement: 'header', separator: ', ' },
+    header: { style: 'simple', includeContact: true },
+    projects: { itemSpacing: '' },
+    photo: {
+        supported: true,
+    },
+};
+
+interface SimpleRow {
+    date?: string;
+    content: string;
+}
+
+interface SimpleSection {
+    label: string;
+    rows: SimpleRow[];
+}
+
+function getSectionLabel(section: keyof SectionHeaders, data: ResumeData, context: RendererContext): string {
+    const override = data.sectionHeaders?.[section];
+    if (override) return override.toUpperCase();
+    const key = SECTION_TRANSLATION_MAP[section];
+    return (key ? context.t(key) : '').toUpperCase();
+}
+
+function titleMarkup(item: SectionContent, fontSize: number): string {
+    if (item.titleContent) return renderTemplateSubHeaderContent(item.titleContent, fontSize);
+    if (item.title) return renderTemplateSubHeader(item.title, fontSize);
+    return '';
+}
+
+function renderRowContent(item: SectionContent, fontSize: number): string {
+    const parts: string[] = [];
+    const title = titleMarkup(item, fontSize);
+    if (title) parts.push(title);
+    if (item.content) parts.push(renderDescription(item.content, fontSize));
+    if (item.description) parts.push(renderDescription(item.description, fontSize));
+    if (item.achievements?.length) {
+        const list = convertList(item.achievements);
+        if (list) parts.push(list);
+    }
+    return parts.join('\n\n');
+}
+
+function itemsToRows(items: SectionContent[], fontSize: number): SimpleRow[] {
+    return items
+        .map(item => ({ date: item.date, content: renderRowContent(item, fontSize) }))
+        .filter(r => r.content.trim());
+}
+
+function buildSection(label: string, rows: SimpleRow[]): SimpleSection | null {
+    if (!rows.length) return null;
+    return { label, rows };
+}
+
+function renderProfile(data: ResumeData, context: RendererContext): SimpleSection | null {
+    const body = renderSharedProfileBody(data);
+    if (!body) return null;
+    return buildSection(
+        context.t('forms.personalInfo.profile') || 'PROFILE',
+        [{ content: body }],
+    );
+}
+
+function renderLinks(data: ResumeData, context: RendererContext): SimpleSection | null {
+    const socialLinks = (data?.socialLinks || []).filter(l => l.platform && l.url?.trim());
+    if (!socialLinks.length) return null;
+
+    const platformLabels: Record<string, string> = {
+        linkedin: 'LinkedIn',
+        github: 'GitHub',
+        twitter: 'Twitter',
+        portfolio: 'Portfolio',
+        dribbble: 'Dribbble',
+        medium: 'Medium',
+        devto: 'Dev.to',
+        personal: 'Personal',
+    };
+
+    const parts = socialLinks.map((link) => {
+        const label = link.platform === 'other' && link.customLabel
+            ? link.customLabel
+            : (platformLabels[link.platform] || link.platform);
+        return convertLink(link.url, label);
+    });
+
+    return buildSection(
+        context.t('forms.personalInfo.socialLinks') || 'LINKS',
+        [{ content: parts.join(', ') }],
+    );
+}
+
+const LETTER_SPACED_LOCALES = new Set(['en', 'fr', 'de', 'it', 'tr']);
+
+function renderSimpleSection(section: SimpleSection, fontSize: number, isFirst: boolean, locale: string): string {
+    if (!section.rows.length) return '';
+
+    const tracking = LETTER_SPACED_LOCALES.has(locale) ? ', tracking: 0.08em' : '';
+    const label = `#text(size: ${fontSize + SECTION_HEADER_SIZE_OFFSET}pt, weight: "bold"${tracking})[${escapeTypstText(section.label)}]`;
+
+    const cells: string[] = [];
+    section.rows.forEach((row, idx) => {
+        const leftParts: string[] = [];
+        if (idx === 0) leftParts.push(label);
+        if (row.date) {
+            leftParts.push(`#text(size: ${fontSize - 1}pt)[${row.date}]`);
+        }
+        cells.push(`[${leftParts.join('\n\n')}]`);
+        cells.push(`[${row.content}]`);
+    });
+
+    const topRule = isFirst ? '' : `#block(above: 0.8em, below: 0.8em)[#line(length: 100%, stroke: 0.4pt)]`;
+
+    return `${topRule}
+#grid(
+    columns: (22%, 1fr),
+    column-gutter: 1.2em,
+    row-gutter: 0.9em,
+    align: (left + top, left + top),
+    ${cells.join(',\n    ')}
+)`;
+}
+
+function renderHeader(data: ResumeData, context: RendererContext, fontSize: number): string {
+    const fullName = `${escapeTypstText(data?.firstName || '')} ${escapeTypstText(data?.lastName || '')}`.trim();
+    const position = escapeTypstText(data?.position || '');
+
+    const contactParts: string[] = [];
+    if (data?.location) contactParts.push(escapeTypstText(data.location));
+    if (data?.phone) contactParts.push(`#text(dir: ltr, font: (${LATIN_FONT_STACK}))[${escapeTypstText(data.phone)}]`);
+    if (data?.email) contactParts.push(convertEmail(data.email));
+
+    const textBlocks: string[] = [];
+    if (fullName) {
+        textBlocks.push(`#block(above: 0em, below: 0.6em)[#text(size: ${fontSize + 8}pt, weight: "bold")[${fullName}]]`);
+    }
+    if (position) {
+        textBlocks.push(`#block(above: 0em, below: 1em)[#text(size: ${fontSize + 2}pt)[${position}]]`);
+    }
+    if (contactParts.length) {
+        textBlocks.push(`#block(above: 0em, below: 1.4em)[#text(size: ${fontSize}pt)[${contactParts.join(' · ')}]]`);
+    }
+    const textColumn = textBlocks.join('\n');
+
+    const photo = renderProfilePhoto(data, context);
+    const headerBody = photo
+        ? `#grid(
+    columns: (1fr, auto),
+    column-gutter: 16pt,
+    align: (start + top, end + top),
+    [${textColumn}],
+    [${photo}],
+)`
+        : textColumn;
+
+    return `${headerBody}
+#block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]`;
+}
+
+const parse = ({ data, font, locale, t, fontSize, photoShape }: TemplateParseInput): string => {
+    const isRtl = isRtlLocale(locale);
+    const context = new RendererContext({ t, fontSize, config: SIMPLE_LAYOUT_CONFIG, locale, photoShape: photoShape || 'rectangle' });
+
+    const sectionMap: Record<string, () => SimpleSection | null> = {
+        links: () => renderLinks(data, context),
+        profile: () => renderProfile(data, context),
+        education: () => buildSection(
+            getSectionLabel('education', data, context),
+            itemsToRows(generateEducationContent(data.education || [], context.t, context.locale), context.fontSize),
+        ),
+        experience: () => buildSection(
+            getSectionLabel('experience', data, context),
+            itemsToRows(generateExperienceContent(data.experiences || [], context.t, context.locale), context.fontSize),
+        ),
+        internships: () => buildSection(
+            getSectionLabel('internships', data, context),
+            itemsToRows(generateInternshipsContent(data.internships || [], context.t, context.locale), context.fontSize),
+        ),
+        skills: () => {
+            const body = renderSharedSkillsBody(data);
+            if (!body) return null;
+            return buildSection(getSectionLabel('skills', data, context), [{ content: body }]);
+        },
+        languages: () => {
+            const body = renderSharedLanguagesBody(data, context);
+            if (!body) return null;
+            return buildSection(getSectionLabel('languages', data, context), [{ content: body }]);
+        },
+        projects: () => buildSection(
+            getSectionLabel('projects', data, context),
+            itemsToRows(generateProjectsContent(data.projects || [], context.t, context.locale), context.fontSize),
+        ),
+        volunteering: () => buildSection(
+            getSectionLabel('volunteering', data, context),
+            itemsToRows(generateVolunteeringContent(data.volunteering || [], context.t, context.locale), context.fontSize),
+        ),
+        certificates: () => buildSection(
+            getSectionLabel('certificates', data, context),
+            itemsToRows(generateCertificatesContent(data.certificates || [], context.t, context.locale), context.fontSize),
+        ),
+    };
+
+    const fixedOrder = ['links', 'profile'];
+    const orderedDataSections = Object.keys(sectionMap)
+        .filter(k => !fixedOrder.includes(k))
+        .sort((a, b) => {
+            const orderA = data.sectionOrder?.[a as keyof SectionOrder] ?? 999;
+            const orderB = data.sectionOrder?.[b as keyof SectionOrder] ?? 999;
+            return orderA - orderB;
+        });
+
+    const rendered: string[] = [];
+    let first = true;
+    for (const key of [...fixedOrder, ...orderedDataSections]) {
+        const section = sectionMap[key]();
+        if (!section) continue;
+        const out = renderSimpleSection(section, fontSize, first, locale);
+        if (out) {
+            rendered.push(out);
+            first = false;
+        }
+    }
+
+    const fontConfig = isRtl
+        ? `#set text(font: ("${font}", ${LATIN_FONT_STACK}), size: ${fontSize}pt, dir: rtl)`
+        : `#set text(font: ("${font}"), size: ${fontSize}pt)`;
+    const leading = isRtl ? '0.75em' : '0.5em';
+
+    return `#set page(margin: 1.5cm)
+${fontConfig}
+#set par(leading: ${leading}, justify: false)
+${renderHeader(data, context, fontSize)}
+#v(${SECTION_SPACING})
+${rendered.join('\n')}
+#pagebreak(weak: true)`;
+};
+
+export const simpleTemplate: Template = {
+    id: 'simple',
+    name: 'Simple',
+    description: 'Traditional academic CV layout with labeled columns and horizontal rules',
+    layoutConfig: {
+        isTwoColumn: false,
+        movableSections: [],
+    },
+    parse,
+};

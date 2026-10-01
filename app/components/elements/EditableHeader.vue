@@ -43,6 +43,7 @@
                 color="neutral"
                 variant="ghost"
                 icon="i-lucide-square-pen"
+                :aria-label="t('common.edit')"
                 @click="startEdit"
             />
             <UButton
@@ -61,8 +62,8 @@
 
 <script lang="ts" setup>
 import { computed, nextTick, ref } from 'vue';
-import type { SectionHeaders } from '~/types/resume';
-import { SECTION_TRANSLATION_MAP } from '~/composables/useSectionHeader';
+import type { SectionHeaders } from '#layers/core/app/types/resume';
+import { SECTION_TRANSLATION_MAP } from '#layers/core/app/utils/sectionHeaders';
 
 interface Props {
     value: string;

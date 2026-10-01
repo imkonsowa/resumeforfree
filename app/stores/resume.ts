@@ -17,9 +17,9 @@ import type {
     SkillItem,
     SocialLink,
     Volunteering,
-} from '~/types/resume';
-import { defaultResumeData, defaultResumeSettings, getDefaultFontForLanguage, resumeSettingsFromLegacy } from '~/types/resume';
-import { inferLabelFromUrl } from '~/utils/urlUtils';
+} from '#layers/core/app/types/resume';
+import { defaultResumeData, defaultResumeSettings, getDefaultFontForLanguage, resumeSettingsFromLegacy } from '#layers/core/app/types/resume';
+import { inferLabelFromUrl } from '#layers/core/app/utils/urlUtils';
 
 interface ResumeStoreState {
     resumes: Record<string, Resume>;

@@ -18,13 +18,17 @@ const { t, locale } = useI18n();
 
 const YEAR_SPAN_PAST = 60;
 const YEAR_SPAN_FUTURE = 10;
+const NO_MONTH = 'none';
 
 const monthItems = computed(() => {
     const formatter = new Intl.DateTimeFormat(locale.value, { month: 'long' });
-    return Array.from({ length: 12 }, (_, i) => ({
-        label: formatter.format(new Date(2000, i, 1)),
-        value: String(i + 1).padStart(2, '0'),
-    }));
+    return [
+        { label: t('common.noMonth'), value: NO_MONTH },
+        ...Array.from({ length: 12 }, (_, i) => ({
+            label: formatter.format(new Date(2000, i, 1)),
+            value: String(i + 1).padStart(2, '0'),
+        })),
+    ];
 });
 
 const yearItems = computed(() => {
@@ -41,9 +45,17 @@ const yearItems = computed(() => {
 const selectedMonth = ref('');
 const selectedYear = ref('');
 
-const combined = computed(() =>
-    selectedYear.value && selectedMonth.value ? `${selectedYear.value}-${selectedMonth.value}` : '',
-);
+const monthModel = computed({
+    get: () => selectedMonth.value,
+    set: (value: string) => {
+        selectedMonth.value = value === NO_MONTH ? '' : value;
+    },
+});
+
+const combined = computed(() => {
+    if (!selectedYear.value) return '';
+    return selectedMonth.value ? `${selectedYear.value}-${selectedMonth.value}` : selectedYear.value;
+});
 
 watch(() => props.modelValue, (value) => {
     if (value === combined.value) return;
@@ -65,7 +77,7 @@ watch(combined, (value) => {
     >
         <UFieldGroup class="w-full">
             <USelect
-                v-model="selectedMonth"
+                v-model="monthModel"
                 :items="monthItems"
                 value-key="value"
                 :disabled="disabled"

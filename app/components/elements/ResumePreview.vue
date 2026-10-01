@@ -190,15 +190,15 @@
 
 <script lang="ts" setup>
 import type { DropdownMenuItem } from '@nuxt/ui';
-import { getTemplateList } from '~/templates';
-import { useResumeGenerator } from '~/composables/useResumeGenerator';
+import { getTemplateList } from '#layers/core/app/templates';
+import { useResumeGenerator } from '#layers/core/app/composables/useResumeGenerator';
 import { useDebounceFn } from '@vueuse/core';
 import SettingsModal from '~/components/elements/SettingsModal.vue';
 import ZoomControls from '~/components/elements/ZoomControls.vue';
 import InvisibleTurnstile from '~/components/elements/InvisibleTurnstile.vue';
 import { useSettingsStore } from '~/stores/settings';
 import { useResumeStore } from '~/stores/resume';
-import { describeTypstError } from '~/utils/stringUtils';
+import { describeTypstError } from '#layers/core/app/utils/stringUtils';
 import { storeToRefs } from 'pinia';
 
 const availableTemplates = getTemplateList();

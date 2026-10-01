@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { availableFonts, getDefaultFontForLanguage, getFontsForLanguage, resolveFontFamily } from '~/types/resume';
-import { isRtlLocale, getLocaleDirection } from '~/composables/useLocale';
+import { availableFonts, getDefaultFontForLanguage, getFontsForLanguage, resolveFontFamily } from '#layers/core/app/types/resume';
+import { isRtlLocale, getLocaleDirection } from '#layers/core/app/utils/localeDirection';
 import { getOgLocale } from '~/composables/useSEO';
 
 const root = resolve(__dirname, '../..');
@@ -46,8 +46,8 @@ describe('i18n Locale System', () => {
         }
     });
 
-    it('en.json has 669 leaf keys', () => {
-        expect(enKeys.length).toBe(677);
+    it('en.json has 659 leaf keys', () => {
+        expect(enKeys.length).toBe(659);
     });
 
     describe.each(NEW_LOCALES)('locale "%s" parity with en.json', (locale) => {

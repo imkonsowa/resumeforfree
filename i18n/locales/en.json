@@ -9,7 +9,6 @@
         "close": "Close",
         "done": "Done",
         "copyFailed": "Failed to copy to clipboard",
-        "link": "Link",
         "preview": "Preview",
         "download": "Download",
         "loading": "Loading...",
@@ -47,6 +46,7 @@
         "tryAgain": "Try Again",
         "copy": "Copy",
         "month": "Month",
+        "noMonth": "No month",
         "year": "Year",
         "moveUp": "Move up",
         "moveDown": "Move down",
@@ -387,7 +387,7 @@
         "downloadAs": "Download as {format}",
         "downloadAsSVG": "Download as SVG",
         "downloadAsTypst": "Download as Typst",
-        "downloadAsText": "Download as Text",
+        "downloadAsText": "Download Typst source as .txt",
         "template": "Template",
         "loadingPreview": "Loading Preview",
         "loadingPreviewDescription": "Please wait as fetching Typst module and compiler takes time on slow networks ...",
@@ -402,7 +402,10 @@
         "previewErrorDetailed": "Preview failed: {detail}",
         "zoomIn": "Zoom in",
         "zoomOut": "Zoom out",
-        "downloadOptions": "Download options"
+        "downloadOptions": "Download options",
+        "stepper": {
+            "entries": "No entries | {count} entry | {count} entries"
+        }
     },
     "settings": {
         "title": "Resume Settings",
@@ -419,7 +422,7 @@
         },
         "fontSize": {
             "label": "Font Size",
-            "description": "Adjust the base font size for your resume (default: 14pt)"
+            "description": "Adjust the base font size for your resume (default: {size}pt)"
         },
         "language": {
             "label": "Language",
@@ -432,14 +435,11 @@
     },
     "forms": {
         "personalInfo": {
-            "title": "Personal Information",
-            "profile": "Profile",
             "firstName": "First Name",
             "lastName": "Last Name",
             "phone": "Phone Number",
             "position": "Position/Title",
             "summary": "Professional Summary",
-            "socialLinks": "Social Links",
             "addSocialLink": "Add Social Link",
             "socialLinksEmpty": "No social links added yet. Click 'Add Social Link' to get started.",
             "platform": "Platform",
@@ -458,7 +458,6 @@
             }
         },
         "experience": {
-            "title": "Experience",
             "addExperience": "Add Experience",
             "emptyMessage": "No experience entries added yet. Click 'Add Experience' to get started.",
             "deleteConfirm": {
@@ -467,7 +466,6 @@
             }
         },
         "internships": {
-            "title": "Internships",
             "addInternship": "Add Internship",
             "emptyMessage": "No internship entries added yet. Click 'Add Internship' to get started.",
             "deleteConfirm": {
@@ -476,7 +474,6 @@
             }
         },
         "education": {
-            "title": "Education",
             "addEducation": "Add Education",
             "emptyMessage": "No education entries added yet. Click 'Add Education' to get started.",
             "institution": "Institution",
@@ -489,7 +486,6 @@
             }
         },
         "skills": {
-            "title": "Skills",
             "addSkill": "Add Skill",
             "emptyMessage": "No skills added yet. Click 'Add Skill' to get started.",
             "skillTitle": "Skill/Category",
@@ -500,7 +496,6 @@
             }
         },
         "projects": {
-            "title": "Projects",
             "addProject": "Add Project",
             "emptyMessage": "Add your notable projects to showcase your work.",
             "projectTitle": "Project Title",
@@ -518,7 +513,6 @@
             }
         },
         "languages": {
-            "title": "Languages",
             "addLanguage": "Add Language",
             "emptyMessage": "No languages added yet. Click 'Add Language' to get started.",
             "languageName": "Language",
@@ -530,7 +524,6 @@
             }
         },
         "volunteering": {
-            "title": "Volunteering",
             "addVolunteering": "Add Volunteering Experience",
             "emptyMessage": "No volunteering experience added yet. Click 'Add Volunteering Experience' to get started.",
             "organization": "Organization",
@@ -541,7 +534,6 @@
             }
         },
         "certificates": {
-            "title": "Certificates",
             "addCertificate": "Add Certificate",
             "emptyMessage": "No certificates added yet. Click 'Add Certificate' to get started.",
             "certificateTitle": "Certificate Title",
@@ -587,13 +579,6 @@
         "devto": "Dev.to",
         "personal": "Personal",
         "other": "Other"
-    },
-    "template": {
-        "at": " at ",
-        "present": "Present",
-        "grade": "Grade:",
-        "separator": ", ",
-        "from": " from "
     },
     "auth": {
         "signIn": "Sign In",
@@ -856,7 +841,10 @@
             "syncingMultiple": "Syncing {count} {plural} to cloud...",
             "syncingToCloud": "Syncing resume to cloud...",
             "syncMultipleFailed": "Failed to sync resumes: {error}",
-            "updatedInCloud": "Resume \"{name}\" updated in cloud"
+            "updatedInCloud": "Resume \"{name}\" updated in cloud",
+            "copied": "Copy \"{name}\" created",
+            "imported": "No resumes imported | {count} resume imported | {count} resumes imported",
+            "importFailed": "This file is not a valid resume export"
         }
     },
     "contact": {
@@ -898,14 +886,6 @@
             "title": "Contact Us - Get Help with Resume For Free | Support",
             "description": "Need help with our free resume builder? Contact our support team for assistance with creating professional resumes. Fast and friendly customer service."
         }
-    },
-    "proficiency": {
-        "native": "Native",
-        "fluent": "Fluent",
-        "proficient": "Proficient",
-        "conversational": "Conversational",
-        "basic": "Basic",
-        "beginner": "Beginner"
     },
     "apiTokens": {
         "title": "API Tokens",

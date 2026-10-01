@@ -165,6 +165,7 @@
                                 color="neutral"
                                 variant="outline"
                                 icon="i-lucide-chevron-up"
+                                :aria-label="t('common.moveUp')"
                                 @click="resumeStore.moveSocialLink(linkIndex, linkIndex - 1)"
                             />
                             <UButton
@@ -173,6 +174,7 @@
                                 color="neutral"
                                 variant="outline"
                                 icon="i-lucide-chevron-down"
+                                :aria-label="t('common.moveDown')"
                                 @click="resumeStore.moveSocialLink(linkIndex, linkIndex + 1)"
                             />
                             <UButton
@@ -180,6 +182,7 @@
                                 color="neutral"
                                 variant="outline"
                                 icon="i-lucide-trash-2"
+                                :aria-label="t('common.delete')"
                                 @click="handleRemoveSocialLink(linkIndex)"
                             />
                         </div>
@@ -191,6 +194,7 @@
                             color="neutral"
                             variant="outline"
                             icon="i-lucide-chevron-up"
+                            :aria-label="t('common.moveUp')"
                             @click="resumeStore.moveSocialLink(linkIndex, linkIndex - 1)"
                         />
                         <UButton
@@ -199,6 +203,7 @@
                             color="neutral"
                             variant="outline"
                             icon="i-lucide-chevron-down"
+                            :aria-label="t('common.moveDown')"
                             @click="resumeStore.moveSocialLink(linkIndex, linkIndex + 1)"
                         />
                         <UButton
@@ -206,6 +211,7 @@
                             color="neutral"
                             variant="outline"
                             icon="i-lucide-trash-2"
+                            :aria-label="t('common.delete')"
                             @click="handleRemoveSocialLink(linkIndex)"
                         />
                     </div>

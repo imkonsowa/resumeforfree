@@ -9,7 +9,6 @@
         "close": "بند کریں",
         "done": "مکمل",
         "copyFailed": "کلپ بورڈ پر کاپی کرنے میں ناکامی",
-        "link": "لنک",
         "preview": "پیش نظارہ",
         "download": "ڈاؤن لوڈ کریں",
         "loading": "لوڈ ہو رہا ہے...",
@@ -47,6 +46,7 @@
         "tryAgain": "دوبارہ کوشش کریں",
         "copy": "کاپی کریں",
         "month": "مہینہ",
+        "noMonth": "کوئی مہینہ نہیں",
         "year": "سال",
         "moveUp": "اوپر لے جائیں",
         "moveDown": "نیچے لے جائیں",
@@ -387,7 +387,7 @@
         "downloadAs": "بطور {format} ڈاؤن لوڈ کریں",
         "downloadAsSVG": "بطور SVG ڈاؤن لوڈ کریں",
         "downloadAsTypst": "بطور Typst ڈاؤن لوڈ کریں",
-        "downloadAsText": "بطور ٹیکسٹ ڈاؤن لوڈ کریں",
+        "downloadAsText": "Typst سورس بطور ‎.txt ڈاؤن لوڈ کریں",
         "template": "ٹیمپلیٹ",
         "loadingPreview": "پیش نظارہ لوڈ ہو رہا ہے",
         "loadingPreviewDescription": "براہ کرم انتظار کریں، سست انٹرنیٹ پر Typst کمپائلر لوڈ ہونے میں تھوڑا وقت لے سکتا ہے...",
@@ -402,7 +402,10 @@
         "previewErrorDetailed": "پیش نظارہ ناکام: {detail}",
         "zoomIn": "بڑا کریں",
         "zoomOut": "چھوٹا کریں",
-        "downloadOptions": "ڈاؤن لوڈ کے اختیارات"
+        "downloadOptions": "ڈاؤن لوڈ کے اختیارات",
+        "stepper": {
+            "entries": "کوئی اندراج نہیں | {count} اندراج | {count} اندراجات"
+        }
     },
     "settings": {
         "title": "سی وی کی ترتیبات",
@@ -419,7 +422,7 @@
         },
         "fontSize": {
             "label": "فونٹ سائز",
-            "description": "بنیادی فونٹ سائز ایڈجسٹ کریں (طے شدہ: 14pt)"
+            "description": "بنیادی فونٹ سائز ایڈجسٹ کریں (طے شدہ: {size}pt)"
         },
         "language": {
             "label": "زبان",
@@ -432,14 +435,11 @@
     },
     "forms": {
         "personalInfo": {
-            "title": "ذاتی معلومات",
-            "profile": "پروفائل",
             "firstName": "پہلا نام",
             "lastName": "آخری نام",
             "phone": "فون نمبر",
             "position": "عہدہ / ٹائٹل",
             "summary": "پیشہ ورانہ خلاصہ",
-            "socialLinks": "سوشل لنکس",
             "addSocialLink": "سوشل لنک شامل کریں",
             "socialLinksEmpty": "ابھی تک کوئی سوشل لنک شامل نہیں کیا گیا۔ شروع کرنے کے لیے 'سوشل لنک شامل کریں' پر کلک کریں۔",
             "platform": "پلیٹ فارم",
@@ -458,7 +458,6 @@
             }
         },
         "experience": {
-            "title": "تجربہ",
             "addExperience": "تجربہ شامل کریں",
             "emptyMessage": "ابھی تک کوئی تجربہ شامل نہیں کیا گیا۔ شروع کرنے کے لیے 'تجربہ شامل کریں' پر کلک کریں۔",
             "deleteConfirm": {
@@ -467,7 +466,6 @@
             }
         },
         "internships": {
-            "title": "انٹرن شپس",
             "addInternship": "انٹرن شپ شامل کریں",
             "emptyMessage": "ابھی تک کوئی انٹرن شپ شامل نہیں کی گئی۔",
             "deleteConfirm": {
@@ -476,7 +474,6 @@
             }
         },
         "education": {
-            "title": "تعلیم",
             "addEducation": "تعلیم شامل کریں",
             "emptyMessage": "ابھی تک کوئی تعلیم شامل نہیں کی گئی۔",
             "institution": "ادارہ / یونیورسٹی",
@@ -489,7 +486,6 @@
             }
         },
         "skills": {
-            "title": "مہارتیں",
             "addSkill": "مہارت شامل کریں",
             "emptyMessage": "ابھی تک کوئی مہارت شامل نہیں کی گئی۔",
             "skillTitle": "مہارت / کیٹیگری",
@@ -500,7 +496,6 @@
             }
         },
         "projects": {
-            "title": "پراجیکٹس",
             "addProject": "پراجیکٹ شامل کریں",
             "emptyMessage": "اپنے نمایاں پراجیکٹس شامل کریں۔",
             "projectTitle": "پراجیکٹ کا عنوان",
@@ -518,7 +513,6 @@
             }
         },
         "languages": {
-            "title": "زبانیں",
             "addLanguage": "زبان شامل کریں",
             "emptyMessage": "ابھی تک کوئی زبان شامل نہیں کی گئی۔",
             "languageName": "زبان کا نام",
@@ -530,7 +524,6 @@
             }
         },
         "volunteering": {
-            "title": "رضاکارانہ خدمات",
             "addVolunteering": "رضاکارانہ تجربہ شامل کریں",
             "emptyMessage": "ابھی تک کوئی رضاکارانہ تجربہ شامل نہیں کیا گیا۔",
             "organization": "تنظیم",
@@ -541,7 +534,6 @@
             }
         },
         "certificates": {
-            "title": "سرٹیفیکیٹس",
             "addCertificate": "سرٹیفیکیٹ شامل کریں",
             "emptyMessage": "ابھی تک کوئی سرٹیفیکیٹ شامل نہیں کیا گیا۔",
             "certificateTitle": "سرٹیفیکیٹ کا عنوان",
@@ -587,13 +579,6 @@
         "devto": "Dev.to",
         "personal": "ذاتی ویب سائٹ",
         "other": "دیگر"
-    },
-    "template": {
-        "at": " بمقام ",
-        "present": "موجودہ",
-        "grade": "گریڈ:",
-        "separator": "، ",
-        "from": " از "
     },
     "auth": {
         "signIn": "سائن ان",
@@ -856,7 +841,10 @@
             "syncingMultiple": "{count} {plural} کلاؤڈ پر ہم آہنگ ہو رہی ہیں...",
             "syncingToCloud": "کلاؤڈ پر ہم آہنگ ہو رہی ہے...",
             "syncMultipleFailed": "ہم آہنگی میں ناکامی: {error}",
-            "updatedInCloud": "سی وی \"{name}\" کلاؤڈ میں اپ ڈیٹ ہو گئی"
+            "updatedInCloud": "سی وی \"{name}\" کلاؤڈ میں اپ ڈیٹ ہو گئی",
+            "copied": "کاپی \"{name}\" بن گئی",
+            "imported": "کوئی سی وی درآمد نہیں ہوئی | {count} سی وی درآمد ہوئی | {count} سی ویز درآمد ہوئیں",
+            "importFailed": "یہ فائل درست سی وی ایکسپورٹ نہیں ہے"
         }
     },
     "contact": {
@@ -898,14 +886,6 @@
             "title": "رابطہ کریں - Resume For Free سپورٹ",
             "description": "ہمارے مفت سی وی بلڈر کے ساتھ مدد درکار ہے؟ ہماری سپورٹ ٹیم سے رابطہ کریں۔"
         }
-    },
-    "proficiency": {
-        "native": "مادری زبان",
-        "fluent": "روانی کے ساتھ",
-        "proficient": "ماہرانہ",
-        "conversational": "گفتگو کی حد تک",
-        "basic": "بنیادی",
-        "beginner": "ابتدائی"
     },
     "apiTokens": {
         "title": "API ٹوکنز",

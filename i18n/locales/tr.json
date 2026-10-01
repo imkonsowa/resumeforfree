@@ -9,7 +9,6 @@
         "close": "Kapat",
         "done": "Tamamlandı",
         "copyFailed": "Panoya kopyalanamadı",
-        "link": "Bağlantı",
         "preview": "Önizleme",
         "download": "İndir",
         "loading": "Yükleniyor...",
@@ -46,6 +45,7 @@
         "emailAddress": "E-posta Adresi",
         "tryAgain": "Tekrar Dene",
         "month": "Ay",
+        "noMonth": "Ay yok",
         "year": "Yıl",
         "moveUp": "Yukarı taşı",
         "moveDown": "Aşağı taşı",
@@ -387,7 +387,7 @@
         "downloadAs": "{format} Olarak İndir",
         "downloadAsSVG": "SVG Olarak İndir",
         "downloadAsTypst": "Typst Olarak İndir",
-        "downloadAsText": "Metin Olarak İndir",
+        "downloadAsText": "Typst kaynağını .txt olarak indir",
         "template": "Şablon",
         "loadingPreview": "Önizleme Yükleniyor",
         "loadingPreviewDescription": "Yavaş ağlarda Typst modülü ve derleyicisinin getirilmesi zaman alacağından lütfen bekleyin...",
@@ -402,7 +402,10 @@
         "zoomIn": "Yakınlaştır",
         "zoomOut": "Uzaklaştır",
         "downloadOptions": "İndirme seçenekleri",
-        "previewErrorDetailed": "Önizleme başarısız: {detail}"
+        "previewErrorDetailed": "Önizleme başarısız: {detail}",
+        "stepper": {
+            "entries": "Kayıt yok | {count} kayıt | {count} kayıt"
+        }
     },
     "settings": {
         "title": "Özgeçmiş Ayarları",
@@ -419,7 +422,7 @@
         },
         "fontSize": {
             "label": "Yazı Boyutu",
-            "description": "Özgeçmişiniz için temel yazı boyutunu ayarlayın (varsayılan: 14pt)"
+            "description": "Özgeçmişiniz için temel yazı boyutunu ayarlayın (varsayılan: {size}pt)"
         },
         "language": {
             "label": "Dil",
@@ -432,14 +435,11 @@
     },
     "forms": {
         "personalInfo": {
-            "title": "Kişisel Bilgiler",
-            "profile": "Profil",
             "firstName": "Ad",
             "lastName": "Soyad",
             "phone": "Telefon Numarası",
             "position": "Pozisyon/Unvan",
             "summary": "Profesyonel Özet",
-            "socialLinks": "Sosyal Bağlantılar",
             "addSocialLink": "Sosyal Bağlantı Ekle",
             "socialLinksEmpty": "Henüz sosyal bağlantı eklenmedi. Başlamak için 'Sosyal Bağlantı Ekle'ye tıklayın.",
             "platform": "Platform",
@@ -458,7 +458,6 @@
             }
         },
         "experience": {
-            "title": "Deneyim",
             "addExperience": "Deneyim Ekle",
             "emptyMessage": "Henüz deneyim girdisi eklenmedi. Başlamak için 'Deneyim Ekle'ye tıklayın.",
             "deleteConfirm": {
@@ -467,7 +466,6 @@
             }
         },
         "internships": {
-            "title": "Stajlar",
             "addInternship": "Staj Ekle",
             "emptyMessage": "Henüz staj girdisi eklenmedi. Başlamak için 'Staj Ekle'ye tıklayın.",
             "deleteConfirm": {
@@ -476,7 +474,6 @@
             }
         },
         "education": {
-            "title": "Eğitim",
             "addEducation": "Eğitim Ekle",
             "emptyMessage": "Henüz eğitim girdisi eklenmedi. Başlamak için 'Eğitim Ekle'ye tıklayın.",
             "institution": "Kurum",
@@ -489,7 +486,6 @@
             }
         },
         "skills": {
-            "title": "Beceriler",
             "addSkill": "Beceri Ekle",
             "emptyMessage": "Henüz beceri eklenmedi. Başlamak için 'Beceri Ekle'ye tıklayın.",
             "skillTitle": "Beceri/Kategori",
@@ -500,7 +496,6 @@
             }
         },
         "projects": {
-            "title": "Projeler",
             "addProject": "Proje Ekle",
             "emptyMessage": "Çalışmalarınızı sergilemek için dikkate değer projelerinizi ekleyin.",
             "projectTitle": "Proje Başlığı",
@@ -518,7 +513,6 @@
             }
         },
         "languages": {
-            "title": "Diller",
             "addLanguage": "Dil Ekle",
             "emptyMessage": "Henüz dil eklenmedi. Başlamak için 'Dil Ekle'ye tıklayın.",
             "languageName": "Dil",
@@ -530,7 +524,6 @@
             }
         },
         "volunteering": {
-            "title": "Gönüllülük",
             "addVolunteering": "Gönüllülük Deneyimi Ekle",
             "emptyMessage": "Henüz gönüllülük deneyimi eklenmedi. Başlamak için 'Gönüllülük Deneyimi Ekle'ye tıklayın.",
             "organization": "Organizasyon",
@@ -541,7 +534,6 @@
             }
         },
         "certificates": {
-            "title": "Sertifikalar",
             "addCertificate": "Sertifika Ekle",
             "emptyMessage": "Henüz sertifika eklenmedi. Başlamak için 'Sertifika Ekle'ye tıklayın.",
             "certificateTitle": "Sertifika Başlığı",
@@ -587,13 +579,6 @@
         "devto": "Dev.to",
         "personal": "Kişisel",
         "other": "Diğer"
-    },
-    "template": {
-        "at": " - ",
-        "present": "Devam Ediyor",
-        "grade": "Not:",
-        "separator": ", ",
-        "from": " - "
     },
     "auth": {
         "signIn": "Giriş Yap",
@@ -856,7 +841,10 @@
             "syncingMultiple": "{count} özgeçmiş buluta senkronize ediliyor...",
             "syncingToCloud": "Özgeçmiş buluta senkronize ediliyor...",
             "syncMultipleFailed": "Özgeçmişler senkronize edilemedi: {error}",
-            "updatedInCloud": "\"{name}\" özgeçmişi bulutta güncellendi"
+            "updatedInCloud": "\"{name}\" özgeçmişi bulutta güncellendi",
+            "copied": "\"{name}\" kopyası oluşturuldu",
+            "imported": "Hiç özgeçmiş içe aktarılmadı | {count} özgeçmiş içe aktarıldı | {count} özgeçmiş içe aktarıldı",
+            "importFailed": "Bu dosya geçerli bir özgeçmiş dışa aktarımı değil"
         }
     },
     "contact": {
@@ -898,14 +886,6 @@
             "title": "Bize Ulaşın - Resume For Free ile Yardım Alın | Destek",
             "description": "Ücretsiz özgeçmiş oluşturucumuzla ilgili yardıma mı ihtiyacınız var? Profesyonel özgeçmişler oluşturma konusunda yardım almak için destek ekibimizle iletişime geçin. Hızlı ve güler yüzlü müşteri hizmetleri."
         }
-    },
-    "proficiency": {
-        "native": "Ana dil",
-        "fluent": "Akıcı",
-        "proficient": "İleri",
-        "conversational": "Konuşma düzeyi",
-        "basic": "Temel",
-        "beginner": "Başlangıç"
     },
     "apiTokens": {
         "title": "API Anahtarları",

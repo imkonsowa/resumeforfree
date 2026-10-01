@@ -1,0 +1,51 @@
+{
+    "template": {
+        "at": " · ",
+        "present": "至今",
+        "grade": "成绩:",
+        "separator": "，",
+        "from": " 来自 "
+    },
+    "proficiency": {
+        "native": "母语",
+        "fluent": "精通",
+        "proficient": "熟练",
+        "conversational": "良好 / 日常会话",
+        "basic": "基础",
+        "beginner": "入门"
+    },
+    "common": {
+        "link": "链接"
+    },
+    "forms": {
+        "personalInfo": {
+            "title": "个人信息",
+            "profile": "个人简介",
+            "socialLinks": "社交主页与外链"
+        },
+        "projects": {
+            "title": "项目经验"
+        },
+        "languages": {
+            "title": "语言能力"
+        },
+        "experience": {
+            "title": "工作经历"
+        },
+        "internships": {
+            "title": "实习经历"
+        },
+        "education": {
+            "title": "教育背景"
+        },
+        "skills": {
+            "title": "专业技能"
+        },
+        "volunteering": {
+            "title": "志愿服务与社会活动"
+        },
+        "certificates": {
+            "title": "资格证书与荣誉"
+        }
+    }
+}

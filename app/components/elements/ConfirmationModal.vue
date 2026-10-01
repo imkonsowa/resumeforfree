@@ -36,7 +36,7 @@ const labels = computed(() => ({
         v-model:open="open"
         :title="labels.title"
         :description="labels.message"
-        :ui="{ footer: 'justify-end' }"
+        :ui="{ footer: 'justify-end', description: 'sr-only' }"
     >
         <template #body>
             <div class="flex items-start gap-3">

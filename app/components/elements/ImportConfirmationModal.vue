@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { ImportResumePreview } from '~/types/resume';
+import type { ImportResumePreview } from '#layers/core/app/types/resume';
 
 interface Props {
     isOpen: boolean;

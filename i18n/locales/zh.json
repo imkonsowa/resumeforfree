@@ -9,7 +9,6 @@
         "close": "关闭",
         "done": "完成",
         "copyFailed": "复制到剪贴板失败",
-        "link": "链接",
         "preview": "预览",
         "download": "下载",
         "loading": "加载中...",
@@ -47,6 +46,7 @@
         "tryAgain": "重试",
         "copy": "复制",
         "month": "月",
+        "noMonth": "不填月份",
         "year": "年",
         "moveUp": "上移",
         "moveDown": "下移",
@@ -387,7 +387,7 @@
         "downloadAs": "下载为 {format}",
         "downloadAsSVG": "下载为 SVG 矢量图",
         "downloadAsTypst": "下载为 Typst 源码",
-        "downloadAsText": "下载为纯文本",
+        "downloadAsText": "将 Typst 源码下载为 .txt",
         "template": "简历模板",
         "loadingPreview": "正在渲染预览",
         "loadingPreviewDescription": "正在加载 Typst 排版编译器，在慢速网络下可能需要少许时间，请稍候...",
@@ -402,7 +402,10 @@
         "previewErrorDetailed": "渲染预览失败: {detail}",
         "zoomIn": "放大",
         "zoomOut": "缩小",
-        "downloadOptions": "导出选项"
+        "downloadOptions": "导出选项",
+        "stepper": {
+            "entries": "无条目 | {count} 个条目 | {count} 个条目"
+        }
     },
     "settings": {
         "title": "简历设置",
@@ -419,7 +422,7 @@
         },
         "fontSize": {
             "label": "基础字号",
-            "description": "调整简历基准字号大小 (默认: 14pt)"
+            "description": "调整简历基准字号大小 (默认: {size}pt)"
         },
         "language": {
             "label": "简历语言",
@@ -432,14 +435,11 @@
     },
     "forms": {
         "personalInfo": {
-            "title": "个人信息",
-            "profile": "个人简介",
             "firstName": "名字",
             "lastName": "姓氏",
             "phone": "联系电话",
             "position": "期望职位 / 当前头衔",
             "summary": "个人总结 / 职业简述",
-            "socialLinks": "社交主页与外链",
             "addSocialLink": "添加链接",
             "socialLinksEmpty": "尚未添加任何链接。点击“添加链接”开始添加。",
             "platform": "平台",
@@ -458,7 +458,6 @@
             }
         },
         "experience": {
-            "title": "工作经历",
             "addExperience": "添加工作经历",
             "emptyMessage": "尚未添加工作经历。点击“添加工作经历”开始填写。",
             "deleteConfirm": {
@@ -467,7 +466,6 @@
             }
         },
         "internships": {
-            "title": "实习经历",
             "addInternship": "添加实习经历",
             "emptyMessage": "尚未添加实习经历。点击“添加实习经历”开始填写。",
             "deleteConfirm": {
@@ -476,7 +474,6 @@
             }
         },
         "education": {
-            "title": "教育背景",
             "addEducation": "添加教育经历",
             "emptyMessage": "尚未添加教育经历。点击“添加教育经历”开始填写。",
             "institution": "毕业院校 / 机构",
@@ -489,7 +486,6 @@
             }
         },
         "skills": {
-            "title": "专业技能",
             "addSkill": "添加技能项",
             "emptyMessage": "尚未添加任何技能。点击“添加技能项”开始填写。",
             "skillTitle": "技能分类 / 标题",
@@ -500,7 +496,6 @@
             }
         },
         "projects": {
-            "title": "项目经验",
             "addProject": "添加项目",
             "emptyMessage": "添加您参与过的重点项目以充分展示您的实战能力。",
             "projectTitle": "项目名称",
@@ -518,7 +513,6 @@
             }
         },
         "languages": {
-            "title": "语言能力",
             "addLanguage": "添加语言",
             "emptyMessage": "尚未添加语言技能。点击“添加语言”开始填写。",
             "languageName": "语言名称",
@@ -530,7 +524,6 @@
             }
         },
         "volunteering": {
-            "title": "志愿服务与社会活动",
             "addVolunteering": "添加志愿经历",
             "emptyMessage": "尚未添加志愿经历。点击“添加志愿经历”开始填写。",
             "organization": "志愿机构 / 组织",
@@ -541,7 +534,6 @@
             }
         },
         "certificates": {
-            "title": "资格证书与荣誉",
             "addCertificate": "添加证书",
             "emptyMessage": "尚未添加证书。点击“添加证书”开始填写。",
             "certificateTitle": "证书名称",
@@ -587,13 +579,6 @@
         "devto": "Dev.to",
         "personal": "个人主页",
         "other": "其他网站"
-    },
-    "template": {
-        "at": " · ",
-        "present": "至今",
-        "grade": "成绩:",
-        "separator": "，",
-        "from": " 来自 "
     },
     "auth": {
         "signIn": "登录",
@@ -856,7 +841,10 @@
             "syncingMultiple": "正在将 {count} {plural}同步至云端...",
             "syncingToCloud": "正在将简历同步至云端...",
             "syncMultipleFailed": "批量同步简历失败: {error}",
-            "updatedInCloud": "云端简历“{name}”已成功更新"
+            "updatedInCloud": "云端简历“{name}”已成功更新",
+            "copied": "已创建副本“{name}”",
+            "imported": "未导入任何简历 | 已导入 {count} 份简历 | 已导入 {count} 份简历",
+            "importFailed": "此文件不是有效的简历导出文件"
         }
     },
     "contact": {
@@ -898,14 +886,6 @@
             "title": "联系我们 - Resume For Free 官方技术支持与帮助",
             "description": "使用免费简历生成器遇到问题？联系我们的技术支持团队以获取帮助。"
         }
-    },
-    "proficiency": {
-        "native": "母语",
-        "fluent": "精通",
-        "proficient": "熟练",
-        "conversational": "良好 / 日常会话",
-        "basic": "基础",
-        "beginner": "入门"
     },
     "apiTokens": {
         "title": "API 访问令牌",

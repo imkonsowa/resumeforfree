@@ -1,0 +1,51 @@
+{
+    "template": {
+        "at": " - ",
+        "present": "Devam Ediyor",
+        "grade": "Not:",
+        "separator": ", ",
+        "from": " - "
+    },
+    "proficiency": {
+        "native": "Ana dil",
+        "fluent": "Akıcı",
+        "proficient": "İleri",
+        "conversational": "Konuşma düzeyi",
+        "basic": "Temel",
+        "beginner": "Başlangıç"
+    },
+    "common": {
+        "link": "Bağlantı"
+    },
+    "forms": {
+        "personalInfo": {
+            "title": "Kişisel Bilgiler",
+            "profile": "Profil",
+            "socialLinks": "Sosyal Bağlantılar"
+        },
+        "projects": {
+            "title": "Projeler"
+        },
+        "languages": {
+            "title": "Diller"
+        },
+        "experience": {
+            "title": "Deneyim"
+        },
+        "internships": {
+            "title": "Stajlar"
+        },
+        "education": {
+            "title": "Eğitim"
+        },
+        "skills": {
+            "title": "Beceriler"
+        },
+        "volunteering": {
+            "title": "Gönüllülük"
+        },
+        "certificates": {
+            "title": "Sertifikalar"
+        }
+    }
+}

@@ -88,7 +88,6 @@ useHead({
     title: `${t('auth.signIn')} - Resume For Free`,
     meta: [
         { name: 'description', content: t('auth.signInDescription') },
-        { name: 'robots', content: 'noindex, follow' },
     ],
 });
 </script>
