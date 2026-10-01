@@ -65,7 +65,7 @@ export const formatDateRangeText = ({ startDate, endDate, isPresent, t, locale }
     if (startDate) {
         dateText = formatDateToMonthYear(startDate, locale);
     }
-    if (endDate && !isPresent) {
+    if (endDate && !isPresent && endDate !== startDate) {
         dateText += dateText ? ` - ${formatDateToMonthYear(endDate, locale)}` : formatDateToMonthYear(endDate, locale);
     }
     if (isPresent) {

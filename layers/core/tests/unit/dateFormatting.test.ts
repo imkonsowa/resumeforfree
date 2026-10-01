@@ -20,4 +20,9 @@ describe('formatDateRangeText', () => {
     it('keeps year-only start with present', () => {
         expect(formatDateRangeText({ startDate: '2019', isPresent: true, locale: 'en' })).toBe('2019 - Present');
     });
+
+    it('shows a single date when start and end are the same', () => {
+        expect(formatDateRangeText({ startDate: '2012', endDate: '2012', locale: 'en' })).toBe('2012');
+        expect(formatDateRangeText({ startDate: '2013-06', endDate: '2013-06', locale: 'en' })).toBe('June 2013');
+    });
 });
