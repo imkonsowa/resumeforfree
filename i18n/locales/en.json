@@ -743,7 +743,7 @@
                 "freeResumes": "Up to 3 resumes free",
                 "signUp": "Sign Up",
                 "login": "Login",
-                "continueLocally": "Save to local browser",
+                "continueLocally": "Continue offline in the browser",
                 "dontShowAgain": "Don't show again"
             },
             "create": {

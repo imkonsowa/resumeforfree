@@ -73,8 +73,10 @@ const benefits = computed(() => [
 
             <UButton
                 color="neutral"
-                variant="ghost"
+                variant="outline"
                 block
+                trailing-icon="i-lucide-arrow-right"
+                :ui="{ trailingIcon: 'ms-0 rtl:rotate-180' }"
                 :label="t('resumes.modals.firstTime.continueLocally')"
                 @click="emit('continueLocally', dontShowAgain)"
             />

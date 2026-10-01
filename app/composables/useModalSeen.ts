@@ -47,10 +47,31 @@ export const useModalSeen = (modalName: string) => {
             console.warn(`Failed to save session modal state for "${modalName}":`, error);
         }
     };
+    const getSnoozeKey = (name: string) => `snoozeModalUntil_${name}`;
+    const snoozeModal = (durationMs: number): void => {
+        if (typeof window === 'undefined') return;
+        try {
+            localStorage.setItem(getSnoozeKey(modalName), String(Date.now() + durationMs));
+        }
+        catch (error) {
+            console.warn(`Failed to snooze modal "${modalName}":`, error);
+        }
+    };
+    const isSnoozed = (): boolean => {
+        if (typeof window === 'undefined') return false;
+        try {
+            return Number(localStorage.getItem(getSnoozeKey(modalName))) > Date.now();
+        }
+        catch {
+            return false;
+        }
+    };
     return {
         hasSeenModal,
         markModalSeen,
         resetModalState,
+        snoozeModal,
+        isSnoozed,
         hasSeenThisSession,
         markSeenThisSession,
     };
