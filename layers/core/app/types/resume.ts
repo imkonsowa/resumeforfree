@@ -279,6 +279,7 @@ export const availableFonts = {
         { name: 'Amiri', family: 'Amiri' },
         { name: 'IBM Plex Arabic', family: 'IBM Plex Sans Arabic' },
         { name: 'Tajawal', family: 'Tajawal' },
+        { name: 'Noto Sans Arabic', family: 'Noto Sans Arabic' },
     ],
     zh: [
         { name: 'Noto Sans SC', family: 'Noto Sans SC' },
@@ -307,7 +308,7 @@ export const resolveFontFamily = (font: string, language: string): string => {
 };
 
 const DEFAULT_FONT_BY_LANGUAGE: Record<string, string> = {
-    ar: 'IBM Plex Sans Arabic',
+    ar: 'Noto Sans Arabic',
 };
 
 export const getDefaultFontForLanguage = (language: string) => {

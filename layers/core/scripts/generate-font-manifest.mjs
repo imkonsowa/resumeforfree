@@ -22,6 +22,8 @@ const FONT_FILES = [
     'ar/plex-sans-arabic-bold.ttf',
     'ar/tajawal-regular.ttf',
     'ar/tajawal-bold.ttf',
+    'ar/noto-sans-arabic-regular.ttf',
+    'ar/noto-sans-arabic-bold.ttf',
     'zh/noto-sans-sc-regular.ttf',
     'zh/noto-sans-sc-bold.ttf',
     'hi/noto-sans-devanagari-regular.ttf',

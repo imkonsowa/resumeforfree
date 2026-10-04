@@ -6,6 +6,7 @@ Cairo              - Copyright The Cairo Project Authors (https://github.com/Gue
 Amiri              - Copyright 2010-2022 The Amiri Project Authors (https://github.com/aliftype/amiri)
 IBM Plex Sans Arabic - Copyright 2017 IBM Corp. (https://github.com/IBM/plex)
 Tajawal            - Copyright The Tajawal Project Authors
+Noto Sans Arabic   - Copyright 2022 The Noto Project Authors (https://github.com/notofonts/arabic)
 
 noto-naskh-*.ttf and cairo-*.ttf are static instances generated from the
 upstream variable fonts at wght=400 and wght=700.
