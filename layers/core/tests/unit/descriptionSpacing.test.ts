@@ -100,7 +100,7 @@ describe('Description spacing standardization', () => {
         for (const { name, template } of inlineTemplates) {
             it(`${name}: project title and date share the same line (grid) like experience`, () => {
                 const result = parseFor(template);
-                const gridPattern = /#grid\(columns: \(1fr, auto\), column-gutter: 0\.8em, \[#text\(size: 12pt, weight: "bold"\)\[[^\]]*Test Project[^\]]*\]\], \[#text\(size: 12pt, weight: "bold", fill: rgb\("#4B5563"\)\)\[/;
+                const gridPattern = /#grid\(columns: \(1fr, auto\), column-gutter: 0\.8em, \[#text\(size: 13pt, weight: "bold"\)\[[^\]]*Test Project[^\]]*\]\], \[#text\(size: 12pt, weight: "bold", fill: rgb\("#4B5563"\)\)\[/;
                 expect(result).toMatch(gridPattern);
             });
         }

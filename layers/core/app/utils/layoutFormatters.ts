@@ -12,6 +12,7 @@ import {
     renderTemplateSubHeaderContent,
     SECTION_SPACING,
     SECTION_HEADER_SIZE_OFFSET,
+    ITEM_TITLE_SIZE_OFFSET,
     DATE_COLOR,
 } from './typstUtils';
 
@@ -72,7 +73,7 @@ export const formatExperienceItems = (
         let content: string;
         if (inline && item.dateText) {
             const titleInner = item.titleContent ? item.titleContent : item.title;
-            const titleMarkup = `#text(size: ${fontSize}pt, weight: "bold")[${titleInner}]`;
+            const titleMarkup = `#text(size: ${fontSize + ITEM_TITLE_SIZE_OFFSET}pt, weight: "bold")[${titleInner}]`;
             content = renderInlineTitleAndDate(titleMarkup, item.dateText, fontSize);
             if (item.content) {
                 content += `\n\n#text(size: ${fontSize - 1}pt)[${item.content}]`;
@@ -105,7 +106,7 @@ export const formatEducationItems = (
     const formattedItems = sectionContent.map((item) => {
         let content: string;
         if (inline && item.dateText) {
-            const titleMarkup = `#text(size: ${fontSize}pt, weight: "bold")[${item.title}]`;
+            const titleMarkup = `#text(size: ${fontSize + ITEM_TITLE_SIZE_OFFSET}pt, weight: "bold")[${item.title}]`;
             content = renderInlineTitleAndDate(titleMarkup, item.dateText, fontSize);
         }
         else {
@@ -136,7 +137,7 @@ export const formatProjectsItems = (
         let content: string;
         if (inline && item.dateText) {
             const titleInner = item.titleContent ? item.titleContent : item.title;
-            const titleMarkup = `#text(size: ${fontSize}pt, weight: "bold")[${titleInner}]`;
+            const titleMarkup = `#text(size: ${fontSize + ITEM_TITLE_SIZE_OFFSET}pt, weight: "bold")[${titleInner}]`;
             content = renderInlineTitleAndDate(titleMarkup, item.dateText, fontSize);
         }
         else {
@@ -167,7 +168,7 @@ export const formatCertificatesItems = (
         let content: string;
         if (inline && item.dateText) {
             const titleInner = item.titleContent ? item.titleContent : item.title;
-            const titleMarkup = `#text(size: ${fontSize}pt, weight: "bold")[${titleInner}]`;
+            const titleMarkup = `#text(size: ${fontSize + ITEM_TITLE_SIZE_OFFSET}pt, weight: "bold")[${titleInner}]`;
             content = renderInlineTitleAndDate(titleMarkup, item.dateText, fontSize);
         }
         else {

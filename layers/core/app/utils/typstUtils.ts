@@ -3,8 +3,9 @@ import { escapeTypstString, escapeTypstText } from './stringUtils';
 
 export const HEADER_SPACING = '1em';
 export const SECTION_HEADER_SIZE_OFFSET = 3;
+export const ITEM_TITLE_SIZE_OFFSET = 1;
 export const DATE_COLOR = 'rgb("#4B5563")';
-export const SECTION_SPACING = '1.6em';
+export const SECTION_SPACING = '1.2em';
 export const ITEMS_SPACING = '0.8em';
 export const DESCRIPTION_BELOW = '0.8em';
 export const PHOTO_SIZE = '25mm';
@@ -107,10 +108,10 @@ export const renderTemplateHeader = (text: string, fontSize: number): string => 
     return convertHeader(text, `${fontSize + 2}pt`);
 };
 export const renderTemplateSubHeader = (text: string, fontSize: number): string => {
-    return `#block(below: 0.6em)[#text("${escapeTypstString(text)}", size: ${fontSize}pt, weight: "bold")]`;
+    return `#block(below: 0.6em)[#text("${escapeTypstString(text)}", size: ${fontSize + ITEM_TITLE_SIZE_OFFSET}pt, weight: "bold")]`;
 };
 export const renderTemplateSubHeaderContent = (content: string, fontSize: number): string => {
-    return `#block(below: 0.6em)[#text(size: ${fontSize}pt, weight: "bold")[${content}]]`;
+    return `#block(below: 0.6em)[#text(size: ${fontSize + ITEM_TITLE_SIZE_OFFSET}pt, weight: "bold")[${content}]]`;
 };
 export const renderTemplateDate = (dateText: string, fontSize: number): string => {
     return `#block(above: 0em, below: 0.6em)[#text(size: ${fontSize - 2}pt, fill: ${DATE_COLOR})[${dateText}]]`;

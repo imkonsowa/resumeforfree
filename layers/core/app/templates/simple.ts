@@ -129,7 +129,7 @@ function renderSimpleSection(section: SimpleSection, fontSize: number, isFirst: 
         cells.push(`[${row.content}]`);
     });
 
-    const topRule = isFirst ? '' : `#block(above: 0.8em, below: 0.8em)[#line(length: 100%, stroke: 0.4pt)]`;
+    const topRule = isFirst ? '' : `#block(above: 0.6em, below: 0.6em)[#line(length: 100%, stroke: 0.4pt)]`;
 
     return `${topRule}
 #grid(
