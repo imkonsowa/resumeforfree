@@ -592,6 +592,20 @@
                 "title": "删除证书",
                 "message": "确定要删除该证书记录吗？此操作无法撤回。"
             }
+        },
+        "publications": {
+            "addPublication": "添加论文",
+            "emptyMessage": "尚未添加论文。点击“添加论文”开始。",
+            "publicationTitle": "论文标题",
+            "authors": "作者",
+            "venue": "期刊或会议",
+            "date": "发表日期",
+            "url": "论文链接或 DOI",
+            "column": "栏",
+            "deleteConfirm": {
+                "title": "删除论文",
+                "message": "确定要删除这篇论文吗？此操作无法撤销。"
+            }
         }
     },
     "validation": {

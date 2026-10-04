@@ -592,6 +592,20 @@
                 "title": "Sertifikayı Sil",
                 "message": "Bu sertifikayı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
             }
+        },
+        "publications": {
+            "addPublication": "Yayın Ekle",
+            "emptyMessage": "Henüz yayın eklenmedi. Başlamak için 'Yayın Ekle'ye tıklayın.",
+            "publicationTitle": "Yayın Başlığı",
+            "authors": "Yazarlar",
+            "venue": "Dergi veya Konferans",
+            "date": "Yayın Tarihi",
+            "url": "Yayın URL'si veya DOI",
+            "column": "Sütun",
+            "deleteConfirm": {
+                "title": "Yayını Sil",
+                "message": "Bu yayını silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+            }
         }
     },
     "validation": {

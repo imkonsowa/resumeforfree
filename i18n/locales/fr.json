@@ -592,6 +592,20 @@
                 "title": "Supprimer le Certificat",
                 "message": "Êtes-vous sûr de vouloir supprimer ce certificat ? Cette action ne peut pas être annulée."
             }
+        },
+        "publications": {
+            "addPublication": "Ajouter une publication",
+            "emptyMessage": "Aucune publication ajoutée. Cliquez sur 'Ajouter une publication' pour commencer.",
+            "publicationTitle": "Titre de la publication",
+            "authors": "Auteurs",
+            "venue": "Revue ou conférence",
+            "date": "Date de publication",
+            "url": "URL ou DOI de la publication",
+            "column": "Colonne",
+            "deleteConfirm": {
+                "title": "Supprimer la publication",
+                "message": "Voulez-vous vraiment supprimer cette publication ? Cette action est irréversible."
+            }
         }
     },
     "validation": {

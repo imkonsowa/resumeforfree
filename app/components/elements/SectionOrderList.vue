@@ -17,6 +17,7 @@ const orderedSections = computed(() => {
         { id: 'languages', header: 'languages', count: data.languages.length, order: sectionOrder.languages ?? 7 },
         { id: 'volunteering', header: 'volunteering', count: data.volunteering.length, order: sectionOrder.volunteering },
         { id: 'certificates', header: 'certificates', count: data.certificates.length, order: sectionOrder.certificates },
+        { id: 'publications', header: 'publications', count: data.publications?.length ?? 0, order: sectionOrder.publications ?? 10 },
     ] as const;
     return [...sectionsData]
         .sort((a, b) => a.order - b.order)

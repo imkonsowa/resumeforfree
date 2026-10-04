@@ -592,6 +592,20 @@
                 "title": "Zertifikat löschen",
                 "message": "Möchten Sie dieses Zertifikat wirklich löschen? Dies kann nicht rückgängig gemacht werden."
             }
+        },
+        "publications": {
+            "addPublication": "Publikation hinzufügen",
+            "emptyMessage": "Noch keine Publikationen hinzugefügt. Klicken Sie auf 'Publikation hinzufügen', um zu beginnen.",
+            "publicationTitle": "Titel der Publikation",
+            "authors": "Autoren",
+            "venue": "Zeitschrift oder Konferenz",
+            "date": "Veröffentlichungsdatum",
+            "url": "URL oder DOI der Publikation",
+            "column": "Spalte",
+            "deleteConfirm": {
+                "title": "Publikation löschen",
+                "message": "Möchten Sie diese Publikation wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+            }
         }
     },
     "validation": {

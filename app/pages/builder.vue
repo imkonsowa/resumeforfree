@@ -14,6 +14,7 @@ import ProjectsForm from '~/components/forms/ProjectsForm.vue';
 import LanguagesForm from '~/components/forms/LanguagesForm.vue';
 import VolunteeringForm from '~/components/forms/VolunteeringForm.vue';
 import CertificatesForm from '~/components/forms/CertificatesForm.vue';
+import PublicationsForm from '~/components/forms/PublicationsForm.vue';
 import ResumePreview from '~/components/elements/ResumePreview.vue';
 import InvisibleTurnstile from '~/components/elements/InvisibleTurnstile.vue';
 import FirstTimeBuilderModal from '~/components/elements/FirstTimeBuilderModal.vue';
@@ -304,6 +305,7 @@ const sectionComponents = {
     languages: LanguagesForm,
     volunteering: VolunteeringForm,
     certificates: CertificatesForm,
+    publications: PublicationsForm,
 };
 const allSections = Object.keys(sectionComponents);
 const hasResumes = computed(() => resumeStore.resumeCount > 0);
@@ -321,6 +323,7 @@ const orderedSections = computed(() => {
         languages: sectionOrder.languages || 6,
         volunteering: sectionOrder.volunteering || 7,
         certificates: sectionOrder.certificates || 8,
+        publications: sectionOrder.publications || 9,
     };
     return [...allSections].sort((a, b) => {
         return (leftSectionOrder[a as keyof typeof leftSectionOrder] || 999) - (leftSectionOrder[b as keyof typeof leftSectionOrder] || 999);
