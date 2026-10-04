@@ -269,6 +269,7 @@ watch(
             <template #left>
                 <i18n-t
                     keypath="footer.copyright"
+                    scope="global"
                     tag="span"
                     class="text-sm text-muted"
                 >

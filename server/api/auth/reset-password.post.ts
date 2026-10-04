@@ -1,7 +1,7 @@
 import bcrypt from 'bcryptjs';
 import type { D1Database } from '@cloudflare/workers-types';
 import type { PasswordResetTokenModel } from '~~/server/database/schema';
-import { hashToken } from '../../utils/email';
+import { hashToken } from '../../utils/apiAuth';
 
 export default defineEventHandler(async (event) => {
     const db = event.context.cloudflare?.env?.DB as D1Database | undefined;

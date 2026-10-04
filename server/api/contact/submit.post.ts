@@ -60,7 +60,7 @@ export default defineEventHandler(async (event) => {
     }
 
     if (process.env.NODE_ENV === 'production') {
-        const isValidToken = await verifyTurnstileToken(turnstileToken, config.turnstile.secretKey);
+        const isValidToken = await isValidTurnstileToken(turnstileToken, config.turnstile.secretKey);
         if (!isValidToken) {
             throw createError({
                 statusCode: 400,
