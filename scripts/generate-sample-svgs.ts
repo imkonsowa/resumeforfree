@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync, unlinkSync, statSync, existsSync } from 'n
 import { resolve } from 'node:path';
 import { execSync } from 'node:child_process';
 import { compactTemplate } from '#layers/core/app/templates/compact';
+import { defaultResumeData, defaultResumeSettings, getDefaultFontForLanguage } from '#layers/core/app/types/resume';
 import type { ResumeData } from '#layers/core/app/types/resume';
 
 const ROOT = resolve(__dirname, '..');
@@ -12,19 +13,6 @@ const PUBLIC_DIR = resolve(ROOT, 'public');
 const FONTS_DIR = resolve(ROOT, 'layers/core/public/fonts');
 
 const LOCALES = ['en', 'ar', 'de', 'it', 'zh', 'ur', 'hi', 'fr', 'tr'] as const;
-
-// Fonts optimized for each language family with clean rendering
-const FONT_MAP: Record<string, string> = {
-    en: 'Calibri',
-    de: 'Calibri',
-    it: 'Calibri',
-    fr: 'Calibri',
-    tr: 'Calibri',
-    ar: 'Noto Naskh Arabic',
-    ur: 'Noto Naskh Arabic',
-    zh: 'Heiti SC',
-    hi: 'Kohinoor Devanagari',
-};
 
 type LocaleDict = Record<string, unknown>;
 
@@ -73,14 +61,12 @@ async function generateSampleSvgs() {
             continue;
         }
 
-        const resumeData = JSON.parse(readFileSync(resumePath, 'utf8')) as ResumeData;
+        const resumeData = { ...defaultResumeData, ...JSON.parse(readFileSync(resumePath, 'utf8')) as ResumeData };
         const t = getTranslator(loadLocale(locale));
-        const font = FONT_MAP[locale] || 'Calibri';
 
         const typstContent = compactTemplate.parse({
             data: resumeData,
-            settings: { fontSize: 11.5, photoShape: 'rectangle', showSectionHeaderLine: true },
-            font,
+            settings: { ...defaultResumeSettings, selectedFont: getDefaultFontForLanguage(locale) },
             locale,
             t,
         });
