@@ -1,5 +1,5 @@
 import type { ResumeData, SectionHeaders } from '#layers/core/app/types/resume';
-import type { SectionRenderer } from '#layers/core/app/types/template';
+import type { SectionHeading, SectionRenderer } from '#layers/core/app/types/template';
 import { ITEMS_SPACING, PHOTO_SIZE } from './typstUtils';
 import { escapeTypstText } from '#layers/core/app/utils/stringUtils';
 import { SECTION_TRANSLATION_MAP } from '#layers/core/app/utils/sectionHeaders';
@@ -27,16 +27,16 @@ import {
     wrapInSection,
 } from './layoutFormatters';
 
-function getLocalizedSectionHeader(
-    section: keyof SectionHeaders,
+function sectionHeading(
+    key: keyof SectionHeaders,
     data: ResumeData,
     context: RendererContext,
-): string {
-    const override = data.sectionHeaders?.[section];
-    if (override) return override;
+): SectionHeading {
+    const override = data.sectionHeaders?.[key];
+    if (override) return { key, title: override };
 
-    const translationKey = SECTION_TRANSLATION_MAP[section];
-    return translationKey ? context.t(translationKey) : '';
+    const translationKey = SECTION_TRANSLATION_MAP[key];
+    return { key, title: translationKey ? context.t(translationKey) : '' };
 }
 
 export const renderSharedExperience: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
@@ -48,9 +48,9 @@ export const renderSharedExperience: SectionRenderer = (data: ResumeData, contex
     if (sectionContent.length === 0) return '';
 
     const formattedContent = formatExperienceItems(sectionContent, context);
-    const headerText = getLocalizedSectionHeader('experience', data, context);
+    const heading = sectionHeading('experience', data, context);
 
-    return wrapInSection(headerText, formattedContent, context);
+    return wrapInSection(heading, formattedContent, context);
 };
 
 export const renderSharedInternships: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
@@ -62,9 +62,9 @@ export const renderSharedInternships: SectionRenderer = (data: ResumeData, conte
     if (sectionContent.length === 0) return '';
 
     const formattedContent = formatExperienceItems(sectionContent, context);
-    const headerText = getLocalizedSectionHeader('internships', data, context);
+    const heading = sectionHeading('internships', data, context);
 
-    return wrapInSection(headerText, formattedContent, context);
+    return wrapInSection(heading, formattedContent, context);
 };
 
 export const renderSharedEducation: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
@@ -76,9 +76,9 @@ export const renderSharedEducation: SectionRenderer = (data: ResumeData, context
     if (sectionContent.length === 0) return '';
 
     const formattedContent = formatEducationItems(sectionContent, context);
-    const headerText = getLocalizedSectionHeader('education', data, context);
+    const heading = sectionHeading('education', data, context);
 
-    return wrapInSection(headerText, formattedContent, context);
+    return wrapInSection(heading, formattedContent, context);
 };
 
 export const renderSharedVolunteering: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
@@ -90,9 +90,9 @@ export const renderSharedVolunteering: SectionRenderer = (data: ResumeData, cont
     if (sectionContent.length === 0) return '';
 
     const formattedContent = formatExperienceItems(sectionContent, context);
-    const headerText = getLocalizedSectionHeader('volunteering', data, context);
+    const heading = sectionHeading('volunteering', data, context);
 
-    return wrapInSection(headerText, formattedContent, context);
+    return wrapInSection(heading, formattedContent, context);
 };
 
 export const renderSharedProjects: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
@@ -104,9 +104,9 @@ export const renderSharedProjects: SectionRenderer = (data: ResumeData, context:
     if (sectionContent.length === 0) return '';
 
     const formattedContent = formatProjectsItems(sectionContent, context);
-    const headerText = getLocalizedSectionHeader('projects', data, context);
+    const heading = sectionHeading('projects', data, context);
 
-    return wrapInSection(headerText, formattedContent, context);
+    return wrapInSection(heading, formattedContent, context);
 };
 
 export const renderSharedSkillsBody = (data: ResumeData): string => {
@@ -126,8 +126,8 @@ export const renderSharedSkillsBody = (data: ResumeData): string => {
 export const renderSharedSkills: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     const body = renderSharedSkillsBody(data);
     if (!body) return '';
-    const headerText = getLocalizedSectionHeader('skills', data, context);
-    return wrapInSection(headerText, body, context);
+    const heading = sectionHeading('skills', data, context);
+    return wrapInSection(heading, body, context);
 };
 
 export const renderSharedLanguagesBody = (data: ResumeData, context: RendererContext): string => {
@@ -144,8 +144,8 @@ export const renderSharedLanguagesBody = (data: ResumeData, context: RendererCon
 export const renderSharedLanguages: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     const body = renderSharedLanguagesBody(data, context);
     if (!body) return '';
-    const headerText = getLocalizedSectionHeader('languages', data, context);
-    return wrapInSection(headerText, body, context);
+    const heading = sectionHeading('languages', data, context);
+    return wrapInSection(heading, body, context);
 };
 
 export const renderSharedContactInfo: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
@@ -153,9 +153,9 @@ export const renderSharedContactInfo: SectionRenderer = (data: ResumeData, conte
     if (sectionContent.length === 0) return '';
 
     const formattedContent = formatSimpleItems(sectionContent, context.config);
-    const headerText = getLocalizedSectionHeader('info', data, context);
+    const heading = sectionHeading('info', data, context);
 
-    return wrapInSection(headerText, formattedContent, context);
+    return wrapInSection(heading, formattedContent, context);
 };
 
 export const renderSharedSocialLinks: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
@@ -163,13 +163,13 @@ export const renderSharedSocialLinks: SectionRenderer = (data: ResumeData, conte
     if (sectionContent.length === 0) return '';
 
     const formattedContent = formatSocialLinks(sectionContent, context.config.socialLinks);
-    const headerText = getLocalizedSectionHeader('socialLinks', data, context);
+    const heading = sectionHeading('socialLinks', data, context);
 
     if (context.config.socialLinks.placement === 'header' && context.config.socialLinks.orientation === 'horizontal') {
         return formattedContent;
     }
 
-    return wrapInSection(headerText, formattedContent, context);
+    return wrapInSection(heading, formattedContent, context);
 };
 
 export const renderSharedProfileBody = (data: ResumeData): string => {
@@ -180,8 +180,8 @@ export const renderSharedProfileBody = (data: ResumeData): string => {
 export const renderSharedProfile: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
     const body = renderSharedProfileBody(data);
     if (!body) return '';
-    const headerText = getLocalizedSectionHeader('profile', data, context);
-    return wrapInSection(headerText, body, context);
+    const heading = sectionHeading('profile', data, context);
+    return wrapInSection(heading, body, context);
 };
 
 export const renderSharedCertificates: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
@@ -193,9 +193,9 @@ export const renderSharedCertificates: SectionRenderer = (data: ResumeData, cont
     if (sectionContent.length === 0) return '';
 
     const formattedContent = formatCertificatesItems(sectionContent, context);
-    const headerText = getLocalizedSectionHeader('certificates', data, context);
+    const heading = sectionHeading('certificates', data, context);
 
-    return wrapInSection(headerText, formattedContent, context);
+    return wrapInSection(heading, formattedContent, context);
 };
 
 export const renderProfilePhoto = (data: ResumeData, context: RendererContext): string => {

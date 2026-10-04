@@ -1,7 +1,7 @@
 import type { ResumeData, SectionHeaders, SectionOrder } from '#layers/core/app/types/resume';
-import type { SectionContent, Template, TemplateParseInput, TemplateRenderConfig } from '#layers/core/app/types/template';
+import type { SectionContent, SectionHeading, Template, TemplateParseInput, TemplateRenderConfig } from '#layers/core/app/types/template';
 import { escapeTypstText } from '#layers/core/app/utils/stringUtils';
-import { convertEmail, convertLink, convertList, LATIN_FONT_STACK, renderDescription, renderTemplateSubHeader, renderTemplateSubHeaderContent } from '#layers/core/app/utils/typstUtils';
+import { convertEmail, convertLink, convertList, LATIN_FONT_STACK, renderDescription, renderTemplateSubHeader, renderTemplateSubHeaderContent, PHOTO_GUTTER, typstColor } from '#layers/core/app/utils/typstUtils';
 import { RendererContext } from '#layers/core/app/utils/rendererContext';
 import { isRtlLocale } from '#layers/core/app/utils/localeDirection';
 import { SECTION_TRANSLATION_MAP } from '#layers/core/app/utils/sectionHeaders';
@@ -20,7 +20,6 @@ const SIMPLE_LAYOUT_CONFIG: TemplateRenderConfig = {
     sections: { spacing: 'joined', itemSpacing: '', joinSeparator: '\n\n' },
     socialLinks: { orientation: 'horizontal', placement: 'header', separator: ', ' },
     header: { style: 'simple', includeContact: true },
-    projects: { itemSpacing: '' },
     photo: {
         supported: true,
     },
@@ -32,15 +31,15 @@ interface SimpleRow {
 }
 
 interface SimpleSection {
-    label: string;
+    heading: SectionHeading;
     rows: SimpleRow[];
 }
 
-function getSectionLabel(section: keyof SectionHeaders, data: ResumeData, context: RendererContext): string {
+function getSectionLabel(section: keyof SectionHeaders, data: ResumeData, context: RendererContext): SectionHeading {
     const override = data.sectionHeaders?.[section];
-    if (override) return override.toUpperCase();
+    if (override) return { key: section, title: override.toUpperCase() };
     const key = SECTION_TRANSLATION_MAP[section];
-    return (key ? context.t(key) : '').toUpperCase();
+    return { key: section, title: (key ? context.t(key) : '').toUpperCase() };
 }
 
 function titleMarkup(item: SectionContent, context: RendererContext): string {
@@ -69,16 +68,16 @@ function itemsToRows(items: SectionContent[], context: RendererContext): SimpleR
         .filter(r => r.content.trim());
 }
 
-function buildSection(label: string, rows: SimpleRow[]): SimpleSection | null {
+function buildSection(heading: SectionHeading, rows: SimpleRow[]): SimpleSection | null {
     if (!rows.length) return null;
-    return { label, rows };
+    return { heading, rows };
 }
 
 function renderProfile(data: ResumeData, context: RendererContext): SimpleSection | null {
     const body = renderSharedProfileBody(data);
     if (!body) return null;
     return buildSection(
-        context.t('forms.personalInfo.profile') || 'PROFILE',
+        { key: 'profile', title: context.t('forms.personalInfo.profile') || 'PROFILE' },
         [{ content: body }],
     );
 }
@@ -106,7 +105,7 @@ function renderLinks(data: ResumeData, context: RendererContext): SimpleSection 
     });
 
     return buildSection(
-        context.t('forms.personalInfo.socialLinks') || 'LINKS',
+        { key: 'socialLinks', title: context.t('forms.personalInfo.socialLinks') || 'LINKS' },
         [{ content: parts.join(', ') }],
     );
 }
@@ -118,7 +117,9 @@ function renderSimpleSection(section: SimpleSection, context: RendererContext, i
     const { fontSize, locale, settings } = context;
 
     const tracking = LETTER_SPACED_LOCALES.has(locale) ? ', tracking: 0.08em' : '';
-    const label = `#text(size: ${fontSize + settings.headingSizeOffset}pt, weight: "bold"${tracking})[${escapeTypstText(section.label)}]`;
+    const headerColor = context.sectionStyle.headerColor;
+    const fill = headerColor ? `, fill: ${typstColor(headerColor)}` : '';
+    const label = `#text(size: ${fontSize + settings.headingSizeOffset}pt, weight: "bold"${tracking}${fill})[${context.sectionIcon(section.heading.key)}${escapeTypstText(section.heading.title)}]`;
 
     const cells: string[] = [];
     section.rows.forEach((row, idx) => {
@@ -138,7 +139,7 @@ function renderSimpleSection(section: SimpleSection, context: RendererContext, i
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: ${context.settings.itemSpacing}em,
     align: (left + top, left + top),
     ${cells.join(',\n    ')}
 )`;
@@ -169,7 +170,7 @@ function renderHeader(data: ResumeData, context: RendererContext, fontSize: numb
     const headerBody = photo
         ? `#grid(
     columns: (1fr, auto),
-    column-gutter: 16pt,
+    column-gutter: ${PHOTO_GUTTER},
     align: (start + top, end + top),
     [${textColumn}],
     [${photo}],
@@ -252,6 +253,7 @@ const parse = ({ data, settings, locale, t }: TemplateParseInput): string => {
 
     return `#set page(margin: 1.5cm)
 ${fontConfig}
+#show link: set text(fill: ${context.linkColor})
 #set par(leading: ${leading}, justify: false)
 ${renderHeader(data, context, fontSize)}
 #v(${context.settings.sectionSpacing}em)

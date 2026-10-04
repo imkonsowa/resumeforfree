@@ -1,6 +1,7 @@
 // ===== default | en | defaults | minimal =====
 #set page(margin: 1.2cm)
 #set text(font: ("Calibri"), size: 12pt)
+#show link: set text(fill: blue)
 
 #grid(
   columns: (7fr, 3fr),
@@ -12,7 +13,7 @@
   [#block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Personal Information]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[New York, USA]
+#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[New York, USA]
 ]]
 )
 #pagebreak(weak: true)
@@ -20,6 +21,7 @@
 // ===== default | en | defaults | specialChars =====
 #set page(margin: 1.2cm)
 #set text(font: ("Calibri"), size: 12pt)
+#show link: set text(fill: blue)
 
 #grid(
   columns: (7fr, 3fr),
@@ -34,7 +36,7 @@ Expert in C\#, F\#, and .NET development. Worked with \$100M+ projects.
 #block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Experience]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Senior C\# Developer at #link("https://techcorp.com")[#underline[#text(fill: blue, "Tech Corp")]], San Francisco]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Senior C\# Developer at #link("https://techcorp.com")[#underline[#text("Tech Corp")]], San Francisco]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 10pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "January 2020 - Present")]]
 
@@ -54,16 +56,16 @@ Expert in C\#, F\#, and .NET development. Worked with \$100M+ projects.
 #block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Projects]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 1em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Operators Logic App - C\#, Windows App]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Operators Logic App - C\#, Windows App]]
 
-#block(above: 0em, below: 0.8em)[#text(size: 12pt)[Developed automated logical operations for Issue \#123]]]#block(above: 0em, below: 1em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[E-Commerce Platform (Revenue: \$500K+) • #link("https://example.com")[#text(fill: blue, "Live Demo")]]]
+#block(above: 0em, below: 0.8em)[#text(size: 12pt)[Developed automated logical operations for Issue \#123]]]#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[E-Commerce Platform (Revenue: \$500K+) • #link("https://example.com")[#text("Live Demo")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 12pt)[Built with C\# & React. Handles \~10,000 transactions/day.]]]
 ]],
   [#block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Personal Information]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[New York, USA]
+#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[New York, USA]
 ]]
 )
 #pagebreak(weak: true)
@@ -71,6 +73,7 @@ Expert in C\#, F\#, and .NET development. Worked with \$100M+ projects.
 // ===== default | en | defaults | typstMarkup =====
 #set page(margin: 1.2cm)
 #set text(font: ("Calibri"), size: 12pt)
+#show link: set text(fill: blue)
 
 #grid(
   columns: (7fr, 3fr),
@@ -91,14 +94,14 @@ I work with \*bold\* text and \_italic\_ formatting. Also \{curly\} and \<angle\
 #block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Projects]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 1em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Project with \"quotes\" inside]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Project with \"quotes\" inside]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 12pt)[Description with backslash \\ and more \"quotes\"]]]
 ]],
   [#block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Personal Information]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[New York, USA]
+#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[New York, USA]
 ]]
 )
 #pagebreak(weak: true)
@@ -106,6 +109,7 @@ I work with \*bold\* text and \_italic\_ formatting. Also \{curly\} and \<angle\
 // ===== default | en | defaults | unicode =====
 #set page(margin: 1.2cm)
 #set text(font: ("Calibri"), size: 12pt)
+#show link: set text(fill: blue)
 
 #grid(
   columns: (7fr, 3fr),
@@ -125,7 +129,7 @@ Desarrollador con experiencia en tecnologias web.
   [#block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Personal Information]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[Madrid, Espana]
+#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[Madrid, Espana]
 ]]
 )
 #pagebreak(weak: true)
@@ -133,6 +137,7 @@ Desarrollador con experiencia en tecnologias web.
 // ===== default | en | defaults | arabic =====
 #set page(margin: 1.2cm)
 #set text(font: ("Calibri"), size: 12pt)
+#show link: set text(fill: blue)
 
 #grid(
   columns: (7fr, 3fr),
@@ -152,7 +157,7 @@ Full-Stack Developer with experience in web technologies
   [#block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Personal Information]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[Cairo, Egypt]
+#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[Cairo, Egypt]
 ]]
 )
 #pagebreak(weak: true)
@@ -160,6 +165,7 @@ Full-Stack Developer with experience in web technologies
 // ===== default | en | defaults | full =====
 #set page(margin: 1.2cm)
 #set text(font: ("Calibri"), size: 12pt)
+#show link: set text(fill: blue)
 
 #grid(
   columns: (7fr, 3fr),
@@ -174,7 +180,7 @@ Experienced Full Stack Developer with 8+ years in web development. Specialized i
 #block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Experience]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Senior Developer at #link("https://techstart.com")[#underline[#text(fill: blue, "TechStart Inc.")]], Austin, TX]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Senior Developer at #link("https://techstart.com")[#underline[#text("TechStart Inc.")]], Austin, TX]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 10pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "March 2020 - Present")]]
 
@@ -199,9 +205,7 @@ Experienced Full Stack Developer with 8+ years in web development. Specialized i
 
 #block(above: 0em, below: 0.6em)[#text(size: 10pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "August 2013 - May 2017")]]
 
-#block(above: 0em, below: 0.8em)[#text(size: 12pt)[*Grade:* 3.8 GPA
-
-Focused on software engineering and distributed systems]]]
+#block(above: 0em, below: 0.8em)[#text(size: 12pt)[#block(above: 0em, below: 0.6em)[*Grade:* 3.8 GPA]Focused on software engineering and distributed systems]]]
 ]
 
 #block(above: 0em, below: 1.2em)[
@@ -225,7 +229,7 @@ Focused on software engineering and distributed systems]]]
 #block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Projects]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 1em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Open Source CLI Tool • #link("https://github.com/sarahjohnson/cli-tool")[#text(fill: blue, "GitHub")]]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Open Source CLI Tool • #link("https://github.com/sarahjohnson/cli-tool")[#text("GitHub")]]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 10pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "January 2023 - Present")]]
 
@@ -234,7 +238,7 @@ Focused on software engineering and distributed systems]]]
 #set list(indent: 1em)
 
 - Reached 500+ stars on GitHub
-- Used by 2,000+ developers monthly]#block(above: 0em, below: 1em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Personal Blog • #link("https://sarahjohnson.dev")[#text(fill: blue, "Live Demo")]]]
+- Used by 2,000+ developers monthly]#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Personal Blog • #link("https://sarahjohnson.dev")[#text("Live Demo")]]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 10pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "June 2021 - December 2023")]]
 
@@ -255,13 +259,13 @@ Focused on software engineering and distributed systems]]]
   [#block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Personal Information]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 0.8em)[#link("mailto:sarah.johnson@email.com")[#text(fill: blue, dir: ltr, "sarah.johnson@email.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 987 6543]]#block(above: 0em, below: 0.8em)[Austin, TX]
+#block(above: 0em, below: 0.8em)[#link("mailto:sarah.johnson@email.com")[#text(dir: ltr, "sarah.johnson@email.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 987 6543]]#block(above: 0em, below: 0.8em)[Austin, TX]
 ]
 
 #block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Social Links]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 0.8em)[#link("https://linkedin.com/in/sarahjohnson")[#text(fill: blue, "LinkedIn")]]#block(above: 0em, below: 0.8em)[#link("https://github.com/sarahjohnson")[#text(fill: blue, "GitHub")]]
+#block(above: 0em, below: 0.8em)[#link("https://linkedin.com/in/sarahjohnson")[#text("LinkedIn")]]#block(above: 0em, below: 0.8em)[#link("https://github.com/sarahjohnson")[#text("GitHub")]]
 ]
 
 #block(above: 0em, below: 1.2em)[
@@ -273,7 +277,7 @@ Focused on software engineering and distributed systems]]]
 #block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Certificates]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[AWS Solutions Architect from Amazon Web Services · #link("https://aws.amazon.com/certification")[#text(fill: blue, "Link")]]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[AWS Solutions Architect from Amazon Web Services · #link("https://aws.amazon.com/certification")[#text("Link")]]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 10pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "June 2022")]]
 
@@ -285,6 +289,7 @@ Focused on software engineering and distributed systems]]]
 // ===== default | en | defaults | edgeCase =====
 #set page(margin: 1.2cm)
 #set text(font: ("Calibri"), size: 12pt)
+#show link: set text(fill: blue)
 
 #grid(
   columns: (7fr, 3fr),
@@ -304,6 +309,7 @@ Focused on software engineering and distributed systems]]]
 // ===== default | en | defaults | descriptions =====
 #set page(margin: 1.2cm)
 #set text(font: ("Calibri"), size: 12pt)
+#show link: set text(fill: blue)
 
 #grid(
   columns: (7fr, 3fr),
@@ -374,7 +380,7 @@ Summary text
 #block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Projects]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 1em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Test Project]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Test Project]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 10pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "March 2021 - September 2022")]]
 
@@ -387,7 +393,7 @@ Summary text
   [#block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Personal Information]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[New York, USA]
+#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[New York, USA]
 ]
 
 #block(above: 0em, below: 1.2em)[
@@ -405,6 +411,7 @@ Summary text
 // ===== default | en | defaults | withPhoto =====
 #set page(margin: 1.2cm)
 #set text(font: ("Calibri"), size: 12pt)
+#show link: set text(fill: blue)
 
 #grid(
   columns: (7fr, 3fr),
@@ -419,7 +426,7 @@ Experienced Full Stack Developer with 8+ years in web development. Specialized i
 #block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Experience]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Senior Developer at #link("https://techstart.com")[#underline[#text(fill: blue, "TechStart Inc.")]], Austin, TX]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Senior Developer at #link("https://techstart.com")[#underline[#text("TechStart Inc.")]], Austin, TX]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 10pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "March 2020 - Present")]]
 
@@ -444,9 +451,7 @@ Experienced Full Stack Developer with 8+ years in web development. Specialized i
 
 #block(above: 0em, below: 0.6em)[#text(size: 10pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "August 2013 - May 2017")]]
 
-#block(above: 0em, below: 0.8em)[#text(size: 12pt)[*Grade:* 3.8 GPA
-
-Focused on software engineering and distributed systems]]]
+#block(above: 0em, below: 0.8em)[#text(size: 12pt)[#block(above: 0em, below: 0.6em)[*Grade:* 3.8 GPA]Focused on software engineering and distributed systems]]]
 ]
 
 #block(above: 0em, below: 1.2em)[
@@ -470,7 +475,7 @@ Focused on software engineering and distributed systems]]]
 #block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Projects]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 1em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Open Source CLI Tool • #link("https://github.com/sarahjohnson/cli-tool")[#text(fill: blue, "GitHub")]]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Open Source CLI Tool • #link("https://github.com/sarahjohnson/cli-tool")[#text("GitHub")]]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 10pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "January 2023 - Present")]]
 
@@ -479,7 +484,7 @@ Focused on software engineering and distributed systems]]]
 #set list(indent: 1em)
 
 - Reached 500+ stars on GitHub
-- Used by 2,000+ developers monthly]#block(above: 0em, below: 1em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Personal Blog • #link("https://sarahjohnson.dev")[#text(fill: blue, "Live Demo")]]]
+- Used by 2,000+ developers monthly]#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Personal Blog • #link("https://sarahjohnson.dev")[#text("Live Demo")]]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 10pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "June 2021 - December 2023")]]
 
@@ -502,13 +507,13 @@ Focused on software engineering and distributed systems]]]
 #block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Personal Information]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 0.8em)[#link("mailto:sarah.johnson@email.com")[#text(fill: blue, dir: ltr, "sarah.johnson@email.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 987 6543]]#block(above: 0em, below: 0.8em)[Austin, TX]
+#block(above: 0em, below: 0.8em)[#link("mailto:sarah.johnson@email.com")[#text(dir: ltr, "sarah.johnson@email.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 987 6543]]#block(above: 0em, below: 0.8em)[Austin, TX]
 ]
 
 #block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Social Links]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 0.8em)[#link("https://linkedin.com/in/sarahjohnson")[#text(fill: blue, "LinkedIn")]]#block(above: 0em, below: 0.8em)[#link("https://github.com/sarahjohnson")[#text(fill: blue, "GitHub")]]
+#block(above: 0em, below: 0.8em)[#link("https://linkedin.com/in/sarahjohnson")[#text("LinkedIn")]]#block(above: 0em, below: 0.8em)[#link("https://github.com/sarahjohnson")[#text("GitHub")]]
 ]
 
 #block(above: 0em, below: 1.2em)[
@@ -520,7 +525,7 @@ Focused on software engineering and distributed systems]]]
 #block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Certificates]
 #block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
-#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[AWS Solutions Architect from Amazon Web Services · #link("https://aws.amazon.com/certification")[#text(fill: blue, "Link")]]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[AWS Solutions Architect from Amazon Web Services · #link("https://aws.amazon.com/certification")[#text("Link")]]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 10pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "June 2022")]]
 
@@ -532,6 +537,7 @@ Focused on software engineering and distributed systems]]]
 // ===== default | en | alternate | minimal =====
 #set page(margin: 1.2cm)
 #set text(font: ("Calibri"), size: 10pt)
+#show link: set text(fill: blue)
 
 #grid(
   columns: (7fr, 3fr),
@@ -542,7 +548,7 @@ Focused on software engineering and distributed systems]]]
 ],
   [#block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Personal Information]]
-#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[New York, USA]
+#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[New York, USA]
 ]]
 )
 #pagebreak(weak: true)
@@ -550,6 +556,7 @@ Focused on software engineering and distributed systems]]]
 // ===== default | en | alternate | specialChars =====
 #set page(margin: 1.2cm)
 #set text(font: ("Calibri"), size: 10pt)
+#show link: set text(fill: blue)
 
 #grid(
   columns: (7fr, 3fr),
@@ -562,7 +569,7 @@ Expert in C\#, F\#, and .NET development. Worked with \$100M+ projects.
 ]
 #block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Experience]]
-#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Senior C\# Developer at #link("https://techcorp.com")[#underline[#text(fill: blue, "Tech Corp")]], San Francisco]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Senior C\# Developer at #link("https://techcorp.com")[#underline[#text("Tech Corp")]], San Francisco]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 8pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "January 2020 - Present")]]
 
@@ -580,15 +587,15 @@ Expert in C\#, F\#, and .NET development. Worked with \$100M+ projects.
 
 #block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Projects]]
-#block(above: 0em, below: 1em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Operators Logic App - C\#, Windows App]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Operators Logic App - C\#, Windows App]]
 
-#block(above: 0em, below: 0.8em)[#text(size: 10pt)[Developed automated logical operations for Issue \#123]]]#block(above: 0em, below: 1em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[E-Commerce Platform (Revenue: \$500K+) • #link("https://example.com")[#text(fill: blue, "Live Demo")]]]
+#block(above: 0em, below: 0.8em)[#text(size: 10pt)[Developed automated logical operations for Issue \#123]]]#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[E-Commerce Platform (Revenue: \$500K+) • #link("https://example.com")[#text("Live Demo")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 10pt)[Built with C\# & React. Handles \~10,000 transactions/day.]]]
 ]],
   [#block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Personal Information]]
-#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[New York, USA]
+#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[New York, USA]
 ]]
 )
 #pagebreak(weak: true)
@@ -596,6 +603,7 @@ Expert in C\#, F\#, and .NET development. Worked with \$100M+ projects.
 // ===== default | en | alternate | typstMarkup =====
 #set page(margin: 1.2cm)
 #set text(font: ("Calibri"), size: 10pt)
+#show link: set text(fill: blue)
 
 #grid(
   columns: (7fr, 3fr),
@@ -613,13 +621,13 @@ I work with \*bold\* text and \_italic\_ formatting. Also \{curly\} and \<angle\
 
 #block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Projects]]
-#block(above: 0em, below: 1em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Project with \"quotes\" inside]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Project with \"quotes\" inside]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 10pt)[Description with backslash \\ and more \"quotes\"]]]
 ]],
   [#block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Personal Information]]
-#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[New York, USA]
+#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[New York, USA]
 ]]
 )
 #pagebreak(weak: true)
@@ -627,6 +635,7 @@ I work with \*bold\* text and \_italic\_ formatting. Also \{curly\} and \<angle\
 // ===== default | en | alternate | unicode =====
 #set page(margin: 1.2cm)
 #set text(font: ("Calibri"), size: 10pt)
+#show link: set text(fill: blue)
 
 #grid(
   columns: (7fr, 3fr),
@@ -643,7 +652,7 @@ Desarrollador con experiencia en tecnologias web.
 ]],
   [#block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Personal Information]]
-#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[Madrid, Espana]
+#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[Madrid, Espana]
 ]]
 )
 #pagebreak(weak: true)
@@ -651,6 +660,7 @@ Desarrollador con experiencia en tecnologias web.
 // ===== default | en | alternate | arabic =====
 #set page(margin: 1.2cm)
 #set text(font: ("Calibri"), size: 10pt)
+#show link: set text(fill: blue)
 
 #grid(
   columns: (7fr, 3fr),
@@ -667,7 +677,7 @@ Full-Stack Developer with experience in web technologies
 ]],
   [#block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Personal Information]]
-#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[Cairo, Egypt]
+#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[Cairo, Egypt]
 ]]
 )
 #pagebreak(weak: true)
@@ -675,6 +685,7 @@ Full-Stack Developer with experience in web technologies
 // ===== default | en | alternate | full =====
 #set page(margin: 1.2cm)
 #set text(font: ("Calibri"), size: 10pt)
+#show link: set text(fill: blue)
 
 #grid(
   columns: (7fr, 3fr),
@@ -687,7 +698,7 @@ Experienced Full Stack Developer with 8+ years in web development. Specialized i
 ]
 #block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Experience]]
-#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Senior Developer at #link("https://techstart.com")[#underline[#text(fill: blue, "TechStart Inc.")]], Austin, TX]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Senior Developer at #link("https://techstart.com")[#underline[#text("TechStart Inc.")]], Austin, TX]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 8pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "March 2020 - Present")]]
 
@@ -711,9 +722,7 @@ Experienced Full Stack Developer with 8+ years in web development. Specialized i
 
 #block(above: 0em, below: 0.6em)[#text(size: 8pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "August 2013 - May 2017")]]
 
-#block(above: 0em, below: 0.8em)[#text(size: 10pt)[*Grade:* 3.8 GPA
-
-Focused on software engineering and distributed systems]]]
+#block(above: 0em, below: 0.8em)[#text(size: 10pt)[#block(above: 0em, below: 0.6em)[*Grade:* 3.8 GPA]Focused on software engineering and distributed systems]]]
 ]
 
 #block(above: 0em, below: 1.2em)[
@@ -734,7 +743,7 @@ Focused on software engineering and distributed systems]]]
 
 #block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Projects]]
-#block(above: 0em, below: 1em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Open Source CLI Tool • #link("https://github.com/sarahjohnson/cli-tool")[#text(fill: blue, "GitHub")]]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Open Source CLI Tool • #link("https://github.com/sarahjohnson/cli-tool")[#text("GitHub")]]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 8pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "January 2023 - Present")]]
 
@@ -743,7 +752,7 @@ Focused on software engineering and distributed systems]]]
 #set list(indent: 1em)
 
 - Reached 500+ stars on GitHub
-- Used by 2,000+ developers monthly]#block(above: 0em, below: 1em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Personal Blog • #link("https://sarahjohnson.dev")[#text(fill: blue, "Live Demo")]]]
+- Used by 2,000+ developers monthly]#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Personal Blog • #link("https://sarahjohnson.dev")[#text("Live Demo")]]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 8pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "June 2021 - December 2023")]]
 
@@ -762,12 +771,12 @@ Focused on software engineering and distributed systems]]]
 ]],
   [#block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Personal Information]]
-#block(above: 0em, below: 0.8em)[#link("mailto:sarah.johnson@email.com")[#text(fill: blue, dir: ltr, "sarah.johnson@email.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 987 6543]]#block(above: 0em, below: 0.8em)[Austin, TX]
+#block(above: 0em, below: 0.8em)[#link("mailto:sarah.johnson@email.com")[#text(dir: ltr, "sarah.johnson@email.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 987 6543]]#block(above: 0em, below: 0.8em)[Austin, TX]
 ]
 
 #block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Social Links]]
-#block(above: 0em, below: 0.8em)[#link("https://linkedin.com/in/sarahjohnson")[#text(fill: blue, "LinkedIn")]]#block(above: 0em, below: 0.8em)[#link("https://github.com/sarahjohnson")[#text(fill: blue, "GitHub")]]
+#block(above: 0em, below: 0.8em)[#link("https://linkedin.com/in/sarahjohnson")[#text("LinkedIn")]]#block(above: 0em, below: 0.8em)[#link("https://github.com/sarahjohnson")[#text("GitHub")]]
 ]
 
 #block(above: 0em, below: 1.2em)[
@@ -777,7 +786,7 @@ Focused on software engineering and distributed systems]]]
 
 #block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Certificates]]
-#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[AWS Solutions Architect from Amazon Web Services · #link("https://aws.amazon.com/certification")[#text(fill: blue, "Link")]]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[AWS Solutions Architect from Amazon Web Services · #link("https://aws.amazon.com/certification")[#text("Link")]]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 8pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "June 2022")]]
 
@@ -789,6 +798,7 @@ Focused on software engineering and distributed systems]]]
 // ===== default | en | alternate | edgeCase =====
 #set page(margin: 1.2cm)
 #set text(font: ("Calibri"), size: 10pt)
+#show link: set text(fill: blue)
 
 #grid(
   columns: (7fr, 3fr),
@@ -807,6 +817,7 @@ Focused on software engineering and distributed systems]]]
 // ===== default | en | alternate | descriptions =====
 #set page(margin: 1.2cm)
 #set text(font: ("Calibri"), size: 10pt)
+#show link: set text(fill: blue)
 
 #grid(
   columns: (7fr, 3fr),
@@ -871,7 +882,7 @@ Summary text
 
 #block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Projects]]
-#block(above: 0em, below: 1em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Test Project]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Test Project]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 8pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "March 2021 - September 2022")]]
 
@@ -883,7 +894,7 @@ Summary text
 ]],
   [#block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Personal Information]]
-#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[New York, USA]
+#block(above: 0em, below: 0.8em)[#link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 123 4567]]#block(above: 0em, below: 0.8em)[New York, USA]
 ]
 
 #block(above: 0em, below: 1.2em)[
@@ -900,6 +911,7 @@ Summary text
 // ===== default | en | alternate | withPhoto =====
 #set page(margin: 1.2cm)
 #set text(font: ("Calibri"), size: 10pt)
+#show link: set text(fill: blue)
 
 #grid(
   columns: (7fr, 3fr),
@@ -912,7 +924,7 @@ Experienced Full Stack Developer with 8+ years in web development. Specialized i
 ]
 #block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Experience]]
-#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Senior Developer at #link("https://techstart.com")[#underline[#text(fill: blue, "TechStart Inc.")]], Austin, TX]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Senior Developer at #link("https://techstart.com")[#underline[#text("TechStart Inc.")]], Austin, TX]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 8pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "March 2020 - Present")]]
 
@@ -936,9 +948,7 @@ Experienced Full Stack Developer with 8+ years in web development. Specialized i
 
 #block(above: 0em, below: 0.6em)[#text(size: 8pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "August 2013 - May 2017")]]
 
-#block(above: 0em, below: 0.8em)[#text(size: 10pt)[*Grade:* 3.8 GPA
-
-Focused on software engineering and distributed systems]]]
+#block(above: 0em, below: 0.8em)[#text(size: 10pt)[#block(above: 0em, below: 0.6em)[*Grade:* 3.8 GPA]Focused on software engineering and distributed systems]]]
 ]
 
 #block(above: 0em, below: 1.2em)[
@@ -959,7 +969,7 @@ Focused on software engineering and distributed systems]]]
 
 #block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Projects]]
-#block(above: 0em, below: 1em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Open Source CLI Tool • #link("https://github.com/sarahjohnson/cli-tool")[#text(fill: blue, "GitHub")]]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Open Source CLI Tool • #link("https://github.com/sarahjohnson/cli-tool")[#text("GitHub")]]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 8pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "January 2023 - Present")]]
 
@@ -968,7 +978,7 @@ Focused on software engineering and distributed systems]]]
 #set list(indent: 1em)
 
 - Reached 500+ stars on GitHub
-- Used by 2,000+ developers monthly]#block(above: 0em, below: 1em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Personal Blog • #link("https://sarahjohnson.dev")[#text(fill: blue, "Live Demo")]]]
+- Used by 2,000+ developers monthly]#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Personal Blog • #link("https://sarahjohnson.dev")[#text("Live Demo")]]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 8pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "June 2021 - December 2023")]]
 
@@ -989,12 +999,12 @@ Focused on software engineering and distributed systems]]]
 
 #block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Personal Information]]
-#block(above: 0em, below: 0.8em)[#link("mailto:sarah.johnson@email.com")[#text(fill: blue, dir: ltr, "sarah.johnson@email.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 987 6543]]#block(above: 0em, below: 0.8em)[Austin, TX]
+#block(above: 0em, below: 0.8em)[#link("mailto:sarah.johnson@email.com")[#text(dir: ltr, "sarah.johnson@email.com")]]#block(above: 0em, below: 0.8em)[#text(dir: ltr)[+1 555 987 6543]]#block(above: 0em, below: 0.8em)[Austin, TX]
 ]
 
 #block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Social Links]]
-#block(above: 0em, below: 0.8em)[#link("https://linkedin.com/in/sarahjohnson")[#text(fill: blue, "LinkedIn")]]#block(above: 0em, below: 0.8em)[#link("https://github.com/sarahjohnson")[#text(fill: blue, "GitHub")]]
+#block(above: 0em, below: 0.8em)[#link("https://linkedin.com/in/sarahjohnson")[#text("LinkedIn")]]#block(above: 0em, below: 0.8em)[#link("https://github.com/sarahjohnson")[#text("GitHub")]]
 ]
 
 #block(above: 0em, below: 1.2em)[
@@ -1004,7 +1014,7 @@ Focused on software engineering and distributed systems]]]
 
 #block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Certificates]]
-#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[AWS Solutions Architect from Amazon Web Services · #link("https://aws.amazon.com/certification")[#text(fill: blue, "Link")]]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[AWS Solutions Architect from Amazon Web Services · #link("https://aws.amazon.com/certification")[#text("Link")]]]
 
 #block(above: 0em, below: 0.6em)[#text(size: 8pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "June 2022")]]
 

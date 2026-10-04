@@ -104,6 +104,7 @@ ${leftContent}`;
 
     return `#set page(margin: 1.2cm)
 ${fontConfig}
+#show link: set text(fill: ${context.linkColor})
 
 ${twoColumnLayout}
 #pagebreak(weak: true)`;

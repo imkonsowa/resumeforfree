@@ -1,4 +1,4 @@
-import type { SectionContent, TemplateRenderConfig } from '#layers/core/app/types/template';
+import type { SectionContent, SectionHeading, TemplateRenderConfig } from '#layers/core/app/types/template';
 import { escapeTypstText } from './stringUtils';
 import type { RendererContext } from './rendererContext';
 import {
@@ -11,10 +11,15 @@ import {
     renderTemplateSubHeader,
     renderTemplateSubHeaderContent,
     DATE_COLOR,
+    HEADER_RULE_ABOVE,
+    HEADER_RULE_BELOW,
+    INLINE_DATE_GUTTER,
+    ITEM_TITLE_BELOW,
+    typstColor,
 } from './typstUtils';
 
-const joinItems = (items: string[], config: TemplateRenderConfig, spacing?: string): string => {
-    const gap = spacing || config.sections.itemSpacing || ITEMS_SPACING;
+const joinItems = (items: string[], context: RendererContext): string => {
+    const gap = `${context.settings.itemSpacing}em`;
     return items
         .filter(content => content.trim())
         .map(content => `#block(above: 0em, below: ${gap})[${content}]`)
@@ -33,7 +38,7 @@ const renderInlineTitleAndDate = (
 ): string => {
     const title = `#text(size: ${context.fontSize + context.settings.titleSizeOffset}pt, weight: "bold")[${titleContent}]`;
     const styledDate = `#text(size: ${context.fontSize}pt, weight: "bold", fill: ${DATE_COLOR})[${dateText}]`;
-    return `#block(below: 0.6em)[#grid(columns: (1fr, auto), column-gutter: 0.8em, [${title}], [${styledDate}])]`;
+    return `#block(below: ${ITEM_TITLE_BELOW})[#grid(columns: (1fr, auto), column-gutter: ${INLINE_DATE_GUTTER}, [${title}], [${styledDate}])]`;
 };
 
 export const formatSectionItems = (
@@ -91,7 +96,7 @@ export const formatExperienceItems = (
         }
         return content;
     });
-    return joinItems(formattedItems, config);
+    return joinItems(formattedItems, context);
 };
 export const formatEducationItems = (
     sectionContent: SectionContent[],
@@ -120,7 +125,7 @@ export const formatEducationItems = (
         }
         return content;
     });
-    return joinItems(formattedItems, config);
+    return joinItems(formattedItems, context);
 };
 export const formatProjectsItems = (
     sectionContent: SectionContent[],
@@ -149,7 +154,7 @@ export const formatProjectsItems = (
         }
         return content;
     });
-    return joinItems(formattedItems, config, config.projects.itemSpacing);
+    return joinItems(formattedItems, context);
 };
 export const formatCertificatesItems = (
     sectionContent: SectionContent[],
@@ -174,7 +179,7 @@ export const formatCertificatesItems = (
         }
         return content;
     });
-    return joinItems(formattedItems, config);
+    return joinItems(formattedItems, context);
 };
 export const formatSimpleItems = (
     sectionContent: SectionContent[],
@@ -183,16 +188,17 @@ export const formatSimpleItems = (
     const contentItems = sectionContent.map(item => item.content || '').filter(Boolean);
     return formatSectionItems(contentItems, config.sections);
 };
-const buildSectionHeader = (headerText: string, context: RendererContext): string => {
+const buildSectionHeader = (heading: SectionHeading, context: RendererContext): string => {
     const style = context.sectionStyle;
-    const display = style.headerUpperCase ? headerText.toUpperCase() : headerText;
+    const display = style.headerUpperCase ? heading.title.toUpperCase() : heading.title;
     const size = `${context.fontSize + (style.headerSizeOffset ?? context.settings.headingSizeOffset)}pt`;
-    const fillProp = style.headerColor ? `, fill: ${style.headerColor}` : '';
-    const headerText$ = `#text(size: ${size}, weight: "bold"${fillProp})[${escapeTypstText(display)}]`;
+    const color = style.headerColor ? typstColor(style.headerColor) : '';
+    const fillProp = color ? `, fill: ${color}` : '';
+    const headerText$ = `#text(size: ${size}, weight: "bold"${fillProp})[${context.sectionIcon(heading.key)}${escapeTypstText(display)}]`;
 
     if (style.headerUnderline) {
-        const stroke = style.headerColor ? `0.5pt + ${style.headerColor}` : '0.5pt';
-        const line = `#block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: ${stroke})]`;
+        const stroke = color ? `0.5pt + ${color}` : '0.5pt';
+        const line = `#block(above: ${HEADER_RULE_ABOVE}, below: ${HEADER_RULE_BELOW})[#line(length: 100%, stroke: ${stroke})]`;
         return `${headerText$}\n${line}`;
     }
     const below = style.headerBelow ?? HEADER_SPACING;
@@ -200,7 +206,7 @@ const buildSectionHeader = (headerText: string, context: RendererContext): strin
 };
 
 export const wrapInSection = (
-    headerText: string,
+    heading: SectionHeading,
     content: string,
     context: RendererContext,
 ): string => {
@@ -209,7 +215,7 @@ export const wrapInSection = (
     const above = style.spacingAbove ?? '0em';
     const below = style.spacingBelow ?? `${context.settings.sectionSpacing}em`;
     return `#block(above: ${above}, below: ${below})[
-${buildSectionHeader(headerText, context)}
+${buildSectionHeader(heading, context)}
 ${content}
 ]`;
 };

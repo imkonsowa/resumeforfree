@@ -1,4 +1,4 @@
-import type { ResumeData, ResumeSettings } from './resume';
+import type { ResumeData, ResumeSettings, SectionHeaders } from './resume';
 import type { RendererContext } from '#layers/core/app/utils/rendererContext';
 
 export type TranslateFunction = (key: string) => string;
@@ -20,6 +20,11 @@ export interface TemplateColumnLayout {
 
 export interface TemplatePhotoConfig {
     supported: boolean;
+}
+
+export interface SectionHeading {
+    key: keyof SectionHeaders;
+    title: string;
 }
 
 export interface SectionStyle {
@@ -48,9 +53,6 @@ export interface TemplateRenderConfig {
     header: {
         style: 'simple' | 'grid';
         includeContact: boolean;
-    };
-    projects: {
-        itemSpacing: string;
     };
     photo?: TemplatePhotoConfig;
 }

@@ -1,10 +1,11 @@
 // ===== simple | it | defaults | minimal =====
 #set page(margin: 1.5cm)
 #set text(font: ("Calibri"), size: 12pt)
+#show link: set text(fill: blue)
 #set par(leading: 0.5em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 20pt, weight: "bold")[John Doe]]
 #block(above: 0em, below: 1em)[#text(size: 14pt)[Software Engineer]]
-#block(above: 0em, below: 1.4em)[#text(size: 12pt)[New York, USA · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]]
+#block(above: 0em, below: 1.4em)[#text(size: 12pt)[New York, USA · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]]
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
 #v(1.2em)
 
@@ -13,17 +14,18 @@
 // ===== simple | it | defaults | specialChars =====
 #set page(margin: 1.5cm)
 #set text(font: ("Calibri"), size: 12pt)
+#show link: set text(fill: blue)
 #set par(leading: 0.5em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 20pt, weight: "bold")[John\# Doe\$]]
 #block(above: 0em, below: 1em)[#text(size: 14pt)[C\# Developer]]
-#block(above: 0em, below: 1.4em)[#text(size: 12pt)[New York, USA · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]]
+#block(above: 0em, below: 1.4em)[#text(size: 12pt)[New York, USA · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]]
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
 #v(1.2em)
 
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[Profilo]],
     [Expert in C\#, F\#, and .NET development. Worked with \$100M+ projects.]
@@ -32,12 +34,12 @@
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[ESPERIENZA LAVORATIVA]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "gennaio 2020 - Presente")]],
-    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Senior C\# Developer presso #link("https://techcorp.com")[#underline[#text(fill: blue, "Tech Corp")]], San Francisco]]
+    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Senior C\# Developer presso #link("https://techcorp.com")[#underline[#text("Tech Corp")]], San Francisco]]
 
 #set list(indent: 1em)
 
@@ -49,7 +51,7 @@
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[COMPETENZE]],
     [#block(above: 0em, below: 0.8em)[*Languages:* C\#, F\#, TypeScript, JavaScript, C++]#block(above: 0em, below: 0.8em)[*Frameworks:* .NET, ASP.NET MVC, Entity Framework]#block(above: 0em, below: 0.8em)[*Tools:* Git, Docker, Azure DevOps]]
@@ -58,14 +60,14 @@
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[PROGETTI]],
     [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Operators Logic App - C\#, Windows App]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 12pt)[Developed automated logical operations for Issue \#123]]],
     [],
-    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[E-Commerce Platform (Revenue: \$500K+) • #link("https://example.com")[#text(fill: blue, "Live Demo")]]]
+    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[E-Commerce Platform (Revenue: \$500K+) • #link("https://example.com")[#text("Live Demo")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 12pt)[Built with C\# & React. Handles \~10,000 transactions/day.]]]
 )
@@ -74,17 +76,18 @@
 // ===== simple | it | defaults | typstMarkup =====
 #set page(margin: 1.5cm)
 #set text(font: ("Calibri"), size: 12pt)
+#show link: set text(fill: blue)
 #set par(leading: 0.5em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 20pt, weight: "bold")[Test\*User With\_Underscore]]
 #block(above: 0em, below: 1em)[#text(size: 14pt)[Developer \[Senior\]]]
-#block(above: 0em, below: 1.4em)[#text(size: 12pt)[New York, USA · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]]
+#block(above: 0em, below: 1.4em)[#text(size: 12pt)[New York, USA · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]]
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
 #v(1.2em)
 
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[Profilo]],
     [I work with \*bold\* text and \_italic\_ formatting. Also \{curly\} and \<angle\> brackets.]
@@ -93,7 +96,7 @@
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[COMPETENZE]],
     [#block(above: 0em, below: 0.8em)[*Special\~Chars:* Testing \^caret and \~tilde characters]#block(above: 0em, below: 0.8em)[*Brackets:* Using \[square\] and \{curly\} brackets]]
@@ -102,7 +105,7 @@
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[PROGETTI]],
     [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Project with \"quotes\" inside]]
@@ -114,17 +117,18 @@
 // ===== simple | it | defaults | unicode =====
 #set page(margin: 1.5cm)
 #set text(font: ("Calibri"), size: 12pt)
+#show link: set text(fill: blue)
 #set par(leading: 0.5em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 20pt, weight: "bold")[Jose Garcia]]
 #block(above: 0em, below: 1em)[#text(size: 14pt)[Desarrollador]]
-#block(above: 0em, below: 1.4em)[#text(size: 12pt)[Madrid, Espana · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]]
+#block(above: 0em, below: 1.4em)[#text(size: 12pt)[Madrid, Espana · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]]
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
 #v(1.2em)
 
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[Profilo]],
     [Desarrollador con experiencia en tecnologias web.]
@@ -133,7 +137,7 @@
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[COMPETENZE]],
     [#block(above: 0em, below: 0.8em)[*Idiomas:* Espanol (nativo), English, Francais]]
@@ -143,17 +147,18 @@
 // ===== simple | it | defaults | arabic =====
 #set page(margin: 1.5cm)
 #set text(font: ("Calibri"), size: 12pt)
+#show link: set text(fill: blue)
 #set par(leading: 0.5em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 20pt, weight: "bold")[Ahmed Hassan]]
 #block(above: 0em, below: 1em)[#text(size: 14pt)[Software Engineer]]
-#block(above: 0em, below: 1.4em)[#text(size: 12pt)[Cairo, Egypt · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]]
+#block(above: 0em, below: 1.4em)[#text(size: 12pt)[Cairo, Egypt · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]]
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
 #v(1.2em)
 
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[Profilo]],
     [Full-Stack Developer with experience in web technologies]
@@ -162,7 +167,7 @@
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[COMPETENZE]],
     [#block(above: 0em, below: 0.8em)[*Languages:* JavaScript, TypeScript, Python]]
@@ -172,26 +177,27 @@
 // ===== simple | it | defaults | full =====
 #set page(margin: 1.5cm)
 #set text(font: ("Calibri"), size: 12pt)
+#show link: set text(fill: blue)
 #set par(leading: 0.5em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 20pt, weight: "bold")[Sarah Johnson]]
 #block(above: 0em, below: 1em)[#text(size: 14pt)[Full Stack Developer]]
-#block(above: 0em, below: 1.4em)[#text(size: 12pt)[Austin, TX · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 987 6543] · #link("mailto:sarah.johnson@email.com")[#text(fill: blue, dir: ltr, "sarah.johnson@email.com")]]]
+#block(above: 0em, below: 1.4em)[#text(size: 12pt)[Austin, TX · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 987 6543] · #link("mailto:sarah.johnson@email.com")[#text(dir: ltr, "sarah.johnson@email.com")]]]
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
 #v(1.2em)
 
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[Social e collegamenti]],
-    [#link("https://linkedin.com/in/sarahjohnson")[#text(fill: blue, "LinkedIn")], #link("https://github.com/sarahjohnson")[#text(fill: blue, "GitHub")]]
+    [#link("https://linkedin.com/in/sarahjohnson")[#text("LinkedIn")], #link("https://github.com/sarahjohnson")[#text("GitHub")]]
 )
 #block(above: 0.6em, below: 0.6em)[#line(length: 100%, stroke: 0.4pt)]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[Profilo]],
     [Experienced Full Stack Developer with 8+ years in web development. Specialized in React, Node.js, and cloud technologies.]
@@ -200,12 +206,12 @@
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[ESPERIENZA LAVORATIVA]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "marzo 2020 - Presente")]],
-    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Senior Developer presso #link("https://techstart.com")[#underline[#text(fill: blue, "TechStart Inc.")]], Austin, TX]]
+    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Senior Developer presso #link("https://techstart.com")[#underline[#text("TechStart Inc.")]], Austin, TX]]
 
 #set list(indent: 1em)
 
@@ -224,22 +230,20 @@
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[ISTRUZIONE E FORMAZIONE]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "agosto 2013 - maggio 2017")]],
     [#block(below: 0.6em)[#text("Bachelor of Science presso University of Texas, Austin, TX", size: 13pt, weight: "bold")]
 
-#block(above: 0em, below: 0.8em)[#text(size: 12pt)[*Votazione:* 3.8 GPA
-
-Focused on software engineering and distributed systems]]]
+#block(above: 0em, below: 0.8em)[#text(size: 12pt)[#block(above: 0em, below: 0.6em)[*Votazione:* 3.8 GPA]Focused on software engineering and distributed systems]]]
 )
 #block(above: 0.6em, below: 0.6em)[#line(length: 100%, stroke: 0.4pt)]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[TIROCINI]
 
@@ -254,7 +258,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[COMPETENZE]],
     [#block(above: 0em, below: 0.8em)[*Frontend:* React, Vue.js, TypeScript, HTML, CSS]#block(above: 0em, below: 0.8em)[*Backend:* Node.js, Python, Go, PostgreSQL]#block(above: 0em, below: 0.8em)[*DevOps:* Docker, Kubernetes, AWS, CI/CD]]
@@ -263,12 +267,12 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[PROGETTI]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "gennaio 2023 - Presente")]],
-    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Open Source CLI Tool • #link("https://github.com/sarahjohnson/cli-tool")[#text(fill: blue, "GitHub")]]]
+    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Open Source CLI Tool • #link("https://github.com/sarahjohnson/cli-tool")[#text("GitHub")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 12pt)[A command-line tool for automating development workflows]]
 
@@ -277,7 +281,7 @@ Focused on software engineering and distributed systems]]]
 - Reached 500+ stars on GitHub
 - Used by 2,000+ developers monthly],
     [#text(size: 11pt)[#text(fill: rgb("#4B5563"), "giugno 2021 - dicembre 2023")]],
-    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Personal Blog • #link("https://sarahjohnson.dev")[#text(fill: blue, "Live Demo")]]]
+    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Personal Blog • #link("https://sarahjohnson.dev")[#text("Live Demo")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 12pt)[Technical blog about web development best practices]]]
 )
@@ -285,7 +289,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[VOLONTARIATO]
 
@@ -300,7 +304,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[LINGUE]],
     [#block(above: 0em, below: 0.8em)[*English* - Madrelingua]#block(above: 0em, below: 0.8em)[*Spanish* - Intermediate]]
@@ -309,12 +313,12 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[CERTIFICAZIONI]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "giugno 2022")]],
-    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[AWS Solutions Architect da Amazon Web Services · #link("https://aws.amazon.com/certification")[#text(fill: blue, "Link")]]]
+    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[AWS Solutions Architect da Amazon Web Services · #link("https://aws.amazon.com/certification")[#text("Link")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 12pt)[Professional level certification]]]
 )
@@ -323,6 +327,7 @@ Focused on software engineering and distributed systems]]]
 // ===== simple | it | defaults | edgeCase =====
 #set page(margin: 1.5cm)
 #set text(font: ("Calibri"), size: 12pt)
+#show link: set text(fill: blue)
 #set par(leading: 0.5em, justify: false)
 
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
@@ -331,7 +336,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[COMPETENZE]],
     [#block(above: 0em, below: 0.8em)[Only description, no title]#block(above: 0em, below: 0.8em)[*Only title*]]
@@ -341,17 +346,18 @@ Focused on software engineering and distributed systems]]]
 // ===== simple | it | defaults | descriptions =====
 #set page(margin: 1.5cm)
 #set text(font: ("Calibri"), size: 12pt)
+#show link: set text(fill: blue)
 #set par(leading: 0.5em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 20pt, weight: "bold")[Desc Tester]]
 #block(above: 0em, below: 1em)[#text(size: 14pt)[Software Engineer]]
-#block(above: 0em, below: 1.4em)[#text(size: 12pt)[New York, USA · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]]
+#block(above: 0em, below: 1.4em)[#text(size: 12pt)[New York, USA · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]]
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
 #v(1.2em)
 
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[Profilo]],
     [Summary text]
@@ -360,7 +366,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[ISTRUZIONE E FORMAZIONE]
 
@@ -377,7 +383,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[ESPERIENZA LAVORATIVA]
 
@@ -394,7 +400,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[TIROCINI]
 
@@ -411,7 +417,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[VOLONTARIATO]
 
@@ -428,7 +434,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[PROGETTI]
 
@@ -445,7 +451,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[CERTIFICAZIONI]
 
@@ -459,6 +465,7 @@ Focused on software engineering and distributed systems]]]
 // ===== simple | it | defaults | withPhoto =====
 #set page(margin: 1.5cm)
 #set text(font: ("Calibri"), size: 12pt)
+#show link: set text(fill: blue)
 #set par(leading: 0.5em, justify: false)
 #grid(
     columns: (1fr, auto),
@@ -466,7 +473,7 @@ Focused on software engineering and distributed systems]]]
     align: (start + top, end + top),
     [#block(above: 0em, below: 0.6em)[#text(size: 20pt, weight: "bold")[Sarah Johnson]]
 #block(above: 0em, below: 1em)[#text(size: 14pt)[Full Stack Developer]]
-#block(above: 0em, below: 1.4em)[#text(size: 12pt)[Austin, TX · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 987 6543] · #link("mailto:sarah.johnson@email.com")[#text(fill: blue, dir: ltr, "sarah.johnson@email.com")]]]],
+#block(above: 0em, below: 1.4em)[#text(size: 12pt)[Austin, TX · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 987 6543] · #link("mailto:sarah.johnson@email.com")[#text(dir: ltr, "sarah.johnson@email.com")]]]],
     [#box(width: 25mm, height: 25mm, clip: true, radius: 1mm, image("/photo", width: 100%, height: 100%, fit: "cover"))],
 )
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
@@ -475,16 +482,16 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[Social e collegamenti]],
-    [#link("https://linkedin.com/in/sarahjohnson")[#text(fill: blue, "LinkedIn")], #link("https://github.com/sarahjohnson")[#text(fill: blue, "GitHub")]]
+    [#link("https://linkedin.com/in/sarahjohnson")[#text("LinkedIn")], #link("https://github.com/sarahjohnson")[#text("GitHub")]]
 )
 #block(above: 0.6em, below: 0.6em)[#line(length: 100%, stroke: 0.4pt)]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[Profilo]],
     [Experienced Full Stack Developer with 8+ years in web development. Specialized in React, Node.js, and cloud technologies.]
@@ -493,12 +500,12 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[ESPERIENZA LAVORATIVA]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "marzo 2020 - Presente")]],
-    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Senior Developer presso #link("https://techstart.com")[#underline[#text(fill: blue, "TechStart Inc.")]], Austin, TX]]
+    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Senior Developer presso #link("https://techstart.com")[#underline[#text("TechStart Inc.")]], Austin, TX]]
 
 #set list(indent: 1em)
 
@@ -517,22 +524,20 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[ISTRUZIONE E FORMAZIONE]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "agosto 2013 - maggio 2017")]],
     [#block(below: 0.6em)[#text("Bachelor of Science presso University of Texas, Austin, TX", size: 13pt, weight: "bold")]
 
-#block(above: 0em, below: 0.8em)[#text(size: 12pt)[*Votazione:* 3.8 GPA
-
-Focused on software engineering and distributed systems]]]
+#block(above: 0em, below: 0.8em)[#text(size: 12pt)[#block(above: 0em, below: 0.6em)[*Votazione:* 3.8 GPA]Focused on software engineering and distributed systems]]]
 )
 #block(above: 0.6em, below: 0.6em)[#line(length: 100%, stroke: 0.4pt)]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[TIROCINI]
 
@@ -547,7 +552,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[COMPETENZE]],
     [#block(above: 0em, below: 0.8em)[*Frontend:* React, Vue.js, TypeScript, HTML, CSS]#block(above: 0em, below: 0.8em)[*Backend:* Node.js, Python, Go, PostgreSQL]#block(above: 0em, below: 0.8em)[*DevOps:* Docker, Kubernetes, AWS, CI/CD]]
@@ -556,12 +561,12 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[PROGETTI]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "gennaio 2023 - Presente")]],
-    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Open Source CLI Tool • #link("https://github.com/sarahjohnson/cli-tool")[#text(fill: blue, "GitHub")]]]
+    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Open Source CLI Tool • #link("https://github.com/sarahjohnson/cli-tool")[#text("GitHub")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 12pt)[A command-line tool for automating development workflows]]
 
@@ -570,7 +575,7 @@ Focused on software engineering and distributed systems]]]
 - Reached 500+ stars on GitHub
 - Used by 2,000+ developers monthly],
     [#text(size: 11pt)[#text(fill: rgb("#4B5563"), "giugno 2021 - dicembre 2023")]],
-    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Personal Blog • #link("https://sarahjohnson.dev")[#text(fill: blue, "Live Demo")]]]
+    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Personal Blog • #link("https://sarahjohnson.dev")[#text("Live Demo")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 12pt)[Technical blog about web development best practices]]]
 )
@@ -578,7 +583,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[VOLONTARIATO]
 
@@ -593,7 +598,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[LINGUE]],
     [#block(above: 0em, below: 0.8em)[*English* - Madrelingua]#block(above: 0em, below: 0.8em)[*Spanish* - Intermediate]]
@@ -602,12 +607,12 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[CERTIFICAZIONI]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "giugno 2022")]],
-    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[AWS Solutions Architect da Amazon Web Services · #link("https://aws.amazon.com/certification")[#text(fill: blue, "Link")]]]
+    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[AWS Solutions Architect da Amazon Web Services · #link("https://aws.amazon.com/certification")[#text("Link")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 12pt)[Professional level certification]]]
 )
@@ -616,10 +621,11 @@ Focused on software engineering and distributed systems]]]
 // ===== simple | it | alternate | minimal =====
 #set page(margin: 1.5cm)
 #set text(font: ("Calibri"), size: 10pt)
+#show link: set text(fill: blue)
 #set par(leading: 0.5em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 18pt, weight: "bold")[John Doe]]
 #block(above: 0em, below: 1em)[#text(size: 12pt)[Software Engineer]]
-#block(above: 0em, below: 1.4em)[#text(size: 10pt)[New York, USA · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]]
+#block(above: 0em, below: 1.4em)[#text(size: 10pt)[New York, USA · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]]
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
 #v(1.2em)
 
@@ -628,17 +634,18 @@ Focused on software engineering and distributed systems]]]
 // ===== simple | it | alternate | specialChars =====
 #set page(margin: 1.5cm)
 #set text(font: ("Calibri"), size: 10pt)
+#show link: set text(fill: blue)
 #set par(leading: 0.5em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 18pt, weight: "bold")[John\# Doe\$]]
 #block(above: 0em, below: 1em)[#text(size: 12pt)[C\# Developer]]
-#block(above: 0em, below: 1.4em)[#text(size: 10pt)[New York, USA · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]]
+#block(above: 0em, below: 1.4em)[#text(size: 10pt)[New York, USA · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]]
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
 #v(1.2em)
 
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[Profilo]],
     [Expert in C\#, F\#, and .NET development. Worked with \$100M+ projects.]
@@ -647,12 +654,12 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[ESPERIENZA LAVORATIVA]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "gennaio 2020 - Presente")]],
-    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Senior C\# Developer presso #link("https://techcorp.com")[#underline[#text(fill: blue, "Tech Corp")]], San Francisco]]
+    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Senior C\# Developer presso #link("https://techcorp.com")[#underline[#text("Tech Corp")]], San Francisco]]
 
 #set list(indent: 1em)
 
@@ -664,7 +671,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[COMPETENZE]],
     [#block(above: 0em, below: 0.8em)[*Languages:* C\#, F\#, TypeScript, JavaScript, C++]#block(above: 0em, below: 0.8em)[*Frameworks:* .NET, ASP.NET MVC, Entity Framework]#block(above: 0em, below: 0.8em)[*Tools:* Git, Docker, Azure DevOps]]
@@ -673,14 +680,14 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[PROGETTI]],
     [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Operators Logic App - C\#, Windows App]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 10pt)[Developed automated logical operations for Issue \#123]]],
     [],
-    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[E-Commerce Platform (Revenue: \$500K+) • #link("https://example.com")[#text(fill: blue, "Live Demo")]]]
+    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[E-Commerce Platform (Revenue: \$500K+) • #link("https://example.com")[#text("Live Demo")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 10pt)[Built with C\# & React. Handles \~10,000 transactions/day.]]]
 )
@@ -689,17 +696,18 @@ Focused on software engineering and distributed systems]]]
 // ===== simple | it | alternate | typstMarkup =====
 #set page(margin: 1.5cm)
 #set text(font: ("Calibri"), size: 10pt)
+#show link: set text(fill: blue)
 #set par(leading: 0.5em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 18pt, weight: "bold")[Test\*User With\_Underscore]]
 #block(above: 0em, below: 1em)[#text(size: 12pt)[Developer \[Senior\]]]
-#block(above: 0em, below: 1.4em)[#text(size: 10pt)[New York, USA · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]]
+#block(above: 0em, below: 1.4em)[#text(size: 10pt)[New York, USA · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]]
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
 #v(1.2em)
 
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[Profilo]],
     [I work with \*bold\* text and \_italic\_ formatting. Also \{curly\} and \<angle\> brackets.]
@@ -708,7 +716,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[COMPETENZE]],
     [#block(above: 0em, below: 0.8em)[*Special\~Chars:* Testing \^caret and \~tilde characters]#block(above: 0em, below: 0.8em)[*Brackets:* Using \[square\] and \{curly\} brackets]]
@@ -717,7 +725,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[PROGETTI]],
     [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Project with \"quotes\" inside]]
@@ -729,17 +737,18 @@ Focused on software engineering and distributed systems]]]
 // ===== simple | it | alternate | unicode =====
 #set page(margin: 1.5cm)
 #set text(font: ("Calibri"), size: 10pt)
+#show link: set text(fill: blue)
 #set par(leading: 0.5em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 18pt, weight: "bold")[Jose Garcia]]
 #block(above: 0em, below: 1em)[#text(size: 12pt)[Desarrollador]]
-#block(above: 0em, below: 1.4em)[#text(size: 10pt)[Madrid, Espana · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]]
+#block(above: 0em, below: 1.4em)[#text(size: 10pt)[Madrid, Espana · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]]
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
 #v(1.2em)
 
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[Profilo]],
     [Desarrollador con experiencia en tecnologias web.]
@@ -748,7 +757,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[COMPETENZE]],
     [#block(above: 0em, below: 0.8em)[*Idiomas:* Espanol (nativo), English, Francais]]
@@ -758,17 +767,18 @@ Focused on software engineering and distributed systems]]]
 // ===== simple | it | alternate | arabic =====
 #set page(margin: 1.5cm)
 #set text(font: ("Calibri"), size: 10pt)
+#show link: set text(fill: blue)
 #set par(leading: 0.5em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 18pt, weight: "bold")[Ahmed Hassan]]
 #block(above: 0em, below: 1em)[#text(size: 12pt)[Software Engineer]]
-#block(above: 0em, below: 1.4em)[#text(size: 10pt)[Cairo, Egypt · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]]
+#block(above: 0em, below: 1.4em)[#text(size: 10pt)[Cairo, Egypt · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]]
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
 #v(1.2em)
 
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[Profilo]],
     [Full-Stack Developer with experience in web technologies]
@@ -777,7 +787,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[COMPETENZE]],
     [#block(above: 0em, below: 0.8em)[*Languages:* JavaScript, TypeScript, Python]]
@@ -787,26 +797,27 @@ Focused on software engineering and distributed systems]]]
 // ===== simple | it | alternate | full =====
 #set page(margin: 1.5cm)
 #set text(font: ("Calibri"), size: 10pt)
+#show link: set text(fill: blue)
 #set par(leading: 0.5em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 18pt, weight: "bold")[Sarah Johnson]]
 #block(above: 0em, below: 1em)[#text(size: 12pt)[Full Stack Developer]]
-#block(above: 0em, below: 1.4em)[#text(size: 10pt)[Austin, TX · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 987 6543] · #link("mailto:sarah.johnson@email.com")[#text(fill: blue, dir: ltr, "sarah.johnson@email.com")]]]
+#block(above: 0em, below: 1.4em)[#text(size: 10pt)[Austin, TX · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 987 6543] · #link("mailto:sarah.johnson@email.com")[#text(dir: ltr, "sarah.johnson@email.com")]]]
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
 #v(1.2em)
 
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[Social e collegamenti]],
-    [#link("https://linkedin.com/in/sarahjohnson")[#text(fill: blue, "LinkedIn")], #link("https://github.com/sarahjohnson")[#text(fill: blue, "GitHub")]]
+    [#link("https://linkedin.com/in/sarahjohnson")[#text("LinkedIn")], #link("https://github.com/sarahjohnson")[#text("GitHub")]]
 )
 #block(above: 0.6em, below: 0.6em)[#line(length: 100%, stroke: 0.4pt)]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[Profilo]],
     [Experienced Full Stack Developer with 8+ years in web development. Specialized in React, Node.js, and cloud technologies.]
@@ -815,12 +826,12 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[ESPERIENZA LAVORATIVA]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "marzo 2020 - Presente")]],
-    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Senior Developer presso #link("https://techstart.com")[#underline[#text(fill: blue, "TechStart Inc.")]], Austin, TX]]
+    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Senior Developer presso #link("https://techstart.com")[#underline[#text("TechStart Inc.")]], Austin, TX]]
 
 #set list(indent: 1em)
 
@@ -839,22 +850,20 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[ISTRUZIONE E FORMAZIONE]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "agosto 2013 - maggio 2017")]],
     [#block(below: 0.6em)[#text("Bachelor of Science presso University of Texas, Austin, TX", size: 11pt, weight: "bold")]
 
-#block(above: 0em, below: 0.8em)[#text(size: 10pt)[*Votazione:* 3.8 GPA
-
-Focused on software engineering and distributed systems]]]
+#block(above: 0em, below: 0.8em)[#text(size: 10pt)[#block(above: 0em, below: 0.6em)[*Votazione:* 3.8 GPA]Focused on software engineering and distributed systems]]]
 )
 #block(above: 0.6em, below: 0.6em)[#line(length: 100%, stroke: 0.4pt)]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[TIROCINI]
 
@@ -869,7 +878,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[COMPETENZE]],
     [#block(above: 0em, below: 0.8em)[*Frontend:* React, Vue.js, TypeScript, HTML, CSS]#block(above: 0em, below: 0.8em)[*Backend:* Node.js, Python, Go, PostgreSQL]#block(above: 0em, below: 0.8em)[*DevOps:* Docker, Kubernetes, AWS, CI/CD]]
@@ -878,12 +887,12 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[PROGETTI]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "gennaio 2023 - Presente")]],
-    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Open Source CLI Tool • #link("https://github.com/sarahjohnson/cli-tool")[#text(fill: blue, "GitHub")]]]
+    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Open Source CLI Tool • #link("https://github.com/sarahjohnson/cli-tool")[#text("GitHub")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 10pt)[A command-line tool for automating development workflows]]
 
@@ -892,7 +901,7 @@ Focused on software engineering and distributed systems]]]
 - Reached 500+ stars on GitHub
 - Used by 2,000+ developers monthly],
     [#text(size: 9pt)[#text(fill: rgb("#4B5563"), "giugno 2021 - dicembre 2023")]],
-    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Personal Blog • #link("https://sarahjohnson.dev")[#text(fill: blue, "Live Demo")]]]
+    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Personal Blog • #link("https://sarahjohnson.dev")[#text("Live Demo")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 10pt)[Technical blog about web development best practices]]]
 )
@@ -900,7 +909,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[VOLONTARIATO]
 
@@ -915,7 +924,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[LINGUE]],
     [#block(above: 0em, below: 0.8em)[*English* - Madrelingua]#block(above: 0em, below: 0.8em)[*Spanish* - Intermediate]]
@@ -924,12 +933,12 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[CERTIFICAZIONI]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "giugno 2022")]],
-    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[AWS Solutions Architect da Amazon Web Services · #link("https://aws.amazon.com/certification")[#text(fill: blue, "Link")]]]
+    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[AWS Solutions Architect da Amazon Web Services · #link("https://aws.amazon.com/certification")[#text("Link")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 10pt)[Professional level certification]]]
 )
@@ -938,6 +947,7 @@ Focused on software engineering and distributed systems]]]
 // ===== simple | it | alternate | edgeCase =====
 #set page(margin: 1.5cm)
 #set text(font: ("Calibri"), size: 10pt)
+#show link: set text(fill: blue)
 #set par(leading: 0.5em, justify: false)
 
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
@@ -946,7 +956,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[COMPETENZE]],
     [#block(above: 0em, below: 0.8em)[Only description, no title]#block(above: 0em, below: 0.8em)[*Only title*]]
@@ -956,17 +966,18 @@ Focused on software engineering and distributed systems]]]
 // ===== simple | it | alternate | descriptions =====
 #set page(margin: 1.5cm)
 #set text(font: ("Calibri"), size: 10pt)
+#show link: set text(fill: blue)
 #set par(leading: 0.5em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 18pt, weight: "bold")[Desc Tester]]
 #block(above: 0em, below: 1em)[#text(size: 12pt)[Software Engineer]]
-#block(above: 0em, below: 1.4em)[#text(size: 10pt)[New York, USA · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(fill: blue, dir: ltr, "john@example.com")]]]
+#block(above: 0em, below: 1.4em)[#text(size: 10pt)[New York, USA · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 123 4567] · #link("mailto:john@example.com")[#text(dir: ltr, "john@example.com")]]]
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
 #v(1.2em)
 
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[Profilo]],
     [Summary text]
@@ -975,7 +986,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[ISTRUZIONE E FORMAZIONE]
 
@@ -992,7 +1003,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[ESPERIENZA LAVORATIVA]
 
@@ -1009,7 +1020,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[TIROCINI]
 
@@ -1026,7 +1037,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[VOLONTARIATO]
 
@@ -1043,7 +1054,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[PROGETTI]
 
@@ -1060,7 +1071,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[CERTIFICAZIONI]
 
@@ -1074,6 +1085,7 @@ Focused on software engineering and distributed systems]]]
 // ===== simple | it | alternate | withPhoto =====
 #set page(margin: 1.5cm)
 #set text(font: ("Calibri"), size: 10pt)
+#show link: set text(fill: blue)
 #set par(leading: 0.5em, justify: false)
 #grid(
     columns: (1fr, auto),
@@ -1081,7 +1093,7 @@ Focused on software engineering and distributed systems]]]
     align: (start + top, end + top),
     [#block(above: 0em, below: 0.6em)[#text(size: 18pt, weight: "bold")[Sarah Johnson]]
 #block(above: 0em, below: 1em)[#text(size: 12pt)[Full Stack Developer]]
-#block(above: 0em, below: 1.4em)[#text(size: 10pt)[Austin, TX · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 987 6543] · #link("mailto:sarah.johnson@email.com")[#text(fill: blue, dir: ltr, "sarah.johnson@email.com")]]]],
+#block(above: 0em, below: 1.4em)[#text(size: 10pt)[Austin, TX · #text(dir: ltr, font: ("Calibri", "Roboto"))[+1 555 987 6543] · #link("mailto:sarah.johnson@email.com")[#text(dir: ltr, "sarah.johnson@email.com")]]]],
     [#box(width: 25mm, height: 25mm, clip: true, radius: 50%, image("/photo", width: 100%, height: 100%, fit: "cover"))],
 )
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
@@ -1090,16 +1102,16 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[Social e collegamenti]],
-    [#link("https://linkedin.com/in/sarahjohnson")[#text(fill: blue, "LinkedIn")], #link("https://github.com/sarahjohnson")[#text(fill: blue, "GitHub")]]
+    [#link("https://linkedin.com/in/sarahjohnson")[#text("LinkedIn")], #link("https://github.com/sarahjohnson")[#text("GitHub")]]
 )
 #block(above: 0.6em, below: 0.6em)[#line(length: 100%, stroke: 0.4pt)]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[Profilo]],
     [Experienced Full Stack Developer with 8+ years in web development. Specialized in React, Node.js, and cloud technologies.]
@@ -1108,12 +1120,12 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[ESPERIENZA LAVORATIVA]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "marzo 2020 - Presente")]],
-    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Senior Developer presso #link("https://techstart.com")[#underline[#text(fill: blue, "TechStart Inc.")]], Austin, TX]]
+    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Senior Developer presso #link("https://techstart.com")[#underline[#text("TechStart Inc.")]], Austin, TX]]
 
 #set list(indent: 1em)
 
@@ -1132,22 +1144,20 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[ISTRUZIONE E FORMAZIONE]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "agosto 2013 - maggio 2017")]],
     [#block(below: 0.6em)[#text("Bachelor of Science presso University of Texas, Austin, TX", size: 11pt, weight: "bold")]
 
-#block(above: 0em, below: 0.8em)[#text(size: 10pt)[*Votazione:* 3.8 GPA
-
-Focused on software engineering and distributed systems]]]
+#block(above: 0em, below: 0.8em)[#text(size: 10pt)[#block(above: 0em, below: 0.6em)[*Votazione:* 3.8 GPA]Focused on software engineering and distributed systems]]]
 )
 #block(above: 0.6em, below: 0.6em)[#line(length: 100%, stroke: 0.4pt)]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[TIROCINI]
 
@@ -1162,7 +1172,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[COMPETENZE]],
     [#block(above: 0em, below: 0.8em)[*Frontend:* React, Vue.js, TypeScript, HTML, CSS]#block(above: 0em, below: 0.8em)[*Backend:* Node.js, Python, Go, PostgreSQL]#block(above: 0em, below: 0.8em)[*DevOps:* Docker, Kubernetes, AWS, CI/CD]]
@@ -1171,12 +1181,12 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[PROGETTI]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "gennaio 2023 - Presente")]],
-    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Open Source CLI Tool • #link("https://github.com/sarahjohnson/cli-tool")[#text(fill: blue, "GitHub")]]]
+    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Open Source CLI Tool • #link("https://github.com/sarahjohnson/cli-tool")[#text("GitHub")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 10pt)[A command-line tool for automating development workflows]]
 
@@ -1185,7 +1195,7 @@ Focused on software engineering and distributed systems]]]
 - Reached 500+ stars on GitHub
 - Used by 2,000+ developers monthly],
     [#text(size: 9pt)[#text(fill: rgb("#4B5563"), "giugno 2021 - dicembre 2023")]],
-    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Personal Blog • #link("https://sarahjohnson.dev")[#text(fill: blue, "Live Demo")]]]
+    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Personal Blog • #link("https://sarahjohnson.dev")[#text("Live Demo")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 10pt)[Technical blog about web development best practices]]]
 )
@@ -1193,7 +1203,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[VOLONTARIATO]
 
@@ -1208,7 +1218,7 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[LINGUE]],
     [#block(above: 0em, below: 0.8em)[*English* - Madrelingua]#block(above: 0em, below: 0.8em)[*Spanish* - Intermediate]]
@@ -1217,12 +1227,12 @@ Focused on software engineering and distributed systems]]]
 #grid(
     columns: (22%, 1fr),
     column-gutter: 1.2em,
-    row-gutter: 0.9em,
+    row-gutter: 0.8em,
     align: (left + top, left + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[CERTIFICAZIONI]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "giugno 2022")]],
-    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[AWS Solutions Architect da Amazon Web Services · #link("https://aws.amazon.com/certification")[#text(fill: blue, "Link")]]]
+    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[AWS Solutions Architect da Amazon Web Services · #link("https://aws.amazon.com/certification")[#text("Link")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 10pt)[Professional level certification]]]
 )

@@ -85,6 +85,31 @@ describe('templates follow the resume typography settings', () => {
     }
 });
 
+describe('templates follow the resume colour and icon settings', () => {
+    const render = (tpl: typeof defaultTemplate, settings: Record<string, unknown>) =>
+        tpl.parse({ data, settings, locale: 'en', t: (k: string) => k });
+
+    for (const { name, tpl } of TEMPLATES) {
+        it(`${name}: heading colour, accent colour and icons come from settings`, () => {
+            const src = render(tpl, { headingColor: '#aa0011', accentColor: '#00aa22', showSectionIcons: true });
+            expect(src, `${name}: heading colour`).toContain('fill: rgb("#aa0011"))[#box(');
+            expect(src, `${name}: link colour`).toContain('#show link: set text(fill: rgb("#00aa22"))');
+            expect(src, `${name}: icons`).toContain('image(bytes(');
+            expect(src, `${name}: icon colour`).toContain('stroke=\\"#aa0011\\"');
+        });
+
+        it(`${name}: ignores colours that are not #rrggbb`, () => {
+            const src = render(tpl, { headingColor: 'red")]#evil', accentColor: 'url(x)' });
+            expect(src).not.toContain('#evil');
+            expect(src).not.toContain('url(x)');
+        });
+
+        it(`${name}: no icons unless enabled`, () => {
+            expect(render(tpl, {})).not.toContain('image(bytes(');
+        });
+    }
+});
+
 describe('date colour is unified and readable', () => {
     it('no template emits Typst\'s pale built-in gray for dates', () => {
         for (const { name, tpl } of TEMPLATES) {
