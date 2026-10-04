@@ -1,0 +1,187 @@
+{
+    "version": "v1",
+    "firstName": "Julia",
+    "lastName": "Neumann",
+    "email": "julia.neumann@example.com",
+    "phone": "+49 171 2233 4455",
+    "position": "Senior Accountant, Bilanzbuchhalterin (IHK)",
+    "location": "Frankfurt am Main",
+    "summary": "Bilanzbuchhalterin mit zehn Jahren Erfahrung in Konzernrechnungswesen und Wirtschaftsprüfung. Ich verantworte den Monatsabschluss für mehrere Gesellschaften, halte Abstimmungen sauber und baue gern manuelle Schritte ab, die einen Abschluss bremsen.",
+    "experiences": [
+        {
+            "company": "Mainland Lebensmittel GmbH",
+            "position": "Senior Accountant",
+            "location": "Frankfurt am Main",
+            "companyUrl": "",
+            "startDate": "2021-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Verantwortlich für den Monatsabschluss von fünf deutschen Gesellschaften und die konzerninterne Verrechnung"
+                },
+                {
+                    "text": "Monatsabschluss von neun auf sechs Arbeitstage verkürzt, durch Abgrenzungen direkt in SAP und einen festen Abschlusskalender"
+                },
+                {
+                    "text": "Unterlagen für die Jahresabschlussprüfung vorbereitet; die letzten zwei Prüfungen ergaben keine Korrekturen in meinen Bereichen"
+                },
+                {
+                    "text": "Anlagenbuchhaltung vollständig in SAP überführt und die bisherige Excel-Liste abgelöst"
+                },
+                {
+                    "text": "Monatliche Abweichungsanalyse gemeinsam mit dem Controlling, Veränderungen der Bruttomarge gegenüber dem CFO erläutert"
+                }
+            ]
+        },
+        {
+            "company": "Hartmann & Vogel Wirtschaftsprüfungsgesellschaft",
+            "position": "Prüfungsleiterin (Senior)",
+            "location": "Frankfurt am Main",
+            "companyUrl": "",
+            "startDate": "2017-09",
+            "endDate": "2021-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Prüfungen bei Industrie- und Handelsunternehmen mit Umsätzen bis 400 Mio. Euro vor Ort geleitet"
+                },
+                {
+                    "text": "Kontrollen zu Umsatz, Vorräten und Personalaufwand geprüft und Feststellungen für den Management Letter formuliert"
+                },
+                {
+                    "text": "Prüfungsteams mit zwei bis vier Assistentinnen und Assistenten pro Mandat angeleitet"
+                }
+            ]
+        },
+        {
+            "company": "Weber Treuhand GmbH Wirtschaftsprüfungsgesellschaft",
+            "position": "Prüfungsassistentin",
+            "location": "Stuttgart",
+            "companyUrl": "",
+            "startDate": "2015-09",
+            "endDate": "2017-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Einzelfallprüfungen zu Kasse, Forderungen und Anlagevermögen bei gemeinnützigen und produzierenden Mandanten durchgeführt"
+                },
+                {
+                    "text": "Arbeitspapiere und Abstimmungen erstellt, die von Prüfungsleitung und Management geprüft wurden"
+                },
+                {
+                    "text": "Bei Inventurbeobachtungen zum Jahresende in den Lagern der Mandanten unterstützt"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Universität Mannheim",
+            "degree": "B.Sc. Betriebswirtschaftslehre, Schwerpunkt Rechnungswesen",
+            "fieldOfStudy": "",
+            "location": "Mannheim",
+            "startDate": "2011-08",
+            "endDate": "2015-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Turnverein Sachsenhausen e.V.",
+            "organizationUrl": "",
+            "position": "Ehrenamtliche Kassenprüferin",
+            "location": "Frankfurt am Main",
+            "startDate": "2019-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Prüfung der Vereinskasse und des Jahresabschlusses vor der Mitgliederversammlung.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Rechnungswesen",
+            "description": "HGB, IFRS, Monats- und Jahresabschluss, Kontenabstimmung, Abgrenzungen, Intercompany, Anlagenbuchhaltung"
+        },
+        {
+            "title": "Systeme",
+            "description": "SAP S/4HANA FI, DATEV, Lexware"
+        },
+        {
+            "title": "Excel",
+            "description": "Pivot-Tabellen, XVERWEIS, Power Query"
+        },
+        {
+            "title": "Reporting",
+            "description": "Konsolidierung, Management-Reporting, Power BI, Abweichungsanalyse"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Einführung SAP S/4HANA",
+            "description": "Fachliche Leitung Finanzen beim Wechsel der Gruppe von Lexware zu SAP S/4HANA: Kontenplan, Datenmigration und Schulung von 12 Anwenderinnen und Anwendern.",
+            "links": [],
+            "startDate": "2021-04",
+            "endDate": "2021-12",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Deutsch",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Englisch",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Geprüfte Bilanzbuchhalterin (IHK)",
+            "issuer": "IHK Frankfurt am Main",
+            "date": "2019-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "volunteering": 4,
+        "skills": 5,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "projects": 3,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

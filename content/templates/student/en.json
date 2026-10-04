@@ -1,0 +1,178 @@
+{
+    "version": "v1",
+    "firstName": "Aisha",
+    "lastName": "Bello",
+    "email": "aisha.bello@example.com",
+    "phone": "+1 555 011 6620",
+    "position": "Computer Science Student",
+    "location": "Atlanta, GA",
+    "summary": "Third-year computer science student looking for a summer 2027 software internship. I have built two full-stack projects, tutor first-year students in programming and work part time at the campus help desk.",
+    "experiences": [
+        {
+            "company": "Georgia State University IT Help Desk",
+            "position": "Student Technician (part time)",
+            "location": "Atlanta, GA",
+            "companyUrl": "",
+            "startDate": "2025-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Answer about 40 student and staff requests a week for accounts, Wi-Fi and laptops"
+                },
+                {
+                    "text": "Wrote eight how-to articles for the help desk knowledge base; two are among the most viewed pages"
+                }
+            ]
+        },
+        {
+            "company": "Department of Computer Science",
+            "position": "Peer Tutor, Intro to Programming",
+            "location": "Atlanta, GA",
+            "companyUrl": "",
+            "startDate": "2024-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Run two weekly drop-in sessions for Python and debugging"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Georgia State University",
+            "degree": "B.S. in Computer Science",
+            "fieldOfStudy": "",
+            "location": "Atlanta, GA",
+            "startDate": "2023-08",
+            "endDate": "2027-05",
+            "isPresent": false,
+            "description": "Relevant courses: Data Structures, Algorithms, Databases, Operating Systems, Web Development.",
+            "graduationScore": "3.7 / 4.0",
+            "achievements": [
+                {
+                    "text": "Dean's List, four semesters"
+                }
+            ]
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Girls Who Code, Atlanta Chapter",
+            "organizationUrl": "",
+            "position": "Volunteer Instructor",
+            "location": "Atlanta, GA",
+            "startDate": "2024-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Teach weekly Scratch and Python lessons to middle school students.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Languages",
+            "description": "Python, Java, JavaScript, SQL"
+        },
+        {
+            "title": "Web",
+            "description": "React, Node.js, Express, HTML, CSS"
+        },
+        {
+            "title": "Tools",
+            "description": "Git, GitHub, VS Code, Linux command line"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "StudySpot",
+            "description": "Web app that shows free study rooms on campus in real time, built with React, Node.js and PostgreSQL. About 300 students used it during finals week.",
+            "links": [
+                {
+                    "url": "https://github.com/example/studyspot",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2025-02",
+            "endDate": "2025-05",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Budget Buddy",
+            "description": "Android app for splitting shared expenses between roommates. Team project for the mobile development course; I built the sync with Firebase.",
+            "links": [],
+            "startDate": "2024-09",
+            "endDate": "2024-12",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Campus Pantry Finder",
+            "description": "Hackathon project at HackGT 2024: a map of free food events on campus. Won the social impact prize with a team of four; I built the API.",
+            "links": [],
+            "startDate": "2024-10",
+            "endDate": "2024-10",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "English",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Yoruba",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "AWS Certified Cloud Practitioner",
+            "issuer": "Amazon Web Services",
+            "date": "2025-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "education": 1,
+        "projects": 2,
+        "experience": 3,
+        "skills": 4,
+        "volunteering": 6,
+        "languages": 7,
+        "internships": 7,
+        "certificates": 5,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

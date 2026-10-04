@@ -1,0 +1,198 @@
+{
+    "version": "v1",
+    "firstName": "周志强",
+    "lastName": "",
+    "email": "zhou.zhiqiang@example.com",
+    "phone": "+86 135 0081 6627",
+    "position": "高级项目经理，PMP",
+    "location": "成都",
+    "summary": "项目经理，十二年软件和基础设施项目交付经验，行业覆盖医疗、物流和通信。负责 10 到 40 人规模的项目，预算管得实在，写的周报领导愿意看。",
+    "experiences": [
+        {
+            "company": "天府医疗信息系统有限公司",
+            "position": "高级项目经理",
+            "location": "成都",
+            "companyUrl": "",
+            "startDate": "2020-05",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "负责 14 家门诊部预约挂号系统的迁移项目：预算 2,300 万元，团队 35 人，涉及信息部、运营部和供应商"
+                },
+                {
+                    "text": "把门诊部上线分为三批进行，比原计划提前两周全部上线"
+                },
+                {
+                    "text": "建立共享风险台账和每周项目指导会，后来成为项目管理办公室的标准做法"
+                },
+                {
+                    "text": "管理三名项目助理，审核他们的项目计划和预算"
+                }
+            ]
+        },
+        {
+            "company": "西部速运物流有限公司",
+            "position": "项目经理",
+            "location": "成都",
+            "companyUrl": "",
+            "startDate": "2016-03",
+            "endDate": "2020-04",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "负责仓储管理系统在六个配送中心的上线推广"
+                },
+                {
+                    "text": "为内部开发团队引入两周一迭代的 Scrum 节奏，在 Jira 中统一管理需求"
+                },
+                {
+                    "text": "与供应商谈判变更合同，节省软件许可费用约 120 万元"
+                },
+                {
+                    "text": "为 IT 部门建立第一套项目立项流程，开发团队接到的计划外需求减少了约三分之一"
+                }
+            ]
+        },
+        {
+            "company": "蜀通通信工程有限公司",
+            "position": "项目助理",
+            "location": "成都",
+            "companyUrl": "",
+            "startDate": "2014-06",
+            "endDate": "2016-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "协调 20 个企业客户站点的光纤接入工程，对接施工队和审批部门"
+                },
+                {
+                    "text": "维护项目进度表和预算台账，每周编写项目周报"
+                },
+                {
+                    "text": "组织供应商会议，跟踪待办事项直到关闭"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "西南财经大学",
+            "degree": "工商管理 本科",
+            "fieldOfStudy": "",
+            "location": "成都",
+            "startDate": "2010-09",
+            "endDate": "2014-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "成都社区助老公益项目",
+            "organizationUrl": "",
+            "position": "志愿项目协调员",
+            "location": "成都",
+            "startDate": "2019-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "为周末的老旧小区适老化改造活动安排志愿者排班和材料配送。",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "交付方法",
+            "description": "瀑布、敏捷、Scrum、混合式计划、供应商管理"
+        },
+        {
+            "title": "项目控制",
+            "description": "预算 4,000 万元以内、风险和问题台账、变更控制、进度汇报"
+        },
+        {
+            "title": "工具",
+            "description": "Jira、Confluence、Microsoft Project、飞书、Excel"
+        },
+        {
+            "title": "行业",
+            "description": "医疗、物流、通信"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "中文",
+            "proficiency": "Native"
+        },
+        {
+            "name": "英语",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "项目管理专业人士（PMP）",
+            "issuer": "PMI",
+            "date": "2018-10",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "信息系统项目管理师（软考高级）",
+            "issuer": "人力资源和社会保障部、工业和信息化部",
+            "date": "2019-05",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified ScrumMaster（CSM）",
+            "issuer": "Scrum Alliance",
+            "date": "2017-04",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "PRINCE2 Foundation",
+            "issuer": "AXELOS",
+            "date": "2021-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 6,
+        "volunteering": 5,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

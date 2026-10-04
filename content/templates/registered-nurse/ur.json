@@ -1,0 +1,188 @@
+{
+    "version": "v1",
+    "firstName": "عائشہ",
+    "lastName": "خان",
+    "email": "ayesha.khan@example.com",
+    "phone": "+92 321 0174438",
+    "position": "رجسٹرڈ نرس، میڈیکل سرجیکل",
+    "location": "کراچی، پاکستان",
+    "summary": "میڈیکل سرجیکل اور کارڈیک وارڈز میں چھ سال کا تجربہ رکھنے والی رجسٹرڈ نرس۔ چارج نرس کی ذمہ داری سنبھالتی ہوں، بگڑتی حالت والے مریضوں کے ساتھ پرسکون رہتی ہوں اور سوال پوچھنے والے لواحقین کو تحمل سے سمجھاتی ہوں۔ آٹھ نئی نرسوں کی تربیت کر چکی ہوں۔",
+    "experiences": [
+        {
+            "company": "سٹی کیئر ہسپتال",
+            "position": "رجسٹرڈ نرس، میڈیکل سرجیکل وارڈ",
+            "location": "کراچی",
+            "companyUrl": "",
+            "startDate": "2021-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "بالغ مریضوں کا 36 بستروں والا میڈیکل سرجیکل وارڈ، دن کی شفٹ میں ایک نرس پر پانچ مریض۔",
+            "achievements": [
+                {
+                    "text": "ہفتے میں دو شفٹس چارج نرس: مریضوں کی تقسیم، داخلے اور ڈسچارج کا انتظام اور نئے اسٹاف کی مدد"
+                },
+                {
+                    "text": "آٹھ نئی گریجویٹ نرسوں کو بارہ ہفتوں کی اورینٹیشن کے دوران پریسیپٹر کے طور پر تربیت دی"
+                },
+                {
+                    "text": "وارڈ کی falls کمیٹی میں شامل ہوئی اور ہر گھنٹے راؤنڈ اور بیڈ الارم چیک کا طریقہ نافذ کرنے میں مدد کی"
+                },
+                {
+                    "text": "ہسپتال کے نئے HMIS سسٹم کی سپر یوزر رہی اور 30 ساتھیوں کو ادویات کے نئے طریقۂ کار کی تربیت دی"
+                }
+            ]
+        },
+        {
+            "company": "الشفاء کارڈیک سینٹر",
+            "position": "رجسٹرڈ نرس، کارڈیک ٹیلی میٹری",
+            "location": "کراچی",
+            "companyUrl": "",
+            "startDate": "2019-07",
+            "endDate": "2021-03",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "مسلسل مانیٹرنگ پر دل کے مریضوں کی دیکھ بھال کی، جن میں انجیوگرافی کے بعد اور ہارٹ فیلیئر کے مریض شامل تھے"
+                },
+                {
+                    "text": "دل کی دھڑکن کی بے ترتیبی پہچان کر بروقت ڈاکٹر اور ایمرجنسی ٹیم کو اطلاع دی"
+                },
+                {
+                    "text": "ڈسچارج سے پہلے ہارٹ فیلیئر کے مریضوں کو روزانہ وزن، پانی کی حد اور ادویات کے اوقات سمجھائے"
+                }
+            ]
+        },
+        {
+            "company": "رحمت جنرل ہسپتال",
+            "position": "نرسنگ اسسٹنٹ (پارٹ ٹائم)",
+            "location": "کراچی",
+            "companyUrl": "",
+            "startDate": "2017-05",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "نرسنگ کی تعلیم کے دوران پارٹ ٹائم کام: وائٹل سائنز، شوگر چیک، مریضوں کو چلنے پھرنے اور صفائی میں مدد"
+                },
+                {
+                    "text": "مریض کی حالت میں تبدیلی متعلقہ رجسٹرڈ نرس کو بتائی اور ریکارڈ میں درج کی"
+                },
+                {
+                    "text": "نئے اسسٹنٹس کو وارڈ کے معمولات اور مریض کو محفوظ طریقے سے اٹھانے کی تربیت دی"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "آغا خان یونیورسٹی اسکول آف نرسنگ اینڈ مڈوائفری",
+            "degree": "بی ایس این (BSN Generic)",
+            "fieldOfStudy": "",
+            "location": "کراچی",
+            "startDate": "2015-08",
+            "endDate": "2019-05",
+            "isPresent": false,
+            "description": "میڈیکل سرجیکل، بچوں، زچگی اور نفسیاتی صحت کے وارڈز میں کلینیکل روٹیشنز۔",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "کمیونٹی ہیلتھ کیمپ",
+            "organizationUrl": "",
+            "position": "رضاکار نرس",
+            "location": "کراچی",
+            "startDate": "2022-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "سال میں دو بار مفت بلڈ پریشر اور شوگر اسکریننگ۔",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "کلینیکل",
+            "description": "مریض کا معائنہ، IV تھراپی، زخموں کی دیکھ بھال، ٹیلی میٹری مانیٹرنگ، ادویات دینا"
+        },
+        {
+            "title": "سسٹمز",
+            "description": "HMIS، الیکٹرانک میڈیکیشن ریکارڈ، infusion pumps"
+        },
+        {
+            "title": "قیادت",
+            "description": "چارج نرس، پریسیپٹر، falls کمیٹی"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "اردو",
+            "proficiency": "Native"
+        },
+        {
+            "name": "انگریزی",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "رجسٹرڈ نرس، رجسٹریشن",
+            "issuer": "پاکستان نرسنگ اینڈ مڈوائفری کونسل",
+            "date": "2019-06",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Basic Life Support (BLS)",
+            "issuer": "American Heart Association",
+            "date": "2025-01",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Advanced Cardiovascular Life Support (ACLS)",
+            "issuer": "American Heart Association",
+            "date": "2025-01",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "انفیکشن کی روک تھام اور کنٹرول کورس",
+            "issuer": "سٹی کیئر ہسپتال ٹریننگ سینٹر",
+            "date": "2023-09",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "certificates": 1,
+        "experience": 2,
+        "education": 3,
+        "skills": 4,
+        "languages": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "لائسنس اور سرٹیفیکیشنز"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

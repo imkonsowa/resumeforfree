@@ -1,0 +1,195 @@
+{
+    "version": "v1",
+    "firstName": "Burak",
+    "lastName": "Şahin",
+    "email": "burak.sahin@example.com",
+    "phone": "+90 555 016 33 05",
+    "position": "Kıdemli Proje Yöneticisi, PMP",
+    "location": "İstanbul",
+    "summary": "Sağlık, lojistik ve telekom şirketleri için on iki yıldır yazılım ve altyapı projeleri teslim ediyorum. 10-40 kişilik projeleri yönetiyorum, bütçeleri gerçekçi tutuyorum ve yöneticilerin gerçekten okuduğu durum raporları yazıyorum.",
+    "experiences": [
+        {
+            "company": "Zirve Sağlık Grubu",
+            "position": "Kıdemli Proje Yöneticisi",
+            "location": "İstanbul",
+            "companyUrl": "",
+            "startDate": "2020-05",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "14 klinikte hasta randevu sisteminin yeni platforma geçişini yönettim: 112 milyon TL bütçe, bilgi işlem, operasyon ve tedarikçiden 35 kişi"
+                },
+                {
+                    "text": "Klinik geçişlerini tek seferde değil üç dalgada yaparak canlıya geçişi iki hafta erken tamamladım"
+                },
+                {
+                    "text": "Ortak bir risk kaydı ve haftalık yönlendirme toplantısı kurdum; PMO'nun standardı oldu"
+                },
+                {
+                    "text": "Üç proje koordinatörünü yönetiyor, planlarını ve bütçelerini inceliyorum"
+                }
+            ]
+        },
+        {
+            "company": "Kaya Lojistik",
+            "position": "Proje Yöneticisi",
+            "location": "Kocaeli",
+            "companyUrl": "",
+            "startDate": "2016-03",
+            "endDate": "2020-04",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Depo yönetim sisteminin altı dağıtım merkezine kurulumunu yönettim"
+                },
+                {
+                    "text": "İç yazılım ekibi için iki haftalık sprintler ve Jira'da ortak bir iş listesi başlattım"
+                },
+                {
+                    "text": "Tedarikçiyle yaptığım değişiklik pazarlığıyla lisans ücretlerinde 6 milyon TL tasarruf sağladım"
+                },
+                {
+                    "text": "Bilgi işlem için ilk proje talep sürecini kurdum; yazılım ekibine gelen plansız iş talepleri yaklaşık üçte bir azaldı"
+                }
+            ]
+        },
+        {
+            "company": "Ön Hat Telekom",
+            "position": "Proje Koordinatörü",
+            "location": "İstanbul",
+            "companyUrl": "",
+            "startDate": "2014-06",
+            "endDate": "2016-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "20 kurumsal lokasyonda fiber kurulum projelerini saha ekipleri ve izin süreçleriyle birlikte koordine ettim"
+                },
+                {
+                    "text": "Proje takvimini ve bütçe takip tablosunu güncel tuttum, haftalık durum raporlarını hazırladım"
+                },
+                {
+                    "text": "Tedarikçi toplantılarını organize ettim ve aksiyonları kapanana kadar takip ettim"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "İstanbul Teknik Üniversitesi",
+            "degree": "İşletme Mühendisliği Lisans",
+            "fieldOfStudy": "",
+            "location": "İstanbul",
+            "startDate": "2010-08",
+            "endDate": "2014-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Afet Konut Gönüllüleri",
+            "organizationUrl": "",
+            "position": "Gönüllü Şantiye Koordinatörü",
+            "location": "İstanbul",
+            "startDate": "2019-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Hafta sonu konut yapımları için gönüllü programlarını ve malzeme teslimatlarını planlıyorum.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Teslim",
+            "description": "Waterfall, Agile, Scrum, hibrit planlama, tedarikçi yönetimi"
+        },
+        {
+            "title": "Kontrol",
+            "description": "150 milyon TL'ye kadar bütçeler, risk ve sorun kayıtları, değişiklik kontrolü, durum raporlama"
+        },
+        {
+            "title": "Araçlar",
+            "description": "Jira, Confluence, MS Project, Smartsheet, Excel"
+        },
+        {
+            "title": "Sektörler",
+            "description": "Sağlık, lojistik, telekom"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Türkçe",
+            "proficiency": "Native"
+        },
+        {
+            "name": "İngilizce",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Almanca",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Project Management Professional (PMP)",
+            "issuer": "PMI",
+            "date": "2018-10",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified ScrumMaster (CSM)",
+            "issuer": "Scrum Alliance",
+            "date": "2017-04",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "PRINCE2 Foundation",
+            "issuer": "AXELOS",
+            "date": "2021-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 6,
+        "volunteering": 5,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

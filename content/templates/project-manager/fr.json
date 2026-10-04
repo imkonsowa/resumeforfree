@@ -1,0 +1,195 @@
+{
+    "version": "v1",
+    "firstName": "Thomas",
+    "lastName": "Bernard",
+    "email": "thomas.bernard@example.com",
+    "phone": "+33 6 56 78 90 12",
+    "position": "Chef de projet senior, PMP",
+    "location": "Bordeaux",
+    "summary": "Chef de projet avec douze ans d'expérience sur des projets informatiques et d'infrastructure dans la santé, la logistique et les télécoms. Je pilote des projets de 10 à 40 personnes, je tiens les budgets et j'écris des points d'avancement que la direction lit vraiment.",
+    "experiences": [
+        {
+            "company": "Groupe Santé Atlantique",
+            "position": "Chef de projet senior",
+            "location": "Bordeaux",
+            "companyUrl": "",
+            "startDate": "2020-05",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Pilotage de la migration de la prise de rendez-vous vers une nouvelle plateforme dans 14 centres de santé : budget de 3 M€, 35 personnes entre la DSI, les opérations et l'éditeur"
+                },
+                {
+                    "text": "Mise en service livrée deux semaines en avance grâce à un déploiement en trois vagues au lieu d'une"
+                },
+                {
+                    "text": "Création d'un registre des risques partagé et d'un comité de pilotage hebdomadaire, devenus la norme du PMO"
+                },
+                {
+                    "text": "Encadrement de trois assistants chefs de projet et revue de leurs plannings et budgets"
+                }
+            ]
+        },
+        {
+            "company": "Garonne Fret",
+            "position": "Chef de projet",
+            "location": "Bordeaux",
+            "companyUrl": "",
+            "startDate": "2016-03",
+            "endDate": "2020-04",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Déploiement d'un logiciel de gestion d'entrepôt dans six centres de distribution"
+                },
+                {
+                    "text": "Mise en place de sprints de deux semaines et d'un backlog partagé dans Jira pour l'équipe de développement interne"
+                },
+                {
+                    "text": "Négociation d'un avenant avec l'éditeur, 170 000 € de licences économisés"
+                },
+                {
+                    "text": "Création du premier processus de qualification des demandes pour la DSI, environ un tiers de demandes non planifiées en moins pour l'équipe de développement"
+                }
+            ]
+        },
+        {
+            "company": "Aquitel Réseaux",
+            "position": "Assistant chef de projet",
+            "location": "Mérignac",
+            "companyUrl": "",
+            "startDate": "2014-06",
+            "endDate": "2016-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Coordination de déploiements de fibre sur 20 sites professionnels avec les équipes terrain et les services de voirie"
+                },
+                {
+                    "text": "Mise à jour du planning et du suivi budgétaire, préparation des points d'avancement hebdomadaires"
+                },
+                {
+                    "text": "Organisation des réunions avec les prestataires et suivi des actions jusqu'à leur clôture"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "KEDGE Business School",
+            "degree": "Master en management",
+            "fieldOfStudy": "",
+            "location": "Bordeaux",
+            "startDate": "2010-08",
+            "endDate": "2014-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Compagnons Bâtisseurs Nouvelle-Aquitaine",
+            "organizationUrl": "",
+            "position": "Coordinateur bénévole de chantiers",
+            "location": "Bordeaux",
+            "startDate": "2019-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Planification des équipes de bénévoles et des livraisons de matériaux pour des chantiers de rénovation le week-end.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Méthodes",
+            "description": "Cycle en V, Agile, Scrum, approche hybride, pilotage des prestataires"
+        },
+        {
+            "title": "Pilotage",
+            "description": "Budgets jusqu'à 5 M€, registre des risques, gestion des changements, reporting"
+        },
+        {
+            "title": "Outils",
+            "description": "Jira, Confluence, MS Project, Smartsheet, Excel"
+        },
+        {
+            "title": "Secteurs",
+            "description": "Santé, logistique, télécoms"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Français",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Anglais",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Espagnol",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Project Management Professional (PMP)",
+            "issuer": "PMI",
+            "date": "2018-10",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified ScrumMaster (CSM)",
+            "issuer": "Scrum Alliance",
+            "date": "2017-04",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "PRINCE2 Foundation",
+            "issuer": "AXELOS",
+            "date": "2021-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 6,
+        "volunteering": 5,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

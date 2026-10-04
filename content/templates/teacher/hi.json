@@ -1,0 +1,199 @@
+{
+    "version": "v1",
+    "firstName": "सुनीता",
+    "lastName": "वर्मा",
+    "email": "sunita.verma@example.com",
+    "phone": "+91 90000 45678",
+    "position": "TGT विज्ञान",
+    "location": "जयपुर, राजस्थान",
+    "summary": "बारह साल से कक्षा में पढ़ा रही हूँ, पिछले नौ साल से कक्षा 6 से 8 को विज्ञान। प्रयोग पर आधारित इकाइयाँ बनाती हूँ, हर कुछ हफ़्तों में मूल्यांकन के आधार पर छात्रों के समूह बदलती हूँ और विशेष शिक्षक के साथ मिलकर काम करती हूँ ताकि हर छात्र भाग ले सके।",
+    "experiences": [
+        {
+            "company": "अरावली पब्लिक स्कूल (CBSE)",
+            "position": "TGT विज्ञान, कक्षा 7 और 8",
+            "location": "जयपुर, राजस्थान",
+            "companyUrl": "",
+            "startDate": "2019-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "भौतिक और जीव विज्ञान के पाँच सेक्शन, हर साल लगभग 140 छात्र।",
+            "achievements": [
+                {
+                    "text": "कक्षा 8 विज्ञान की इकाइयाँ साप्ताहिक प्रयोगों के आसपास दोबारा बनाईं; दो साल में 60% से ज़्यादा अंक लाने वाले छात्रों का हिस्सा 61% से बढ़कर 74% हुआ"
+                },
+                {
+                    "text": "2022 से विज्ञान विभाग प्रमुख: हर महीने योजना बैठक और साझा मूल्यांकन का तालमेल"
+                },
+                {
+                    "text": "एक समावेशी सेक्शन में विशेष शिक्षक के साथ पढ़ाती हूँ और ज़रूरत वाले छात्रों के लिए पढ़ाई में बदलाव लिखती हूँ"
+                },
+                {
+                    "text": "स्कूल के बाद रोबोटिक्स क्लब शुरू किया, जिसमें अब 25 सदस्य हैं और जो क्षेत्रीय प्रतियोगिता में भाग लेता है"
+                }
+            ]
+        },
+        {
+            "company": "ज्ञानदीप विद्यालय",
+            "position": "TGT विज्ञान, कक्षा 6",
+            "location": "अजमेर, राजस्थान",
+            "companyUrl": "",
+            "startDate": "2016-08",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "लगभग 28 छात्रों वाले चार सेक्शन को जीव और पर्यावरण विज्ञान पढ़ाया"
+                },
+                {
+                    "text": "अभिभावक संघ के साथ मिलकर स्कूल के बगीचे पर एक इकाई बनाई, जो अब भी कक्षा 6 के पाठ्यक्रम का हिस्सा है"
+                },
+                {
+                    "text": "दो B.Ed इंटर्न की मेंटर रही"
+                }
+            ]
+        },
+        {
+            "company": "बाल भारती प्राथमिक विद्यालय",
+            "position": "कक्षा 5 शिक्षिका (PRT)",
+            "location": "अजमेर, राजस्थान",
+            "companyUrl": "",
+            "startDate": "2013-08",
+            "endDate": "2016-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "27 छात्रों की कक्षा को सभी मुख्य विषय पढ़ाए"
+                },
+                {
+                    "text": "हर हफ़्ते पढ़ने की बातचीत और अभिभावकों के साथ पढ़ाई का रजिस्टर शुरू किया"
+                },
+                {
+                    "text": "कक्षा 5 की टीम को साझा इकाई योजना और एक जैसे मूल्यांकन पर लाने का काम लीड किया"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "राजस्थान विश्वविद्यालय",
+            "degree": "एम.एड",
+            "fieldOfStudy": "",
+            "location": "जयपुर, राजस्थान",
+            "startDate": "2018-08",
+            "endDate": "2020-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        },
+        {
+            "institution": "क्षेत्रीय शिक्षा संस्थान, अजमेर",
+            "degree": "बी.एससी. बी.एड (चार वर्षीय एकीकृत)",
+            "fieldOfStudy": "",
+            "location": "अजमेर, राजस्थान",
+            "startDate": "2009-08",
+            "endDate": "2013-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "जयपुर समर STEM कैंप",
+            "organizationUrl": "",
+            "position": "मुख्य प्रशिक्षक",
+            "location": "जयपुर, राजस्थान",
+            "startDate": "2018-06",
+            "endDate": "",
+            "isPresent": true,
+            "description": "हर गर्मी में 40 छात्रों के लिए दो हफ़्ते का इंजीनियरिंग कैंप बनाती और पढ़ाती हूँ।",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "पढ़ाना",
+            "description": "प्रयोग आधारित विज्ञान, अलग-अलग स्तर के लिए पढ़ाई, लगातार मूल्यांकन, साथ मिलकर पढ़ाना"
+        },
+        {
+            "title": "कक्षा",
+            "description": "सकारात्मक अनुशासन, छोटे समूह, अभिभावकों से बातचीत"
+        },
+        {
+            "title": "टूल",
+            "description": "Google Classroom, स्मार्ट बोर्ड, DIKSHA, स्कूल ERP"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "हिंदी",
+            "proficiency": "Native"
+        },
+        {
+            "name": "अंग्रेज़ी",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "संस्कृत",
+            "proficiency": "Basic"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "केंद्रीय शिक्षक पात्रता परीक्षा (CTET), पेपर 2, गणित और विज्ञान",
+            "issuer": "केंद्रीय माध्यमिक शिक्षा बोर्ड (CBSE)",
+            "date": "2021-07",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Google Certified Educator Level 1",
+            "issuer": "Google for Education",
+            "date": "2022-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [
+        {
+            "title": "डूबे या तैरे: साप्ताहिक प्रयोगों से घनत्व पढ़ाना",
+            "authors": "एस. वर्मा, आर. मीणा",
+            "venue": "राजस्थान विज्ञान शिक्षक सम्मेलन",
+            "date": "2023-11",
+            "url": "",
+            "description": "मिडिल स्कूल शिक्षकों के लिए कम ख़र्च वाले प्रयोगों पर वर्कशॉप।"
+        }
+    ],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "certificates": 1,
+        "experience": 2,
+        "education": 3,
+        "skills": 4,
+        "languages": 7,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 5
+    },
+    "sectionHeaders": {
+        "certificates": "शिक्षक पात्रता"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

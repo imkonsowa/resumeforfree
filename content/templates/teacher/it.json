@@ -1,0 +1,199 @@
+{
+    "version": "v1",
+    "firstName": "Elena",
+    "lastName": "Conti",
+    "email": "elena.conti@example.com",
+    "phone": "+39 349 012 8841",
+    "position": "Docente di Matematica e Scienze",
+    "location": "Bologna",
+    "summary": "Docente con dodici anni di insegnamento, gli ultimi nove in matematica e scienze nella scuola secondaria di primo grado. Progetto unità didattiche basate sul laboratorio, uso i dati delle verifiche per riorganizzare i gruppi ogni poche settimane e lavoro a stretto contatto con i colleghi di sostegno perché ogni studente possa partecipare.",
+    "experiences": [
+        {
+            "company": "Istituto Comprensivo Reno",
+            "position": "Docente di ruolo, Matematica e Scienze (A028)",
+            "location": "Bologna",
+            "companyUrl": "",
+            "startDate": "2019-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Tre classi tra seconda e terza media, circa 70 studenti all'anno.",
+            "achievements": [
+                {
+                    "text": "Riprogettato le unità di scienze delle classi terze attorno a un laboratorio settimanale; la quota di studenti nei livelli alti delle prove INVALSI di matematica è salita dal 31% al 42% in due anni"
+                },
+                {
+                    "text": "Coordinatrice del dipartimento di matematica e scienze dal 2022: conduco le riunioni mensili e coordino le prove comuni"
+                },
+                {
+                    "text": "Lavoro in compresenza con la docente di sostegno in una classe e contribuisco alla stesura dei PEI e dei PDP"
+                },
+                {
+                    "text": "Avviato il laboratorio pomeridiano di robotica, che oggi ha 25 iscritti e partecipa a una competizione regionale"
+                }
+            ]
+        },
+        {
+            "company": "Scuola Secondaria di Primo Grado Guercino",
+            "position": "Docente a tempo determinato, Matematica e Scienze",
+            "location": "Cento",
+            "companyUrl": "",
+            "startDate": "2016-08",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Insegnato matematica e scienze in quattro classi prime di circa 25 studenti"
+                },
+                {
+                    "text": "Creato con l'associazione dei genitori un orto didattico, ancora oggi parte del programma delle classi prime"
+                },
+                {
+                    "text": "Seguito come tutor due tirocinanti dell'Università di Ferrara"
+                }
+            ]
+        },
+        {
+            "company": "Istituto Comprensivo Ferrara 4",
+            "position": "Docente supplente, Matematica e Scienze",
+            "location": "Ferrara",
+            "companyUrl": "",
+            "startDate": "2013-08",
+            "endDate": "2016-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Supplenze annuali in classi di prima, seconda e terza media"
+                },
+                {
+                    "text": "Introdotto un quaderno di problemi settimanale e un registro di lettura scientifica condiviso con le famiglie"
+                },
+                {
+                    "text": "Contribuito alla stesura delle prove comuni d'ingresso del dipartimento"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Università di Bologna",
+            "degree": "Master di II livello in Didattica delle Scienze",
+            "fieldOfStudy": "",
+            "location": "Bologna",
+            "startDate": "2018-08",
+            "endDate": "2020-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        },
+        {
+            "institution": "Università di Ferrara",
+            "degree": "Laurea Magistrale in Scienze Biologiche",
+            "fieldOfStudy": "",
+            "location": "Ferrara",
+            "startDate": "2009-08",
+            "endDate": "2013-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "110/110 e lode",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Campus estivo STEM Bologna",
+            "organizationUrl": "",
+            "position": "Responsabile didattica",
+            "location": "Bologna",
+            "startDate": "2018-06",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Progetto e conduco ogni estate un campus di ingegneria di due settimane per 40 ragazzi.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Didattica",
+            "description": "Didattica laboratoriale, didattica inclusiva, valutazione formativa, compresenza"
+        },
+        {
+            "title": "Classe",
+            "description": "Gestione della classe, lavoro a gruppi, rapporto con le famiglie"
+        },
+        {
+            "title": "Strumenti",
+            "description": "Google Classroom, registro elettronico, GeoGebra, Desmos"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Italiano",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Inglese",
+            "proficiency": "Proficient"
+        },
+        {
+            "name": "Spagnolo",
+            "proficiency": "Basic"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Abilitazione all'insegnamento, classe di concorso A028 Matematica e Scienze",
+            "issuer": "Ministero dell'Istruzione e del Merito",
+            "date": "2021-07",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Google Certified Educator Level 1",
+            "issuer": "Google for Education",
+            "date": "2022-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [
+        {
+            "title": "Galleggia o affonda? La densità in laboratorio ogni settimana",
+            "authors": "E. Conti, L. Benassi",
+            "venue": "Convegno nazionale di didattica delle scienze, Bologna",
+            "date": "2023-11",
+            "url": "",
+            "description": "Laboratorio per docenti della secondaria di primo grado su attività sperimentali a basso costo."
+        }
+    ],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "certificates": 1,
+        "experience": 2,
+        "education": 3,
+        "skills": 4,
+        "languages": 7,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 5
+    },
+    "sectionHeaders": {
+        "certificates": "Abilitazione"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

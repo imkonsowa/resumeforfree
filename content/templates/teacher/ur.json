@@ -1,0 +1,192 @@
+{
+    "version": "v1",
+    "firstName": "سارہ",
+    "lastName": "ملک",
+    "email": "sara.malik@example.com",
+    "phone": "+92 302 0128841",
+    "position": "سائنس ٹیچر، مڈل اسکول",
+    "location": "لاہور، پاکستان",
+    "summary": "بارہ سال کا تدریسی تجربہ رکھنے والی استاد، جن میں پچھلے نو سال جماعت ششم سے ہشتم تک سائنس پڑھائی۔ عملی تجربات پر مبنی یونٹس بناتی ہوں، ٹیسٹ کے نتائج دیکھ کر ہر چند ہفتوں بعد طلبہ کے گروپ بدلتی ہوں اور خصوصی ضروریات والے بچوں کے لیے اسپیشل ایجوکیشن اسٹاف کے ساتھ مل کر کام کرتی ہوں۔",
+    "experiences": [
+        {
+            "company": "دی گرین فیلڈ اسکول",
+            "position": "سائنس ٹیچر، جماعت ہفتم اور ہشتم",
+            "location": "لاہور",
+            "companyUrl": "",
+            "startDate": "2019-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "فزکس اور بائیولوجی کے پانچ سیکشنز، سالانہ تقریباً 140 طلبہ۔",
+            "achievements": [
+                {
+                    "text": "جماعت ہشتم کی فزکس کے یونٹس ہفتہ وار لیب سرگرمیوں کے گرد دوبارہ لکھے؛ دو سال میں سالانہ امتحان میں A اور B گریڈ لینے والے طلبہ 61 سے بڑھ کر 74 فیصد ہو گئے"
+                },
+                {
+                    "text": "2022 سے سائنس ڈیپارٹمنٹ کی سربراہ: ماہانہ پلاننگ میٹنگز اور مشترکہ ٹیسٹس کا انتظام"
+                },
+                {
+                    "text": "خصوصی ضروریات والے طلبہ کے ایک سیکشن میں اسپیشل ایجوکیشن ٹیچر کے ساتھ مل کر پڑھاتی ہوں اور ہر بچے کے لیے سہولیات کا منصوبہ لکھتی ہوں"
+                },
+                {
+                    "text": "اسکول کے بعد روبوٹکس کلب شروع کیا جس کے اب 25 ارکان ہیں اور جو شہر کے انٹر اسکول مقابلے میں حصہ لیتا ہے"
+                }
+            ]
+        },
+        {
+            "company": "ایلم ووڈ گرامر اسکول",
+            "position": "سائنس ٹیچر، جماعت ششم",
+            "location": "لاہور",
+            "companyUrl": "",
+            "startDate": "2016-08",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "تقریباً 28 طلبہ کے چار سیکشنز کو جنرل سائنس پڑھائی"
+                },
+                {
+                    "text": "والدین کی کمیٹی کے ساتھ مل کر اسکول گارڈن کا یونٹ بنایا جو آج بھی جماعت ششم کے نصاب کا حصہ ہے"
+                },
+                {
+                    "text": "یونیورسٹی آف ایجوکیشن کے دو ٹیچنگ پریکٹس طلبہ کی رہنمائی کی"
+                }
+            ]
+        },
+        {
+            "company": "الفلاح پبلک اسکول",
+            "position": "جماعت پنجم کی کلاس ٹیچر",
+            "location": "گوجرانوالہ",
+            "companyUrl": "",
+            "startDate": "2013-08",
+            "endDate": "2016-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "27 طلبہ کی کلاس کو تمام بنیادی مضامین پڑھائے"
+                },
+                {
+                    "text": "ہفتہ وار ریڈنگ سیشن اور والدین کے لیے پڑھائی کا ریکارڈ شروع کیا"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "انسٹی ٹیوٹ آف ایجوکیشن اینڈ ریسرچ، پنجاب یونیورسٹی",
+            "degree": "ایم ایڈ",
+            "fieldOfStudy": "",
+            "location": "لاہور",
+            "startDate": "2018-08",
+            "endDate": "2020-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        },
+        {
+            "institution": "یونیورسٹی آف ایجوکیشن",
+            "degree": "بی ایس (آنرز) ایجوکیشن",
+            "fieldOfStudy": "",
+            "location": "لاہور",
+            "startDate": "2009-08",
+            "endDate": "2013-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "سمر STEM کیمپ لاہور",
+            "organizationUrl": "",
+            "position": "لیڈ انسٹرکٹر",
+            "location": "لاہور",
+            "startDate": "2018-06",
+            "endDate": "",
+            "isPresent": true,
+            "description": "ہر گرمیوں میں 40 طلبہ کے لیے دو ہفتے کا انجینئرنگ کیمپ تیار کرتی اور پڑھاتی ہوں۔",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "تدریس",
+            "description": "لیب پر مبنی سائنس، مختلف سطح کے طلبہ کے لیے تدریس، مسلسل جانچ، مشترکہ تدریس"
+        },
+        {
+            "title": "کلاس روم",
+            "description": "مثبت نظم و ضبط، چھوٹے گروپس میں کام، والدین سے رابطہ"
+        },
+        {
+            "title": "ٹولز",
+            "description": "Google Classroom، Microsoft Teams، اسکول کا LMS"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "اردو",
+            "proficiency": "Native"
+        },
+        {
+            "name": "انگریزی",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "O Level فزکس تدریسی ورکشاپ",
+            "issuer": "Cambridge International",
+            "date": "2021-07",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Google Certified Educator Level 1",
+            "issuer": "Google for Education",
+            "date": "2022-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [
+        {
+            "title": "ڈوبنا یا تیرنا: ہفتہ وار لیب کے ذریعے کثافت کی تدریس",
+            "authors": "س۔ ملک، ع۔ رضا",
+            "venue": "سائنس اساتذہ کی سالانہ کانفرنس، لاہور",
+            "date": "2023-11",
+            "url": "",
+            "description": "مڈل اسکول کے اساتذہ کے لیے کم خرچ لیب سرگرمیوں پر ورکشاپ۔"
+        }
+    ],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "certificates": 1,
+        "experience": 2,
+        "education": 3,
+        "skills": 4,
+        "languages": 7,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 5
+    },
+    "sectionHeaders": {
+        "certificates": "تدریسی تربیت"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

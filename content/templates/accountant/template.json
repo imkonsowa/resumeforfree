@@ -1,0 +1,30 @@
+{
+    "category": "finance",
+    "layout": "default",
+    "updatedAt": "2026-10-04",
+    "related": [
+        "project-manager",
+        "software-engineer"
+    ],
+    "settings": {
+        "fontSize": 11,
+        "headingColor": "#374151"
+    },
+    "localeSettings": {
+        "ar": {
+            "fontSize": 9.5,
+            "sectionSpacing": 0.9,
+            "itemSpacing": 0.5
+        },
+        "de": {
+            "fontSize": 10.5,
+            "sectionSpacing": 1.0,
+            "itemSpacing": 0.6
+        },
+        "ur": {
+            "fontSize": 9.5,
+            "sectionSpacing": 0.9,
+            "itemSpacing": 0.5
+        }
+    }
+}

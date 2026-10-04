@@ -1,0 +1,34 @@
+{
+    "category": "technology",
+    "layout": "ats-friendly",
+    "updatedAt": "2026-10-04",
+    "related": [
+        "project-manager",
+        "student"
+    ],
+    "settings": {
+        "fontSize": 11,
+        "headingColor": "#1d4ed8"
+    },
+    "localeSettings": {
+        "ar": {
+            "fontSize": 9.5,
+            "sectionSpacing": 0.9,
+            "itemSpacing": 0.5
+        },
+        "de": {
+            "fontSize": 10.5
+        },
+        "fr": {
+            "fontSize": 10.5
+        },
+        "it": {
+            "fontSize": 10.5
+        },
+        "ur": {
+            "fontSize": 9.5,
+            "sectionSpacing": 0.9,
+            "itemSpacing": 0.5
+        }
+    }
+}

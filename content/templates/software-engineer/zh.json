@@ -1,0 +1,203 @@
+{
+    "version": "v1",
+    "firstName": "陈浩然",
+    "lastName": "",
+    "email": "chen.haoran@example.com",
+    "phone": "+86 138 0013 4521",
+    "position": "高级软件工程师",
+    "location": "杭州",
+    "summary": "后端工程师，九年支付、物流和订单系统开发经验，主要使用 Go 和 TypeScript。习惯从方案评审到线上值班完整负责一个服务，重视清晰的接口、稳定的发布和后来人看得懂的代码。",
+    "experiences": [
+        {
+            "company": "云栖商城科技有限公司",
+            "position": "高级软件工程师",
+            "location": "杭州",
+            "companyUrl": "",
+            "startDate": "2022-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "主导结账单体应用拆分为四个 Go 服务，通过功能开关逐步上线，期间用户侧没有停机"
+                },
+                {
+                    "text": "缓存价格规则并去掉两个同步调用，结账 P95 延迟从 900 ms 降到 240 ms"
+                },
+                {
+                    "text": "设计银行卡支付的幂等层，重试时不再出现重复扣款"
+                },
+                {
+                    "text": "带三名工程师，主持支付组每周的技术方案评审"
+                }
+            ]
+        },
+        {
+            "company": "远航物流信息技术有限公司",
+            "position": "软件工程师",
+            "location": "上海",
+            "companyUrl": "",
+            "startDate": "2019-06",
+            "endDate": "2022-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "用 TypeScript 和 Node.js 开发运单跟踪 API，接入 40 家合作承运商"
+                },
+                {
+                    "text": "把夜间批处理任务改为事件队列，客户看到状态更新的时间从第二天早上缩短到几分钟"
+                },
+                {
+                    "text": "在服务之间加入契约测试，发布失败从每周都有变成很少发生"
+                },
+                {
+                    "text": "负责三个 PostgreSQL 集群从 10 升级到 14，只读窗口控制在五分钟以内"
+                }
+            ]
+        },
+        {
+            "company": "松石软件有限公司",
+            "position": "初级软件工程师",
+            "location": "上海",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2019-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "用 Python 和 Django 为销售和客服团队开发内部报表工具"
+                },
+                {
+                    "text": "为计费模块写了第一套自动化测试，在发布前发现了多处回归问题"
+                },
+                {
+                    "text": "第二年起参与线上值班，为最常见的告警编写处理手册"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "浙江大学",
+            "degree": "计算机科学与技术 本科",
+            "fieldOfStudy": "",
+            "location": "杭州",
+            "startDate": "2013-09",
+            "endDate": "2017-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "杭州开发者互助社区",
+            "organizationUrl": "",
+            "position": "志愿导师",
+            "location": "杭州",
+            "startDate": "2021-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "为转行学习后端开发的学员做代码评审和模拟面试。",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "编程语言",
+            "description": "Go、TypeScript、Python、SQL"
+        },
+        {
+            "title": "后端",
+            "description": "REST 和 gRPC 接口、PostgreSQL、Redis、Kafka"
+        },
+        {
+            "title": "基础设施",
+            "description": "阿里云、AWS、Docker、Kubernetes、Terraform、GitLab CI"
+        },
+        {
+            "title": "工程实践",
+            "description": "系统设计、代码评审、可观测性、故障处理"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "pgmigrate",
+            "description": "一个开源小工具，用于在 CI 中安全执行 PostgreSQL 数据库迁移。",
+            "links": [
+                {
+                    "url": "https://github.com/example/pgmigrate",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2021-01",
+            "endDate": "",
+            "isPresent": true,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "中文",
+            "proficiency": "Native"
+        },
+        {
+            "name": "英语",
+            "proficiency": "Proficient"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "AWS Certified Developer - Associate",
+            "issuer": "Amazon Web Services",
+            "date": "2023-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified Kubernetes Application Developer (CKAD)",
+            "issuer": "The Linux Foundation",
+            "date": "2024-04",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "projects": 3,
+        "education": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "volunteering": 7,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

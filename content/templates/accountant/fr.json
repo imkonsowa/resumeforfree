@@ -1,0 +1,187 @@
+{
+    "version": "v1",
+    "firstName": "Claire",
+    "lastName": "Dumas",
+    "email": "claire.dumas@example.com",
+    "phone": "+33 6 34 56 78 90",
+    "position": "Comptable confirmée, DSCG",
+    "location": "Paris",
+    "summary": "Comptable titulaire du DSCG avec dix ans d'expérience en entreprise et en cabinet d'audit. Je réalise les clôtures mensuelles d'un groupe de cinq sociétés, je tiens des comptes propres et j'aime supprimer les étapes manuelles qui ralentissent une clôture.",
+    "experiences": [
+        {
+            "company": "Groupe Nordal Alimentaire",
+            "position": "Comptable confirmée",
+            "location": "Paris",
+            "companyUrl": "",
+            "startDate": "2021-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Clôtures mensuelles de cinq sociétés françaises et éliminations intragroupe"
+                },
+                {
+                    "text": "Clôture ramenée de neuf à six jours ouvrés grâce à l'automatisation des provisions dans l'ERP et à un calendrier fixe"
+                },
+                {
+                    "text": "Préparation des dossiers pour le commissaire aux comptes ; aucun ajustement sur mes cycles lors des deux derniers exercices"
+                },
+                {
+                    "text": "Création du fichier des immobilisations dans l'ERP, en remplacement du tableur historique"
+                },
+                {
+                    "text": "Revue mensuelle des écarts avec le contrôle de gestion et explication des variations de marge brute à la direction financière"
+                }
+            ]
+        },
+        {
+            "company": "Halle & Morel Audit",
+            "position": "Auditrice senior",
+            "location": "Paris",
+            "companyUrl": "",
+            "startDate": "2017-09",
+            "endDate": "2021-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Responsable de missions d'audit légal pour des clients industriels et de distribution jusqu'à 400 M€ de chiffre d'affaires"
+                },
+                {
+                    "text": "Revue des cycles ventes, stocks et paie et rédaction des recommandations de contrôle interne"
+                },
+                {
+                    "text": "Encadrement d'équipes de deux à quatre auditeurs juniors par mission"
+                }
+            ]
+        },
+        {
+            "company": "Cabinet Garnier Associés",
+            "position": "Auditrice junior",
+            "location": "Lille",
+            "companyUrl": "",
+            "startDate": "2015-09",
+            "endDate": "2017-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Contrôles de substance sur la trésorerie, les créances et les immobilisations pour des associations et des PME industrielles"
+                },
+                {
+                    "text": "Préparation des feuilles de travail et des rapprochements revus par les seniors et managers"
+                },
+                {
+                    "text": "Participation aux inventaires physiques de fin d'exercice dans les entrepôts des clients"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "IAE Lille",
+            "degree": "Master Comptabilité, Contrôle, Audit (CCA)",
+            "fieldOfStudy": "",
+            "location": "Lille",
+            "startDate": "2011-08",
+            "endDate": "2015-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Crésus",
+            "organizationUrl": "",
+            "position": "Bénévole en accompagnement budgétaire",
+            "location": "Paris",
+            "startDate": "2019-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Aide aux familles en difficulté pour établir leur budget et préparer leurs démarches administratives.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Comptabilité",
+            "description": "Normes françaises et IFRS, clôtures, rapprochements, provisions, intragroupe, immobilisations"
+        },
+        {
+            "title": "Logiciels",
+            "description": "SAP, Sage, Cegid, Pennylane"
+        },
+        {
+            "title": "Excel",
+            "description": "Tableaux croisés dynamiques, RECHERCHEX, Power Query"
+        },
+        {
+            "title": "Reporting",
+            "description": "Consolidation, reporting de gestion, Power BI, analyse des écarts"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Déploiement de l'ERP SAP",
+            "description": "Référente finance du passage de Sage à SAP pour le groupe : conception du plan de comptes, reprise des données et formation de 12 utilisateurs.",
+            "links": [],
+            "startDate": "2021-04",
+            "endDate": "2021-12",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Français",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Anglais",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Diplôme supérieur de comptabilité et de gestion (DSCG)",
+            "issuer": "Ministère de l'Enseignement supérieur",
+            "date": "2019-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "volunteering": 4,
+        "skills": 5,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "projects": 3,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

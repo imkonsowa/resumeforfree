@@ -1,0 +1,182 @@
+{
+    "version": "v1",
+    "firstName": "Sophie",
+    "lastName": "Krämer",
+    "email": "sophie.kraemer@example.com",
+    "phone": "+49 176 4455 6677",
+    "position": "Informatikstudentin",
+    "location": "Karlsruhe",
+    "summary": "Informatikstudentin im dritten Studienjahr, suche ein Praktikum in der Softwareentwicklung für den Sommer 2027. Ich habe zwei Full-Stack-Projekte gebaut, betreue als Tutorin Erstsemester beim Programmieren und arbeite als Werkstudentin im IT-Servicedesk.",
+    "experiences": [
+        {
+            "company": "Karlsruher Institut für Technologie, IT-Servicedesk",
+            "position": "Werkstudentin",
+            "location": "Karlsruhe",
+            "companyUrl": "",
+            "startDate": "2025-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Bearbeite rund 40 Anfragen pro Woche von Studierenden und Beschäftigten zu Konten, WLAN und Laptops"
+                },
+                {
+                    "text": "Acht Anleitungen für die Wissensdatenbank geschrieben; zwei gehören zu den meistgelesenen Seiten"
+                }
+            ]
+        },
+        {
+            "company": "KIT-Fakultät für Informatik",
+            "position": "Tutorin, Grundlagen der Programmierung",
+            "location": "Karlsruhe",
+            "companyUrl": "",
+            "startDate": "2024-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Leite zwei offene Übungsstunden pro Woche zu Python und Fehlersuche"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Karlsruher Institut für Technologie (KIT)",
+            "degree": "B.Sc. Informatik",
+            "fieldOfStudy": "",
+            "location": "Karlsruhe",
+            "startDate": "2023-08",
+            "endDate": "2027-05",
+            "isPresent": false,
+            "description": "Relevante Module: Algorithmen und Datenstrukturen, Datenbanksysteme, Betriebssysteme, Softwaretechnik, Webentwicklung.",
+            "graduationScore": "1,7 (aktueller Schnitt)",
+            "achievements": [
+                {
+                    "text": "Deutschlandstipendium seit 2024"
+                }
+            ]
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Jugendzentrum Weststadt",
+            "organizationUrl": "",
+            "position": "Ehrenamtliche Kursleiterin",
+            "location": "Karlsruhe",
+            "startDate": "2024-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Wöchentliche Programmierkurse mit Scratch und Python für Kinder von 11 bis 14 Jahren.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Sprachen",
+            "description": "Python, Java, JavaScript, SQL"
+        },
+        {
+            "title": "Web",
+            "description": "React, Node.js, Express, HTML, CSS"
+        },
+        {
+            "title": "Werkzeuge",
+            "description": "Git, GitHub, VS Code, Linux-Kommandozeile"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Lernraum-Finder",
+            "description": "Web-App, die freie Lernräume auf dem Campus in Echtzeit anzeigt, gebaut mit React, Node.js und PostgreSQL. Rund 300 Studierende haben sie in der Prüfungsphase genutzt.",
+            "links": [
+                {
+                    "url": "https://github.com/example/lernraum-finder",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2025-02",
+            "endDate": "2025-05",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "WG-Kasse",
+            "description": "Android-App zum Aufteilen gemeinsamer Ausgaben in einer WG. Teamprojekt im Praktikum Mobile Anwendungen; ich habe die Synchronisation mit Firebase gebaut.",
+            "links": [],
+            "startDate": "2024-09",
+            "endDate": "2024-12",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Campus-Mensa-Radar",
+            "description": "Hackathon-Projekt beim HackKIT 2024: eine Karte mit kostenlosen Essensangeboten auf dem Campus. Mit einem Viererteam den Social-Impact-Preis gewonnen; ich habe die API gebaut.",
+            "links": [],
+            "startDate": "2024-10",
+            "endDate": "2024-10",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Deutsch",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Englisch",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Französisch",
+            "proficiency": "Basic"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "AWS Certified Cloud Practitioner",
+            "issuer": "Amazon Web Services",
+            "date": "2025-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "education": 1,
+        "projects": 2,
+        "experience": 3,
+        "skills": 4,
+        "volunteering": 6,
+        "languages": 7,
+        "internships": 7,
+        "certificates": 5,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

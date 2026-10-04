@@ -1,0 +1,185 @@
+{
+    "version": "v1",
+    "firstName": "李思琪",
+    "lastName": "",
+    "email": "li.siqi@example.com",
+    "phone": "+86 159 0027 4413",
+    "position": "计算机专业在校生",
+    "location": "武汉",
+    "summary": "计算机科学与技术专业大三学生，寻找 2027 年暑期软件开发实习。独立做过两个全栈项目，为低年级同学做编程辅导，课余在学校网络中心勤工助学。",
+    "experiences": [
+        {
+            "company": "华中科技大学网络与计算中心",
+            "position": "学生助理（勤工助学）",
+            "location": "武汉",
+            "companyUrl": "",
+            "startDate": "2025-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "每周处理约 40 个师生的账号、校园网和电脑问题"
+                },
+                {
+                    "text": "为服务台知识库写了八篇操作指南，其中两篇是浏览量最高的页面"
+                }
+            ]
+        },
+        {
+            "company": "计算机科学与技术学院",
+            "position": "程序设计基础课程朋辈辅导员",
+            "location": "武汉",
+            "companyUrl": "",
+            "startDate": "2024-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "每周开设两次 Python 和调试答疑辅导"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "华中科技大学",
+            "degree": "计算机科学与技术 本科",
+            "fieldOfStudy": "",
+            "location": "武汉",
+            "startDate": "2023-09",
+            "endDate": "2027-06",
+            "isPresent": false,
+            "description": "主修课程：数据结构、算法设计、数据库系统、操作系统、Web 开发。",
+            "graduationScore": "3.7 / 4.0（专业前 15%）",
+            "achievements": [
+                {
+                    "text": "校级一等奖学金，两次"
+                }
+            ]
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "编程启蒙公益课堂",
+            "organizationUrl": "",
+            "position": "志愿讲师",
+            "location": "武汉",
+            "startDate": "2024-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "每周为社区初中生讲授 Scratch 和 Python 入门课。",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "编程语言",
+            "description": "Python、Java、JavaScript、SQL"
+        },
+        {
+            "title": "开发",
+            "description": "微信小程序、Node.js、Express、HTML、CSS"
+        },
+        {
+            "title": "工具",
+            "description": "Git、GitHub、VS Code、Linux 命令行"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "自习室实时查询小程序",
+            "description": "实时显示校内空闲自习室的微信小程序，使用 Node.js 和 PostgreSQL 开发。期末周约有 300 名同学使用。",
+            "links": [
+                {
+                    "url": "https://github.com/example/studyspot",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2025-02",
+            "endDate": "2025-05",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "合租记账 App",
+            "description": "帮助室友分摊共同开销的 Android 应用。移动开发课程的小组项目，我负责基于 Firebase 的数据同步。",
+            "links": [],
+            "startDate": "2024-09",
+            "endDate": "2024-12",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "校园爱心食堂地图",
+            "description": "2024 年校园黑客松作品：在地图上标出校内免费餐食活动。四人团队获得社会价值奖，我负责后端接口。",
+            "links": [],
+            "startDate": "2024-10",
+            "endDate": "2024-10",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "中文",
+            "proficiency": "Native"
+        },
+        {
+            "name": "英语",
+            "proficiency": "Proficient"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "大学英语六级（CET-6）",
+            "issuer": "教育部教育考试院",
+            "date": "2024-12",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "阿里云云计算工程师认证（ACA）",
+            "issuer": "阿里云",
+            "date": "2025-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "education": 1,
+        "projects": 2,
+        "experience": 3,
+        "skills": 4,
+        "volunteering": 6,
+        "languages": 7,
+        "internships": 7,
+        "certificates": 5,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

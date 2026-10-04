@@ -1,0 +1,185 @@
+{
+    "version": "v1",
+    "firstName": "Lena",
+    "lastName": "Hoffmann",
+    "email": "lena.hoffmann@example.com",
+    "phone": "+49 160 9876 5432",
+    "position": "Pflegefachfrau, Allgemeine Innere Medizin",
+    "location": "Hannover",
+    "summary": "Examinierte Pflegefachkraft mit sechs Jahren Erfahrung auf einer internistischen Normalstation und in der Überwachung. Sicher in der Schichtleitung, ruhig bei Notfällen und geduldig mit Angehörigen, die viele Fragen haben. Praxisanleiterin für Auszubildende.",
+    "experiences": [
+        {
+            "company": "Klinikum Nordstadt",
+            "position": "Pflegefachfrau, Allgemeine Innere Medizin",
+            "location": "Hannover",
+            "companyUrl": "",
+            "startDate": "2021-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Internistische Station mit 36 Betten, Drei-Schicht-System.",
+            "achievements": [
+                {
+                    "text": "Schichtleitung an zwei Diensten pro Woche: Patientenverteilung, Aufnahmen und Entlassungen, Unterstützung neuer Kolleginnen und Kollegen"
+                },
+                {
+                    "text": "Als Praxisanleiterin acht Auszubildende durch ihre Praxiseinsätze auf der Station begleitet"
+                },
+                {
+                    "text": "Mitglied der Arbeitsgruppe Sturzprophylaxe, stündliche Rundgänge und Kontrolle der Bettalarme mit eingeführt"
+                },
+                {
+                    "text": "Key-User bei der Einführung der elektronischen Pflegedokumentation, 30 Kolleginnen und Kollegen geschult"
+                }
+            ]
+        },
+        {
+            "company": "St. Elisabeth Krankenhaus",
+            "position": "Gesundheits- und Krankenpflegerin, Kardiologie",
+            "location": "Braunschweig",
+            "companyUrl": "",
+            "startDate": "2019-07",
+            "endDate": "2021-03",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Versorgung kardiologischer Patientinnen und Patienten am Monitor, unter anderem nach Herzkatheter und bei Herzinsuffizienz"
+                },
+                {
+                    "text": "Herzrhythmusstörungen erkannt und bei Bedarf das Notfallteam alarmiert"
+                },
+                {
+                    "text": "Patientinnen und Patienten mit Herzinsuffizienz vor der Entlassung zu täglichem Wiegen, Trinkmenge und Medikamenteneinnahme geschult"
+                }
+            ]
+        },
+        {
+            "company": "Klinikum Braunschweig Süd",
+            "position": "Pflegehelferin (Teilzeit während der Ausbildung)",
+            "location": "Braunschweig",
+            "companyUrl": "",
+            "startDate": "2017-05",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Vitalzeichen und Blutzucker gemessen, bei Mobilisation und Körperpflege unterstützt"
+                },
+                {
+                    "text": "Veränderungen im Zustand der Patienten an die zuständige Pflegefachkraft gemeldet und elektronisch dokumentiert"
+                },
+                {
+                    "text": "Neue Pflegehelferinnen und Pflegehelfer in Stationsabläufe und rückenschonendes Arbeiten eingearbeitet"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Bildungszentrum für Pflegeberufe Braunschweig",
+            "degree": "Ausbildung zur Gesundheits- und Krankenpflegerin",
+            "fieldOfStudy": "",
+            "location": "Braunschweig",
+            "startDate": "2015-08",
+            "endDate": "2019-05",
+            "isPresent": false,
+            "description": "Praxiseinsätze in Innerer Medizin, Chirurgie, Pädiatrie, Psychiatrie und ambulanter Pflege.",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Gesundheitstag der Stadtteile",
+            "organizationUrl": "",
+            "position": "Ehrenamtliche Pflegekraft",
+            "location": "Hannover",
+            "startDate": "2022-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Blutdruck- und Blutzuckermessungen zweimal im Jahr.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Pflege",
+            "description": "Pflegeanamnese, Infusionstherapie, Wundversorgung, Monitoring, Medikamentengabe"
+        },
+        {
+            "title": "Systeme",
+            "description": "ORBIS, elektronische Pflegedokumentation, Infusionspumpen"
+        },
+        {
+            "title": "Leitung",
+            "description": "Schichtleitung, Praxisanleitung, Arbeitsgruppe Sturzprophylaxe"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Deutsch",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Englisch",
+            "proficiency": "Proficient"
+        },
+        {
+            "name": "Polnisch",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Erlaubnis zur Führung der Berufsbezeichnung Gesundheits- und Krankenpflegerin",
+            "issuer": "Staatliche Prüfung, Niedersachsen",
+            "date": "2019-06",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Weiterbildung zur Praxisanleiterin",
+            "issuer": "Bildungszentrum für Pflegeberufe Braunschweig",
+            "date": "2022-06",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Reanimationstraining Basic Life Support",
+            "issuer": "Klinikum Nordstadt",
+            "date": "2025-01",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "certificates": 1,
+        "experience": 2,
+        "education": 3,
+        "skills": 4,
+        "languages": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "Berufserlaubnis & Weiterbildungen"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

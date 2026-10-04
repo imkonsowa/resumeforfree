@@ -1,0 +1,195 @@
+{
+    "version": "v1",
+    "firstName": "بلال",
+    "lastName": "احمد",
+    "email": "bilal.ahmed@example.com",
+    "phone": "+92 345 0163305",
+    "position": "سینئر پروجیکٹ مینیجر، PMP",
+    "location": "اسلام آباد، پاکستان",
+    "summary": "صحت، لاجسٹکس اور ٹیلی کام کمپنیوں کے لیے سافٹ ویئر اور انفراسٹرکچر کے منصوبے مکمل کرنے کا بارہ سال کا تجربہ رکھنے والا پروجیکٹ مینیجر۔ 10 سے 40 افراد کے منصوبے چلاتا ہوں، بجٹ کو حقیقت کے مطابق رکھتا ہوں اور ایسی اسٹیٹس رپورٹس لکھتا ہوں جو مینجمنٹ واقعی پڑھتی ہے۔",
+    "experiences": [
+        {
+            "company": "مارگلہ ہیلتھ سسٹمز",
+            "position": "سینئر پروجیکٹ مینیجر",
+            "location": "اسلام آباد",
+            "companyUrl": "",
+            "startDate": "2020-05",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "14 کلینکس میں مریضوں کی اپائنٹمنٹ کو نئے پلیٹ فارم پر منتقل کرنے کی قیادت کی: 90 کروڑ روپے بجٹ، IT، آپریشنز اور وینڈر کے 35 افراد"
+                },
+                {
+                    "text": "کلینکس میں رول آؤٹ ایک بار کے بجائے تین مرحلوں میں کر کے سسٹم مقررہ وقت سے دو ہفتے پہلے چالو کیا"
+                },
+                {
+                    "text": "مشترکہ رسک لاگ اور ہفتہ وار اسٹیئرنگ میٹنگ شروع کی جو PMO کا معیاری طریقہ بن گئی"
+                },
+                {
+                    "text": "تین پروجیکٹ کوآرڈینیٹرز کی نگرانی کرتا ہوں اور ان کے منصوبے اور بجٹ ریویو کرتا ہوں"
+                }
+            ]
+        },
+        {
+            "company": "انڈس فریٹ",
+            "position": "پروجیکٹ مینیجر",
+            "location": "کراچی",
+            "companyUrl": "",
+            "startDate": "2016-03",
+            "endDate": "2020-04",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "چھ ڈسٹری بیوشن سینٹرز میں ویئر ہاؤس مینجمنٹ سسٹم کا رول آؤٹ چلایا"
+                },
+                {
+                    "text": "اندرونی ڈویلپمنٹ ٹیم کے لیے دو ہفتے کے sprints اور Jira میں مشترکہ backlog متعارف کرایا"
+                },
+                {
+                    "text": "وینڈر کے ساتھ change order پر بات چیت کر کے لائسنس فیس میں 5 کروڑ روپے بچائے"
+                },
+                {
+                    "text": "IT کے لیے منصوبوں کی درخواست کا پہلا باقاعدہ طریقہ بنایا جس سے ڈویلپمنٹ ٹیم کو آنے والی غیر منصوبہ بند درخواستیں تقریباً ایک تہائی کم ہو گئیں"
+                }
+            ]
+        },
+        {
+            "company": "سٹی لنک ٹیلی کام",
+            "position": "پروجیکٹ کوآرڈینیٹر",
+            "location": "راولپنڈی",
+            "companyUrl": "",
+            "startDate": "2014-06",
+            "endDate": "2016-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "20 کاروباری مقامات پر فائبر کی تنصیب کے منصوبوں میں فیلڈ ٹیموں اور اجازت دینے والے دفاتر کے ساتھ رابطہ رکھا"
+                },
+                {
+                    "text": "منصوبے کا شیڈول اور بجٹ ٹریکر تازہ رکھا اور ہفتہ وار اسٹیٹس رپورٹس تیار کیں"
+                },
+                {
+                    "text": "وینڈرز کے ساتھ میٹنگز ترتیب دیں اور طے شدہ کاموں کو مکمل ہونے تک ٹریک کیا"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "NUST بزنس اسکول",
+            "degree": "بی بی اے",
+            "fieldOfStudy": "",
+            "location": "اسلام آباد",
+            "startDate": "2010-08",
+            "endDate": "2014-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "گھر بناؤ فاؤنڈیشن",
+            "organizationUrl": "",
+            "position": "رضاکار تعمیراتی کوآرڈینیٹر",
+            "location": "اسلام آباد",
+            "startDate": "2019-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "ہفتے کے آخر میں گھروں کی تعمیر کے لیے رضاکاروں کا شیڈول اور میٹیریل کی ترسیل کا انتظام۔",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "ڈیلیوری",
+            "description": "Waterfall، Agile، Scrum، مخلوط منصوبہ بندی، وینڈر مینجمنٹ"
+        },
+        {
+            "title": "کنٹرول",
+            "description": "1.5 ارب روپے تک کے بجٹ، رسک اور مسائل کا لاگ، change control، اسٹیٹس رپورٹنگ"
+        },
+        {
+            "title": "ٹولز",
+            "description": "Jira، Confluence، MS Project، Smartsheet، Excel"
+        },
+        {
+            "title": "شعبے",
+            "description": "صحت، لاجسٹکس، ٹیلی کام"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "اردو",
+            "proficiency": "Native"
+        },
+        {
+            "name": "انگریزی",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "پشتو",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Project Management Professional (PMP)",
+            "issuer": "PMI",
+            "date": "2018-10",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified ScrumMaster (CSM)",
+            "issuer": "Scrum Alliance",
+            "date": "2017-04",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "PRINCE2 Foundation",
+            "issuer": "AXELOS",
+            "date": "2021-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 6,
+        "volunteering": 5,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

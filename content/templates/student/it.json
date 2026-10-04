@@ -1,0 +1,178 @@
+{
+    "version": "v1",
+    "firstName": "Sara",
+    "lastName": "Moretti",
+    "email": "sara.moretti@example.com",
+    "phone": "+39 348 011 6620",
+    "position": "Studentessa di Informatica",
+    "location": "Bologna",
+    "summary": "Studentessa al terzo anno di Informatica, cerco un tirocinio di sviluppo software per l'estate 2027. Ho realizzato due progetti full-stack, faccio tutorato di programmazione per le matricole e lavoro part time all'help desk informatico dell'ateneo.",
+    "experiences": [
+        {
+            "company": "Help desk informatico, Università di Bologna",
+            "position": "Collaboratrice studentesca (part time)",
+            "location": "Bologna",
+            "companyUrl": "",
+            "startDate": "2025-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Rispondo a circa 40 richieste a settimana di studenti e personale su account, Wi-Fi e portatili"
+                },
+                {
+                    "text": "Scritto otto guide per la base di conoscenza dell'help desk; due sono tra le pagine più consultate"
+                }
+            ]
+        },
+        {
+            "company": "Dipartimento di Informatica",
+            "position": "Tutor didattico, Introduzione alla programmazione",
+            "location": "Bologna",
+            "companyUrl": "",
+            "startDate": "2024-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Tengo due ricevimenti settimanali su Python e debugging per le matricole"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Università di Bologna",
+            "degree": "Laurea in Informatica",
+            "fieldOfStudy": "",
+            "location": "Bologna",
+            "startDate": "2023-08",
+            "endDate": "2027-05",
+            "isPresent": false,
+            "description": "Esami pertinenti: Algoritmi e strutture dati, Basi di dati, Sistemi operativi, Tecnologie web.",
+            "graduationScore": "Media 28/30",
+            "achievements": [
+                {
+                    "text": "Borsa di studio per merito per due anni accademici"
+                }
+            ]
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "CoderDojo Bologna",
+            "organizationUrl": "",
+            "position": "Mentor volontaria",
+            "location": "Bologna",
+            "startDate": "2024-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Ogni settimana insegno Scratch e Python a ragazzi delle scuole medie.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Linguaggi",
+            "description": "Python, Java, JavaScript, SQL"
+        },
+        {
+            "title": "Web",
+            "description": "React, Node.js, Express, HTML, CSS"
+        },
+        {
+            "title": "Strumenti",
+            "description": "Git, GitHub, VS Code, riga di comando Linux"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "StudySpot",
+            "description": "Web app che mostra in tempo reale le aule studio libere dell'ateneo, realizzata con React, Node.js e PostgreSQL. Circa 300 studenti l'hanno usata durante la sessione d'esami.",
+            "links": [
+                {
+                    "url": "https://github.com/example/studyspot",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2025-02",
+            "endDate": "2025-05",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Spese di Casa",
+            "description": "App Android per dividere le spese tra coinquilini. Progetto di gruppo per il corso di sviluppo mobile; mi sono occupata della sincronizzazione con Firebase.",
+            "links": [],
+            "startDate": "2024-09",
+            "endDate": "2024-12",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Mensa Libera",
+            "description": "Progetto realizzato a un hackathon universitario nel 2024: una mappa delle distribuzioni gratuite di cibo in città. Premio per l'impatto sociale con un team di quattro persone; ho sviluppato l'API.",
+            "links": [],
+            "startDate": "2024-10",
+            "endDate": "2024-10",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Italiano",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Inglese",
+            "proficiency": "Proficient"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "AWS Certified Cloud Practitioner",
+            "issuer": "Amazon Web Services",
+            "date": "2025-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "education": 1,
+        "projects": 2,
+        "experience": 3,
+        "skills": 4,
+        "volunteering": 6,
+        "languages": 7,
+        "internships": 7,
+        "certificates": 5,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

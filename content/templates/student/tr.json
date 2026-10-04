@@ -1,0 +1,178 @@
+{
+    "version": "v1",
+    "firstName": "Ece",
+    "lastName": "Yılmaz",
+    "email": "ece.yilmaz@example.com",
+    "phone": "+90 555 011 66 20",
+    "position": "Bilgisayar Mühendisliği Öğrencisi",
+    "location": "İzmir",
+    "summary": "2027 yazı için yazılım stajı arayan üçüncü sınıf bilgisayar mühendisliği öğrencisiyim. İki full-stack proje geliştirdim, birinci sınıf öğrencilerine programlama dersinde akran eğitmenliği yapıyorum ve kampüs bilgi işlem destek masasında yarı zamanlı çalışıyorum.",
+    "experiences": [
+        {
+            "company": "Dokuz Eylül Üniversitesi Bilgi İşlem Destek Masası",
+            "position": "Öğrenci Teknisyen (yarı zamanlı)",
+            "location": "İzmir",
+            "companyUrl": "",
+            "startDate": "2025-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Hesap, kablosuz ağ ve dizüstü bilgisayar konularında haftada yaklaşık 40 öğrenci ve personel talebine cevap veriyorum"
+                },
+                {
+                    "text": "Destek masasının bilgi bankası için sekiz nasıl yapılır yazısı hazırladım; ikisi en çok okunan sayfalar arasında"
+                }
+            ]
+        },
+        {
+            "company": "Bilgisayar Mühendisliği Bölümü",
+            "position": "Akran Eğitmeni, Programlamaya Giriş",
+            "location": "İzmir",
+            "companyUrl": "",
+            "startDate": "2024-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Python ve hata ayıklama üzerine haftada iki serbest katılımlı çalışma saati yürütüyorum"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Dokuz Eylül Üniversitesi",
+            "degree": "Bilgisayar Mühendisliği Lisans",
+            "fieldOfStudy": "",
+            "location": "İzmir",
+            "startDate": "2023-08",
+            "endDate": "2027-05",
+            "isPresent": false,
+            "description": "İlgili dersler: Veri Yapıları, Algoritmalar, Veritabanı Sistemleri, İşletim Sistemleri, Web Programlama.",
+            "graduationScore": "3,40 / 4,00",
+            "achievements": [
+                {
+                    "text": "Dört dönem yüksek onur öğrencisi"
+                }
+            ]
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Mahalle Kodlama Atölyesi",
+            "organizationUrl": "",
+            "position": "Gönüllü Eğitmen",
+            "location": "İzmir",
+            "startDate": "2024-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Ortaokul öğrencilerine her hafta Scratch ve Python dersleri veriyorum.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Programlama dilleri",
+            "description": "Python, Java, JavaScript, SQL"
+        },
+        {
+            "title": "Web",
+            "description": "React, Node.js, Express, HTML, CSS"
+        },
+        {
+            "title": "Araçlar",
+            "description": "Git, GitHub, VS Code, Linux komut satırı"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "BoşSalon",
+            "description": "Kampüsteki boş çalışma salonlarını anlık gösteren web uygulaması; React, Node.js ve PostgreSQL ile geliştirildi. Final haftasında yaklaşık 300 öğrenci kullandı.",
+            "links": [
+                {
+                    "url": "https://github.com/example/bossalon",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2025-02",
+            "endDate": "2025-05",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Ortak Kasa",
+            "description": "Ev arkadaşları arasında ortak harcamaları bölüşmek için Android uygulaması. Mobil programlama dersi için ekip projesi; Firebase senkronizasyonunu ben yazdım.",
+            "links": [],
+            "startDate": "2024-09",
+            "endDate": "2024-12",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Kampüs Yemek Haritası",
+            "description": "2024 kampüs hackathon'unda geliştirilen proje: kampüsteki ücretsiz yemek etkinliklerini gösteren bir harita. Dört kişilik ekibimizle sosyal etki ödülünü kazandık; API'yi ben yazdım.",
+            "links": [],
+            "startDate": "2024-10",
+            "endDate": "2024-10",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Türkçe",
+            "proficiency": "Native"
+        },
+        {
+            "name": "İngilizce",
+            "proficiency": "Proficient"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "AWS Certified Cloud Practitioner",
+            "issuer": "Amazon Web Services",
+            "date": "2025-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "education": 1,
+        "projects": 2,
+        "experience": 3,
+        "skills": 4,
+        "volunteering": 6,
+        "languages": 7,
+        "internships": 7,
+        "certificates": 5,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

@@ -1,0 +1,185 @@
+{
+    "version": "v1",
+    "firstName": "حمزہ",
+    "lastName": "صدیقی",
+    "email": "hamza.siddiqui@example.com",
+    "phone": "+92 300 0142290",
+    "position": "سینئر سافٹ ویئر انجینئر",
+    "location": "لاہور، پاکستان",
+    "summary": "نو سال کا تجربہ رکھنے والا بیک اینڈ انجینئر جو Go اور TypeScript میں پیمنٹ، لاجسٹکس اور آرڈر سسٹم بناتا ہے۔ کسی سروس کو ڈیزائن ریویو سے لے کر آن کال تک خود سنبھالنا پسند ہے، اور صاف API، پرسکون ڈیپلائمنٹ اور ایسا کوڈ میری ترجیح ہے جو اگلا شخص آسانی سے پڑھ سکے۔",
+    "experiences": [
+        {
+            "company": "راوی کامرس",
+            "position": "سینئر سافٹ ویئر انجینئر",
+            "location": "لاہور",
+            "companyUrl": "",
+            "startDate": "2022-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "چیک آؤٹ کے مونولتھ کو چار Go سروسز میں تقسیم کرنے کی قیادت کی، فیچر فلیگز کے ذریعے ریلیز کیا اور صارفین کو کوئی ڈاؤن ٹائم نہیں ہوا"
+                },
+                {
+                    "text": "قیمتوں کے اصول cache کر کے اور دو synchronous کالز ہٹا کر چیک آؤٹ کی p95 latency کو 900 ms سے 240 ms تک لایا"
+                },
+                {
+                    "text": "کارڈ پیمنٹس کے لیے idempotency لیئر ڈیزائن کی جس سے retry کے دوران دوہری کٹوتی ختم ہو گئی"
+                }
+            ]
+        },
+        {
+            "company": "شاہراہ لاجسٹکس",
+            "position": "سافٹ ویئر انجینئر",
+            "location": "کراچی",
+            "companyUrl": "",
+            "startDate": "2019-06",
+            "endDate": "2022-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "TypeScript اور Node.js میں شپمنٹ ٹریکنگ API بنائی جو 40 پارٹنر کیریئرز استعمال کرتے ہیں"
+                },
+                {
+                    "text": "رات کو چلنے والی batch jobs کو event queue پر منتقل کیا، اب صارفین کو اسٹیٹس اگلی صبح کے بجائے چند منٹ میں ملتا ہے"
+                },
+                {
+                    "text": "سروسز کے درمیان contract tests شامل کیے جس سے ناکام ڈیپلائمنٹ ہفتہ وار مسئلے سے کبھی کبھار کا معاملہ بن گیا"
+                },
+                {
+                    "text": "تین کلسٹرز پر Postgres کو ورژن 10 سے 14 پر اپ گریڈ کیا اور صرف پانچ منٹ سے کم وقت کے لیے ڈیٹا بیس read-only رہا"
+                }
+            ]
+        },
+        {
+            "company": "سندھ سافٹ ویئر ہاؤس",
+            "position": "جونیئر سافٹ ویئر انجینئر",
+            "location": "کراچی",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2019-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "سیلز اور سپورٹ ٹیموں کے لیے Python اور Django میں اندرونی رپورٹنگ ٹولز بنائے"
+                },
+                {
+                    "text": "بلنگ ماڈیول کے لیے پہلا خودکار test suite لکھا جس نے ریلیز سے پہلے کئی regressions پکڑے"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "FAST نیشنل یونیورسٹی",
+            "degree": "بی ایس کمپیوٹر سائنس",
+            "fieldOfStudy": "",
+            "location": "لاہور",
+            "startDate": "2013-08",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "پروگرامنگ زبانیں",
+            "description": "Go, TypeScript, Python, SQL"
+        },
+        {
+            "title": "بیک اینڈ",
+            "description": "REST اور gRPC APIs، PostgreSQL، Redis، Kafka"
+        },
+        {
+            "title": "انفراسٹرکچر",
+            "description": "AWS، Docker، Kubernetes، Terraform، GitHub Actions"
+        },
+        {
+            "title": "طریقۂ کار",
+            "description": "سسٹم ڈیزائن، کوڈ ریویو، observability، incident response"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "pgmigrate",
+            "description": "CI میں PostgreSQL migrations محفوظ طریقے سے چلانے کا چھوٹا اوپن سورس ٹول۔",
+            "links": [
+                {
+                    "url": "https://github.com/example/pgmigrate",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2021-01",
+            "endDate": "",
+            "isPresent": true,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "اردو",
+            "proficiency": "Native"
+        },
+        {
+            "name": "انگریزی",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "AWS Certified Developer - Associate",
+            "issuer": "Amazon Web Services",
+            "date": "2023-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified Kubernetes Application Developer (CKAD)",
+            "issuer": "The Linux Foundation",
+            "date": "2024-04",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "projects": 3,
+        "education": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "volunteering": 7,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

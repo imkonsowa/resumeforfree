@@ -1,0 +1,31 @@
+{
+    "category": "healthcare",
+    "layout": "simple",
+    "updatedAt": "2026-10-04",
+    "related": [
+        "teacher",
+        "student"
+    ],
+    "settings": {
+        "fontSize": 11,
+        "headingColor": "#0f766e"
+    },
+    "localeSettings": {
+        "ar": {
+            "fontSize": 9.5,
+            "sectionSpacing": 0.9,
+            "itemSpacing": 0.5
+        },
+        "de": {
+            "fontSize": 10.5
+        },
+        "tr": {
+            "fontSize": 10.5
+        },
+        "ur": {
+            "fontSize": 9.5,
+            "sectionSpacing": 0.9,
+            "itemSpacing": 0.5
+        }
+    }
+}

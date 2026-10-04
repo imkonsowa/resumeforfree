@@ -1,0 +1,188 @@
+{
+    "version": "v1",
+    "firstName": "Giulia",
+    "lastName": "Marchetti",
+    "email": "giulia.marchetti@example.com",
+    "phone": "+39 347 017 4438",
+    "position": "Infermiera, Medicina Interna",
+    "location": "Torino",
+    "summary": "Infermiera con sei anni di esperienza in medicina interna e cardiologia. Svolgo turni da referente di turno, mantengo la calma con i pazienti che si aggravano e ho pazienza con i familiari che hanno molte domande. Ho fatto da tutor a otto colleghi neoassunti.",
+    "experiences": [
+        {
+            "company": "Ospedale San Giorgio",
+            "position": "Infermiera, Medicina Interna",
+            "location": "Torino",
+            "companyUrl": "",
+            "startDate": "2021-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Reparto di 36 posti letto per adulti, turni diurni e notturni.",
+            "achievements": [
+                {
+                    "text": "Referente di turno due volte a settimana: assegno i pazienti, gestisco ricoveri e dimissioni e supporto i colleghi meno esperti"
+                },
+                {
+                    "text": "Tutor di otto infermieri neoassunti durante l'inserimento di dodici settimane"
+                },
+                {
+                    "text": "Componente del gruppo di lavoro sulle cadute: ho contribuito a introdurre il giro orario e il controllo degli allarmi letto"
+                },
+                {
+                    "text": "Referente per il passaggio alla nuova cartella clinica elettronica, ho formato 30 colleghi sulla terapia informatizzata"
+                }
+            ]
+        },
+        {
+            "company": "Ospedale Santa Croce",
+            "position": "Infermiera, Cardiologia",
+            "location": "Cuneo",
+            "companyUrl": "",
+            "startDate": "2019-07",
+            "endDate": "2021-03",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Assistenza a pazienti cardiologici in monitoraggio continuo, compresi pazienti dopo coronarografia e con scompenso cardiaco"
+                },
+                {
+                    "text": "Riconoscimento delle aritmie e attivazione tempestiva del medico di guardia"
+                },
+                {
+                    "text": "Educazione dei pazienti con scompenso su peso quotidiano, restrizione dei liquidi e orari della terapia prima della dimissione"
+                }
+            ]
+        },
+        {
+            "company": "RSA Villa Serena",
+            "position": "Operatrice Socio Sanitaria",
+            "location": "Moncalieri",
+            "companyUrl": "",
+            "startDate": "2017-05",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Lavoro part time durante il corso di laurea: rilevazione dei parametri, glicemie, mobilizzazione e igiene"
+                },
+                {
+                    "text": "Segnalazione delle variazioni delle condizioni degli ospiti all'infermiere di turno e registrazione nella cartella elettronica"
+                },
+                {
+                    "text": "Affiancamento dei nuovi operatori nelle routine di reparto e nella movimentazione sicura degli ospiti"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Università degli Studi di Torino",
+            "degree": "Laurea in Infermieristica",
+            "fieldOfStudy": "",
+            "location": "Torino",
+            "startDate": "2015-08",
+            "endDate": "2019-05",
+            "isPresent": false,
+            "description": "Tirocini in medicina, chirurgia, pediatria e salute mentale.",
+            "graduationScore": "110/110",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Croce Verde Torino",
+            "organizationUrl": "",
+            "position": "Volontaria",
+            "location": "Torino",
+            "startDate": "2022-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Screening di pressione arteriosa e glicemia durante le giornate di prevenzione.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Clinica",
+            "description": "Valutazione del paziente, accessi venosi, medicazioni avanzate, monitoraggio ECG, somministrazione della terapia"
+        },
+        {
+            "title": "Strumenti",
+            "description": "Cartella clinica elettronica, pompe infusionali, armadi farmaceutici automatizzati"
+        },
+        {
+            "title": "Coordinamento",
+            "description": "Referente di turno, tutor clinico, gruppo di lavoro sulle cadute"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Italiano",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Inglese",
+            "proficiency": "Proficient"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Iscrizione all'Albo degli Infermieri",
+            "issuer": "OPI Torino",
+            "date": "2019-06",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "BLSD",
+            "issuer": "Italian Resuscitation Council",
+            "date": "2025-01",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "ALS",
+            "issuer": "Italian Resuscitation Council",
+            "date": "2025-01",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Master di primo livello in Area Critica",
+            "issuer": "Università degli Studi di Torino",
+            "date": "2023-09",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "certificates": 1,
+        "experience": 2,
+        "education": 3,
+        "skills": 4,
+        "languages": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "Albo e certificazioni"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

@@ -1,0 +1,188 @@
+{
+    "version": "v1",
+    "firstName": "Camille",
+    "lastName": "Lefèvre",
+    "email": "camille.lefevre@example.com",
+    "phone": "+33 6 23 45 67 89",
+    "position": "Infirmière diplômée d'État, médecine et chirurgie",
+    "location": "Toulouse",
+    "summary": "Infirmière avec six ans d'expérience dans des services de médecine et de chirurgie à fort turnover, après deux ans comme aide-soignante. À l'aise comme référente d'équipe, calme face aux patients qui se dégradent et disponible pour les familles. Tutrice de huit étudiants.",
+    "experiences": [
+        {
+            "company": "Centre hospitalier des Capucins",
+            "position": "Infirmière, médecine polyvalente",
+            "location": "Toulouse",
+            "companyUrl": "",
+            "startDate": "2021-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Service de 36 lits, secteur de dix patients en jour.",
+            "achievements": [
+                {
+                    "text": "Référente d'équipe deux jours par semaine : répartition des patients, gestion des entrées et sorties, soutien des nouvelles arrivées"
+                },
+                {
+                    "text": "Tutrice de huit étudiants en soins infirmiers sur leurs stages de dix semaines"
+                },
+                {
+                    "text": "Participation au groupe de travail sur la prévention des chutes, mise en place des tours de surveillance horaires"
+                },
+                {
+                    "text": "Référente du nouveau logiciel de dossier patient, formation de 30 collègues au circuit du médicament"
+                }
+            ]
+        },
+        {
+            "company": "Clinique Saint-Exupéry",
+            "position": "Infirmière, cardiologie et soins continus",
+            "location": "Montauban",
+            "companyUrl": "",
+            "startDate": "2019-07",
+            "endDate": "2021-03",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Prise en charge de patients scopés, dont des suites de coronarographie et des insuffisances cardiaques"
+                },
+                {
+                    "text": "Détection des troubles du rythme et appel de l'équipe médicale d'urgence quand nécessaire"
+                },
+                {
+                    "text": "Éducation des patients insuffisants cardiaques : pesée quotidienne, restriction hydrique et horaires des traitements"
+                }
+            ]
+        },
+        {
+            "company": "Résidence Les Glycines",
+            "position": "Aide-soignante (temps partiel)",
+            "location": "Toulouse",
+            "companyUrl": "",
+            "startDate": "2017-05",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Emploi à temps partiel pendant les études : constantes, glycémies capillaires, aide à la mobilité et soins d'hygiène"
+                },
+                {
+                    "text": "Transmission des changements d'état des résidents à l'infirmière et saisie dans le dossier de soins"
+                },
+                {
+                    "text": "Accueil des nouvelles aides-soignantes et formation aux règles de manutention"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "IFSI du CHU de Toulouse",
+            "degree": "Diplôme d'État d'infirmier",
+            "fieldOfStudy": "",
+            "location": "Toulouse",
+            "startDate": "2015-08",
+            "endDate": "2019-05",
+            "isPresent": false,
+            "description": "Stages en médecine, chirurgie, pédiatrie, maternité et psychiatrie.",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Croix-Rouge française",
+            "organizationUrl": "",
+            "position": "Infirmière bénévole",
+            "location": "Toulouse",
+            "startDate": "2022-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Dépistages de tension artérielle et de glycémie lors de journées de prévention deux fois par an.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Soins",
+            "description": "Évaluation clinique, perfusions, pansements complexes, surveillance scopée, circuit du médicament"
+        },
+        {
+            "title": "Logiciels",
+            "description": "DxCare, Orbis, pompes à perfusion"
+        },
+        {
+            "title": "Encadrement",
+            "description": "Référente d'équipe, tutorat des étudiants, groupe de travail chutes"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Français",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Espagnol",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Diplôme d'État d'infirmier, inscription à l'Ordre national des infirmiers",
+            "issuer": "Ordre national des infirmiers",
+            "date": "2019-06",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "AFGSU niveau 2",
+            "issuer": "CESU 31",
+            "date": "2025-01",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Formation aux urgences vitales en service de soins",
+            "issuer": "CHU de Toulouse",
+            "date": "2025-01",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Diplôme universitaire plaies et cicatrisation",
+            "issuer": "Université Toulouse III",
+            "date": "2023-09",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "certificates": 1,
+        "experience": 2,
+        "education": 3,
+        "skills": 4,
+        "languages": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "Diplômes et attestations"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

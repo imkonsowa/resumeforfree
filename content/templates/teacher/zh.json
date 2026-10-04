@@ -1,0 +1,202 @@
+{
+    "version": "v1",
+    "firstName": "赵敏",
+    "lastName": "",
+    "email": "zhao.min@example.com",
+    "phone": "+86 136 0057 3382",
+    "position": "初中科学教师",
+    "location": "杭州",
+    "summary": "教师，十二年教龄，近九年任教初中科学。擅长设计以动手实验为主的单元，用测验数据每隔几周调整分组，并和资源教室老师密切合作，让每个学生都能参与课堂。",
+    "experiences": [
+        {
+            "company": "杭州市城西实验中学",
+            "position": "科学教师（八、九年级）",
+            "location": "杭州",
+            "companyUrl": "",
+            "startDate": "2019-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "任教四个班的科学课，每年约 180 名学生。",
+            "achievements": [
+                {
+                    "text": "围绕每周实验课重新设计八年级物理部分的单元，两年内年级统测优秀率从 61% 提高到 74%"
+                },
+                {
+                    "text": "2022 年起担任科学教研组长，主持每月集体备课，统筹组内共同测验"
+                },
+                {
+                    "text": "与资源教室老师合作，为随班就读学生制定课堂调整方案"
+                },
+                {
+                    "text": "创办课后机器人社团，现有 25 名成员，参加市级青少年机器人比赛"
+                }
+            ]
+        },
+        {
+            "company": "绍兴市南湖中学",
+            "position": "科学教师（七年级）",
+            "location": "绍兴",
+            "companyUrl": "",
+            "startDate": "2016-08",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "任教四个班的生命科学和地球科学内容，每班约 45 名学生"
+                },
+                {
+                    "text": "与家委会一起开设校园种植园单元，至今仍是七年级的固定课程"
+                },
+                {
+                    "text": "带教两名来自绍兴文理学院的实习教师"
+                }
+            ]
+        },
+        {
+            "company": "绍兴市城南小学",
+            "position": "小学科学教师兼五年级班主任",
+            "location": "绍兴",
+            "companyUrl": "",
+            "startDate": "2013-08",
+            "endDate": "2016-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "担任五年级班主任，班级共 42 名学生"
+                },
+                {
+                    "text": "在班里推行每周阅读分享和家庭阅读记录"
+                },
+                {
+                    "text": "牵头五年级备课组统一单元教案和单元测验"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "杭州师范大学",
+            "degree": "教育硕士（学科教学·物理）",
+            "fieldOfStudy": "",
+            "location": "杭州",
+            "startDate": "2018-09",
+            "endDate": "2020-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        },
+        {
+            "institution": "浙江师范大学",
+            "degree": "科学教育 本科",
+            "fieldOfStudy": "",
+            "location": "金华",
+            "startDate": "2009-09",
+            "endDate": "2013-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "杭州青少年暑期科技营",
+            "organizationUrl": "",
+            "position": "主讲教师",
+            "location": "杭州",
+            "startDate": "2018-07",
+            "endDate": "",
+            "isPresent": true,
+            "description": "每年暑假为 40 名学生设计并讲授为期两周的工程实践课程。",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "教学",
+            "description": "实验教学、分层教学、形成性评价、合作教学"
+        },
+        {
+            "title": "班级与家校",
+            "description": "班级管理、正面管教、家校沟通"
+        },
+        {
+            "title": "工具",
+            "description": "希沃白板、钉钉、问卷星、PowerPoint"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "中文",
+            "proficiency": "Native"
+        },
+        {
+            "name": "英语",
+            "proficiency": "Basic"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "初级中学教师资格证（科学）",
+            "issuer": "",
+            "date": "2013-07",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "中学一级教师",
+            "issuer": "",
+            "date": "2020-12",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "中小学教师信息技术应用能力提升培训合格证书",
+            "issuer": "",
+            "date": "2022-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [
+        {
+            "title": "沉与浮：用每周实验课讲透密度",
+            "authors": "赵敏、许嘉",
+            "venue": "浙江省初中科学教学研讨会",
+            "date": "2023-11",
+            "url": "",
+            "description": "面向初中科学教师的工作坊，介绍低成本实验课的组织方法。"
+        }
+    ],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "certificates": 1,
+        "experience": 2,
+        "education": 3,
+        "skills": 4,
+        "languages": 7,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 5
+    },
+    "sectionHeaders": {
+        "certificates": "教师资格与职称"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

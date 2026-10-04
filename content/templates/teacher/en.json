@@ -1,0 +1,195 @@
+{
+    "version": "v1",
+    "firstName": "Hannah",
+    "lastName": "Whitaker",
+    "email": "hannah.whitaker@example.com",
+    "phone": "+1 555 012 8841",
+    "position": "Middle School Science Teacher",
+    "location": "Columbus, OH",
+    "summary": "Teacher with twelve years in the classroom, the last nine in grades 6 to 8 science. I plan hands-on, lab-based units, use assessment data to regroup students every few weeks and work closely with special education staff so every student can take part.",
+    "experiences": [
+        {
+            "company": "Riverside Middle School",
+            "position": "Science Teacher, Grades 7 and 8",
+            "location": "Columbus, OH",
+            "companyUrl": "",
+            "startDate": "2019-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Five sections of physical and life science, about 140 students a year.",
+            "achievements": [
+                {
+                    "text": "Rewrote the grade 8 physical science units around weekly labs; the share of students meeting the state standard rose from 61% to 74% over two years"
+                },
+                {
+                    "text": "Science department lead since 2022: run monthly planning meetings and coordinate shared assessments"
+                },
+                {
+                    "text": "Co-teach one inclusion section with a special education teacher and write accommodations for IEP students"
+                },
+                {
+                    "text": "Started the after-school robotics club, which now has 25 members and competes in the regional league"
+                }
+            ]
+        },
+        {
+            "company": "Westbrook Middle School",
+            "position": "Science Teacher, Grade 6",
+            "location": "Dayton, OH",
+            "companyUrl": "",
+            "startDate": "2016-08",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Taught life and earth science to four sections of about 28 students"
+                },
+                {
+                    "text": "Built a school garden unit with the parent association that is still part of the grade 6 curriculum"
+                },
+                {
+                    "text": "Mentored two student teachers from Wright State University"
+                }
+            ]
+        },
+        {
+            "company": "Lincoln Elementary School",
+            "position": "Grade 5 Teacher",
+            "location": "Dayton, OH",
+            "companyUrl": "",
+            "startDate": "2013-08",
+            "endDate": "2016-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Taught all core subjects to a class of 27 students"
+                },
+                {
+                    "text": "Introduced a weekly reading conference routine and parent reading logs"
+                },
+                {
+                    "text": "Led the grade 5 team's move to shared unit plans and common assessments"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Ohio State University",
+            "degree": "M.Ed. in Curriculum and Instruction",
+            "fieldOfStudy": "",
+            "location": "Columbus, OH",
+            "startDate": "2018-08",
+            "endDate": "2020-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        },
+        {
+            "institution": "Miami University",
+            "degree": "B.S. in Middle Childhood Education",
+            "fieldOfStudy": "",
+            "location": "Oxford, OH",
+            "startDate": "2009-08",
+            "endDate": "2013-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Columbus Summer STEM Camp",
+            "organizationUrl": "",
+            "position": "Lead Instructor",
+            "location": "Columbus, OH",
+            "startDate": "2018-06",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Plan and teach a two-week engineering camp for 40 students each summer.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Teaching",
+            "description": "Lab-based science, differentiated instruction, formative assessment, co-teaching"
+        },
+        {
+            "title": "Classroom",
+            "description": "Restorative practices, small-group rotations, parent communication"
+        },
+        {
+            "title": "Tools",
+            "description": "Google Classroom, Canvas, PowerSchool, Desmos"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "English",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Spanish",
+            "proficiency": "Basic"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Professional Educator License, Grades 4-9 Science and Language Arts",
+            "issuer": "Ohio Department of Education",
+            "date": "2021-07",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Google Certified Educator Level 1",
+            "issuer": "Google for Education",
+            "date": "2022-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [
+        {
+            "title": "Sink or Float: Teaching Density with Weekly Labs",
+            "authors": "H. Whitaker, R. Osei",
+            "venue": "Ohio Science Teachers Association Annual Conference",
+            "date": "2023-11",
+            "url": "",
+            "description": "Workshop for middle school teachers on low-cost lab routines."
+        }
+    ],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "certificates": 1,
+        "experience": 2,
+        "education": 3,
+        "skills": 4,
+        "languages": 7,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 5
+    },
+    "sectionHeaders": {
+        "certificates": "Licensure"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

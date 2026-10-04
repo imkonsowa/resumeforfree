@@ -1,0 +1,187 @@
+{
+    "version": "v1",
+    "firstName": "سارة",
+    "lastName": "عبد الحميد",
+    "email": "sara.abdelhamid@example.com",
+    "phone": "+966 55 000 7712",
+    "position": "محاسبة أولى، SOCPA",
+    "location": "الرياض، السعودية",
+    "summary": "محاسبة قانونية بخبرة عشر سنوات في المحاسبة المالية والمراجعة. أدير الإقفال الشهري لمجموعة من عدة شركات، وأحافظ على تسويات نظيفة، وأحب إلغاء الخطوات اليدوية التي تبطئ الإقفال.",
+    "experiences": [
+        {
+            "company": "مجموعة النخيل للأغذية",
+            "position": "محاسبة أولى",
+            "location": "الرياض، السعودية",
+            "companyUrl": "",
+            "startDate": "2021-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "أتولى الإقفال الشهري لخمس شركات تابعة في السعودية والإمارات وقيود الاستبعاد بين الشركات"
+                },
+                {
+                    "text": "قلصت مدة الإقفال من تسعة أيام عمل إلى ستة بنقل جداول المستحقات إلى Oracle وتثبيت تقويم إقفال شهري"
+                },
+                {
+                    "text": "أجهز جداول المراجعة الخارجية السنوية، وأُغلقت آخر مراجعتين دون أي تسويات في البنود التي أتولاها"
+                },
+                {
+                    "text": "أعددت إقرارات ضريبة القيمة المضافة الشهرية وإقرار الزكاة السنوي مع المستشار الضريبي"
+                },
+                {
+                    "text": "أراجع الانحرافات الشهرية مع فريق التخطيط المالي وأشرح للمدير المالي تحركات هامش الربح الإجمالي"
+                }
+            ]
+        },
+        {
+            "company": "الحربي وشركاه محاسبون قانونيون",
+            "position": "مراجعة أولى",
+            "location": "جدة، السعودية",
+            "companyUrl": "",
+            "startDate": "2017-09",
+            "endDate": "2021-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "أدرت العمل الميداني في مراجعة عملاء من قطاعي التصنيع والتجزئة بإيرادات تصل إلى 1.5 مليار ريال"
+                },
+                {
+                    "text": "اختبرت ضوابط الإيرادات والمخزون والرواتب وكتبت ملاحظات خطاب الإدارة"
+                },
+                {
+                    "text": "أشرفت على فرق من اثنين إلى أربعة مراجعين في كل مهمة"
+                }
+            ]
+        },
+        {
+            "company": "العتيبي والسالم للمراجعة",
+            "position": "مراجعة",
+            "location": "الدمام، السعودية",
+            "companyUrl": "",
+            "startDate": "2015-09",
+            "endDate": "2017-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "نفذت الاختبارات التفصيلية للنقدية والذمم المدينة والأصول الثابتة لعملاء من الجمعيات غير الربحية وقطاع التصنيع"
+                },
+                {
+                    "text": "أعددت أوراق العمل والتسويات التي يراجعها المراجعون الأوائل والمديرون"
+                },
+                {
+                    "text": "شاركت في جرد المخزون في نهاية السنة بمستودعات العملاء"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "جامعة الملك سعود",
+            "degree": "بكالوريوس المحاسبة",
+            "fieldOfStudy": "",
+            "location": "الرياض، السعودية",
+            "startDate": "2011-08",
+            "endDate": "2015-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "جمعية الادخار الأسري",
+            "organizationUrl": "",
+            "position": "متطوعة في التثقيف المالي",
+            "location": "الرياض، السعودية",
+            "startDate": "2019-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "أقدم ورش عمل للأسر عن إعداد الميزانية المنزلية والادخار.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "المحاسبة",
+            "description": "معايير IFRS، الإقفال الشهري، التسويات، المستحقات، المعاملات بين الشركات، الأصول الثابتة، الزكاة وضريبة القيمة المضافة"
+        },
+        {
+            "title": "الأنظمة",
+            "description": "Oracle، SAP، Microsoft Dynamics، Odoo"
+        },
+        {
+            "title": "Excel",
+            "description": "الجداول المحورية، XLOOKUP، Power Query"
+        },
+        {
+            "title": "التقارير",
+            "description": "التوحيد، التقارير الإدارية، Power BI، تحليل الانحرافات"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "تطبيق نظام Oracle",
+            "description": "المسؤولة المالية في نقل المجموعة من QuickBooks إلى Oracle: تصميم دليل الحسابات، وترحيل البيانات، وتدريب 12 مستخدما.",
+            "links": [],
+            "startDate": "2021-04",
+            "endDate": "2021-12",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "العربية",
+            "proficiency": "Native"
+        },
+        {
+            "name": "الإنجليزية",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "زمالة الهيئة السعودية للمراجعين والمحاسبين (SOCPA)",
+            "issuer": "الهيئة السعودية للمراجعين والمحاسبين",
+            "date": "2019-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "volunteering": 4,
+        "skills": 5,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "projects": 3,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

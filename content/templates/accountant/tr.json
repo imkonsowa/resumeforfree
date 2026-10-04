@@ -1,0 +1,187 @@
+{
+    "version": "v1",
+    "firstName": "Elif",
+    "lastName": "Demir",
+    "email": "elif.demir@example.com",
+    "phone": "+90 555 019 77 12",
+    "position": "Kıdemli Muhasebe Uzmanı, SMMM",
+    "location": "İstanbul",
+    "summary": "Şirket muhasebesi ve bağımsız denetimde on yıllık deneyime sahip SMMM'yim. Çok şirketli bir grubun ay sonu kapanışını yürütüyorum, mutabakatları temiz tutuyorum ve kapanışı yavaşlatan elle yapılan adımları düzeltmeyi seviyorum.",
+    "experiences": [
+        {
+            "company": "Kuzeykapı Gıda Grubu",
+            "position": "Kıdemli Muhasebe Uzmanı",
+            "location": "İstanbul",
+            "companyUrl": "",
+            "startDate": "2021-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Beş grup şirketinin ay sonu kapanışından ve şirketler arası eliminasyonlardan sorumluyum"
+                },
+                {
+                    "text": "Tahakkuk tablolarını SAP'ye taşıyıp sabit bir kapanış takvimi kurarak kapanışı dokuz iş gününden altıya indirdim"
+                },
+                {
+                    "text": "Yıllık bağımsız denetim tablolarını hazırlıyorum; son iki denetimde sorumlu olduğum alanlarda düzeltme kaydı çıkmadı"
+                },
+                {
+                    "text": "Demirbaş kayıtlarını SAP'ye taşıdım ve yerine geçtiği Excel tablosunu kullanımdan kaldırdım"
+                },
+                {
+                    "text": "Aylık sapma analizini bütçe ve planlama ekibiyle birlikte yapıyor, brüt kâr marjındaki değişimleri finans direktörüne açıklıyorum"
+                }
+            ]
+        },
+        {
+            "company": "Hale ve Mert Bağımsız Denetim A.Ş.",
+            "position": "Kıdemli Denetçi",
+            "location": "İstanbul",
+            "companyUrl": "",
+            "startDate": "2017-09",
+            "endDate": "2021-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Cirosu 4 milyar TL'ye kadar olan üretim ve perakende müşterilerinin denetimlerinde saha çalışmasını yürüttüm"
+                },
+                {
+                    "text": "Hasılat, stok ve bordro kontrollerini test ettim ve yönetim mektubu bulgularını yazdım"
+                },
+                {
+                    "text": "Her denetimde iki ila dört kişilik asistan ekibine yön verdim"
+                }
+            ]
+        },
+        {
+            "company": "Vinç ve Yaman Denetim",
+            "position": "Denetçi Yardımcısı",
+            "location": "Bursa",
+            "companyUrl": "",
+            "startDate": "2015-09",
+            "endDate": "2017-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Vakıf ve üretim müşterilerinde kasa, alacaklar ve sabit kıymetler için detay testleri yaptım"
+                },
+                {
+                    "text": "Kıdemli denetçi ve müdürlerin incelediği çalışma kâğıtlarını ve mutabakatları hazırladım"
+                },
+                {
+                    "text": "Müşteri depolarında yıl sonu stok sayımlarına katıldım"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Boğaziçi Üniversitesi",
+            "degree": "İşletme Lisans",
+            "fieldOfStudy": "",
+            "location": "İstanbul",
+            "startDate": "2011-08",
+            "endDate": "2015-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Gönüllü Vergi Danışmanlığı Masası",
+            "organizationUrl": "",
+            "position": "Gönüllü Danışman",
+            "location": "İstanbul",
+            "startDate": "2019-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Beyanname döneminde düşük gelirli ailelere ve küçük esnafa vergi konularında ücretsiz destek veriyorum.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Muhasebe",
+            "description": "TFRS, VUK, ay sonu kapanış, mutabakat, tahakkuklar, şirketler arası işlemler, sabit kıymetler"
+        },
+        {
+            "title": "Programlar",
+            "description": "SAP, Logo, Netsis, e-Defter ve e-Fatura uygulamaları"
+        },
+        {
+            "title": "Excel",
+            "description": "Pivot tablolar, XLOOKUP, Power Query"
+        },
+        {
+            "title": "Raporlama",
+            "description": "Konsolidasyon, yönetim raporlaması, Power BI, sapma analizi"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "SAP geçiş projesi",
+            "description": "Grubun paket muhasebe programından SAP'ye geçişinde finans tarafının sorumlusuydum: hesap planı tasarımı, veri aktarımı ve 12 kişinin eğitimi.",
+            "links": [],
+            "startDate": "2021-04",
+            "endDate": "2021-12",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Türkçe",
+            "proficiency": "Native"
+        },
+        {
+            "name": "İngilizce",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Serbest Muhasebeci Mali Müşavir (SMMM) Ruhsatı",
+            "issuer": "TÜRMOB",
+            "date": "2019-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "volunteering": 4,
+        "skills": 5,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "projects": 3,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}
