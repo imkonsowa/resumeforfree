@@ -12,7 +12,8 @@ const convertResumeHeader = (data: ResumeData, context: RendererContext, sharedR
     const position = escapeTypstText(data?.position || '');
     const positionBlock = position ? `#block(above: 0em, below: ${context.settings.sectionSpacing}em)[${position}]` : '';
     const profileSection = sharedRenderers.profile(data, context);
-    return `= ${fullName}
+    const nameHeading = context.headingColor ? `#text(fill: ${context.headingColor})[= ${fullName}]` : `= ${fullName}`;
+    return `${nameHeading}
 ${positionBlock}
 ${profileSection}`;
 };

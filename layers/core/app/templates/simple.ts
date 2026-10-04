@@ -1,7 +1,7 @@
 import type { ResumeData, SectionHeaders, SectionOrder } from '#layers/core/app/types/resume';
 import type { SectionContent, SectionHeading, Template, TemplateParseInput, TemplateRenderConfig } from '#layers/core/app/types/template';
 import { escapeTypstText } from '#layers/core/app/utils/stringUtils';
-import { convertEmail, convertLink, convertList, LATIN_FONT_STACK, renderDescription, renderTemplateSubHeader, renderTemplateSubHeaderContent, PHOTO_GUTTER, typstColor } from '#layers/core/app/utils/typstUtils';
+import { convertEmail, convertLink, convertList, LATIN_FONT_STACK, renderDescription, renderTemplateSubHeader, renderTemplateSubHeaderContent, PHOTO_GUTTER } from '#layers/core/app/utils/typstUtils';
 import { RendererContext } from '#layers/core/app/utils/rendererContext';
 import { isRtlLocale } from '#layers/core/app/utils/localeDirection';
 import { SECTION_TRANSLATION_MAP } from '#layers/core/app/utils/sectionHeaders';
@@ -118,8 +118,7 @@ function renderSimpleSection(section: SimpleSection, context: RendererContext, i
     const { fontSize, locale, settings } = context;
 
     const tracking = LETTER_SPACED_LOCALES.has(locale) ? ', tracking: 0.08em' : '';
-    const headerColor = context.sectionStyle.headerColor;
-    const fill = headerColor ? `, fill: ${typstColor(headerColor)}` : '';
+    const fill = context.headingColor ? `, fill: ${context.headingColor}` : '';
     const label = `#text(size: ${fontSize + settings.headingSizeOffset}pt, weight: "bold"${tracking}${fill})[${context.sectionIcon(section.heading.key)}${escapeTypstText(section.heading.title)}]`;
 
     const cells: string[] = [];
@@ -157,7 +156,8 @@ function renderHeader(data: ResumeData, context: RendererContext, fontSize: numb
 
     const textBlocks: string[] = [];
     if (fullName) {
-        textBlocks.push(`#block(above: 0em, below: 0.6em)[#text(size: ${fontSize + 8}pt, weight: "bold")[${fullName}]]`);
+        const nameFill = context.headingColor ? `, fill: ${context.headingColor}` : '';
+        textBlocks.push(`#block(above: 0em, below: 0.6em)[#text(size: ${fontSize + 8}pt, weight: "bold"${nameFill})[${fullName}]]`);
     }
     if (position) {
         textBlocks.push(`#block(above: 0em, below: 1em)[#text(size: ${fontSize + 2}pt)[${position}]]`);

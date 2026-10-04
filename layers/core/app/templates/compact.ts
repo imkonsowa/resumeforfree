@@ -7,11 +7,13 @@ import { getSharedSectionRenderers, renderProfilePhoto } from '#layers/core/app/
 import { RendererContext } from '#layers/core/app/utils/rendererContext';
 import { isRtlLocale } from '#layers/core/app/utils/localeDirection';
 
-const renderHeaderRows = (data: ResumeData, fontSize: number, isRtl: boolean): string[] => {
+const renderHeaderRows = (data: ResumeData, context: RendererContext, isRtl: boolean): string[] => {
+    const { fontSize } = context;
     const rows: string[] = [];
     const fullName = `${escapeTypstText(data?.firstName || '')} ${escapeTypstText(data?.lastName || '')}`.trim();
     const position = escapeTypstText(data?.position || '');
-    rows.push(`#text(size: ${fontSize + 12}pt, weight: "bold")[${fullName}]`);
+    const nameFill = context.headingColor ? `, fill: ${context.headingColor}` : '';
+    rows.push(`#text(size: ${fontSize + 12}pt, weight: "bold"${nameFill})[${fullName}]`);
     if (position) {
         const nameGap = isRtl ? '1.3em' : '0.8em';
         rows.push(`#block(above: ${nameGap})[#text(size: ${fontSize + 2}pt)[${position}]]`);
@@ -52,8 +54,8 @@ const renderHeaderRows = (data: ResumeData, fontSize: number, isRtl: boolean): s
     }
     return rows;
 };
-const convertResumeHeader = (data: ResumeData, context: RendererContext, fontSize: number, isRtl = false) => {
-    const headerRows = renderHeaderRows(data, fontSize, isRtl);
+const convertResumeHeader = (data: ResumeData, context: RendererContext, isRtl = false) => {
+    const headerRows = renderHeaderRows(data, context, isRtl);
     const photo = renderProfilePhoto(data, context);
     const startAlign = isRtl ? 'right' : 'left';
     const endAlign = isRtl ? 'left' : 'right';
@@ -102,7 +104,7 @@ const parse = ({ data, settings, locale, t }: TemplateParseInput): string => {
         .filter(content => content.trim() !== '');
     const sectionsContent = sections.join('\n\n');
     const profileSection = sharedRenderers.profile(data, context);
-    const fullContent = `${convertResumeHeader(data, context, fontSize, isRtl)}${profileSection ? `\n${profileSection}` : ''}${sectionsContent ? `\n\n${sectionsContent}` : ''}`;
+    const fullContent = `${convertResumeHeader(data, context, isRtl)}${profileSection ? `\n${profileSection}` : ''}${sectionsContent ? `\n\n${sectionsContent}` : ''}`;
 
     const fontConfig = isRtl
         ? `#set text(font: ("${font}", ${LATIN_FONT_STACK}), size: ${fontSize}pt, dir: rtl)`
