@@ -5,6 +5,7 @@ compatibility_date = "2025-07-15"
 [assets]
 directory = ".output/public"
 binding = "ASSETS"
+html_handling = "drop-trailing-slash"
 
 [build]
 command = "npm run build"
