@@ -58,7 +58,8 @@
         "moreActions": "مزید اختیارات",
         "or": "یا",
         "saved": "محفوظ کر لیا گیا",
-        "syncFailed": "ہم آہنگی ناکام ہو گئی"
+        "syncFailed": "ہم آہنگی ناکام ہو گئی",
+        "reset": "دوبارہ ترتیب دیں"
     },
     "languageModal": {
         "title": "اپنی زبان منتخب کریں",
@@ -439,7 +440,8 @@
         "groups": {
             "resume": "ریزیومے",
             "typography": "ٹائپوگرافی",
-            "sections": "حصے"
+            "sections": "حصے",
+            "colors": "رنگ"
         },
         "sectionOrder": {
             "label": "حصوں کی ترتیب",
@@ -456,6 +458,26 @@
         "sectionSpacing": {
             "label": "حصوں کے درمیان فاصلہ",
             "description": "فونٹ سائز کے تناسب سے حصوں کے درمیان فاصلہ"
+        },
+        "colors": {
+            "templateDefault": "ٹیمپلیٹ کا طے شدہ",
+            "custom": "حسب ضرورت رنگ",
+            "heading": {
+                "label": "عنوان کا رنگ",
+                "description": "حصوں کے عنوانات اور ان کے نیچے کی لکیر"
+            },
+            "accent": {
+                "label": "نمایاں رنگ",
+                "description": "لنکس، ای میل اور آرائشی لکیریں"
+            }
+        },
+        "sectionIcons": {
+            "label": "حصوں کے آئیکن",
+            "description": "ہر حصے کے عنوان سے پہلے چھوٹا آئیکن دکھائیں"
+        },
+        "itemSpacing": {
+            "label": "اندراجات کے درمیان فاصلہ",
+            "description": "کسی حصے کے اندراجات کے درمیان فاصلہ، جیسے دو ملازمتیں"
         }
     },
     "forms": {

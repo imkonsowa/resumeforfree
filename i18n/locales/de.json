@@ -58,7 +58,8 @@
         "moreActions": "Weitere Aktionen",
         "or": "oder",
         "saved": "Gespeichert",
-        "syncFailed": "Synchronisierung fehlgeschlagen"
+        "syncFailed": "Synchronisierung fehlgeschlagen",
+        "reset": "Zurücksetzen"
     },
     "languageModal": {
         "title": "Sprache auswählen",
@@ -439,7 +440,8 @@
         "groups": {
             "resume": "Lebenslauf",
             "typography": "Typografie",
-            "sections": "Abschnitte"
+            "sections": "Abschnitte",
+            "colors": "Farben"
         },
         "sectionOrder": {
             "label": "Reihenfolge der Abschnitte",
@@ -456,6 +458,26 @@
         "sectionSpacing": {
             "label": "Abstand zwischen Abschnitten",
             "description": "Abstand zwischen Abschnitten im Verhältnis zur Schriftgröße"
+        },
+        "colors": {
+            "templateDefault": "Vorlagenstandard",
+            "custom": "Eigene Farbe",
+            "heading": {
+                "label": "Überschriftenfarbe",
+                "description": "Abschnittsüberschriften und die Linie darunter"
+            },
+            "accent": {
+                "label": "Akzentfarbe",
+                "description": "Links, E-Mail und Zierlinien"
+            }
+        },
+        "sectionIcons": {
+            "label": "Abschnittssymbole",
+            "description": "Ein kleines Symbol vor jeder Abschnittsüberschrift anzeigen"
+        },
+        "itemSpacing": {
+            "label": "Abstand zwischen Einträgen",
+            "description": "Abstand zwischen Einträgen eines Abschnitts, etwa zwei Stellen"
         }
     },
     "forms": {

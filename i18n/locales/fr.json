@@ -58,7 +58,8 @@
         "copy": "Copier",
         "or": "ou",
         "saved": "Enregistré",
-        "syncFailed": "Échec de la synchronisation"
+        "syncFailed": "Échec de la synchronisation",
+        "reset": "Réinitialiser"
     },
     "languageModal": {
         "title": "Sélectionnez votre langue",
@@ -439,7 +440,8 @@
         "groups": {
             "resume": "CV",
             "typography": "Typographie",
-            "sections": "Sections"
+            "sections": "Sections",
+            "colors": "Couleurs"
         },
         "sectionOrder": {
             "label": "Ordre des sections",
@@ -456,6 +458,26 @@
         "sectionSpacing": {
             "label": "Espace entre les sections",
             "description": "Espace entre les sections, relatif à la taille de police"
+        },
+        "colors": {
+            "templateDefault": "Par défaut du modèle",
+            "custom": "Couleur personnalisée",
+            "heading": {
+                "label": "Couleur des titres",
+                "description": "Titres de section et la ligne en dessous"
+            },
+            "accent": {
+                "label": "Couleur d'accent",
+                "description": "Liens, e-mail et lignes décoratives"
+            }
+        },
+        "sectionIcons": {
+            "label": "Icônes de section",
+            "description": "Afficher une petite icône avant chaque titre de section"
+        },
+        "itemSpacing": {
+            "label": "Espace entre les éléments",
+            "description": "Espace entre les entrées d'une section, comme deux postes"
         }
     },
     "forms": {

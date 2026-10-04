@@ -58,7 +58,8 @@
         "moreActions": "إجراءات أخرى",
         "or": "أو",
         "saved": "تم الحفظ",
-        "syncFailed": "فشلت المزامنة"
+        "syncFailed": "فشلت المزامنة",
+        "reset": "إعادة تعيين"
     },
     "languageModal": {
         "title": "اختر لغتك",
@@ -439,7 +440,8 @@
         "groups": {
             "resume": "السيرة الذاتية",
             "typography": "الخطوط",
-            "sections": "الأقسام"
+            "sections": "الأقسام",
+            "colors": "الألوان"
         },
         "sectionOrder": {
             "label": "ترتيب الأقسام",
@@ -456,6 +458,26 @@
         "sectionSpacing": {
             "label": "المسافة بين الأقسام",
             "description": "المسافة بين الأقسام بالنسبة لحجم الخط"
+        },
+        "colors": {
+            "templateDefault": "افتراضي القالب",
+            "custom": "لون مخصص",
+            "heading": {
+                "label": "لون العناوين",
+                "description": "عناوين الأقسام والخط أسفلها"
+            },
+            "accent": {
+                "label": "لون التمييز",
+                "description": "الروابط والبريد الإلكتروني والخطوط الزخرفية"
+            }
+        },
+        "sectionIcons": {
+            "label": "أيقونات الأقسام",
+            "description": "إظهار أيقونة صغيرة قبل عنوان كل قسم"
+        },
+        "itemSpacing": {
+            "label": "المسافة بين العناصر",
+            "description": "المسافة بين الإدخالات داخل القسم، مثل وظيفتين"
         }
     },
     "forms": {

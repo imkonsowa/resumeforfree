@@ -58,7 +58,8 @@
         "moreActions": "Altre azioni",
         "or": "o",
         "saved": "Salvato",
-        "syncFailed": "Sincronizzazione non riuscita"
+        "syncFailed": "Sincronizzazione non riuscita",
+        "reset": "Ripristina"
     },
     "languageModal": {
         "title": "Seleziona la tua lingua",
@@ -439,7 +440,8 @@
         "groups": {
             "resume": "Curriculum",
             "typography": "Tipografia",
-            "sections": "Sezioni"
+            "sections": "Sezioni",
+            "colors": "Colori"
         },
         "sectionOrder": {
             "label": "Ordine delle sezioni",
@@ -456,6 +458,26 @@
         "sectionSpacing": {
             "label": "Spazio tra le sezioni",
             "description": "Spazio tra le sezioni, in proporzione alla dimensione del carattere"
+        },
+        "colors": {
+            "templateDefault": "Predefinito del modello",
+            "custom": "Colore personalizzato",
+            "heading": {
+                "label": "Colore dei titoli",
+                "description": "Titoli di sezione e la linea sottostante"
+            },
+            "accent": {
+                "label": "Colore di accento",
+                "description": "Link, email e linee decorative"
+            }
+        },
+        "sectionIcons": {
+            "label": "Icone di sezione",
+            "description": "Mostra una piccola icona prima di ogni titolo di sezione"
+        },
+        "itemSpacing": {
+            "label": "Spazio tra le voci",
+            "description": "Spazio tra le voci di una sezione, come due lavori"
         }
     },
     "forms": {

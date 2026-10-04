@@ -58,7 +58,8 @@
         "copy": "Kopyala",
         "or": "veya",
         "saved": "Kaydedildi",
-        "syncFailed": "Eşitleme başarısız"
+        "syncFailed": "Eşitleme başarısız",
+        "reset": "Sıfırla"
     },
     "languageModal": {
         "title": "Dilinizi Seçin",
@@ -439,7 +440,8 @@
         "groups": {
             "resume": "Özgeçmiş",
             "typography": "Tipografi",
-            "sections": "Bölümler"
+            "sections": "Bölümler",
+            "colors": "Renkler"
         },
         "sectionOrder": {
             "label": "Bölüm sırası",
@@ -456,6 +458,26 @@
         "sectionSpacing": {
             "label": "Bölümler arası boşluk",
             "description": "Yazı boyutuna göre bölümler arasındaki boşluk"
+        },
+        "colors": {
+            "templateDefault": "Şablon varsayılanı",
+            "custom": "Özel renk",
+            "heading": {
+                "label": "Başlık rengi",
+                "description": "Bölüm başlıkları ve altındaki çizgi"
+            },
+            "accent": {
+                "label": "Vurgu rengi",
+                "description": "Bağlantılar, e-posta ve süs çizgileri"
+            }
+        },
+        "sectionIcons": {
+            "label": "Bölüm simgeleri",
+            "description": "Her bölüm başlığından önce küçük bir simge göster"
+        },
+        "itemSpacing": {
+            "label": "Kayıtlar arası boşluk",
+            "description": "Bir bölümdeki kayıtlar arasındaki boşluk, örneğin iki iş"
         }
     },
     "forms": {
