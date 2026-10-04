@@ -108,68 +108,20 @@ useHead({
             ]"
         />
 
-        <div class="mt-6 grid gap-10 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start">
-            <article class="min-w-0">
-                <header class="space-y-4">
-                    <h1 class="text-3xl sm:text-4xl font-bold text-highlighted text-balance">
-                        {{ template.title }}
-                    </h1>
-                    <p class="text-lg text-muted">
-                        {{ template.description }}
-                    </p>
-                    <p class="text-sm text-dimmed">
-                        {{ t(`templates.categories.${template.category}`) }} · {{ t('templates.detail.updated', { date: updatedOn }) }}
-                    </p>
-                </header>
+        <div class="mt-6 grid gap-x-10 gap-y-8 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start">
+            <header class="space-y-4 lg:col-start-1">
+                <h1 class="text-3xl sm:text-4xl font-bold text-highlighted text-balance">
+                    {{ template.title }}
+                </h1>
+                <p class="text-lg text-muted">
+                    {{ template.description }}
+                </p>
+                <p class="text-sm text-dimmed">
+                    {{ t(`templates.categories.${template.category}`) }} · {{ t('templates.detail.updated', { date: updatedOn }) }}
+                </p>
+            </header>
 
-                <MDCRenderer
-                    :body="template.body"
-                    class="mt-8 max-w-3xl"
-                />
-
-                <section class="mt-12 max-w-3xl">
-                    <h2 class="text-2xl font-bold text-highlighted">
-                        {{ t('templates.detail.faq') }}
-                    </h2>
-                    <UAccordion
-                        class="mt-4"
-                        type="multiple"
-                        :items="template.faq.map(item => ({ label: item.q, content: item.a }))"
-                    />
-                </section>
-
-                <section
-                    v-if="template.related.length"
-                    class="mt-12"
-                >
-                    <h2 class="text-2xl font-bold text-highlighted">
-                        {{ t('templates.detail.related') }}
-                    </h2>
-                    <ul class="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-4">
-                        <li
-                            v-for="related in template.related"
-                            :key="related.slug"
-                        >
-                            <NuxtLink
-                                :to="localePath(`/templates/${related.slug}`)"
-                                class="group flex flex-col gap-2 rounded-md focus-visible:outline-2 focus-visible:outline-primary"
-                            >
-                                <img
-                                    :src="templatePreviewPath(locale, related.slug, 'thumb.webp')"
-                                    :alt="t('templates.detail.previewAlt', { profession: related.profession, layout: layoutLabel(related.layout) })"
-                                    width="420"
-                                    height="594"
-                                    loading="lazy"
-                                    class="w-full aspect-[1/1.414] rounded-md border border-default bg-white object-cover object-top"
-                                >
-                                <span class="text-sm font-medium text-highlighted group-hover:text-primary">{{ related.profession }}</span>
-                            </NuxtLink>
-                        </li>
-                    </ul>
-                </section>
-            </article>
-
-            <aside class="flex flex-col gap-4 lg:sticky lg:top-20">
+            <aside class="flex w-full max-w-sm flex-col gap-4 justify-self-center lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:max-w-none lg:sticky lg:top-20">
                 <img
                     :src="previewSrc"
                     :alt="t('templates.detail.previewAlt', { profession: template.profession, layout: layoutLabel(selectedLayout) })"
@@ -233,6 +185,54 @@ useHead({
                     </ul>
                 </nav>
             </aside>
+
+            <article class="min-w-0 lg:col-start-1">
+                <MDCRenderer
+                    :body="template.body"
+                    class="mt-8 max-w-3xl"
+                />
+
+                <section class="mt-12 max-w-3xl">
+                    <h2 class="text-2xl font-bold text-highlighted">
+                        {{ t('templates.detail.faq') }}
+                    </h2>
+                    <UAccordion
+                        class="mt-4"
+                        type="multiple"
+                        :items="template.faq.map(item => ({ label: item.q, content: item.a }))"
+                    />
+                </section>
+
+                <section
+                    v-if="template.related.length"
+                    class="mt-12"
+                >
+                    <h2 class="text-2xl font-bold text-highlighted">
+                        {{ t('templates.detail.related') }}
+                    </h2>
+                    <ul class="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-4">
+                        <li
+                            v-for="related in template.related"
+                            :key="related.slug"
+                        >
+                            <NuxtLink
+                                :to="localePath(`/templates/${related.slug}`)"
+                                class="group flex flex-col gap-2 rounded-md focus-visible:outline-2 focus-visible:outline-primary"
+                            >
+                                <img
+                                    :src="templatePreviewPath(locale, related.slug, 'thumb.webp')"
+                                    :alt="t('templates.detail.previewAlt', { profession: related.profession, layout: layoutLabel(related.layout) })"
+                                    width="420"
+                                    height="594"
+                                    loading="lazy"
+                                    class="w-full aspect-[1/1.414] rounded-md border border-default bg-white object-cover object-top"
+                                >
+                                <span class="text-sm font-medium text-highlighted group-hover:text-primary">{{ related.profession }}</span>
+                            </NuxtLink>
+                        </li>
+                    </ul>
+                </section>
+            </article>
         </div>
 
         <ClientOnly>
