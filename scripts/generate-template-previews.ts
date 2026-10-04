@@ -1,7 +1,9 @@
-import { execFileSync } from 'node:child_process';
-import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
-import { tmpdir } from 'node:os';
+import { execFile } from 'node:child_process';
+import { copyFileSync, existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { availableParallelism, tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
+import { promisify } from 'node:util';
+import sharp from 'sharp';
 import { getTemplate } from '#layers/core/app/templates';
 import { defaultResumeData, defaultResumeSettings, getDefaultFontForLanguage } from '#layers/core/app/types/resume';
 import type { ResumeData } from '#layers/core/app/types/resume';
@@ -17,10 +19,21 @@ const FONTS_DIR = resolve(ROOT, 'layers/core/public/fonts');
 const MANIFEST_PATH = resolve(OUT_DIR, 'manifest.json');
 
 const DETAIL_PPI = 100;
-const THUMB_PPI = 50;
-const WEBP_QUALITY = '75';
+const THUMB_WIDTH = 413;
+const WEBP_QUALITY = 75;
+const SCRIPT_FONT_DIRS: Record<string, string> = { ar: 'ar', ur: 'ar', zh: 'zh', hi: 'hi' };
+const PREVIEW_FILES = [...TEMPLATE_LAYOUTS.map(layout => `${layout}.webp`), 'thumb.webp', 'og.png', 'sample.pdf'];
 
 type Dict = Record<string, unknown>;
+
+interface Job {
+    slug: string;
+    locale: string;
+    templateDir: string;
+    preset: TemplatePreset;
+}
+
+const exec = promisify(execFile);
 
 const readJson = <T>(path: string): T => JSON.parse(readFileSync(path, 'utf8')) as T;
 
@@ -46,10 +59,23 @@ const translator = (locale: string) => {
     };
 };
 
-const typst = (args: string[]) => execFileSync('typst', [...args, '--font-path', FONTS_DIR], { stdio: 'pipe' });
-const toWebp = (png: string, webp: string) => execFileSync('cwebp', ['-quiet', '-q', WEBP_QUALITY, png, '-o', webp]);
+const fontArgs = (locale: string) => ['en', SCRIPT_FONT_DIRS[locale]]
+    .filter(Boolean)
+    .flatMap(dir => ['--font-path', resolve(FONTS_DIR, dir!)]);
+
+const typst = (locale: string, args: string[]) =>
+    exec('typst', [...args, ...fontArgs(locale), '--ignore-system-fonts'], { maxBuffer: 16 * 1024 * 1024 });
+
+const toWebp = (png: string, webp: string, width?: number) =>
+    sharp(png).resize(width ? { width } : undefined).webp({ quality: WEBP_QUALITY }).toFile(webp);
 
 const typstString = (value: string) => `"${value.replaceAll('\\', '\\\\').replaceAll('"', '\\"')}"`;
+
+const scoped = (id: string, markup: string) => `#pagebreak(weak: true)
+#[
+#context [#metadata((id: "${id}", page: here().page())) <doc-start>]
+${markup}
+]`;
 
 const ogMarkup = (title: string, font: string, rtl: boolean, previewPng: string) => `#set page(width: 1200pt, height: 630pt, margin: 0pt, fill: rgb("#eef2f9"))
 #set text(font: ("${font}", "Calibri"), fill: rgb("#111827")${rtl ? ', dir: rtl' : ''})
@@ -63,60 +89,99 @@ const ogMarkup = (title: string, font: string, rtl: boolean, previewPng: string)
   [#pad(top: 60pt, right: 60pt)[#box(stroke: 1pt + rgb("#d1d5db"), image("${previewPng}", width: 400pt))]],
 )`;
 
-const renderLocale = (slug: string, templateDir: string, preset: TemplatePreset, locale: string, workDir: string) => {
-    const outDir = resolve(OUT_DIR, locale, slug);
-    mkdirSync(outDir, { recursive: true });
-    const sample = readJson<ResumeData>(join(templateDir, `${locale}.json`));
-    const data = { ...defaultResumeData, ...sample };
-    const t = translator(locale);
-    const font = getDefaultFontForLanguage(locale);
-
-    for (const layout of TEMPLATE_LAYOUTS) {
-        const markup = getTemplate(layout).parse({
-            data,
-            settings: { ...defaultResumeSettings, selectedFont: font, ...templateSettingsFor(preset, locale), selectedTemplate: layout },
-            locale,
-            t,
-        });
-        const source = join(workDir, `${locale}-${slug}-${layout}.typ`);
-        writeFileSync(source, markup);
-        const png = join(workDir, `${locale}-${slug}-${layout}.png`);
-        typst(['compile', '--root', workDir, '--pages', '1', '--ppi', String(DETAIL_PPI), source, png]);
-        toWebp(png, join(outDir, `${layout}.webp`));
-
-        if (layout === preset.layout) {
-            const thumbPng = join(workDir, `${locale}-${slug}-thumb.png`);
-            typst(['compile', '--root', workDir, '--pages', '1', '--ppi', String(THUMB_PPI), source, thumbPng]);
-            toWebp(thumbPng, join(outDir, 'thumb.webp'));
-            typst(['compile', '--root', workDir, source, join(outDir, 'sample.pdf')]);
-
-            const ogSource = join(workDir, `${locale}-${slug}-og.typ`);
-            const title = templatePageTitle(readFileSync(join(templateDir, `${locale}.md`), 'utf8'));
-            writeFileSync(ogSource, ogMarkup(title, font, isRtlLocale(locale), `/${locale}-${slug}-${layout}.png`));
-            typst(['compile', '--root', workDir, '--ppi', '72', ogSource, join(outDir, 'og.png')]);
-        }
-    }
+const inPool = async <T>(items: T[], work: (item: T) => Promise<unknown>) => {
+    const queue = [...items];
+    await Promise.all(Array.from({ length: Math.min(availableParallelism(), queue.length) }, async () => {
+        for (let item = queue.shift(); item !== undefined; item = queue.shift()) await work(item);
+    }));
 };
 
-const run = () => {
-    const only = process.argv.slice(2);
+const renderDocument = async (locale: string, workDir: string, source: string, output: string, ppi: string) => {
+    const [{ stdout }] = await Promise.all([
+        typst(locale, ['query', '--root', workDir, source, '<doc-start>', '--field', 'value']),
+        typst(locale, ['compile', '--root', workDir, '--ppi', ppi, source, output]),
+    ]);
+    const starts = JSON.parse(stdout) as Array<{ id: string; page: number }>;
+    return new Map(starts.map(({ id, page }) => [id, output.replace('{p}', String(page))]));
+};
+
+const renderLocale = async (locale: string, jobs: Job[], workDir: string): Promise<Array<() => Promise<unknown>>> => {
+    const t = translator(locale);
+    const font = getDefaultFontForLanguage(locale);
+    const dir = join(workDir, locale);
+    mkdirSync(dir, { recursive: true });
+
+    const resumes: string[] = [];
+    const samples = new Map<string, string>();
+    for (const job of jobs) {
+        const data = { ...defaultResumeData, ...readJson<ResumeData>(join(job.templateDir, `${locale}.json`)) };
+        for (const layout of TEMPLATE_LAYOUTS) {
+            const markup = getTemplate(layout).parse({
+                data,
+                settings: { ...defaultResumeSettings, selectedFont: font, ...templateSettingsFor(job.preset, locale), selectedTemplate: layout },
+                locale,
+                t,
+            });
+            resumes.push(scoped(`${job.slug}/${layout}`, markup));
+            if (layout === job.preset.layout) samples.set(job.slug, markup);
+        }
+    }
+    writeFileSync(join(dir, 'resumes.typ'), resumes.join('\n'));
+    const pages = await renderDocument(locale, workDir, join(dir, 'resumes.typ'), join(dir, 'page-{p}.png'), String(DETAIL_PPI));
+
+    writeFileSync(join(dir, 'og.typ'), jobs.map((job) => {
+        const title = templatePageTitle(readFileSync(join(job.templateDir, `${locale}.md`), 'utf8'));
+        const preview = pages.get(`${job.slug}/${job.preset.layout}`)!.replace(workDir, '');
+        return scoped(job.slug, ogMarkup(title, font, isRtlLocale(locale), preview));
+    }).join('\n'));
+    const ogImages = await renderDocument(locale, workDir, join(dir, 'og.typ'), join(dir, 'og-{p}.png'), '72');
+
+    return jobs.flatMap((job) => {
+        const outDir = resolve(OUT_DIR, locale, job.slug);
+        const page = (layout: string) => pages.get(`${job.slug}/${layout}`)!;
+        const sampleSource = join(dir, `${job.slug}.typ`);
+        const creationTimestamp = String(Date.parse(job.preset.updatedAt) / 1000);
+        mkdirSync(outDir, { recursive: true });
+        writeFileSync(sampleSource, samples.get(job.slug)!);
+        copyFileSync(ogImages.get(job.slug)!, join(outDir, 'og.png'));
+        return [
+            ...TEMPLATE_LAYOUTS.map(layout => () => toWebp(page(layout), join(outDir, `${layout}.webp`))),
+            () => toWebp(page(job.preset.layout), join(outDir, 'thumb.webp'), THUMB_WIDTH),
+            () => typst(locale, ['compile', '--root', workDir, '--creation-timestamp', creationTimestamp, sampleSource, join(outDir, 'sample.pdf')]),
+        ];
+    });
+};
+
+const isUpToDate = (manifest: Record<string, string>, job: Job) =>
+    manifest[`${job.locale}/${job.slug}`] === previewInputHash(job.templateDir, job.locale)
+    && PREVIEW_FILES.every(file => existsSync(resolve(OUT_DIR, job.locale, job.slug, file)));
+
+const main = async () => {
+    const args = process.argv.slice(2);
+    const force = args.includes('--force');
+    const only = args.filter(arg => !arg.startsWith('--'));
     const locales = process.env.TEMPLATE_LOCALES?.split(',') ?? TEMPLATE_LOCALES;
     const manifest: Record<string, string> = existsSync(MANIFEST_PATH) ? readJson(MANIFEST_PATH) : {};
     const workDir = mkdtempSync(join(tmpdir(), 'template-previews-'));
     try {
-        const slugs = readdirSync(TEMPLATES_DIR, { withFileTypes: true })
+        const jobs: Job[] = readdirSync(TEMPLATES_DIR, { withFileTypes: true })
             .filter(entry => entry.isDirectory() && (!only.length || only.includes(entry.name)))
-            .map(entry => entry.name);
-        for (const slug of slugs) {
-            const templateDir = join(TEMPLATES_DIR, slug);
-            const preset = templatePresetSchema.parse(readJson(join(templateDir, 'template.json')));
-            for (const locale of locales) {
-                if (!existsSync(join(templateDir, `${locale}.json`)) || !existsSync(join(templateDir, `${locale}.md`))) continue;
-                renderLocale(slug, templateDir, preset, locale, workDir);
-                manifest[`${locale}/${slug}`] = previewInputHash(templateDir, locale);
-                console.log(`rendered ${locale}/${slug}`);
-            }
-        }
+            .flatMap((entry) => {
+                const templateDir = join(TEMPLATES_DIR, entry.name);
+                const preset = templatePresetSchema.parse(readJson(join(templateDir, 'template.json')));
+                return locales
+                    .filter(locale => existsSync(join(templateDir, `${locale}.json`)) && existsSync(join(templateDir, `${locale}.md`)))
+                    .map(locale => ({ slug: entry.name, templateDir, preset, locale }));
+            })
+            .filter(job => force || !isUpToDate(manifest, job));
+
+        const byLocale = Map.groupBy(jobs, job => job.locale);
+        const tasks = await Promise.all([...byLocale].map(([locale, localeJobs]) => renderLocale(locale, localeJobs, workDir)));
+        await inPool(tasks.flat(), task => task());
+
+        for (const job of jobs) manifest[`${job.locale}/${job.slug}`] = previewInputHash(job.templateDir, job.locale);
+        console.log(jobs.length ? `${jobs.length} previews rendered` : 'Previews are up to date. Use --force after renderer changes.');
+
         const sorted = Object.fromEntries(Object.entries(manifest).sort(([a], [b]) => a.localeCompare(b)));
         writeFileSync(MANIFEST_PATH, `${JSON.stringify(sorted, null, 4)}\n`);
     }
@@ -125,4 +190,4 @@ const run = () => {
     }
 };
 
-run();
+await main();
