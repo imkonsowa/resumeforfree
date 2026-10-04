@@ -1001,7 +1001,7 @@
         },
         "layouts": {
             "ats-friendly": "متوافق مع ATS",
-            "compact": "مضغوط",
+            "compact": "عامود واحد",
             "default": "عمودان",
             "simple": "بسيط"
         },

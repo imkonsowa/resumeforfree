@@ -12,13 +12,12 @@ interface Emits {
 const props = withDefaults(defineProps<Props>(), { showNavigateOption: true });
 const emit = defineEmits<Emits>();
 
-const { t, locales } = useI18n();
+const { t, locale, locales } = useI18n();
 const authStore = useAuthStore();
 const resumeStore = useResumeStore();
-const settingsStore = useSettingsStore();
 
 const newResumeName = ref('');
-const selectedLanguage = ref(settingsStore.settings.locale || 'en');
+const selectedLanguage = ref(locale.value);
 const navigateToBuilder = ref(true);
 const saveToCloud = ref(false);
 
@@ -44,7 +43,7 @@ const getDefaultResumeName = () => {
 watch(() => props.isOpen, (isOpen) => {
     if (isOpen) {
         newResumeName.value = props.defaultName || getDefaultResumeName();
-        selectedLanguage.value = settingsStore.settings.locale || 'en';
+        selectedLanguage.value = locale.value;
         navigateToBuilder.value = true;
         saveToCloud.value = false;
     }
