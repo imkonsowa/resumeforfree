@@ -26,7 +26,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[النبذة الشخصية]],
     [Expert in C\#, F\#, and .NET development. Worked with \$100M+ projects.]
 )
@@ -35,7 +35,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[الخبرة العملية]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "يناير 2020 - حتى الآن")]],
@@ -52,7 +52,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[المهارات]],
     [#block(above: 0em, below: 0.8em)[*Languages:* C\#, F\#, TypeScript, JavaScript, C++]#block(above: 0em, below: 0.8em)[*Frameworks:* .NET, ASP.NET MVC, Entity Framework]#block(above: 0em, below: 0.8em)[*Tools:* Git, Docker, Azure DevOps]]
 )
@@ -61,7 +61,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[المشاريع]],
     [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Operators Logic App - C\#, Windows App]]
 
@@ -88,7 +88,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[النبذة الشخصية]],
     [I work with \*bold\* text and \_italic\_ formatting. Also \{curly\} and \<angle\> brackets.]
 )
@@ -97,7 +97,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[المهارات]],
     [#block(above: 0em, below: 0.8em)[*Special\~Chars:* Testing \^caret and \~tilde characters]#block(above: 0em, below: 0.8em)[*Brackets:* Using \[square\] and \{curly\} brackets]]
 )
@@ -106,7 +106,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[المشاريع]],
     [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Project with \"quotes\" inside]]
 
@@ -129,7 +129,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[النبذة الشخصية]],
     [Desarrollador con experiencia en tecnologias web.]
 )
@@ -138,7 +138,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[المهارات]],
     [#block(above: 0em, below: 0.8em)[*Idiomas:* Espanol (nativo), English, Francais]]
 )
@@ -159,7 +159,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[النبذة الشخصية]],
     [Full-Stack Developer with experience in web technologies]
 )
@@ -168,7 +168,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[المهارات]],
     [#block(above: 0em, below: 0.8em)[*Languages:* JavaScript, TypeScript, Python]]
 )
@@ -189,7 +189,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[الروابط الشخصية والاجتماعية]],
     [#link("https://linkedin.com/in/sarahjohnson")[#text("LinkedIn")], #link("https://github.com/sarahjohnson")[#text("GitHub")]]
 )
@@ -198,7 +198,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[النبذة الشخصية]],
     [Experienced Full Stack Developer with 8+ years in web development. Specialized in React, Node.js, and cloud technologies.]
 )
@@ -207,7 +207,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[الخبرة العملية]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "مارس 2020 - حتى الآن")]],
@@ -231,7 +231,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[التعليم]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "أغسطس 2013 - مايو 2017")]],
@@ -244,7 +244,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[التدريب المهني]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "مايو 2016 - أغسطس 2016")]],
@@ -259,7 +259,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[المهارات]],
     [#block(above: 0em, below: 0.8em)[*Frontend:* React, Vue.js, TypeScript, HTML, CSS]#block(above: 0em, below: 0.8em)[*Backend:* Node.js, Python, Go, PostgreSQL]#block(above: 0em, below: 0.8em)[*DevOps:* Docker, Kubernetes, AWS, CI/CD]]
 )
@@ -268,7 +268,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[المشاريع]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "يناير 2023 - حتى الآن")]],
@@ -290,7 +290,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[الأعمال التطوعية]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "يناير 2019 - حتى الآن")]],
@@ -305,7 +305,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[اللغات]],
     [#block(above: 0em, below: 0.8em)[*English* - اللغة الأم]#block(above: 0em, below: 0.8em)[*Spanish* - Intermediate]]
 )
@@ -314,13 +314,27 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[الشهادات]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "يونيو 2022")]],
     [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[AWS Solutions Architect من Amazon Web Services · #link("https://aws.amazon.com/certification")[#text("رابط")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 12pt)[Professional level certification]]]
+)
+#block(above: 0.6em, below: 0.6em)[#line(length: 100%, stroke: 0.4pt)]
+#grid(
+    columns: (22%, 1fr),
+    column-gutter: 1.2em,
+    row-gutter: 0.8em,
+    align: (start + top, start + top),
+    [#text(size: 15pt, weight: "bold")[المنشورات]
+
+#text(size: 11pt)[#text(fill: rgb("#4B5563"), "أبريل 2023")]],
+    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Scaling Event Pipelines on the Edge · #link("https://doi.org/10.1145/0000000")[#text("رابط")]]]
+
+#block(above: 0em, below: 0.8em)[#text(size: 12pt)[S. Johnson, M. Chen, #emph[ACM SIGOPS Workshop] \
+Measured cold-start costs across three serverless runtimes]]]
 )
 #pagebreak(weak: true)
 
@@ -337,7 +351,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[المهارات]],
     [#block(above: 0em, below: 0.8em)[Only description, no title]#block(above: 0em, below: 0.8em)[*Only title*]]
 )
@@ -358,7 +372,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[النبذة الشخصية]],
     [Summary text]
 )
@@ -367,7 +381,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[التعليم]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "سبتمبر 2015 - يونيو 2019")]],
@@ -384,7 +398,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[الخبرة العملية]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "يناير 2020 - حتى الآن")]],
@@ -401,7 +415,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[التدريب المهني]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "يونيو 2019 - سبتمبر 2019")]],
@@ -418,7 +432,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[الأعمال التطوعية]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "يناير 2020 - حتى الآن")]],
@@ -435,7 +449,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[المشاريع]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "مارس 2021 - سبتمبر 2022")]],
@@ -452,7 +466,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[الشهادات]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "يناير 2022")]],
@@ -483,7 +497,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[الروابط الشخصية والاجتماعية]],
     [#link("https://linkedin.com/in/sarahjohnson")[#text("LinkedIn")], #link("https://github.com/sarahjohnson")[#text("GitHub")]]
 )
@@ -492,7 +506,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[النبذة الشخصية]],
     [Experienced Full Stack Developer with 8+ years in web development. Specialized in React, Node.js, and cloud technologies.]
 )
@@ -501,7 +515,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[الخبرة العملية]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "مارس 2020 - حتى الآن")]],
@@ -525,7 +539,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[التعليم]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "أغسطس 2013 - مايو 2017")]],
@@ -538,7 +552,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[التدريب المهني]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "مايو 2016 - أغسطس 2016")]],
@@ -553,7 +567,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[المهارات]],
     [#block(above: 0em, below: 0.8em)[*Frontend:* React, Vue.js, TypeScript, HTML, CSS]#block(above: 0em, below: 0.8em)[*Backend:* Node.js, Python, Go, PostgreSQL]#block(above: 0em, below: 0.8em)[*DevOps:* Docker, Kubernetes, AWS, CI/CD]]
 )
@@ -562,7 +576,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[المشاريع]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "يناير 2023 - حتى الآن")]],
@@ -584,7 +598,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[الأعمال التطوعية]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "يناير 2019 - حتى الآن")]],
@@ -599,7 +613,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[اللغات]],
     [#block(above: 0em, below: 0.8em)[*English* - اللغة الأم]#block(above: 0em, below: 0.8em)[*Spanish* - Intermediate]]
 )
@@ -608,13 +622,27 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold")[الشهادات]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "يونيو 2022")]],
     [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[AWS Solutions Architect من Amazon Web Services · #link("https://aws.amazon.com/certification")[#text("رابط")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 12pt)[Professional level certification]]]
+)
+#block(above: 0.6em, below: 0.6em)[#line(length: 100%, stroke: 0.4pt)]
+#grid(
+    columns: (22%, 1fr),
+    column-gutter: 1.2em,
+    row-gutter: 0.8em,
+    align: (start + top, start + top),
+    [#text(size: 15pt, weight: "bold")[المنشورات]
+
+#text(size: 11pt)[#text(fill: rgb("#4B5563"), "أبريل 2023")]],
+    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Scaling Event Pipelines on the Edge · #link("https://doi.org/10.1145/0000000")[#text("رابط")]]]
+
+#block(above: 0em, below: 0.8em)[#text(size: 12pt)[S. Johnson, M. Chen, #emph[ACM SIGOPS Workshop] \
+Measured cold-start costs across three serverless runtimes]]]
 )
 #pagebreak(weak: true)
 
@@ -646,7 +674,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[النبذة الشخصية]],
     [Expert in C\#, F\#, and .NET development. Worked with \$100M+ projects.]
 )
@@ -655,7 +683,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[الخبرة العملية]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "يناير 2020 - حتى الآن")]],
@@ -672,7 +700,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[المهارات]],
     [#block(above: 0em, below: 0.8em)[*Languages:* C\#, F\#, TypeScript, JavaScript, C++]#block(above: 0em, below: 0.8em)[*Frameworks:* .NET, ASP.NET MVC, Entity Framework]#block(above: 0em, below: 0.8em)[*Tools:* Git, Docker, Azure DevOps]]
 )
@@ -681,7 +709,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[المشاريع]],
     [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Operators Logic App - C\#, Windows App]]
 
@@ -708,7 +736,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[النبذة الشخصية]],
     [I work with \*bold\* text and \_italic\_ formatting. Also \{curly\} and \<angle\> brackets.]
 )
@@ -717,7 +745,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[المهارات]],
     [#block(above: 0em, below: 0.8em)[*Special\~Chars:* Testing \^caret and \~tilde characters]#block(above: 0em, below: 0.8em)[*Brackets:* Using \[square\] and \{curly\} brackets]]
 )
@@ -726,7 +754,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[المشاريع]],
     [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Project with \"quotes\" inside]]
 
@@ -749,7 +777,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[النبذة الشخصية]],
     [Desarrollador con experiencia en tecnologias web.]
 )
@@ -758,7 +786,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[المهارات]],
     [#block(above: 0em, below: 0.8em)[*Idiomas:* Espanol (nativo), English, Francais]]
 )
@@ -779,7 +807,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[النبذة الشخصية]],
     [Full-Stack Developer with experience in web technologies]
 )
@@ -788,7 +816,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[المهارات]],
     [#block(above: 0em, below: 0.8em)[*Languages:* JavaScript, TypeScript, Python]]
 )
@@ -809,7 +837,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[الروابط الشخصية والاجتماعية]],
     [#link("https://linkedin.com/in/sarahjohnson")[#text("LinkedIn")], #link("https://github.com/sarahjohnson")[#text("GitHub")]]
 )
@@ -818,7 +846,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[النبذة الشخصية]],
     [Experienced Full Stack Developer with 8+ years in web development. Specialized in React, Node.js, and cloud technologies.]
 )
@@ -827,7 +855,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[الخبرة العملية]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "مارس 2020 - حتى الآن")]],
@@ -851,7 +879,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[التعليم]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "أغسطس 2013 - مايو 2017")]],
@@ -864,7 +892,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[التدريب المهني]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "مايو 2016 - أغسطس 2016")]],
@@ -879,7 +907,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[المهارات]],
     [#block(above: 0em, below: 0.8em)[*Frontend:* React, Vue.js, TypeScript, HTML, CSS]#block(above: 0em, below: 0.8em)[*Backend:* Node.js, Python, Go, PostgreSQL]#block(above: 0em, below: 0.8em)[*DevOps:* Docker, Kubernetes, AWS, CI/CD]]
 )
@@ -888,7 +916,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[المشاريع]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "يناير 2023 - حتى الآن")]],
@@ -910,7 +938,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[الأعمال التطوعية]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "يناير 2019 - حتى الآن")]],
@@ -925,7 +953,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[اللغات]],
     [#block(above: 0em, below: 0.8em)[*English* - اللغة الأم]#block(above: 0em, below: 0.8em)[*Spanish* - Intermediate]]
 )
@@ -934,13 +962,27 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[الشهادات]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "يونيو 2022")]],
     [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[AWS Solutions Architect من Amazon Web Services · #link("https://aws.amazon.com/certification")[#text("رابط")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 10pt)[Professional level certification]]]
+)
+#block(above: 0.6em, below: 0.6em)[#line(length: 100%, stroke: 0.4pt)]
+#grid(
+    columns: (22%, 1fr),
+    column-gutter: 1.2em,
+    row-gutter: 0.8em,
+    align: (start + top, start + top),
+    [#text(size: 13pt, weight: "bold")[المنشورات]
+
+#text(size: 9pt)[#text(fill: rgb("#4B5563"), "أبريل 2023")]],
+    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Scaling Event Pipelines on the Edge · #link("https://doi.org/10.1145/0000000")[#text("رابط")]]]
+
+#block(above: 0em, below: 0.8em)[#text(size: 10pt)[S. Johnson, M. Chen, #emph[ACM SIGOPS Workshop] \
+Measured cold-start costs across three serverless runtimes]]]
 )
 #pagebreak(weak: true)
 
@@ -957,7 +999,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[المهارات]],
     [#block(above: 0em, below: 0.8em)[Only description, no title]#block(above: 0em, below: 0.8em)[*Only title*]]
 )
@@ -978,7 +1020,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[النبذة الشخصية]],
     [Summary text]
 )
@@ -987,7 +1029,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[التعليم]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "سبتمبر 2015 - يونيو 2019")]],
@@ -1004,7 +1046,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[الخبرة العملية]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "يناير 2020 - حتى الآن")]],
@@ -1021,7 +1063,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[التدريب المهني]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "يونيو 2019 - سبتمبر 2019")]],
@@ -1038,7 +1080,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[الأعمال التطوعية]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "يناير 2020 - حتى الآن")]],
@@ -1055,7 +1097,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[المشاريع]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "مارس 2021 - سبتمبر 2022")]],
@@ -1072,7 +1114,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[الشهادات]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "يناير 2022")]],
@@ -1103,7 +1145,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[الروابط الشخصية والاجتماعية]],
     [#link("https://linkedin.com/in/sarahjohnson")[#text("LinkedIn")], #link("https://github.com/sarahjohnson")[#text("GitHub")]]
 )
@@ -1112,7 +1154,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[النبذة الشخصية]],
     [Experienced Full Stack Developer with 8+ years in web development. Specialized in React, Node.js, and cloud technologies.]
 )
@@ -1121,7 +1163,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[الخبرة العملية]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "مارس 2020 - حتى الآن")]],
@@ -1145,7 +1187,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[التعليم]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "أغسطس 2013 - مايو 2017")]],
@@ -1158,7 +1200,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[التدريب المهني]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "مايو 2016 - أغسطس 2016")]],
@@ -1173,7 +1215,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[المهارات]],
     [#block(above: 0em, below: 0.8em)[*Frontend:* React, Vue.js, TypeScript, HTML, CSS]#block(above: 0em, below: 0.8em)[*Backend:* Node.js, Python, Go, PostgreSQL]#block(above: 0em, below: 0.8em)[*DevOps:* Docker, Kubernetes, AWS, CI/CD]]
 )
@@ -1182,7 +1224,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[المشاريع]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "يناير 2023 - حتى الآن")]],
@@ -1204,7 +1246,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[الأعمال التطوعية]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "يناير 2019 - حتى الآن")]],
@@ -1219,7 +1261,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[اللغات]],
     [#block(above: 0em, below: 0.8em)[*English* - اللغة الأم]#block(above: 0em, below: 0.8em)[*Spanish* - Intermediate]]
 )
@@ -1228,12 +1270,26 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold")[الشهادات]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "يونيو 2022")]],
     [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[AWS Solutions Architect من Amazon Web Services · #link("https://aws.amazon.com/certification")[#text("رابط")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 10pt)[Professional level certification]]]
+)
+#block(above: 0.6em, below: 0.6em)[#line(length: 100%, stroke: 0.4pt)]
+#grid(
+    columns: (22%, 1fr),
+    column-gutter: 1.2em,
+    row-gutter: 0.8em,
+    align: (start + top, start + top),
+    [#text(size: 13pt, weight: "bold")[المنشورات]
+
+#text(size: 9pt)[#text(fill: rgb("#4B5563"), "أبريل 2023")]],
+    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Scaling Event Pipelines on the Edge · #link("https://doi.org/10.1145/0000000")[#text("رابط")]]]
+
+#block(above: 0em, below: 0.8em)[#text(size: 10pt)[S. Johnson, M. Chen, #emph[ACM SIGOPS Workshop] \
+Measured cold-start costs across three serverless runtimes]]]
 )
 #pagebreak(weak: true)

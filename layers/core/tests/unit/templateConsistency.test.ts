@@ -44,13 +44,17 @@ const fixture = {
         title: 'CertTitle', issuer: 'CertIssuer', date: '2023-05',
         url: 'https://example.com', description: 'ZcerDesc',
     }],
+    publications: [{
+        title: 'PubTitle', authors: 'PubAuthors', venue: 'PubVenue', date: '2024-03',
+        url: 'https://doi.org/10.1000/xyz', description: 'ZpubDesc',
+    }],
     skills: [{ title: 'SkillTitle', description: 'ZsklDesc' }],
     languages: [{ name: 'LangName', proficiency: 'LangProf' }],
     socialLinks: [{ platform: 'github', url: 'https://github.com/x' }],
     technicalSkills: '',
-    sectionOrder: { summary: 0, education: 1, experience: 2, internships: 3, skills: 4, volunteering: 5, socialLinks: 6, projects: 7, languages: 8, certificates: 9 },
+    sectionOrder: { summary: 0, education: 1, experience: 2, internships: 3, skills: 4, volunteering: 5, socialLinks: 6, projects: 7, languages: 8, certificates: 9, publications: 10 },
     sectionHeaders: {},
-    sectionPlacement: { skills: 'left', projects: 'left', volunteering: 'left', languages: 'right', certificates: 'right' },
+    sectionPlacement: { skills: 'left', projects: 'left', volunteering: 'left', languages: 'right', certificates: 'right', publications: 'left' },
 } as unknown as ResumeData;
 
 const TEMPLATES = [
@@ -67,6 +71,7 @@ const TITLED_SECTIONS = [
     { marker: 'ZvolDesc', title: 'VolPosition', label: 'volunteering' },
     { marker: 'ZprjDesc', title: 'ProjTitle', label: 'projects' },
     { marker: 'ZcerDesc', title: 'CertTitle', label: 'certificates' },
+    { marker: 'ZpubDesc', title: 'PubTitle', label: 'publications' },
 ];
 
 /**

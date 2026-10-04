@@ -1,0 +1,25 @@
+{
+    "category": "business",
+    "layout": "compact",
+    "updatedAt": "2026-10-04",
+    "related": [
+        "software-engineer",
+        "accountant"
+    ],
+    "settings": {
+        "fontSize": 11,
+        "headingColor": "#b45309"
+    },
+    "localeSettings": {
+        "ar": {
+            "fontSize": 9.5,
+            "sectionSpacing": 0.9,
+            "itemSpacing": 0.5
+        },
+        "ur": {
+            "fontSize": 9.5,
+            "sectionSpacing": 0.9,
+            "itemSpacing": 0.5
+        }
+    }
+}

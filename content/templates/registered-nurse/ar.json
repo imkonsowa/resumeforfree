@@ -1,0 +1,188 @@
+{
+    "version": "v1",
+    "firstName": "هبة",
+    "lastName": "منصور",
+    "email": "heba.mansour@example.com",
+    "phone": "+971 50 000 4438",
+    "position": "ممرضة مسجلة، باطنة وجراحة",
+    "location": "دبي، الإمارات",
+    "summary": "ممرضة مسجلة بخبرة ست سنوات في أقسام الباطنة والجراحة ومراقبة القلب المزدحمة. أعمل بثقة كممرضة مسؤولة عن الوردية، وأحافظ على هدوئي مع المرضى الذين تتدهور حالتهم، وأصبر على الأسر التي لديها أسئلة كثيرة. دربت ثماني ممرضات حديثات التخرج.",
+    "experiences": [
+        {
+            "company": "مستشفى الواحة التخصصي",
+            "position": "ممرضة مسجلة، قسم الباطنة والجراحة",
+            "location": "دبي، الإمارات",
+            "companyUrl": "",
+            "startDate": "2021-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "قسم للبالغين بسعة 36 سريرا، بمعدل ممرضة لكل خمسة مرضى في الوردية الصباحية.",
+            "achievements": [
+                {
+                    "text": "ممرضة مسؤولة عن الوردية مرتين أسبوعيا: أوزع المرضى، وأدير الدخول والخروج، وأدعم الطاقم الأحدث"
+                },
+                {
+                    "text": "دربت ثماني ممرضات حديثات التخرج خلال برنامج تهيئة مدته اثنا عشر أسبوعا"
+                },
+                {
+                    "text": "انضممت إلى لجنة منع السقوط في القسم، وساعدت في تطبيق الجولات كل ساعة وفحص إنذارات الأسرّة"
+                },
+                {
+                    "text": "مستخدمة متقدمة عند تحديث نظام Cerner، ودربت 30 زميلة وزميلا على مسار صرف الأدوية الجديد"
+                }
+            ]
+        },
+        {
+            "company": "مستشفى الرحمة",
+            "position": "ممرضة مسجلة، وحدة مراقبة القلب",
+            "location": "عمّان، الأردن",
+            "companyUrl": "",
+            "startDate": "2019-07",
+            "endDate": "2021-03",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "رعيت مرضى القلب تحت المراقبة المستمرة، ومنهم مرضى ما بعد القسطرة وحالات قصور القلب"
+                },
+                {
+                    "text": "تعرفت على اضطرابات النظم القلبي وأبلغت فريق الاستجابة السريعة عند الحاجة"
+                },
+                {
+                    "text": "علّمت مرضى قصور القلب قبل الخروج قياس الوزن اليومي وحدود السوائل ومواعيد الأدوية"
+                }
+            ]
+        },
+        {
+            "company": "مركز الشفاء الطبي",
+            "position": "مساعدة تمريض",
+            "location": "عمّان، الأردن",
+            "companyUrl": "",
+            "startDate": "2017-05",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "عملت بدوام جزئي أثناء دراسة التمريض: العلامات الحيوية، وقياس السكر، والمساعدة في الحركة والعناية الشخصية"
+                },
+                {
+                    "text": "أبلغت الممرضة المسؤولة عن أي تغير في حالة المريض وسجلته في الملف الإلكتروني"
+                },
+                {
+                    "text": "دربت المساعدين الجدد على روتين القسم والنقل الآمن للمرضى"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "الجامعة الأردنية",
+            "degree": "بكالوريوس في التمريض",
+            "fieldOfStudy": "",
+            "location": "عمّان، الأردن",
+            "startDate": "2015-08",
+            "endDate": "2019-05",
+            "isPresent": false,
+            "description": "تدريب سريري في الباطنة والجراحة وطب الأطفال والولادة والصحة النفسية.",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "حملة الفحص الصحي المجتمعي",
+            "organizationUrl": "",
+            "position": "ممرضة متطوعة",
+            "location": "دبي، الإمارات",
+            "startDate": "2022-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "قياس ضغط الدم والسكر للزوار مرتين في السنة.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "المهارات السريرية",
+            "description": "تقييم المريض، العلاج الوريدي، العناية بالجروح، مراقبة القلب، إعطاء الأدوية"
+        },
+        {
+            "title": "الأنظمة",
+            "description": "Cerner، Pyxis، مضخات Alaris"
+        },
+        {
+            "title": "القيادة",
+            "description": "مسؤولة وردية، مدربة للممرضات الجدد، لجنة منع السقوط"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "العربية",
+            "proficiency": "Native"
+        },
+        {
+            "name": "الإنجليزية",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "رخصة ممرضة مسجلة",
+            "issuer": "هيئة الصحة بدبي (DHA)",
+            "date": "2021-03",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "دعم الحياة الأساسي (BLS)",
+            "issuer": "American Heart Association",
+            "date": "2025-01",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "دعم الحياة القلبي المتقدم (ACLS)",
+            "issuer": "American Heart Association",
+            "date": "2025-01",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "دورة العناية المتقدمة بالجروح",
+            "issuer": "أكاديمية التعليم الصحي المستمر",
+            "date": "2023-09",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "certificates": 1,
+        "experience": 2,
+        "education": 3,
+        "skills": 4,
+        "languages": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "التراخيص والشهادات"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

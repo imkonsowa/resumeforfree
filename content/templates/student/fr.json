@@ -1,0 +1,182 @@
+{
+    "version": "v1",
+    "firstName": "Inès",
+    "lastName": "Benali",
+    "email": "ines.benali@example.com",
+    "phone": "+33 6 67 89 01 23",
+    "position": "Étudiante en informatique",
+    "location": "Grenoble",
+    "summary": "Étudiante en troisième année de licence informatique, je cherche un stage de développement à partir de janvier 2027. J'ai réalisé deux projets web complets, je donne du soutien en programmation aux étudiants de première année et je travaille à temps partiel au service d'assistance informatique de l'université.",
+    "experiences": [
+        {
+            "company": "Service d'assistance informatique, Université Grenoble Alpes",
+            "position": "Technicienne étudiante (temps partiel)",
+            "location": "Grenoble",
+            "companyUrl": "",
+            "startDate": "2025-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Traitement d'environ 40 demandes par semaine d'étudiants et de personnels : comptes, Wi-Fi et ordinateurs portables"
+                },
+                {
+                    "text": "Rédaction de huit fiches pratiques pour la base de connaissances, dont deux parmi les pages les plus consultées"
+                }
+            ]
+        },
+        {
+            "company": "UFR d'informatique",
+            "position": "Tutrice, initiation à la programmation",
+            "location": "Grenoble",
+            "companyUrl": "",
+            "startDate": "2024-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Animation de deux séances de soutien hebdomadaires en Python et en débogage"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Université Grenoble Alpes",
+            "degree": "Licence Informatique",
+            "fieldOfStudy": "",
+            "location": "Grenoble",
+            "startDate": "2023-08",
+            "endDate": "2027-05",
+            "isPresent": false,
+            "description": "Cours utiles : structures de données, algorithmique, bases de données, systèmes d'exploitation, développement web.",
+            "graduationScore": "Mention bien en deuxième année",
+            "achievements": [
+                {
+                    "text": "Bourse au mérite, deux années consécutives"
+                }
+            ]
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Association Code et Collège",
+            "organizationUrl": "",
+            "position": "Animatrice bénévole",
+            "location": "Grenoble",
+            "startDate": "2024-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Cours hebdomadaires de Scratch et de Python pour des collégiens.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Langages",
+            "description": "Python, Java, JavaScript, SQL"
+        },
+        {
+            "title": "Web",
+            "description": "React, Node.js, Express, HTML, CSS"
+        },
+        {
+            "title": "Outils",
+            "description": "Git, GitHub, VS Code, ligne de commande Linux"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "StudySpot",
+            "description": "Application web qui affiche en temps réel les salles d'étude libres du campus, développée avec React, Node.js et PostgreSQL. Environ 300 étudiants l'ont utilisée pendant les partiels.",
+            "links": [
+                {
+                    "url": "https://github.com/example/studyspot",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2025-02",
+            "endDate": "2025-05",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Budget Coloc",
+            "description": "Application Android pour partager les dépenses entre colocataires. Projet en équipe pour le cours de développement mobile ; j'ai développé la synchronisation avec Firebase.",
+            "links": [],
+            "startDate": "2024-09",
+            "endDate": "2024-12",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Campus Solidaire",
+            "description": "Projet réalisé lors d'un hackathon étudiant à Grenoble : une carte des distributions alimentaires gratuites sur le campus. Prix de l'impact social avec une équipe de quatre ; j'ai développé l'API.",
+            "links": [],
+            "startDate": "2024-10",
+            "endDate": "2024-10",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Français",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Anglais",
+            "proficiency": "Proficient"
+        },
+        {
+            "name": "Arabe",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "AWS Certified Cloud Practitioner",
+            "issuer": "Amazon Web Services",
+            "date": "2025-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "education": 1,
+        "projects": 2,
+        "experience": 3,
+        "skills": 4,
+        "volunteering": 6,
+        "languages": 7,
+        "internships": 7,
+        "certificates": 5,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

@@ -1,0 +1,194 @@
+{
+    "version": "v1",
+    "firstName": "林晓雯",
+    "lastName": "",
+    "email": "lin.xiaowen@example.com",
+    "phone": "+86 137 0018 2265",
+    "position": "高级会计，中国注册会计师",
+    "location": "上海",
+    "summary": "注册会计师，十年企业会计和审计经验。负责多主体集团的月结，保证对账干净准确，善于把拖慢结账的手工环节改成标准流程。",
+    "experiences": [
+        {
+            "company": "华禾食品集团有限公司",
+            "position": "高级会计",
+            "location": "上海",
+            "companyUrl": "",
+            "startDate": "2021-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "负责国内五家子公司的月结和内部往来抵消"
+                },
+                {
+                    "text": "把预提明细表迁入 SAP 并固定结账日历，月结从九个工作日缩短到六个"
+                },
+                {
+                    "text": "准备年度外部审计所需的明细资料，近两次审计中我负责的科目没有审计调整"
+                },
+                {
+                    "text": "在 SAP 中建立固定资产卡片台账，替代原来的 Excel 表格"
+                },
+                {
+                    "text": "与财务分析团队一起做每月经营差异分析，向财务总监解释毛利率的变动原因"
+                }
+            ]
+        },
+        {
+            "company": "恒信会计师事务所（特殊普通合伙）",
+            "position": "审计高级",
+            "location": "上海",
+            "companyUrl": "",
+            "startDate": "2017-09",
+            "endDate": "2021-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "负责制造业和零售业客户的年报审计现场工作，客户年收入最高约 30 亿元"
+                },
+                {
+                    "text": "测试收入、存货和薪酬相关内部控制，撰写管理建议书"
+                },
+                {
+                    "text": "每个项目带领两到四名审计助理"
+                }
+            ]
+        },
+        {
+            "company": "中衡会计师事务所（特殊普通合伙）",
+            "position": "审计助理",
+            "location": "杭州",
+            "companyUrl": "",
+            "startDate": "2015-09",
+            "endDate": "2017-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "为社会组织和制造业客户执行货币资金、应收账款和固定资产的实质性程序"
+                },
+                {
+                    "text": "编制审计底稿和余额调节表，交由项目高级和经理复核"
+                },
+                {
+                    "text": "参加客户仓库的年末存货监盘"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "上海财经大学",
+            "degree": "会计学 本科",
+            "fieldOfStudy": "",
+            "location": "上海",
+            "startDate": "2011-09",
+            "endDate": "2015-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "社区公益财税咨询",
+            "organizationUrl": "",
+            "position": "志愿者",
+            "location": "上海",
+            "startDate": "2019-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "每年个税汇算期间，帮助社区居民在个人所得税 App 上完成年度汇算。",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "会计",
+            "description": "企业会计准则、月结、对账、预提、内部往来抵消、固定资产"
+        },
+        {
+            "title": "系统",
+            "description": "SAP、用友、金蝶"
+        },
+        {
+            "title": "Excel",
+            "description": "数据透视表、XLOOKUP、Power Query"
+        },
+        {
+            "title": "报告",
+            "description": "合并报表、管理报告、Power BI、差异分析"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "SAP 系统上线项目",
+            "description": "担任集团从用友迁移到 SAP 的财务负责人：设计会计科目表、组织数据迁移，并培训 12 名财务人员。",
+            "links": [],
+            "startDate": "2021-04",
+            "endDate": "2021-12",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "中文",
+            "proficiency": "Native"
+        },
+        {
+            "name": "英语",
+            "proficiency": "Proficient"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "中国注册会计师（CPA）",
+            "issuer": "中国注册会计师协会",
+            "date": "2019-03",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "中级会计专业技术资格",
+            "issuer": "财政部",
+            "date": "2018-10",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "volunteering": 4,
+        "skills": 5,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "projects": 3,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

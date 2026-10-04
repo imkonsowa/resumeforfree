@@ -1,0 +1,199 @@
+{
+    "version": "v1",
+    "firstName": "Katharina",
+    "lastName": "Brandt",
+    "email": "katharina.brandt@example.com",
+    "phone": "+49 157 3344 5566",
+    "position": "Lehrerin für Biologie und Chemie, Sekundarstufe I",
+    "location": "Köln",
+    "summary": "Lehrerin mit zwölf Jahren Unterrichtserfahrung, davon neun in Biologie und Chemie der Jahrgänge 5 bis 10. Ich plane experimentelle Unterrichtseinheiten, nutze Lernstandsdaten, um Gruppen alle paar Wochen neu zu bilden, und arbeite eng mit der Sonderpädagogik zusammen, damit alle Schülerinnen und Schüler mitmachen können.",
+    "experiences": [
+        {
+            "company": "Gesamtschule Rheinaue",
+            "position": "Lehrerin für Biologie und Chemie, Jahrgänge 7 bis 10",
+            "location": "Köln",
+            "companyUrl": "",
+            "startDate": "2019-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Sechs Lerngruppen in Biologie und Chemie, rund 150 Schülerinnen und Schüler pro Jahr.",
+            "achievements": [
+                {
+                    "text": "Chemie-Einheiten der Jahrgangsstufe 9 um wöchentliche Schülerexperimente aufgebaut; der Anteil der Klassenarbeiten mit mindestens befriedigend stieg in zwei Jahren von 61 % auf 74 %"
+                },
+                {
+                    "text": "Vorsitz der Fachkonferenz Naturwissenschaften seit 2022: monatliche Sitzungen und gemeinsame Klassenarbeiten koordiniert"
+                },
+                {
+                    "text": "Unterrichte eine inklusive Klasse im Team mit einer Sonderpädagogin und erstelle Nachteilsausgleiche"
+                },
+                {
+                    "text": "Robotik-AG gegründet, die heute 25 Mitglieder hat und an einem regionalen Wettbewerb teilnimmt"
+                }
+            ]
+        },
+        {
+            "company": "Realschule am Stadtpark",
+            "position": "Lehrerin für Biologie, Jahrgänge 5 und 6",
+            "location": "Bonn",
+            "companyUrl": "",
+            "startDate": "2016-08",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Biologie in vier Klassen mit je rund 28 Schülerinnen und Schülern unterrichtet"
+                },
+                {
+                    "text": "Mit dem Förderverein eine Schulgarten-Einheit aufgebaut, die bis heute fester Teil des Lehrplans in Klasse 6 ist"
+                },
+                {
+                    "text": "Zwei Studierende der Universität Bonn im Praxissemester betreut"
+                }
+            ]
+        },
+        {
+            "company": "Gesamtschule Bonn-Nord",
+            "position": "Referendarin, danach Lehrerin mit befristetem Vertrag",
+            "location": "Bonn",
+            "companyUrl": "",
+            "startDate": "2013-08",
+            "endDate": "2016-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Eigenverantwortlicher Unterricht in Biologie und Chemie in den Jahrgängen 5 bis 8"
+                },
+                {
+                    "text": "Wöchentliche Lesezeit im Fachunterricht und ein Lesetagebuch für Eltern eingeführt"
+                },
+                {
+                    "text": "Im Jahrgangsteam gemeinsame Unterrichtsvorhaben und Klassenarbeiten mit aufgebaut"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Technische Universität Kaiserslautern",
+            "degree": "M.A. Schulmanagement (berufsbegleitend)",
+            "fieldOfStudy": "",
+            "location": "Kaiserslautern",
+            "startDate": "2018-08",
+            "endDate": "2020-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        },
+        {
+            "institution": "Universität zu Köln",
+            "degree": "Erstes Staatsexamen für das Lehramt, Biologie und Chemie",
+            "fieldOfStudy": "",
+            "location": "Köln",
+            "startDate": "2009-08",
+            "endDate": "2013-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "MINT-Sommercamp Köln",
+            "organizationUrl": "",
+            "position": "Leitende Kursleiterin",
+            "location": "Köln",
+            "startDate": "2018-06",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Planung und Leitung eines zweiwöchigen Technik-Camps für 40 Schülerinnen und Schüler in jedem Sommer.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Unterricht",
+            "description": "Experimenteller Unterricht, Binnendifferenzierung, Lernstandsdiagnostik, Teamteaching"
+        },
+        {
+            "title": "Klassenführung",
+            "description": "Klassenrat, Kooperatives Lernen, Elternarbeit"
+        },
+        {
+            "title": "Werkzeuge",
+            "description": "Moodle, Microsoft Teams, Schulverwaltungssoftware, interaktive Tafeln"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Deutsch",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Englisch",
+            "proficiency": "Proficient"
+        },
+        {
+            "name": "Spanisch",
+            "proficiency": "Basic"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Zweite Staatsprüfung für das Lehramt an Haupt-, Real- und Gesamtschulen, Biologie und Chemie",
+            "issuer": "Land Nordrhein-Westfalen",
+            "date": "2015-01",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Fortbildung Medienkompetenz im Unterricht",
+            "issuer": "Kompetenzteam NRW",
+            "date": "2022-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [
+        {
+            "title": "Schwimmt es oder sinkt es? Dichte mit wöchentlichen Schülerexperimenten unterrichten",
+            "authors": "K. Brandt, M. Yilmaz",
+            "venue": "MNU-Bundeskongress",
+            "date": "2023-11",
+            "url": "",
+            "description": "Workshop für Lehrkräfte der Sekundarstufe I zu kostengünstigen Experimentierroutinen."
+        }
+    ],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "certificates": 1,
+        "experience": 2,
+        "education": 3,
+        "skills": 4,
+        "languages": 7,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 5
+    },
+    "sectionHeaders": {
+        "certificates": "Lehramtsbefähigung"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

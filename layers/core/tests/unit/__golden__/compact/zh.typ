@@ -222,6 +222,15 @@ Experienced Full Stack Developer with 8+ years in web development. Specialized i
 
 #block(above: 0em, below: 0.8em)[#text(size: 12pt)[Professional level certification]]]
 ]
+
+#block(above: 0em, below: 1.2em)[
+#text(size: 15pt, weight: "bold")[发表论文]
+#block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#grid(columns: (1fr, auto), column-gutter: 0.8em, [#text(size: 13pt, weight: "bold")[Scaling Event Pipelines on the Edge · #link("https://doi.org/10.1145/0000000")[#text("链接")]]], [#text(size: 12pt, weight: "bold", fill: rgb("#4B5563"))[2023年4月]])]
+
+#block(above: 0em, below: 0.8em)[#text(size: 12pt)[S. Johnson, M. Chen, #emph[ACM SIGOPS Workshop] \
+Measured cold-start costs across three serverless runtimes]]]
+]
 #pagebreak(weak: true)
 
 // ===== compact | zh | defaults | edgeCase =====
@@ -423,6 +432,15 @@ Experienced Full Stack Developer with 8+ years in web development. Specialized i
 #block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#grid(columns: (1fr, auto), column-gutter: 0.8em, [#text(size: 13pt, weight: "bold")[AWS Solutions Architect 来自 Amazon Web Services · #link("https://aws.amazon.com/certification")[#text("链接")]]], [#text(size: 12pt, weight: "bold", fill: rgb("#4B5563"))[2022年6月]])]
 
 #block(above: 0em, below: 0.8em)[#text(size: 12pt)[Professional level certification]]]
+]
+
+#block(above: 0em, below: 1.2em)[
+#text(size: 15pt, weight: "bold")[发表论文]
+#block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#grid(columns: (1fr, auto), column-gutter: 0.8em, [#text(size: 13pt, weight: "bold")[Scaling Event Pipelines on the Edge · #link("https://doi.org/10.1145/0000000")[#text("链接")]]], [#text(size: 12pt, weight: "bold", fill: rgb("#4B5563"))[2023年4月]])]
+
+#block(above: 0em, below: 0.8em)[#text(size: 12pt)[S. Johnson, M. Chen, #emph[ACM SIGOPS Workshop] \
+Measured cold-start costs across three serverless runtimes]]]
 ]
 #pagebreak(weak: true)
 
@@ -630,6 +648,14 @@ Experienced Full Stack Developer with 8+ years in web development. Specialized i
 
 #block(above: 0em, below: 0.8em)[#text(size: 10pt)[Professional level certification]]]
 ]
+
+#block(above: 0em, below: 1.2em)[
+#block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[发表论文]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#grid(columns: (1fr, auto), column-gutter: 0.8em, [#text(size: 11pt, weight: "bold")[Scaling Event Pipelines on the Edge · #link("https://doi.org/10.1145/0000000")[#text("链接")]]], [#text(size: 10pt, weight: "bold", fill: rgb("#4B5563"))[2023年4月]])]
+
+#block(above: 0em, below: 0.8em)[#text(size: 10pt)[S. Johnson, M. Chen, #emph[ACM SIGOPS Workshop] \
+Measured cold-start costs across three serverless runtimes]]]
+]
 #pagebreak(weak: true)
 
 // ===== compact | zh | alternate | edgeCase =====
@@ -814,5 +840,13 @@ Experienced Full Stack Developer with 8+ years in web development. Specialized i
 #block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#grid(columns: (1fr, auto), column-gutter: 0.8em, [#text(size: 11pt, weight: "bold")[AWS Solutions Architect 来自 Amazon Web Services · #link("https://aws.amazon.com/certification")[#text("链接")]]], [#text(size: 10pt, weight: "bold", fill: rgb("#4B5563"))[2022年6月]])]
 
 #block(above: 0em, below: 0.8em)[#text(size: 10pt)[Professional level certification]]]
+]
+
+#block(above: 0em, below: 1.2em)[
+#block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[发表论文]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#grid(columns: (1fr, auto), column-gutter: 0.8em, [#text(size: 11pt, weight: "bold")[Scaling Event Pipelines on the Edge · #link("https://doi.org/10.1145/0000000")[#text("链接")]]], [#text(size: 10pt, weight: "bold", fill: rgb("#4B5563"))[2023年4月]])]
+
+#block(above: 0em, below: 0.8em)[#text(size: 10pt)[S. Johnson, M. Chen, #emph[ACM SIGOPS Workshop] \
+Measured cold-start costs across three serverless runtimes]]]
 ]
 #pagebreak(weak: true)

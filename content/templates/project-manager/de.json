@@ -1,0 +1,195 @@
+{
+    "version": "v1",
+    "firstName": "Tobias",
+    "lastName": "Wagner",
+    "email": "tobias.wagner@example.com",
+    "phone": "+49 152 7788 9900",
+    "position": "Senior Projektmanager, PMP",
+    "location": "München",
+    "summary": "Projektmanager mit zwölf Jahren Erfahrung in Software- und Infrastrukturprojekten für Gesundheits-, Logistik- und Telekommunikationsunternehmen. Ich leite Projekte mit 10 bis 40 Personen, halte Budgets ehrlich und schreibe Statusberichte, die die Geschäftsführung wirklich liest.",
+    "experiences": [
+        {
+            "company": "Alpenland Gesundheit GmbH",
+            "position": "Senior Projektmanager",
+            "location": "München",
+            "companyUrl": "",
+            "startDate": "2020-05",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Umstellung der Terminplanung auf eine neue Plattform in 14 Praxen geleitet: Budget 3,2 Mio. Euro, 35 Personen aus IT, Betrieb und beim Anbieter"
+                },
+                {
+                    "text": "Go-live zwei Wochen früher erreicht, weil die Praxen in drei Wellen statt auf einmal umgestellt wurden"
+                },
+                {
+                    "text": "Gemeinsames Risikoregister und wöchentlichen Lenkungskreis eingeführt, beides ist heute Standard im PMO"
+                },
+                {
+                    "text": "Führe drei Projektkoordinatoren und prüfe ihre Pläne und Budgets"
+                }
+            ]
+        },
+        {
+            "company": "Isartal Spedition GmbH",
+            "position": "Projektmanager",
+            "location": "München",
+            "companyUrl": "",
+            "startDate": "2016-03",
+            "endDate": "2020-04",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Einführung eines Lagerverwaltungssystems an sechs Logistikstandorten geleitet"
+                },
+                {
+                    "text": "Zweiwöchige Sprints für das interne Entwicklungsteam und ein gemeinsames Backlog in Jira eingeführt"
+                },
+                {
+                    "text": "Änderungsauftrag mit dem Softwareanbieter verhandelt, der 160.000 Euro Lizenzkosten gespart hat"
+                },
+                {
+                    "text": "Ersten Prozess für Projektanfragen in der IT aufgebaut, ungeplante Anfragen an das Entwicklungsteam sanken um etwa ein Drittel"
+                }
+            ]
+        },
+        {
+            "company": "Südnetz Telekom GmbH",
+            "position": "Projektkoordinator",
+            "location": "Augsburg",
+            "companyUrl": "",
+            "startDate": "2014-06",
+            "endDate": "2016-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Glasfaseranschlüsse an 20 Firmenstandorten mit Montageteams und Genehmigungsbehörden koordiniert"
+                },
+                {
+                    "text": "Projektplan und Budgetübersicht aktuell gehalten und wöchentliche Statusberichte erstellt"
+                },
+                {
+                    "text": "Termine mit Dienstleistern organisiert und offene Punkte bis zur Erledigung verfolgt"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Hochschule München",
+            "degree": "B.Sc. Wirtschaftsingenieurwesen",
+            "fieldOfStudy": "",
+            "location": "München",
+            "startDate": "2010-08",
+            "endDate": "2014-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Habitat for Humanity Deutschland",
+            "organizationUrl": "",
+            "position": "Ehrenamtlicher Baukoordinator",
+            "location": "München",
+            "startDate": "2019-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Plane Einsätze der Freiwilligen und Materiallieferungen für Bauprojekte am Wochenende.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Vorgehen",
+            "description": "Klassisch, Agile, Scrum, hybride Planung, Dienstleistersteuerung"
+        },
+        {
+            "title": "Steuerung",
+            "description": "Budgets bis 5 Mio. Euro, Risiko- und Issue-Management, Änderungsmanagement, Statusberichte"
+        },
+        {
+            "title": "Werkzeuge",
+            "description": "Jira, Confluence, MS Project, Smartsheet, Excel"
+        },
+        {
+            "title": "Branchen",
+            "description": "Gesundheitswesen, Logistik, Telekommunikation"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Deutsch",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Englisch",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Italienisch",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Project Management Professional (PMP)",
+            "issuer": "PMI",
+            "date": "2018-10",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified ScrumMaster (CSM)",
+            "issuer": "Scrum Alliance",
+            "date": "2017-04",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "PRINCE2 Foundation",
+            "issuer": "AXELOS",
+            "date": "2021-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 6,
+        "volunteering": 5,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "category": "students",
+    "layout": "compact",
+    "updatedAt": "2026-10-04",
+    "related": [
+        "software-engineer",
+        "teacher"
+    ],
+    "settings": {
+        "fontSize": 11,
+        "headingColor": "#1d4ed8",
+        "showSectionIcons": true
+    },
+    "localeSettings": {
+        "ar": {
+            "fontSize": 9.5,
+            "sectionSpacing": 0.9,
+            "itemSpacing": 0.5
+        },
+        "ur": {
+            "fontSize": 9.5,
+            "sectionSpacing": 0.9,
+            "itemSpacing": 0.5
+        }
+    }
+}

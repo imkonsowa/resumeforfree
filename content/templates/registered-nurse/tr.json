@@ -1,0 +1,188 @@
+{
+    "version": "v1",
+    "firstName": "Zeynep",
+    "lastName": "Kaya",
+    "email": "zeynep.kaya@example.com",
+    "phone": "+90 555 017 44 38",
+    "position": "Hemşire, Dahiliye ve Cerrahi Servisi",
+    "location": "Ankara",
+    "summary": "Yoğun tempolu dahiliye ve cerrahi servislerinde altı yıllık deneyime sahip hemşireyim. Vardiya sorumluluğu almaya alışkınım, durumu kötüleşen hastalarda sakin kalırım ve çok sorusu olan hasta yakınlarına zaman ayırırım. Sekiz yeni mezun hemşirenin oryantasyonunu verdim.",
+    "experiences": [
+        {
+            "company": "Yeşilvadi Eğitim ve Araştırma Hastanesi",
+            "position": "Hemşire, Dahiliye Servisi",
+            "location": "Ankara",
+            "companyUrl": "",
+            "startDate": "2021-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "36 yataklı yetişkin dahiliye servisi, gündüz vardiyasında bir hemşireye sekiz hasta.",
+            "achievements": [
+                {
+                    "text": "Haftada iki vardiya sorumluluğu alıyorum: hasta dağılımı, yatış ve taburculukların yönetimi ve yeni personele destek"
+                },
+                {
+                    "text": "Sekiz yeni mezun hemşirenin on iki haftalık oryantasyonunu verdim"
+                },
+                {
+                    "text": "Servisin düşme önleme komitesinde yer aldım; saatlik hasta vizitleri ve yatak alarmı kontrollerinin başlatılmasına yardım ettim"
+                },
+                {
+                    "text": "Yeni HBYS modülüne geçişte servis eğitmeni oldum ve 30 meslektaşıma ilaç order akışını öğrettim"
+                }
+            ]
+        },
+        {
+            "company": "Ege Özel Kalp Hastanesi",
+            "position": "Hemşire, Koroner Ara Yoğun Bakım",
+            "location": "İzmir",
+            "companyUrl": "",
+            "startDate": "2019-07",
+            "endDate": "2021-03",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Sürekli monitör takibi yapılan kalp hastalarına, anjiyografi sonrası ve kalp yetmezliği yatışları dahil, bakım verdim"
+                },
+                {
+                    "text": "Ritim bozukluklarını fark edip gerektiğinde acil müdahale ekibini çağırdım"
+                },
+                {
+                    "text": "Kalp yetmezliği hastalarına taburculuk öncesi günlük kilo takibi, sıvı kısıtlaması ve ilaç saatleri eğitimi verdim"
+                }
+            ]
+        },
+        {
+            "company": "Anadolu Tıp Merkezi",
+            "position": "Hasta Bakım Personeli",
+            "location": "Ankara",
+            "companyUrl": "",
+            "startDate": "2017-05",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Hemşirelik eğitimim sırasında yarı zamanlı çalıştım: yaşam bulguları, kan şekeri ölçümü, mobilizasyon ve hijyen bakımı"
+                },
+                {
+                    "text": "Hasta durumundaki değişiklikleri sorumlu hemşireye bildirdim ve elektronik kayda işledim"
+                },
+                {
+                    "text": "Yeni başlayan bakım personeline servis rutinlerini ve güvenli hasta taşıma tekniklerini öğrettim"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Hacettepe Üniversitesi",
+            "degree": "Hemşirelik Lisans",
+            "fieldOfStudy": "",
+            "location": "Ankara",
+            "startDate": "2015-08",
+            "endDate": "2019-05",
+            "isPresent": false,
+            "description": "Dahiliye, cerrahi, çocuk sağlığı, kadın doğum ve ruh sağlığı alanlarında klinik uygulamalar.",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Mahalle Sağlık Günleri",
+            "organizationUrl": "",
+            "position": "Gönüllü Hemşire",
+            "location": "Ankara",
+            "startDate": "2022-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Yılda iki kez tansiyon ve kan şekeri taraması.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Klinik",
+            "description": "Hasta değerlendirmesi, damar yolu ve infüzyon tedavisi, yara bakımı, monitör takibi, ilaç uygulaması"
+        },
+        {
+            "title": "Sistemler",
+            "description": "Hastane bilgi yönetim sistemi (HBYS), elektronik hasta kaydı, infüzyon pompaları"
+        },
+        {
+            "title": "Yöneticilik",
+            "description": "Vardiya sorumluluğu, oryantasyon eğitimi, düşme önleme komitesi"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Türkçe",
+            "proficiency": "Native"
+        },
+        {
+            "name": "İngilizce",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Hemşirelik Lisans Diploması",
+            "issuer": "Hacettepe Üniversitesi",
+            "date": "2019-06",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Temel Yaşam Desteği",
+            "issuer": "Türkiye Resüsitasyon Derneği",
+            "date": "2025-01",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "İleri Kardiyak Yaşam Desteği",
+            "issuer": "Türkiye Resüsitasyon Derneği",
+            "date": "2025-01",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Yoğun Bakım Hemşireliği Sertifikalı Eğitim Programı",
+            "issuer": "Sağlık Bakanlığı onaylı program",
+            "date": "2023-09",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "certificates": 1,
+        "experience": 2,
+        "education": 3,
+        "skills": 4,
+        "languages": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "Mesleki Belgeler ve Sertifikalar"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

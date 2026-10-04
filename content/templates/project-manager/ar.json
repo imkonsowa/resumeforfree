@@ -1,0 +1,195 @@
+{
+    "version": "v1",
+    "firstName": "محمود",
+    "lastName": "الشناوي",
+    "email": "mahmoud.elshenawy@example.com",
+    "phone": "+966 50 000 3305",
+    "position": "مدير مشاريع أول، PMP",
+    "location": "الرياض، السعودية",
+    "summary": "مدير مشاريع بخبرة اثنتي عشرة سنة في تسليم مشاريع البرمجيات والبنية التحتية لشركات في قطاعات الصحة والخدمات اللوجستية والاتصالات. أدير مشاريع تضم من 10 إلى 40 شخصا، وأحافظ على ميزانيات واقعية، وأكتب تقارير حالة يقرؤها التنفيذيون فعلا.",
+    "experiences": [
+        {
+            "company": "مجموعة الريادة الصحية",
+            "position": "مدير مشاريع أول",
+            "location": "الرياض، السعودية",
+            "companyUrl": "",
+            "startDate": "2020-05",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "قدت نقل نظام مواعيد المرضى إلى منصة جديدة في 14 عيادة: ميزانية 12 مليون ريال، و35 شخصا من تقنية المعلومات والعمليات والمورد"
+                },
+                {
+                    "text": "سلّمنا الإطلاق قبل موعده بأسبوعين بعد أن قسمت التشغيل في العيادات على ثلاث موجات بدل موجة واحدة"
+                },
+                {
+                    "text": "أنشأت سجلا مشتركا للمخاطر واجتماع توجيه أسبوعيا أصبحا المعيار في مكتب إدارة المشاريع"
+                },
+                {
+                    "text": "أدير ثلاثة منسقي مشاريع وأراجع خططهم وميزانياتهم"
+                }
+            ]
+        },
+        {
+            "company": "مسارات للشحن",
+            "position": "مدير مشاريع",
+            "location": "جدة، السعودية",
+            "companyUrl": "",
+            "startDate": "2016-03",
+            "endDate": "2020-04",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "أدرت تشغيل نظام إدارة المستودعات في ستة مراكز توزيع"
+                },
+                {
+                    "text": "أدخلت دورات عمل مدتها أسبوعان لفريق التطوير الداخلي وقائمة مهام مشتركة على Jira"
+                },
+                {
+                    "text": "تفاوضت مع المورد على أمر تغيير وفر 680 ألف ريال من رسوم التراخيص"
+                },
+                {
+                    "text": "بنيت أول إجراء لاستقبال طلبات المشاريع في تقنية المعلومات، فقلت طلبات العمل غير المخطط لفريق التطوير بنحو الثلث"
+                }
+            ]
+        },
+        {
+            "company": "الأفق للاتصالات",
+            "position": "منسق مشاريع",
+            "location": "جدة، السعودية",
+            "companyUrl": "",
+            "startDate": "2014-06",
+            "endDate": "2016-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "نسقت مشاريع تمديد الألياف الضوئية في 20 موقعا تجاريا مع الفرق الميدانية وجهات إصدار التصاريح"
+                },
+                {
+                    "text": "حدّثت الجدول الزمني ومتابعة الميزانية للمشروع وأعددت تقارير الحالة الأسبوعية"
+                },
+                {
+                    "text": "نظمت اجتماعات الموردين وتابعت المهام المتفق عليها حتى إغلاقها"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "جامعة الملك عبدالعزيز",
+            "degree": "بكالوريوس إدارة الأعمال",
+            "fieldOfStudy": "",
+            "location": "جدة، السعودية",
+            "startDate": "2010-08",
+            "endDate": "2014-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "جمعية بيوت الخير",
+            "organizationUrl": "",
+            "position": "منسق متطوع لمشاريع البناء",
+            "location": "الرياض، السعودية",
+            "startDate": "2019-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "أخطط جداول المتطوعين وتوصيل المواد لمشاريع ترميم المنازل في عطلات نهاية الأسبوع.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "التسليم",
+            "description": "الشلال، Agile، Scrum، التخطيط الهجين، إدارة الموردين"
+        },
+        {
+            "title": "الضبط",
+            "description": "ميزانيات حتى 20 مليون ريال، سجلات المخاطر والمشكلات، ضبط التغيير، تقارير الحالة"
+        },
+        {
+            "title": "الأدوات",
+            "description": "Jira، Confluence، MS Project، Smartsheet، Excel"
+        },
+        {
+            "title": "القطاعات",
+            "description": "الصحة، الخدمات اللوجستية، الاتصالات"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "العربية",
+            "proficiency": "Native"
+        },
+        {
+            "name": "الإنجليزية",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "الفرنسية",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "محترف إدارة المشاريع (PMP)",
+            "issuer": "PMI",
+            "date": "2018-10",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified ScrumMaster (CSM)",
+            "issuer": "Scrum Alliance",
+            "date": "2017-04",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "PRINCE2 Foundation",
+            "issuer": "AXELOS",
+            "date": "2021-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 6,
+        "volunteering": 5,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

@@ -62,6 +62,7 @@ export const useResumeImportExport = () => {
                                 + (resumeData.data.languages?.length || 0)
                                 + (resumeData.data.volunteering?.length || 0)
                                 + (resumeData.data.certificates?.length || 0)
+                                + (resumeData.data.publications?.length || 0)
                                 + (resumeData.data.socialLinks?.length || 0);
                         return {
                             name: resumeData.name,

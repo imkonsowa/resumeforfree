@@ -1,0 +1,194 @@
+{
+    "version": "v1",
+    "firstName": "Chiara",
+    "lastName": "Rinaldi",
+    "email": "chiara.rinaldi@example.com",
+    "phone": "+39 340 019 7712",
+    "position": "Senior Accountant",
+    "location": "Milano",
+    "summary": "Contabile con dieci anni di esperienza tra revisione e contabilità aziendale, abilitata come dottore commercialista. Gestisco le chiusure mensili di un gruppo con più società, tengo in ordine le riconciliazioni e mi piace eliminare i passaggi manuali che rallentano la chiusura.",
+    "experiences": [
+        {
+            "company": "Gruppo Alimentare Nord S.p.A.",
+            "position": "Senior Accountant",
+            "location": "Milano",
+            "companyUrl": "",
+            "startDate": "2021-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Responsabile della chiusura mensile di cinque società italiane e delle elisioni infragruppo"
+                },
+                {
+                    "text": "Ridotto la chiusura da nove a sei giorni lavorativi portando i prospetti di ratei e risconti in SAP e fissando un calendario di chiusura"
+                },
+                {
+                    "text": "Preparo i prospetti per la revisione del bilancio civilistico; negli ultimi due esercizi nessuna rettifica sulle mie aree"
+                },
+                {
+                    "text": "Creato il registro cespiti in SAP sostituendo il foglio Excel usato in precedenza"
+                },
+                {
+                    "text": "Collaboro con il controllo di gestione all'analisi mensile degli scostamenti e spiego al CFO le variazioni del margine lordo"
+                }
+            ]
+        },
+        {
+            "company": "Bianchi & Associati Revisione S.r.l.",
+            "position": "Senior Auditor",
+            "location": "Milano",
+            "companyUrl": "",
+            "startDate": "2017-09",
+            "endDate": "2021-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Responsabile del lavoro sul campo nelle revisioni di aziende manifatturiere e retail con ricavi fino a 400 milioni di euro"
+                },
+                {
+                    "text": "Verificato i controlli su ricavi, magazzino e personale e redatto i punti della lettera alla direzione"
+                },
+                {
+                    "text": "Coordinato team da due a quattro assistant per ogni incarico"
+                }
+            ]
+        },
+        {
+            "company": "Ferrante Revisori S.r.l.",
+            "position": "Audit Assistant",
+            "location": "Brescia",
+            "companyUrl": "",
+            "startDate": "2015-09",
+            "endDate": "2017-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Svolto verifiche di dettaglio su cassa, crediti e immobilizzazioni per enti non profit e aziende manifatturiere"
+                },
+                {
+                    "text": "Preparato carte di lavoro e riconciliazioni riviste dai senior e dai manager"
+                },
+                {
+                    "text": "Partecipato agli inventari di fine anno nei magazzini dei clienti"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Università Bocconi",
+            "degree": "Laurea in Economia Aziendale",
+            "fieldOfStudy": "",
+            "location": "Milano",
+            "startDate": "2011-08",
+            "endDate": "2015-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "CAF solidale di quartiere",
+            "organizationUrl": "",
+            "position": "Volontaria",
+            "location": "Milano",
+            "startDate": "2019-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Aiuto famiglie a basso reddito nella compilazione del 730 durante la stagione dichiarativa.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Contabilità",
+            "description": "Principi OIC e IFRS, chiusure mensili, riconciliazioni, ratei e risconti, infragruppo, cespiti"
+        },
+        {
+            "title": "Gestionali",
+            "description": "SAP, TeamSystem, Zucchetti"
+        },
+        {
+            "title": "Excel",
+            "description": "Tabelle pivot, CERCA.X, Power Query"
+        },
+        {
+            "title": "Reporting",
+            "description": "Consolidato, reporting direzionale, Power BI, analisi degli scostamenti"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Implementazione di SAP S/4HANA",
+            "description": "Referente amministrativa nel passaggio del gruppo da TeamSystem a SAP: piano dei conti, migrazione dei dati e formazione di 12 colleghi.",
+            "links": [],
+            "startDate": "2021-04",
+            "endDate": "2021-12",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Italiano",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Inglese",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Abilitazione alla professione di Dottore Commercialista",
+            "issuer": "ODCEC Milano",
+            "date": "2019-03",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Iscrizione al Registro dei Revisori Legali",
+            "issuer": "Ministero dell'Economia e delle Finanze",
+            "date": "2020-01",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "volunteering": 4,
+        "skills": 5,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "projects": 3,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

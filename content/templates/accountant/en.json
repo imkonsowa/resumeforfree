@@ -1,0 +1,187 @@
+{
+    "version": "v1",
+    "firstName": "Priya",
+    "lastName": "Raman",
+    "email": "priya.raman@example.com",
+    "phone": "+1 555 019 7712",
+    "position": "Senior Accountant, CPA",
+    "location": "Chicago, IL",
+    "summary": "CPA with ten years in corporate accounting and audit. I run month-end close for a multi-entity group, keep reconciliations clean and like fixing the manual steps that slow a close down.",
+    "experiences": [
+        {
+            "company": "Northgate Foods Group",
+            "position": "Senior Accountant",
+            "location": "Chicago, IL",
+            "companyUrl": "",
+            "startDate": "2021-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Own month-end close for five US entities and the intercompany eliminations"
+                },
+                {
+                    "text": "Shortened the close from nine working days to six by moving accrual schedules into NetSuite and setting a fixed close calendar"
+                },
+                {
+                    "text": "Prepare the schedules for the annual external audit; the last two audits closed with no adjustments from my areas"
+                },
+                {
+                    "text": "Built the fixed asset register in NetSuite and retired the spreadsheet it replaced"
+                },
+                {
+                    "text": "Partner with FP&A on the monthly variance review and explain movements in gross margin to the CFO"
+                }
+            ]
+        },
+        {
+            "company": "Hale & Morgan LLP",
+            "position": "Audit Senior",
+            "location": "Chicago, IL",
+            "companyUrl": "",
+            "startDate": "2017-09",
+            "endDate": "2021-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Ran fieldwork on audits for manufacturing and retail clients with revenue up to $400M"
+                },
+                {
+                    "text": "Tested revenue, inventory and payroll controls and wrote the management letter points"
+                },
+                {
+                    "text": "Supervised teams of two to four associates on each engagement"
+                }
+            ]
+        },
+        {
+            "company": "Crane Whitfield LLP",
+            "position": "Audit Associate",
+            "location": "Milwaukee, WI",
+            "companyUrl": "",
+            "startDate": "2015-09",
+            "endDate": "2017-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Performed substantive testing on cash, receivables and fixed assets for nonprofit and manufacturing clients"
+                },
+                {
+                    "text": "Prepared workpapers and reconciliations reviewed by audit seniors and managers"
+                },
+                {
+                    "text": "Helped with year-end inventory counts at client warehouses"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "University of Illinois Urbana-Champaign",
+            "degree": "B.S. in Accountancy",
+            "fieldOfStudy": "",
+            "location": "Champaign, IL",
+            "startDate": "2011-08",
+            "endDate": "2015-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "VITA Free Tax Program",
+            "organizationUrl": "",
+            "position": "Volunteer Tax Preparer",
+            "location": "Chicago, IL",
+            "startDate": "2019-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Prepare federal and state returns for low-income families during tax season.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Accounting",
+            "description": "US GAAP, month-end close, reconciliations, accruals, intercompany, fixed assets"
+        },
+        {
+            "title": "Systems",
+            "description": "NetSuite, SAP, QuickBooks, BlackLine"
+        },
+        {
+            "title": "Excel",
+            "description": "Pivot tables, XLOOKUP, Power Query"
+        },
+        {
+            "title": "Reporting",
+            "description": "Consolidation, management reporting, Power BI, variance analysis"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "NetSuite implementation",
+            "description": "Finance lead for moving the group from QuickBooks to NetSuite: chart of accounts design, data migration and user training for 12 people.",
+            "links": [],
+            "startDate": "2021-04",
+            "endDate": "2021-12",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "English",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Tamil",
+            "proficiency": "Native"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Certified Public Accountant (CPA)",
+            "issuer": "Illinois Board of Examiners",
+            "date": "2019-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "volunteering": 4,
+        "skills": 5,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "projects": 3,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

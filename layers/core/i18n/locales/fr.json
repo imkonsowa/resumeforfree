@@ -46,6 +46,9 @@
         },
         "certificates": {
             "title": "Certificats"
+        },
+        "publications": {
+            "title": "Publications"
         }
     }
 }

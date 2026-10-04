@@ -19,7 +19,7 @@ describe('core layer locale keys', () => {
     const coreEn = Object.keys(load('layers/core/i18n/locales', 'en')).sort();
 
     it('defines the renderer keys', () => {
-        expect(coreEn.length).toBe(23);
+        expect(coreEn.length).toBe(24);
     });
 
     it.each(LOCALES)('%s has the same non-empty core keys as en', (locale) => {

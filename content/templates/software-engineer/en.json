@@ -1,0 +1,203 @@
+{
+    "version": "v1",
+    "firstName": "Daniel",
+    "lastName": "Okafor",
+    "email": "daniel.okafor@example.com",
+    "phone": "+1 555 014 2290",
+    "position": "Senior Software Engineer",
+    "location": "Austin, TX",
+    "summary": "Backend engineer with nine years of experience building payment, logistics and order systems in Go and TypeScript. I like owning a service from design review to on-call, and I care about clear APIs, boring deployments and code the next person can read.",
+    "experiences": [
+        {
+            "company": "Larkspur Commerce",
+            "position": "Senior Software Engineer",
+            "location": "Austin, TX",
+            "companyUrl": "",
+            "startDate": "2022-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Led the split of the checkout monolith into four Go services, shipped behind feature flags with no customer-facing downtime"
+                },
+                {
+                    "text": "Cut p95 checkout latency from 900 ms to 240 ms by caching price rules and removing two synchronous calls"
+                },
+                {
+                    "text": "Designed the idempotency layer for card payments, which ended duplicate charges during retries"
+                },
+                {
+                    "text": "Mentor three engineers and run the weekly design review for the payments team"
+                }
+            ]
+        },
+        {
+            "company": "Brightline Logistics",
+            "position": "Software Engineer",
+            "location": "Dallas, TX",
+            "companyUrl": "",
+            "startDate": "2019-06",
+            "endDate": "2022-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Built the shipment tracking API in TypeScript and Node.js, used by 40 partner carriers"
+                },
+                {
+                    "text": "Moved nightly batch jobs to an event queue, so customers saw status updates in minutes instead of the next morning"
+                },
+                {
+                    "text": "Added contract tests between services and brought failed deploys down from weekly to rare"
+                },
+                {
+                    "text": "Ran the Postgres upgrade from version 10 to 14 across three clusters with under five minutes of read-only time"
+                }
+            ]
+        },
+        {
+            "company": "Pinecrest Software",
+            "position": "Junior Software Engineer",
+            "location": "Dallas, TX",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2019-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Built internal reporting tools in Python and Django for the sales and support teams"
+                },
+                {
+                    "text": "Wrote the first automated test suite for the billing module, which caught several regressions before release"
+                },
+                {
+                    "text": "Took part in the on-call rotation from the second year and wrote runbooks for the most common alerts"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "University of Texas at Dallas",
+            "degree": "B.S. Computer Science",
+            "fieldOfStudy": "",
+            "location": "Richardson, TX",
+            "startDate": "2013-08",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Austin Code Mentors",
+            "organizationUrl": "",
+            "position": "Volunteer Mentor",
+            "location": "Austin, TX",
+            "startDate": "2021-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Review code and run mock interviews for career changers learning backend development.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Languages",
+            "description": "Go, TypeScript, Python, SQL"
+        },
+        {
+            "title": "Backend",
+            "description": "REST and gRPC APIs, PostgreSQL, Redis, Kafka"
+        },
+        {
+            "title": "Infrastructure",
+            "description": "AWS, Docker, Kubernetes, Terraform, GitHub Actions"
+        },
+        {
+            "title": "Practices",
+            "description": "System design, code review, observability, incident response"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "pgmigrate",
+            "description": "Small open source tool for running PostgreSQL migrations safely in CI.",
+            "links": [
+                {
+                    "url": "https://github.com/example/pgmigrate",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2021-01",
+            "endDate": "",
+            "isPresent": true,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "English",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Spanish",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "AWS Certified Developer - Associate",
+            "issuer": "Amazon Web Services",
+            "date": "2023-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified Kubernetes Application Developer (CKAD)",
+            "issuer": "The Linux Foundation",
+            "date": "2024-04",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "projects": 3,
+        "education": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "volunteering": 7,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

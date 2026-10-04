@@ -1,0 +1,191 @@
+{
+    "version": "v1",
+    "firstName": "James",
+    "lastName": "Carter",
+    "email": "james.carter@example.com",
+    "phone": "+1 555 016 3305",
+    "position": "Senior Project Manager, PMP",
+    "location": "Denver, CO",
+    "summary": "Project manager with twelve years of delivering software and infrastructure projects for healthcare, logistics and telecom companies. I run projects of 10 to 40 people, keep budgets honest and write status reports that executives actually read.",
+    "experiences": [
+        {
+            "company": "Summit Health Systems",
+            "position": "Senior Project Manager",
+            "location": "Denver, CO",
+            "companyUrl": "",
+            "startDate": "2020-05",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Led the move of patient scheduling to a new platform across 14 clinics: $3.2M budget, 35 people across IT, operations and the vendor"
+                },
+                {
+                    "text": "Delivered the go-live two weeks early by running the clinic rollouts in three waves instead of one"
+                },
+                {
+                    "text": "Set up a shared risk log and weekly steering meeting that became the standard for the PMO"
+                },
+                {
+                    "text": "Manage three project coordinators and review their plans and budgets"
+                }
+            ]
+        },
+        {
+            "company": "Rocky Freight",
+            "position": "Project Manager",
+            "location": "Denver, CO",
+            "companyUrl": "",
+            "startDate": "2016-03",
+            "endDate": "2020-04",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Ran the rollout of a warehouse management system to six distribution centers"
+                },
+                {
+                    "text": "Introduced two-week sprints for the internal development team and a shared backlog in Jira"
+                },
+                {
+                    "text": "Negotiated a change order with the vendor that saved $180K in license fees"
+                },
+                {
+                    "text": "Built the first project intake process for IT, which cut unplanned work requests to the development team by about a third"
+                }
+            ]
+        },
+        {
+            "company": "Front Range Telecom",
+            "position": "Project Coordinator",
+            "location": "Denver, CO",
+            "companyUrl": "",
+            "startDate": "2014-06",
+            "endDate": "2016-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Coordinated fiber installation projects across 20 business sites with field crews and permitting offices"
+                },
+                {
+                    "text": "Kept the project schedule and budget tracker up to date and prepared weekly status reports"
+                },
+                {
+                    "text": "Organized vendor meetings and tracked action items to closure"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "University of Colorado Boulder",
+            "degree": "B.S. in Business Administration",
+            "fieldOfStudy": "",
+            "location": "Boulder, CO",
+            "startDate": "2010-08",
+            "endDate": "2014-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Habitat for Humanity Denver",
+            "organizationUrl": "",
+            "position": "Volunteer Build Coordinator",
+            "location": "Denver, CO",
+            "startDate": "2019-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Plan volunteer schedules and material deliveries for weekend home builds.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Delivery",
+            "description": "Waterfall, Agile, Scrum, hybrid planning, vendor management"
+        },
+        {
+            "title": "Control",
+            "description": "Budgets up to $5M, risk and issue logs, change control, status reporting"
+        },
+        {
+            "title": "Tools",
+            "description": "Jira, Confluence, MS Project, Smartsheet, Excel"
+        },
+        {
+            "title": "Industries",
+            "description": "Healthcare, logistics, telecom"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "English",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Spanish",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Project Management Professional (PMP)",
+            "issuer": "PMI",
+            "date": "2018-10",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified ScrumMaster (CSM)",
+            "issuer": "Scrum Alliance",
+            "date": "2017-04",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "PRINCE2 Foundation",
+            "issuer": "AXELOS",
+            "date": "2021-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 6,
+        "volunteering": 5,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

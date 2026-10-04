@@ -156,7 +156,7 @@ export const formatProjectsItems = (
     });
     return joinItems(formattedItems, context);
 };
-export const formatCertificatesItems = (
+export const formatDatedItems = (
     sectionContent: SectionContent[],
     context: RendererContext,
 ): string => {

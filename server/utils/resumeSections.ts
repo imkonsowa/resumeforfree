@@ -54,6 +54,12 @@ export const SECTION_SPECS: Record<string, SectionSpec> = {
         },
         required: ['title'],
     },
+    publications: {
+        fields: {
+            title: 'string', authors: 'string', venue: 'string', date: 'string', url: 'string', description: 'string',
+        },
+        required: ['title'],
+    },
     skills: {
         fields: { title: 'string', description: 'string' },
         required: ['title'],

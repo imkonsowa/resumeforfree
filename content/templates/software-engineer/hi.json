@@ -1,0 +1,207 @@
+{
+    "version": "v1",
+    "firstName": "रोहित",
+    "lastName": "शर्मा",
+    "email": "rohit.sharma@example.com",
+    "phone": "+91 90000 12345",
+    "position": "सीनियर सॉफ़्टवेयर इंजीनियर",
+    "location": "बेंगलुरु, कर्नाटक",
+    "summary": "नौ साल का अनुभव रखने वाला बैकएंड इंजीनियर, Go और TypeScript में पेमेंट, लॉजिस्टिक्स और ऑर्डर सिस्टम बनाता हूँ। डिज़ाइन रिव्यू से लेकर ऑन-कॉल तक किसी सर्विस की पूरी ज़िम्मेदारी लेना पसंद है, और साफ़ API, शांत डिप्लॉयमेंट और ऐसे कोड पर ज़ोर देता हूँ जिसे अगला व्यक्ति आसानी से पढ़ सके।",
+    "experiences": [
+        {
+            "company": "नीलगिरि कॉमर्स",
+            "position": "सीनियर सॉफ़्टवेयर इंजीनियर",
+            "location": "बेंगलुरु, कर्नाटक",
+            "companyUrl": "",
+            "startDate": "2022-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "चेकआउट मोनोलिथ को चार Go सर्विसेज़ में बाँटने का काम लीड किया, फ़ीचर फ़्लैग के साथ और ग्राहकों के लिए बिना डाउनटाइम के"
+                },
+                {
+                    "text": "प्राइस रूल को कैश करके और दो सिंक्रोनस कॉल हटाकर चेकआउट की p95 लेटेंसी 900 ms से घटाकर 240 ms की"
+                },
+                {
+                    "text": "UPI और कार्ड पेमेंट के लिए आइडेम्पोटेंसी लेयर डिज़ाइन की, जिससे रीट्राई के दौरान दोबारा पैसे कटना बंद हुआ"
+                },
+                {
+                    "text": "तीन इंजीनियरों को मेंटर करता हूँ और पेमेंट टीम का साप्ताहिक डिज़ाइन रिव्यू चलाता हूँ"
+                }
+            ]
+        },
+        {
+            "company": "गतिमान लॉजिस्टिक्स",
+            "position": "सॉफ़्टवेयर इंजीनियर",
+            "location": "पुणे, महाराष्ट्र",
+            "companyUrl": "",
+            "startDate": "2019-06",
+            "endDate": "2022-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "TypeScript और Node.js में शिपमेंट ट्रैकिंग API बनाया, जिसे 40 पार्टनर ट्रांसपोर्टर इस्तेमाल करते हैं"
+                },
+                {
+                    "text": "रात के बैच जॉब को इवेंट क्यू पर ले गया, जिससे ग्राहकों को स्टेटस अगली सुबह की जगह कुछ ही मिनटों में दिखने लगा"
+                },
+                {
+                    "text": "सर्विसेज़ के बीच कॉन्ट्रैक्ट टेस्ट जोड़े, जिससे फ़ेल होने वाले डिप्लॉय हर हफ़्ते से घटकर कभी-कभार रह गए"
+                },
+                {
+                    "text": "तीन क्लस्टर पर PostgreSQL को वर्ज़न 10 से 14 पर अपग्रेड किया, पाँच मिनट से कम रीड-ओनली समय के साथ"
+                }
+            ]
+        },
+        {
+            "company": "देवदार सॉफ़्टवेयर",
+            "position": "जूनियर सॉफ़्टवेयर इंजीनियर",
+            "location": "पुणे, महाराष्ट्र",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2019-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "सेल्स और सपोर्ट टीम के लिए Python और Django में अंदरूनी रिपोर्टिंग टूल बनाए"
+                },
+                {
+                    "text": "बिलिंग मॉड्यूल का पहला ऑटोमेटेड टेस्ट सूट लिखा, जिसने रिलीज़ से पहले कई रिग्रेशन पकड़े"
+                },
+                {
+                    "text": "दूसरे साल से ऑन-कॉल रोटेशन में शामिल हुआ और सबसे आम अलर्ट के लिए रनबुक लिखीं"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "राष्ट्रीय प्रौद्योगिकी संस्थान, तिरुचिरापल्ली",
+            "degree": "बी.टेक, कंप्यूटर साइंस और इंजीनियरिंग",
+            "fieldOfStudy": "",
+            "location": "तिरुचिरापल्ली, तमिलनाडु",
+            "startDate": "2013-07",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "बेंगलुरु कोड मेंटर्स",
+            "organizationUrl": "",
+            "position": "वॉलंटियर मेंटर",
+            "location": "बेंगलुरु, कर्नाटक",
+            "startDate": "2021-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "बैकएंड डेवलपमेंट सीख रहे करियर बदलने वालों का कोड रिव्यू करता हूँ और मॉक इंटरव्यू लेता हूँ।",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "भाषाएँ",
+            "description": "Go, TypeScript, Python, SQL"
+        },
+        {
+            "title": "बैकएंड",
+            "description": "REST और gRPC API, PostgreSQL, Redis, Kafka"
+        },
+        {
+            "title": "इंफ्रास्ट्रक्चर",
+            "description": "AWS, Docker, Kubernetes, Terraform, GitHub Actions"
+        },
+        {
+            "title": "कार्यप्रणाली",
+            "description": "सिस्टम डिज़ाइन, कोड रिव्यू, ऑब्ज़र्वेबिलिटी, इंसिडेंट रिस्पॉन्स"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "pgmigrate",
+            "description": "CI में PostgreSQL माइग्रेशन सुरक्षित तरीके से चलाने के लिए एक छोटा ओपन सोर्स टूल।",
+            "links": [
+                {
+                    "url": "https://github.com/example/pgmigrate",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2021-01",
+            "endDate": "",
+            "isPresent": true,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "हिंदी",
+            "proficiency": "Native"
+        },
+        {
+            "name": "अंग्रेज़ी",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "कन्नड़",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "AWS Certified Developer - Associate",
+            "issuer": "Amazon Web Services",
+            "date": "2023-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified Kubernetes Application Developer (CKAD)",
+            "issuer": "The Linux Foundation",
+            "date": "2024-04",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "projects": 3,
+        "education": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "volunteering": 7,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

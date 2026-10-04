@@ -1,0 +1,192 @@
+{
+    "version": "v1",
+    "firstName": "منار",
+    "lastName": "السيد",
+    "email": "manar.elsayed@example.com",
+    "phone": "+971 55 000 8841",
+    "position": "معلمة علوم للمرحلة المتوسطة",
+    "location": "أبوظبي، الإمارات",
+    "summary": "معلمة بخبرة اثنتي عشرة سنة في الفصل، منها تسع سنوات في تدريس العلوم للصفوف من السادس إلى الثامن. أخطط وحدات عملية قائمة على التجارب، وأستخدم نتائج التقييم لإعادة توزيع المجموعات كل بضعة أسابيع، وأعمل مع معلمي التربية الخاصة حتى يشارك كل طالب.",
+    "experiences": [
+        {
+            "company": "أكاديمية الريم الدولية",
+            "position": "معلمة علوم، الصفان السابع والثامن",
+            "location": "أبوظبي، الإمارات",
+            "companyUrl": "",
+            "startDate": "2019-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "خمسة فصول في العلوم الفيزيائية والحياتية، نحو 140 طالبا وطالبة في السنة.",
+            "achievements": [
+                {
+                    "text": "أعدت كتابة وحدات العلوم الفيزيائية للصف الثامن حول تجربة عملية أسبوعية، فارتفعت نسبة الطلاب الذين بلغوا مستوى الإتقان في الاختبار الموحد من 61% إلى 74% خلال سنتين"
+                },
+                {
+                    "text": "رئيسة قسم العلوم منذ 2022: أدير اجتماعات التخطيط الشهرية وأنسق الاختبارات المشتركة"
+                },
+                {
+                    "text": "أدرّس فصلا دامجا بالشراكة مع معلمة تربية خاصة، وأكتب التسهيلات في الخطط التربوية الفردية لأصحاب الهمم"
+                },
+                {
+                    "text": "أسست نادي الروبوتات بعد الدوام، ويضم اليوم 25 طالبا ويشارك في الدوري الإقليمي"
+                }
+            ]
+        },
+        {
+            "company": "مدرسة النور الخاصة",
+            "position": "معلمة علوم، الصف السادس",
+            "location": "القاهرة، مصر",
+            "companyUrl": "",
+            "startDate": "2016-08",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "درّست العلوم الحياتية وعلوم الأرض لأربعة فصول في كل منها نحو 28 طالبا"
+                },
+                {
+                    "text": "أنشأت وحدة الحديقة المدرسية بالتعاون مع مجلس الآباء، وما زالت جزءا من منهج الصف السادس"
+                },
+                {
+                    "text": "أشرفت على متدربتين من كلية التربية خلال فترة التدريب الميداني"
+                }
+            ]
+        },
+        {
+            "company": "مدرسة الأمل الابتدائية",
+            "position": "معلمة فصل، الصف الخامس",
+            "location": "القاهرة، مصر",
+            "companyUrl": "",
+            "startDate": "2013-08",
+            "endDate": "2016-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "درّست المواد الأساسية لفصل من 27 طالبا"
+                },
+                {
+                    "text": "بدأت لقاء قراءة أسبوعيا مع كل طالب وسجل قراءة منزليا يتابعه الأهل"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "جامعة عين شمس",
+            "degree": "ماجستير في المناهج وطرق التدريس",
+            "fieldOfStudy": "",
+            "location": "القاهرة، مصر",
+            "startDate": "2018-08",
+            "endDate": "2020-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        },
+        {
+            "institution": "جامعة عين شمس",
+            "degree": "بكالوريوس العلوم والتربية",
+            "fieldOfStudy": "",
+            "location": "القاهرة، مصر",
+            "startDate": "2009-08",
+            "endDate": "2013-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "مخيم العلوم والهندسة الصيفي",
+            "organizationUrl": "",
+            "position": "مدربة رئيسية",
+            "location": "أبوظبي، الإمارات",
+            "startDate": "2018-06",
+            "endDate": "",
+            "isPresent": true,
+            "description": "أخطط وأدرّس مخيما هندسيا لمدة أسبوعين لأربعين طالبا كل صيف.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "التدريس",
+            "description": "العلوم القائمة على التجارب، التعليم المتمايز، التقييم التكويني، التدريس المشترك"
+        },
+        {
+            "title": "إدارة الصف",
+            "description": "الممارسات التصالحية، التدوير بين المجموعات الصغيرة، التواصل مع أولياء الأمور"
+        },
+        {
+            "title": "الأدوات",
+            "description": "Google Classroom، Microsoft Teams، Canvas، Desmos"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "العربية",
+            "proficiency": "Native"
+        },
+        {
+            "name": "الإنجليزية",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "رخصة المعلم، العلوم للصفوف من الرابع إلى التاسع",
+            "issuer": "وزارة التربية والتعليم، الإمارات",
+            "date": "2021-07",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Google Certified Educator Level 1",
+            "issuer": "Google for Education",
+            "date": "2022-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [
+        {
+            "title": "يطفو أم يغرق: تدريس الكثافة بتجارب أسبوعية",
+            "authors": "م. السيد، ر. الخطيب",
+            "venue": "المؤتمر السنوي لمعلمي العلوم، أبوظبي",
+            "date": "2023-11",
+            "url": "",
+            "description": "ورشة عمل لمعلمي المرحلة المتوسطة عن تجارب عملية منخفضة التكلفة."
+        }
+    ],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "certificates": 1,
+        "experience": 2,
+        "education": 3,
+        "skills": 4,
+        "languages": 7,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 5
+    },
+    "sectionHeaders": {
+        "certificates": "الترخيص المهني"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

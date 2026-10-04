@@ -23,7 +23,8 @@
     "test:e2e:ui": "playwright test --ui",
     "fonts:manifest": "node layers/core/scripts/generate-font-manifest.mjs",
     "wasm:upload": "node layers/core/scripts/upload-wasm.mjs",
-    "generate:samples": "node scripts/run-generate-samples.mjs"
+    "generate:samples": "node scripts/run-generate-samples.mjs",
+    "templates:previews": "node scripts/run-generate-template-previews.mjs"
   },
   "dependencies": {
     "@cloudflare/workers-types": "^5.20260911.1",
@@ -35,6 +36,7 @@
     "@myriaddreamin/typst.ts": "^0.7.0",
     "@nuxt/ui": "^4.11.2",
     "@nuxtjs/i18n": "^10.6.0",
+    "@nuxtjs/mdc": "^0.23.2",
     "@nuxtjs/robots": "^6.2.2",
     "@nuxtjs/sitemap": "^8.5.0",
     "@nuxtjs/turnstile": "^1.1.3",

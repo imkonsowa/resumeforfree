@@ -1,4 +1,4 @@
-import type { Certificate, Education, Experience, Internship, Language, Project, ResumeData, SkillItem, Volunteering } from '#layers/core/app/types/resume';
+import type { Certificate, Education, Experience, Internship, Language, Project, Publication, ResumeData, SkillItem, Volunteering } from '#layers/core/app/types/resume';
 import type { SectionContent, TranslateFunction } from '#layers/core/app/types/template';
 import { convertDateRange, convertEmail, convertLink, convertUnderlinedLink, formatDateRangeText, ITEM_TITLE_BELOW } from './typstUtils';
 import { escapeTypstText } from './stringUtils';
@@ -291,6 +291,28 @@ export const generateCertificatesContent = (certificates: Certificate[], t?: Tra
                 titleContent,
                 date: cert.date ? convertDateRange(dateInput) : '',
                 dateText: cert.date ? formatDateRangeText(dateInput) : '',
+                description: description || undefined,
+            };
+        });
+};
+export const generatePublicationsContent = (publications: Publication[], t?: TranslateFunction, locale?: string): SectionContent[] => {
+    const linkLabel = t ? t('common.link') : 'Link';
+    return publications
+        .filter(publication => publication.title?.trim())
+        .map((publication) => {
+            const publicationLink = publication.url?.trim() ? convertLink(publication.url, linkLabel) : '';
+            const byline = [
+                publication.authors?.trim() ? escapeTypstText(publication.authors) : '',
+                publication.venue?.trim() ? `#emph[${escapeTypstText(publication.venue)}]` : '',
+            ].filter(Boolean).join(', ');
+            const summary = publication.description?.trim() ? escapeTypstText(publication.description) : '';
+            const description = [byline, summary].filter(Boolean).join(' \\\n');
+            const dateInput = { startDate: publication.date, locale };
+            return {
+                title: publication.title,
+                titleContent: publicationLink ? `${escapeTypstText(publication.title)} · ${publicationLink}` : undefined,
+                date: publication.date ? convertDateRange(dateInput) : '',
+                dateText: publication.date ? formatDateRangeText(dateInput) : '',
                 description: description || undefined,
             };
         });

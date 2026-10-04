@@ -1,0 +1,203 @@
+{
+    "version": "v1",
+    "firstName": "Luca",
+    "lastName": "Ferri",
+    "email": "luca.ferri@example.com",
+    "phone": "+39 333 014 2290",
+    "position": "Senior Software Engineer",
+    "location": "Milano",
+    "summary": "Sviluppatore backend con nove anni di esperienza su sistemi di pagamento, logistica e gestione ordini in Go e TypeScript. Mi piace seguire un servizio dalla progettazione alla reperibilità, e tengo molto ad API chiare, rilasci tranquilli e codice che il collega successivo riesce a leggere.",
+    "experiences": [
+        {
+            "company": "Vetrina Commerce S.r.l.",
+            "position": "Senior Software Engineer",
+            "location": "Milano",
+            "companyUrl": "",
+            "startDate": "2022-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Guidato la suddivisione del monolite di checkout in quattro servizi Go, rilasciati con feature flag senza interruzioni per i clienti"
+                },
+                {
+                    "text": "Ridotto la latenza p95 del checkout da 900 ms a 240 ms mettendo in cache le regole di prezzo ed eliminando due chiamate sincrone"
+                },
+                {
+                    "text": "Progettato il livello di idempotenza per i pagamenti con carta, che ha eliminato gli addebiti doppi in caso di retry"
+                },
+                {
+                    "text": "Seguo tre sviluppatori come mentor e coordino la design review settimanale del team pagamenti"
+                }
+            ]
+        },
+        {
+            "company": "Logistica Padana S.p.A.",
+            "position": "Software Engineer",
+            "location": "Bologna",
+            "companyUrl": "",
+            "startDate": "2019-06",
+            "endDate": "2022-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Sviluppato l'API di tracciamento spedizioni in TypeScript e Node.js, usata da 40 corrieri partner"
+                },
+                {
+                    "text": "Spostato i job notturni su una coda di eventi: i clienti vedono gli aggiornamenti di stato in pochi minuti invece che la mattina dopo"
+                },
+                {
+                    "text": "Introdotto i contract test tra i servizi; i rilasci falliti sono passati da settimanali a rari"
+                },
+                {
+                    "text": "Gestito l'aggiornamento di PostgreSQL dalla versione 10 alla 14 su tre cluster con meno di cinque minuti di sola lettura"
+                }
+            ]
+        },
+        {
+            "company": "Pigna Software S.r.l.",
+            "position": "Junior Software Engineer",
+            "location": "Bologna",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2019-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Sviluppato strumenti interni di reportistica in Python e Django per i team vendite e assistenza"
+                },
+                {
+                    "text": "Scritto la prima suite di test automatici del modulo di fatturazione, che ha intercettato diverse regressioni prima del rilascio"
+                },
+                {
+                    "text": "Entrato nei turni di reperibilità dal secondo anno e scritto i runbook per gli allarmi più frequenti"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Politecnico di Milano",
+            "degree": "Laurea in Ingegneria Informatica",
+            "fieldOfStudy": "",
+            "location": "Milano",
+            "startDate": "2013-08",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "108/110",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Milano Code Mentors",
+            "organizationUrl": "",
+            "position": "Mentor volontario",
+            "location": "Milano",
+            "startDate": "2021-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Revisiono il codice e faccio simulazioni di colloquio per chi cambia carriera e sta imparando lo sviluppo backend.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Linguaggi",
+            "description": "Go, TypeScript, Python, SQL"
+        },
+        {
+            "title": "Backend",
+            "description": "API REST e gRPC, PostgreSQL, Redis, Kafka"
+        },
+        {
+            "title": "Infrastruttura",
+            "description": "AWS, Docker, Kubernetes, Terraform, GitHub Actions"
+        },
+        {
+            "title": "Metodo",
+            "description": "System design, code review, osservabilità, gestione incidenti"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "pgmigrate",
+            "description": "Piccolo strumento open source per eseguire in sicurezza le migrazioni PostgreSQL in CI.",
+            "links": [
+                {
+                    "url": "https://github.com/example/pgmigrate",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2021-01",
+            "endDate": "",
+            "isPresent": true,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Italiano",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Inglese",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "AWS Certified Developer - Associate",
+            "issuer": "Amazon Web Services",
+            "date": "2023-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified Kubernetes Application Developer (CKAD)",
+            "issuer": "The Linux Foundation",
+            "date": "2024-04",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "projects": 3,
+        "education": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "volunteering": 7,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

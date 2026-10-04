@@ -70,6 +70,7 @@
     "navigation": {
         "home": "Ana Sayfa",
         "builder": "Oluşturucu",
+        "templates": "Şablonlar",
         "qa": "Soru & Cevap",
         "help": "Yardım",
         "resumes": "Özgeçmişleriniz",
@@ -592,6 +593,20 @@
                 "title": "Sertifikayı Sil",
                 "message": "Bu sertifikayı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
             }
+        },
+        "publications": {
+            "addPublication": "Yayın Ekle",
+            "emptyMessage": "Henüz yayın eklenmedi. Başlamak için 'Yayın Ekle'ye tıklayın.",
+            "publicationTitle": "Yayın Başlığı",
+            "authors": "Yazarlar",
+            "venue": "Dergi veya Konferans",
+            "date": "Yayın Tarihi",
+            "url": "Yayın URL'si veya DOI",
+            "column": "Sütun",
+            "deleteConfirm": {
+                "title": "Yayını Sil",
+                "message": "Bu yayını silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+            }
         }
     },
     "validation": {
@@ -963,5 +978,43 @@
         "loadFailed": "Anahtarlarınız yüklenemedi.",
         "createFailed": "Anahtar oluşturulamadı.",
         "revokeFailed": "Anahtar iptal edilemedi."
+    },
+    "templates": {
+        "meta": {
+            "title": "Mesleğe Göre Ücretsiz Özgeçmiş Şablonları",
+            "description": "Yazılım mühendisleri, hemşireler, muhasebeciler, öğretmenler ve daha fazlası için ücretsiz özgeçmiş şablonları. Her biri örnek özgeçmiş ve yazım rehberiyle gelir."
+        },
+        "gallery": {
+            "title": "Mesleğe göre özgeçmiş şablonları",
+            "subtitle": "Her şablon, o meslek için eksiksiz bir örnek özgeçmiş ve yazım rehberiyle gelir. Birini düzenleyicide açın ve örneği kendi bilgilerinizle değiştirin.",
+            "search": "Meslek ara",
+            "all": "Tümü",
+            "empty": "Bu aramaya uyan şablon yok."
+        },
+        "categories": {
+            "technology": "Teknoloji",
+            "healthcare": "Sağlık",
+            "finance": "Finans",
+            "education": "Eğitim",
+            "business": "İş",
+            "students": "Öğrenciler"
+        },
+        "layouts": {
+            "ats-friendly": "ATS Uyumlu",
+            "compact": "Kompakt",
+            "default": "İki Sütun",
+            "simple": "Sade"
+        },
+        "detail": {
+            "useTemplate": "Bu şablonu kullan",
+            "downloadSample": "Örnek PDF'i indir",
+            "layout": "Düzen",
+            "onThisPage": "Bu sayfada",
+            "faq": "Sorular",
+            "related": "İlgili şablonlar",
+            "updated": "Güncellendi: {date}",
+            "previewAlt": "{layout} düzeninde {profession} örnek özgeçmişi",
+            "resumeName": "{profession} Özgeçmişi"
+        }
     }
 }

@@ -1,0 +1,199 @@
+{
+    "version": "v1",
+    "firstName": "Lucie",
+    "lastName": "Garnier",
+    "email": "lucie.garnier@example.com",
+    "phone": "+33 6 45 67 89 01",
+    "position": "Professeure de sciences en collège",
+    "location": "Nantes",
+    "summary": "Professeure avec douze ans d'expérience, dont les neuf dernières en sciences au collège. Je construis des séquences autour de manipulations, j'utilise les évaluations pour former des groupes de besoin toutes les quelques semaines et je travaille étroitement avec l'équipe d'inclusion pour que chaque élève participe.",
+    "experiences": [
+        {
+            "company": "Collège Jules-Verne",
+            "position": "Professeure de physique-chimie et SVT, quatrième et troisième",
+            "location": "Nantes",
+            "companyUrl": "",
+            "startDate": "2019-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Cinq classes, environ 140 élèves par an.",
+            "achievements": [
+                {
+                    "text": "Réécriture des séquences de physique-chimie de troisième autour de manipulations hebdomadaires ; taux de réussite à l'épreuve de sciences du brevet passé de 61 % à 74 % en deux ans"
+                },
+                {
+                    "text": "Coordinatrice de sciences depuis 2022 : réunions de progression mensuelles et évaluations communes"
+                },
+                {
+                    "text": "Co-enseignement avec l'enseignante de la classe ULIS et adaptation des supports pour les élèves avec PAP ou PPS"
+                },
+                {
+                    "text": "Création d'un club robotique après les cours, 25 élèves inscrits et participation à une compétition régionale"
+                }
+            ]
+        },
+        {
+            "company": "Collège Les Sorinières",
+            "position": "Professeure de SVT, sixième",
+            "location": "Les Sorinières",
+            "companyUrl": "",
+            "startDate": "2016-08",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Enseignement des sciences de la vie et de la Terre à quatre classes d'environ 28 élèves"
+                },
+                {
+                    "text": "Création d'un potager pédagogique avec l'association de parents, toujours au programme de sixième"
+                },
+                {
+                    "text": "Tutrice de deux enseignants stagiaires de l'INSPE"
+                }
+            ]
+        },
+        {
+            "company": "École élémentaire Jean-Moulin",
+            "position": "Professeure des écoles, CM2",
+            "location": "Saint-Herblain",
+            "companyUrl": "",
+            "startDate": "2013-08",
+            "endDate": "2016-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Classe de CM2 de 27 élèves dans toutes les matières"
+                },
+                {
+                    "text": "Mise en place d'entretiens de lecture hebdomadaires et de carnets de lecture partagés avec les familles"
+                },
+                {
+                    "text": "Animation du passage de l'équipe de cycle 3 à des progressions et évaluations communes"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "INSPE de Nantes",
+            "degree": "Master MEEF, second degré, sciences",
+            "fieldOfStudy": "",
+            "location": "Nantes",
+            "startDate": "2018-08",
+            "endDate": "2020-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        },
+        {
+            "institution": "Université de Nantes",
+            "degree": "Licence de sciences de la vie",
+            "fieldOfStudy": "",
+            "location": "Nantes",
+            "startDate": "2009-08",
+            "endDate": "2013-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Les Petits Débrouillards Pays de la Loire",
+            "organizationUrl": "",
+            "position": "Animatrice principale",
+            "location": "Nantes",
+            "startDate": "2018-06",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Conception et animation d'un stage scientifique de deux semaines pour 40 enfants chaque été.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Pédagogie",
+            "description": "Démarche expérimentale, différenciation, évaluation par compétences, co-enseignement"
+        },
+        {
+            "title": "Classe",
+            "description": "Groupes de besoin, climat scolaire, relation avec les familles"
+        },
+        {
+            "title": "Outils",
+            "description": "Pronote, ENT, Moodle, Capytale"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Français",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Anglais",
+            "proficiency": "Proficient"
+        },
+        {
+            "name": "Espagnol",
+            "proficiency": "Basic"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "CAPES de sciences de la vie et de la Terre",
+            "issuer": "Ministère de l'Éducation nationale",
+            "date": "2021-07",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Pix Edu, certification des compétences numériques des enseignants",
+            "issuer": "Ministère de l'Éducation nationale",
+            "date": "2022-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [
+        {
+            "title": "Couler ou flotter : enseigner la masse volumique par des manipulations hebdomadaires",
+            "authors": "L. Garnier, K. Diallo",
+            "venue": "Journées académiques des professeurs de sciences de Nantes",
+            "date": "2023-11",
+            "url": "",
+            "description": "Atelier pour les enseignants de collège sur des activités expérimentales peu coûteuses."
+        }
+    ],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "certificates": 1,
+        "experience": 2,
+        "education": 3,
+        "skills": 4,
+        "languages": 7,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 5
+    },
+    "sectionHeaders": {
+        "certificates": "Diplômes et habilitations"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

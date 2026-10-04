@@ -70,6 +70,7 @@
     "navigation": {
         "home": "Startseite",
         "builder": "Editor",
+        "templates": "Vorlagen",
         "qa": "F&A",
         "help": "Hilfe",
         "resumes": "Ihre Lebensläufe",
@@ -592,6 +593,20 @@
                 "title": "Zertifikat löschen",
                 "message": "Möchten Sie dieses Zertifikat wirklich löschen? Dies kann nicht rückgängig gemacht werden."
             }
+        },
+        "publications": {
+            "addPublication": "Publikation hinzufügen",
+            "emptyMessage": "Noch keine Publikationen hinzugefügt. Klicken Sie auf 'Publikation hinzufügen', um zu beginnen.",
+            "publicationTitle": "Titel der Publikation",
+            "authors": "Autoren",
+            "venue": "Zeitschrift oder Konferenz",
+            "date": "Veröffentlichungsdatum",
+            "url": "URL oder DOI der Publikation",
+            "column": "Spalte",
+            "deleteConfirm": {
+                "title": "Publikation löschen",
+                "message": "Möchten Sie diese Publikation wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+            }
         }
     },
     "validation": {
@@ -963,5 +978,43 @@
         "loadFailed": "Ihre Tokens konnten nicht geladen werden.",
         "createFailed": "Das Token konnte nicht erstellt werden.",
         "revokeFailed": "Das Token konnte nicht widerrufen werden."
+    },
+    "templates": {
+        "meta": {
+            "title": "Kostenlose Lebenslauf-Vorlagen nach Beruf",
+            "description": "Kostenlose Lebenslauf-Vorlagen für Softwareentwickler, Pflegekräfte, Buchhalter, Lehrkräfte und mehr. Jede enthält einen vollständigen Beispiel-Lebenslauf und eine Schreibhilfe."
+        },
+        "gallery": {
+            "title": "Lebenslauf-Vorlagen nach Beruf",
+            "subtitle": "Jede Vorlage enthält einen vollständigen Beispiel-Lebenslauf und eine Schreibhilfe für diesen Beruf. Öffnen Sie sie im Editor und ersetzen Sie das Beispiel durch Ihre Angaben.",
+            "search": "Beruf suchen",
+            "all": "Alle",
+            "empty": "Keine Vorlage passt zu dieser Suche."
+        },
+        "categories": {
+            "technology": "Technik",
+            "healthcare": "Gesundheit",
+            "finance": "Finanzen",
+            "education": "Bildung",
+            "business": "Wirtschaft",
+            "students": "Studierende"
+        },
+        "layouts": {
+            "ats-friendly": "ATS-freundlich",
+            "compact": "Kompakt",
+            "default": "Zweispaltig",
+            "simple": "Schlicht"
+        },
+        "detail": {
+            "useTemplate": "Vorlage verwenden",
+            "downloadSample": "Beispiel als PDF herunterladen",
+            "layout": "Layout",
+            "onThisPage": "Auf dieser Seite",
+            "faq": "Fragen",
+            "related": "Ähnliche Vorlagen",
+            "updated": "Aktualisiert am {date}",
+            "previewAlt": "Beispiel-Lebenslauf {profession} im Layout {layout}",
+            "resumeName": "Lebenslauf {profession}"
+        }
     }
 }

@@ -1,0 +1,178 @@
+{
+    "version": "v1",
+    "firstName": "زینب",
+    "lastName": "حسین",
+    "email": "zainab.hussain@example.com",
+    "phone": "+92 315 0116620",
+    "position": "کمپیوٹر سائنس کی طالبہ",
+    "location": "اسلام آباد، پاکستان",
+    "summary": "کمپیوٹر سائنس کے تیسرے سال کی طالبہ جو 2027 کی گرمیوں میں سافٹ ویئر انٹرن شپ کی تلاش میں ہے۔ دو فل اسٹیک پروجیکٹس بنا چکی ہوں، پہلے سال کے طلبہ کو پروگرامنگ میں ٹیوشن دیتی ہوں اور یونیورسٹی کے IT ہیلپ ڈیسک پر پارٹ ٹائم کام کرتی ہوں۔",
+    "experiences": [
+        {
+            "company": "کامسیٹس یونیورسٹی IT ہیلپ ڈیسک",
+            "position": "اسٹوڈنٹ ٹیکنیشن (پارٹ ٹائم)",
+            "location": "اسلام آباد",
+            "companyUrl": "",
+            "startDate": "2025-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "اکاؤنٹس، Wi-Fi اور لیپ ٹاپس کے بارے میں طلبہ اور عملے کی ہر ہفتے تقریباً 40 درخواستیں حل کرتی ہوں"
+                },
+                {
+                    "text": "ہیلپ ڈیسک کی نالج بیس کے لیے آٹھ رہنما مضامین لکھے؛ ان میں سے دو سب سے زیادہ پڑھے جانے والے صفحات میں شامل ہیں"
+                }
+            ]
+        },
+        {
+            "company": "شعبۂ کمپیوٹر سائنس",
+            "position": "پیئر ٹیوٹر، پروگرامنگ کا تعارف",
+            "location": "اسلام آباد",
+            "companyUrl": "",
+            "startDate": "2024-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Python اور debugging کے لیے ہفتے میں دو اوپن سیشن چلاتی ہوں"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "کامسیٹس یونیورسٹی اسلام آباد",
+            "degree": "بی ایس کمپیوٹر سائنس",
+            "fieldOfStudy": "",
+            "location": "اسلام آباد",
+            "startDate": "2023-08",
+            "endDate": "2027-05",
+            "isPresent": false,
+            "description": "متعلقہ کورسز: ڈیٹا اسٹرکچرز، الگورتھمز، ڈیٹا بیس، آپریٹنگ سسٹمز، ویب ڈویلپمنٹ۔",
+            "graduationScore": "3.7 / 4.0 CGPA",
+            "achievements": [
+                {
+                    "text": "ڈینز آنر لسٹ، چار سمسٹر"
+                }
+            ]
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "ڈیجیٹل سکلز رضاکار پروگرام",
+            "organizationUrl": "",
+            "position": "رضاکار انسٹرکٹر",
+            "location": "اسلام آباد",
+            "startDate": "2024-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "سرکاری اسکول کے مڈل جماعت کے طلبہ کو ہر ہفتے Scratch اور Python سکھاتی ہوں۔",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "پروگرامنگ زبانیں",
+            "description": "Python، Java، JavaScript، SQL"
+        },
+        {
+            "title": "ویب",
+            "description": "React، Node.js، Express، HTML، CSS"
+        },
+        {
+            "title": "ٹولز",
+            "description": "Git، GitHub، VS Code، Linux کمانڈ لائن"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "StudySpot",
+            "description": "ویب ایپ جو کیمپس میں خالی اسٹڈی رومز کو فوری دکھاتی ہے، React، Node.js اور PostgreSQL سے بنی۔ فائنل امتحانات کے ہفتے میں تقریباً 300 طلبہ نے اسے استعمال کیا۔",
+            "links": [
+                {
+                    "url": "https://github.com/example/studyspot",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2025-02",
+            "endDate": "2025-05",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Budget Buddy",
+            "description": "ہاسٹل کے روم میٹس کے درمیان مشترکہ خرچ تقسیم کرنے کی Android ایپ۔ موبائل ڈویلپمنٹ کورس کا ٹیم پروجیکٹ؛ میں نے Firebase کے ساتھ sync بنایا۔",
+            "links": [],
+            "startDate": "2024-09",
+            "endDate": "2024-12",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "کیمپس فوڈ میپ",
+            "description": "2024 کے انٹر یونیورسٹی ہیکاتھون کا پروجیکٹ: کیمپس پر مفت کھانے کی تقریبات کا نقشہ۔ چار افراد کی ٹیم کے ساتھ سوشل امپیکٹ انعام جیتا؛ میں نے API بنائی۔",
+            "links": [],
+            "startDate": "2024-10",
+            "endDate": "2024-10",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "اردو",
+            "proficiency": "Native"
+        },
+        {
+            "name": "انگریزی",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "AWS Certified Cloud Practitioner",
+            "issuer": "Amazon Web Services",
+            "date": "2025-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "education": 1,
+        "projects": 2,
+        "experience": 3,
+        "skills": 4,
+        "volunteering": 6,
+        "languages": 7,
+        "internships": 7,
+        "certificates": 5,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

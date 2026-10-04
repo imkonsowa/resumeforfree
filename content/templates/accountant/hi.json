@@ -1,0 +1,195 @@
+{
+    "version": "v1",
+    "firstName": "अमित",
+    "lastName": "अग्रवाल",
+    "email": "amit.agarwal@example.com",
+    "phone": "+91 90000 34567",
+    "position": "सीनियर अकाउंटेंट, CA",
+    "location": "मुंबई, महाराष्ट्र",
+    "summary": "कॉर्पोरेट अकाउंटिंग और ऑडिट में दस साल के अनुभव वाला चार्टर्ड अकाउंटेंट। कई कंपनियों वाले समूह की महीने की क्लोज़िंग चलाता हूँ, रिकंसीलिएशन साफ़ रखता हूँ और क्लोज़िंग धीमी करने वाले हाथ के कामों को ठीक करना पसंद करता हूँ।",
+    "experiences": [
+        {
+            "company": "ऊर्जा फ़ूड्स ग्रुप",
+            "position": "सीनियर अकाउंटेंट",
+            "location": "मुंबई, महाराष्ट्र",
+            "companyUrl": "",
+            "startDate": "2021-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "भारत की पाँच कंपनियों की महीने की क्लोज़िंग और इंटर-कंपनी एलिमिनेशन मेरे ज़िम्मे हैं"
+                },
+                {
+                    "text": "प्रोविज़न शेड्यूल SAP में ले जाकर और तय क्लोज़िंग कैलेंडर बनाकर क्लोज़िंग नौ कामकाजी दिनों से छह दिन की"
+                },
+                {
+                    "text": "सालाना स्टैट्यूटरी ऑडिट के शेड्यूल तैयार करता हूँ, पिछले दो ऑडिट में मेरे हिस्सों में कोई एडजस्टमेंट नहीं आया"
+                },
+                {
+                    "text": "SAP में फ़िक्स्ड एसेट रजिस्टर बनाया और उसकी जगह चल रही Excel शीट बंद करवाई"
+                },
+                {
+                    "text": "FP&A टीम के साथ हर महीने बजट और असली आँकड़ों के अंतर की समीक्षा करता हूँ और CFO को ग्रॉस मार्जिन में बदलाव समझाता हूँ"
+                }
+            ]
+        },
+        {
+            "company": "मेहता एंड जोशी चार्टर्ड अकाउंटेंट्स",
+            "position": "ऑडिट सीनियर",
+            "location": "मुंबई, महाराष्ट्र",
+            "companyUrl": "",
+            "startDate": "2017-09",
+            "endDate": "2021-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "1,500 करोड़ तक के टर्नओवर वाले मैन्युफ़ैक्चरिंग और रिटेल क्लाइंट के स्टैट्यूटरी ऑडिट में फ़ील्डवर्क चलाया"
+                },
+                {
+                    "text": "बिक्री, स्टॉक और पेरोल के नियंत्रण जाँचे और मैनेजमेंट लेटर के बिंदु लिखे"
+                },
+                {
+                    "text": "हर असाइनमेंट पर दो से चार आर्टिकल असिस्टेंट की टीम की निगरानी की"
+                }
+            ]
+        },
+        {
+            "company": "कपूर एंड कंपनी",
+            "position": "आर्टिकल असिस्टेंट",
+            "location": "पुणे, महाराष्ट्र",
+            "companyUrl": "",
+            "startDate": "2015-09",
+            "endDate": "2017-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "ट्रस्ट और मैन्युफ़ैक्चरिंग क्लाइंट के लिए नकद, देनदारों और फ़िक्स्ड एसेट की जाँच की"
+                },
+                {
+                    "text": "वर्किंग पेपर और रिकंसीलिएशन तैयार किए, जिन्हें ऑडिट सीनियर और मैनेजर ने रिव्यू किया"
+                },
+                {
+                    "text": "साल के अंत में क्लाइंट के गोदामों में स्टॉक की गिनती में मदद की"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "सिडेनहैम कॉलेज ऑफ़ कॉमर्स एंड इकोनॉमिक्स",
+            "degree": "बी.कॉम",
+            "fieldOfStudy": "",
+            "location": "मुंबई, महाराष्ट्र",
+            "startDate": "2011-08",
+            "endDate": "2015-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "निःशुल्क टैक्स सहायता शिविर",
+            "organizationUrl": "",
+            "position": "वॉलंटियर",
+            "location": "मुंबई, महाराष्ट्र",
+            "startDate": "2019-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "रिटर्न भरने के मौसम में कम आय वाले परिवारों को आयकर रिटर्न भरने में मदद करता हूँ।",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "अकाउंटिंग",
+            "description": "Ind AS, महीने की क्लोज़िंग, रिकंसीलिएशन, प्रोविज़न, इंटर-कंपनी, फ़िक्स्ड एसेट"
+        },
+        {
+            "title": "टैक्स",
+            "description": "GST, TDS, टैक्स ऑडिट"
+        },
+        {
+            "title": "सॉफ़्टवेयर",
+            "description": "SAP FICO, Tally Prime, Zoho Books"
+        },
+        {
+            "title": "Excel",
+            "description": "पिवट टेबल, XLOOKUP, Power Query"
+        },
+        {
+            "title": "रिपोर्टिंग",
+            "description": "कंसॉलिडेशन, MIS रिपोर्ट, Power BI, अंतर विश्लेषण"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "SAP लागू करना",
+            "description": "समूह को Tally से SAP पर ले जाने में फ़ाइनेंस लीड: चार्ट ऑफ़ अकाउंट्स का डिज़ाइन, डेटा माइग्रेशन और 12 लोगों की ट्रेनिंग।",
+            "links": [],
+            "startDate": "2021-04",
+            "endDate": "2021-12",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "हिंदी",
+            "proficiency": "Native"
+        },
+        {
+            "name": "अंग्रेज़ी",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "मराठी",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "चार्टर्ड अकाउंटेंट (CA)",
+            "issuer": "इंस्टिट्यूट ऑफ़ चार्टर्ड अकाउंटेंट्स ऑफ़ इंडिया (ICAI)",
+            "date": "2019-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "volunteering": 4,
+        "skills": 5,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "projects": 3,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

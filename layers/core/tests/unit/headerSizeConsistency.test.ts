@@ -13,14 +13,14 @@ const data = {
     version: 'v1', firstName: 'Rami', lastName: 'Sayed', email: 'r@example.com', phone: '+20 100',
     position: 'Engineer', location: 'Cairo', summary: 'Summary text',
     experiences: [{ company: 'C', position: 'P', location: 'L', startDate: '2020-01', endDate: '2022-01', isPresent: false, description: 'D', achievements: [{ text: 'A' }] }],
-    internships: [], volunteering: [], projects: [], certificates: [],
+    internships: [], volunteering: [], projects: [], certificates: [], publications: [],
     education: [{ institution: 'I', degree: 'D', fieldOfStudy: 'F', location: 'L', startDate: '2010-09', endDate: '2014-06', isPresent: false, description: 'E', achievements: [] }],
     skills: [{ title: 'T', description: 'D' }],
     languages: [{ name: 'English', proficiency: 'Native' }],
     socialLinks: [], technicalSkills: '',
-    sectionOrder: { summary: 0, education: 1, experience: 2, internships: 3, skills: 4, volunteering: 5, socialLinks: 6, projects: 7, languages: 8, certificates: 9 },
+    sectionOrder: { summary: 0, education: 1, experience: 2, internships: 3, skills: 4, volunteering: 5, socialLinks: 6, projects: 7, languages: 8, certificates: 9, publications: 10 },
     sectionHeaders: {},
-    sectionPlacement: { skills: 'left', projects: 'left', volunteering: 'left', languages: 'right', certificates: 'right' },
+    sectionPlacement: { skills: 'left', projects: 'left', volunteering: 'left', languages: 'right', certificates: 'right', publications: 'left' },
 } as unknown as ResumeData;
 
 const TEMPLATES = [

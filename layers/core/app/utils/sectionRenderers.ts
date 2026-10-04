@@ -12,12 +12,13 @@ import {
     generateInternshipsContent,
     generateLanguagesContent,
     generateProjectsContent,
+    generatePublicationsContent,
     generateSkillsContent,
     generateSocialLinksContent,
     generateVolunteeringContent,
 } from './templateRenderers';
 import {
-    formatCertificatesItems,
+    formatDatedItems,
     formatEducationItems,
     formatExperienceItems,
     formatProjectsItems,
@@ -192,8 +193,18 @@ export const renderSharedCertificates: SectionRenderer = (data: ResumeData, cont
     const sectionContent = generateCertificatesContent(data.certificates, context.t, context.locale);
     if (sectionContent.length === 0) return '';
 
-    const formattedContent = formatCertificatesItems(sectionContent, context);
+    const formattedContent = formatDatedItems(sectionContent, context);
     const heading = sectionHeading('certificates', data, context);
+
+    return wrapInSection(heading, formattedContent, context);
+};
+
+export const renderSharedPublications: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
+    const sectionContent = generatePublicationsContent(data?.publications || [], context.t, context.locale);
+    if (sectionContent.length === 0) return '';
+
+    const formattedContent = formatDatedItems(sectionContent, context);
+    const heading = sectionHeading('publications', data, context);
 
     return wrapInSection(heading, formattedContent, context);
 };
@@ -217,5 +228,6 @@ export const getSharedSectionRenderers = () => ({
     socialLinks: renderSharedSocialLinks,
     profile: renderSharedProfile,
     certificates: renderSharedCertificates,
+    publications: renderSharedPublications,
     photo: renderProfilePhoto,
 });

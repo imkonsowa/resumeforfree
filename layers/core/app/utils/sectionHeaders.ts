@@ -13,4 +13,5 @@ export const SECTION_TRANSLATION_MAP: Record<keyof SectionHeaders, string> = {
     skills: 'forms.skills.title',
     volunteering: 'forms.volunteering.title',
     certificates: 'forms.certificates.title',
+    publications: 'forms.publications.title',
 } as const;

@@ -1,0 +1,203 @@
+{
+    "version": "v1",
+    "firstName": "Emre",
+    "lastName": "Yıldız",
+    "email": "emre.yildiz@example.com",
+    "phone": "+90 555 014 22 90",
+    "position": "Kıdemli Yazılım Mühendisi",
+    "location": "İstanbul",
+    "summary": "Go ve TypeScript ile ödeme, lojistik ve sipariş sistemleri geliştiren, dokuz yıllık deneyime sahip backend mühendisiyim. Bir servisi tasarım incelemesinden canlı ortam nöbetine kadar sahiplenmeyi seviyorum. Net API'ler, sorunsuz deploy süreçleri ve bir sonraki kişinin okuyabileceği kod benim için önemli.",
+    "experiences": [
+        {
+            "company": "Lale Ticaret Teknolojileri",
+            "position": "Kıdemli Yazılım Mühendisi",
+            "location": "İstanbul",
+            "companyUrl": "",
+            "startDate": "2022-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Ödeme monolitinin dört Go servisine bölünmesini yönettim; özellik bayraklarıyla, müşteriye yansıyan kesinti olmadan yayına aldık"
+                },
+                {
+                    "text": "Fiyat kurallarını önbelleğe alıp iki senkron çağrıyı kaldırarak ödeme adımının p95 gecikmesini 900 ms'den 240 ms'ye indirdim"
+                },
+                {
+                    "text": "Kart ödemeleri için idempotency katmanını tasarladım; yeniden denemelerde oluşan çift çekimler sona erdi"
+                },
+                {
+                    "text": "Üç mühendise mentorluk yapıyorum ve ödeme ekibinin haftalık tasarım incelemesini yürütüyorum"
+                }
+            ]
+        },
+        {
+            "company": "Kervan Lojistik Yazılım",
+            "position": "Yazılım Mühendisi",
+            "location": "İzmir",
+            "companyUrl": "",
+            "startDate": "2019-06",
+            "endDate": "2022-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "TypeScript ve Node.js ile 40 kargo iş ortağının kullandığı gönderi takip API'sini geliştirdim"
+                },
+                {
+                    "text": "Gece çalışan toplu işleri olay kuyruğuna taşıdım; müşteriler durum güncellemelerini ertesi sabah yerine dakikalar içinde görmeye başladı"
+                },
+                {
+                    "text": "Servisler arasına sözleşme testleri ekledim; başarısız deploy'lar haftalık olmaktan çıkıp nadir hâle geldi"
+                },
+                {
+                    "text": "Üç kümede PostgreSQL'i 10 sürümünden 14'e yükselttim; salt okunur kalma süresi beş dakikanın altında kaldı"
+                }
+            ]
+        },
+        {
+            "company": "Çamlık Yazılım",
+            "position": "Yazılım Mühendisi (Junior)",
+            "location": "İzmir",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2019-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Satış ve destek ekipleri için Python ve Django ile iç raporlama araçları geliştirdim"
+                },
+                {
+                    "text": "Faturalama modülünün ilk otomatik test setini yazdım; sürümden önce birkaç gerilemeyi yakaladı"
+                },
+                {
+                    "text": "İkinci yıldan itibaren nöbet rotasyonunda yer aldım ve en sık gelen alarmlar için müdahale kılavuzları yazdım"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Orta Doğu Teknik Üniversitesi",
+            "degree": "Bilgisayar Mühendisliği Lisans",
+            "fieldOfStudy": "",
+            "location": "Ankara",
+            "startDate": "2013-08",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Kod Rehberleri İstanbul",
+            "organizationUrl": "",
+            "position": "Gönüllü Mentor",
+            "location": "İstanbul",
+            "startDate": "2021-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Backend geliştirmeye geçmek isteyen kariyer değiştirenlerin kodlarını inceliyor ve deneme mülakatları yapıyorum.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Diller",
+            "description": "Go, TypeScript, Python, SQL"
+        },
+        {
+            "title": "Backend",
+            "description": "REST ve gRPC API'ler, PostgreSQL, Redis, Kafka"
+        },
+        {
+            "title": "Altyapı",
+            "description": "AWS, Docker, Kubernetes, Terraform, GitHub Actions"
+        },
+        {
+            "title": "Çalışma pratikleri",
+            "description": "Sistem tasarımı, kod incelemesi, izlenebilirlik, olay yönetimi"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "pgmigrate",
+            "description": "PostgreSQL migration'larını CI içinde güvenli şekilde çalıştırmak için küçük bir açık kaynak araç.",
+            "links": [
+                {
+                    "url": "https://github.com/example/pgmigrate",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2021-01",
+            "endDate": "",
+            "isPresent": true,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Türkçe",
+            "proficiency": "Native"
+        },
+        {
+            "name": "İngilizce",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "AWS Certified Developer - Associate",
+            "issuer": "Amazon Web Services",
+            "date": "2023-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified Kubernetes Application Developer (CKAD)",
+            "issuer": "The Linux Foundation",
+            "date": "2024-04",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "projects": 3,
+        "education": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "volunteering": 7,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

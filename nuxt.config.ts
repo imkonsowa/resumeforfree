@@ -1,8 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { readdirSync, readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 
 const prefixedLocales = ['ar', 'tr', 'fr', 'de', 'it', 'zh', 'ur', 'hi'];
 const withLocalePrefixes = (path: string) => [path, ...prefixedLocales.map(locale => `/${locale}${path}`)];
 const privatePaths = ['/auth/**', '/profile'].flatMap(withLocalePrefixes);
+
+const templatesDir = fileURLToPath(new URL('./content/templates', import.meta.url));
+const templateSlugs = readdirSync(templatesDir, { withFileTypes: true })
+    .filter(entry => entry.isDirectory())
+    .map(entry => entry.name);
+const templateUpdatedAt = (slug: string): string =>
+    JSON.parse(readFileSync(`${templatesDir}/${slug}/template.json`, 'utf8')).updatedAt;
+const templateGalleries = withLocalePrefixes('/templates');
+const templatePages = templateSlugs.flatMap(slug => withLocalePrefixes(`/templates/${slug}`));
 
 export default defineNuxtConfig({
     modules: [
@@ -17,6 +28,7 @@ export default defineNuxtConfig({
         'nuxt-auth-utils',
         '@nuxtjs/sitemap',
         '@nuxtjs/robots',
+        '@nuxtjs/mdc',
     ],
 
     imports: {
@@ -55,6 +67,11 @@ export default defineNuxtConfig({
         storageKey: 'rff-color-mode',
     },
 
+    mdc: {
+        highlight: false,
+        headings: { anchorLinks: false },
+    },
+
     ui: {
         theme: {
             colors: ['primary', 'secondary', 'info', 'success', 'warning', 'error'],
@@ -88,6 +105,10 @@ export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
     nitro: {
         preset: 'cloudflare-module',
+        serverAssets: [{ baseName: 'templates', dir: templatesDir }],
+        prerender: {
+            routes: [...templateGalleries, ...templatePages],
+        },
     },
 
     vite: {
@@ -199,6 +220,13 @@ export default defineNuxtConfig({
             { loc: '/qa', priority: 0.7, changefreq: 'monthly' },
             { loc: '/contact', priority: 0.5, changefreq: 'yearly' },
             { loc: '/terms', priority: 0.3, changefreq: 'yearly' },
+            ...templateGalleries.map(loc => ({ loc, priority: 0.9 as const, changefreq: 'weekly' as const })),
+            ...templateSlugs.flatMap(slug => withLocalePrefixes(`/templates/${slug}`).map(loc => ({
+                loc,
+                lastmod: templateUpdatedAt(slug),
+                priority: 0.8 as const,
+                changefreq: 'monthly' as const,
+            }))),
         ],
     },
 });

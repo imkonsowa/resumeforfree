@@ -1,0 +1,182 @@
+{
+    "version": "v1",
+    "firstName": "अनन्या",
+    "lastName": "अय्यर",
+    "email": "ananya.iyer@example.com",
+    "phone": "+91 90000 67890",
+    "position": "कंप्यूटर साइंस छात्रा",
+    "location": "नई दिल्ली",
+    "summary": "कंप्यूटर साइंस में बी.टेक के तीसरे साल की छात्रा, 2027 की गर्मियों में सॉफ़्टवेयर इंटर्नशिप चाहती हूँ। दो फुल-स्टैक प्रोजेक्ट बनाए हैं, पहले साल के छात्रों को प्रोग्रामिंग सिखाती हूँ और कॉलेज की IT हेल्प डेस्क पर पार्ट-टाइम काम करती हूँ।",
+    "experiences": [
+        {
+            "company": "कॉलेज IT हेल्प डेस्क",
+            "position": "स्टूडेंट टेक्नीशियन (पार्ट-टाइम)",
+            "location": "नई दिल्ली",
+            "companyUrl": "",
+            "startDate": "2025-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "हर हफ़्ते लगभग 40 छात्रों और कर्मचारियों के अकाउंट, Wi-Fi और लैपटॉप से जुड़े अनुरोध सँभालती हूँ"
+                },
+                {
+                    "text": "हेल्प डेस्क की नॉलेज बेस के लिए आठ लेख लिखे, जिनमें से दो सबसे ज़्यादा पढ़े जाने वाले पेजों में हैं"
+                }
+            ]
+        },
+        {
+            "company": "कंप्यूटर साइंस विभाग",
+            "position": "पीयर ट्यूटर, प्रोग्रामिंग का परिचय",
+            "location": "नई दिल्ली",
+            "companyUrl": "",
+            "startDate": "2024-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Python और डीबगिंग के लिए हर हफ़्ते दो ड्रॉप-इन सत्र चलाती हूँ"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "दिल्ली प्रौद्योगिकी विश्वविद्यालय",
+            "degree": "बी.टेक, कंप्यूटर साइंस और इंजीनियरिंग",
+            "fieldOfStudy": "",
+            "location": "नई दिल्ली",
+            "startDate": "2023-08",
+            "endDate": "2027-05",
+            "isPresent": false,
+            "description": "मुख्य विषय: डेटा स्ट्रक्चर, एल्गोरिदम, डेटाबेस, ऑपरेटिंग सिस्टम, वेब डेवलपमेंट।",
+            "graduationScore": "CGPA 8.6 / 10",
+            "achievements": [
+                {
+                    "text": "चार सेमेस्टर में विभाग की मेरिट लिस्ट में"
+                }
+            ]
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "कोड फ़ॉर किड्स, दिल्ली",
+            "organizationUrl": "",
+            "position": "वॉलंटियर शिक्षिका",
+            "location": "नई दिल्ली",
+            "startDate": "2024-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "सरकारी स्कूल के मिडिल स्कूल छात्रों को हर हफ़्ते Scratch और Python सिखाती हूँ।",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "भाषाएँ",
+            "description": "Python, Java, JavaScript, SQL"
+        },
+        {
+            "title": "वेब",
+            "description": "React, Node.js, Express, HTML, CSS"
+        },
+        {
+            "title": "टूल",
+            "description": "Git, GitHub, VS Code, Linux कमांड लाइन"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "StudySpot",
+            "description": "कैंपस में खाली स्टडी रूम रियल टाइम में दिखाने वाला वेब ऐप, React, Node.js और PostgreSQL से बना। फ़ाइनल परीक्षा के हफ़्ते में लगभग 300 छात्रों ने इसे इस्तेमाल किया।",
+            "links": [
+                {
+                    "url": "https://github.com/example/studyspot",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2025-02",
+            "endDate": "2025-05",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Budget Buddy",
+            "description": "हॉस्टल के रूममेट्स के बीच साझा ख़र्च बाँटने वाला Android ऐप। मोबाइल डेवलपमेंट कोर्स का टीम प्रोजेक्ट; Firebase सिंक का हिस्सा मैंने बनाया।",
+            "links": [],
+            "startDate": "2024-09",
+            "endDate": "2024-12",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Campus Pantry Finder",
+            "description": "एक हैकाथॉन प्रोजेक्ट (2024): कैंपस में मुफ़्त भोजन वाले कार्यक्रमों का नक्शा। चार लोगों की टीम के साथ सोशल इम्पैक्ट पुरस्कार जीता; API मैंने बनाया।",
+            "links": [],
+            "startDate": "2024-10",
+            "endDate": "2024-10",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "हिंदी",
+            "proficiency": "Native"
+        },
+        {
+            "name": "अंग्रेज़ी",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "तमिल",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "AWS Certified Cloud Practitioner",
+            "issuer": "Amazon Web Services",
+            "date": "2025-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "education": 1,
+        "projects": 2,
+        "experience": 3,
+        "skills": 4,
+        "volunteering": 6,
+        "languages": 7,
+        "internships": 7,
+        "certificates": 5,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

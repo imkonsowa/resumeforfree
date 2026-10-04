@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia';
 import type {
     Certificate,
+    Publication,
     Education,
     Experience,
     Internship,
@@ -154,6 +155,9 @@ export const useResumeStore = defineStore('resume', {
                     if (resume.data.sectionOrder.certificates === undefined) {
                         resume.data.sectionOrder.certificates = 9;
                     }
+                    if (resume.data.sectionOrder.publications === undefined) {
+                        resume.data.sectionOrder.publications = 10;
+                    }
                 }
                 if (!resume.data.sectionHeaders) {
                     resume.data.sectionHeaders = {} as SectionHeaders;
@@ -171,12 +175,18 @@ export const useResumeStore = defineStore('resume', {
                     if (resume.data.sectionPlacement.certificates === undefined) {
                         resume.data.sectionPlacement.certificates = 'right';
                     }
+                    if (resume.data.sectionPlacement.publications === undefined) {
+                        resume.data.sectionPlacement.publications = 'left';
+                    }
                 }
                 if (!resume.data.internships) {
                     resume.data.internships = [];
                 }
                 if (!resume.data.certificates) {
                     resume.data.certificates = [];
+                }
+                if (!resume.data.publications) {
+                    resume.data.publications = [];
                 }
                 if (resume.serverId === undefined) {
                     resume.serverId = undefined;
@@ -213,14 +223,14 @@ export const useResumeStore = defineStore('resume', {
                 this.activeResumeId = availableIds.length > 0 ? availableIds[0] : null;
             }
         },
-        createResume(input: { name?: string; language?: string; settings?: ResumeSettings } = {}): string {
+        createResume(input: { name?: string; language?: string; settings?: ResumeSettings; data?: ResumeData } = {}): string {
             const id = `resume-${this.nextId}`;
             const timestamp = new Date().toISOString();
             this.resumes[id] = {
                 id,
                 name: input.name || `Resume ${this.nextId}`,
                 language: input.language || 'en',
-                data: { ...defaultResumeData },
+                data: input.data ? { ...defaultResumeData, ...input.data } : { ...defaultResumeData },
                 settings: input.settings ? { ...input.settings } : { ...defaultResumeSettings },
                 createdAt: timestamp,
                 updatedAt: timestamp,
@@ -1015,6 +1025,47 @@ export const useResumeStore = defineStore('resume', {
                 this.updateResumeData(this.activeResumeId, { certificates: newCertificates });
             }
         },
+        addPublication() {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
+                const currentData = this.resumes[this.activeResumeId].data;
+                const newPublications = [...(currentData.publications || []), {
+                    title: '',
+                    authors: '',
+                    venue: '',
+                    date: '',
+                    url: '',
+                }];
+                this.updateResumeData(this.activeResumeId, { publications: newPublications });
+            }
+        },
+        updatePublication(index: number, field: keyof Publication, value: unknown) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
+                const currentData = this.resumes[this.activeResumeId].data;
+                if (currentData.publications?.[index]) {
+                    const newPublications = [...currentData.publications];
+                    newPublications[index] = { ...currentData.publications[index], [field]: value };
+                    this.updateResumeData(this.activeResumeId, { publications: newPublications });
+                }
+            }
+        },
+        removePublication(index: number) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
+                const currentData = this.resumes[this.activeResumeId].data;
+                const newPublications = [...currentData.publications];
+                newPublications.splice(index, 1);
+                this.updateResumeData(this.activeResumeId, { publications: newPublications });
+            }
+        },
+        movePublication(fromIndex: number, toIndex: number) {
+            if (this.activeResumeId && this.resumes[this.activeResumeId]) {
+                const currentData = this.resumes[this.activeResumeId].data;
+                const newPublications = [...currentData.publications];
+                const [item] = newPublications.splice(fromIndex, 1);
+                if (!item) return;
+                newPublications.splice(toIndex, 0, item);
+                this.updateResumeData(this.activeResumeId, { publications: newPublications });
+            }
+        },
         updateSectionOrder(newOrder: SectionOrder) {
             if (this.activeResumeId) {
                 this.updateResumeData(this.activeResumeId, { sectionOrder: { ...newOrder } });
@@ -1282,11 +1333,11 @@ export const useResumeStore = defineStore('resume', {
             resume.updatedAt = new Date().toISOString();
         },
         collapseAllActiveResumeSections() {
-            const sections = ['personal', 'experience', 'internships', 'education', 'skills', 'volunteering', 'projects', 'languages', 'certificates'];
+            const sections = ['personal', 'experience', 'internships', 'education', 'skills', 'volunteering', 'projects', 'languages', 'certificates', 'publications'];
             sections.forEach(section => this.setActiveResumeSectionCollapsed(section, true));
         },
         expandAllActiveResumeSections() {
-            const sections = ['personal', 'experience', 'internships', 'education', 'skills', 'volunteering', 'projects', 'languages', 'certificates'];
+            const sections = ['personal', 'experience', 'internships', 'education', 'skills', 'volunteering', 'projects', 'languages', 'certificates', 'publications'];
             sections.forEach(section => this.setActiveResumeSectionCollapsed(section, false));
         },
     },

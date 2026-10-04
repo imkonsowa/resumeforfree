@@ -1,4 +1,10 @@
 import { defaultResumeSettings, getDefaultFontForLanguage } from '#layers/core/app/types/resume';
+import type { ResumeData, ResumeSettings } from '#layers/core/app/types/resume';
+
+export interface ResumeStart {
+    data: ResumeData;
+    settings: Partial<ResumeSettings>;
+}
 
 export const useCreateResume = () => {
     const { t } = useI18n();
@@ -30,12 +36,13 @@ export const useCreateResume = () => {
         }
     };
 
-    const createResume = async (name: string, language: string, saveToCloud: boolean) => {
+    const createResume = async (name: string, language: string, saveToCloud: boolean, start?: ResumeStart) => {
         const resumeName = name.trim() || defaultResumeName();
         const resumeId = resumeStore.createResume({
             name: resumeName,
             language,
-            settings: { ...defaultResumeSettings, selectedFont: getDefaultFontForLanguage(language) },
+            settings: { ...defaultResumeSettings, selectedFont: getDefaultFontForLanguage(language), ...start?.settings },
+            data: start ? structuredClone(start.data) : undefined,
         });
         resumeStore.setActiveResume(resumeId);
 

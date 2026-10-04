@@ -1,0 +1,187 @@
+{
+    "version": "v1",
+    "firstName": "عمر",
+    "lastName": "فاروق",
+    "email": "umar.farooq@example.com",
+    "phone": "+92 333 0197712",
+    "position": "سینئر اکاؤنٹنٹ، ACCA",
+    "location": "لاہور، پاکستان",
+    "summary": "کارپوریٹ اکاؤنٹنگ اور آڈٹ میں دس سال کا تجربہ رکھنے والا ACCA ممبر۔ کئی کمپنیوں والے گروپ کا ماہانہ کلوز چلاتا ہوں، ری کنسیلی ایشنز صاف رکھتا ہوں اور وہ دستی مراحل ختم کرنا پسند کرتا ہوں جو کلوز کو سست کرتے ہیں۔",
+    "experiences": [
+        {
+            "company": "نور فوڈز گروپ",
+            "position": "سینئر اکاؤنٹنٹ",
+            "location": "لاہور",
+            "companyUrl": "",
+            "startDate": "2021-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "گروپ کی پانچ کمپنیوں کا ماہانہ کلوز اور intercompany eliminations میری ذمہ داری ہیں"
+                },
+                {
+                    "text": "accrual schedules کو SAP میں منتقل کر کے اور مقررہ کلوز کیلنڈر بنا کر کلوز نو ورکنگ دنوں سے چھ دن پر لایا"
+                },
+                {
+                    "text": "سالانہ بیرونی آڈٹ کے schedules تیار کرتا ہوں؛ پچھلے دو آڈٹس میں میرے حصوں میں کوئی ایڈجسٹمنٹ نہیں آئی"
+                },
+                {
+                    "text": "SAP میں fixed asset register بنایا اور پرانی اسپریڈ شیٹ ختم کی"
+                },
+                {
+                    "text": "FP&A کے ساتھ ماہانہ variance ریویو کرتا ہوں اور CFO کو gross margin میں تبدیلیوں کی وجوہات بتاتا ہوں"
+                }
+            ]
+        },
+        {
+            "company": "احمد ظفر کمپنی چارٹرڈ اکاؤنٹنٹس",
+            "position": "آڈٹ سینئر",
+            "location": "لاہور",
+            "companyUrl": "",
+            "startDate": "2017-09",
+            "endDate": "2021-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "مینوفیکچرنگ اور ریٹیل کلائنٹس کے آڈٹ کا فیلڈ ورک چلایا جن کی سالانہ آمدن 20 ارب روپے تک تھی"
+                },
+                {
+                    "text": "آمدن، انوینٹری اور پے رول کے کنٹرولز ٹیسٹ کیے اور management letter کے نکات لکھے"
+                },
+                {
+                    "text": "ہر انگیجمنٹ پر دو سے چار ایسوسی ایٹس کی ٹیم کی نگرانی کی"
+                }
+            ]
+        },
+        {
+            "company": "رشید منیر کمپنی چارٹرڈ اکاؤنٹنٹس",
+            "position": "آڈٹ ایسوسی ایٹ",
+            "location": "لاہور",
+            "companyUrl": "",
+            "startDate": "2015-09",
+            "endDate": "2017-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "غیر منافع بخش اور مینوفیکچرنگ کلائنٹس کے لیے کیش، receivables اور fixed assets کی substantive testing کی"
+                },
+                {
+                    "text": "ورکنگ پیپرز اور ری کنسیلی ایشنز تیار کیں جنہیں آڈٹ سینئرز اور مینیجرز نے ریویو کیا"
+                },
+                {
+                    "text": "کلائنٹس کے گوداموں میں سال کے آخر کی انوینٹری گنتی میں حصہ لیا"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "ہیلی کالج آف کامرس، پنجاب یونیورسٹی",
+            "degree": "بی کام (آنرز)",
+            "fieldOfStudy": "",
+            "location": "لاہور",
+            "startDate": "2011-08",
+            "endDate": "2015-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "مفت ٹیکس ریٹرن کیمپ",
+            "organizationUrl": "",
+            "position": "رضاکار ٹیکس معاون",
+            "location": "لاہور",
+            "startDate": "2019-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "ہر سال ٹیکس سیزن میں تنخواہ دار افراد کو FBR کے IRIS پورٹل پر انکم ٹیکس ریٹرن جمع کرانے میں مدد۔",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "اکاؤنٹنگ",
+            "description": "IFRS، ماہانہ کلوز، ری کنسیلی ایشنز، accruals، intercompany، fixed assets"
+        },
+        {
+            "title": "سسٹمز",
+            "description": "SAP، Oracle، QuickBooks"
+        },
+        {
+            "title": "Excel",
+            "description": "Pivot tables، XLOOKUP، Power Query"
+        },
+        {
+            "title": "رپورٹنگ",
+            "description": "Consolidation، مینجمنٹ رپورٹنگ، Power BI، variance تجزیہ"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "SAP نفاذ",
+            "description": "گروپ کو QuickBooks سے SAP پر منتقل کرنے میں فنانس کی قیادت: اکاؤنٹس کا ڈھانچہ، ڈیٹا کی منتقلی اور 12 افراد کی تربیت۔",
+            "links": [],
+            "startDate": "2021-04",
+            "endDate": "2021-12",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "اردو",
+            "proficiency": "Native"
+        },
+        {
+            "name": "انگریزی",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "ACCA ممبرشپ",
+            "issuer": "Association of Chartered Certified Accountants",
+            "date": "2019-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "volunteering": 4,
+        "skills": 5,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "projects": 3,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

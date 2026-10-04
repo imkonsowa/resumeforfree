@@ -1,0 +1,188 @@
+{
+    "version": "v1",
+    "firstName": "Maria",
+    "lastName": "Delgado",
+    "email": "maria.delgado@example.com",
+    "phone": "+1 555 017 4438",
+    "position": "Registered Nurse, Medical-Surgical",
+    "location": "Phoenix, AZ",
+    "summary": "Registered nurse with six years on busy medical-surgical and telemetry units. Comfortable as charge nurse, calm with deteriorating patients and patient with families who have a lot of questions. Precepted eight new graduates.",
+    "experiences": [
+        {
+            "company": "Desert Valley Medical Center",
+            "position": "Registered Nurse, Medical-Surgical Unit",
+            "location": "Phoenix, AZ",
+            "companyUrl": "",
+            "startDate": "2021-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "36-bed adult med-surg unit, 1:5 ratio on days.",
+            "achievements": [
+                {
+                    "text": "Charge nurse two shifts a week: assign patients, manage admissions and discharges, and support newer staff"
+                },
+                {
+                    "text": "Precepted eight new graduate nurses through a twelve-week orientation"
+                },
+                {
+                    "text": "Joined the unit falls committee; helped roll out hourly rounding and bed alarm checks"
+                },
+                {
+                    "text": "Super user for the Epic upgrade, trained 30 colleagues on the new medication workflow"
+                }
+            ]
+        },
+        {
+            "company": "St. Anne's Hospital",
+            "position": "Registered Nurse, Telemetry",
+            "location": "Tucson, AZ",
+            "companyUrl": "",
+            "startDate": "2019-07",
+            "endDate": "2021-03",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Cared for cardiac patients on continuous monitoring, including post-catheterization and heart failure admissions"
+                },
+                {
+                    "text": "Recognized arrhythmias and escalated to the rapid response team when needed"
+                },
+                {
+                    "text": "Taught heart failure patients daily weights, fluid limits and medication timing before discharge"
+                }
+            ]
+        },
+        {
+            "company": "Banner Health Clinic",
+            "position": "Patient Care Technician",
+            "location": "Tempe, AZ",
+            "companyUrl": "",
+            "startDate": "2017-05",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Worked part time during nursing school: vital signs, blood glucose checks, mobility and hygiene care"
+                },
+                {
+                    "text": "Reported changes in patient condition to the assigned RN and charted in the electronic record"
+                },
+                {
+                    "text": "Trained new technicians on unit routines and safe patient handling"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Arizona State University",
+            "degree": "Bachelor of Science in Nursing (BSN)",
+            "fieldOfStudy": "",
+            "location": "Phoenix, AZ",
+            "startDate": "2015-08",
+            "endDate": "2019-05",
+            "isPresent": false,
+            "description": "Clinical rotations in medical-surgical, pediatrics, labor and delivery, and behavioral health.",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Community Health Fair",
+            "organizationUrl": "",
+            "position": "Volunteer Nurse",
+            "location": "Phoenix, AZ",
+            "startDate": "2022-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Blood pressure and glucose screening twice a year.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Clinical",
+            "description": "Patient assessment, IV therapy, wound care, telemetry monitoring, medication administration"
+        },
+        {
+            "title": "Systems",
+            "description": "Epic, Pyxis, Alaris pumps"
+        },
+        {
+            "title": "Leadership",
+            "description": "Charge nurse, preceptor, falls committee"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "English",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Spanish",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Registered Nurse License, Arizona",
+            "issuer": "Arizona State Board of Nursing",
+            "date": "2019-06",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Basic Life Support (BLS)",
+            "issuer": "American Heart Association",
+            "date": "2025-01",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Advanced Cardiovascular Life Support (ACLS)",
+            "issuer": "American Heart Association",
+            "date": "2025-01",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Medical-Surgical Nursing Certification (CMSRN)",
+            "issuer": "MSNCB",
+            "date": "2023-09",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "certificates": 1,
+        "experience": 2,
+        "education": 3,
+        "skills": 4,
+        "languages": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "Licenses & Certifications"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

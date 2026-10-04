@@ -1,0 +1,178 @@
+{
+    "version": "v1",
+    "firstName": "نورهان",
+    "lastName": "عادل",
+    "email": "nourhan.adel@example.com",
+    "phone": "+962 79 000 6620",
+    "position": "طالبة علوم الحاسوب",
+    "location": "عمّان، الأردن",
+    "summary": "طالبة في السنة الثالثة بتخصص علوم الحاسوب، أبحث عن تدريب صيفي في تطوير البرمجيات لصيف 2027. بنيت مشروعين متكاملين للويب والجوال، وأساعد طلاب السنة الأولى في البرمجة، وأعمل بدوام جزئي في مكتب الدعم التقني بالجامعة.",
+    "experiences": [
+        {
+            "company": "مكتب الدعم التقني، الجامعة الأردنية",
+            "position": "فنية دعم طلابية (دوام جزئي)",
+            "location": "عمّان، الأردن",
+            "companyUrl": "",
+            "startDate": "2025-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "أجيب عن نحو 40 طلبا أسبوعيا من الطلاب والموظفين حول الحسابات والشبكة اللاسلكية والحواسيب المحمولة"
+                },
+                {
+                    "text": "كتبت ثمانية أدلة إرشادية لقاعدة معرفة المكتب، واثنان منها من أكثر الصفحات زيارة"
+                }
+            ]
+        },
+        {
+            "company": "قسم علوم الحاسوب",
+            "position": "مرشدة أقران، مقدمة في البرمجة",
+            "location": "عمّان، الأردن",
+            "companyUrl": "",
+            "startDate": "2024-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "أدير جلستين مفتوحتين أسبوعيا في Python وتتبع الأخطاء"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "الجامعة الأردنية",
+            "degree": "بكالوريوس علوم الحاسوب",
+            "fieldOfStudy": "",
+            "location": "عمّان، الأردن",
+            "startDate": "2023-08",
+            "endDate": "2027-05",
+            "isPresent": false,
+            "description": "مواد ذات صلة: هياكل البيانات، الخوارزميات، قواعد البيانات، أنظمة التشغيل، تطوير الويب.",
+            "graduationScore": "3.7 من 4.0",
+            "achievements": [
+                {
+                    "text": "لوحة الشرف لأربعة فصول دراسية"
+                }
+            ]
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "مبادرة برمج مستقبلك",
+            "organizationUrl": "",
+            "position": "مدربة متطوعة",
+            "location": "عمّان، الأردن",
+            "startDate": "2024-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "أقدم دروسا أسبوعية في Scratch وPython لطالبات المرحلة المتوسطة.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "لغات البرمجة",
+            "description": "Python، Java، JavaScript، SQL"
+        },
+        {
+            "title": "الويب",
+            "description": "React، Node.js، Express، HTML، CSS"
+        },
+        {
+            "title": "الأدوات",
+            "description": "Git، GitHub، VS Code، سطر أوامر Linux"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "مقعدي",
+            "description": "تطبيق ويب يعرض قاعات الدراسة الفارغة في الحرم الجامعي لحظيا، مبني باستخدام React وNode.js وPostgreSQL. استخدمه نحو 300 طالب خلال أسبوع الامتحانات النهائية.",
+            "links": [
+                {
+                    "url": "https://github.com/example/studyspot",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2025-02",
+            "endDate": "2025-05",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "قسّمها",
+            "description": "تطبيق Android لتقسيم المصاريف المشتركة بين زملاء السكن. مشروع جماعي في مادة تطوير تطبيقات الجوال، وتوليت فيه بناء المزامنة باستخدام Firebase.",
+            "links": [],
+            "startDate": "2024-09",
+            "endDate": "2024-12",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "دليل وجبات الحرم",
+            "description": "مشروع هاكاثون في 2024: خريطة لفعاليات الطعام المجاني في الحرم الجامعي. فاز فريقنا المكون من أربعة بجائزة الأثر الاجتماعي، وبنيت الواجهة البرمجية.",
+            "links": [],
+            "startDate": "2024-10",
+            "endDate": "2024-10",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "العربية",
+            "proficiency": "Native"
+        },
+        {
+            "name": "الإنجليزية",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "AWS Certified Cloud Practitioner",
+            "issuer": "Amazon Web Services",
+            "date": "2025-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "education": 1,
+        "projects": 2,
+        "experience": 3,
+        "skills": 4,
+        "volunteering": 6,
+        "languages": 7,
+        "internships": 7,
+        "certificates": 5,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

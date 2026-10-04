@@ -1,0 +1,188 @@
+{
+    "version": "v1",
+    "firstName": "王雅婷",
+    "lastName": "",
+    "email": "wang.yating@example.com",
+    "phone": "+86 139 0025 7716",
+    "position": "护师（普外科）",
+    "location": "南京",
+    "summary": "注册护士，六年三级医院普外科和心内科病房工作经验。能独立承担责任组长工作，病情变化时处理冷静，耐心解答家属的各种问题。带教过八名新入职护士。",
+    "experiences": [
+        {
+            "company": "南城市第一人民医院",
+            "position": "护师，普外科病房",
+            "location": "南京",
+            "companyUrl": "",
+            "startDate": "2021-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "三级医院普外科病房，开放床位 46 张。",
+            "achievements": [
+                {
+                    "text": "每周担任两个班次的责任组长，负责分床、出入院安排和年轻护士的指导"
+                },
+                {
+                    "text": "作为带教老师，带教八名新入职护士完成三个月的规范化培训"
+                },
+                {
+                    "text": "参加科室防跌倒质控小组，协助推行每小时巡视和床旁警示标识核查"
+                },
+                {
+                    "text": "担任护理信息系统升级的科室联络员，培训 30 名同事使用新的给药流程"
+                }
+            ]
+        },
+        {
+            "company": "康宁心血管病医院",
+            "position": "护士，心内科病房",
+            "location": "苏州",
+            "companyUrl": "",
+            "startDate": "2019-07",
+            "endDate": "2021-03",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "护理心电监护患者，包括冠脉介入术后和心力衰竭入院患者"
+                },
+                {
+                    "text": "及时识别心律失常，按流程呼叫值班医生和快速反应小组"
+                },
+                {
+                    "text": "出院前指导心衰患者每日称重、控制饮水量和按时服药"
+                }
+            ]
+        },
+        {
+            "company": "康华社区卫生服务中心",
+            "position": "护理员",
+            "location": "南京",
+            "companyUrl": "",
+            "startDate": "2017-05",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "护理专业在读期间兼职：测量生命体征、床旁血糖监测、协助患者活动和生活护理"
+                },
+                {
+                    "text": "发现患者病情变化及时报告责任护士，并在电子病历中记录"
+                },
+                {
+                    "text": "带新入职的护理员熟悉工作流程和安全搬运患者的方法"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "南京中医药大学",
+            "degree": "护理学 本科",
+            "fieldOfStudy": "",
+            "location": "南京",
+            "startDate": "2015-09",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "在普外科、儿科、产科和精神科完成临床实习。",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "社区健康义诊",
+            "organizationUrl": "",
+            "position": "志愿护士",
+            "location": "南京",
+            "startDate": "2022-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "每年两次为社区居民测量血压和血糖。",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "临床护理",
+            "description": "病情观察与评估、静脉输液、伤口护理、心电监护、安全给药"
+        },
+        {
+            "title": "系统",
+            "description": "HIS 医院信息系统、电子病历、移动护理 PDA"
+        },
+        {
+            "title": "管理",
+            "description": "责任组长、临床带教、科室质控小组"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "中文",
+            "proficiency": "Native"
+        },
+        {
+            "name": "英语",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "护士执业证书",
+            "issuer": "江苏省卫生健康委员会",
+            "date": "2019-08",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "护师资格证书（初级）",
+            "issuer": "国家卫生健康委员会人才交流服务中心",
+            "date": "2021-05",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "基础生命支持（BLS）培训证书",
+            "issuer": "医院继续教育中心",
+            "date": "2025-01",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "外科专科护士培训合格证书",
+            "issuer": "江苏省护理学会",
+            "date": "2023-09",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "certificates": 1,
+        "experience": 2,
+        "education": 3,
+        "skills": 4,
+        "languages": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "执业及资格证书"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

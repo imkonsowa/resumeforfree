@@ -1,0 +1,203 @@
+{
+    "version": "v1",
+    "firstName": "Jonas",
+    "lastName": "Becker",
+    "email": "jonas.becker@example.com",
+    "phone": "+49 151 2345 6789",
+    "position": "Senior Softwareentwickler",
+    "location": "Berlin",
+    "summary": "Backend-Entwickler mit neun Jahren Erfahrung in Zahlungs-, Logistik- und Bestellsystemen mit Go und TypeScript. Ich übernehme gern einen Service vom Design-Review bis zur Rufbereitschaft und achte auf klare APIs, ruhige Deployments und Code, den die nächste Person gut lesen kann.",
+    "experiences": [
+        {
+            "company": "Spreewerk Commerce GmbH",
+            "position": "Senior Softwareentwickler",
+            "location": "Berlin",
+            "companyUrl": "",
+            "startDate": "2022-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Aufteilung des Checkout-Monolithen in vier Go-Services geleitet, ausgerollt hinter Feature-Flags ohne Ausfallzeit für Kunden"
+                },
+                {
+                    "text": "p95-Latenz im Checkout von 900 ms auf 240 ms gesenkt, durch Caching der Preisregeln und den Wegfall zweier synchroner Aufrufe"
+                },
+                {
+                    "text": "Idempotenz-Schicht für Kartenzahlungen entworfen, seitdem keine doppelten Abbuchungen mehr bei Wiederholungen"
+                },
+                {
+                    "text": "Betreue drei Entwickler als Mentor und leite das wöchentliche Design-Review im Payments-Team"
+                }
+            ]
+        },
+        {
+            "company": "Elbtrans Logistik GmbH",
+            "position": "Softwareentwickler",
+            "location": "Hamburg",
+            "companyUrl": "",
+            "startDate": "2019-06",
+            "endDate": "2022-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Sendungsverfolgungs-API mit TypeScript und Node.js gebaut, genutzt von 40 Partner-Spediteuren"
+                },
+                {
+                    "text": "Nächtliche Batch-Jobs auf eine Event-Queue umgestellt, Kunden sehen Statusänderungen nun nach Minuten statt am nächsten Morgen"
+                },
+                {
+                    "text": "Contract-Tests zwischen den Services eingeführt, fehlgeschlagene Deployments wurden von wöchentlich zu selten"
+                },
+                {
+                    "text": "PostgreSQL-Upgrade von Version 10 auf 14 auf drei Clustern durchgeführt, mit weniger als fünf Minuten Nur-Lese-Betrieb"
+                }
+            ]
+        },
+        {
+            "company": "Isarsoft GmbH",
+            "position": "Junior Softwareentwickler",
+            "location": "Hamburg",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2019-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Interne Reporting-Tools mit Python und Django für Vertrieb und Support gebaut"
+                },
+                {
+                    "text": "Erste automatisierte Testsuite für das Abrechnungsmodul geschrieben, die mehrere Regressionen vor dem Release fand"
+                },
+                {
+                    "text": "Ab dem zweiten Jahr Teil der Rufbereitschaft, Runbooks für die häufigsten Alarme geschrieben"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Technische Universität Dresden",
+            "degree": "B.Sc. Informatik",
+            "fieldOfStudy": "",
+            "location": "Dresden",
+            "startDate": "2013-08",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Code Mentoring Berlin e.V.",
+            "organizationUrl": "",
+            "position": "Ehrenamtlicher Mentor",
+            "location": "Berlin",
+            "startDate": "2021-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Code-Reviews und Probe-Interviews für Quereinsteigerinnen und Quereinsteiger, die Backend-Entwicklung lernen.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Sprachen",
+            "description": "Go, TypeScript, Python, SQL"
+        },
+        {
+            "title": "Backend",
+            "description": "REST- und gRPC-APIs, PostgreSQL, Redis, Kafka"
+        },
+        {
+            "title": "Infrastruktur",
+            "description": "AWS, Docker, Kubernetes, Terraform, GitHub Actions"
+        },
+        {
+            "title": "Arbeitsweise",
+            "description": "Systemdesign, Code-Review, Observability, Incident-Response"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "pgmigrate",
+            "description": "Kleines Open-Source-Tool, mit dem sich PostgreSQL-Migrationen sicher in der CI ausführen lassen.",
+            "links": [
+                {
+                    "url": "https://github.com/example/pgmigrate",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2021-01",
+            "endDate": "",
+            "isPresent": true,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Deutsch",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Englisch",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "AWS Certified Developer - Associate",
+            "issuer": "Amazon Web Services",
+            "date": "2023-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified Kubernetes Application Developer (CKAD)",
+            "issuer": "The Linux Foundation",
+            "date": "2024-04",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "projects": 3,
+        "education": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "volunteering": 7,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

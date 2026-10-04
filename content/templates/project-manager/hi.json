@@ -1,0 +1,199 @@
+{
+    "version": "v1",
+    "firstName": "विक्रम",
+    "lastName": "राव",
+    "email": "vikram.rao@example.com",
+    "phone": "+91 90000 56789",
+    "position": "सीनियर प्रोजेक्ट मैनेजर, PMP",
+    "location": "हैदराबाद, तेलंगाना",
+    "summary": "हेल्थकेयर, लॉजिस्टिक्स और टेलीकॉम कंपनियों के लिए सॉफ़्टवेयर और इंफ्रास्ट्रक्चर प्रोजेक्ट में बारह साल का अनुभव रखने वाला प्रोजेक्ट मैनेजर। 10 से 40 लोगों के प्रोजेक्ट चलाता हूँ, बजट पर ईमानदार नियंत्रण रखता हूँ और ऐसी स्टेटस रिपोर्ट लिखता हूँ जिन्हें वरिष्ठ लोग सच में पढ़ते हैं।",
+    "experiences": [
+        {
+            "company": "आरोग्य हेल्थ सिस्टम्स",
+            "position": "सीनियर प्रोजेक्ट मैनेजर",
+            "location": "हैदराबाद, तेलंगाना",
+            "companyUrl": "",
+            "startDate": "2020-05",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "14 क्लिनिक में मरीज़ों की अपॉइंटमेंट को नए प्लेटफ़ॉर्म पर ले जाने का काम लीड किया: 25 करोड़ रुपये का बजट, IT, ऑपरेशंस और वेंडर के 35 लोग"
+                },
+                {
+                    "text": "क्लिनिक रोलआउट एक की जगह तीन चरणों में करके गो-लाइव दो हफ़्ते पहले किया"
+                },
+                {
+                    "text": "साझा जोखिम रजिस्टर और साप्ताहिक स्टीयरिंग मीटिंग शुरू की, जो PMO का मानक बन गई"
+                },
+                {
+                    "text": "तीन प्रोजेक्ट कोऑर्डिनेटर को मैनेज करता हूँ और उनकी योजना और बजट रिव्यू करता हूँ"
+                }
+            ]
+        },
+        {
+            "company": "दक्खन फ़्रेट",
+            "position": "प्रोजेक्ट मैनेजर",
+            "location": "हैदराबाद, तेलंगाना",
+            "companyUrl": "",
+            "startDate": "2016-03",
+            "endDate": "2020-04",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "छह डिस्ट्रीब्यूशन सेंटर में वेयरहाउस मैनेजमेंट सिस्टम का रोलआउट चलाया"
+                },
+                {
+                    "text": "अंदरूनी डेवलपमेंट टीम के लिए दो हफ़्ते के स्प्रिंट और Jira में साझा बैकलॉग शुरू किया"
+                },
+                {
+                    "text": "वेंडर के साथ बदलाव आदेश पर बातचीत करके लाइसेंस फ़ीस में 1.5 करोड़ रुपये बचाए"
+                },
+                {
+                    "text": "IT के लिए पहली प्रोजेक्ट इनटेक प्रक्रिया बनाई, जिससे डेवलपमेंट टीम के पास आने वाले अनियोजित काम लगभग एक तिहाई घटे"
+                }
+            ]
+        },
+        {
+            "company": "संचार नेटवर्क्स",
+            "position": "प्रोजेक्ट कोऑर्डिनेटर",
+            "location": "बेंगलुरु, कर्नाटक",
+            "companyUrl": "",
+            "startDate": "2014-06",
+            "endDate": "2016-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "20 कारोबारी साइट पर फ़ाइबर इंस्टॉलेशन का तालमेल फ़ील्ड टीम और अनुमति कार्यालयों के साथ बिठाया"
+                },
+                {
+                    "text": "प्रोजेक्ट शेड्यूल और बजट ट्रैकर अपडेट रखा और हर हफ़्ते स्टेटस रिपोर्ट तैयार की"
+                },
+                {
+                    "text": "वेंडर मीटिंग आयोजित कीं और हर काम को पूरा होने तक ट्रैक किया"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "उस्मानिया विश्वविद्यालय",
+            "degree": "बी.बी.ए",
+            "fieldOfStudy": "",
+            "location": "हैदराबाद, तेलंगाना",
+            "startDate": "2010-08",
+            "endDate": "2014-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "आशियाना हाउसिंग ट्रस्ट",
+            "organizationUrl": "",
+            "position": "वॉलंटियर निर्माण कोऑर्डिनेटर",
+            "location": "हैदराबाद, तेलंगाना",
+            "startDate": "2019-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "सप्ताहांत में होने वाले घर निर्माण के लिए वॉलंटियर का शेड्यूल और सामान की डिलीवरी की योजना बनाता हूँ।",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "डिलीवरी",
+            "description": "Waterfall, Agile, Scrum, हाइब्रिड योजना, वेंडर मैनेजमेंट"
+        },
+        {
+            "title": "नियंत्रण",
+            "description": "40 करोड़ रुपये तक का बजट, जोखिम और समस्या रजिस्टर, बदलाव नियंत्रण, स्टेटस रिपोर्टिंग"
+        },
+        {
+            "title": "टूल",
+            "description": "Jira, Confluence, MS Project, Smartsheet, Excel"
+        },
+        {
+            "title": "उद्योग",
+            "description": "हेल्थकेयर, लॉजिस्टिक्स, टेलीकॉम"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "तेलुगु",
+            "proficiency": "Native"
+        },
+        {
+            "name": "हिंदी",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "अंग्रेज़ी",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "कन्नड़",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "प्रोजेक्ट मैनेजमेंट प्रोफ़ेशनल (PMP)",
+            "issuer": "PMI",
+            "date": "2018-10",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "सर्टिफ़ाइड स्क्रम मास्टर (CSM)",
+            "issuer": "Scrum Alliance",
+            "date": "2017-04",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "PRINCE2 Foundation",
+            "issuer": "AXELOS",
+            "date": "2021-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 6,
+        "volunteering": 5,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

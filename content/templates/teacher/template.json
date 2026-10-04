@@ -1,0 +1,28 @@
+{
+    "category": "education",
+    "layout": "compact",
+    "updatedAt": "2026-10-04",
+    "related": [
+        "student",
+        "registered-nurse"
+    ],
+    "settings": {
+        "fontSize": 11,
+        "headingColor": "#7c3aed"
+    },
+    "localeSettings": {
+        "ar": {
+            "fontSize": 9.5,
+            "sectionSpacing": 0.9,
+            "itemSpacing": 0.5
+        },
+        "it": {
+            "fontSize": 10.5
+        },
+        "ur": {
+            "fontSize": 9.5,
+            "sectionSpacing": 0.9,
+            "itemSpacing": 0.5
+        }
+    }
+}

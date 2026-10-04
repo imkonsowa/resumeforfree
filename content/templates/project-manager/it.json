@@ -1,0 +1,195 @@
+{
+    "version": "v1",
+    "firstName": "Marco",
+    "lastName": "Galli",
+    "email": "marco.galli@example.com",
+    "phone": "+39 335 016 3305",
+    "position": "Senior Project Manager, PMP",
+    "location": "Roma",
+    "summary": "Project manager con dodici anni di esperienza su progetti software e infrastrutturali per aziende della sanità, della logistica e delle telecomunicazioni. Gestisco progetti da 10 a 40 persone, tengo i budget sotto controllo e scrivo report di avanzamento che la direzione legge davvero.",
+    "experiences": [
+        {
+            "company": "Salute Digitale S.p.A.",
+            "position": "Senior Project Manager",
+            "location": "Roma",
+            "companyUrl": "",
+            "startDate": "2020-05",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Guidato il passaggio del sistema di prenotazione a una nuova piattaforma in 14 poliambulatori: budget di 3 milioni di euro, 35 persone tra IT, operations e fornitore"
+                },
+                {
+                    "text": "Anticipato il go-live di due settimane organizzando l'avvio dei poliambulatori in tre ondate invece che in una"
+                },
+                {
+                    "text": "Introdotto un registro dei rischi condiviso e uno steering committee settimanale, diventati lo standard del PMO"
+                },
+                {
+                    "text": "Coordino tre project coordinator e reviso i loro piani e budget"
+                }
+            ]
+        },
+        {
+            "company": "Trasporti Appennino S.r.l.",
+            "position": "Project Manager",
+            "location": "Roma",
+            "companyUrl": "",
+            "startDate": "2016-03",
+            "endDate": "2020-04",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Gestito l'avvio di un sistema di gestione del magazzino in sei centri di distribuzione"
+                },
+                {
+                    "text": "Introdotto sprint di due settimane per il team di sviluppo interno e un backlog condiviso in Jira"
+                },
+                {
+                    "text": "Negoziato una variante contrattuale con il fornitore che ha fatto risparmiare 160.000 euro di licenze"
+                },
+                {
+                    "text": "Creato il primo processo di raccolta e valutazione delle richieste di progetto per l'IT, riducendo di circa un terzo le richieste non pianificate al team di sviluppo"
+                }
+            ]
+        },
+        {
+            "company": "Telecom Centro S.r.l.",
+            "position": "Project Coordinator",
+            "location": "Roma",
+            "companyUrl": "",
+            "startDate": "2014-06",
+            "endDate": "2016-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Coordinato l'installazione della fibra in 20 sedi aziendali insieme alle squadre sul campo e agli uffici comunali per i permessi"
+                },
+                {
+                    "text": "Aggiornato il cronoprogramma e il controllo del budget e preparato i report settimanali di avanzamento"
+                },
+                {
+                    "text": "Organizzato le riunioni con i fornitori e seguito le azioni aperte fino alla chiusura"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Università di Roma Tor Vergata",
+            "degree": "Laurea in Economia e Management",
+            "fieldOfStudy": "",
+            "location": "Roma",
+            "startDate": "2010-08",
+            "endDate": "2014-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Banco Alimentare del Lazio",
+            "organizationUrl": "",
+            "position": "Coordinatore volontario della logistica",
+            "location": "Roma",
+            "startDate": "2019-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Pianifico i turni dei volontari e le consegne di merce per le raccolte del fine settimana.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Gestione",
+            "description": "Waterfall, Agile, Scrum, pianificazione ibrida, gestione dei fornitori"
+        },
+        {
+            "title": "Controllo",
+            "description": "Budget fino a 5 milioni di euro, registro rischi e problemi, change control, reporting"
+        },
+        {
+            "title": "Strumenti",
+            "description": "Jira, Confluence, MS Project, Smartsheet, Excel"
+        },
+        {
+            "title": "Settori",
+            "description": "Sanità, logistica, telecomunicazioni"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Italiano",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Inglese",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Spagnolo",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Project Management Professional (PMP)",
+            "issuer": "PMI",
+            "date": "2018-10",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified ScrumMaster (CSM)",
+            "issuer": "Scrum Alliance",
+            "date": "2017-04",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "PRINCE2 Foundation",
+            "issuer": "AXELOS",
+            "date": "2021-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 6,
+        "volunteering": 5,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

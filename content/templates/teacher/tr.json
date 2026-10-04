@@ -1,0 +1,199 @@
+{
+    "version": "v1",
+    "firstName": "Merve",
+    "lastName": "Aydın",
+    "email": "merve.aydin@example.com",
+    "phone": "+90 555 012 88 41",
+    "position": "Ortaokul Fen Bilimleri Öğretmeni",
+    "location": "Bursa",
+    "summary": "On iki yıldır öğretmenlik yapıyorum, son dokuz yılım 6-8. sınıflarda fen bilimleri derslerinde geçti. Deney ağırlıklı üniteler planlıyorum, değerlendirme sonuçlarına göre öğrencileri birkaç haftada bir yeniden grupluyorum ve her öğrencinin derse katılabilmesi için özel eğitim öğretmenleriyle yakın çalışıyorum.",
+    "experiences": [
+        {
+            "company": "Çınaraltı Koleji Ortaokulu",
+            "position": "Fen Bilimleri Öğretmeni, 7. ve 8. sınıflar",
+            "location": "Bursa",
+            "companyUrl": "",
+            "startDate": "2019-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Beş şubede fen bilimleri, yılda yaklaşık 140 öğrenci.",
+            "achievements": [
+                {
+                    "text": "8. sınıf fen ünitelerini haftalık deneyler etrafında yeniden düzenledim; okul içi ortak sınavlarda fen ortalaması iki yılda 61'den 74'e yükseldi"
+                },
+                {
+                    "text": "2022'den beri fen bilimleri zümre başkanıyım: aylık planlama toplantılarını ve ortak sınavları yürütüyorum"
+                },
+                {
+                    "text": "Bir kaynaştırma şubesinde özel eğitim öğretmeniyle birlikte derse giriyor ve BEP'i olan öğrenciler için uyarlamalar hazırlıyorum"
+                },
+                {
+                    "text": "Okul sonrası robotik kulübünü kurdum; bugün 25 üyesi var ve bölge turnuvasında yarışıyor"
+                }
+            ]
+        },
+        {
+            "company": "Gökçe Ortaokulu",
+            "position": "Fen Bilimleri Öğretmeni, 6. sınıflar",
+            "location": "Eskişehir",
+            "companyUrl": "",
+            "startDate": "2016-08",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Yaklaşık 28 kişilik dört şubeye canlılar ve yer bilimi konularını anlattım"
+                },
+                {
+                    "text": "Okul aile birliğiyle birlikte bir okul bahçesi ünitesi kurdum; hâlâ 6. sınıf programının parçası"
+                },
+                {
+                    "text": "Üniversiteden gelen iki stajyer öğretmene rehberlik ettim"
+                }
+            ]
+        },
+        {
+            "company": "Yıldıztepe Ortaokulu",
+            "position": "Fen Bilimleri Öğretmeni, 5. sınıflar",
+            "location": "Eskişehir",
+            "companyUrl": "",
+            "startDate": "2013-08",
+            "endDate": "2016-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Dört şubede yaklaşık 27 kişilik sınıflara fen bilimleri dersi verdim"
+                },
+                {
+                    "text": "Haftalık okuma ve bilim günlüğü rutini ile velilere gönderilen deney takip çizelgelerini başlattım"
+                },
+                {
+                    "text": "5. sınıf zümresinin ortak ünite planlarına ve ortak sınavlara geçişine öncülük ettim"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Gazi Üniversitesi",
+            "degree": "Eğitim Programları ve Öğretim Yüksek Lisans",
+            "fieldOfStudy": "",
+            "location": "Ankara",
+            "startDate": "2018-08",
+            "endDate": "2020-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        },
+        {
+            "institution": "Bursa Uludağ Üniversitesi",
+            "degree": "Fen Bilgisi Öğretmenliği Lisans",
+            "fieldOfStudy": "",
+            "location": "Bursa",
+            "startDate": "2009-08",
+            "endDate": "2013-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Bursa Yaz Bilim Kampı",
+            "organizationUrl": "",
+            "position": "Baş Eğitmen",
+            "location": "Bursa",
+            "startDate": "2018-06",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Her yaz 40 öğrenci için iki haftalık bir mühendislik kampı planlıyor ve yürütüyorum.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Öğretim",
+            "description": "Deney temelli fen öğretimi, farklılaştırılmış öğretim, biçimlendirici değerlendirme, ortak ders yürütme"
+        },
+        {
+            "title": "Sınıf",
+            "description": "Olumlu davranış desteği, küçük grup rotasyonları, veli iletişimi"
+        },
+        {
+            "title": "Araçlar",
+            "description": "Google Classroom, e-Okul, Microsoft Teams, akıllı tahta uygulamaları"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Türkçe",
+            "proficiency": "Native"
+        },
+        {
+            "name": "İngilizce",
+            "proficiency": "Proficient"
+        },
+        {
+            "name": "Almanca",
+            "proficiency": "Basic"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Robotik Kodlama Eğitici Eğitimi",
+            "issuer": "İl Milli Eğitim Müdürlüğü hizmet içi eğitim",
+            "date": "2021-07",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Google Certified Educator Level 1",
+            "issuer": "Google for Education",
+            "date": "2022-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [
+        {
+            "title": "Batar mı, Yüzer mi? Haftalık Deneylerle Yoğunluk Öğretimi",
+            "authors": "M. Aydın, S. Koç",
+            "venue": "Ulusal Fen Bilimleri ve Matematik Eğitimi Kongresi",
+            "date": "2023-11",
+            "url": "",
+            "description": "Ortaokul öğretmenleri için düşük maliyetli deney rutinleri üzerine atölye çalışması."
+        }
+    ],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "certificates": 1,
+        "experience": 2,
+        "education": 3,
+        "skills": 4,
+        "languages": 7,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 5
+    },
+    "sectionHeaders": {
+        "certificates": "Mesleki Belgeler"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

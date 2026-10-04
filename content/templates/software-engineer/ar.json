@@ -1,0 +1,185 @@
+{
+    "version": "v1",
+    "firstName": "أحمد",
+    "lastName": "فتحي",
+    "email": "ahmed.fathy@example.com",
+    "phone": "+971 50 000 2290",
+    "position": "مهندس برمجيات أول",
+    "location": "دبي، الإمارات",
+    "summary": "مهندس أنظمة خلفية بخبرة تسع سنوات في بناء أنظمة الدفع والخدمات اللوجستية والطلبات باستخدام Go وTypeScript. أحب أن أتولى الخدمة من مراجعة التصميم حتى المناوبة، وأهتم بواجهات برمجية واضحة وعمليات نشر هادئة وكود يسهل على من يأتي بعدي قراءته.",
+    "experiences": [
+        {
+            "company": "سنبلة للتجارة الإلكترونية",
+            "position": "مهندس برمجيات أول",
+            "location": "دبي، الإمارات",
+            "companyUrl": "",
+            "startDate": "2022-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "قدت تقسيم نظام الدفع الموحد إلى أربع خدمات مكتوبة بلغة Go، ونشرناها خلف مفاتيح تفعيل دون أي توقف يلاحظه العملاء"
+                },
+                {
+                    "text": "خفضت زمن الاستجابة (p95) لصفحة الدفع من 900 مللي ثانية إلى 240 مللي ثانية بتخزين قواعد التسعير مؤقتا وحذف استدعاءين متزامنين"
+                },
+                {
+                    "text": "صممت طبقة منع التكرار لمدفوعات البطاقات، فتوقفت عمليات الخصم المزدوج عند إعادة المحاولة"
+                }
+            ]
+        },
+        {
+            "company": "مسار للخدمات اللوجستية",
+            "position": "مهندس برمجيات",
+            "location": "القاهرة، مصر",
+            "companyUrl": "",
+            "startDate": "2019-06",
+            "endDate": "2022-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "بنيت واجهة تتبع الشحنات باستخدام TypeScript وNode.js، ويستخدمها 40 شريك نقل"
+                },
+                {
+                    "text": "نقلت المهام الليلية المجمعة إلى طابور أحداث، فأصبح العملاء يرون تحديث الحالة خلال دقائق بدل صباح اليوم التالي"
+                },
+                {
+                    "text": "أضفت اختبارات العقود بين الخدمات، فأصبحت عمليات النشر الفاشلة نادرة بعد أن كانت أسبوعية"
+                },
+                {
+                    "text": "نفذت ترقية PostgreSQL من الإصدار 10 إلى 14 في ثلاث مجموعات خوادم، مع أقل من خمس دقائق من وضع القراءة فقط"
+                }
+            ]
+        },
+        {
+            "company": "برمجيات الصنوبر",
+            "position": "مهندس برمجيات مبتدئ",
+            "location": "القاهرة، مصر",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2019-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "بنيت أدوات تقارير داخلية باستخدام Python وDjango لفريقي المبيعات والدعم"
+                },
+                {
+                    "text": "كتبت أول مجموعة اختبارات آلية لوحدة الفوترة، واكتشفت عدة أخطاء قبل الإطلاق"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "جامعة القاهرة",
+            "degree": "بكالوريوس هندسة الحاسبات",
+            "fieldOfStudy": "",
+            "location": "الجيزة، مصر",
+            "startDate": "2013-08",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "لغات البرمجة",
+            "description": "Go، TypeScript، Python، SQL"
+        },
+        {
+            "title": "الأنظمة الخلفية",
+            "description": "واجهات REST وgRPC، PostgreSQL، Redis، Kafka"
+        },
+        {
+            "title": "البنية التحتية",
+            "description": "AWS، Docker، Kubernetes، Terraform، GitHub Actions"
+        },
+        {
+            "title": "الممارسات",
+            "description": "تصميم الأنظمة، مراجعة الكود، المراقبة، الاستجابة للحوادث"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "pgmigrate",
+            "description": "أداة صغيرة مفتوحة المصدر لتشغيل ترحيلات PostgreSQL بأمان داخل خطوط CI.",
+            "links": [
+                {
+                    "url": "https://github.com/example/pgmigrate",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2021-01",
+            "endDate": "",
+            "isPresent": true,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "العربية",
+            "proficiency": "Native"
+        },
+        {
+            "name": "الإنجليزية",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "AWS Certified Developer - Associate",
+            "issuer": "Amazon Web Services",
+            "date": "2023-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified Kubernetes Application Developer (CKAD)",
+            "issuer": "The Linux Foundation",
+            "date": "2024-04",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "projects": 3,
+        "education": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "volunteering": 7,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

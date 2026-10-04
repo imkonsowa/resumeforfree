@@ -1,0 +1,203 @@
+{
+    "version": "v1",
+    "firstName": "Julien",
+    "lastName": "Moreau",
+    "email": "julien.moreau@example.com",
+    "phone": "+33 6 12 34 56 78",
+    "position": "Développeur back-end senior",
+    "location": "Lyon",
+    "summary": "Développeur back-end avec neuf ans d'expérience sur des systèmes de paiement, de logistique et de commande en Go et TypeScript. J'aime suivre un service de la revue de conception jusqu'à l'astreinte, avec des API claires, des déploiements sans surprise et un code que la personne suivante peut lire.",
+    "experiences": [
+        {
+            "company": "Larsen Commerce",
+            "position": "Développeur back-end senior",
+            "location": "Lyon",
+            "companyUrl": "",
+            "startDate": "2022-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Pilotage du découpage du monolithe de paiement en quatre services Go, livrés derrière des feature flags sans interruption pour les clients"
+                },
+                {
+                    "text": "Temps de réponse p95 du tunnel de commande réduit de 900 ms à 240 ms grâce à la mise en cache des règles de prix et à la suppression de deux appels synchrones"
+                },
+                {
+                    "text": "Conception de la couche d'idempotence des paiements par carte, qui a mis fin aux doubles débits lors des relances"
+                },
+                {
+                    "text": "Accompagnement de trois développeurs et animation de la revue de conception hebdomadaire de l'équipe paiement"
+                }
+            ]
+        },
+        {
+            "company": "Transvia Logistique",
+            "position": "Développeur logiciel",
+            "location": "Lyon",
+            "companyUrl": "",
+            "startDate": "2019-06",
+            "endDate": "2022-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Développement de l'API de suivi des expéditions en TypeScript et Node.js, utilisée par 40 transporteurs partenaires"
+                },
+                {
+                    "text": "Passage des traitements nocturnes à une file d'événements : les clients voient le statut en quelques minutes au lieu du lendemain matin"
+                },
+                {
+                    "text": "Ajout de tests de contrat entre services, les déploiements en échec sont passés d'hebdomadaires à rares"
+                },
+                {
+                    "text": "Migration de PostgreSQL de la version 10 à 14 sur trois clusters, avec moins de cinq minutes en lecture seule"
+                }
+            ]
+        },
+        {
+            "company": "Pommier Logiciels",
+            "position": "Développeur junior",
+            "location": "Villeurbanne",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2019-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Développement d'outils de reporting internes en Python et Django pour les équipes commerciales et support"
+                },
+                {
+                    "text": "Écriture de la première suite de tests automatisés du module de facturation, plusieurs régressions détectées avant livraison"
+                },
+                {
+                    "text": "Participation aux astreintes dès la deuxième année et rédaction des procédures pour les alertes les plus fréquentes"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "INSA Lyon",
+            "degree": "Diplôme d'ingénieur en informatique",
+            "fieldOfStudy": "",
+            "location": "Villeurbanne",
+            "startDate": "2013-08",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Lyon Code Mentors",
+            "organizationUrl": "",
+            "position": "Mentor bénévole",
+            "location": "Lyon",
+            "startDate": "2021-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Relecture de code et simulations d'entretiens pour des personnes en reconversion vers le développement back-end.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Langages",
+            "description": "Go, TypeScript, Python, SQL"
+        },
+        {
+            "title": "Back-end",
+            "description": "API REST et gRPC, PostgreSQL, Redis, Kafka"
+        },
+        {
+            "title": "Infrastructure",
+            "description": "AWS, Docker, Kubernetes, Terraform, GitHub Actions"
+        },
+        {
+            "title": "Pratiques",
+            "description": "Conception de systèmes, revue de code, observabilité, gestion d'incidents"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "pgmigrate",
+            "description": "Petit outil open source pour exécuter les migrations PostgreSQL en toute sécurité dans la CI.",
+            "links": [
+                {
+                    "url": "https://github.com/example/pgmigrate",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2021-01",
+            "endDate": "",
+            "isPresent": true,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Français",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Anglais",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "AWS Certified Developer - Associate",
+            "issuer": "Amazon Web Services",
+            "date": "2023-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified Kubernetes Application Developer (CKAD)",
+            "issuer": "The Linux Foundation",
+            "date": "2024-04",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "projects": 3,
+        "education": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "volunteering": 7,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}
