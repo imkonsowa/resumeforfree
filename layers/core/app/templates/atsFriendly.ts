@@ -101,16 +101,10 @@ function renderTopHeader(data: ResumeData, context: RendererContext, fontSize: n
 #block(above: 0.6em, below: 0em)[#line(length: 100%, stroke: 0.5pt + ${ATS_BLUE})]`;
 }
 
-const parse = ({ data, font, locale, t, fontSize, photoShape }: TemplateParseInput): string => {
+const parse = ({ data, settings, locale, t }: TemplateParseInput): string => {
     const isRtl = isRtlLocale(locale);
-    const context = new RendererContext({
-        t,
-        fontSize,
-        config: ATS_LAYOUT_CONFIG,
-        locale,
-        photoShape: photoShape || 'rectangle',
-        sectionStyle: ATS_SECTION_STYLE,
-    });
+    const context = new RendererContext({ t, locale, settings, config: ATS_LAYOUT_CONFIG, sectionStyle: ATS_SECTION_STYLE });
+    const { font, fontSize } = context;
 
     const header = renderTopHeader(data, context, fontSize);
     const shared = getSharedSectionRenderers();

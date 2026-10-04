@@ -51,9 +51,8 @@ const TEMPLATES = [
 const parseFor = (template: typeof defaultTemplate): string =>
     template.parse({
         data: descriptionsResume,
-        font: 'Calibri',
+        settings: { selectedFont: 'Calibri', fontSize: FONT_SIZE },
         locale: 'en',
-        fontSize: FONT_SIZE,
         t: mockT,
     });
 
@@ -130,9 +129,8 @@ describe('Description spacing standardization', () => {
             for (const { name, template } of TEMPLATES) {
                 const out = template.parse({
                     data: fullResume,
-                    font: 'Calibri',
+                    settings: { selectedFont: 'Calibri', fontSize: FONT_SIZE },
                     locale: 'en',
-                    fontSize: FONT_SIZE,
                     t: mockT,
                 });
                 expect(out, `${name} did not render skill item with standardized block`).toContain(skillsItemPattern);

@@ -1,7 +1,7 @@
 import type { ResumeData, SectionHeaders, SectionOrder } from '#layers/core/app/types/resume';
 import type { SectionContent, Template, TemplateParseInput, TemplateRenderConfig } from '#layers/core/app/types/template';
 import { escapeTypstText } from '#layers/core/app/utils/stringUtils';
-import { convertEmail, convertLink, convertList, LATIN_FONT_STACK, renderDescription, renderTemplateSubHeader, renderTemplateSubHeaderContent, SECTION_HEADER_SIZE_OFFSET, SECTION_SPACING } from '#layers/core/app/utils/typstUtils';
+import { convertEmail, convertLink, convertList, LATIN_FONT_STACK, renderDescription, renderTemplateSubHeader, renderTemplateSubHeaderContent } from '#layers/core/app/utils/typstUtils';
 import { RendererContext } from '#layers/core/app/utils/rendererContext';
 import { isRtlLocale } from '#layers/core/app/utils/localeDirection';
 import { SECTION_TRANSLATION_MAP } from '#layers/core/app/utils/sectionHeaders';
@@ -43,15 +43,16 @@ function getSectionLabel(section: keyof SectionHeaders, data: ResumeData, contex
     return (key ? context.t(key) : '').toUpperCase();
 }
 
-function titleMarkup(item: SectionContent, fontSize: number): string {
-    if (item.titleContent) return renderTemplateSubHeaderContent(item.titleContent, fontSize);
-    if (item.title) return renderTemplateSubHeader(item.title, fontSize);
+function titleMarkup(item: SectionContent, context: RendererContext): string {
+    if (item.titleContent) return renderTemplateSubHeaderContent(item.titleContent, context);
+    if (item.title) return renderTemplateSubHeader(item.title, context);
     return '';
 }
 
-function renderRowContent(item: SectionContent, fontSize: number): string {
+function renderRowContent(item: SectionContent, context: RendererContext): string {
+    const { fontSize } = context;
     const parts: string[] = [];
-    const title = titleMarkup(item, fontSize);
+    const title = titleMarkup(item, context);
     if (title) parts.push(title);
     if (item.content) parts.push(renderDescription(item.content, fontSize));
     if (item.description) parts.push(renderDescription(item.description, fontSize));
@@ -62,9 +63,9 @@ function renderRowContent(item: SectionContent, fontSize: number): string {
     return parts.join('\n\n');
 }
 
-function itemsToRows(items: SectionContent[], fontSize: number): SimpleRow[] {
+function itemsToRows(items: SectionContent[], context: RendererContext): SimpleRow[] {
     return items
-        .map(item => ({ date: item.date, content: renderRowContent(item, fontSize) }))
+        .map(item => ({ date: item.date, content: renderRowContent(item, context) }))
         .filter(r => r.content.trim());
 }
 
@@ -112,11 +113,12 @@ function renderLinks(data: ResumeData, context: RendererContext): SimpleSection 
 
 const LETTER_SPACED_LOCALES = new Set(['en', 'fr', 'de', 'it', 'tr']);
 
-function renderSimpleSection(section: SimpleSection, fontSize: number, isFirst: boolean, locale: string): string {
+function renderSimpleSection(section: SimpleSection, context: RendererContext, isFirst: boolean): string {
     if (!section.rows.length) return '';
+    const { fontSize, locale, settings } = context;
 
     const tracking = LETTER_SPACED_LOCALES.has(locale) ? ', tracking: 0.08em' : '';
-    const label = `#text(size: ${fontSize + SECTION_HEADER_SIZE_OFFSET}pt, weight: "bold"${tracking})[${escapeTypstText(section.label)}]`;
+    const label = `#text(size: ${fontSize + settings.headingSizeOffset}pt, weight: "bold"${tracking})[${escapeTypstText(section.label)}]`;
 
     const cells: string[] = [];
     section.rows.forEach((row, idx) => {
@@ -129,7 +131,8 @@ function renderSimpleSection(section: SimpleSection, fontSize: number, isFirst: 
         cells.push(`[${row.content}]`);
     });
 
-    const topRule = isFirst ? '' : `#block(above: 0.6em, below: 0.6em)[#line(length: 100%, stroke: 0.4pt)]`;
+    const ruleGap = `${settings.sectionSpacing / 2}em`;
+    const topRule = isFirst ? '' : `#block(above: ${ruleGap}, below: ${ruleGap})[#line(length: 100%, stroke: 0.4pt)]`;
 
     return `${topRule}
 #grid(
@@ -177,24 +180,25 @@ function renderHeader(data: ResumeData, context: RendererContext, fontSize: numb
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]`;
 }
 
-const parse = ({ data, font, locale, t, fontSize, photoShape }: TemplateParseInput): string => {
+const parse = ({ data, settings, locale, t }: TemplateParseInput): string => {
     const isRtl = isRtlLocale(locale);
-    const context = new RendererContext({ t, fontSize, config: SIMPLE_LAYOUT_CONFIG, locale, photoShape: photoShape || 'rectangle' });
+    const context = new RendererContext({ t, locale, settings, config: SIMPLE_LAYOUT_CONFIG });
+    const { font, fontSize } = context;
 
     const sectionMap: Record<string, () => SimpleSection | null> = {
         links: () => renderLinks(data, context),
         profile: () => renderProfile(data, context),
         education: () => buildSection(
             getSectionLabel('education', data, context),
-            itemsToRows(generateEducationContent(data.education || [], context.t, context.locale), context.fontSize),
+            itemsToRows(generateEducationContent(data.education || [], context.t, context.locale), context),
         ),
         experience: () => buildSection(
             getSectionLabel('experience', data, context),
-            itemsToRows(generateExperienceContent(data.experiences || [], context.t, context.locale), context.fontSize),
+            itemsToRows(generateExperienceContent(data.experiences || [], context.t, context.locale), context),
         ),
         internships: () => buildSection(
             getSectionLabel('internships', data, context),
-            itemsToRows(generateInternshipsContent(data.internships || [], context.t, context.locale), context.fontSize),
+            itemsToRows(generateInternshipsContent(data.internships || [], context.t, context.locale), context),
         ),
         skills: () => {
             const body = renderSharedSkillsBody(data);
@@ -208,15 +212,15 @@ const parse = ({ data, font, locale, t, fontSize, photoShape }: TemplateParseInp
         },
         projects: () => buildSection(
             getSectionLabel('projects', data, context),
-            itemsToRows(generateProjectsContent(data.projects || [], context.t, context.locale), context.fontSize),
+            itemsToRows(generateProjectsContent(data.projects || [], context.t, context.locale), context),
         ),
         volunteering: () => buildSection(
             getSectionLabel('volunteering', data, context),
-            itemsToRows(generateVolunteeringContent(data.volunteering || [], context.t, context.locale), context.fontSize),
+            itemsToRows(generateVolunteeringContent(data.volunteering || [], context.t, context.locale), context),
         ),
         certificates: () => buildSection(
             getSectionLabel('certificates', data, context),
-            itemsToRows(generateCertificatesContent(data.certificates || [], context.t, context.locale), context.fontSize),
+            itemsToRows(generateCertificatesContent(data.certificates || [], context.t, context.locale), context),
         ),
     };
 
@@ -234,7 +238,7 @@ const parse = ({ data, font, locale, t, fontSize, photoShape }: TemplateParseInp
     for (const key of [...fixedOrder, ...orderedDataSections]) {
         const section = sectionMap[key]();
         if (!section) continue;
-        const out = renderSimpleSection(section, fontSize, first, locale);
+        const out = renderSimpleSection(section, context, first);
         if (out) {
             rendered.push(out);
             first = false;
@@ -250,7 +254,7 @@ const parse = ({ data, font, locale, t, fontSize, photoShape }: TemplateParseInp
 ${fontConfig}
 #set par(leading: ${leading}, justify: false)
 ${renderHeader(data, context, fontSize)}
-#v(${SECTION_SPACING})
+#v(${context.settings.sectionSpacing}em)
 ${rendered.join('\n')}
 #pagebreak(weak: true)`;
 };

@@ -79,11 +79,8 @@ export const useResumeGenerator = () => {
         const template = getTemplate(resume.settings.selectedTemplate);
         return template.parse({
             data: resume.data,
-            font: resolveFontFamily(resume.settings.selectedFont, resume.language),
+            settings: resume.settings,
             locale: resume.language,
-            fontSize: resume.settings.fontSize,
-            photoShape: resume.settings.photoShape || 'rectangle',
-            showSectionHeaderLine: resume.settings.showSectionHeaderLine ?? true,
             t: scopedT(resume.language),
         });
     };

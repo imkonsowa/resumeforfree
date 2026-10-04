@@ -3,8 +3,11 @@ import { defaultTemplate } from '#layers/core/app/templates/default';
 import { compactTemplate } from '#layers/core/app/templates/compact';
 import { simpleTemplate } from '#layers/core/app/templates/simple';
 import { atsFriendlyTemplate } from '#layers/core/app/templates/atsFriendly';
-import { DATE_COLOR, SECTION_HEADER_SIZE_OFFSET } from '#layers/core/app/utils/typstUtils';
+import { DATE_COLOR } from '#layers/core/app/utils/typstUtils';
+import { defaultResumeSettings } from '#layers/core/app/types/resume';
 import type { ResumeData } from '#layers/core/app/types/resume';
+
+const SECTION_HEADER_SIZE_OFFSET = defaultResumeSettings.headingSizeOffset;
 
 const data = {
     version: 'v1', firstName: 'Rami', lastName: 'Sayed', email: 'r@example.com', phone: '+20 100',
@@ -48,7 +51,7 @@ describe('section header size is unified across templates', () => {
         it(`every template renders section headers at body + ${SECTION_HEADER_SIZE_OFFSET} (body ${body}pt)`, () => {
             const expected = body + SECTION_HEADER_SIZE_OFFSET;
             const perTemplate = TEMPLATES.map(({ name, tpl }) => {
-                const src = tpl.parse({ data, font: 'Calibri', locale: 'en', fontSize: body, t: (k: string) => k });
+                const src = tpl.parse({ data, settings: { selectedFont: 'Calibri', fontSize: body }, locale: 'en', t: (k: string) => k });
                 return { name, sizes: [...new Set(headerSizes(src))] };
             });
 
@@ -69,10 +72,23 @@ describe('section header size is unified across templates', () => {
     });
 });
 
+describe('templates follow the resume typography settings', () => {
+    const settings = { headingSizeOffset: 6, titleSizeOffset: 3, sectionSpacing: 2 };
+    for (const { name, tpl } of TEMPLATES) {
+        it(`${name}: heading, title and section gap come from settings`, () => {
+            const src = tpl.parse({ data, settings: { selectedFont: 'Calibri', fontSize: 12 }, locale: 'en', settings, t: (k: string) => k });
+            expect(new Set(headerSizes(src)), `${name}: section headers`).toEqual(new Set([18]));
+            expect(src, `${name}: item titles`).toContain('#text(size: 15pt, weight: "bold")[');
+            const gap = name === 'simple' ? 'above: 1em, below: 1em)[#line' : 'below: 2em)[';
+            expect(src, `${name}: section gap`).toContain(gap);
+        });
+    }
+});
+
 describe('date colour is unified and readable', () => {
     it('no template emits Typst\'s pale built-in gray for dates', () => {
         for (const { name, tpl } of TEMPLATES) {
-            const src = tpl.parse({ data, font: 'Calibri', locale: 'en', fontSize: 12, t: (k: string) => k });
+            const src = tpl.parse({ data, settings: { selectedFont: 'Calibri', fontSize: 12 }, locale: 'en', t: (k: string) => k });
             expect(
                 /fill:\s*gray\b/.test(src),
                 `${name}: uses Typst "gray" (#AAAAAA, 2.3:1 on white) — below WCAG AA and hard to read in print`,
@@ -82,7 +98,7 @@ describe('date colour is unified and readable', () => {
 
     it('every rendered date uses the shared DATE_COLOR', () => {
         for (const { name, tpl } of TEMPLATES) {
-            const src = tpl.parse({ data, font: 'Calibri', locale: 'en', fontSize: 12, t: (k: string) => k });
+            const src = tpl.parse({ data, settings: { selectedFont: 'Calibri', fontSize: 12 }, locale: 'en', t: (k: string) => k });
             const fills = [...src.matchAll(/fill:\s*(rgb\("#[0-9A-Fa-f]{6}"\)|gray|black|blue)/g)].map(m => m[1]);
             const greys = fills.filter(f => /rgb\("#(4B5563|AAAAAA|6B7280|9CA3AF)"\)/i.test(f) || f === 'gray');
             const unique = [...new Set(greys)];

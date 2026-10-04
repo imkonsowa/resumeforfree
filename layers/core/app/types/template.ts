@@ -1,4 +1,4 @@
-import type { ResumeData } from './resume';
+import type { ResumeData, ResumeSettings } from './resume';
 import type { RendererContext } from '#layers/core/app/utils/rendererContext';
 
 export type TranslateFunction = (key: string) => string;
@@ -23,7 +23,6 @@ export interface TemplatePhotoConfig {
 }
 
 export interface SectionStyle {
-    fontSize?: number;
     headerColor?: string;
     headerUnderline?: boolean;
     headerUpperCase?: boolean;
@@ -69,11 +68,8 @@ export interface SectionContent {
 
 export interface TemplateParseInput {
     data: ResumeData;
-    font: string;
+    settings?: Partial<ResumeSettings>;
     locale: string;
-    fontSize: number;
-    photoShape?: 'circle' | 'rectangle';
-    showSectionHeaderLine?: boolean;
     t: TranslateFunction;
 }
 

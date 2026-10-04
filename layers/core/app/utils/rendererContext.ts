@@ -1,32 +1,42 @@
 import type { SectionStyle, TemplateRenderConfig, TranslateFunction } from '#layers/core/app/types/template';
-import type { PhotoShape } from '#layers/core/app/types/resume';
+import { resolveFontFamily, resumeSettingsFromLegacy } from '#layers/core/app/types/resume';
+import type { PhotoShape, ResumeSettings } from '#layers/core/app/types/resume';
 
 export interface RendererContextInput {
     t: TranslateFunction;
-    fontSize: number;
-    config: TemplateRenderConfig;
     locale: string;
-    photoShape: PhotoShape;
+    settings?: Partial<ResumeSettings>;
+    config: TemplateRenderConfig;
     sectionStyle?: SectionStyle;
 }
 
 export class RendererContext {
     public readonly t: TranslateFunction;
-    public readonly fontSize: number;
-    public readonly config: TemplateRenderConfig;
     public readonly locale: string;
-    public readonly photoShape: PhotoShape;
+    public readonly settings: ResumeSettings;
+    public readonly config: TemplateRenderConfig;
     public readonly sectionStyle: SectionStyle;
 
     constructor(input: RendererContextInput) {
         this.t = input.t;
-        this.fontSize = input.fontSize;
-        this.config = input.config;
         this.locale = input.locale;
-        this.photoShape = input.photoShape;
+        this.settings = resumeSettingsFromLegacy(input.settings);
+        this.config = input.config;
         this.sectionStyle = {
+            headerUnderline: this.settings.showSectionHeaderLine,
             ...(input.sectionStyle ?? {}),
-            fontSize: input.sectionStyle?.fontSize ?? input.fontSize,
         };
+    }
+
+    get font(): string {
+        return resolveFontFamily(this.settings.selectedFont, this.locale);
+    }
+
+    get fontSize(): number {
+        return this.settings.fontSize;
+    }
+
+    get photoShape(): PhotoShape {
+        return this.settings.photoShape;
     }
 }

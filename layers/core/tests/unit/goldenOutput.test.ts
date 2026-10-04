@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { createI18n } from 'vue-i18n';
 import { getTemplate, getTemplateList } from '#layers/core/app/templates';
-import { getDefaultFontForLanguage, resolveFontFamily } from '#layers/core/app/types/resume';
+import { getDefaultFontForLanguage } from '#layers/core/app/types/resume';
 import type { ResumeData } from '#layers/core/app/types/resume';
 import { testResumes } from '../fixtures/resumes';
 
@@ -44,11 +44,8 @@ const render = (templateId: string, locale: string): string => {
         for (const [fixtureName, data] of Object.entries(fixtures)) {
             const markup = template.parse({
                 data,
-                font: resolveFontFamily(getDefaultFontForLanguage(locale), locale),
+                settings: { ...variant, selectedFont: getDefaultFontForLanguage(locale) },
                 locale,
-                fontSize: variant.fontSize,
-                photoShape: variant.photoShape,
-                showSectionHeaderLine: variant.showSectionHeaderLine,
                 t: scopedT(locale),
             });
             sections.push(`// ===== ${templateId} | ${locale} | ${variantName} | ${fixtureName} =====\n${markup}`);

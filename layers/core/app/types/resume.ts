@@ -184,6 +184,9 @@ export interface ResumeSettings {
     fontSize: number;
     photoShape: PhotoShape;
     showSectionHeaderLine: boolean;
+    headingSizeOffset: number;
+    titleSizeOffset: number;
+    sectionSpacing: number;
     sectionCollapsed: Record<string, boolean>;
     isRawMode: boolean;
 }
@@ -239,6 +242,9 @@ export const defaultResumeSettings: ResumeSettings = {
     fontSize: 12,
     photoShape: 'rectangle',
     showSectionHeaderLine: true,
+    headingSizeOffset: 3,
+    titleSizeOffset: 1,
+    sectionSpacing: 1.2,
     isRawMode: false,
     sectionCollapsed: {
         personal: false,
@@ -260,6 +266,9 @@ export const resumeSettingsFromLegacy = (legacy: Partial<ResumeSettings> | null 
         fontSize: src.fontSize ?? defaultResumeSettings.fontSize,
         photoShape: src.photoShape || defaultResumeSettings.photoShape,
         showSectionHeaderLine: src.showSectionHeaderLine ?? defaultResumeSettings.showSectionHeaderLine,
+        headingSizeOffset: src.headingSizeOffset ?? defaultResumeSettings.headingSizeOffset,
+        titleSizeOffset: src.titleSizeOffset ?? defaultResumeSettings.titleSizeOffset,
+        sectionSpacing: src.sectionSpacing ?? defaultResumeSettings.sectionSpacing,
         sectionCollapsed: src.sectionCollapsed && Object.keys(src.sectionCollapsed).length
             ? { ...src.sectionCollapsed }
             : { ...defaultResumeSettings.sectionCollapsed },

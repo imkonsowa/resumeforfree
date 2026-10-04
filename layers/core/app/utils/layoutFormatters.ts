@@ -1,4 +1,4 @@
-import type { SectionContent, SectionStyle, TemplateRenderConfig } from '#layers/core/app/types/template';
+import type { SectionContent, TemplateRenderConfig } from '#layers/core/app/types/template';
 import { escapeTypstText } from './stringUtils';
 import type { RendererContext } from './rendererContext';
 import {
@@ -10,9 +10,6 @@ import {
     renderTemplateDateWithLink,
     renderTemplateSubHeader,
     renderTemplateSubHeaderContent,
-    SECTION_SPACING,
-    SECTION_HEADER_SIZE_OFFSET,
-    ITEM_TITLE_SIZE_OFFSET,
     DATE_COLOR,
 } from './typstUtils';
 
@@ -24,18 +21,19 @@ const joinItems = (items: string[], config: TemplateRenderConfig, spacing?: stri
         .join('');
 };
 
-const renderItemTitle = (item: SectionContent, fontSize: number): string => {
-    if (item.titleContent) return renderTemplateSubHeaderContent(item.titleContent, fontSize);
-    return renderTemplateSubHeader(item.title, fontSize);
+const renderItemTitle = (item: SectionContent, context: RendererContext): string => {
+    if (item.titleContent) return renderTemplateSubHeaderContent(item.titleContent, context);
+    return renderTemplateSubHeader(item.title, context);
 };
 
 const renderInlineTitleAndDate = (
-    titleMarkup: string,
+    titleContent: string,
     dateText: string,
-    fontSize: number,
+    context: RendererContext,
 ): string => {
-    const styledDate = `#text(size: ${fontSize}pt, weight: "bold", fill: ${DATE_COLOR})[${dateText}]`;
-    return `#block(below: 0.6em)[#grid(columns: (1fr, auto), column-gutter: 0.8em, [${titleMarkup}], [${styledDate}])]`;
+    const title = `#text(size: ${context.fontSize + context.settings.titleSizeOffset}pt, weight: "bold")[${titleContent}]`;
+    const styledDate = `#text(size: ${context.fontSize}pt, weight: "bold", fill: ${DATE_COLOR})[${dateText}]`;
+    return `#block(below: 0.6em)[#grid(columns: (1fr, auto), column-gutter: 0.8em, [${title}], [${styledDate}])]`;
 };
 
 export const formatSectionItems = (
@@ -65,22 +63,20 @@ export const formatSocialLinks = (
 };
 export const formatExperienceItems = (
     sectionContent: SectionContent[],
-    config: TemplateRenderConfig,
-    fontSize: number,
+    context: RendererContext,
 ): string => {
+    const { config, fontSize } = context;
     const inline = config.sections.datesInline === true;
     const formattedItems = sectionContent.map((item) => {
         let content: string;
         if (inline && item.dateText) {
-            const titleInner = item.titleContent ? item.titleContent : item.title;
-            const titleMarkup = `#text(size: ${fontSize + ITEM_TITLE_SIZE_OFFSET}pt, weight: "bold")[${titleInner}]`;
-            content = renderInlineTitleAndDate(titleMarkup, item.dateText, fontSize);
+            content = renderInlineTitleAndDate(item.titleContent || item.title, item.dateText, context);
             if (item.content) {
                 content += `\n\n#text(size: ${fontSize - 1}pt)[${item.content}]`;
             }
         }
         else {
-            content = renderItemTitle(item, fontSize);
+            content = renderItemTitle(item, context);
             if (item.date || item.content) {
                 content += '\n\n';
                 content += renderTemplateDateWithLink(item.date || '', item.content || null, fontSize);
@@ -99,18 +95,17 @@ export const formatExperienceItems = (
 };
 export const formatEducationItems = (
     sectionContent: SectionContent[],
-    config: TemplateRenderConfig,
-    fontSize: number,
+    context: RendererContext,
 ): string => {
+    const { config, fontSize } = context;
     const inline = config.sections.datesInline === true;
     const formattedItems = sectionContent.map((item) => {
         let content: string;
         if (inline && item.dateText) {
-            const titleMarkup = `#text(size: ${fontSize + ITEM_TITLE_SIZE_OFFSET}pt, weight: "bold")[${item.title}]`;
-            content = renderInlineTitleAndDate(titleMarkup, item.dateText, fontSize);
+            content = renderInlineTitleAndDate(item.title, item.dateText, context);
         }
         else {
-            content = renderTemplateSubHeader(item.title, fontSize);
+            content = renderTemplateSubHeader(item.title, context);
             if (item.date) {
                 content += '\n\n';
                 content += renderTemplateDate(item.date, fontSize);
@@ -129,19 +124,17 @@ export const formatEducationItems = (
 };
 export const formatProjectsItems = (
     sectionContent: SectionContent[],
-    config: TemplateRenderConfig,
-    fontSize: number,
+    context: RendererContext,
 ): string => {
+    const { config, fontSize } = context;
     const inline = config.sections.datesInline === true;
     const formattedItems = sectionContent.map((item) => {
         let content: string;
         if (inline && item.dateText) {
-            const titleInner = item.titleContent ? item.titleContent : item.title;
-            const titleMarkup = `#text(size: ${fontSize + ITEM_TITLE_SIZE_OFFSET}pt, weight: "bold")[${titleInner}]`;
-            content = renderInlineTitleAndDate(titleMarkup, item.dateText, fontSize);
+            content = renderInlineTitleAndDate(item.titleContent || item.title, item.dateText, context);
         }
         else {
-            content = renderItemTitle(item, fontSize);
+            content = renderItemTitle(item, context);
             if (item.date) {
                 content += '\n\n';
                 content += renderTemplateDate(item.date, fontSize);
@@ -160,19 +153,17 @@ export const formatProjectsItems = (
 };
 export const formatCertificatesItems = (
     sectionContent: SectionContent[],
-    config: TemplateRenderConfig,
-    fontSize: number,
+    context: RendererContext,
 ): string => {
+    const { config, fontSize } = context;
     const inline = config.sections.datesInline === true;
     const formattedItems = sectionContent.map((item) => {
         let content: string;
         if (inline && item.dateText) {
-            const titleInner = item.titleContent ? item.titleContent : item.title;
-            const titleMarkup = `#text(size: ${fontSize + ITEM_TITLE_SIZE_OFFSET}pt, weight: "bold")[${titleInner}]`;
-            content = renderInlineTitleAndDate(titleMarkup, item.dateText, fontSize);
+            content = renderInlineTitleAndDate(item.titleContent || item.title, item.dateText, context);
         }
         else {
-            content = renderItemTitle(item, fontSize);
+            content = renderItemTitle(item, context);
             if (item.date) {
                 content += '\n\n';
                 content += renderTemplateDate(item.date, fontSize);
@@ -192,10 +183,10 @@ export const formatSimpleItems = (
     const contentItems = sectionContent.map(item => item.content || '').filter(Boolean);
     return formatSectionItems(contentItems, config.sections);
 };
-const buildSectionHeader = (headerText: string, style: SectionStyle): string => {
-    const fontSize = style.fontSize ?? 12;
+const buildSectionHeader = (headerText: string, context: RendererContext): string => {
+    const style = context.sectionStyle;
     const display = style.headerUpperCase ? headerText.toUpperCase() : headerText;
-    const size = `${fontSize + (style.headerSizeOffset ?? SECTION_HEADER_SIZE_OFFSET)}pt`;
+    const size = `${context.fontSize + (style.headerSizeOffset ?? context.settings.headingSizeOffset)}pt`;
     const fillProp = style.headerColor ? `, fill: ${style.headerColor}` : '';
     const headerText$ = `#text(size: ${size}, weight: "bold"${fillProp})[${escapeTypstText(display)}]`;
 
@@ -216,9 +207,9 @@ export const wrapInSection = (
     if (!content.trim()) return '';
     const style = context.sectionStyle;
     const above = style.spacingAbove ?? '0em';
-    const below = style.spacingBelow ?? SECTION_SPACING;
+    const below = style.spacingBelow ?? `${context.settings.sectionSpacing}em`;
     return `#block(above: ${above}, below: ${below})[
-${buildSectionHeader(headerText, style)}
+${buildSectionHeader(headerText, context)}
 ${content}
 ]`;
 };

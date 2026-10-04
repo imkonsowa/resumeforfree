@@ -1,11 +1,9 @@
 import type { DateRangeInput } from '#layers/core/app/types/template';
+import type { RendererContext } from './rendererContext';
 import { escapeTypstString, escapeTypstText } from './stringUtils';
 
 export const HEADER_SPACING = '1em';
-export const SECTION_HEADER_SIZE_OFFSET = 3;
-export const ITEM_TITLE_SIZE_OFFSET = 1;
 export const DATE_COLOR = 'rgb("#4B5563")';
-export const SECTION_SPACING = '1.2em';
 export const ITEMS_SPACING = '0.8em';
 export const DESCRIPTION_BELOW = '0.8em';
 export const PHOTO_SIZE = '25mm';
@@ -107,11 +105,11 @@ export const convertSocialLinks = (links: Array<{ platform: string; url: string 
 export const renderTemplateHeader = (text: string, fontSize: number): string => {
     return convertHeader(text, `${fontSize + 2}pt`);
 };
-export const renderTemplateSubHeader = (text: string, fontSize: number): string => {
-    return `#block(below: 0.6em)[#text("${escapeTypstString(text)}", size: ${fontSize + ITEM_TITLE_SIZE_OFFSET}pt, weight: "bold")]`;
+export const renderTemplateSubHeader = (text: string, context: Pick<RendererContext, 'fontSize' | 'settings'>): string => {
+    return `#block(below: 0.6em)[#text("${escapeTypstString(text)}", size: ${context.fontSize + context.settings.titleSizeOffset}pt, weight: "bold")]`;
 };
-export const renderTemplateSubHeaderContent = (content: string, fontSize: number): string => {
-    return `#block(below: 0.6em)[#text(size: ${fontSize + ITEM_TITLE_SIZE_OFFSET}pt, weight: "bold")[${content}]]`;
+export const renderTemplateSubHeaderContent = (content: string, context: Pick<RendererContext, 'fontSize' | 'settings'>): string => {
+    return `#block(below: 0.6em)[#text(size: ${context.fontSize + context.settings.titleSizeOffset}pt, weight: "bold")[${content}]]`;
 };
 export const renderTemplateDate = (dateText: string, fontSize: number): string => {
     return `#block(above: 0em, below: 0.6em)[#text(size: ${fontSize - 2}pt, fill: ${DATE_COLOR})[${dateText}]]`;

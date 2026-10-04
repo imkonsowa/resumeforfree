@@ -47,7 +47,7 @@ export const renderSharedExperience: SectionRenderer = (data: ResumeData, contex
     const sectionContent = generateExperienceContent(data.experiences, context.t, context.locale);
     if (sectionContent.length === 0) return '';
 
-    const formattedContent = formatExperienceItems(sectionContent, context.config, context.fontSize);
+    const formattedContent = formatExperienceItems(sectionContent, context);
     const headerText = getLocalizedSectionHeader('experience', data, context);
 
     return wrapInSection(headerText, formattedContent, context);
@@ -61,7 +61,7 @@ export const renderSharedInternships: SectionRenderer = (data: ResumeData, conte
     const sectionContent = generateInternshipsContent(data.internships, context.t, context.locale);
     if (sectionContent.length === 0) return '';
 
-    const formattedContent = formatExperienceItems(sectionContent, context.config, context.fontSize);
+    const formattedContent = formatExperienceItems(sectionContent, context);
     const headerText = getLocalizedSectionHeader('internships', data, context);
 
     return wrapInSection(headerText, formattedContent, context);
@@ -75,7 +75,7 @@ export const renderSharedEducation: SectionRenderer = (data: ResumeData, context
     const sectionContent = generateEducationContent(data.education, context.t, context.locale);
     if (sectionContent.length === 0) return '';
 
-    const formattedContent = formatEducationItems(sectionContent, context.config, context.fontSize);
+    const formattedContent = formatEducationItems(sectionContent, context);
     const headerText = getLocalizedSectionHeader('education', data, context);
 
     return wrapInSection(headerText, formattedContent, context);
@@ -89,7 +89,7 @@ export const renderSharedVolunteering: SectionRenderer = (data: ResumeData, cont
     const sectionContent = generateVolunteeringContent(data.volunteering, context.t, context.locale);
     if (sectionContent.length === 0) return '';
 
-    const formattedContent = formatExperienceItems(sectionContent, context.config, context.fontSize);
+    const formattedContent = formatExperienceItems(sectionContent, context);
     const headerText = getLocalizedSectionHeader('volunteering', data, context);
 
     return wrapInSection(headerText, formattedContent, context);
@@ -103,7 +103,7 @@ export const renderSharedProjects: SectionRenderer = (data: ResumeData, context:
     const sectionContent = generateProjectsContent(data.projects, context.t, context.locale);
     if (sectionContent.length === 0) return '';
 
-    const formattedContent = formatProjectsItems(sectionContent, context.config, context.fontSize);
+    const formattedContent = formatProjectsItems(sectionContent, context);
     const headerText = getLocalizedSectionHeader('projects', data, context);
 
     return wrapInSection(headerText, formattedContent, context);
@@ -192,7 +192,7 @@ export const renderSharedCertificates: SectionRenderer = (data: ResumeData, cont
     const sectionContent = generateCertificatesContent(data.certificates, context.t, context.locale);
     if (sectionContent.length === 0) return '';
 
-    const formattedContent = formatCertificatesItems(sectionContent, context.config, context.fontSize);
+    const formattedContent = formatCertificatesItems(sectionContent, context);
     const headerText = getLocalizedSectionHeader('certificates', data, context);
 
     return wrapInSection(headerText, formattedContent, context);
