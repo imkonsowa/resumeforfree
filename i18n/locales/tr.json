@@ -444,6 +444,18 @@
         "sectionOrder": {
             "label": "Bölüm sırası",
             "description": "Özgeçmişteki sıralarını değiştirmek için bölümleri sürükle veya okları kullan"
+        },
+        "headingSize": {
+            "label": "Bölüm başlığı boyutu",
+            "description": "Deneyim ve Eğitim gibi başlıkların boyutu"
+        },
+        "titleSize": {
+            "label": "Kayıt başlığı boyutu",
+            "description": "Bir iş veya derece gibi her kaydın başlık boyutu"
+        },
+        "sectionSpacing": {
+            "label": "Bölümler arası boşluk",
+            "description": "Yazı boyutuna göre bölümler arasındaki boşluk"
         }
     },
     "forms": {

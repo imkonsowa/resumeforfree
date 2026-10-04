@@ -38,11 +38,24 @@ const showSectionHeaderLine = computed({
     set: value => settingsStore.setShowSectionHeaderLine(value),
 });
 
+const numericSetting = (key: 'headingSizeOffset' | 'titleSizeOffset' | 'sectionSpacing') => computed({
+    get: () => resumeStore.activeResumeSettings[key] ?? defaultResumeSettings[key],
+    set: value => settingsStore.updateResumeSettings({ [key]: Math.round(value * 10) / 10 }),
+});
+const headingSizeOffset = numericSetting('headingSizeOffset');
+const titleSizeOffset = numericSetting('titleSizeOffset');
+const sectionSpacing = numericSetting('sectionSpacing');
+
 const resetToDefaults = () => {
     settingsStore.setSelectedTemplate(defaultResumeSettings.selectedTemplate);
     settingsStore.setSelectedFont(getDefaultFontForLanguage(resumeStore.activeResumeLanguage));
     settingsStore.setFontSize(defaultResumeSettings.fontSize);
     settingsStore.setShowSectionHeaderLine(defaultResumeSettings.showSectionHeaderLine);
+    settingsStore.updateResumeSettings({
+        headingSizeOffset: defaultResumeSettings.headingSizeOffset,
+        titleSizeOffset: defaultResumeSettings.titleSizeOffset,
+        sectionSpacing: defaultResumeSettings.sectionSpacing,
+    });
 };
 </script>
 
@@ -120,6 +133,54 @@ const resetToDefaults = () => {
                             class="flex-1"
                         />
                         <span class="w-12 text-end font-medium tabular-nums">{{ fontSize }}pt</span>
+                    </div>
+                </UFormField>
+                <UFormField
+                    name="headingSize"
+                    :label="t('settings.headingSize.label')"
+                    :description="t('settings.headingSize.description')"
+                >
+                    <div class="flex items-center gap-4">
+                        <USlider
+                            v-model="headingSizeOffset"
+                            :min="0"
+                            :max="8"
+                            :step="1"
+                            class="flex-1"
+                        />
+                        <span class="w-12 text-end font-medium tabular-nums">{{ fontSize + headingSizeOffset }}pt</span>
+                    </div>
+                </UFormField>
+                <UFormField
+                    name="titleSize"
+                    :label="t('settings.titleSize.label')"
+                    :description="t('settings.titleSize.description')"
+                >
+                    <div class="flex items-center gap-4">
+                        <USlider
+                            v-model="titleSizeOffset"
+                            :min="0"
+                            :max="4"
+                            :step="1"
+                            class="flex-1"
+                        />
+                        <span class="w-12 text-end font-medium tabular-nums">{{ fontSize + titleSizeOffset }}pt</span>
+                    </div>
+                </UFormField>
+                <UFormField
+                    name="sectionSpacing"
+                    :label="t('settings.sectionSpacing.label')"
+                    :description="t('settings.sectionSpacing.description')"
+                >
+                    <div class="flex items-center gap-4">
+                        <USlider
+                            v-model="sectionSpacing"
+                            :min="0.6"
+                            :max="2"
+                            :step="0.2"
+                            class="flex-1"
+                        />
+                        <span class="w-12 text-end font-medium tabular-nums">{{ sectionSpacing.toFixed(1) }}</span>
                     </div>
                 </UFormField>
             </div>

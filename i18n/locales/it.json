@@ -444,6 +444,18 @@
         "sectionOrder": {
             "label": "Ordine delle sezioni",
             "description": "Trascina le sezioni o usa le frecce per cambiarne l'ordine nel curriculum"
+        },
+        "headingSize": {
+            "label": "Dimensione dei titoli di sezione",
+            "description": "Dimensione dei titoli come Esperienza e Istruzione"
+        },
+        "titleSize": {
+            "label": "Dimensione dei titoli delle voci",
+            "description": "Dimensione del titolo di ogni voce, come un lavoro o un titolo di studio"
+        },
+        "sectionSpacing": {
+            "label": "Spazio tra le sezioni",
+            "description": "Spazio tra le sezioni, in proporzione alla dimensione del carattere"
         }
     },
     "forms": {

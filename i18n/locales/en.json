@@ -444,6 +444,18 @@
         "sectionOrder": {
             "label": "Section order",
             "description": "Drag sections or use the arrows to change their order in the resume"
+        },
+        "headingSize": {
+            "label": "Section heading size",
+            "description": "Size of headings like Experience and Education"
+        },
+        "titleSize": {
+            "label": "Item title size",
+            "description": "Size of each entry title, like a job or degree"
+        },
+        "sectionSpacing": {
+            "label": "Space between sections",
+            "description": "Gap between sections, relative to the font size"
         }
     },
     "forms": {

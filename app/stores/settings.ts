@@ -78,6 +78,13 @@ export const useSettingsStore = defineStore('settings', {
             resumeStore.setActiveResumeSetting('showSectionHeaderLine', value);
             this.updateTimestamp();
         },
+        updateResumeSettings(patch: Partial<ResumeSettings>) {
+            const resumeStore = useResumeStore();
+            for (const [key, value] of Object.entries(patch)) {
+                resumeStore.setActiveResumeSetting(key as keyof ResumeSettings, value as ResumeSettings[keyof ResumeSettings]);
+            }
+            this.updateTimestamp();
+        },
         setLocale(locale: string) {
             this.settings.locale = locale;
             this.updateTimestamp();

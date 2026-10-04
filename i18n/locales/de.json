@@ -444,6 +444,18 @@
         "sectionOrder": {
             "label": "Reihenfolge der Abschnitte",
             "description": "Ziehe Abschnitte oder nutze die Pfeile, um ihre Reihenfolge im Lebenslauf zu ändern"
+        },
+        "headingSize": {
+            "label": "Größe der Abschnittsüberschriften",
+            "description": "Größe von Überschriften wie Berufserfahrung und Ausbildung"
+        },
+        "titleSize": {
+            "label": "Größe der Eintragstitel",
+            "description": "Größe jedes Eintragstitels, etwa einer Stelle oder eines Abschlusses"
+        },
+        "sectionSpacing": {
+            "label": "Abstand zwischen Abschnitten",
+            "description": "Abstand zwischen Abschnitten im Verhältnis zur Schriftgröße"
         }
     },
     "forms": {

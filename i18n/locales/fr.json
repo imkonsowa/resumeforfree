@@ -444,6 +444,18 @@
         "sectionOrder": {
             "label": "Ordre des sections",
             "description": "Faites glisser les sections ou utilisez les flèches pour changer leur ordre dans le CV"
+        },
+        "headingSize": {
+            "label": "Taille des titres de section",
+            "description": "Taille des titres comme Expérience et Formation"
+        },
+        "titleSize": {
+            "label": "Taille des intitulés",
+            "description": "Taille de l'intitulé de chaque entrée, comme un poste ou un diplôme"
+        },
+        "sectionSpacing": {
+            "label": "Espace entre les sections",
+            "description": "Espace entre les sections, relatif à la taille de police"
         }
     },
     "forms": {

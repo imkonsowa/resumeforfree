@@ -444,6 +444,18 @@
         "sectionOrder": {
             "label": "板块顺序",
             "description": "拖动板块或使用箭头调整它们在简历中的顺序"
+        },
+        "headingSize": {
+            "label": "板块标题字号",
+            "description": "“工作经历”“教育背景”等标题的字号"
+        },
+        "titleSize": {
+            "label": "条目标题字号",
+            "description": "每个条目标题的字号，例如职位或学位"
+        },
+        "sectionSpacing": {
+            "label": "板块间距",
+            "description": "板块之间的间距，随字号缩放"
         }
     },
     "forms": {
