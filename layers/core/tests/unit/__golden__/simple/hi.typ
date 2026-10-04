@@ -322,6 +322,20 @@
 
 #block(above: 0em, below: 0.8em)[#text(size: 12pt)[Professional level certification]]]
 )
+#block(above: 0.6em, below: 0.6em)[#line(length: 100%, stroke: 0.4pt)]
+#grid(
+    columns: (22%, 1fr),
+    column-gutter: 1.2em,
+    row-gutter: 0.8em,
+    align: (left + top, left + top),
+    [#text(size: 15pt, weight: "bold")[प्रकाशन]
+
+#text(size: 11pt)[#text(fill: rgb("#4B5563"), "अप्रैल 2023")]],
+    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Scaling Event Pipelines on the Edge · #link("https://doi.org/10.1145/0000000")[#text("लिंक")]]]
+
+#block(above: 0em, below: 0.8em)[#text(size: 12pt)[S. Johnson, M. Chen, #emph[ACM SIGOPS Workshop] \
+Measured cold-start costs across three serverless runtimes]]]
+)
 #pagebreak(weak: true)
 
 // ===== simple | hi | defaults | edgeCase =====
@@ -615,6 +629,20 @@
     [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[AWS Solutions Architect से Amazon Web Services · #link("https://aws.amazon.com/certification")[#text("लिंक")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 12pt)[Professional level certification]]]
+)
+#block(above: 0.6em, below: 0.6em)[#line(length: 100%, stroke: 0.4pt)]
+#grid(
+    columns: (22%, 1fr),
+    column-gutter: 1.2em,
+    row-gutter: 0.8em,
+    align: (left + top, left + top),
+    [#text(size: 15pt, weight: "bold")[प्रकाशन]
+
+#text(size: 11pt)[#text(fill: rgb("#4B5563"), "अप्रैल 2023")]],
+    [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Scaling Event Pipelines on the Edge · #link("https://doi.org/10.1145/0000000")[#text("लिंक")]]]
+
+#block(above: 0em, below: 0.8em)[#text(size: 12pt)[S. Johnson, M. Chen, #emph[ACM SIGOPS Workshop] \
+Measured cold-start costs across three serverless runtimes]]]
 )
 #pagebreak(weak: true)
 
@@ -942,6 +970,20 @@
 
 #block(above: 0em, below: 0.8em)[#text(size: 10pt)[Professional level certification]]]
 )
+#block(above: 0.6em, below: 0.6em)[#line(length: 100%, stroke: 0.4pt)]
+#grid(
+    columns: (22%, 1fr),
+    column-gutter: 1.2em,
+    row-gutter: 0.8em,
+    align: (left + top, left + top),
+    [#text(size: 13pt, weight: "bold")[प्रकाशन]
+
+#text(size: 9pt)[#text(fill: rgb("#4B5563"), "अप्रैल 2023")]],
+    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Scaling Event Pipelines on the Edge · #link("https://doi.org/10.1145/0000000")[#text("लिंक")]]]
+
+#block(above: 0em, below: 0.8em)[#text(size: 10pt)[S. Johnson, M. Chen, #emph[ACM SIGOPS Workshop] \
+Measured cold-start costs across three serverless runtimes]]]
+)
 #pagebreak(weak: true)
 
 // ===== simple | hi | alternate | edgeCase =====
@@ -1235,5 +1277,19 @@
     [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[AWS Solutions Architect से Amazon Web Services · #link("https://aws.amazon.com/certification")[#text("लिंक")]]]
 
 #block(above: 0em, below: 0.8em)[#text(size: 10pt)[Professional level certification]]]
+)
+#block(above: 0.6em, below: 0.6em)[#line(length: 100%, stroke: 0.4pt)]
+#grid(
+    columns: (22%, 1fr),
+    column-gutter: 1.2em,
+    row-gutter: 0.8em,
+    align: (left + top, left + top),
+    [#text(size: 13pt, weight: "bold")[प्रकाशन]
+
+#text(size: 9pt)[#text(fill: rgb("#4B5563"), "अप्रैल 2023")]],
+    [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Scaling Event Pipelines on the Edge · #link("https://doi.org/10.1145/0000000")[#text("लिंक")]]]
+
+#block(above: 0em, below: 0.8em)[#text(size: 10pt)[S. Johnson, M. Chen, #emph[ACM SIGOPS Workshop] \
+Measured cold-start costs across three serverless runtimes]]]
 )
 #pagebreak(weak: true)

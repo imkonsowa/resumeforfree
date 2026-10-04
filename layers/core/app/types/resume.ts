@@ -76,6 +76,14 @@ export interface Certificate {
     url?: string;
     description?: string;
 }
+export interface Publication {
+    title: string;
+    authors: string;
+    venue: string;
+    date: string;
+    url?: string;
+    description?: string;
+}
 export interface SectionOrder {
     summary: number;
     experience: number;
@@ -87,6 +95,7 @@ export interface SectionOrder {
     projects: number;
     languages: number;
     certificates: number;
+    publications: number;
 }
 export interface SectionPlacement {
     skills: 'left' | 'right';
@@ -94,6 +103,7 @@ export interface SectionPlacement {
     volunteering: 'left' | 'right';
     languages: 'left' | 'right';
     certificates: 'left' | 'right';
+    publications: 'left' | 'right';
 }
 export interface SectionHeaders {
     personalInfo: string;
@@ -108,6 +118,7 @@ export interface SectionHeaders {
     skills: string;
     volunteering: string;
     certificates: string;
+    publications: string;
 }
 export interface LocalResumePhoto {
     source: 'local';
@@ -141,6 +152,7 @@ export interface ResumeData {
     projects: Project[];
     languages: Language[];
     certificates: Certificate[];
+    publications: Publication[];
     technicalSkills: string;
     sectionOrder: SectionOrder;
     sectionHeaders: SectionHeaders;
@@ -212,6 +224,7 @@ export const defaultResumeData: ResumeData = {
     projects: [],
     languages: [],
     certificates: [],
+    publications: [],
     technicalSkills: '',
     sectionOrder: {
         summary: 0,
@@ -224,6 +237,7 @@ export const defaultResumeData: ResumeData = {
         projects: 7,
         languages: 8,
         certificates: 9,
+        publications: 10,
     },
     sectionHeaders: {} as SectionHeaders,
     sectionPlacement: {
@@ -232,6 +246,7 @@ export const defaultResumeData: ResumeData = {
         volunteering: 'left',
         languages: 'right',
         certificates: 'right',
+        publications: 'left',
     },
 };
 export const defaultUserSettings: UserSettings = {
@@ -264,6 +279,7 @@ export const defaultResumeSettings: ResumeSettings = {
         projects: true,
         languages: true,
         certificates: true,
+        publications: true,
     },
 };
 export const resumeSettingsFromLegacy = (legacy: Partial<ResumeSettings> | null | undefined): ResumeSettings => {

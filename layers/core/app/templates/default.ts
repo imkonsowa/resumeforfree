@@ -35,9 +35,10 @@ const parse = ({ data, settings, locale, t }: TemplateParseInput): string => {
         technicalSkills: () => sharedRenderers.skills(data, context),
         volunteering: () => sharedRenderers.volunteering(data, context),
         certificates: () => sharedRenderers.certificates(data, context),
+        publications: () => sharedRenderers.publications(data, context),
     };
     const fixedLeftSections = ['experiences', 'internships', 'education'];
-    const movableSections = ['projects', 'languages', 'technicalSkills', 'volunteering', 'certificates'];
+    const movableSections = ['projects', 'languages', 'technicalSkills', 'volunteering', 'certificates', 'publications'];
     const leftSections = [...fixedLeftSections];
     const rightSections = [];
     movableSections.forEach((section) => {
@@ -69,6 +70,7 @@ const parse = ({ data, settings, locale, t }: TemplateParseInput): string => {
         languages: data.sectionOrder?.languages || 6,
         volunteering: data.sectionOrder?.volunteering || 7,
         certificates: data.sectionOrder?.certificates || 8,
+        publications: data.sectionOrder?.publications || 9,
     };
     const rightSectionOrder = {
         technicalSkills: data.sectionOrder?.skills || 1,
@@ -76,6 +78,7 @@ const parse = ({ data, settings, locale, t }: TemplateParseInput): string => {
         languages: data.sectionOrder?.languages || 3,
         volunteering: data.sectionOrder?.volunteering || 4,
         certificates: data.sectionOrder?.certificates || 5,
+        publications: data.sectionOrder?.publications || 6,
     };
     const leftContent = leftSections
         .sort((a, b) => (leftSectionOrder[a] || 999) - (leftSectionOrder[b] || 999))
@@ -117,7 +120,7 @@ export const defaultTemplate: Template = {
         isTwoColumn: true,
         leftColumnRatio: '7fr',
         rightColumnRatio: '3fr',
-        movableSections: ['skills', 'projects', 'languages', 'volunteering', 'certificates'],
+        movableSections: ['skills', 'projects', 'languages', 'volunteering', 'certificates', 'publications'],
     },
     parse,
 };

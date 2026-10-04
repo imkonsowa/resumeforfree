@@ -12,7 +12,7 @@ describe('section registry', () => {
     it('covers every array section of ResumeData', () => {
         expect(SECTION_NAMES.sort()).toEqual([
             'certificates', 'education', 'experiences', 'internships',
-            'languages', 'projects', 'skills', 'socialLinks', 'volunteering',
+            'languages', 'projects', 'publications', 'skills', 'socialLinks', 'volunteering',
         ]);
     });
 

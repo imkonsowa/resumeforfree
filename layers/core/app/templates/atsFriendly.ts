@@ -116,6 +116,7 @@ const parse = ({ data, settings, locale, t }: TemplateParseInput): string => {
         languages: () => shared.languages(data, context),
         volunteering: () => shared.volunteering(data, context),
         certificates: () => shared.certificates(data, context),
+        publications: () => shared.publications(data, context),
     };
 
     const orderedKeys = Object.keys(sectionRenderers).sort((a, b) => {

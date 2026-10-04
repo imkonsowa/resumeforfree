@@ -12,6 +12,7 @@ const SECTION_TO_INTERFACE: Record<string, string> = {
     volunteering: 'Volunteering',
     projects: 'Project',
     certificates: 'Certificate',
+    publications: 'Publication',
     skills: 'SkillItem',
     languages: 'Language',
     socialLinks: 'SocialLink',

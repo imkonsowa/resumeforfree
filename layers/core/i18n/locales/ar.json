@@ -46,6 +46,9 @@
         },
         "certificates": {
             "title": "الشهادات"
+        },
+        "publications": {
+            "title": "المنشورات"
         }
     }
 }

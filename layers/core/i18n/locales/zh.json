@@ -46,6 +46,9 @@
         },
         "certificates": {
             "title": "资格证书与荣誉"
+        },
+        "publications": {
+            "title": "发表论文"
         }
     }
 }

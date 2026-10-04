@@ -89,6 +89,7 @@ const parse = ({ data, settings, locale, t }: TemplateParseInput): string => {
         volunteering: () => sharedRenderers.volunteering(data, context),
         languages: () => sharedRenderers.languages(data, context),
         certificates: () => sharedRenderers.certificates(data, context),
+        publications: () => sharedRenderers.publications(data, context),
     };
     const sectionsToRender = Object.keys(sectionRenderers);
     const sortedSections = sectionsToRender.sort((a, b) => {

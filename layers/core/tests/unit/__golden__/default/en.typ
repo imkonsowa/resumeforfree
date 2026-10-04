@@ -255,6 +255,17 @@ Experienced Full Stack Developer with 8+ years in web development. Specialized i
 #set list(indent: 1em)
 
 - Built websites for local nonprofits]
+]
+
+#block(above: 0em, below: 1.2em)[
+#text(size: 15pt, weight: "bold")[Publications]
+#block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Scaling Event Pipelines on the Edge · #link("https://doi.org/10.1145/0000000")[#text("Link")]]]
+
+#block(above: 0em, below: 0.6em)[#text(size: 10pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "April 2023")]]
+
+#block(above: 0em, below: 0.8em)[#text(size: 12pt)[S. Johnson, M. Chen, #emph[ACM SIGOPS Workshop] \
+Measured cold-start costs across three serverless runtimes]]]
 ]],
   [#block(above: 0em, below: 1.2em)[
 #text(size: 15pt, weight: "bold")[Personal Information]
@@ -501,6 +512,17 @@ Experienced Full Stack Developer with 8+ years in web development. Specialized i
 #set list(indent: 1em)
 
 - Built websites for local nonprofits]
+]
+
+#block(above: 0em, below: 1.2em)[
+#text(size: 15pt, weight: "bold")[Publications]
+#block(above: 0.3em, below: 0.8em)[#line(length: 100%, stroke: 0.5pt)]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Scaling Event Pipelines on the Edge · #link("https://doi.org/10.1145/0000000")[#text("Link")]]]
+
+#block(above: 0em, below: 0.6em)[#text(size: 10pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "April 2023")]]
+
+#block(above: 0em, below: 0.8em)[#text(size: 12pt)[S. Johnson, M. Chen, #emph[ACM SIGOPS Workshop] \
+Measured cold-start costs across three serverless runtimes]]]
 ]],
   [#block(width: 100%, below: 1em)[#align(center)[#box(width: 25mm, height: 25mm, clip: true, radius: 1mm, image("/photo", width: 100%, height: 100%, fit: "cover"))]]
 
@@ -768,6 +790,16 @@ Experienced Full Stack Developer with 8+ years in web development. Specialized i
 #set list(indent: 1em)
 
 - Built websites for local nonprofits]
+]
+
+#block(above: 0em, below: 1.2em)[
+#block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Publications]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Scaling Event Pipelines on the Edge · #link("https://doi.org/10.1145/0000000")[#text("Link")]]]
+
+#block(above: 0em, below: 0.6em)[#text(size: 8pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "April 2023")]]
+
+#block(above: 0em, below: 0.8em)[#text(size: 10pt)[S. Johnson, M. Chen, #emph[ACM SIGOPS Workshop] \
+Measured cold-start costs across three serverless runtimes]]]
 ]],
   [#block(above: 0em, below: 1.2em)[
 #block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Personal Information]]
@@ -994,6 +1026,16 @@ Experienced Full Stack Developer with 8+ years in web development. Specialized i
 #set list(indent: 1em)
 
 - Built websites for local nonprofits]
+]
+
+#block(above: 0em, below: 1.2em)[
+#block(below: 1em, above: 0em)[#text(size: 13pt, weight: "bold")[Publications]]
+#block(above: 0em, below: 0.8em)[#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Scaling Event Pipelines on the Edge · #link("https://doi.org/10.1145/0000000")[#text("Link")]]]
+
+#block(above: 0em, below: 0.6em)[#text(size: 8pt, fill: rgb("#4B5563"))[#text(fill: rgb("#4B5563"), "April 2023")]]
+
+#block(above: 0em, below: 0.8em)[#text(size: 10pt)[S. Johnson, M. Chen, #emph[ACM SIGOPS Workshop] \
+Measured cold-start costs across three serverless runtimes]]]
 ]],
   [#block(width: 100%, below: 1em)[#align(center)[#box(width: 25mm, height: 25mm, clip: true, radius: 50%, image("/photo", width: 100%, height: 100%, fit: "cover"))]]
 

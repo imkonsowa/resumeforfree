@@ -18,6 +18,7 @@ export const minimalResume: ResumeData = {
     projects: [],
     languages: [],
     certificates: [],
+    publications: [],
     technicalSkills: '',
     sectionOrder: {
         summary: 0,
@@ -30,6 +31,7 @@ export const minimalResume: ResumeData = {
         projects: 7,
         languages: 8,
         certificates: 9,
+        publications: 10,
     },
     sectionHeaders: {} as ResumeData['sectionHeaders'],
     sectionPlacement: {
@@ -38,6 +40,7 @@ export const minimalResume: ResumeData = {
         volunteering: 'left',
         languages: 'right',
         certificates: 'right',
+        publications: 'left',
     },
 };
 
@@ -256,6 +259,16 @@ export const fullResume: ResumeData = {
             description: 'Professional level certification',
         },
     ],
+    publications: [
+        {
+            title: 'Scaling Event Pipelines on the Edge',
+            authors: 'S. Johnson, M. Chen',
+            venue: 'ACM SIGOPS Workshop',
+            date: '2023-04',
+            url: 'https://doi.org/10.1145/0000000',
+            description: 'Measured cold-start costs across three serverless runtimes',
+        },
+    ],
     technicalSkills: '',
     sectionOrder: {
         summary: 0,
@@ -268,6 +281,7 @@ export const fullResume: ResumeData = {
         socialLinks: 7,
         languages: 8,
         certificates: 9,
+        publications: 10,
     },
     sectionHeaders: {} as ResumeData['sectionHeaders'],
     sectionPlacement: {
@@ -276,6 +290,7 @@ export const fullResume: ResumeData = {
         volunteering: 'left',
         languages: 'right',
         certificates: 'right',
+        publications: 'left',
     },
 };
 

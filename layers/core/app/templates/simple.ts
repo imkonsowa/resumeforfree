@@ -7,6 +7,7 @@ import { isRtlLocale } from '#layers/core/app/utils/localeDirection';
 import { SECTION_TRANSLATION_MAP } from '#layers/core/app/utils/sectionHeaders';
 import {
     generateCertificatesContent,
+    generatePublicationsContent,
     generateEducationContent,
     generateExperienceContent,
     generateInternshipsContent,
@@ -222,6 +223,10 @@ const parse = ({ data, settings, locale, t }: TemplateParseInput): string => {
         certificates: () => buildSection(
             getSectionLabel('certificates', data, context),
             itemsToRows(generateCertificatesContent(data.certificates || [], context.t, context.locale), context),
+        ),
+        publications: () => buildSection(
+            getSectionLabel('publications', data, context),
+            itemsToRows(generatePublicationsContent(data.publications || [], context.t, context.locale), context),
         ),
     };
 

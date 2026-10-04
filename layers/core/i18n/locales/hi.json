@@ -46,6 +46,9 @@
         },
         "certificates": {
             "title": "प्रमाणपत्र"
+        },
+        "publications": {
+            "title": "प्रकाशन"
         }
     }
 }
