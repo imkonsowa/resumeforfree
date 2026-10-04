@@ -26,7 +26,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[Profil]],
     [Expert in C\#, F\#, and .NET development. Worked with \$100M+ projects.]
 )
@@ -35,7 +35,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[BERUFSERFAHRUNG]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "Januar 2020 - Heute")]],
@@ -52,7 +52,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[FÄHIGKEITEN]],
     [#block(above: 0em, below: 0.8em)[*Languages:* C\#, F\#, TypeScript, JavaScript, C++]#block(above: 0em, below: 0.8em)[*Frameworks:* .NET, ASP.NET MVC, Entity Framework]#block(above: 0em, below: 0.8em)[*Tools:* Git, Docker, Azure DevOps]]
 )
@@ -61,7 +61,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[PROJEKTE]],
     [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Operators Logic App - C\#, Windows App]]
 
@@ -88,7 +88,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[Profil]],
     [I work with \*bold\* text and \_italic\_ formatting. Also \{curly\} and \<angle\> brackets.]
 )
@@ -97,7 +97,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[FÄHIGKEITEN]],
     [#block(above: 0em, below: 0.8em)[*Special\~Chars:* Testing \^caret and \~tilde characters]#block(above: 0em, below: 0.8em)[*Brackets:* Using \[square\] and \{curly\} brackets]]
 )
@@ -106,7 +106,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[PROJEKTE]],
     [#block(below: 0.6em)[#text(size: 13pt, weight: "bold")[Project with \"quotes\" inside]]
 
@@ -129,7 +129,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[Profil]],
     [Desarrollador con experiencia en tecnologias web.]
 )
@@ -138,7 +138,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[FÄHIGKEITEN]],
     [#block(above: 0em, below: 0.8em)[*Idiomas:* Espanol (nativo), English, Francais]]
 )
@@ -159,7 +159,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[Profil]],
     [Full-Stack Developer with experience in web technologies]
 )
@@ -168,7 +168,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[FÄHIGKEITEN]],
     [#block(above: 0em, below: 0.8em)[*Languages:* JavaScript, TypeScript, Python]]
 )
@@ -189,7 +189,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[Soziale Links & Profile]],
     [#link("https://linkedin.com/in/sarahjohnson")[#text("LinkedIn")], #link("https://github.com/sarahjohnson")[#text("GitHub")]]
 )
@@ -198,7 +198,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[Profil]],
     [Experienced Full Stack Developer with 8+ years in web development. Specialized in React, Node.js, and cloud technologies.]
 )
@@ -207,7 +207,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[BERUFSERFAHRUNG]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "März 2020 - Heute")]],
@@ -231,7 +231,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[AUSBILDUNG]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "August 2013 - Mai 2017")]],
@@ -244,7 +244,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[PRAKTIKA]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "Mai 2016 - August 2016")]],
@@ -259,7 +259,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[FÄHIGKEITEN]],
     [#block(above: 0em, below: 0.8em)[*Frontend:* React, Vue.js, TypeScript, HTML, CSS]#block(above: 0em, below: 0.8em)[*Backend:* Node.js, Python, Go, PostgreSQL]#block(above: 0em, below: 0.8em)[*DevOps:* Docker, Kubernetes, AWS, CI/CD]]
 )
@@ -268,7 +268,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[PROJEKTE]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "Januar 2023 - Heute")]],
@@ -290,7 +290,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[EHRENAMT]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "Januar 2019 - Heute")]],
@@ -305,7 +305,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[SPRACHEN]],
     [#block(above: 0em, below: 0.8em)[*English* - Muttersprache]#block(above: 0em, below: 0.8em)[*Spanish* - Intermediate]]
 )
@@ -314,7 +314,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[ZERTIFIKATE]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "Juni 2022")]],
@@ -327,7 +327,7 @@
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[PUBLIKATIONEN]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "April 2023")]],
@@ -351,7 +351,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[FÄHIGKEITEN]],
     [#block(above: 0em, below: 0.8em)[Only description, no title]#block(above: 0em, below: 0.8em)[*Only title*]]
 )
@@ -372,7 +372,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[Profil]],
     [Summary text]
 )
@@ -381,7 +381,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[AUSBILDUNG]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "September 2015 - Juni 2019")]],
@@ -398,7 +398,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[BERUFSERFAHRUNG]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "Januar 2020 - Heute")]],
@@ -415,7 +415,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[PRAKTIKA]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "Juni 2019 - September 2019")]],
@@ -432,7 +432,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[EHRENAMT]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "Januar 2020 - Heute")]],
@@ -449,7 +449,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[PROJEKTE]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "März 2021 - September 2022")]],
@@ -466,7 +466,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[ZERTIFIKATE]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "Januar 2022")]],
@@ -497,7 +497,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[Soziale Links & Profile]],
     [#link("https://linkedin.com/in/sarahjohnson")[#text("LinkedIn")], #link("https://github.com/sarahjohnson")[#text("GitHub")]]
 )
@@ -506,7 +506,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[Profil]],
     [Experienced Full Stack Developer with 8+ years in web development. Specialized in React, Node.js, and cloud technologies.]
 )
@@ -515,7 +515,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[BERUFSERFAHRUNG]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "März 2020 - Heute")]],
@@ -539,7 +539,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[AUSBILDUNG]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "August 2013 - Mai 2017")]],
@@ -552,7 +552,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[PRAKTIKA]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "Mai 2016 - August 2016")]],
@@ -567,7 +567,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[FÄHIGKEITEN]],
     [#block(above: 0em, below: 0.8em)[*Frontend:* React, Vue.js, TypeScript, HTML, CSS]#block(above: 0em, below: 0.8em)[*Backend:* Node.js, Python, Go, PostgreSQL]#block(above: 0em, below: 0.8em)[*DevOps:* Docker, Kubernetes, AWS, CI/CD]]
 )
@@ -576,7 +576,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[PROJEKTE]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "Januar 2023 - Heute")]],
@@ -598,7 +598,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[EHRENAMT]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "Januar 2019 - Heute")]],
@@ -613,7 +613,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[SPRACHEN]],
     [#block(above: 0em, below: 0.8em)[*English* - Muttersprache]#block(above: 0em, below: 0.8em)[*Spanish* - Intermediate]]
 )
@@ -622,7 +622,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[ZERTIFIKATE]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "Juni 2022")]],
@@ -635,7 +635,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 15pt, weight: "bold", tracking: 0.08em)[PUBLIKATIONEN]
 
 #text(size: 11pt)[#text(fill: rgb("#4B5563"), "April 2023")]],
@@ -674,7 +674,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[Profil]],
     [Expert in C\#, F\#, and .NET development. Worked with \$100M+ projects.]
 )
@@ -683,7 +683,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[BERUFSERFAHRUNG]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "Januar 2020 - Heute")]],
@@ -700,7 +700,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[FÄHIGKEITEN]],
     [#block(above: 0em, below: 0.8em)[*Languages:* C\#, F\#, TypeScript, JavaScript, C++]#block(above: 0em, below: 0.8em)[*Frameworks:* .NET, ASP.NET MVC, Entity Framework]#block(above: 0em, below: 0.8em)[*Tools:* Git, Docker, Azure DevOps]]
 )
@@ -709,7 +709,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[PROJEKTE]],
     [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Operators Logic App - C\#, Windows App]]
 
@@ -736,7 +736,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[Profil]],
     [I work with \*bold\* text and \_italic\_ formatting. Also \{curly\} and \<angle\> brackets.]
 )
@@ -745,7 +745,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[FÄHIGKEITEN]],
     [#block(above: 0em, below: 0.8em)[*Special\~Chars:* Testing \^caret and \~tilde characters]#block(above: 0em, below: 0.8em)[*Brackets:* Using \[square\] and \{curly\} brackets]]
 )
@@ -754,7 +754,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[PROJEKTE]],
     [#block(below: 0.6em)[#text(size: 11pt, weight: "bold")[Project with \"quotes\" inside]]
 
@@ -777,7 +777,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[Profil]],
     [Desarrollador con experiencia en tecnologias web.]
 )
@@ -786,7 +786,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[FÄHIGKEITEN]],
     [#block(above: 0em, below: 0.8em)[*Idiomas:* Espanol (nativo), English, Francais]]
 )
@@ -807,7 +807,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[Profil]],
     [Full-Stack Developer with experience in web technologies]
 )
@@ -816,7 +816,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[FÄHIGKEITEN]],
     [#block(above: 0em, below: 0.8em)[*Languages:* JavaScript, TypeScript, Python]]
 )
@@ -837,7 +837,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[Soziale Links & Profile]],
     [#link("https://linkedin.com/in/sarahjohnson")[#text("LinkedIn")], #link("https://github.com/sarahjohnson")[#text("GitHub")]]
 )
@@ -846,7 +846,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[Profil]],
     [Experienced Full Stack Developer with 8+ years in web development. Specialized in React, Node.js, and cloud technologies.]
 )
@@ -855,7 +855,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[BERUFSERFAHRUNG]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "März 2020 - Heute")]],
@@ -879,7 +879,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[AUSBILDUNG]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "August 2013 - Mai 2017")]],
@@ -892,7 +892,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[PRAKTIKA]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "Mai 2016 - August 2016")]],
@@ -907,7 +907,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[FÄHIGKEITEN]],
     [#block(above: 0em, below: 0.8em)[*Frontend:* React, Vue.js, TypeScript, HTML, CSS]#block(above: 0em, below: 0.8em)[*Backend:* Node.js, Python, Go, PostgreSQL]#block(above: 0em, below: 0.8em)[*DevOps:* Docker, Kubernetes, AWS, CI/CD]]
 )
@@ -916,7 +916,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[PROJEKTE]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "Januar 2023 - Heute")]],
@@ -938,7 +938,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[EHRENAMT]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "Januar 2019 - Heute")]],
@@ -953,7 +953,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[SPRACHEN]],
     [#block(above: 0em, below: 0.8em)[*English* - Muttersprache]#block(above: 0em, below: 0.8em)[*Spanish* - Intermediate]]
 )
@@ -962,7 +962,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[ZERTIFIKATE]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "Juni 2022")]],
@@ -975,7 +975,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[PUBLIKATIONEN]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "April 2023")]],
@@ -999,7 +999,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[FÄHIGKEITEN]],
     [#block(above: 0em, below: 0.8em)[Only description, no title]#block(above: 0em, below: 0.8em)[*Only title*]]
 )
@@ -1020,7 +1020,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[Profil]],
     [Summary text]
 )
@@ -1029,7 +1029,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[AUSBILDUNG]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "September 2015 - Juni 2019")]],
@@ -1046,7 +1046,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[BERUFSERFAHRUNG]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "Januar 2020 - Heute")]],
@@ -1063,7 +1063,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[PRAKTIKA]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "Juni 2019 - September 2019")]],
@@ -1080,7 +1080,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[EHRENAMT]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "Januar 2020 - Heute")]],
@@ -1097,7 +1097,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[PROJEKTE]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "März 2021 - September 2022")]],
@@ -1114,7 +1114,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[ZERTIFIKATE]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "Januar 2022")]],
@@ -1145,7 +1145,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[Soziale Links & Profile]],
     [#link("https://linkedin.com/in/sarahjohnson")[#text("LinkedIn")], #link("https://github.com/sarahjohnson")[#text("GitHub")]]
 )
@@ -1154,7 +1154,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[Profil]],
     [Experienced Full Stack Developer with 8+ years in web development. Specialized in React, Node.js, and cloud technologies.]
 )
@@ -1163,7 +1163,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[BERUFSERFAHRUNG]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "März 2020 - Heute")]],
@@ -1187,7 +1187,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[AUSBILDUNG]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "August 2013 - Mai 2017")]],
@@ -1200,7 +1200,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[PRAKTIKA]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "Mai 2016 - August 2016")]],
@@ -1215,7 +1215,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[FÄHIGKEITEN]],
     [#block(above: 0em, below: 0.8em)[*Frontend:* React, Vue.js, TypeScript, HTML, CSS]#block(above: 0em, below: 0.8em)[*Backend:* Node.js, Python, Go, PostgreSQL]#block(above: 0em, below: 0.8em)[*DevOps:* Docker, Kubernetes, AWS, CI/CD]]
 )
@@ -1224,7 +1224,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[PROJEKTE]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "Januar 2023 - Heute")]],
@@ -1246,7 +1246,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[EHRENAMT]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "Januar 2019 - Heute")]],
@@ -1261,7 +1261,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[SPRACHEN]],
     [#block(above: 0em, below: 0.8em)[*English* - Muttersprache]#block(above: 0em, below: 0.8em)[*Spanish* - Intermediate]]
 )
@@ -1270,7 +1270,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[ZERTIFIKATE]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "Juni 2022")]],
@@ -1283,7 +1283,7 @@ Measured cold-start costs across three serverless runtimes]]]
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: 0.8em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     [#text(size: 13pt, weight: "bold", tracking: 0.08em)[PUBLIKATIONEN]
 
 #text(size: 9pt)[#text(fill: rgb("#4B5563"), "April 2023")]],

@@ -141,7 +141,7 @@ function renderSimpleSection(section: SimpleSection, context: RendererContext, i
     columns: (22%, 1fr),
     column-gutter: 1.2em,
     row-gutter: ${context.settings.itemSpacing}em,
-    align: (left + top, left + top),
+    align: (start + top, start + top),
     ${cells.join(',\n    ')}
 )`;
 }
