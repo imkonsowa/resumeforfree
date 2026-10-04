@@ -58,7 +58,8 @@
         "copy": "Kopyala",
         "or": "veya",
         "saved": "Kaydedildi",
-        "syncFailed": "Eşitleme başarısız"
+        "syncFailed": "Eşitleme başarısız",
+        "reset": "Sıfırla"
     },
     "languageModal": {
         "title": "Dilinizi Seçin",
@@ -405,6 +406,10 @@
         "previewErrorDetailed": "Önizleme başarısız: {detail}",
         "stepper": {
             "entries": "Kayıt yok | {count} kayıt | {count} kayıt"
+        },
+        "tabs": {
+            "builder": "Düzenleyici",
+            "settings": "Ayarlar"
         }
     },
     "settings": {
@@ -431,6 +436,48 @@
         "sectionHeaderLine": {
             "label": "Bölüm başlığı çizgisi",
             "description": "Her bölüm başlığının altına ince bir ayırıcı çizgi ekle"
+        },
+        "groups": {
+            "resume": "Özgeçmiş",
+            "typography": "Tipografi",
+            "sections": "Bölümler",
+            "colors": "Renkler"
+        },
+        "sectionOrder": {
+            "label": "Bölüm sırası",
+            "description": "Özgeçmişteki sıralarını değiştirmek için bölümleri sürükle veya okları kullan"
+        },
+        "headingSize": {
+            "label": "Bölüm başlığı boyutu",
+            "description": "Deneyim ve Eğitim gibi başlıkların boyutu"
+        },
+        "titleSize": {
+            "label": "Kayıt başlığı boyutu",
+            "description": "Bir iş veya derece gibi her kaydın başlık boyutu"
+        },
+        "sectionSpacing": {
+            "label": "Bölümler arası boşluk",
+            "description": "Yazı boyutuna göre bölümler arasındaki boşluk"
+        },
+        "colors": {
+            "templateDefault": "Şablon varsayılanı",
+            "custom": "Özel renk",
+            "heading": {
+                "label": "Başlık rengi",
+                "description": "Bölüm başlıkları ve altındaki çizgi"
+            },
+            "accent": {
+                "label": "Vurgu rengi",
+                "description": "Bağlantılar, e-posta ve süs çizgileri"
+            }
+        },
+        "sectionIcons": {
+            "label": "Bölüm simgeleri",
+            "description": "Her bölüm başlığından önce küçük bir simge göster"
+        },
+        "itemSpacing": {
+            "label": "Kayıtlar arası boşluk",
+            "description": "Bir bölümdeki kayıtlar arasındaki boşluk, örneğin iki iş"
         }
     },
     "forms": {

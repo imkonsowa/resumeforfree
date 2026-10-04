@@ -58,7 +58,8 @@
         "moreActions": "更多操作",
         "or": "或",
         "saved": "已保存",
-        "syncFailed": "同步失败"
+        "syncFailed": "同步失败",
+        "reset": "重置"
     },
     "languageModal": {
         "title": "选择您的语言",
@@ -405,6 +406,10 @@
         "downloadOptions": "导出选项",
         "stepper": {
             "entries": "无条目 | {count} 个条目 | {count} 个条目"
+        },
+        "tabs": {
+            "builder": "编辑",
+            "settings": "设置"
         }
     },
     "settings": {
@@ -431,6 +436,48 @@
         "sectionHeaderLine": {
             "label": "板块分割线下划线",
             "description": "在每个板块大标题下方添加一条细致的分割线"
+        },
+        "groups": {
+            "resume": "简历",
+            "typography": "排版",
+            "sections": "板块",
+            "colors": "颜色"
+        },
+        "sectionOrder": {
+            "label": "板块顺序",
+            "description": "拖动板块或使用箭头调整它们在简历中的顺序"
+        },
+        "headingSize": {
+            "label": "板块标题字号",
+            "description": "“工作经历”“教育背景”等标题的字号"
+        },
+        "titleSize": {
+            "label": "条目标题字号",
+            "description": "每个条目标题的字号，例如职位或学位"
+        },
+        "sectionSpacing": {
+            "label": "板块间距",
+            "description": "板块之间的间距，随字号缩放"
+        },
+        "colors": {
+            "templateDefault": "模板默认",
+            "custom": "自定义颜色",
+            "heading": {
+                "label": "标题颜色",
+                "description": "板块标题及其下方的线"
+            },
+            "accent": {
+                "label": "强调色",
+                "description": "链接、邮箱和装饰线"
+            }
+        },
+        "sectionIcons": {
+            "label": "板块图标",
+            "description": "在每个板块标题前显示一个小图标"
+        },
+        "itemSpacing": {
+            "label": "条目间距",
+            "description": "同一板块内条目之间的间距，例如两段工作经历"
         }
     },
     "forms": {

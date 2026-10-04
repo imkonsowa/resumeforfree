@@ -58,7 +58,8 @@
         "moreActions": "Weitere Aktionen",
         "or": "oder",
         "saved": "Gespeichert",
-        "syncFailed": "Synchronisierung fehlgeschlagen"
+        "syncFailed": "Synchronisierung fehlgeschlagen",
+        "reset": "Zurücksetzen"
     },
     "languageModal": {
         "title": "Sprache auswählen",
@@ -405,6 +406,10 @@
         "downloadOptions": "Download-Optionen",
         "stepper": {
             "entries": "Keine Einträge | {count} Eintrag | {count} Einträge"
+        },
+        "tabs": {
+            "builder": "Editor",
+            "settings": "Einstellungen"
         }
     },
     "settings": {
@@ -431,6 +436,48 @@
         "sectionHeaderLine": {
             "label": "Trennlinie unter Abschnitten",
             "description": "Fügt eine feine Trennlinie unter jeder Abschnittsüberschrift ein"
+        },
+        "groups": {
+            "resume": "Lebenslauf",
+            "typography": "Typografie",
+            "sections": "Abschnitte",
+            "colors": "Farben"
+        },
+        "sectionOrder": {
+            "label": "Reihenfolge der Abschnitte",
+            "description": "Ziehe Abschnitte oder nutze die Pfeile, um ihre Reihenfolge im Lebenslauf zu ändern"
+        },
+        "headingSize": {
+            "label": "Größe der Abschnittsüberschriften",
+            "description": "Größe von Überschriften wie Berufserfahrung und Ausbildung"
+        },
+        "titleSize": {
+            "label": "Größe der Eintragstitel",
+            "description": "Größe jedes Eintragstitels, etwa einer Stelle oder eines Abschlusses"
+        },
+        "sectionSpacing": {
+            "label": "Abstand zwischen Abschnitten",
+            "description": "Abstand zwischen Abschnitten im Verhältnis zur Schriftgröße"
+        },
+        "colors": {
+            "templateDefault": "Vorlagenstandard",
+            "custom": "Eigene Farbe",
+            "heading": {
+                "label": "Überschriftenfarbe",
+                "description": "Abschnittsüberschriften und die Linie darunter"
+            },
+            "accent": {
+                "label": "Akzentfarbe",
+                "description": "Links, E-Mail und Zierlinien"
+            }
+        },
+        "sectionIcons": {
+            "label": "Abschnittssymbole",
+            "description": "Ein kleines Symbol vor jeder Abschnittsüberschrift anzeigen"
+        },
+        "itemSpacing": {
+            "label": "Abstand zwischen Einträgen",
+            "description": "Abstand zwischen Einträgen eines Abschnitts, etwa zwei Stellen"
         }
     },
     "forms": {

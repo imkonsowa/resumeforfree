@@ -1,10 +1,22 @@
 import type { DateRangeInput } from '#layers/core/app/types/template';
+import type { RendererContext } from './rendererContext';
 import { escapeTypstString, escapeTypstText } from './stringUtils';
 
 export const HEADER_SPACING = '1em';
-export const SECTION_HEADER_SIZE_OFFSET = 3;
+export const HEADER_RULE_ABOVE = '0.3em';
+export const HEADER_RULE_BELOW = '0.8em';
+export const ITEM_TITLE_BELOW = '0.6em';
+export const INLINE_DATE_GUTTER = '0.8em';
+export const PHOTO_GUTTER = '16pt';
+export const ICON_HEIGHT = '0.85em';
+export const ICON_BASELINE = '0.1em';
+export const ICON_GAP = '0.35em';
 export const DATE_COLOR = 'rgb("#4B5563")';
-export const SECTION_SPACING = '1.6em';
+export const LINK_COLOR = 'blue';
+
+const HEX_COLOR = /^#[0-9a-f]{6}$/i;
+export const isHexColor = (value: string | undefined): value is string => Boolean(value && HEX_COLOR.test(value));
+export const typstColor = (hex: string): string => `rgb("${hex}")`;
 export const ITEMS_SPACING = '0.8em';
 export const DESCRIPTION_BELOW = '0.8em';
 export const PHOTO_SIZE = '25mm';
@@ -17,19 +29,15 @@ export const renderDescription = (description: string, fontSize: number): string
 };
 export const convertEmail = (email: string): string => {
     if (!email) return '';
-    return `#link("mailto:${email}")[#text(fill: blue, dir: ltr, "${email}")]`;
+    return `#link("mailto:${email}")[#text(dir: ltr, "${email}")]`;
 };
 export const convertLink = (url: string, text: string): string => {
     if (!url || !text) return '';
-    return `#link("${url}")[#text(fill: blue, "${escapeTypstString(text)}")]`;
-};
-export const convertLinkWithColor = (url: string, text: string, color = 'blue'): string => {
-    if (!url || !text) return '';
-    return `#link("${url}")[#text(fill: ${color}, "${escapeTypstString(text)}")]`;
+    return `#link("${url}")[#text("${escapeTypstString(text)}")]`;
 };
 export const convertUnderlinedLink = (url: string, text: string): string => {
     if (!url || !text) return '';
-    return `#link("${url}")[#underline[#text(fill: blue, "${escapeTypstString(text)}")]]`;
+    return `#link("${url}")[#underline[#text("${escapeTypstString(text)}")]]`;
 };
 export const convertHeader = (title: string, size = '16pt'): string => {
     if (!title) return '';
@@ -106,18 +114,18 @@ export const convertSocialLinks = (links: Array<{ platform: string; url: string 
 export const renderTemplateHeader = (text: string, fontSize: number): string => {
     return convertHeader(text, `${fontSize + 2}pt`);
 };
-export const renderTemplateSubHeader = (text: string, fontSize: number): string => {
-    return `#block(below: 0.6em)[#text("${escapeTypstString(text)}", size: ${fontSize}pt, weight: "bold")]`;
+export const renderTemplateSubHeader = (text: string, context: Pick<RendererContext, 'fontSize' | 'settings'>): string => {
+    return `#block(below: ${ITEM_TITLE_BELOW})[#text("${escapeTypstString(text)}", size: ${context.fontSize + context.settings.titleSizeOffset}pt, weight: "bold")]`;
 };
-export const renderTemplateSubHeaderContent = (content: string, fontSize: number): string => {
-    return `#block(below: 0.6em)[#text(size: ${fontSize}pt, weight: "bold")[${content}]]`;
+export const renderTemplateSubHeaderContent = (content: string, context: Pick<RendererContext, 'fontSize' | 'settings'>): string => {
+    return `#block(below: ${ITEM_TITLE_BELOW})[#text(size: ${context.fontSize + context.settings.titleSizeOffset}pt, weight: "bold")[${content}]]`;
 };
 export const renderTemplateDate = (dateText: string, fontSize: number): string => {
-    return `#block(above: 0em, below: 0.6em)[#text(size: ${fontSize - 2}pt, fill: ${DATE_COLOR})[${dateText}]]`;
+    return `#block(above: 0em, below: ${ITEM_TITLE_BELOW})[#text(size: ${fontSize - 2}pt, fill: ${DATE_COLOR})[${dateText}]]`;
 };
 export const renderTemplateDateWithLink = (dateRange: string, link: string | null, fontSize: number): string => {
     if (link) {
-        return `#block(above: 0em, below: 0.6em)[#text(size: ${fontSize - 2}pt, fill: ${DATE_COLOR})[${dateRange} • ${link}]]`;
+        return `#block(above: 0em, below: ${ITEM_TITLE_BELOW})[#text(size: ${fontSize - 2}pt, fill: ${DATE_COLOR})[${dateRange} • ${link}]]`;
     }
     return renderTemplateDate(dateRange, fontSize);
 };

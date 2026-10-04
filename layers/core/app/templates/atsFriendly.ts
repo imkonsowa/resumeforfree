@@ -1,12 +1,12 @@
 import type { ResumeData, SectionOrder } from '#layers/core/app/types/resume';
 import type { SectionStyle, Template, TemplateParseInput, TemplateRenderConfig } from '#layers/core/app/types/template';
 import { escapeTypstText } from '#layers/core/app/utils/stringUtils';
-import { convertEmail, convertLink, LATIN_FONT_STACK } from '#layers/core/app/utils/typstUtils';
+import { convertEmail, convertLink, LATIN_FONT_STACK, PHOTO_GUTTER, typstColor } from '#layers/core/app/utils/typstUtils';
 import { RendererContext } from '#layers/core/app/utils/rendererContext';
 import { isRtlLocale } from '#layers/core/app/utils/localeDirection';
 import { getSharedSectionRenderers, renderProfilePhoto } from '#layers/core/app/utils/sectionRenderers';
 
-const ATS_BLUE = 'rgb("#1d4ed8")';
+const ATS_BLUE = '#1d4ed8';
 
 const ATS_LAYOUT_CONFIG: TemplateRenderConfig = {
     layout: 'single-column',
@@ -24,9 +24,6 @@ const ATS_LAYOUT_CONFIG: TemplateRenderConfig = {
     header: {
         style: 'simple',
         includeContact: true,
-    },
-    projects: {
-        itemSpacing: '0.6em',
     },
     photo: {
         supported: true,
@@ -72,7 +69,7 @@ function renderTopHeader(data: ResumeData, context: RendererContext, fontSize: n
 
     const textBlocks: string[] = [];
     if (fullName) {
-        textBlocks.push(`#block(above: 0em, below: 0.8em)[#text(size: ${fontSize + 14}pt, weight: "bold", fill: ${ATS_BLUE})[${fullName}]]`);
+        textBlocks.push(`#block(above: 0em, below: 0.8em)[#text(size: ${fontSize + 14}pt, weight: "bold", fill: ${context.accentColor(typstColor(ATS_BLUE))})[${fullName}]]`);
     }
     if (position) {
         textBlocks.push(`#block(above: 0em, below: 1em)[#text(size: ${fontSize + 4}pt, weight: "bold")[${position}]]`);
@@ -90,7 +87,7 @@ function renderTopHeader(data: ResumeData, context: RendererContext, fontSize: n
     const headerBody = photo
         ? `#grid(
     columns: (1fr, auto),
-    column-gutter: 16pt,
+    column-gutter: ${PHOTO_GUTTER},
     align: (start + top, end + top),
     [${textColumn}],
     [${photo}],
@@ -98,19 +95,13 @@ function renderTopHeader(data: ResumeData, context: RendererContext, fontSize: n
         : textColumn;
 
     return `${headerBody}
-#block(above: 0.6em, below: 0em)[#line(length: 100%, stroke: 0.5pt + ${ATS_BLUE})]`;
+#block(above: 0.6em, below: 0em)[#line(length: 100%, stroke: 0.5pt + ${context.accentColor(typstColor(ATS_BLUE))})]`;
 }
 
-const parse = ({ data, font, locale, t, fontSize, photoShape }: TemplateParseInput): string => {
+const parse = ({ data, settings, locale, t }: TemplateParseInput): string => {
     const isRtl = isRtlLocale(locale);
-    const context = new RendererContext({
-        t,
-        fontSize,
-        config: ATS_LAYOUT_CONFIG,
-        locale,
-        photoShape: photoShape || 'rectangle',
-        sectionStyle: ATS_SECTION_STYLE,
-    });
+    const context = new RendererContext({ t, locale, settings, config: ATS_LAYOUT_CONFIG, sectionStyle: ATS_SECTION_STYLE });
+    const { font, fontSize } = context;
 
     const header = renderTopHeader(data, context, fontSize);
     const shared = getSharedSectionRenderers();
@@ -147,6 +138,7 @@ const parse = ({ data, font, locale, t, fontSize, photoShape }: TemplateParseInp
 
     return `#set page(margin: 1.2cm)
 ${fontConfig}
+#show link: set text(fill: ${context.linkColor})
 #set par(leading: ${leading})
 ${header}
 ${sections}

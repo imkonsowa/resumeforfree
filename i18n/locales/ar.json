@@ -58,7 +58,8 @@
         "moreActions": "إجراءات أخرى",
         "or": "أو",
         "saved": "تم الحفظ",
-        "syncFailed": "فشلت المزامنة"
+        "syncFailed": "فشلت المزامنة",
+        "reset": "إعادة تعيين"
     },
     "languageModal": {
         "title": "اختر لغتك",
@@ -405,6 +406,10 @@
         "downloadOptions": "خيارات التنزيل",
         "stepper": {
             "entries": "لا توجد عناصر | عنصر واحد | {count} عناصر"
+        },
+        "tabs": {
+            "builder": "المحرر",
+            "settings": "الإعدادات"
         }
     },
     "settings": {
@@ -431,6 +436,48 @@
         "sectionHeaderLine": {
             "label": "خط أسفل عنوان القسم",
             "description": "إضافة خط فاصل رفيع أسفل كل عنوان قسم"
+        },
+        "groups": {
+            "resume": "السيرة الذاتية",
+            "typography": "الخطوط",
+            "sections": "الأقسام",
+            "colors": "الألوان"
+        },
+        "sectionOrder": {
+            "label": "ترتيب الأقسام",
+            "description": "اسحب الأقسام أو استخدم الأسهم لتغيير ترتيبها في السيرة الذاتية"
+        },
+        "headingSize": {
+            "label": "حجم عناوين الأقسام",
+            "description": "حجم عناوين مثل الخبرة والتعليم"
+        },
+        "titleSize": {
+            "label": "حجم عنوان العنصر",
+            "description": "حجم عنوان كل إدخال، مثل الوظيفة أو الشهادة"
+        },
+        "sectionSpacing": {
+            "label": "المسافة بين الأقسام",
+            "description": "المسافة بين الأقسام بالنسبة لحجم الخط"
+        },
+        "colors": {
+            "templateDefault": "افتراضي القالب",
+            "custom": "لون مخصص",
+            "heading": {
+                "label": "لون العناوين",
+                "description": "عناوين الأقسام والخط أسفلها"
+            },
+            "accent": {
+                "label": "لون التمييز",
+                "description": "الروابط والبريد الإلكتروني والخطوط الزخرفية"
+            }
+        },
+        "sectionIcons": {
+            "label": "أيقونات الأقسام",
+            "description": "إظهار أيقونة صغيرة قبل عنوان كل قسم"
+        },
+        "itemSpacing": {
+            "label": "المسافة بين العناصر",
+            "description": "المسافة بين الإدخالات داخل القسم، مثل وظيفتين"
         }
     },
     "forms": {

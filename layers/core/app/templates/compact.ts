@@ -2,7 +2,7 @@ import type { ResumeData, SectionOrder } from '#layers/core/app/types/resume';
 import type { Template, TemplateParseInput } from '#layers/core/app/types/template';
 import { COMPACT_LAYOUT_CONFIG } from '#layers/core/app/templates/layouts';
 import { escapeTypstText } from '#layers/core/app/utils/stringUtils';
-import { convertEmail, convertLink, LATIN_FONT_STACK } from '#layers/core/app/utils/typstUtils';
+import { convertEmail, convertLink, LATIN_FONT_STACK, PHOTO_GUTTER } from '#layers/core/app/utils/typstUtils';
 import { getSharedSectionRenderers, renderProfilePhoto } from '#layers/core/app/utils/sectionRenderers';
 import { RendererContext } from '#layers/core/app/utils/rendererContext';
 import { isRtlLocale } from '#layers/core/app/utils/localeDirection';
@@ -62,7 +62,7 @@ const convertResumeHeader = (data: ResumeData, context: RendererContext, fontSiz
     const body = photo
         ? `#grid(
     columns: (1fr, auto),
-    column-gutter: 16pt,
+    column-gutter: ${PHOTO_GUTTER},
     align: (${startAlign}, ${endAlign} + horizon),
     [${textBlock}],
     [${photo}],
@@ -72,18 +72,12 @@ const convertResumeHeader = (data: ResumeData, context: RendererContext, fontSiz
     return `${body}
 #block(above: 1em, below: 1em)[#line(length: 100%, stroke: 0.5pt + black)]`;
 };
-const parse = ({ data, font, locale, t, fontSize, photoShape, showSectionHeaderLine }: TemplateParseInput): string => {
+const parse = ({ data, settings, locale, t }: TemplateParseInput): string => {
     const isRtl = isRtlLocale(locale);
 
     const config = COMPACT_LAYOUT_CONFIG;
-    const context = new RendererContext({
-        t,
-        fontSize,
-        config,
-        locale,
-        photoShape: photoShape || 'rectangle',
-        sectionStyle: { headerUnderline: showSectionHeaderLine ?? true },
-    });
+    const context = new RendererContext({ t, locale, settings, config });
+    const { font, fontSize } = context;
     const sharedRenderers = getSharedSectionRenderers();
 
     const sectionRenderers: Record<string, () => string> = {
@@ -116,6 +110,7 @@ const parse = ({ data, font, locale, t, fontSize, photoShape, showSectionHeaderL
 
     return `#set page(margin: 1cm)
 ${fontConfig}
+#show link: set text(fill: ${context.linkColor})
 #set par(leading: ${leading})
 ${fullContent}
 #pagebreak(weak: true)`;

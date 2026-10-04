@@ -58,7 +58,8 @@
         "moreActions": "More actions",
         "or": "or",
         "saved": "Saved",
-        "syncFailed": "Sync failed"
+        "syncFailed": "Sync failed",
+        "reset": "Reset"
     },
     "languageModal": {
         "title": "Select Your Language",
@@ -405,6 +406,10 @@
         "downloadOptions": "Download options",
         "stepper": {
             "entries": "No entries | {count} entry | {count} entries"
+        },
+        "tabs": {
+            "builder": "Builder",
+            "settings": "Settings"
         }
     },
     "settings": {
@@ -431,6 +436,48 @@
         "sectionHeaderLine": {
             "label": "Section header line",
             "description": "Add a thin divider line under each section header"
+        },
+        "groups": {
+            "resume": "Resume",
+            "typography": "Typography",
+            "sections": "Sections",
+            "colors": "Colors"
+        },
+        "sectionOrder": {
+            "label": "Section order",
+            "description": "Drag sections or use the arrows to change their order in the resume"
+        },
+        "headingSize": {
+            "label": "Section heading size",
+            "description": "Size of headings like Experience and Education"
+        },
+        "titleSize": {
+            "label": "Item title size",
+            "description": "Size of each entry title, like a job or degree"
+        },
+        "sectionSpacing": {
+            "label": "Space between sections",
+            "description": "Gap between sections, relative to the font size"
+        },
+        "colors": {
+            "templateDefault": "Template default",
+            "custom": "Custom color",
+            "heading": {
+                "label": "Heading color",
+                "description": "Section headings and the line under them"
+            },
+            "accent": {
+                "label": "Accent color",
+                "description": "Links, email and decorative lines"
+            }
+        },
+        "sectionIcons": {
+            "label": "Section icons",
+            "description": "Show a small icon before each section heading"
+        },
+        "itemSpacing": {
+            "label": "Space between items",
+            "description": "Gap between entries in a section, like two jobs"
         }
     },
     "forms": {

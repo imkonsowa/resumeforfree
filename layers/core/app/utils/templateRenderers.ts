@@ -1,6 +1,6 @@
 import type { Certificate, Education, Experience, Internship, Language, Project, ResumeData, SkillItem, Volunteering } from '#layers/core/app/types/resume';
 import type { SectionContent, TranslateFunction } from '#layers/core/app/types/template';
-import { convertDateRange, convertEmail, convertLink, convertUnderlinedLink, formatDateRangeText } from './typstUtils';
+import { convertDateRange, convertEmail, convertLink, convertUnderlinedLink, formatDateRangeText, ITEM_TITLE_BELOW } from './typstUtils';
 import { escapeTypstText } from './stringUtils';
 
 const buildPositionAtCompanyContent = (
@@ -108,14 +108,11 @@ export const generateEducationContent = (education: Education[], t?: TranslateFu
             ? `${edu.degree}${at}${edu.institution}${edu.location ? separator + edu.location : ''}`
             : `${edu.degree || edu.institution}${edu.location ? separator + edu.location : ''}`;
         const dateInput = { startDate: edu.startDate, endDate: edu.endDate, isPresent: edu.isPresent || false, t, locale };
-        let description = '';
-        if (edu.graduationScore && edu.graduationScore.trim()) {
-            description += `*${gradeLabel}* ${escapeTypstText(edu.graduationScore)}`;
-        }
-        if (edu.description && edu.description.trim()) {
-            if (description) description += '\n\n';
-            description += escapeTypstText(edu.description);
-        }
+        const grade = edu.graduationScore?.trim() ? `*${gradeLabel}* ${escapeTypstText(edu.graduationScore)}` : '';
+        const body = edu.description?.trim() ? escapeTypstText(edu.description) : '';
+        const description = grade && body
+            ? `#block(above: 0em, below: ${ITEM_TITLE_BELOW})[${grade}]${body}`
+            : grade || body;
         const achievements = (edu.achievements || [])
             .filter(achievement => achievement.text && achievement.text.trim() !== '')
             .map(achievement => achievement.text);

@@ -106,7 +106,7 @@ function innermostOpenBlock(src: string, index: number): string | null {
 }
 
 const render = (tpl: typeof defaultTemplate) =>
-    tpl.parse({ data: fixture, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
+    tpl.parse({ data: fixture, settings: { selectedFont: 'Calibri', fontSize: 12 }, locale: 'en', t: mockT });
 
 describe('template consistency', () => {
     describe('an item title is always inside a block that spaces it from its description', () => {
@@ -161,7 +161,7 @@ describe('template consistency', () => {
 
         for (const { name, tpl } of BLOCK_WRAPPED) {
             it(`${name}: an item without bullets gets the same gap as one with bullets`, () => {
-                const src = tpl.parse({ data: mixed, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
+                const src = tpl.parse({ data: mixed, settings: { selectedFont: 'Calibri', fontSize: 12 }, locale: 'en', t: mockT });
                 const gaps = ['One', 'Two', 'Three'].map((n) => {
                     const i = src.indexOf(`Deg${n}`);
                     expect(i, `Deg${n} missing from ${name}`).toBeGreaterThan(-1);
@@ -184,7 +184,7 @@ describe('template consistency', () => {
         }
 
         it('simple: separates items with a fixed grid row-gutter', () => {
-            const src = simpleTemplate.parse({ data: mixed, font: 'Calibri', locale: 'en', fontSize: 12, t: mockT });
+            const src = simpleTemplate.parse({ data: mixed, settings: { selectedFont: 'Calibri', fontSize: 12 }, locale: 'en', t: mockT });
             const gutters = [...src.matchAll(/row-gutter:\s*([0-9.]+em)/g)].map(m => m[1]);
             expect(gutters.length, 'simple emits no row-gutter — item spacing would depend on content').toBeGreaterThan(0);
             expect(

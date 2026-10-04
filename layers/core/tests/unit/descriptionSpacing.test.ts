@@ -51,9 +51,8 @@ const TEMPLATES = [
 const parseFor = (template: typeof defaultTemplate): string =>
     template.parse({
         data: descriptionsResume,
-        font: 'Calibri',
+        settings: { selectedFont: 'Calibri', fontSize: FONT_SIZE },
         locale: 'en',
-        fontSize: FONT_SIZE,
         t: mockT,
     });
 
@@ -100,7 +99,7 @@ describe('Description spacing standardization', () => {
         for (const { name, template } of inlineTemplates) {
             it(`${name}: project title and date share the same line (grid) like experience`, () => {
                 const result = parseFor(template);
-                const gridPattern = /#grid\(columns: \(1fr, auto\), column-gutter: 0\.8em, \[#text\(size: 12pt, weight: "bold"\)\[[^\]]*Test Project[^\]]*\]\], \[#text\(size: 12pt, weight: "bold", fill: rgb\("#4B5563"\)\)\[/;
+                const gridPattern = /#grid\(columns: \(1fr, auto\), column-gutter: 0\.8em, \[#text\(size: 13pt, weight: "bold"\)\[[^\]]*Test Project[^\]]*\]\], \[#text\(size: 12pt, weight: "bold", fill: rgb\("#4B5563"\)\)\[/;
                 expect(result).toMatch(gridPattern);
             });
         }
@@ -130,9 +129,8 @@ describe('Description spacing standardization', () => {
             for (const { name, template } of TEMPLATES) {
                 const out = template.parse({
                     data: fullResume,
-                    font: 'Calibri',
+                    settings: { selectedFont: 'Calibri', fontSize: FONT_SIZE },
                     locale: 'en',
-                    fontSize: FONT_SIZE,
                     t: mockT,
                 });
                 expect(out, `${name} did not render skill item with standardized block`).toContain(skillsItemPattern);

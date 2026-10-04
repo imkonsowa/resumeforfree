@@ -79,11 +79,9 @@ async function generateSampleSvgs() {
 
         const typstContent = compactTemplate.parse({
             data: resumeData,
+            settings: { fontSize: 11.5, photoShape: 'rectangle', showSectionHeaderLine: true },
             font,
             locale,
-            fontSize: 11.5,
-            photoShape: 'rectangle',
-            showSectionHeaderLine: true,
             t,
         });
 

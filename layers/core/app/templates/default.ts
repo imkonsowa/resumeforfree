@@ -2,7 +2,7 @@ import type { ResumeData } from '#layers/core/app/types/resume';
 import type { Template, TemplateParseInput } from '#layers/core/app/types/template';
 import { DEFAULT_LAYOUT_CONFIG } from '#layers/core/app/templates/layouts';
 import { escapeTypstText } from '#layers/core/app/utils/stringUtils';
-import { convertGrid, SECTION_SPACING } from '#layers/core/app/utils/typstUtils';
+import { convertGrid } from '#layers/core/app/utils/typstUtils';
 import { getSharedSectionRenderers, renderProfilePhoto } from '#layers/core/app/utils/sectionRenderers';
 import { RendererContext } from '#layers/core/app/utils/rendererContext';
 import { isRtlLocale } from '#layers/core/app/utils/localeDirection';
@@ -10,24 +10,18 @@ import { isRtlLocale } from '#layers/core/app/utils/localeDirection';
 const convertResumeHeader = (data: ResumeData, context: RendererContext, sharedRenderers: ReturnType<typeof getSharedSectionRenderers>) => {
     const fullName = `${escapeTypstText(data?.firstName || '')} ${escapeTypstText(data?.lastName || '')}`.trim();
     const position = escapeTypstText(data?.position || '');
-    const positionBlock = position ? `#block(above: 0em, below: ${SECTION_SPACING})[${position}]` : '';
+    const positionBlock = position ? `#block(above: 0em, below: ${context.settings.sectionSpacing}em)[${position}]` : '';
     const profileSection = sharedRenderers.profile(data, context);
     return `= ${fullName}
 ${positionBlock}
 ${profileSection}`;
 };
-const parse = ({ data, font, locale, t, fontSize, photoShape, showSectionHeaderLine }: TemplateParseInput): string => {
+const parse = ({ data, settings, locale, t }: TemplateParseInput): string => {
     const isRtl = isRtlLocale(locale);
 
     const config = DEFAULT_LAYOUT_CONFIG;
-    const context = new RendererContext({
-        t,
-        fontSize,
-        config,
-        locale,
-        photoShape: photoShape || 'rectangle',
-        sectionStyle: { headerUnderline: showSectionHeaderLine ?? true },
-    });
+    const context = new RendererContext({ t, locale, settings, config });
+    const { font, fontSize } = context;
     const sharedRenderers = getSharedSectionRenderers();
 
     const allSections = {
@@ -110,6 +104,7 @@ ${leftContent}`;
 
     return `#set page(margin: 1.2cm)
 ${fontConfig}
+#show link: set text(fill: ${context.linkColor})
 
 ${twoColumnLayout}
 #pagebreak(weak: true)`;
