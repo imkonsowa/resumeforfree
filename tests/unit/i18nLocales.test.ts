@@ -115,8 +115,8 @@ describe('i18n Locale System', () => {
             expect(urFonts.some(f => f.family === 'Noto Naskh Arabic')).toBe(true);
         });
 
-        it('defaults new Arabic resumes to Noto Sans Arabic without re-fonting existing ones', () => {
-            expect(getDefaultFontForLanguage('ar')).toBe('Noto Sans Arabic');
+        it('defaults new Arabic resumes to Noto Naskh Arabic without re-fonting existing ones', () => {
+            expect(getDefaultFontForLanguage('ar')).toBe('Noto Naskh Arabic');
             expect(getDefaultFontForLanguage('ur')).toBe('Noto Naskh Arabic');
             expect(getDefaultFontForLanguage('en')).toBe('Calibri');
             expect(resolveFontFamily('Naskh', 'ar')).toBe('Noto Naskh Arabic');

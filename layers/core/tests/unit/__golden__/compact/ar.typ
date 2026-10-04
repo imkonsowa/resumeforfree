@@ -1,6 +1,6 @@
 // ===== compact | ar | defaults | minimal =====
 #set page(margin: 1cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
 #set par(leading: 0.65em)
 #text(size: 24pt, weight: "bold")[John Doe]
 #block(above: 1.3em)[#text(size: 14pt)[Software Engineer]]
@@ -10,7 +10,7 @@
 
 // ===== compact | ar | defaults | specialChars =====
 #set page(margin: 1cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
 #set par(leading: 0.65em)
 #text(size: 24pt, weight: "bold")[John\# Doe\$]
 #block(above: 1.3em)[#text(size: 14pt)[C\# Developer]]
@@ -53,7 +53,7 @@ Expert in C\#, F\#, and .NET development. Worked with \$100M+ projects.
 
 // ===== compact | ar | defaults | typstMarkup =====
 #set page(margin: 1cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
 #set par(leading: 0.65em)
 #text(size: 24pt, weight: "bold")[Test\*User With\_Underscore]
 #block(above: 1.3em)[#text(size: 14pt)[Developer \[Senior\]]]
@@ -82,7 +82,7 @@ I work with \*bold\* text and \_italic\_ formatting. Also \{curly\} and \<angle\
 
 // ===== compact | ar | defaults | unicode =====
 #set page(margin: 1cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
 #set par(leading: 0.65em)
 #text(size: 24pt, weight: "bold")[Jose Garcia]
 #block(above: 1.3em)[#text(size: 14pt)[Desarrollador]]
@@ -103,7 +103,7 @@ Desarrollador con experiencia en tecnologias web.
 
 // ===== compact | ar | defaults | arabic =====
 #set page(margin: 1cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
 #set par(leading: 0.65em)
 #text(size: 24pt, weight: "bold")[Ahmed Hassan]
 #block(above: 1.3em)[#text(size: 14pt)[Software Engineer]]
@@ -124,7 +124,7 @@ Full-Stack Developer with experience in web technologies
 
 // ===== compact | ar | defaults | full =====
 #set page(margin: 1cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
 #set par(leading: 0.65em)
 #text(size: 24pt, weight: "bold")[Sarah Johnson]
 #block(above: 1.3em)[#text(size: 14pt)[Full Stack Developer]]
@@ -222,7 +222,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== compact | ar | defaults | edgeCase =====
 #set page(margin: 1cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
 #set par(leading: 0.65em)
 #text(size: 24pt, weight: "bold")[]
 #block(above: 1em, below: 1em)[#line(length: 100%, stroke: 0.5pt + black)]
@@ -236,7 +236,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== compact | ar | defaults | descriptions =====
 #set page(margin: 1cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
 #set par(leading: 0.65em)
 #text(size: 24pt, weight: "bold")[Desc Tester]
 #block(above: 1.3em)[#text(size: 14pt)[Software Engineer]]
@@ -319,7 +319,7 @@ Summary text
 
 // ===== compact | ar | defaults | withPhoto =====
 #set page(margin: 1cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
 #set par(leading: 0.65em)
 #grid(
     columns: (1fr, auto),
@@ -423,7 +423,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== compact | ar | alternate | minimal =====
 #set page(margin: 1cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
 #set par(leading: 0.65em)
 #text(size: 22pt, weight: "bold")[John Doe]
 #block(above: 1.3em)[#text(size: 12pt)[Software Engineer]]
@@ -433,7 +433,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== compact | ar | alternate | specialChars =====
 #set page(margin: 1cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
 #set par(leading: 0.65em)
 #text(size: 22pt, weight: "bold")[John\# Doe\$]
 #block(above: 1.3em)[#text(size: 12pt)[C\# Developer]]
@@ -472,7 +472,7 @@ Expert in C\#, F\#, and .NET development. Worked with \$100M+ projects.
 
 // ===== compact | ar | alternate | typstMarkup =====
 #set page(margin: 1cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
 #set par(leading: 0.65em)
 #text(size: 22pt, weight: "bold")[Test\*User With\_Underscore]
 #block(above: 1.3em)[#text(size: 12pt)[Developer \[Senior\]]]
@@ -498,7 +498,7 @@ I work with \*bold\* text and \_italic\_ formatting. Also \{curly\} and \<angle\
 
 // ===== compact | ar | alternate | unicode =====
 #set page(margin: 1cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
 #set par(leading: 0.65em)
 #text(size: 22pt, weight: "bold")[Jose Garcia]
 #block(above: 1.3em)[#text(size: 12pt)[Desarrollador]]
@@ -517,7 +517,7 @@ Desarrollador con experiencia en tecnologias web.
 
 // ===== compact | ar | alternate | arabic =====
 #set page(margin: 1cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
 #set par(leading: 0.65em)
 #text(size: 22pt, weight: "bold")[Ahmed Hassan]
 #block(above: 1.3em)[#text(size: 12pt)[Software Engineer]]
@@ -536,7 +536,7 @@ Full-Stack Developer with experience in web technologies
 
 // ===== compact | ar | alternate | full =====
 #set page(margin: 1cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
 #set par(leading: 0.65em)
 #text(size: 22pt, weight: "bold")[Sarah Johnson]
 #block(above: 1.3em)[#text(size: 12pt)[Full Stack Developer]]
@@ -625,7 +625,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== compact | ar | alternate | edgeCase =====
 #set page(margin: 1cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
 #set par(leading: 0.65em)
 #text(size: 22pt, weight: "bold")[]
 #block(above: 1em, below: 1em)[#line(length: 100%, stroke: 0.5pt + black)]
@@ -638,7 +638,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== compact | ar | alternate | descriptions =====
 #set page(margin: 1cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
 #set par(leading: 0.65em)
 #text(size: 22pt, weight: "bold")[Desc Tester]
 #block(above: 1.3em)[#text(size: 12pt)[Software Engineer]]
@@ -714,7 +714,7 @@ Summary text
 
 // ===== compact | ar | alternate | withPhoto =====
 #set page(margin: 1cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
 #set par(leading: 0.65em)
 #grid(
     columns: (1fr, auto),

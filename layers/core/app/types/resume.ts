@@ -308,7 +308,7 @@ export const resolveFontFamily = (font: string, language: string): string => {
 };
 
 const DEFAULT_FONT_BY_LANGUAGE: Record<string, string> = {
-    ar: 'Noto Sans Arabic',
+    ar: 'Noto Naskh Arabic',
 };
 
 export const getDefaultFontForLanguage = (language: string) => {

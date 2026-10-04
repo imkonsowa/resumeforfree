@@ -1,6 +1,6 @@
 // ===== simple | ar | defaults | minimal =====
 #set page(margin: 1.5cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
 #set par(leading: 0.75em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 20pt, weight: "bold")[John Doe]]
 #block(above: 0em, below: 1em)[#text(size: 14pt)[Software Engineer]]
@@ -12,7 +12,7 @@
 
 // ===== simple | ar | defaults | specialChars =====
 #set page(margin: 1.5cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
 #set par(leading: 0.75em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 20pt, weight: "bold")[John\# Doe\$]]
 #block(above: 0em, below: 1em)[#text(size: 14pt)[C\# Developer]]
@@ -73,7 +73,7 @@
 
 // ===== simple | ar | defaults | typstMarkup =====
 #set page(margin: 1.5cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
 #set par(leading: 0.75em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 20pt, weight: "bold")[Test\*User With\_Underscore]]
 #block(above: 0em, below: 1em)[#text(size: 14pt)[Developer \[Senior\]]]
@@ -113,7 +113,7 @@
 
 // ===== simple | ar | defaults | unicode =====
 #set page(margin: 1.5cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
 #set par(leading: 0.75em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 20pt, weight: "bold")[Jose Garcia]]
 #block(above: 0em, below: 1em)[#text(size: 14pt)[Desarrollador]]
@@ -142,7 +142,7 @@
 
 // ===== simple | ar | defaults | arabic =====
 #set page(margin: 1.5cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
 #set par(leading: 0.75em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 20pt, weight: "bold")[Ahmed Hassan]]
 #block(above: 0em, below: 1em)[#text(size: 14pt)[Software Engineer]]
@@ -171,7 +171,7 @@
 
 // ===== simple | ar | defaults | full =====
 #set page(margin: 1.5cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
 #set par(leading: 0.75em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 20pt, weight: "bold")[Sarah Johnson]]
 #block(above: 0em, below: 1em)[#text(size: 14pt)[Full Stack Developer]]
@@ -322,7 +322,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== simple | ar | defaults | edgeCase =====
 #set page(margin: 1.5cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
 #set par(leading: 0.75em, justify: false)
 
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
@@ -340,7 +340,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== simple | ar | defaults | descriptions =====
 #set page(margin: 1.5cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
 #set par(leading: 0.75em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 20pt, weight: "bold")[Desc Tester]]
 #block(above: 0em, below: 1em)[#text(size: 14pt)[Software Engineer]]
@@ -458,7 +458,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== simple | ar | defaults | withPhoto =====
 #set page(margin: 1.5cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 12pt, dir: rtl)
 #set par(leading: 0.75em, justify: false)
 #grid(
     columns: (1fr, auto),
@@ -615,7 +615,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== simple | ar | alternate | minimal =====
 #set page(margin: 1.5cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
 #set par(leading: 0.75em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 18pt, weight: "bold")[John Doe]]
 #block(above: 0em, below: 1em)[#text(size: 12pt)[Software Engineer]]
@@ -627,7 +627,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== simple | ar | alternate | specialChars =====
 #set page(margin: 1.5cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
 #set par(leading: 0.75em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 18pt, weight: "bold")[John\# Doe\$]]
 #block(above: 0em, below: 1em)[#text(size: 12pt)[C\# Developer]]
@@ -688,7 +688,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== simple | ar | alternate | typstMarkup =====
 #set page(margin: 1.5cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
 #set par(leading: 0.75em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 18pt, weight: "bold")[Test\*User With\_Underscore]]
 #block(above: 0em, below: 1em)[#text(size: 12pt)[Developer \[Senior\]]]
@@ -728,7 +728,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== simple | ar | alternate | unicode =====
 #set page(margin: 1.5cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
 #set par(leading: 0.75em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 18pt, weight: "bold")[Jose Garcia]]
 #block(above: 0em, below: 1em)[#text(size: 12pt)[Desarrollador]]
@@ -757,7 +757,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== simple | ar | alternate | arabic =====
 #set page(margin: 1.5cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
 #set par(leading: 0.75em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 18pt, weight: "bold")[Ahmed Hassan]]
 #block(above: 0em, below: 1em)[#text(size: 12pt)[Software Engineer]]
@@ -786,7 +786,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== simple | ar | alternate | full =====
 #set page(margin: 1.5cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
 #set par(leading: 0.75em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 18pt, weight: "bold")[Sarah Johnson]]
 #block(above: 0em, below: 1em)[#text(size: 12pt)[Full Stack Developer]]
@@ -937,7 +937,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== simple | ar | alternate | edgeCase =====
 #set page(margin: 1.5cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
 #set par(leading: 0.75em, justify: false)
 
 #block(above: 0.4em, below: 0em)[#line(length: 100%, stroke: 0.4pt)]
@@ -955,7 +955,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== simple | ar | alternate | descriptions =====
 #set page(margin: 1.5cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
 #set par(leading: 0.75em, justify: false)
 #block(above: 0em, below: 0.6em)[#text(size: 18pt, weight: "bold")[Desc Tester]]
 #block(above: 0em, below: 1em)[#text(size: 12pt)[Software Engineer]]
@@ -1073,7 +1073,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== simple | ar | alternate | withPhoto =====
 #set page(margin: 1.5cm)
-#set text(font: ("Noto Sans Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Calibri", "Roboto"), size: 10pt, dir: rtl)
 #set par(leading: 0.75em, justify: false)
 #grid(
     columns: (1fr, auto),

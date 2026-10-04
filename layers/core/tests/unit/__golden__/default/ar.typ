@@ -1,6 +1,6 @@
 // ===== default | ar | defaults | minimal =====
 #set page(margin: 1.2cm)
-#set text(font: ("Noto Sans Arabic", "Arial"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Arial"), size: 12pt, dir: rtl)
 
 #grid(
   columns: (7fr, 3fr),
@@ -19,7 +19,7 @@
 
 // ===== default | ar | defaults | specialChars =====
 #set page(margin: 1.2cm)
-#set text(font: ("Noto Sans Arabic", "Arial"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Arial"), size: 12pt, dir: rtl)
 
 #grid(
   columns: (7fr, 3fr),
@@ -70,7 +70,7 @@ Expert in C\#, F\#, and .NET development. Worked with \$100M+ projects.
 
 // ===== default | ar | defaults | typstMarkup =====
 #set page(margin: 1.2cm)
-#set text(font: ("Noto Sans Arabic", "Arial"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Arial"), size: 12pt, dir: rtl)
 
 #grid(
   columns: (7fr, 3fr),
@@ -105,7 +105,7 @@ I work with \*bold\* text and \_italic\_ formatting. Also \{curly\} and \<angle\
 
 // ===== default | ar | defaults | unicode =====
 #set page(margin: 1.2cm)
-#set text(font: ("Noto Sans Arabic", "Arial"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Arial"), size: 12pt, dir: rtl)
 
 #grid(
   columns: (7fr, 3fr),
@@ -132,7 +132,7 @@ Desarrollador con experiencia en tecnologias web.
 
 // ===== default | ar | defaults | arabic =====
 #set page(margin: 1.2cm)
-#set text(font: ("Noto Sans Arabic", "Arial"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Arial"), size: 12pt, dir: rtl)
 
 #grid(
   columns: (7fr, 3fr),
@@ -159,7 +159,7 @@ Full-Stack Developer with experience in web technologies
 
 // ===== default | ar | defaults | full =====
 #set page(margin: 1.2cm)
-#set text(font: ("Noto Sans Arabic", "Arial"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Arial"), size: 12pt, dir: rtl)
 
 #grid(
   columns: (7fr, 3fr),
@@ -284,7 +284,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== default | ar | defaults | edgeCase =====
 #set page(margin: 1.2cm)
-#set text(font: ("Noto Sans Arabic", "Arial"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Arial"), size: 12pt, dir: rtl)
 
 #grid(
   columns: (7fr, 3fr),
@@ -303,7 +303,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== default | ar | defaults | descriptions =====
 #set page(margin: 1.2cm)
-#set text(font: ("Noto Sans Arabic", "Arial"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Arial"), size: 12pt, dir: rtl)
 
 #grid(
   columns: (7fr, 3fr),
@@ -404,7 +404,7 @@ Summary text
 
 // ===== default | ar | defaults | withPhoto =====
 #set page(margin: 1.2cm)
-#set text(font: ("Noto Sans Arabic", "Arial"), size: 12pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Arial"), size: 12pt, dir: rtl)
 
 #grid(
   columns: (7fr, 3fr),
@@ -531,7 +531,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== default | ar | alternate | minimal =====
 #set page(margin: 1.2cm)
-#set text(font: ("Noto Sans Arabic", "Arial"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Arial"), size: 10pt, dir: rtl)
 
 #grid(
   columns: (7fr, 3fr),
@@ -549,7 +549,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== default | ar | alternate | specialChars =====
 #set page(margin: 1.2cm)
-#set text(font: ("Noto Sans Arabic", "Arial"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Arial"), size: 10pt, dir: rtl)
 
 #grid(
   columns: (7fr, 3fr),
@@ -595,7 +595,7 @@ Expert in C\#, F\#, and .NET development. Worked with \$100M+ projects.
 
 // ===== default | ar | alternate | typstMarkup =====
 #set page(margin: 1.2cm)
-#set text(font: ("Noto Sans Arabic", "Arial"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Arial"), size: 10pt, dir: rtl)
 
 #grid(
   columns: (7fr, 3fr),
@@ -626,7 +626,7 @@ I work with \*bold\* text and \_italic\_ formatting. Also \{curly\} and \<angle\
 
 // ===== default | ar | alternate | unicode =====
 #set page(margin: 1.2cm)
-#set text(font: ("Noto Sans Arabic", "Arial"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Arial"), size: 10pt, dir: rtl)
 
 #grid(
   columns: (7fr, 3fr),
@@ -650,7 +650,7 @@ Desarrollador con experiencia en tecnologias web.
 
 // ===== default | ar | alternate | arabic =====
 #set page(margin: 1.2cm)
-#set text(font: ("Noto Sans Arabic", "Arial"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Arial"), size: 10pt, dir: rtl)
 
 #grid(
   columns: (7fr, 3fr),
@@ -674,7 +674,7 @@ Full-Stack Developer with experience in web technologies
 
 // ===== default | ar | alternate | full =====
 #set page(margin: 1.2cm)
-#set text(font: ("Noto Sans Arabic", "Arial"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Arial"), size: 10pt, dir: rtl)
 
 #grid(
   columns: (7fr, 3fr),
@@ -788,7 +788,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== default | ar | alternate | edgeCase =====
 #set page(margin: 1.2cm)
-#set text(font: ("Noto Sans Arabic", "Arial"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Arial"), size: 10pt, dir: rtl)
 
 #grid(
   columns: (7fr, 3fr),
@@ -806,7 +806,7 @@ Focused on software engineering and distributed systems]]]
 
 // ===== default | ar | alternate | descriptions =====
 #set page(margin: 1.2cm)
-#set text(font: ("Noto Sans Arabic", "Arial"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Arial"), size: 10pt, dir: rtl)
 
 #grid(
   columns: (7fr, 3fr),
@@ -899,7 +899,7 @@ Summary text
 
 // ===== default | ar | alternate | withPhoto =====
 #set page(margin: 1.2cm)
-#set text(font: ("Noto Sans Arabic", "Arial"), size: 10pt, dir: rtl)
+#set text(font: ("Noto Naskh Arabic", "Arial"), size: 10pt, dir: rtl)
 
 #grid(
   columns: (7fr, 3fr),
