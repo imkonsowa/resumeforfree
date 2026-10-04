@@ -405,6 +405,10 @@
         "downloadOptions": "Opzioni di download",
         "stepper": {
             "entries": "Nessuna voce | {count} voce | {count} voci"
+        },
+        "tabs": {
+            "builder": "Editor",
+            "settings": "Impostazioni"
         }
     },
     "settings": {
@@ -431,6 +435,15 @@
         "sectionHeaderLine": {
             "label": "Linea di separazione intestazione",
             "description": "Aggiunge una sottile linea di divisione sotto ogni titolo di sezione"
+        },
+        "groups": {
+            "resume": "Curriculum",
+            "typography": "Tipografia",
+            "sections": "Sezioni"
+        },
+        "sectionOrder": {
+            "label": "Ordine delle sezioni",
+            "description": "Trascina le sezioni o usa le frecce per cambiarne l'ordine nel curriculum"
         }
     },
     "forms": {

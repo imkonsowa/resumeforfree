@@ -1,41 +1,18 @@
 <script lang="ts" setup>
 import ResumeLanguageSelector from '~/components/elements/ResumeLanguageSelector.vue';
-import { useSettingsStore } from '~/stores/settings';
-import { useResumeStore } from '~/stores/resume';
+import SectionOrderList from '~/components/elements/SectionOrderList.vue';
 import { getTemplateList } from '#layers/core/app/templates';
 import { defaultResumeSettings, getDefaultFontForLanguage } from '#layers/core/app/types/resume';
 
-const props = defineProps<{ modelValue: boolean }>();
-
-const emit = defineEmits<{ 'update:modelValue': [value: boolean] }>();
-
-const availableTemplates = getTemplateList();
-
 const { t } = useI18n();
-
 const settingsStore = useSettingsStore();
 const resumeStore = useResumeStore();
 
-const fontSize = ref(settingsStore.fontSize);
-const selectedFont = ref(settingsStore.selectedFont);
-const selectedTemplate = ref(settingsStore.selectedTemplate);
-const showSectionHeaderLine = computed({
-    get: () => settingsStore.showSectionHeaderLine,
-    set: value => settingsStore.setShowSectionHeaderLine(value),
-});
-
-const isOpen = computed({
-    get: () => props.modelValue,
-    set: value => emit('update:modelValue', value),
-});
-
-const templateItems = computed(() =>
-    availableTemplates.map(template => ({
-        label: template.name,
-        description: template.description,
-        value: template.id,
-    })),
-);
+const templateItems = getTemplateList().map(template => ({
+    label: template.name,
+    description: template.description,
+    value: template.id,
+}));
 
 const fontItems = computed(() =>
     settingsStore.availableFontsForCurrentLanguage.map(font => ({
@@ -44,23 +21,22 @@ const fontItems = computed(() =>
     })),
 );
 
-watch(() => settingsStore.fontSize, (value) => {
-    fontSize.value = value;
+const selectedTemplate = computed({
+    get: () => settingsStore.selectedTemplate,
+    set: value => settingsStore.setSelectedTemplate(value),
 });
-
-watch(() => settingsStore.selectedFont, (value) => {
-    selectedFont.value = value;
+const selectedFont = computed({
+    get: () => settingsStore.selectedFont,
+    set: value => settingsStore.setSelectedFont(value),
 });
-
-watch(() => settingsStore.selectedTemplate, (value) => {
-    selectedTemplate.value = value;
+const fontSize = computed({
+    get: () => settingsStore.fontSize,
+    set: value => settingsStore.setFontSize(value),
 });
-
-const updateFontSize = (value: number | undefined) => {
-    if (value !== undefined) settingsStore.setFontSize(value);
-};
-const updateFont = (value: string) => settingsStore.setSelectedFont(value);
-const updateTemplate = (value: string) => settingsStore.setSelectedTemplate(value);
+const showSectionHeaderLine = computed({
+    get: () => settingsStore.showSectionHeaderLine,
+    set: value => settingsStore.setShowSectionHeaderLine(value),
+});
 
 const resetToDefaults = () => {
     settingsStore.setSelectedTemplate(defaultResumeSettings.selectedTemplate);
@@ -71,18 +47,19 @@ const resetToDefaults = () => {
 </script>
 
 <template>
-    <UModal
-        v-model:open="isOpen"
-        :title="t('settings.title')"
-        :description="t('settings.description')"
-        :ui="{ footer: 'justify-end' }"
-    >
-        <template #body>
+    <div class="space-y-6">
+        <UCard>
+            <template #header>
+                <h2 class="font-semibold text-highlighted">
+                    {{ t('settings.groups.resume') }}
+                </h2>
+            </template>
             <div class="space-y-6">
                 <UFormField
                     v-if="resumeStore.activeResume"
                     name="resumeLanguage"
                     :label="t('settings.language.label')"
+                    :description="t('settings.language.description')"
                 >
                     <ResumeLanguageSelector
                         :model-value="resumeStore.activeResume.language"
@@ -91,7 +68,6 @@ const resetToDefaults = () => {
                         @update="(code) => resumeStore.setResumeLanguage(resumeStore.activeResume!.id, code)"
                     />
                 </UFormField>
-
                 <UFormField
                     name="template"
                     :label="t('settings.template.label')"
@@ -105,10 +81,18 @@ const resetToDefaults = () => {
                         :placeholder="t('settings.template.placeholder')"
                         :search-input="false"
                         class="w-full"
-                        @update:model-value="updateTemplate"
                     />
                 </UFormField>
+            </div>
+        </UCard>
 
+        <UCard>
+            <template #header>
+                <h2 class="font-semibold text-highlighted">
+                    {{ t('settings.groups.typography') }}
+                </h2>
+            </template>
+            <div class="space-y-6">
                 <UFormField
                     name="font"
                     :label="t('settings.font.label')"
@@ -120,10 +104,8 @@ const resetToDefaults = () => {
                         value-key="value"
                         :placeholder="t('settings.font.placeholder')"
                         class="w-full"
-                        @update:model-value="updateFont"
                     />
                 </UFormField>
-
                 <UFormField
                     name="fontSize"
                     :label="t('settings.fontSize.label')"
@@ -132,16 +114,24 @@ const resetToDefaults = () => {
                     <div class="flex items-center gap-4">
                         <USlider
                             v-model="fontSize"
-                            :max="16"
                             :min="10"
+                            :max="16"
                             :step="1"
                             class="flex-1"
-                            @update:model-value="updateFontSize"
                         />
-                        <span class="w-12 text-center font-medium">{{ fontSize }}pt</span>
+                        <span class="w-12 text-end font-medium tabular-nums">{{ fontSize }}pt</span>
                     </div>
                 </UFormField>
+            </div>
+        </UCard>
 
+        <UCard>
+            <template #header>
+                <h2 class="font-semibold text-highlighted">
+                    {{ t('settings.groups.sections') }}
+                </h2>
+            </template>
+            <div class="space-y-6">
                 <UFormField
                     name="sectionHeaderLine"
                     :label="t('settings.sectionHeaderLine.label')"
@@ -150,20 +140,24 @@ const resetToDefaults = () => {
                 >
                     <USwitch v-model="showSectionHeaderLine" />
                 </UFormField>
+                <UFormField
+                    name="sectionOrder"
+                    :label="t('settings.sectionOrder.label')"
+                    :description="t('settings.sectionOrder.description')"
+                >
+                    <SectionOrderList class="mt-2" />
+                </UFormField>
             </div>
-        </template>
+        </UCard>
 
-        <template #footer>
+        <div class="flex justify-end">
             <UButton
                 color="neutral"
                 variant="outline"
+                icon="i-lucide-rotate-ccw"
                 :label="t('common.resetToDefaults')"
                 @click="resetToDefaults"
             />
-            <UButton
-                :label="t('common.done')"
-                @click="isOpen = false"
-            />
-        </template>
-    </UModal>
+        </div>
+    </div>
 </template>

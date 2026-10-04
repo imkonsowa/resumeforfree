@@ -405,6 +405,10 @@
         "previewErrorDetailed": "Échec de l'aperçu : {detail}",
         "stepper": {
             "entries": "Aucune entrée | {count} entrée | {count} entrées"
+        },
+        "tabs": {
+            "builder": "Éditeur",
+            "settings": "Paramètres"
         }
     },
     "settings": {
@@ -431,6 +435,15 @@
         "sectionHeaderLine": {
             "label": "Ligne de titre de section",
             "description": "Ajouter un fin trait de séparation sous chaque titre de section"
+        },
+        "groups": {
+            "resume": "CV",
+            "typography": "Typographie",
+            "sections": "Sections"
+        },
+        "sectionOrder": {
+            "label": "Ordre des sections",
+            "description": "Faites glisser les sections ou utilisez les flèches pour changer leur ordre dans le CV"
         }
     },
     "forms": {

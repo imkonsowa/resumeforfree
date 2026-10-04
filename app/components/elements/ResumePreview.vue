@@ -29,15 +29,6 @@
                             :ui="{ base: 'h-9' }"
                         />
                     </div>
-                    <UButton
-                        size="sm"
-                        color="neutral"
-                        variant="outline"
-                        class="h-9"
-                        icon="i-lucide-sliders-horizontal"
-                        :label="t('builder.settings')"
-                        @click="showSettingsModal = true"
-                    />
                     <div class="inline-flex items-center rounded-md overflow-hidden">
                         <UButton
                             size="sm"
@@ -63,15 +54,6 @@
                     </div>
                 </div>
                 <div class="md:hidden flex gap-2">
-                    <UButton
-                        size="sm"
-                        color="neutral"
-                        variant="outline"
-                        class="h-9"
-                        icon="i-lucide-settings"
-                        :aria-label="t('builder.settings')"
-                        @click="showSettingsModal = true"
-                    />
                     <div class="inline-flex items-center rounded-md overflow-hidden">
                         <UButton
                             size="sm"
@@ -182,7 +164,6 @@
                     </div>
                 </div>
             </UCard>
-            <SettingsModal v-model="showSettingsModal" />
             <InvisibleTurnstile ref="turnstileRef" />
         </div>
     </ClientOnly>
@@ -193,7 +174,6 @@ import type { DropdownMenuItem } from '@nuxt/ui';
 import { getTemplateList } from '#layers/core/app/templates';
 import { useResumeGenerator } from '#layers/core/app/composables/useResumeGenerator';
 import { useDebounceFn } from '@vueuse/core';
-import SettingsModal from '~/components/elements/SettingsModal.vue';
 import ZoomControls from '~/components/elements/ZoomControls.vue';
 import InvisibleTurnstile from '~/components/elements/InvisibleTurnstile.vue';
 import { useSettingsStore } from '~/stores/settings';
@@ -215,7 +195,6 @@ const { selectedFont, selectedTemplate, fontSize, photoShape, showSectionHeaderL
 const isLoading = ref(false);
 const error = ref<string | null>(null);
 const previewContent = ref<string>('');
-const showSettingsModal = ref(false);
 
 const templateItems = computed(() =>
     availableTemplates.map(template => ({

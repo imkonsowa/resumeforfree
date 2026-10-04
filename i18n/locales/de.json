@@ -405,6 +405,10 @@
         "downloadOptions": "Download-Optionen",
         "stepper": {
             "entries": "Keine Einträge | {count} Eintrag | {count} Einträge"
+        },
+        "tabs": {
+            "builder": "Editor",
+            "settings": "Einstellungen"
         }
     },
     "settings": {
@@ -431,6 +435,15 @@
         "sectionHeaderLine": {
             "label": "Trennlinie unter Abschnitten",
             "description": "Fügt eine feine Trennlinie unter jeder Abschnittsüberschrift ein"
+        },
+        "groups": {
+            "resume": "Lebenslauf",
+            "typography": "Typografie",
+            "sections": "Abschnitte"
+        },
+        "sectionOrder": {
+            "label": "Reihenfolge der Abschnitte",
+            "description": "Ziehe Abschnitte oder nutze die Pfeile, um ihre Reihenfolge im Lebenslauf zu ändern"
         }
     },
     "forms": {

@@ -2,6 +2,7 @@
 import { useResumeStore } from '~/stores/resume';
 import ZoomControls from '~/components/elements/ZoomControls.vue';
 import ResumeBuilderHeader from '~/components/elements/ResumeBuilderHeader.vue';
+import ResumeSettingsPanel from '~/components/elements/ResumeSettingsPanel.vue';
 import ResumeLanguageSelector from '~/components/elements/ResumeLanguageSelector.vue';
 import { getLocaleDirection } from '#layers/core/app/utils/localeDirection';
 import PersonalInfoForm from '~/components/forms/PersonalInfoForm.vue';
@@ -165,6 +166,7 @@ watch(() => resumeStore.activeResumeId, (newResumeId) => {
     }
 });
 const showMobilePreview = ref(false);
+const activeTab = ref<'builder' | 'settings'>('builder');
 
 const { downloadPDF } = useResumeGenerator();
 const turnstileRef = ref<InstanceType<typeof InvisibleTurnstile> | null>(null);
@@ -377,9 +379,13 @@ const orderedSections = computed(() => {
             >
                 <div class="w-full lg:w-1/2 min-h-screen">
                     <div class="p-4 lg:p-8 pb-32">
-                        <ResumeBuilderHeader />
-                        <LanguageMismatchAlert />
-                        <div class="space-y-6">
+                        <ResumeBuilderHeader v-model:tab="activeTab" />
+                        <ResumeSettingsPanel v-show="activeTab === 'settings'" />
+                        <LanguageMismatchAlert v-show="activeTab === 'builder'" />
+                        <div
+                            v-show="activeTab === 'builder'"
+                            class="space-y-6"
+                        >
                             <PersonalInfoForm />
                             <div
                                 v-for="sectionKey in orderedSections"

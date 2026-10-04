@@ -405,6 +405,10 @@
         "previewErrorDetailed": "Önizleme başarısız: {detail}",
         "stepper": {
             "entries": "Kayıt yok | {count} kayıt | {count} kayıt"
+        },
+        "tabs": {
+            "builder": "Düzenleyici",
+            "settings": "Ayarlar"
         }
     },
     "settings": {
@@ -431,6 +435,15 @@
         "sectionHeaderLine": {
             "label": "Bölüm başlığı çizgisi",
             "description": "Her bölüm başlığının altına ince bir ayırıcı çizgi ekle"
+        },
+        "groups": {
+            "resume": "Özgeçmiş",
+            "typography": "Tipografi",
+            "sections": "Bölümler"
+        },
+        "sectionOrder": {
+            "label": "Bölüm sırası",
+            "description": "Özgeçmişteki sıralarını değiştirmek için bölümleri sürükle veya okları kullan"
         }
     },
     "forms": {

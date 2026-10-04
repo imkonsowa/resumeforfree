@@ -405,6 +405,10 @@
         "downloadOptions": "خيارات التنزيل",
         "stepper": {
             "entries": "لا توجد عناصر | عنصر واحد | {count} عناصر"
+        },
+        "tabs": {
+            "builder": "المحرر",
+            "settings": "الإعدادات"
         }
     },
     "settings": {
@@ -431,6 +435,15 @@
         "sectionHeaderLine": {
             "label": "خط أسفل عنوان القسم",
             "description": "إضافة خط فاصل رفيع أسفل كل عنوان قسم"
+        },
+        "groups": {
+            "resume": "السيرة الذاتية",
+            "typography": "الخطوط",
+            "sections": "الأقسام"
+        },
+        "sectionOrder": {
+            "label": "ترتيب الأقسام",
+            "description": "اسحب الأقسام أو استخدم الأسهم لتغيير ترتيبها في السيرة الذاتية"
         }
     },
     "forms": {

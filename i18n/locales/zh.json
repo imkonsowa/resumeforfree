@@ -405,6 +405,10 @@
         "downloadOptions": "导出选项",
         "stepper": {
             "entries": "无条目 | {count} 个条目 | {count} 个条目"
+        },
+        "tabs": {
+            "builder": "编辑",
+            "settings": "设置"
         }
     },
     "settings": {
@@ -431,6 +435,15 @@
         "sectionHeaderLine": {
             "label": "板块分割线下划线",
             "description": "在每个板块大标题下方添加一条细致的分割线"
+        },
+        "groups": {
+            "resume": "简历",
+            "typography": "排版",
+            "sections": "板块"
+        },
+        "sectionOrder": {
+            "label": "板块顺序",
+            "description": "拖动板块或使用箭头调整它们在简历中的顺序"
         }
     },
     "forms": {

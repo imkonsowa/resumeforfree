@@ -405,6 +405,10 @@
         "downloadOptions": "ڈاؤن لوڈ کے اختیارات",
         "stepper": {
             "entries": "کوئی اندراج نہیں | {count} اندراج | {count} اندراجات"
+        },
+        "tabs": {
+            "builder": "بلڈر",
+            "settings": "ترتیبات"
         }
     },
     "settings": {
@@ -431,6 +435,15 @@
         "sectionHeaderLine": {
             "label": "سیکشن ہیڈر لائن",
             "description": "ہر سیکشن ہیڈر کے نیچے ایک باریک لکیر شامل کریں"
+        },
+        "groups": {
+            "resume": "ریزیومے",
+            "typography": "ٹائپوگرافی",
+            "sections": "حصے"
+        },
+        "sectionOrder": {
+            "label": "حصوں کی ترتیب",
+            "description": "ریزیومے میں ترتیب بدلنے کے لیے حصوں کو گھسیٹیں یا تیر استعمال کریں"
         }
     },
     "forms": {
