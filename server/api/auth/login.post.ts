@@ -22,7 +22,7 @@ export default defineEventHandler(async (event) => {
         const { email, password, turnstileToken } = body;
 
         if (process.env.NODE_ENV === 'production' && turnstileToken) {
-            const isValidToken = await verifyTurnstileToken(turnstileToken, config.turnstile.secretKey);
+            const isValidToken = await isValidTurnstileToken(turnstileToken, config.turnstile.secretKey);
             if (!isValidToken) {
                 throw createError({
                     statusCode: 400,
@@ -61,7 +61,7 @@ export default defineEventHandler(async (event) => {
     const { email, password, turnstileToken } = body;
 
     if (process.env.NODE_ENV === 'production') {
-        const isValidToken = await verifyTurnstileToken(turnstileToken, config.turnstile.secretKey);
+        const isValidToken = await isValidTurnstileToken(turnstileToken, config.turnstile.secretKey);
         if (!isValidToken) {
             throw createError({
                 statusCode: 400,

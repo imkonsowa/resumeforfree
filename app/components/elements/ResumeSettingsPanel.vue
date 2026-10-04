@@ -139,9 +139,9 @@ const resetAll = () => {
                 <div class="flex items-center gap-4">
                     <USlider
                         v-model="fontSize"
-                        :min="10"
+                        :min="9"
                         :max="16"
-                        :step="1"
+                        :step="0.5"
                         class="flex-1"
                     />
                     <span class="w-12 text-end font-medium tabular-nums">{{ fontSize }}pt</span>
@@ -235,9 +235,9 @@ const resetAll = () => {
                 <div class="flex items-center gap-4">
                     <USlider
                         v-model="sectionSpacing"
-                        :min="0.6"
+                        :min="0.4"
                         :max="2"
-                        :step="0.2"
+                        :step="0.1"
                         class="flex-1"
                     />
                     <span class="w-12 text-end font-medium tabular-nums">{{ sectionSpacing.toFixed(1) }}</span>
@@ -251,9 +251,9 @@ const resetAll = () => {
                 <div class="flex items-center gap-4">
                     <USlider
                         v-model="itemSpacing"
-                        :min="0.6"
+                        :min="0.4"
                         :max="2"
-                        :step="0.2"
+                        :step="0.1"
                         class="flex-1"
                     />
                     <span class="w-12 text-end font-medium tabular-nums">{{ itemSpacing.toFixed(1) }}</span>

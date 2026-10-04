@@ -107,6 +107,11 @@ describe('templates follow the resume colour and icon settings', () => {
         it(`${name}: no icons unless enabled`, () => {
             expect(render(tpl, {})).not.toContain('image(bytes(');
         });
+
+        it(`${name}: the name follows the heading colour`, () => {
+            const src = render(tpl, { headingColor: '#aa0011' });
+            expect(src).toMatch(/fill: rgb\("#aa0011"\)\)\[(= )?rami sayed\]/i);
+        });
     }
 });
 

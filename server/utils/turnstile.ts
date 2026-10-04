@@ -1,4 +1,4 @@
-export async function verifyTurnstileToken(token: string | undefined, secretKey: string): Promise<boolean> {
+export async function isValidTurnstileToken(token: string | undefined, secretKey: string): Promise<boolean> {
     if (!token) {
         return false;
     }

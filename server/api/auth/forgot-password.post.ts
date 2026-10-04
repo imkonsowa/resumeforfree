@@ -1,5 +1,6 @@
 import type { D1Database } from '@cloudflare/workers-types';
-import { sendPasswordResetEmail, hashToken } from '../../utils/email';
+import { sendPasswordResetEmail } from '../../utils/email';
+import { hashToken } from '../../utils/apiAuth';
 
 const RATE_LIMIT_WINDOW_MINUTES = 60;
 const MAX_REQUESTS_PER_WINDOW = 3;
@@ -23,7 +24,7 @@ export default defineEventHandler(async (event) => {
     }
 
     if (process.env.NODE_ENV === 'production') {
-        const isValidToken = await verifyTurnstileToken(turnstileToken, config.turnstile.secretKey);
+        const isValidToken = await isValidTurnstileToken(turnstileToken, config.turnstile.secretKey);
         if (!isValidToken) {
             throw createError({
                 statusCode: 400,

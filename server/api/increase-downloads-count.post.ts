@@ -1,5 +1,5 @@
 import type { D1Database } from '@cloudflare/workers-types';
-import { verifyTurnstileToken } from '../utils/turnstile';
+import { isValidTurnstileToken } from '../utils/turnstile';
 
 export default defineEventHandler(async (event) => {
     const db = event.context.cloudflare?.env?.DB as D1Database;
@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
         const config = useRuntimeConfig();
         const body = await readBody(event).catch(() => ({}));
         const token = body?.turnstileToken;
-        const verified = await verifyTurnstileToken(token, config.turnstile.invisibleSecretKey);
+        const verified = await isValidTurnstileToken(token, config.turnstile.invisibleSecretKey);
         if (!verified) {
             return { success: false };
         }

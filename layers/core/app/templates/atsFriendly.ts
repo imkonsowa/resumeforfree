@@ -69,7 +69,7 @@ function renderTopHeader(data: ResumeData, context: RendererContext, fontSize: n
 
     const textBlocks: string[] = [];
     if (fullName) {
-        textBlocks.push(`#block(above: 0em, below: 0.8em)[#text(size: ${fontSize + 14}pt, weight: "bold", fill: ${context.accentColor(typstColor(ATS_BLUE))})[${fullName}]]`);
+        textBlocks.push(`#block(above: 0em, below: 0.8em)[#text(size: ${fontSize + 14}pt, weight: "bold", fill: ${context.headingColor})[${fullName}]]`);
     }
     if (position) {
         textBlocks.push(`#block(above: 0em, below: 1em)[#text(size: ${fontSize + 4}pt, weight: "bold")[${position}]]`);
