@@ -70,6 +70,7 @@
     "navigation": {
         "home": "Home",
         "builder": "Builder",
+        "templates": "Templates",
         "qa": "Q&A",
         "help": "Help",
         "resumes": "Your Resumes",
@@ -977,5 +978,43 @@
         "loadFailed": "Could not load your tokens.",
         "createFailed": "Could not create the token.",
         "revokeFailed": "Could not revoke the token."
+    },
+    "templates": {
+        "meta": {
+            "title": "Free Resume Templates by Profession",
+            "description": "Free resume templates for software engineers, nurses, accountants, teachers and more. Each one comes with a full sample resume and a writing guide."
+        },
+        "gallery": {
+            "title": "Resume templates by profession",
+            "subtitle": "Each template comes with a complete sample resume and a writing guide for that job. Open one in the builder and replace the sample with your own details.",
+            "search": "Search a job title",
+            "all": "All",
+            "empty": "No template matches that search."
+        },
+        "categories": {
+            "technology": "Technology",
+            "healthcare": "Healthcare",
+            "finance": "Finance",
+            "education": "Education",
+            "business": "Business",
+            "students": "Students"
+        },
+        "layouts": {
+            "ats-friendly": "ATS Friendly",
+            "compact": "Compact",
+            "default": "Two Column",
+            "simple": "Simple"
+        },
+        "detail": {
+            "useTemplate": "Use this template",
+            "downloadSample": "Download sample PDF",
+            "layout": "Layout",
+            "onThisPage": "On this page",
+            "faq": "Questions",
+            "related": "Related templates",
+            "updated": "Updated {date}",
+            "previewAlt": "{profession} resume sample in the {layout} layout",
+            "resumeName": "{profession} Resume"
+        }
     }
 }

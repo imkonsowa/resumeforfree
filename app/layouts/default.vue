@@ -18,6 +18,7 @@ const handleLogout = async () => {
 };
 
 const navItems = computed<NavigationMenuItem[]>(() => [
+    { label: t('navigation.templates'), to: localePath('/templates') },
     { label: t('navigation.resumes', 'Your resumes'), to: localePath('/resumes') },
     { label: t('navigation.builder'), to: localePath('/builder') },
 ]);
@@ -26,6 +27,7 @@ const footerColumns = computed<FooterColumn[]>(() => [
     {
         label: t('footer.productHeading'),
         children: [
+            { label: t('navigation.templates'), to: localePath('/templates') },
             { label: t('footer.productLinks.builder'), to: localePath('/builder') },
             { label: t('footer.productLinks.yourResumes'), to: localePath('/resumes') },
         ],

@@ -2,6 +2,7 @@
 interface Props {
     isOpen: boolean;
     showNavigateOption?: boolean;
+    defaultName?: string;
 }
 interface Emits {
     (e: 'close'): void;
@@ -42,7 +43,7 @@ const getDefaultResumeName = () => {
 
 watch(() => props.isOpen, (isOpen) => {
     if (isOpen) {
-        newResumeName.value = getDefaultResumeName();
+        newResumeName.value = props.defaultName || getDefaultResumeName();
         selectedLanguage.value = settingsStore.settings.locale || 'en';
         navigateToBuilder.value = true;
         saveToCloud.value = false;

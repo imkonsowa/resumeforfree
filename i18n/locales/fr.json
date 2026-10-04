@@ -70,6 +70,7 @@
     "navigation": {
         "home": "Accueil",
         "builder": "Créateur",
+        "templates": "Modèles",
         "qa": "Q&R",
         "help": "Aide",
         "resumes": "Vos CV",
@@ -977,5 +978,43 @@
         "loadFailed": "Impossible de charger vos jetons.",
         "createFailed": "Impossible de créer le jeton.",
         "revokeFailed": "Impossible de révoquer le jeton."
+    },
+    "templates": {
+        "meta": {
+            "title": "Modèles de CV gratuits par métier",
+            "description": "Modèles de CV gratuits pour développeurs, infirmiers, comptables, enseignants et d'autres métiers. Chacun contient un CV d'exemple complet et un guide de rédaction."
+        },
+        "gallery": {
+            "title": "Modèles de CV par métier",
+            "subtitle": "Chaque modèle contient un CV d'exemple complet et un guide de rédaction pour ce métier. Ouvrez-le dans l'éditeur et remplacez l'exemple par vos informations.",
+            "search": "Rechercher un métier",
+            "all": "Tous",
+            "empty": "Aucun modèle ne correspond à cette recherche."
+        },
+        "categories": {
+            "technology": "Technologie",
+            "healthcare": "Santé",
+            "finance": "Finance",
+            "education": "Enseignement",
+            "business": "Entreprise",
+            "students": "Étudiants"
+        },
+        "layouts": {
+            "ats-friendly": "Compatible ATS",
+            "compact": "Compact",
+            "default": "Deux colonnes",
+            "simple": "Simple"
+        },
+        "detail": {
+            "useTemplate": "Utiliser ce modèle",
+            "downloadSample": "Télécharger l'exemple en PDF",
+            "layout": "Mise en page",
+            "onThisPage": "Sur cette page",
+            "faq": "Questions",
+            "related": "Modèles similaires",
+            "updated": "Mis à jour le {date}",
+            "previewAlt": "Exemple de CV {profession} avec la mise en page {layout}",
+            "resumeName": "CV {profession}"
+        }
     }
 }

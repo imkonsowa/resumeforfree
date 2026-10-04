@@ -70,6 +70,7 @@
     "navigation": {
         "home": "Home",
         "builder": "Editor",
+        "templates": "Modelli",
         "qa": "Domande e risposte",
         "help": "Aiuto",
         "resumes": "I tuoi curriculum",
@@ -977,5 +978,43 @@
         "loadFailed": "Impossibile caricare i token.",
         "createFailed": "Impossibile creare il token.",
         "revokeFailed": "Impossibile revocare il token."
+    },
+    "templates": {
+        "meta": {
+            "title": "Modelli di curriculum gratuiti per professione",
+            "description": "Modelli di curriculum gratuiti per sviluppatori, infermieri, contabili, insegnanti e altre professioni. Ognuno include un curriculum di esempio completo e una guida alla scrittura."
+        },
+        "gallery": {
+            "title": "Modelli di curriculum per professione",
+            "subtitle": "Ogni modello include un curriculum di esempio completo e una guida alla scrittura per quella professione. Aprilo nell'editor e sostituisci l'esempio con i tuoi dati.",
+            "search": "Cerca una professione",
+            "all": "Tutti",
+            "empty": "Nessun modello corrisponde alla ricerca."
+        },
+        "categories": {
+            "technology": "Tecnologia",
+            "healthcare": "Sanità",
+            "finance": "Finanza",
+            "education": "Istruzione",
+            "business": "Aziende",
+            "students": "Studenti"
+        },
+        "layouts": {
+            "ats-friendly": "Compatibile ATS",
+            "compact": "Compatto",
+            "default": "Due colonne",
+            "simple": "Semplice"
+        },
+        "detail": {
+            "useTemplate": "Usa questo modello",
+            "downloadSample": "Scarica l'esempio in PDF",
+            "layout": "Layout",
+            "onThisPage": "In questa pagina",
+            "faq": "Domande",
+            "related": "Modelli correlati",
+            "updated": "Aggiornato il {date}",
+            "previewAlt": "Curriculum di esempio per {profession} con layout {layout}",
+            "resumeName": "Curriculum {profession}"
+        }
     }
 }

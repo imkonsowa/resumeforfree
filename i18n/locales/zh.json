@@ -70,6 +70,7 @@
     "navigation": {
         "home": "首页",
         "builder": "编辑器",
+        "templates": "模板",
         "qa": "问答",
         "help": "帮助",
         "resumes": "我的简历",
@@ -977,5 +978,43 @@
         "loadFailed": "加载令牌列表失败。",
         "createFailed": "创建令牌失败。",
         "revokeFailed": "撤销令牌失败。"
+    },
+    "templates": {
+        "meta": {
+            "title": "按职业分类的免费简历模板",
+            "description": "适用于软件工程师、护士、会计、教师等职业的免费简历模板。每个模板都附有完整的示例简历和写作指南。"
+        },
+        "gallery": {
+            "title": "按职业分类的简历模板",
+            "subtitle": "每个模板都附有该职业的完整示例简历和写作指南。在编辑器中打开，再把示例换成你自己的信息。",
+            "search": "搜索职位名称",
+            "all": "全部",
+            "empty": "没有符合搜索条件的模板。"
+        },
+        "categories": {
+            "technology": "技术",
+            "healthcare": "医疗",
+            "finance": "财务",
+            "education": "教育",
+            "business": "商业",
+            "students": "学生"
+        },
+        "layouts": {
+            "ats-friendly": "ATS 友好",
+            "compact": "紧凑",
+            "default": "双栏",
+            "simple": "简洁"
+        },
+        "detail": {
+            "useTemplate": "使用此模板",
+            "downloadSample": "下载示例 PDF",
+            "layout": "版式",
+            "onThisPage": "本页内容",
+            "faq": "常见问题",
+            "related": "相关模板",
+            "updated": "更新于 {date}",
+            "previewAlt": "{profession}示例简历（{layout}版式）",
+            "resumeName": "{profession}简历"
+        }
     }
 }
