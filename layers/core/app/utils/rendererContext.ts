@@ -45,6 +45,10 @@ export class RendererContext {
         return this.settings.photoShape;
     }
 
+    get headingColor(): string {
+        return this.sectionStyle.headerColor ? typstColor(this.sectionStyle.headerColor) : '';
+    }
+
     accentColor(templateDefault: string): string {
         return isHexColor(this.settings.accentColor) ? typstColor(this.settings.accentColor) : templateDefault;
     }
