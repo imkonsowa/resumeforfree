@@ -226,13 +226,25 @@ useHead(() => {
             </template>
 
             <template #footer>
-                <UButton
-                    :to="localePath('/builder')"
-                    :label="$t('homepage.hero.ctaBuild')"
-                    trailing-icon="i-lucide-arrow-right"
-                    size="xl"
-                    color="secondary"
-                />
+                <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                    <UButton
+                        :to="localePath('/builder')"
+                        :label="$t('homepage.hero.ctaBuild')"
+                        trailing-icon="i-lucide-arrow-right"
+                        size="xl"
+                        color="secondary"
+                        class="justify-center"
+                    />
+                    <UButton
+                        :to="localePath('/templates')"
+                        :label="$t('homepage.hero.ctaTemplates')"
+                        icon="i-lucide-layout-template"
+                        size="xl"
+                        color="neutral"
+                        variant="outline"
+                        class="justify-center"
+                    />
+                </div>
 
                 <p class="text-xs text-muted mt-4">
                     {{ $t('homepage.termsAgreement') }}
