@@ -112,6 +112,7 @@
             "title": "The free resume builder that stays free forever.",
             "sub": "Build, preview, and download an ATS-ready PDF in your browser. No account. No watermark. No upgrade to download.",
             "ctaBuild": "Build my resume",
+            "ctaTemplates": "Browse templates",
             "ctaSample": "See a sample PDF",
             "note": "No signup · No credit card · Takes about 5 minutes",
             "stat1Label": "Resumes built",
