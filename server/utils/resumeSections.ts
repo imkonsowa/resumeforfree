@@ -50,7 +50,7 @@ export const SECTION_SPECS: Record<string, SectionSpec> = {
     },
     certificates: {
         fields: {
-            title: 'string', issuer: 'string', date: 'string', url: 'string', description: 'string',
+            title: 'string', issuer: 'string', date: 'string', url: 'string', urlLabel: 'string', description: 'string',
         },
         required: ['title'],
     },

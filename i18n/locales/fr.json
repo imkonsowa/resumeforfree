@@ -443,7 +443,8 @@
             "resume": "CV",
             "typography": "Typographie",
             "sections": "Sections",
-            "colors": "Couleurs"
+            "colors": "Couleurs",
+            "layout": "Mise en page des sections"
         },
         "sectionOrder": {
             "label": "Ordre des sections",
@@ -480,6 +481,18 @@
         "itemSpacing": {
             "label": "Espace entre les éléments",
             "description": "Espace entre les entrées d'une section, comme deux postes"
+        },
+        "sectionLayout": {
+            "stacked": "Empilées",
+            "inline": "En ligne",
+            "skills": {
+                "label": "Compétences",
+                "description": "En ligne place toutes les compétences sur une seule ligne pour gagner de la place"
+            },
+            "languages": {
+                "label": "Langues",
+                "description": "En ligne place toutes les langues sur une seule ligne pour gagner de la place"
+            }
         }
     },
     "forms": {
@@ -589,6 +602,7 @@
             "issuer": "Émetteur",
             "date": "Date de Délivrance",
             "url": "URL du Certificat",
+            "urlLabel": "Texte du lien",
             "column": "Colonne",
             "deleteConfirm": {
                 "title": "Supprimer le Certificat",

@@ -443,7 +443,8 @@
             "resume": "Lebenslauf",
             "typography": "Typografie",
             "sections": "Abschnitte",
-            "colors": "Farben"
+            "colors": "Farben",
+            "layout": "Abschnittslayout"
         },
         "sectionOrder": {
             "label": "Reihenfolge der Abschnitte",
@@ -480,6 +481,18 @@
         "itemSpacing": {
             "label": "Abstand zwischen Einträgen",
             "description": "Abstand zwischen Einträgen eines Abschnitts, etwa zwei Stellen"
+        },
+        "sectionLayout": {
+            "stacked": "Untereinander",
+            "inline": "Einzeilig",
+            "skills": {
+                "label": "Fähigkeiten",
+                "description": "Einzeilig zeigt alle Fähigkeiten in einer Zeile und spart Platz"
+            },
+            "languages": {
+                "label": "Sprachen",
+                "description": "Einzeilig zeigt alle Sprachen in einer Zeile und spart Platz"
+            }
         }
     },
     "forms": {
@@ -589,6 +602,7 @@
             "issuer": "Aussteller",
             "date": "Ausstellungsdatum",
             "url": "Zertifikats-URL",
+            "urlLabel": "Linktext",
             "column": "Spalte",
             "deleteConfirm": {
                 "title": "Zertifikat löschen",

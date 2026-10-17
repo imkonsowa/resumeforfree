@@ -1,5 +1,5 @@
-import type { ResumeData, SectionHeaders } from '#layers/core/app/types/resume';
-import type { SectionHeading, SectionRenderer } from '#layers/core/app/types/template';
+import type { ListLayout, ResumeData, SectionHeaders } from '#layers/core/app/types/resume';
+import type { SectionContent, SectionHeading, SectionRenderer } from '#layers/core/app/types/template';
 import { ITEMS_SPACING, PHOTO_SIZE } from './typstUtils';
 import { escapeTypstText } from '#layers/core/app/utils/stringUtils';
 import { SECTION_TRANSLATION_MAP } from '#layers/core/app/utils/sectionHeaders';
@@ -110,22 +110,28 @@ export const renderSharedProjects: SectionRenderer = (data: ResumeData, context:
     return wrapInSection(heading, formattedContent, context);
 };
 
-export const renderSharedSkillsBody = (data: ResumeData): string => {
+const formatListItems = (sectionContent: SectionContent[], layout: ListLayout): string => {
+    const items = sectionContent.map(item => item.content || '');
+    if (layout === 'inline') return items.join(' • ');
+    return formatSectionItems(items, {
+        spacing: 'block',
+        itemSpacing: ITEMS_SPACING,
+        joinSeparator: '',
+    });
+};
+
+export const renderSharedSkillsBody = (data: ResumeData, context: RendererContext): string => {
     if (data?.skills && data.skills.length > 0) {
         const sectionContent = generateSkillsContent(data.skills);
         if (sectionContent.length === 0) return '';
-        return formatSectionItems(sectionContent.map(item => item.content || ''), {
-            spacing: 'block',
-            itemSpacing: ITEMS_SPACING,
-            joinSeparator: '',
-        });
+        return formatListItems(sectionContent, context.settings.skillsLayout);
     }
     if (!data?.technicalSkills || data.technicalSkills.trim() === '') return '';
     return data.technicalSkills.trim();
 };
 
 export const renderSharedSkills: SectionRenderer = (data: ResumeData, context: RendererContext): string => {
-    const body = renderSharedSkillsBody(data);
+    const body = renderSharedSkillsBody(data, context);
     if (!body) return '';
     const heading = sectionHeading('skills', data, context);
     return wrapInSection(heading, body, context);
@@ -135,11 +141,7 @@ export const renderSharedLanguagesBody = (data: ResumeData, context: RendererCon
     if (!data?.languages || data.languages.length === 0) return '';
     const sectionContent = generateLanguagesContent(data.languages, context.t);
     if (sectionContent.length === 0) return '';
-    return formatSectionItems(sectionContent.map(item => item.content || ''), {
-        spacing: 'block',
-        itemSpacing: ITEMS_SPACING,
-        joinSeparator: '',
-    });
+    return formatListItems(sectionContent, context.settings.languagesLayout);
 };
 
 export const renderSharedLanguages: SectionRenderer = (data: ResumeData, context: RendererContext): string => {

@@ -4,7 +4,7 @@ import SectionOrderList from '~/components/elements/SectionOrderList.vue';
 import ColorSetting from '~/components/elements/ColorSetting.vue';
 import SettingsGroup from '~/components/elements/SettingsGroup.vue';
 import { getTemplateList } from '#layers/core/app/templates';
-import { defaultResumeData, defaultResumeSettings, getDefaultFontForLanguage } from '#layers/core/app/types/resume';
+import { defaultResumeData, defaultResumeSettings, getDefaultFontForLanguage, LIST_LAYOUTS } from '#layers/core/app/types/resume';
 import type { ResumeSettings } from '#layers/core/app/types/resume';
 
 const { t } = useI18n();
@@ -56,6 +56,12 @@ const itemSpacing = spacingSetting('itemSpacing');
 const headingColor = resumeSetting('headingColor');
 const accentColor = resumeSetting('accentColor');
 const showSectionIcons = resumeSetting('showSectionIcons');
+const languagesLayout = resumeSetting('languagesLayout');
+const skillsLayout = resumeSetting('skillsLayout');
+const listLayoutItems = computed(() => LIST_LAYOUTS.map(layout => ({
+    label: t(`settings.sectionLayout.${layout}`),
+    value: layout,
+})));
 
 const pickDefaults = <K extends keyof ResumeSettings>(...keys: K[]): Pick<ResumeSettings, K> =>
     Object.fromEntries(keys.map(key => [key, defaultResumeSettings[key]])) as Pick<ResumeSettings, K>;
@@ -70,11 +76,13 @@ const resetSections = () => {
     settingsStore.updateResumeSettings(pickDefaults('showSectionHeaderLine', 'showSectionIcons', 'sectionSpacing', 'itemSpacing'));
     resumeStore.updateSectionOrder(defaultResumeData.sectionOrder);
 };
+const resetLayout = () => settingsStore.updateResumeSettings(pickDefaults('languagesLayout', 'skillsLayout'));
 const resetAll = () => {
     resetResume();
     resetTypography();
     resetColors();
     resetSections();
+    resetLayout();
 };
 </script>
 
@@ -266,6 +274,38 @@ const resetAll = () => {
                 class="@xl:col-span-2"
             >
                 <SectionOrderList class="mt-2" />
+            </UFormField>
+        </SettingsGroup>
+
+        <SettingsGroup
+            :title="t('settings.groups.layout')"
+            @reset="resetLayout"
+        >
+            <UFormField
+                name="skillsLayout"
+                :label="t('settings.sectionLayout.skills.label')"
+                :description="t('settings.sectionLayout.skills.description')"
+            >
+                <URadioGroup
+                    v-model="skillsLayout"
+                    :items="listLayoutItems"
+                    orientation="horizontal"
+                    variant="table"
+                    class="mt-2"
+                />
+            </UFormField>
+            <UFormField
+                name="languagesLayout"
+                :label="t('settings.sectionLayout.languages.label')"
+                :description="t('settings.sectionLayout.languages.description')"
+            >
+                <URadioGroup
+                    v-model="languagesLayout"
+                    :items="listLayoutItems"
+                    orientation="horizontal"
+                    variant="table"
+                    class="mt-2"
+                />
             </UFormField>
         </SettingsGroup>
 

@@ -443,7 +443,8 @@
             "resume": "Resume",
             "typography": "Typography",
             "sections": "Sections",
-            "colors": "Colors"
+            "colors": "Colors",
+            "layout": "Section layout"
         },
         "sectionOrder": {
             "label": "Section order",
@@ -480,6 +481,18 @@
         "itemSpacing": {
             "label": "Space between items",
             "description": "Gap between entries in a section, like two jobs"
+        },
+        "sectionLayout": {
+            "stacked": "Stacked",
+            "inline": "Inline",
+            "skills": {
+                "label": "Skills",
+                "description": "Inline puts all skills on one line to save space"
+            },
+            "languages": {
+                "label": "Languages",
+                "description": "Inline puts all languages on one line to save space"
+            }
         }
     },
     "forms": {
@@ -589,6 +602,7 @@
             "issuer": "Issuer",
             "date": "Date Issued",
             "url": "Certificate URL",
+            "urlLabel": "Link text",
             "column": "Column",
             "deleteConfirm": {
                 "title": "Delete Certificate",

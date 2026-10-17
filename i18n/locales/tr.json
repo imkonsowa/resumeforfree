@@ -443,7 +443,8 @@
             "resume": "Özgeçmiş",
             "typography": "Tipografi",
             "sections": "Bölümler",
-            "colors": "Renkler"
+            "colors": "Renkler",
+            "layout": "Bölüm düzeni"
         },
         "sectionOrder": {
             "label": "Bölüm sırası",
@@ -480,6 +481,18 @@
         "itemSpacing": {
             "label": "Kayıtlar arası boşluk",
             "description": "Bir bölümdeki kayıtlar arasındaki boşluk, örneğin iki iş"
+        },
+        "sectionLayout": {
+            "stacked": "Alt alta",
+            "inline": "Tek satır",
+            "skills": {
+                "label": "Yetenekler",
+                "description": "Tek satır, yer kazanmak için tüm yetenekleri bir satırda gösterir"
+            },
+            "languages": {
+                "label": "Diller",
+                "description": "Tek satır, yer kazanmak için tüm dilleri bir satırda gösterir"
+            }
         }
     },
     "forms": {
@@ -589,6 +602,7 @@
             "issuer": "Veren Kurum",
             "date": "Veriliş Tarihi",
             "url": "Sertifika URL'si",
+            "urlLabel": "Bağlantı metni",
             "column": "Sütun",
             "deleteConfirm": {
                 "title": "Sertifikayı Sil",

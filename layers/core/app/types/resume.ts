@@ -74,6 +74,7 @@ export interface Certificate {
     issuer: string;
     date: string;
     url?: string;
+    urlLabel?: string;
     description?: string;
 }
 export interface Publication {
@@ -189,6 +190,8 @@ export interface UserSettings {
     showTemplateMenu?: boolean;
 }
 export type PhotoShape = 'circle' | 'rectangle';
+export const LIST_LAYOUTS = ['stacked', 'inline'] as const;
+export type ListLayout = typeof LIST_LAYOUTS[number];
 
 export interface ResumeSettings {
     selectedFont: string;
@@ -203,6 +206,8 @@ export interface ResumeSettings {
     headingColor: string;
     accentColor: string;
     showSectionIcons: boolean;
+    languagesLayout: ListLayout;
+    skillsLayout: ListLayout;
     sectionCollapsed: Record<string, boolean>;
     isRawMode: boolean;
 }
@@ -268,6 +273,8 @@ export const defaultResumeSettings: ResumeSettings = {
     headingColor: '',
     accentColor: '',
     showSectionIcons: false,
+    languagesLayout: 'stacked',
+    skillsLayout: 'stacked',
     isRawMode: false,
     sectionCollapsed: {
         personal: false,
@@ -297,6 +304,8 @@ export const resumeSettingsFromLegacy = (legacy: Partial<ResumeSettings> | null 
         headingColor: src.headingColor ?? defaultResumeSettings.headingColor,
         accentColor: src.accentColor ?? defaultResumeSettings.accentColor,
         showSectionIcons: src.showSectionIcons ?? defaultResumeSettings.showSectionIcons,
+        languagesLayout: src.languagesLayout || defaultResumeSettings.languagesLayout,
+        skillsLayout: src.skillsLayout || defaultResumeSettings.skillsLayout,
         sectionCollapsed: src.sectionCollapsed && Object.keys(src.sectionCollapsed).length
             ? { ...src.sectionCollapsed }
             : { ...defaultResumeSettings.sectionCollapsed },
