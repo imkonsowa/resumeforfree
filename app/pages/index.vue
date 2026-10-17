@@ -11,6 +11,7 @@ import {
 
 const { t, locale } = useI18n();
 const localePath = useLocalePath();
+const appConfig = useAppConfig();
 
 const sampleResumeSrc = computed(() => `/sample-resume-${locale.value}.svg`);
 
@@ -323,7 +324,17 @@ useHead(() => {
                 :tiers="comparisonTiers"
                 :sections="comparisonSections"
                 :caption="$t('homepage.comparison.title')"
-            />
+            >
+                <template #feature-value="{ feature, tier }">
+                    <UIcon
+                        :name="feature.tiers?.[tier.id] ? appConfig.ui.icons.success : appConfig.ui.icons.minus"
+                        class="size-5 shrink-0"
+                        :class="{ 'text-primary': feature.tiers?.[tier.id] }"
+                        aria-hidden="true"
+                    />
+                    <span class="sr-only">{{ feature.tiers?.[tier.id] ? $t('homepage.comparison.values.yes') : $t('homepage.comparison.values.no') }}</span>
+                </template>
+            </UPricingTable>
             <p class="text-xs text-muted mt-4 text-center">
                 {{ $t('homepage.comparison.footnote') }}
             </p>
@@ -366,6 +377,7 @@ useHead(() => {
             <UAccordion
                 :items="faqAccordionItems"
                 :default-value="'0'"
+                :unmount-on-hide="false"
             />
         </UPageSection>
 
