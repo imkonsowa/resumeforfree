@@ -482,11 +482,17 @@
             "label": "Abstand zwischen Einträgen",
             "description": "Abstand zwischen Einträgen eines Abschnitts, etwa zwei Stellen"
         },
-        "languagesLayout": {
-            "label": "Sprachen",
-            "description": "Einzeilig zeigt alle Sprachen in einer Zeile und spart Platz",
+        "sectionLayout": {
             "stacked": "Untereinander",
-            "inline": "Einzeilig"
+            "inline": "Einzeilig",
+            "skills": {
+                "label": "Fähigkeiten",
+                "description": "Einzeilig zeigt alle Fähigkeiten in einer Zeile und spart Platz"
+            },
+            "languages": {
+                "label": "Sprachen",
+                "description": "Einzeilig zeigt alle Sprachen in einer Zeile und spart Platz"
+            }
         }
     },
     "forms": {

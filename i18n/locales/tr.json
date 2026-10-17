@@ -482,11 +482,17 @@
             "label": "Kayıtlar arası boşluk",
             "description": "Bir bölümdeki kayıtlar arasındaki boşluk, örneğin iki iş"
         },
-        "languagesLayout": {
-            "label": "Diller",
-            "description": "Tek satır, yer kazanmak için tüm dilleri bir satırda gösterir",
+        "sectionLayout": {
             "stacked": "Alt alta",
-            "inline": "Tek satır"
+            "inline": "Tek satır",
+            "skills": {
+                "label": "Yetenekler",
+                "description": "Tek satır, yer kazanmak için tüm yetenekleri bir satırda gösterir"
+            },
+            "languages": {
+                "label": "Diller",
+                "description": "Tek satır, yer kazanmak için tüm dilleri bir satırda gösterir"
+            }
         }
     },
     "forms": {

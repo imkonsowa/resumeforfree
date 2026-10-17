@@ -140,18 +140,32 @@ describe('date colour is unified and readable', () => {
     });
 });
 
-describe('templates follow the languages layout setting', () => {
-    const twoLanguages = { ...data, languages: [{ name: 'English', proficiency: 'Native' }, { name: 'French', proficiency: 'Fluent' }] };
-    const render = (tpl: typeof defaultTemplate, languagesLayout?: string) =>
-        tpl.parse({ data: twoLanguages, settings: { languagesLayout }, locale: 'en', t: (k: string) => k });
+describe('templates follow the list layout settings', () => {
+    const lists = {
+        ...data,
+        skills: [{ title: 'Backend', description: 'Go' }, { title: 'Cloud', description: 'AWS' }],
+        languages: [{ name: 'English', proficiency: 'Native' }, { name: 'French', proficiency: 'Fluent' }],
+    };
+    const render = (tpl: typeof defaultTemplate, settings: Record<string, unknown> = {}) =>
+        tpl.parse({ data: lists, settings, locale: 'en', t: (k: string) => k });
+    const inlineSkills = '*Backend:* Go • *Cloud:* AWS';
+    const inlineLanguages = '*English* - proficiency.native • *French* - proficiency.fluent';
 
     for (const { name, tpl } of TEMPLATES) {
-        it(`${name}: languages share one line when inline`, () => {
-            expect(render(tpl, 'inline')).toContain('*English* - proficiency.native • *French* - proficiency.fluent');
+        it(`${name}: skills share one line when inline`, () => {
+            const src = render(tpl, { skillsLayout: 'inline' });
+            expect(src).toContain(inlineSkills);
+            expect(src).not.toContain(inlineLanguages);
         });
 
-        it(`${name}: languages are stacked by default`, () => {
-            expect(render(tpl)).not.toContain('proficiency.native • ');
+        it(`${name}: languages share one line when inline`, () => {
+            const src = render(tpl, { languagesLayout: 'inline' });
+            expect(src).toContain(inlineLanguages);
+            expect(src).not.toContain(inlineSkills);
+        });
+
+        it(`${name}: lists are stacked by default`, () => {
+            expect(render(tpl)).not.toContain(' • *');
         });
     }
 });

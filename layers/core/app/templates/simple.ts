@@ -203,7 +203,7 @@ const parse = ({ data, settings, locale, t }: TemplateParseInput): string => {
             itemsToRows(generateInternshipsContent(data.internships || [], context.t, context.locale), context),
         ),
         skills: () => {
-            const body = renderSharedSkillsBody(data);
+            const body = renderSharedSkillsBody(data, context);
             if (!body) return null;
             return buildSection(getSectionLabel('skills', data, context), [{ content: body }]);
         },

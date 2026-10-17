@@ -482,11 +482,17 @@
             "label": "Espace entre les éléments",
             "description": "Espace entre les entrées d'une section, comme deux postes"
         },
-        "languagesLayout": {
-            "label": "Langues",
-            "description": "En ligne place toutes les langues sur une seule ligne pour gagner de la place",
+        "sectionLayout": {
             "stacked": "Empilées",
-            "inline": "En ligne"
+            "inline": "En ligne",
+            "skills": {
+                "label": "Compétences",
+                "description": "En ligne place toutes les compétences sur une seule ligne pour gagner de la place"
+            },
+            "languages": {
+                "label": "Langues",
+                "description": "En ligne place toutes les langues sur une seule ligne pour gagner de la place"
+            }
         }
     },
     "forms": {

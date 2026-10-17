@@ -482,11 +482,17 @@
             "label": "Spazio tra le voci",
             "description": "Spazio tra le voci di una sezione, come due lavori"
         },
-        "languagesLayout": {
-            "label": "Lingue",
-            "description": "In linea mostra tutte le lingue su una sola riga per risparmiare spazio",
+        "sectionLayout": {
             "stacked": "Elenco",
-            "inline": "In linea"
+            "inline": "In linea",
+            "skills": {
+                "label": "Competenze",
+                "description": "In linea mostra tutte le competenze su una sola riga per risparmiare spazio"
+            },
+            "languages": {
+                "label": "Lingue",
+                "description": "In linea mostra tutte le lingue su una sola riga per risparmiare spazio"
+            }
         }
     },
     "forms": {

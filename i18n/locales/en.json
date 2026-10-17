@@ -482,11 +482,17 @@
             "label": "Space between items",
             "description": "Gap between entries in a section, like two jobs"
         },
-        "languagesLayout": {
-            "label": "Languages",
-            "description": "Inline puts all languages on one line to save space",
+        "sectionLayout": {
             "stacked": "Stacked",
-            "inline": "Inline"
+            "inline": "Inline",
+            "skills": {
+                "label": "Skills",
+                "description": "Inline puts all skills on one line to save space"
+            },
+            "languages": {
+                "label": "Languages",
+                "description": "Inline puts all languages on one line to save space"
+            }
         }
     },
     "forms": {
