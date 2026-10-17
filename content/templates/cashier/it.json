@@ -1,0 +1,151 @@
+{
+    "version": "v1",
+    "firstName": "Giulia",
+    "lastName": "Esposito",
+    "email": "giulia.esposito@example.com",
+    "phone": "+39 347 218 4409",
+    "position": "Cassiera e addetta alle vendite",
+    "location": "Napoli",
+    "summary": "Cassiera con due anni di part time in un supermercato di quartiere molto frequentato, dopo una stagione estiva in profumeria. La mia cassa quadra a fine turno da inizio anno, conosco resi, casse automatiche e controllo dell'età. Disponibile la sera, il sabato e la domenica mattina, anche per un part time a 30 ore.",
+    "experiences": [
+        {
+            "company": "Vesuvio Market Fuorigrotta",
+            "position": "Cassiera (part time, 24 ore settimanali)",
+            "location": "Napoli",
+            "companyUrl": "",
+            "startDate": "2024-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Supermercato di quartiere con sette casse tradizionali e quattro casse automatiche.",
+            "achievements": [
+                {
+                    "text": "Incasso in contanti, carta, contactless e buoni pasto, con fila continua il sabato pomeriggio"
+                },
+                {
+                    "text": "Quadratura cassa senza differenze da gennaio 2026; incaricata dei prelievi serali verso la cassaforte"
+                },
+                {
+                    "text": "Assistenza alle casse automatiche due sere a settimana: controllo età, annullamenti, aiuto con la pesatura"
+                },
+                {
+                    "text": "Affiancamento di tre nuovi colleghi alla cassa e sulle regole dei buoni sconto"
+                }
+            ]
+        },
+        {
+            "company": "Profumeria Chiaia Bella",
+            "position": "Addetta vendite e cassa (contratto stagionale)",
+            "location": "Napoli",
+            "companyUrl": "",
+            "startDate": "2023-06",
+            "endDate": "2023-09",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Cassa e confezioni regalo nei weekend di luglio e agosto"
+                },
+                {
+                    "text": "Riassortimento degli scaffali e cambio prezzi durante i saldi estivi"
+                },
+                {
+                    "text": "Richiamata per il periodo natalizio grazie a puntualità e presenza"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Istituto professionale Vomero, indirizzo Servizi commerciali",
+            "degree": "Diploma di istruzione professionale",
+            "fieldOfStudy": "",
+            "location": "Napoli",
+            "startDate": "2019-09",
+            "endDate": "2024-07",
+            "isPresent": false,
+            "description": "PCTO (alternanza scuola lavoro) in un minimarket e in un negozio di abbigliamento.",
+            "graduationScore": "78/100",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Banco alimentare di quartiere Fuorigrotta",
+            "organizationUrl": "",
+            "position": "Volontaria",
+            "location": "Napoli",
+            "startDate": "2023-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Accoglienza delle famiglie e preparazione dei pacchi un sabato al mese.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Cassa",
+            "description": "Incasso, resto, fondo cassa, quadratura, resi e storni, buoni pasto, casse automatiche"
+        },
+        {
+            "title": "Punto vendita",
+            "description": "Rifornimento scaffali, prezzatura, controllo scadenze, inventario, controllo età"
+        },
+        {
+            "title": "Clienti",
+            "description": "Accoglienza, gestione reclami, carta fedeltà"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Italiano",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Inglese",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Attestato HACCP per addetti alimentari",
+            "issuer": "Ente di formazione accreditato",
+            "date": "2024-08",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Corso sicurezza sul lavoro, formazione generale",
+            "issuer": "Vesuvio Market",
+            "date": "2024-09",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

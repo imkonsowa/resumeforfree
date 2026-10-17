@@ -1,0 +1,177 @@
+{
+    "version": "v1",
+    "firstName": "Tobias",
+    "lastName": "Hartmann",
+    "email": "tobias.hartmann@example.com",
+    "phone": "+49 160 9182 7734",
+    "position": "Entwicklungsingenieur Maschinenbau",
+    "location": "Ulm",
+    "summary": "Maschinenbauingenieur (M.Sc.) mit neun Jahren in Antriebstechnik und Sondermaschinenbau. Ich verantworte Baugruppen von der Anforderung bis zum Serienanlauf, leite kleine Konstruktionsteams und lege Wert auf Zeichnungen, die in der Werkstatt beim ersten Lesen verstanden werden.",
+    "experiences": [
+        {
+            "company": "Albtal Antriebstechnik GmbH",
+            "position": "Entwicklungsingenieur",
+            "location": "Ulm",
+            "companyUrl": "",
+            "startDate": "2021-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Leitung eines Teams aus vier Konstrukteuren bei der Entwicklung einer neuen Getriebebaureihe bis zum Serienanlauf"
+                },
+                {
+                    "text": "Getriebegehäuse von Schweißkonstruktion auf Guss umgestellt, Herstellkosten um 18 % gesenkt"
+                },
+                {
+                    "text": "Quality Gates mit Fertigung und Service eingeführt, späte Konstruktionsänderungen etwa halbiert"
+                },
+                {
+                    "text": "Ursachenanalyse eines Lagerschadens im Feld verantwortet, Abstellmaßnahme nach sechs Wochen freigegeben"
+                }
+            ]
+        },
+        {
+            "company": "Donauwerk Sondermaschinenbau GmbH",
+            "position": "Konstrukteur",
+            "location": "Neu-Ulm",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2021-03",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Zuführ- und Handhabungssysteme für Montageanlagen in Creo konstruiert und beim Kunden in Betrieb genommen"
+                },
+                {
+                    "text": "Risikobeurteilungen nach Maschinenrichtlinie und CE-Dokumentation für drei Anlagen erstellt"
+                },
+                {
+                    "text": "Frästeil gemeinsam mit dem Lieferanten auf Druckguss umgestellt, Teilekosten um 40 % gesenkt"
+                }
+            ]
+        },
+        {
+            "company": "Lechtal Fluidtechnik GmbH",
+            "position": "Werkstudent Versuch",
+            "location": "Augsburg",
+            "companyUrl": "",
+            "startDate": "2015-10",
+            "endDate": "2017-03",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Prüfstand für Wellendichtringe aufgebaut und Messreihen für die Masterarbeit ausgewertet"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Universität Stuttgart",
+            "degree": "M.Sc. Maschinenbau",
+            "fieldOfStudy": "",
+            "location": "Stuttgart",
+            "startDate": "2015-10",
+            "endDate": "2017-04",
+            "isPresent": false,
+            "description": "Vertiefung Konstruktionstechnik, Masterarbeit zu Reibung an Radialwellendichtringen",
+            "graduationScore": "",
+            "achievements": []
+        },
+        {
+            "institution": "Technische Hochschule Ulm",
+            "degree": "B.Eng. Maschinenbau",
+            "fieldOfStudy": "",
+            "location": "Ulm",
+            "startDate": "2011-10",
+            "endDate": "2015-02",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "CAD und PDM",
+            "description": "Creo, Siemens NX, Windchill, AutoCAD"
+        },
+        {
+            "title": "Berechnung",
+            "description": "ANSYS Mechanical, Handrechnung, Toleranzanalyse, MATLAB"
+        },
+        {
+            "title": "Fertigung",
+            "description": "Guss, Zerspanung, Blech, Schweißen, fertigungsgerechte Konstruktion"
+        },
+        {
+            "title": "Qualität",
+            "description": "ISO GPS, Konstruktions-FMEA, 8D, Maschinenrichtlinie"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Deutsch",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Englisch",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Six Sigma Green Belt",
+            "issuer": "TÜV Süd Akademie",
+            "date": "2020-05",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Form- und Lagetolerierung nach ISO GPS",
+            "issuer": "VDI Wissensforum",
+            "date": "2019-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "education": 3,
+        "certificates": 4,
+        "languages": 5,
+        "projects": 6,
+        "volunteering": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "Weiterbildungen und Zertifikate"
+    },
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

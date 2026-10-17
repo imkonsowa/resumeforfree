@@ -1,0 +1,206 @@
+{
+    "version": "v1",
+    "firstName": "Rachel",
+    "lastName": "Moreno",
+    "email": "rachel.moreno@example.com",
+    "phone": "+1 555 013 4472",
+    "position": "Senior Graphic Designer",
+    "location": "Portland, OR",
+    "summary": "Graphic designer with eight years of identity, packaging and print work for food, finance and nonprofit clients. I lead projects from first sketch to press check, present directly to clients and mentor junior designers.",
+    "experiences": [
+        {
+            "company": "Fernhill Studio",
+            "position": "Senior Graphic Designer",
+            "location": "Portland, OR",
+            "companyUrl": "",
+            "startDate": "2022-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Independent brand studio, 12 people, food, hospitality and finance clients.",
+            "achievements": [
+                {
+                    "text": "Led the rebrand of a regional credit union: logo, type and color system, and signage for 14 branches"
+                },
+                {
+                    "text": "Designed packaging for a line of 22 sauces from the manufacturer's dielines, approved at press check with no reprints"
+                },
+                {
+                    "text": "Present concepts directly to clients and keep most projects within two rounds of revisions"
+                },
+                {
+                    "text": "Mentor two junior designers through weekly critiques and file reviews"
+                }
+            ]
+        },
+        {
+            "company": "Cascade Outdoor Co.",
+            "position": "Graphic Designer",
+            "location": "Portland, OR",
+            "companyUrl": "",
+            "startDate": "2019-03",
+            "endDate": "2022-03",
+            "isPresent": false,
+            "description": "In-house marketing team of four at an outdoor apparel brand.",
+            "achievements": [
+                {
+                    "text": "Designed seasonal campaigns across print ads, email, in-store posters and paid social for 85 stores"
+                },
+                {
+                    "text": "Rewrote the brand guidelines as a 30-page practical guide for retail partners"
+                },
+                {
+                    "text": "Built a Figma template set for social and email that marketers now use without design help"
+                }
+            ]
+        },
+        {
+            "company": "Northpaper Print & Design",
+            "position": "Junior Designer",
+            "location": "Salem, OR",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2019-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Prepared print-ready files for about 40 jobs a month, including bleeds, color profiles and imposition notes"
+                },
+                {
+                    "text": "Designed menus, flyers and signage for local businesses, from brief to final install"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Portland State University",
+            "degree": "BFA in Graphic Design",
+            "fieldOfStudy": "",
+            "location": "Portland, OR",
+            "startDate": "2013-09",
+            "endDate": "2017-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Rose City Design Mentors",
+            "organizationUrl": "",
+            "position": "Portfolio Reviewer",
+            "location": "Portland, OR",
+            "startDate": "2021-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Review student portfolios twice a year and give written feedback on layout and project selection.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Design",
+            "description": "Brand identity, typography, layout, packaging, editorial design"
+        },
+        {
+            "title": "Digital",
+            "description": "Social media graphics, email design, presentation templates"
+        },
+        {
+            "title": "Tools",
+            "description": "Adobe Illustrator, InDesign, Photoshop, Figma, After Effects"
+        },
+        {
+            "title": "Production",
+            "description": "Prepress, color management, Pantone, dielines, press checks"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "portfolio",
+            "url": "https://example.com/rachel-moreno"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Harbor Credit Union rebrand",
+            "description": "New identity and branch signage for a regional credit union. Lead designer, from strategy workshop to rollout.",
+            "links": [
+                {
+                    "url": "https://example.com/rachel-moreno/harbor",
+                    "label": "Case study"
+                }
+            ],
+            "startDate": "2023-02",
+            "endDate": "2024-01",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Willamette Food Bank annual report",
+            "description": "64-page print and web report with charts and photo layouts. Designed pro bono with one copywriter.",
+            "links": [
+                {
+                    "url": "https://example.com/rachel-moreno/food-bank",
+                    "label": "Case study"
+                }
+            ],
+            "startDate": "2024-03",
+            "endDate": "2024-06",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "English",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Spanish",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Adobe Certified Professional in Print and Digital Media Publication Using Adobe InDesign",
+            "issuer": "Adobe",
+            "date": "2021-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "projects": 2,
+        "education": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "volunteering": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "projects": "Selected work"
+    },
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

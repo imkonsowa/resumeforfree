@@ -1008,10 +1008,13 @@
         },
         "categories": {
             "technology": "ٹیکنالوجی",
+            "engineering": "انجینئرنگ",
             "healthcare": "صحت",
             "finance": "مالیات",
             "education": "تعلیم",
             "business": "کاروبار",
+            "creative": "تخلیقی شعبے",
+            "service": "کسٹمر سروس اور ریٹیل",
             "students": "طلبہ"
         },
         "layouts": {

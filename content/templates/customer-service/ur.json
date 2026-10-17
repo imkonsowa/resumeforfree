@@ -1,0 +1,173 @@
+{
+    "version": "v1",
+    "firstName": "حرا",
+    "lastName": "شیخ",
+    "email": "hira.sheikh@example.com",
+    "phone": "+92 300 1234567",
+    "position": "کسٹمر سروس ریپریزنٹیٹو",
+    "location": "لاہور، پاکستان",
+    "summary": "چھ سال کا کسٹمر سروس تجربہ، پہلے ایک ٹیلی کام ہیلپ لائن پر اور اب برطانوی صارفین کے انٹرنیشنل اکاؤنٹ پر۔ زیادہ تر مسائل پہلی کال پر حل کرتی ہوں اور ناراض صارف کے ساتھ بھی پرسکون رہتی ہوں۔ انگریزی روانی سے۔",
+    "experiences": [
+        {
+            "company": "ایسٹ برج کانٹیکٹ سینٹر",
+            "position": "سینئر کسٹمر سروس ریپریزنٹیٹو، انٹرنیشنل اکاؤنٹ",
+            "location": "لاہور",
+            "companyUrl": "",
+            "startDate": "2023-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "برطانیہ کی ایک بجلی کمپنی کا اکاؤنٹ، نائٹ شفٹ، فون اور ای میل۔",
+            "achievements": [
+                {
+                    "text": "ہر شفٹ میں تقریبا 55 کالیں بل، میٹر ریڈنگ اور ادائیگی کے منصوبوں پر انگریزی میں"
+                },
+                {
+                    "text": "کلائنٹ کے ماہانہ کوالٹی جائزوں میں لگاتار چھ سہ ماہی 95 فیصد سے زیادہ اسکور"
+                },
+                {
+                    "text": "ٹیم لیڈ کی غیر موجودگی میں ایسکلیٹ ہونے والی کالیں سنبھالیں"
+                },
+                {
+                    "text": "12 نئے ایجنٹس کی پہلے دو ہفتوں میں بڈی کے طور پر رہنمائی کی"
+                }
+            ]
+        },
+        {
+            "company": "پنج لنک ٹیلی کام",
+            "position": "کسٹمر سروس ریپریزنٹیٹو، ہیلپ لائن",
+            "location": "لاہور",
+            "companyUrl": "",
+            "startDate": "2020-08",
+            "endDate": "2022-12",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "ہر شفٹ میں 70 سے 80 کالیں بل، نیٹ ورک کی خرابی اور پیکج کی تبدیلی پر، پہلی کال پر حل کی شرح 80 فیصد"
+                },
+                {
+                    "text": "ایک سال ریٹینشن ٹیم میں کنکشن ختم کرنے کی درخواستوں پر کام کیا"
+                },
+                {
+                    "text": "پنجابی بولنے والے صارفین کی کالیں اکثر میرے پاس منتقل کی جاتی تھیں"
+                }
+            ]
+        },
+        {
+            "company": "شالیمار مارٹ",
+            "position": "کیشیئر",
+            "location": "لاہور",
+            "companyUrl": "",
+            "startDate": "2018-07",
+            "endDate": "2020-07",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "ہر شفٹ میں 150 سے زیادہ گاہک، رمضان اور عید کا رش بھی شامل"
+                },
+                {
+                    "text": "گاہکوں کی تعریف پر دو بار مہینے کی بہترین ملازمہ"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "پنجاب یونیورسٹی",
+            "degree": "بی کام (آنرز)",
+            "fieldOfStudy": "",
+            "location": "لاہور",
+            "startDate": "2014-09",
+            "endDate": "2018-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "سی جی پی اے 3.2",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "محلہ ویلفیئر کمیٹی، جوہر ٹاؤن",
+            "organizationUrl": "",
+            "position": "رضاکار",
+            "location": "لاہور",
+            "startDate": "2021-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "رمضان راشن مہم میں خاندانوں کی رجسٹریشن اور رہنمائی۔",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "چینل",
+            "description": "ان باؤنڈ کالیں، ای میل، چیٹ"
+        },
+        {
+            "title": "سسٹم",
+            "description": "Salesforce Service Cloud، Genesys، Zendesk، MS Office"
+        },
+        {
+            "title": "دیگر",
+            "description": "ٹائپنگ 60 الفاظ فی منٹ، شکایات، ریٹینشن، نائٹ شفٹ"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "اردو",
+            "proficiency": "Native"
+        },
+        {
+            "name": "انگریزی",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "پنجابی",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "شکایات اور مشکل کالیں سنبھالنا",
+            "issuer": "پنج لنک ٹیلی کام، اندرونی تربیت",
+            "date": "2021-09",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "IELTS General Training، بینڈ 7.0",
+            "issuer": "British Council",
+            "date": "2022-10",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "education": 3,
+        "languages": 4,
+        "certificates": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

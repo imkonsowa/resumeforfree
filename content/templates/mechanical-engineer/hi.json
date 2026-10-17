@@ -1,0 +1,179 @@
+{
+    "version": "v1",
+    "firstName": "अनिकेत",
+    "lastName": "देशपांडे",
+    "email": "aniket.deshpande@example.com",
+    "phone": "+91 90000 47720",
+    "position": "सीनियर डिज़ाइन इंजीनियर",
+    "location": "पुणे, महाराष्ट्र",
+    "summary": "ऑटो कंपोनेंट, ट्रैक्टर और पंप उद्योग में नौ साल का अनुभव रखने वाला मैकेनिकल इंजीनियर। छोटी डिज़ाइन टीम लीड करता हूँ, प्रोडक्ट को रिक्वायरमेंट से SOP तक ले जाता हूँ और ऐसी ड्रॉइंग पर ज़ोर देता हूँ जिसे मशीनिस्ट पहली बार में समझ ले।",
+    "experiences": [
+        {
+            "company": "सह्याद्रि ऑटो कंपोनेंट्स",
+            "position": "सीनियर डिज़ाइन इंजीनियर",
+            "location": "चाकण, पुणे",
+            "companyUrl": "",
+            "startDate": "2021-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "चार इंजीनियरों की टीम के साथ टू-व्हीलर ब्रेक कैलिपर ब्रैकेट की नई रेंज का डिज़ाइन और SOP तक लॉन्च लीड किया"
+                },
+                {
+                    "text": "ब्रैकेट को वेल्डमेंट से एक फ़ोर्ज्ड पार्ट में बदला, प्रति पीस लागत 22% घटी और एक वेल्डिंग स्टेशन हटा"
+                },
+                {
+                    "text": "हर गेट पर प्रोडक्शन और क्वालिटी के साथ डिज़ाइन रिव्यू शुरू किए, देर से होने वाले बदलाव लगभग आधे हुए"
+                },
+                {
+                    "text": "दो जूनियर इंजीनियरों को उनके पहले पूरे प्रोडक्ट रिलीज़ में गाइड करता हूँ"
+                }
+            ]
+        },
+        {
+            "company": "कृषिमित्र ट्रैक्टर्स",
+            "position": "डिज़ाइन इंजीनियर",
+            "location": "नासिक, महाराष्ट्र",
+            "companyUrl": "",
+            "startDate": "2017-07",
+            "endDate": "2021-03",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "ट्रैक्टर हाइड्रोलिक लिफ़्ट की कास्ट हाउसिंग डिज़ाइन की, जो प्रोटोटाइप से सालाना 8,000 पीस तक पहुँची"
+                },
+                {
+                    "text": "नए लिफ़्ट सिलिंडर का DFMEA लीड किया और डिज़ाइन फ़्रीज़ से पहले 14 हाई-प्रायोरिटी जोखिम बंद किए"
+                },
+                {
+                    "text": "सील फ़ेल्योर का रूट कॉज़ टियरडाउन और प्रेशर डेटा से पकड़ा और छह हफ़्ते में सुधार रिलीज़ किया"
+                }
+            ]
+        },
+        {
+            "company": "जलधारा पंप्स",
+            "position": "ग्रेजुएट इंजीनियर ट्रेनी",
+            "location": "कोल्हापुर, महाराष्ट्र",
+            "companyUrl": "",
+            "startDate": "2016-07",
+            "endDate": "2017-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "SolidWorks में मोनोब्लॉक पंप के 60 पार्ट मॉडल किए और GD&T के साथ ड्रॉइंग अपडेट कीं"
+                },
+                {
+                    "text": "पंप टेस्ट बेंच के लिए डेटा शीट और टेस्ट प्रोसीजर तैयार किया"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "कॉलेज ऑफ़ इंजीनियरिंग, पुणे",
+            "degree": "बी.टेक, मैकेनिकल इंजीनियरिंग",
+            "fieldOfStudy": "",
+            "location": "पुणे, महाराष्ट्र",
+            "startDate": "2012-08",
+            "endDate": "2016-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "CAD और PLM",
+            "description": "SolidWorks, Creo, Windchill, AutoCAD"
+        },
+        {
+            "title": "एनालिसिस",
+            "description": "ANSYS Mechanical, हैंड कैलकुलेशन, टॉलरेंस स्टैक-अप"
+        },
+        {
+            "title": "मैन्युफ़ैक्चरिंग",
+            "description": "कास्टिंग, फ़ोर्जिंग, CNC मशीनिंग, शीट मेटल, DFM"
+        },
+        {
+            "title": "क्वालिटी",
+            "description": "GD&T, DFMEA, PFMEA, 8D, PPAP, IATF 16949"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "मराठी",
+            "proficiency": "Native"
+        },
+        {
+            "name": "हिंदी",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "अंग्रेज़ी",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "चार्टर्ड इंजीनियर (इंडिया), मैकेनिकल",
+            "issuer": "Institution of Engineers (India)",
+            "date": "2022-03",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified SolidWorks Professional (CSWP)",
+            "issuer": "Dassault Systèmes",
+            "date": "2018-09",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Six Sigma Green Belt",
+            "issuer": "Quality Council of India",
+            "date": "2019-11",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 5,
+        "projects": 6,
+        "volunteering": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "सर्टिफ़िकेट और सदस्यता"
+    },
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

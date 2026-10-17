@@ -1008,10 +1008,13 @@
         },
         "categories": {
             "technology": "技术",
+            "engineering": "工程",
             "healthcare": "医疗",
             "finance": "财务",
             "education": "教育",
             "business": "商业",
+            "creative": "创意设计",
+            "service": "客户服务与零售",
             "students": "学生"
         },
         "layouts": {

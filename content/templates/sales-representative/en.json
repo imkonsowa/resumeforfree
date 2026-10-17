@@ -1,0 +1,181 @@
+{
+    "version": "v1",
+    "firstName": "Megan",
+    "lastName": "Ortiz",
+    "email": "megan.ortiz@example.com",
+    "phone": "+1 555 014 7720",
+    "position": "Senior Territory Sales Representative",
+    "location": "Columbus, OH",
+    "summary": "B2B sales representative with ten years in field, inside and retail sales. I manage a 140-account packaging territory in central Ohio, beat quota in each of the last four years and do my best work on plant floors, where the buyer can see the product run.",
+    "experiences": [
+        {
+            "company": "Harlow Packaging Solutions",
+            "position": "Senior Territory Sales Representative",
+            "location": "Columbus, OH",
+            "companyUrl": "",
+            "startDate": "2021-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Manage 140 accounts in food, beverage and contract manufacturing with an annual quota of $1.6M"
+                },
+                {
+                    "text": "Reached 112% of quota in 2024 and 118% in 2025, second of 14 reps in the Midwest region"
+                },
+                {
+                    "text": "Opened 23 new accounts in 2025 with an average first-year order of $38K, mostly through plant visits and buyer referrals"
+                },
+                {
+                    "text": "Won back a lapsed $210K a year account by running a trial on their slowest packing line and fixing the waste problem before quoting"
+                },
+                {
+                    "text": "Keep a 3x pipeline in Salesforce and have forecast within 5% of actual for six quarters in a row"
+                }
+            ]
+        },
+        {
+            "company": "Northpoint Office Solutions",
+            "position": "Inside Sales Representative",
+            "location": "Columbus, OH",
+            "companyUrl": "",
+            "startDate": "2018-06",
+            "endDate": "2021-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Made 60 to 80 calls a day to small businesses for copiers, managed print and office supply contracts"
+                },
+                {
+                    "text": "Booked an average of 14 qualified meetings a month for field reps, the highest on a team of nine in 2020"
+                },
+                {
+                    "text": "Closed $480K in renewals and upgrades in 2020 by calling customers 90 days before their contracts ended"
+                }
+            ]
+        },
+        {
+            "company": "Lakeview Wireless",
+            "position": "Retail Sales Associate",
+            "location": "Columbus, OH",
+            "companyUrl": "",
+            "startDate": "2016-05",
+            "endDate": "2018-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Sold phones, plans and accessories in a busy mall store, often in the top three of 11 associates for monthly accessory sales"
+                },
+                {
+                    "text": "Trained four new hires on the point-of-sale system and the returns process"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "The Ohio State University",
+            "degree": "B.A. in Communication",
+            "fieldOfStudy": "",
+            "location": "Columbus, OH",
+            "startDate": "2012-08",
+            "endDate": "2016-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Junior Achievement of Central Ohio",
+            "organizationUrl": "",
+            "position": "Classroom Volunteer",
+            "location": "Columbus, OH",
+            "startDate": "2022-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Teach a five-week money skills program to middle school students each spring.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Selling",
+            "description": "Territory planning, prospecting, discovery calls, negotiation, account management"
+        },
+        {
+            "title": "Tools",
+            "description": "Salesforce, HubSpot, LinkedIn Sales Navigator, Outreach, Excel"
+        },
+        {
+            "title": "Products",
+            "description": "Corrugated and flexible packaging, labels, packing line equipment"
+        },
+        {
+            "title": "Other",
+            "description": "Valid driver's license, up to 40% travel"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "English",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Spanish",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Salesforce Certified Associate",
+            "issuer": "Salesforce",
+            "date": "2023-05",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Inbound Sales Certification",
+            "issuer": "HubSpot Academy",
+            "date": "2019-08",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "volunteering": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

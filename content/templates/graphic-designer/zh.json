@@ -1,0 +1,190 @@
+{
+    "version": "v1",
+    "firstName": "林晓雯",
+    "lastName": "",
+    "email": "linxiaowen@example.com",
+    "phone": "+86 139 1602 4472",
+    "position": "高级平面设计师",
+    "location": "上海",
+    "summary": "平面设计师，八年品牌视觉、包装和印刷品经验，服务过食品、金融和公益类客户。能从第一版草图一直跟到印厂签样，直接向客户提案，并带新人设计师。",
+    "experiences": [
+        {
+            "company": "拾光品牌设计（上海）有限公司",
+            "position": "高级平面设计师",
+            "location": "上海",
+            "companyUrl": "",
+            "startDate": "2022-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "独立品牌设计公司，12 人，客户以餐饮、零售和金融为主。",
+            "achievements": [
+                {
+                    "text": "主导一家区域性商业银行的品牌升级，包括标志、字体、色彩系统和 14 家网点的导视"
+                },
+                {
+                    "text": "根据工厂刀版设计 22 款糕点包装，上机看样一次通过，没有重印"
+                },
+                {
+                    "text": "直接向客户提案，大多数项目在两轮修改内定稿"
+                },
+                {
+                    "text": "每周组织作品点评和文件检查，带两名初级设计师"
+                }
+            ]
+        },
+        {
+            "company": "味道坊食品有限公司",
+            "position": "平面设计师，品牌部",
+            "location": "苏州",
+            "companyUrl": "",
+            "startDate": "2019-03",
+            "endDate": "2022-03",
+            "isPresent": false,
+            "description": "全国销售的糕点品牌，品牌部设计组共三人。",
+            "achievements": [
+                {
+                    "text": "负责中秋、春节营销物料在门店、电商详情页和公众号上的整套延展"
+                },
+                {
+                    "text": "把品牌规范手册改写成 30 页的实用指南，供经销商使用"
+                },
+                {
+                    "text": "搭建 Figma 推文配图模板，运营同事可以自己出图"
+                }
+            ]
+        },
+        {
+            "company": "申城印务有限公司",
+            "position": "平面设计（印前）",
+            "location": "上海",
+            "companyUrl": "",
+            "startDate": "2017-07",
+            "endDate": "2019-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "每月处理约 40 个印刷订单的文件，检查出血、色彩模式和拼版"
+                },
+                {
+                    "text": "为本地商户设计宣传单页、菜单和门头招牌"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "中国美术学院",
+            "degree": "视觉传达设计 本科",
+            "fieldOfStudy": "",
+            "location": "杭州",
+            "startDate": "2013-09",
+            "endDate": "2017-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "设计",
+            "description": "品牌视觉、字体与版式、包装设计、画册设计"
+        },
+        {
+            "title": "新媒体",
+            "description": "公众号配图、电商详情页、演示文稿模板"
+        },
+        {
+            "title": "软件",
+            "description": "Adobe Illustrator、InDesign、Photoshop、Figma、After Effects"
+        },
+        {
+            "title": "印前",
+            "description": "色彩管理、潘通专色、刀版、上机看样、烫金和 UV 工艺"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "portfolio",
+            "url": "https://example.com/linxiaowen"
+        }
+    ],
+    "projects": [
+        {
+            "title": "味道坊月饼礼盒升级",
+            "description": "六款月饼礼盒和配套手提袋的包装设计，负责设计和印刷跟进。",
+            "links": [
+                {
+                    "url": "https://example.com/linxiaowen/mooncake",
+                    "label": "作品集"
+                }
+            ],
+            "startDate": "2021-03",
+            "endDate": "2021-08",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "暖心食物银行年度报告",
+            "description": "48 页年度报告的印刷版和网页版，和一位文案合作，公益设计。",
+            "links": [
+                {
+                    "url": "https://example.com/linxiaowen/report",
+                    "label": "作品集"
+                }
+            ],
+            "startDate": "2024-03",
+            "endDate": "2024-06",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "中文",
+            "proficiency": "Native"
+        },
+        {
+            "name": "英语",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Adobe Certified Professional in Graphic Design and Illustration Using Adobe Illustrator",
+            "issuer": "Adobe",
+            "date": "2021-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "projects": 2,
+        "education": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "volunteering": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "projects": "代表作品"
+    },
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

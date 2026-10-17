@@ -1,0 +1,180 @@
+{
+    "version": "v1",
+    "firstName": "نورهان",
+    "lastName": "عبد الحميد",
+    "email": "nourhan.abdelhamid@example.com",
+    "phone": "+971 50 000 0148",
+    "position": "مديرة تسويق أولى",
+    "location": "دبي، الإمارات",
+    "summary": "مديرة تسويق بخبرة عشر سنوات بين البرمجيات والتجزئة في مصر والإمارات. أحدد مزيج القنوات والميزانية، وأبني فرقا صغيرة تدير الحملات من البداية للنهاية، وأكتب وأراجع المحتوى بالعربية والإنجليزية، وأرفع أثر التسويق على الإيرادات للإدارة كل ربع سنة.",
+    "experiences": [
+        {
+            "company": "مجموعة الواحة للأزياء",
+            "position": "مديرة تسويق أولى",
+            "location": "دبي، الإمارات",
+            "companyUrl": "",
+            "startDate": "2021-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "مجموعة تجزئة للأزياء بـ35 فرعا في الإمارات وعُمان ومتجر إلكتروني.",
+            "achievements": [
+                {
+                    "text": "أتولى الخطة السنوية للتسويق وميزانية 9 ملايين درهم على الإعلانات الرقمية والبحث والبريد وواتساب واللوحات والحملات داخل الفروع"
+                },
+                {
+                    "text": "نقلت ثلث ميزانية اللوحات الإعلانية إلى سناب شات وإنستغرام والبريد، فنمت المبيعات الإلكترونية 38% خلال سنتين دون زيادة الإنفاق الكلي"
+                },
+                {
+                    "text": "أطلقت برنامج ولاء مع فريقي إدارة العملاء والفروع وصل إلى 160 ألف عضو في سنته الأولى"
+                },
+                {
+                    "text": "أدرت حملات رمضان والجمعة البيضاء ثلاث سنوات متتالية، وبنيت فريقا من خمسة أشخاص وعينت ثلاثة منهم"
+                }
+            ]
+        },
+        {
+            "company": "منصة سهل للبرمجيات",
+            "position": "مديرة تسويق، توليد الطلب",
+            "location": "القاهرة، مصر",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2021-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "أدرت توليد الطلب لبرنامج المحاسبة السحابي بميزانية سنوية 6 ملايين جنيه على البحث المدفوع وLinkedIn والندوات والمعارض"
+                },
+                {
+                    "text": "أطلقت سلسلة ندوات إلكترونية شهرية مع فريق المنتج أصبحت أكبر مصدر للعملاء المحتملين المقبولين لدى المبيعات"
+                },
+                {
+                    "text": "اتفقت مع إدارة المبيعات على نموذج لتقييم العملاء المحتملين، فانخفض المرفوض منهم إلى النصف تقريبا"
+                },
+                {
+                    "text": "أدرت أخصائيين اثنين ووكالة إعلانات خارجية بهدف واضح لتكلفة الفرصة البيعية"
+                }
+            ]
+        },
+        {
+            "company": "وكالة النيل الرقمية",
+            "position": "أخصائية تسويق رقمي",
+            "location": "القاهرة، مصر",
+            "companyUrl": "",
+            "startDate": "2015-01",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "خططت وأدرت حملات Google Ads وفيسبوك لثمانية عملاء في العقارات والمطاعم والتعليم"
+                },
+                {
+                    "text": "ضبطت تتبع التحويلات وأعددت تقارير شهرية تُظهر تكلفة العميل المحتمل لكل قناة"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "جامعة القاهرة",
+            "degree": "بكالوريوس التجارة، تخصص تسويق",
+            "fieldOfStudy": "",
+            "location": "الجيزة، مصر",
+            "startDate": "2010-09",
+            "endDate": "2014-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "القنوات",
+            "description": "سناب شات، تيك توك، إنستغرام، البحث المدفوع، البريد، واتساب، SEO"
+        },
+        {
+            "title": "الاستراتيجية",
+            "description": "خطط دخول السوق، التموضع، الميزانيات، برامج الولاء، الحملات الموسمية"
+        },
+        {
+            "title": "الأدوات",
+            "description": "HubSpot، Salesforce، Google Ads، Meta Ads Manager، Snapchat Ads، Klaviyo"
+        },
+        {
+            "title": "التحليل",
+            "description": "GA4، Looker Studio، اختبارات A/B، الإسناد، Excel"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "العربية",
+            "proficiency": "Native"
+        },
+        {
+            "name": "الإنجليزية",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "الفرنسية",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Google Ads Search Certification",
+            "issuer": "Google",
+            "date": "2025-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Meta Certified Digital Marketing Associate",
+            "issuer": "Meta",
+            "date": "2024-04",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Inbound Marketing Certification",
+            "issuer": "HubSpot Academy",
+            "date": "2023-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "projects": 3,
+        "volunteering": 4,
+        "skills": 5,
+        "certificates": 6,
+        "languages": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

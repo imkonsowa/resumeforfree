@@ -1008,10 +1008,13 @@
         },
         "categories": {
             "technology": "التقنية",
+            "engineering": "الهندسة",
             "healthcare": "الرعاية الصحية",
             "finance": "المالية",
             "education": "التعليم",
             "business": "الأعمال",
+            "creative": "التصميم والإبداع",
+            "service": "خدمة العملاء والتجزئة",
             "students": "الطلاب"
         },
         "layouts": {

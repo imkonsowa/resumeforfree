@@ -1,0 +1,169 @@
+{
+    "version": "v1",
+    "firstName": "Claire",
+    "lastName": "Roussel",
+    "email": "claire.roussel@example.com",
+    "phone": "+33 6 47 21 08 93",
+    "position": "Ingénieure conception mécanique senior",
+    "location": "Toulouse",
+    "summary": "Ingénieure mécanique avec neuf ans en aérostructures et machines spéciales. J'encadre de petites équipes de conception, je porte les produits de la spécification au lancement en série et je tiens à des plans qu'un usineur comprend du premier coup.",
+    "experiences": [
+        {
+            "company": "Garonne Aérostructures",
+            "position": "Ingénieure conception senior",
+            "location": "Colomiers",
+            "companyUrl": "",
+            "startDate": "2021-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Encadrement de quatre ingénieurs sur la conception de ferrures et de supports pour une nouvelle famille de pièces de fuselage"
+                },
+                {
+                    "text": "Reconception d'une ferrure en usinage dans la masse, masse réduite de 12 % avec justification statique validée par le client"
+                },
+                {
+                    "text": "Mise en place de revues avec la production et les achats à chaque jalon, modifications tardives divisées par deux environ"
+                },
+                {
+                    "text": "Analyse de cause d'une non-conformité récurrente fournisseur et correction diffusée en six semaines"
+                }
+            ]
+        },
+        {
+            "company": "Ateliers Mécaniques du Lauragais",
+            "position": "Ingénieure bureau d'études",
+            "location": "Castelnaudary",
+            "companyUrl": "",
+            "startDate": "2017-09",
+            "endDate": "2021-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Conception sous SolidWorks de systèmes d'alimentation et de manutention pour machines spéciales, jusqu'à la mise en service chez le client"
+                },
+                {
+                    "text": "Rédaction des analyses de risques et dossiers techniques directive Machines pour trois lignes"
+                },
+                {
+                    "text": "Passage d'une pièce usinée en fonderie sous pression avec le fournisseur, coût réduit de 40 %"
+                }
+            ]
+        },
+        {
+            "company": "Rail Sud Ingénierie",
+            "position": "Ingénieure conception, alternance",
+            "location": "Tarbes",
+            "companyUrl": "",
+            "startDate": "2014-09",
+            "endDate": "2017-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Modélisation et mise en plan de 60 pièces de tôlerie pour des aménagements intérieurs de voitures voyageurs"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "INSA Toulouse",
+            "degree": "Diplôme d'ingénieur, génie mécanique",
+            "fieldOfStudy": "",
+            "location": "Toulouse",
+            "startDate": "2014-09",
+            "endDate": "2017-08",
+            "isPresent": false,
+            "description": "Formation en alternance, projet de fin d'études sur l'allègement de structures intérieures ferroviaires",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "CAO et PLM",
+            "description": "CATIA V5, SolidWorks, ENOVIA, Windchill"
+        },
+        {
+            "title": "Calcul",
+            "description": "Nastran, ANSYS Mechanical, calcul manuel, chaînes de cotes"
+        },
+        {
+            "title": "Fabrication",
+            "description": "Usinage, tôlerie, fonderie, conception pour la fabrication"
+        },
+        {
+            "title": "Qualité",
+            "description": "Cotation ISO GPS, AMDEC, 8D, EN 9100"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Français",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Anglais",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Espagnol",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Lean Six Sigma Green Belt",
+            "issuer": "AFNOR Compétences",
+            "date": "2020-06",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Cotation fonctionnelle ISO GPS",
+            "issuer": "CETIM",
+            "date": "2019-02",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 5,
+        "projects": 6,
+        "volunteering": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "Certifications et habilitations"
+    },
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

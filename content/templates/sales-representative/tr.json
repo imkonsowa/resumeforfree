@@ -1,0 +1,173 @@
+{
+    "version": "v1",
+    "firstName": "Selin",
+    "lastName": "Arslan",
+    "email": "selin.arslan@example.com",
+    "phone": "+90 532 018 64 27",
+    "position": "Kıdemli Saha Satış Temsilcisi",
+    "location": "İzmir",
+    "summary": "Saha, telefonla ve mağaza satışında on yılı aşkın deneyime sahip satış temsilcisiyim. İzmir ve Manisa'da 150 sanayi müşterisinden oluşan bir portföyü yönetiyorum, son dört yılın her birinde hedefimi aştım ve en iyi sonucu müşterinin üretim hattının başında alıyorum.",
+    "experiences": [
+        {
+            "company": "Ege Ambalaj A.Ş.",
+            "position": "Kıdemli Saha Satış Temsilcisi",
+            "location": "İzmir",
+            "companyUrl": "",
+            "startDate": "2020-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Gıda, tarım ve tekstil sektöründen 150 müşterilik portföy, yıllık satış hedefi 28 milyon TL"
+                },
+                {
+                    "text": "2024'te hedefin %111'ini, 2025'te %117'sini gerçekleştirdim; bölgedeki 12 temsilci arasında ikinci oldum"
+                },
+                {
+                    "text": "2025'te 26 yeni müşteri kazandım, ilk yıl ortalama sipariş tutarı 850 bin TL"
+                },
+                {
+                    "text": "Yıllık 4,5 milyon TL'lik kaybedilmiş bir müşteriyi, paketleme hattında deneme yapıp fire sorununu çözerek geri kazandım"
+                },
+                {
+                    "text": "Ziyaret raporlarını ve fırsatları Salesforce'ta tutuyorum; son altı çeyrekte tahmin sapması %6'nın altında"
+                }
+            ]
+        },
+        {
+            "company": "Körfez Ofis Ürünleri Ltd. Şti.",
+            "position": "Satış Temsilcisi (Telefonla Satış)",
+            "location": "İzmir",
+            "companyUrl": "",
+            "startDate": "2017-09",
+            "endDate": "2020-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "KOBİ'lere fotokopi makinesi, yazıcı ve sarf malzemesi satışı için günde 60 ile 80 arama"
+                },
+                {
+                    "text": "Saha ekibine ayda ortalama 14 nitelikli randevu ayarladım"
+                },
+                {
+                    "text": "Sözleşme yenileme oranını, müşterileri bitişten üç ay önce arayarak %79'dan %88'e çıkardım"
+                }
+            ]
+        },
+        {
+            "company": "Mavi Nokta Elektronik",
+            "position": "Mağaza Satış Danışmanı",
+            "location": "İzmir",
+            "companyUrl": "",
+            "startDate": "2015-07",
+            "endDate": "2017-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Telefon, beyaz eşya ve aksesuar satışı; 2016'da mağazada uzatılmış garanti satışında birinci"
+                },
+                {
+                    "text": "Yeni başlayan dört çalışana kasa ve iade süreçlerini öğrettim"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Dokuz Eylül Üniversitesi",
+            "degree": "İşletme, Lisans",
+            "fieldOfStudy": "",
+            "location": "İzmir",
+            "startDate": "2011-09",
+            "endDate": "2015-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Satış",
+            "description": "Bölge planlama, yeni müşteri bulma, ihtiyaç analizi, pazarlık, portföy yönetimi"
+        },
+        {
+            "title": "Araçlar",
+            "description": "Salesforce, Logo Tiger, Excel, LinkedIn Sales Navigator"
+        },
+        {
+            "title": "Ürünler",
+            "description": "Oluklu mukavva, esnek ambalaj, etiket, paketleme hatları"
+        },
+        {
+            "title": "Diğer",
+            "description": "B sınıfı ehliyet, aktif araç kullanımı, seyahat engeli yok"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Türkçe",
+            "proficiency": "Native"
+        },
+        {
+            "name": "İngilizce",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Almanca",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Satış ve Müzakere Teknikleri Eğitimi",
+            "issuer": "İzmir Ticaret Odası",
+            "date": "2021-03",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Salesforce Certified Associate",
+            "issuer": "Salesforce",
+            "date": "2023-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "volunteering": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

@@ -1,0 +1,151 @@
+{
+    "version": "v1",
+    "firstName": "Merve",
+    "lastName": "Aksoy",
+    "email": "merve.aksoy@example.com",
+    "phone": "+90 532 418 27 64",
+    "position": "Kasiyer ve Satış Danışmanı",
+    "location": "Bursa",
+    "summary": "Yoğun bir mahalle marketinde iki yıldır yarı zamanlı kasiyerlik yapıyorum, öncesinde bir kitapçıda dönemlik çalıştım. Bu yıl kasa kapanışlarımda açık ya da fazla çıkmadı, iade, self servis kasa ve yaş kontrolü konularında deneyimliyim. Akşam vardiyalarına ve hafta sonlarına uygunum, tam zamanlıya geçmeye de açığım.",
+    "experiences": [
+        {
+            "company": "Yeşilyurt Market Nilüfer Şubesi",
+            "position": "Kasiyer (yarı zamanlı)",
+            "location": "Bursa",
+            "companyUrl": "",
+            "startDate": "2024-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Altı kasalı ve dört self servis kasalı mahalle marketi, haftada 25 saat.",
+            "achievements": [
+                {
+                    "text": "Nakit, kredi kartı, temassız ve yemek kartıyla ödeme alıyorum; cumartesi akşamları kasada sıra hiç bitmiyor"
+                },
+                {
+                    "text": "Ocak 2026'dan beri kasa kapanışlarımda fark çıkmadı; akşam kasa boşaltma ve kasaya teslim işini bana veriyorlar"
+                },
+                {
+                    "text": "Haftada iki akşam self servis kasalardan sorumluyum: yaş kontrolü, iptal onayı, meyve sebze tartımı"
+                },
+                {
+                    "text": "Üç yeni çalışana kasa, kampanya kuralları ve açılış listesi konusunda ilk haftalarında eşlik ettim"
+                }
+            ]
+        },
+        {
+            "company": "Kitap Durağı",
+            "position": "Kasa ve Satış Elemanı (okul dönemi, part-time)",
+            "location": "Bursa",
+            "companyUrl": "",
+            "startDate": "2023-08",
+            "endDate": "2023-10",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Okul açılış döneminde kasa ve paketleme yaptım"
+                },
+                {
+                    "text": "Depodan gelen kırtasiye ürünlerini raflara yerleştirip etiketledim"
+                },
+                {
+                    "text": "Dakikliğim sayesinde yılbaşı dönemi için tekrar çağrıldım"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Yıldırım Perakende Mesleki ve Teknik Anadolu Lisesi",
+            "degree": "Pazarlama ve Perakende Alanı, Lise Diploması",
+            "fieldOfStudy": "",
+            "location": "Bursa",
+            "startDate": "2020-09",
+            "endDate": "2024-06",
+            "isPresent": false,
+            "description": "12. sınıfta işletmelerde mesleki eğitim kapsamında bir zincir markette staj.",
+            "graduationScore": "82,4 / 100",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Mahalle Dayanışma Derneği",
+            "organizationUrl": "",
+            "position": "Gönüllü",
+            "location": "Bursa",
+            "startDate": "2023-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Ayda bir cumartesi gıda kolisi hazırlama ve dağıtım.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Kasa",
+            "description": "Nakit ve kartlı ödeme, para üstü, kasa açılış ve kapanışı, iade ve iptal, yemek kartı, self servis kasa"
+        },
+        {
+            "title": "Mağaza",
+            "description": "Reyon dizimi, etiket ve fiyat kontrolü, son kullanma tarihi kontrolü, sayım, yaş kontrolü"
+        },
+        {
+            "title": "Müşteri",
+            "description": "Güler yüzlü hizmet, şikâyet yönetimi, sadakat kartı üyeliği"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Türkçe",
+            "proficiency": "Native"
+        },
+        {
+            "name": "İngilizce",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Hijyen Eğitimi Sertifikası",
+            "issuer": "Halk Eğitim Merkezi",
+            "date": "2024-08",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Temel İlk Yardım Sertifikası",
+            "issuer": "Onaylı ilk yardım eğitim merkezi",
+            "date": "2025-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

@@ -46,8 +46,8 @@ describe('i18n Locale System', () => {
         }
     });
 
-    it('en.json has 741 leaf keys', () => {
-        expect(enKeys.length).toBe(741);
+    it('en.json has 744 leaf keys', () => {
+        expect(enKeys.length).toBe(744);
     });
 
     describe.each(NEW_LOCALES)('locale "%s" parity with en.json', (locale) => {

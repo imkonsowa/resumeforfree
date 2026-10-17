@@ -1,0 +1,194 @@
+{
+    "version": "v1",
+    "firstName": "Camille",
+    "lastName": "Delattre",
+    "email": "camille.delattre@example.com",
+    "phone": "+33 6 71 28 45 93",
+    "position": "Data analyst confirmé",
+    "location": "Lille",
+    "summary": "Data analyst avec cinq ans d'expérience dans la grande distribution et l'assurance. J'écris du SQL tous les jours, je construis des tableaux de bord que les équipes métier ouvrent vraiment, et j'aime transformer une question floue en indicateur clair.",
+    "experiences": [
+        {
+            "company": "Maison Verlaine Distribution",
+            "position": "Data analyst confirmé",
+            "location": "Lille",
+            "companyUrl": "",
+            "startDate": "2022-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Responsable des tableaux de bord hebdomadaires de ventes et de stocks sous Power BI, utilisés par 60 directeurs de magasin et la direction commerciale"
+                },
+                {
+                    "text": "Analyse des démarques sur 140 magasins qui a mis en évidence un problème de commande sur les produits frais, corrigé avec les approvisionneurs"
+                },
+                {
+                    "text": "Remplacement d'un reporting Excel mensuel par des requêtes SQL et des modèles dbt sur BigQuery : deux jours de travail manuel en moins chaque mois"
+                },
+                {
+                    "text": "Mise en place, avec l'équipe e-commerce, d'une méthode commune pour lancer et lire les tests A/B du site"
+                }
+            ]
+        },
+        {
+            "company": "Mutuelle des Flandres",
+            "position": "Data analyst",
+            "location": "Lille",
+            "companyUrl": "",
+            "startDate": "2020-09",
+            "endDate": "2022-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Modèle de prévision des résiliations en Python, repris par le contrôle de gestion pour le budget annuel"
+                },
+                {
+                    "text": "Segmentation des adhérents utilisée pour préparer trois campagnes de fidélisation"
+                },
+                {
+                    "text": "Documentation des 50 tables principales de l'entrepôt de données et d'un glossaire des indicateurs"
+                }
+            ]
+        },
+        {
+            "company": "Transports Lambersart",
+            "position": "Data analyst en alternance",
+            "location": "Roubaix",
+            "companyUrl": "",
+            "startDate": "2018-09",
+            "endDate": "2020-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Suivi hebdomadaire des délais de livraison sous Excel et SQL Server pour l'équipe exploitation"
+                },
+                {
+                    "text": "Automatisation de la consolidation des fichiers agences avec Power Query, environ quatre heures gagnées par semaine"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Université de Lille",
+            "degree": "Master Statistique et science des données (en alternance)",
+            "fieldOfStudy": "",
+            "location": "Villeneuve-d'Ascq",
+            "startDate": "2018-09",
+            "endDate": "2020-07",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        },
+        {
+            "institution": "Université de Lille",
+            "degree": "Licence Mathématiques appliquées et sciences sociales (MIASHS)",
+            "fieldOfStudy": "",
+            "location": "Villeneuve-d'Ascq",
+            "startDate": "2015-09",
+            "endDate": "2018-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Données",
+            "description": "SQL (PostgreSQL, BigQuery, SQL Server), dbt, modélisation"
+        },
+        {
+            "title": "Analyse",
+            "description": "Python (pandas), R, tests A/B, analyse de cohortes, prévisions"
+        },
+        {
+            "title": "BI et reporting",
+            "description": "Power BI (DAX), Tableau, Excel (tableaux croisés dynamiques, Power Query)"
+        },
+        {
+            "title": "Méthode",
+            "description": "Recueil des besoins, restitution aux équipes métier, documentation, RGPD"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        },
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Le V'Lille au fil des saisons",
+            "description": "Tableau de bord public construit à partir des données ouvertes de la métropole : trajets par station, heure et météo, avec le code SQL et une courte analyse.",
+            "links": [
+                {
+                    "url": "https://github.com/example/vlille-analyse",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2024-02",
+            "endDate": "2024-05",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Français",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Anglais",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Néerlandais",
+            "proficiency": "Basic"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Microsoft Certified: Power BI Data Analyst Associate",
+            "issuer": "Microsoft",
+            "date": "2023-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "projects": 2,
+        "education": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "volunteering": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

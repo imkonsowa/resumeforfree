@@ -1008,10 +1008,13 @@
         },
         "categories": {
             "technology": "टेक्नोलॉजी",
+            "engineering": "इंजीनियरिंग",
             "healthcare": "स्वास्थ्य",
             "finance": "वित्त",
             "education": "शिक्षा",
             "business": "व्यवसाय",
+            "creative": "क्रिएटिव",
+            "service": "ग्राहक सेवा और रिटेल",
             "students": "छात्र"
         },
         "layouts": {

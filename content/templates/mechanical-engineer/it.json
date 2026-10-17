@@ -1,0 +1,169 @@
+{
+    "version": "v1",
+    "firstName": "Davide",
+    "lastName": "Marchetti",
+    "email": "davide.marchetti@example.com",
+    "phone": "+39 347 218 6604",
+    "position": "Progettista meccanico senior",
+    "location": "Bologna",
+    "summary": "Ingegnere meccanico con nove anni tra macchine automatiche per il packaging e oleodinamica. Coordino piccoli gruppi di progettazione, porto le macchine dalla specifica al collaudo presso il cliente e tengo a disegni che l'officina capisce alla prima lettura.",
+    "experiences": [
+        {
+            "company": "Reno Packaging Machines S.p.A.",
+            "position": "Progettista meccanico senior",
+            "location": "Casalecchio di Reno (BO)",
+            "companyUrl": "",
+            "startDate": "2021-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Coordino quattro progettisti nello sviluppo di una nuova astucciatrice, dal concept alle prime 25 macchine consegnate"
+                },
+                {
+                    "text": "Ridotto il cambio formato da 45 a 15 minuti con riferimenti rapidi e parti a sgancio"
+                },
+                {
+                    "text": "Introdotte revisioni di progetto con produzione e assistenza a ogni fase, modifiche tardive circa dimezzate"
+                },
+                {
+                    "text": "Redatte analisi dei rischi e fascicoli tecnici secondo la Direttiva Macchine per tre linee"
+                }
+            ]
+        },
+        {
+            "company": "Oleodinamica Emiliana S.r.l.",
+            "position": "Ingegnere di prodotto",
+            "location": "Modena",
+            "companyUrl": "",
+            "startDate": "2017-05",
+            "endDate": "2021-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Progettato un corpo distributore in fusione passato dal prototipo a 8.000 pezzi l'anno"
+                },
+                {
+                    "text": "Condotta la FMEA di progetto di una nuova serie di valvole, chiusi 14 rischi prioritari prima del congelamento"
+                },
+                {
+                    "text": "Trovata la causa di un cedimento delle guarnizioni in campo e rilasciata la correzione in sei settimane"
+                }
+            ]
+        },
+        {
+            "company": "Termotecnica Felsinea S.r.l.",
+            "position": "Ingegnere junior, ufficio tecnico",
+            "location": "Bologna",
+            "companyUrl": "",
+            "startDate": "2015-09",
+            "endDate": "2017-04",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Modellati e messi in tavola in SolidWorks 60 particolari per una nuova unità di trattamento aria"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Università di Bologna",
+            "degree": "Laurea magistrale in Ingegneria Meccanica",
+            "fieldOfStudy": "",
+            "location": "Bologna",
+            "startDate": "2013-09",
+            "endDate": "2015-07",
+            "isPresent": false,
+            "description": "Tesi sperimentale su un banco prova per guarnizioni oleodinamiche",
+            "graduationScore": "108/110",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "CAD e PDM",
+            "description": "SolidWorks, Creo, SolidWorks PDM, AutoCAD"
+        },
+        {
+            "title": "Calcolo",
+            "description": "ANSYS Mechanical, calcolo a mano, catene di tolleranze"
+        },
+        {
+            "title": "Produzione",
+            "description": "Lamiera, lavorazioni CNC, fusione, progettazione per la produzione"
+        },
+        {
+            "title": "Qualità",
+            "description": "Quotatura GPS, FMEA, 8D, Direttiva Macchine"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Italiano",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Inglese",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Tedesco",
+            "proficiency": "Basic"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Abilitazione all'esercizio della professione di ingegnere, iscrizione all'Albo di Bologna, Sezione A",
+            "issuer": "Ordine degli Ingegneri della Provincia di Bologna",
+            "date": "2016-03",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Six Sigma Green Belt",
+            "issuer": "AICQ",
+            "date": "2019-10",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "education": 3,
+        "certificates": 4,
+        "languages": 5,
+        "projects": 6,
+        "volunteering": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "Abilitazioni e certificazioni"
+    },
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

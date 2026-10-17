@@ -1,0 +1,176 @@
+{
+    "version": "v1",
+    "firstName": "Megan",
+    "lastName": "Torres",
+    "email": "megan.torres@example.com",
+    "phone": "+1 512 555 0148",
+    "position": "Senior Marketing Manager",
+    "location": "Austin, TX",
+    "summary": "Marketing manager with ten years across B2B software and consumer retail. I set the channel mix and budget, build small teams that run campaigns end to end, and report revenue impact to the executive team every quarter.",
+    "experiences": [
+        {
+            "company": "Hill Country Outfitters",
+            "position": "Senior Marketing Manager",
+            "location": "Austin, TX",
+            "companyUrl": "",
+            "startDate": "2021-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Outdoor gear retailer with 40 stores in Texas and an online shop.",
+            "achievements": [
+                {
+                    "text": "Own the annual marketing plan and $2.4M budget across paid social, search, email, print and in-store campaigns"
+                },
+                {
+                    "text": "Moved a third of the print budget into paid social and email; online revenue grew 38% over two years with no increase in total spend"
+                },
+                {
+                    "text": "Launched a loyalty program with the CRM and store teams that reached 180,000 members in its first year"
+                },
+                {
+                    "text": "Built a team of five covering performance, content, CRM and design, and hired three of them"
+                }
+            ]
+        },
+        {
+            "company": "Lakeline Software",
+            "position": "Marketing Manager, Demand Generation",
+            "location": "Austin, TX",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2021-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Ran demand generation for the mid-market product with a $900K annual budget across paid search, LinkedIn, webinars and events"
+                },
+                {
+                    "text": "Started a monthly webinar series with product managers that became the largest source of sales-accepted leads"
+                },
+                {
+                    "text": "Agreed a lead scoring model with sales leadership, cutting leads returned as unqualified by about half"
+                },
+                {
+                    "text": "Managed two specialists and an external paid media agency against a cost per opportunity target"
+                }
+            ]
+        },
+        {
+            "company": "Brightwater Agency",
+            "position": "Digital Marketing Specialist",
+            "location": "San Antonio, TX",
+            "companyUrl": "",
+            "startDate": "2015-01",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Planned and ran Google Ads and Facebook campaigns for eight local and regional clients"
+                },
+                {
+                    "text": "Set up conversion tracking and monthly reports so clients could see cost per lead by channel"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Texas State University",
+            "degree": "B.B.A. in Marketing",
+            "fieldOfStudy": "",
+            "location": "San Marcos, TX",
+            "startDate": "2010-08",
+            "endDate": "2014-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Channels",
+            "description": "Paid social, paid search, email, SEO, events, retail promotions"
+        },
+        {
+            "title": "Strategy",
+            "description": "Go-to-market, positioning, budget planning, loyalty, product launches"
+        },
+        {
+            "title": "Tools",
+            "description": "HubSpot, Salesforce, Google Ads, Meta Ads Manager, Klaviyo, Semrush"
+        },
+        {
+            "title": "Analytics",
+            "description": "GA4, Looker Studio, A/B testing, attribution, Excel"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "English",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Spanish",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Google Ads Search Certification",
+            "issuer": "Google",
+            "date": "2025-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Google Analytics Certification",
+            "issuer": "Google",
+            "date": "2024-09",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Inbound Marketing Certification",
+            "issuer": "HubSpot Academy",
+            "date": "2023-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "projects": 3,
+        "volunteering": 4,
+        "skills": 5,
+        "certificates": 6,
+        "languages": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

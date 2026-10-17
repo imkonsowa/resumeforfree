@@ -1,0 +1,169 @@
+{
+    "version": "v1",
+    "firstName": "مريم",
+    "lastName": "عبد الرحمن",
+    "email": "mariam.abdelrahman@example.com",
+    "phone": "+20 100 123 4567",
+    "position": "ممثلة خدمة عملاء",
+    "location": "القاهرة، مصر",
+    "summary": "ممثلة خدمة عملاء بخبرة ست سنوات في الكول سنتر، لحساب شركة اتصالات ثم لحساب متجر إلكتروني سعودي. أحل معظم الطلبات من أول اتصال وأحافظ على هدوئي مع العملاء الغاضبين. إنجليزية بطلاقة وأفهم اللهجة الخليجية جيدا.",
+    "experiences": [
+        {
+            "company": "الأفق لخدمات مراكز الاتصال",
+            "position": "ممثلة خدمة عملاء أولى، حساب متجر إلكتروني",
+            "location": "القاهرة الجديدة (عمل هجين)",
+            "companyUrl": "",
+            "startDate": "2023-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "خدمة عملاء بالهاتف والشات لمتجر إلكتروني للأجهزة المنزلية في السعودية.",
+            "achievements": [
+                {
+                    "text": "التعامل مع نحو 60 مكالمة ومحادثة يوميا حول الطلبات وتأخر الشحن والمرتجعات والاسترداد"
+                },
+                {
+                    "text": "درجة جودة أعلى من 95% في التقييمات الشهرية لستة أرباع متتالية"
+                },
+                {
+                    "text": "استلام المكالمات المصعدة في الشيفت المسائي وحل أغلبها دون تعويض مالي"
+                },
+                {
+                    "text": "تدريب 12 موظفا جديدا خلال أسبوعيهم الأولين على الخط"
+                }
+            ]
+        },
+        {
+            "company": "دلتا نت للاتصالات",
+            "position": "ممثلة خدمة عملاء، كول سنتر",
+            "location": "مدينة نصر، القاهرة",
+            "companyUrl": "",
+            "startDate": "2020-08",
+            "endDate": "2023-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "الرد على 70 إلى 80 مكالمة في الشيفت حول الفواتير والأعطال وتغيير الباقات، ونسبة حل من أول اتصال 80%"
+                },
+                {
+                    "text": "العمل سنة في فريق الاحتفاظ بالعملاء على طلبات إلغاء الاشتراك"
+                },
+                {
+                    "text": "دعم الخط الإنجليزي للمشتركين الأجانب يومين في الأسبوع"
+                }
+            ]
+        },
+        {
+            "company": "سوبر ماركت الواحة",
+            "position": "كاشير",
+            "location": "مصر الجديدة، القاهرة",
+            "companyUrl": "",
+            "startDate": "2018-07",
+            "endDate": "2020-07",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "خدمة أكثر من 150 عميلا في الشيفت، بما في ذلك مواسم رمضان والأعياد"
+                },
+                {
+                    "text": "اختياري موظفة الشهر مرتين بناء على تقييمات العملاء"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "جامعة عين شمس، كلية التجارة",
+            "degree": "بكالوريوس التجارة، شعبة إدارة الأعمال باللغة الإنجليزية",
+            "fieldOfStudy": "",
+            "location": "القاهرة",
+            "startDate": "2014-09",
+            "endDate": "2018-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "جيد جدا",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "جمعية أهالي مصر الجديدة",
+            "organizationUrl": "",
+            "position": "متطوعة في الاستقبال",
+            "location": "القاهرة",
+            "startDate": "2021-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "استقبال الأسر وتوجيهها في حملات توزيع شهر رمضان.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "القنوات",
+            "description": "مكالمات واردة، شات، بريد إلكتروني، واتساب للأعمال"
+        },
+        {
+            "title": "الأنظمة",
+            "description": "Salesforce Service Cloud، Zendesk، Genesys، Microsoft Office"
+        },
+        {
+            "title": "أخرى",
+            "description": "كتابة سريعة بالعربية والإنجليزية، التعامل مع الشكاوى، الاحتفاظ بالعملاء، العمل بنظام الشيفتات"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "العربية",
+            "proficiency": "Native"
+        },
+        {
+            "name": "الإنجليزية",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "دورة التعامل مع العملاء الغاضبين",
+            "issuer": "تدريب داخلي، دلتا نت للاتصالات",
+            "date": "2021-09",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "IELTS Academic، الدرجة 7.0",
+            "issuer": "British Council",
+            "date": "2022-11",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "education": 3,
+        "languages": 4,
+        "certificates": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

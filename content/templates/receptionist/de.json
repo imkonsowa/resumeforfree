@@ -1,0 +1,161 @@
+{
+    "version": "v1",
+    "firstName": "Jana",
+    "lastName": "Krüger",
+    "email": "jana.krueger@example.com",
+    "phone": "+49 151 2288 4613",
+    "position": "Teamleiterin Empfang und Patientenanmeldung",
+    "location": "Hannover",
+    "summary": "Empfangsmitarbeiterin mit acht Jahren Erfahrung in Arztpraxis, Hotellerie und Kanzlei. Ich leite die Anmeldung einer Praxis mit acht Ärztinnen und Ärzten, kläre Überweisungen und Versicherungsfragen vor dem Termin, arbeite neue Kolleginnen ein und behalte auch an vollen Tagen den Überblick im Wartezimmer.",
+    "experiences": [
+        {
+            "company": "Hausarztzentrum Lindener Markt",
+            "position": "Teamleiterin Empfang",
+            "location": "Hannover",
+            "companyUrl": "",
+            "startDate": "2021-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Hausärztliche Gemeinschaftspraxis mit acht Ärztinnen und Ärzten, rund 160 Patientenkontakte und 250 Anrufe am Tag.",
+            "achievements": [
+                {
+                    "text": "Team von vier Empfangskräften geleitet: Dienstplan erstellt, Stoßzeiten abgedeckt und schwierige Gespräche am Tresen übernommen"
+                },
+                {
+                    "text": "Neue Patienten zwei Tage vor dem Ersttermin angerufen, um Überweisung und Unterlagen zu klären, deutlich weniger Rückfragen bei der Anmeldung"
+                },
+                {
+                    "text": "Termine, Recalls und Hausbesuche für acht Ärztinnen und Ärzte in Medatixx vergeben und Akutsprechstunden gefüllt"
+                },
+                {
+                    "text": "Einarbeitungsmappe für den Empfang geschrieben, die heute jede neue Kollegin bekommt"
+                }
+            ]
+        },
+        {
+            "company": "Parkhotel Eilenriede",
+            "position": "Rezeptionistin",
+            "location": "Hannover",
+            "companyUrl": "",
+            "startDate": "2018-05",
+            "endDate": "2021-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Bis zu 150 Gäste pro Schicht in einem Hotel mit 180 Zimmern in Opera an- und abgereist, auch zu Messezeiten"
+                },
+                {
+                    "text": "Zimmerwechsel, Rechnungsfragen und Beschwerden auf Deutsch und Englisch am Tresen und am Telefon geklärt"
+                },
+                {
+                    "text": "Schichtkasse abgerechnet und Kautionen verbucht, ohne offene Differenzen"
+                }
+            ]
+        },
+        {
+            "company": "Brauer & Sommer Rechtsanwälte",
+            "position": "Empfangsmitarbeiterin (Teilzeit)",
+            "location": "Hildesheim",
+            "companyUrl": "",
+            "startDate": "2016-08",
+            "endDate": "2018-04",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Mandanten empfangen und Anrufe für acht Anwältinnen und Anwälte weitergeleitet, mit verlässlichen Notizen an Gerichtstagen"
+                },
+                {
+                    "text": "Posteingang und Kurierlieferungen erfasst und Fristensachen an die Sekretariate weitergegeben"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "IHK Hannover, Ausbildungsbetrieb Steinmann Haustechnik GmbH",
+            "degree": "Ausbildung zur Kauffrau für Büromanagement",
+            "fieldOfStudy": "",
+            "location": "Hannover",
+            "startDate": "2013-08",
+            "endDate": "2016-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Empfang",
+            "description": "Patientenanmeldung, Check-in, Telefonzentrale, Deeskalation, Kassenführung"
+        },
+        {
+            "title": "Termine und Verwaltung",
+            "description": "Terminvergabe, Überweisungen, Versichertenkarten, Datenschutz, Ablage"
+        },
+        {
+            "title": "Software",
+            "description": "Medatixx, Opera, MS Office, Outlook, 10-Finger-Schreiben"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Deutsch",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Englisch (C1)",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Polnisch (B1)",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Weiterbildung Praxismanagement",
+            "issuer": "Ärztekammer Niedersachsen",
+            "date": "2023-05",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Erste-Hilfe-Kurs",
+            "issuer": "Deutsches Rotes Kreuz",
+            "date": "2025-02",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "languages": 3,
+        "education": 4,
+        "certificates": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

@@ -1,0 +1,161 @@
+{
+    "version": "v1",
+    "firstName": "Chiara",
+    "lastName": "Bellini",
+    "email": "chiara.bellini@example.com",
+    "phone": "+39 348 205 7716",
+    "position": "Coordinatrice della segreteria e accettazione",
+    "location": "Bologna",
+    "summary": "Coordinatrice della segreteria con otto anni tra poliambulatori, hotel e studi professionali. Organizzo l'accettazione per dodici specialisti, preparo i turni del banco, formo i nuovi colleghi e mantengo la sala d'attesa tranquilla anche nei giorni più pieni. Parlo inglese a livello C1 e spagnolo a livello B2.",
+    "experiences": [
+        {
+            "company": "Poliambulatorio San Vitale",
+            "position": "Coordinatrice della segreteria",
+            "location": "Bologna",
+            "companyUrl": "",
+            "startDate": "2021-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Struttura privata con dodici specialisti, circa 180 pazienti e 300 telefonate al giorno.",
+            "achievements": [
+                {
+                    "text": "Coordino quattro colleghe al banco: preparo i turni settimanali, copro le ore di punta e gestisco i reclami più delicati"
+                },
+                {
+                    "text": "Ho introdotto la telefonata di conferma ai nuovi pazienti due giorni prima della visita, con meno appuntamenti saltati e meno documenti mancanti"
+                },
+                {
+                    "text": "Gestisco agende, richiami e convenzioni con fondi sanitari per dodici specialisti"
+                },
+                {
+                    "text": "Ho scritto il manuale per i nuovi assunti su accettazione, fatturazione sanitaria e telefonate, oggi usato per ogni inserimento"
+                }
+            ]
+        },
+        {
+            "company": "Hotel Porta Galliera",
+            "position": "Addetta al ricevimento",
+            "location": "Bologna",
+            "companyUrl": "",
+            "startDate": "2018-04",
+            "endDate": "2021-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Gestivo check-in e check-out fino a 120 ospiti per turno in un hotel da 150 camere con Opera"
+                },
+                {
+                    "text": "Registravo gli ospiti su Alloggiati Web e riscuotevo l'imposta di soggiorno"
+                },
+                {
+                    "text": "Chiudevo la cassa di fine turno e preparavo il passaggio di consegne per il turno di notte"
+                }
+            ]
+        },
+        {
+            "company": "Studio Legale Ferri e Associati",
+            "position": "Receptionist (part-time)",
+            "location": "Modena",
+            "companyUrl": "",
+            "startDate": "2016-09",
+            "endDate": "2018-03",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Accoglievo i clienti e smistavo le chiamate per otto avvocati, prendendo messaggi precisi nei giorni di udienza"
+                },
+                {
+                    "text": "Registravo posta, raccomandate e PEC e seguivo i documenti in attesa di firma"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Istituto Tecnico per il Turismo Aldini",
+            "degree": "Diploma di istituto tecnico, indirizzo Turismo",
+            "fieldOfStudy": "",
+            "location": "Modena",
+            "startDate": "2011-09",
+            "endDate": "2016-07",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Accoglienza",
+            "description": "Accettazione pazienti e ospiti, centralino, gestione dei reclami, cassa e POS"
+        },
+        {
+            "title": "Agenda e pratiche",
+            "description": "Agende di più specialisti, fatturazione sanitaria, fondi sanitari, privacy GDPR"
+        },
+        {
+            "title": "Programmi",
+            "description": "Gestionale per poliambulatori, Opera, Microsoft 365, centralino VoIP"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Italiano",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Inglese (C1)",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Spagnolo (B2)",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Cambridge C1 Advanced",
+            "issuer": "Cambridge English",
+            "date": "2019-06",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Corso di primo soccorso aziendale",
+            "issuer": "Croce Blu Bologna",
+            "date": "2024-11",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "languages": 3,
+        "education": 4,
+        "certificates": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

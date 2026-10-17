@@ -1008,10 +1008,13 @@
         },
         "categories": {
             "technology": "Technik",
+            "engineering": "Ingenieurwesen",
             "healthcare": "Gesundheit",
             "finance": "Finanzen",
             "education": "Bildung",
             "business": "Wirtschaft",
+            "creative": "Kreativ",
+            "service": "Kundenservice und Handel",
             "students": "Studierende"
         },
         "layouts": {

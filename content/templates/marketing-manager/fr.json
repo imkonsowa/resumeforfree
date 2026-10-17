@@ -1,0 +1,177 @@
+{
+    "version": "v1",
+    "firstName": "Camille",
+    "lastName": "Rousseau",
+    "email": "camille.rousseau@example.com",
+    "phone": "+33 6 42 18 77 05",
+    "position": "Responsable marketing digital",
+    "location": "Lyon",
+    "summary": "Responsable marketing avec dix ans d'expérience entre e-commerce et logiciel B2B. Je fixe le mix de canaux et le budget, construis de petites équipes qui mènent les campagnes de bout en bout et présente chaque trimestre à la direction la contribution du marketing au chiffre d'affaires.",
+    "experiences": [
+        {
+            "company": "Maison Verdane SAS",
+            "position": "Responsable marketing digital",
+            "location": "Lyon",
+            "companyUrl": "",
+            "startDate": "2021-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Marque de cosmétiques vendue en ligne et dans 300 pharmacies.",
+            "achievements": [
+                {
+                    "text": "Pilote le plan marketing annuel et un budget de 1,9 million d'euros : social ads, SEA, CRM, print et partenariats"
+                },
+                {
+                    "text": "Un tiers du budget print réaffecté au social ads et au CRM ; chiffre d'affaires en ligne en hausse de 34 % en deux ans à budget constant"
+                },
+                {
+                    "text": "Programme de fidélité lancé avec les équipes CRM et service client, 120 000 membres la première année"
+                },
+                {
+                    "text": "Équipe de cinq personnes construite en acquisition, contenu, CRM et design"
+                }
+            ]
+        },
+        {
+            "company": "Presqu'île Logiciels SAS",
+            "position": "Responsable marketing, génération de leads",
+            "location": "Lyon",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2021-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Génération de leads de l'offre PME, budget annuel de 750 000 euros entre SEA, LinkedIn, webinaires et salons"
+                },
+                {
+                    "text": "Cycle de webinaires mensuels lancé avec les chefs de produit, devenu la première source de leads acceptés par les commerciaux"
+                },
+                {
+                    "text": "Scoring des leads défini avec la direction commerciale, leads rejetés en baisse d'environ moitié"
+                }
+            ]
+        },
+        {
+            "company": "Agence Croix-Rousse Conseil",
+            "position": "Chargée de marketing digital",
+            "location": "Grenoble",
+            "companyUrl": "",
+            "startDate": "2015-01",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Campagnes Google Ads et Facebook pour huit clients régionaux, de la stratégie au bilan mensuel"
+                },
+                {
+                    "text": "Suivi des conversions et rapports mensuels du coût par lead par canal"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "IAE Lyon, Université Jean Moulin",
+            "degree": "Master Marketing",
+            "fieldOfStudy": "",
+            "location": "Lyon",
+            "startDate": "2012-09",
+            "endDate": "2014-09",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Canaux",
+            "description": "Social ads, SEA, emailing, SEO, partenariats"
+        },
+        {
+            "title": "Stratégie",
+            "description": "Go-to-market, positionnement, budget, fidélisation"
+        },
+        {
+            "title": "Outils",
+            "description": "HubSpot, Salesforce, Google Ads, Meta Business Suite, Semrush"
+        },
+        {
+            "title": "Analyse",
+            "description": "GA4, Looker Studio, tests A/B, attribution, Excel"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Français",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Anglais",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Espagnol",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Google Ads Search Certification",
+            "issuer": "Google",
+            "date": "2025-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Google Analytics Certification",
+            "issuer": "Google",
+            "date": "2024-09",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Inbound Marketing Certification",
+            "issuer": "HubSpot Academy",
+            "date": "2023-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "projects": 3,
+        "volunteering": 4,
+        "skills": 5,
+        "certificates": 6,
+        "languages": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

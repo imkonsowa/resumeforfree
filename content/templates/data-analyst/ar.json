@@ -1,0 +1,199 @@
+{
+    "version": "v1",
+    "firstName": "ريم",
+    "lastName": "الشريف",
+    "email": "reem.alsharif@example.com",
+    "phone": "+971 50 000 4836",
+    "position": "محللة بيانات أولى",
+    "location": "دبي، الإمارات",
+    "summary": "محللة بيانات بخبرة ست سنوات في التجزئة والتجارة الإلكترونية بين القاهرة ودبي. أكتب SQL يوميا، وأبني لوحات متابعة يفتحها المديرون فعلا، وأحب تحويل سؤال عام من الإدارة إلى رقم واضح يمكن اتخاذ قرار بناء عليه.",
+    "experiences": [
+        {
+            "company": "مجموعة واحة الخليج للتجزئة",
+            "position": "محللة بيانات أولى",
+            "location": "دبي، الإمارات",
+            "companyUrl": "",
+            "startDate": "2023-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "مسؤولة عن لوحات المبيعات والمخزون الأسبوعية في Power BI، ويستخدمها 35 مدير فرع وفريق المشتريات في الإمارات وعُمان"
+                },
+                {
+                    "text": "أعدت بناء تقرير التخفيضات الموسمية باستخدام SQL وdbt، فتحول من عمل يدوي يستغرق يومين إلى تحديث تلقائي كل أحد صباحا"
+                },
+                {
+                    "text": "حللت أسباب المرتجعات في نحو مليون طلب إلكتروني، ووجدت مشكلة في جداول المقاسات لخطين من المنتجات أدت إلى تعديلها وتراجع المرتجعات"
+                },
+                {
+                    "text": "صممت مع فريق المنتج اختبارات A/B على صفحة الدفع، وكتبت دليل الاختبارات الذي يعتمده الفريق الآن"
+                }
+            ]
+        },
+        {
+            "company": "سوق النيل الإلكتروني",
+            "position": "محللة بيانات",
+            "location": "القاهرة، مصر",
+            "companyUrl": "",
+            "startDate": "2020-09",
+            "endDate": "2023-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "بنيت نموذجا شهريا للاحتفاظ بالعملاء بلغة Python، واستخدمته الإدارة المالية في توقعات الإيرادات"
+                },
+                {
+                    "text": "أعددت تقارير الشرائح الزمنية (Cohorts) في Looker Studio لتعرف خدمة العملاء أي خطوات التسجيل تبقي العميل بعد الشهر الثالث"
+                },
+                {
+                    "text": "نظفت ووثقت 50 جدولا أساسيا في مستودع البيانات، فقلت الأسئلة المتكررة التي تصل إلى فريق البيانات"
+                }
+            ]
+        },
+        {
+            "company": "شركة دلتا للأدوية والتوزيع",
+            "position": "محللة تقارير مبتدئة",
+            "location": "القاهرة، مصر",
+            "companyUrl": "",
+            "startDate": "2019-07",
+            "endDate": "2020-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "أعددت تقارير المبيعات الأسبوعية في Excel وSQL Server لمديري المناطق في ثماني محافظات"
+                },
+                {
+                    "text": "استبدلت خطوات النسخ واللصق بـ Power Query، ووفرت نحو أربع ساعات أسبوعيا"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "جامعة القاهرة",
+            "degree": "بكالوريوس الإحصاء، كلية الاقتصاد والعلوم السياسية",
+            "fieldOfStudy": "",
+            "location": "الجيزة، مصر",
+            "startDate": "2015-09",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "البيانات",
+            "description": "SQL (PostgreSQL وSQL Server وBigQuery)، dbt، نمذجة البيانات"
+        },
+        {
+            "title": "التحليل",
+            "description": "Python (pandas)، R، اختبارات A/B، تحليل الشرائح ومسار التحويل، التنبؤ"
+        },
+        {
+            "title": "ذكاء الأعمال",
+            "description": "Power BI، Tableau، Looker Studio، Excel (الجداول المحورية وPower Query)"
+        },
+        {
+            "title": "أسلوب العمل",
+            "description": "جمع المتطلبات، عرض النتائج للإدارة، التوثيق"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        },
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "حركة مترو دبي",
+            "description": "لوحة Tableau عامة مبنية على بيانات دبي المفتوحة، تعرض الرحلات حسب المحطة والساعة ويوم الأسبوع، مع استعلامات SQL وملخص قصير لما تغير بعد افتتاح محطات جديدة.",
+            "links": [
+                {
+                    "url": "https://public.tableau.com/app/profile/example",
+                    "label": "Tableau Public"
+                }
+            ],
+            "startDate": "2024-02",
+            "endDate": "2024-04",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "متتبع أسعار السلع الأساسية في مصر",
+            "description": "دفتر Python يجمع الأسعار الأسبوعية لأربعين سلعة أساسية ويرسم تغيرها عبر الوقت. الكود والبيانات على GitHub.",
+            "links": [
+                {
+                    "url": "https://github.com/example/egypt-prices",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2023-05",
+            "endDate": "",
+            "isPresent": true,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "العربية",
+            "proficiency": "Native"
+        },
+        {
+            "name": "الإنجليزية",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Microsoft Certified: Power BI Data Analyst Associate",
+            "issuer": "Microsoft",
+            "date": "2022-06",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Tableau Certified Data Analyst",
+            "issuer": "Tableau",
+            "date": "2024-01",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "projects": 2,
+        "education": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "volunteering": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

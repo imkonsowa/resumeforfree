@@ -1,0 +1,177 @@
+{
+    "version": "v1",
+    "firstName": "Julia",
+    "lastName": "Brandt",
+    "email": "julia.brandt@example.com",
+    "phone": "+49 151 4402 7718",
+    "position": "Senior Marketing Managerin",
+    "location": "Hamburg",
+    "summary": "Marketingleiterin mit zehn Jahren Erfahrung in Onlinehandel und B2B-Software. Ich lege Kanalmix und Budget fest, baue kleine Teams auf, die Kampagnen von Anfang bis Ende verantworten, und berichte quartalsweise an die Geschäftsführung, was Marketing zum Umsatz beiträgt.",
+    "experiences": [
+        {
+            "company": "Nordlicht Wohnen GmbH",
+            "position": "Senior Marketing Managerin",
+            "location": "Hamburg",
+            "companyUrl": "",
+            "startDate": "2021-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Onlinehändler für Wohnaccessoires mit Versand in die DACH-Region.",
+            "achievements": [
+                {
+                    "text": "Verantworte Jahresplanung und ein Budget von 2,1 Mio. Euro für Social Ads, SEA, CRM, Print und Kooperationen"
+                },
+                {
+                    "text": "Ein Drittel des Printbudgets in Social Ads und CRM verlagert; der Onlineumsatz wuchs in zwei Jahren um 35 Prozent bei gleichem Gesamtbudget"
+                },
+                {
+                    "text": "Kundenclub mit CRM und Kundenservice eingeführt, der im ersten Jahr 140.000 Mitglieder erreichte"
+                },
+                {
+                    "text": "Team aus fünf Personen für Performance, Content, CRM und Design aufgebaut"
+                }
+            ]
+        },
+        {
+            "company": "Elbwerk Software GmbH",
+            "position": "Marketing Managerin, Leadgenerierung",
+            "location": "Hamburg",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2021-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Leadgenerierung für die Mittelstandslösung mit 800.000 Euro Jahresbudget über SEA, LinkedIn, Webinare und Messen verantwortet"
+                },
+                {
+                    "text": "Monatliche Webinarreihe mit dem Produktmanagement gestartet, die zur größten Quelle vertriebsakzeptierter Leads wurde"
+                },
+                {
+                    "text": "Lead-Scoring mit der Vertriebsleitung abgestimmt, zurückgewiesene Leads sanken etwa um die Hälfte"
+                }
+            ]
+        },
+        {
+            "company": "Hafenblick Kommunikation GmbH",
+            "position": "Online Marketing Specialist",
+            "location": "Bremen",
+            "companyUrl": "",
+            "startDate": "2015-01",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Google-Ads- und Facebook-Kampagnen für acht regionale Kunden geplant und gesteuert"
+                },
+                {
+                    "text": "Conversion-Tracking und Monatsberichte mit Kosten pro Lead je Kanal eingeführt"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Universität Hamburg",
+            "degree": "B.Sc. Betriebswirtschaftslehre, Schwerpunkt Marketing",
+            "fieldOfStudy": "",
+            "location": "Hamburg",
+            "startDate": "2011-10",
+            "endDate": "2014-09",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Kanäle",
+            "description": "Social Ads, SEA, E-Mail-Marketing, SEO, Kooperationen"
+        },
+        {
+            "title": "Strategie",
+            "description": "Go-to-Market, Positionierung, Budgetplanung, Kundenbindung"
+        },
+        {
+            "title": "Tools",
+            "description": "HubSpot, Salesforce, Google Ads, Meta Business Suite, Sistrix"
+        },
+        {
+            "title": "Analyse",
+            "description": "GA4, Looker Studio, A/B-Tests, Attribution, Excel"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Deutsch",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Englisch",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Dänisch",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Google Ads Search Certification",
+            "issuer": "Google",
+            "date": "2025-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Google Analytics Certification",
+            "issuer": "Google",
+            "date": "2024-09",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Geprüfte Fachwirtin für Marketing",
+            "issuer": "IHK Hamburg",
+            "date": "2019-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "projects": 3,
+        "volunteering": 4,
+        "skills": 5,
+        "certificates": 6,
+        "languages": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

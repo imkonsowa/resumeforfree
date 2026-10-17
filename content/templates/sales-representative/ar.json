@@ -1,0 +1,181 @@
+{
+    "version": "v1",
+    "firstName": "كريم",
+    "lastName": "عبد الحميد",
+    "email": "karim.abdelhamid@example.com",
+    "phone": "+20 100 000 4471",
+    "position": "مندوب مبيعات ميداني أول (B2B)",
+    "location": "القاهرة، مصر",
+    "summary": "مندوب مبيعات بخبرة تزيد على عشر سنوات في المبيعات الميدانية والمبيعات الهاتفية ومبيعات التجزئة. أدير محفظة من 140 مصنعا في القاهرة الكبرى والعاشر من رمضان، وتجاوزت الهدف في كل سنة من السنوات الأربع الأخيرة، وأفضل ما أبيع حين أقف مع العميل أمام خط الإنتاج.",
+    "experiences": [
+        {
+            "company": "شركة سنابل لحلول التغليف",
+            "position": "مندوب مبيعات ميداني أول",
+            "location": "القاهرة، مصر",
+            "companyUrl": "",
+            "startDate": "2020-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "أدير 140 عميلا من مصانع الأغذية والمشروبات والمنظفات، بهدف سنوي 38 مليون جنيه"
+                },
+                {
+                    "text": "حققت 113% من الهدف في 2024 و119% في 2025، والمركز الثاني بين 15 مندوبا في الفرع"
+                },
+                {
+                    "text": "فتحت 24 حسابا جديدا في 2025 بمتوسط مشتريات 900 ألف جنيه في السنة الأولى"
+                },
+                {
+                    "text": "استعدت عميلا متوقفا قيمته 6 ملايين جنيه سنويا بعد تجربة على خط التعبئة لديه وحل مشكلة الهالك قبل تقديم العرض"
+                },
+                {
+                    "text": "أسجل الزيارات والفرص على Salesforce، وتوقعاتي في حدود 6% من الفعلي منذ ستة أرباع"
+                }
+            ]
+        },
+        {
+            "company": "المصرية الحديثة لمستلزمات المكاتب",
+            "position": "مندوب مبيعات هاتفية",
+            "location": "القاهرة، مصر",
+            "companyUrl": "",
+            "startDate": "2017-08",
+            "endDate": "2019-12",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "من 60 إلى 80 مكالمة يوميا مع الشركات الصغيرة والمتوسطة لبيع ماكينات التصوير وعقود الصيانة"
+                },
+                {
+                    "text": "حجزت 14 موعدا مؤهلا شهريا في المتوسط لفريق المبيعات الميداني"
+                },
+                {
+                    "text": "رفعت نسبة تجديد عقود الصيانة من 78% إلى 87% بالاتصال بالعملاء قبل انتهاء العقد بثلاثة أشهر"
+                }
+            ]
+        },
+        {
+            "company": "متاجر رواد للإلكترونيات",
+            "position": "مسؤول مبيعات في الفرع",
+            "location": "الجيزة، مصر",
+            "companyUrl": "",
+            "startDate": "2015-09",
+            "endDate": "2017-07",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "بيع الهواتف والأجهزة المنزلية، والأول في الفرع في مبيعات الضمان الممتد خلال 2016"
+                },
+                {
+                    "text": "دربت أربعة موظفين جدد على نظام نقاط البيع وإجراءات المرتجعات"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "جامعة عين شمس",
+            "degree": "بكالوريوس التجارة، شعبة إدارة الأعمال",
+            "fieldOfStudy": "",
+            "location": "القاهرة، مصر",
+            "startDate": "2011-09",
+            "endDate": "2015-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "بنك الطعام المصري",
+            "organizationUrl": "",
+            "position": "متطوع في حملات رمضان",
+            "location": "القاهرة، مصر",
+            "startDate": "2018-05",
+            "endDate": "",
+            "isPresent": true,
+            "description": "أنظم مع فريق من 10 متطوعين تعبئة وتوزيع كراتين رمضان كل عام.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "البيع",
+            "description": "تخطيط خط السير، البحث عن عملاء جدد، فهم احتياج العميل، التفاوض، إدارة الحسابات"
+        },
+        {
+            "title": "الأدوات",
+            "description": "Salesforce وOdoo وExcel وLinkedIn Sales Navigator"
+        },
+        {
+            "title": "المنتجات",
+            "description": "الكرتون المضلع، التغليف المرن، الملصقات، خطوط التعبئة"
+        },
+        {
+            "title": "أخرى",
+            "description": "رخصة قيادة سارية وسيارة خاصة، موقف التجنيد: أدى الخدمة"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "العربية",
+            "proficiency": "Native"
+        },
+        {
+            "name": "الإنجليزية",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "برنامج مهارات البيع والتفاوض",
+            "issuer": "أكاديمية النخبة للتدريب",
+            "date": "2021-04",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Salesforce Certified Associate",
+            "issuer": "Salesforce",
+            "date": "2023-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "volunteering": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

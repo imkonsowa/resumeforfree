@@ -1,0 +1,198 @@
+{
+    "version": "v1",
+    "firstName": "Camille",
+    "lastName": "Garnier",
+    "email": "camille.garnier@example.com",
+    "phone": "+33 6 48 22 17 90",
+    "position": "Graphiste senior",
+    "location": "Nantes",
+    "summary": "Graphiste avec huit ans d'expérience en identité visuelle, packaging et édition pour l'agroalimentaire, la banque et l'associatif. Je mène les projets du premier croquis au BAT, je présente directement aux clients et j'accompagne les juniors.",
+    "experiences": [
+        {
+            "company": "Atelier Quai Ouest",
+            "position": "Graphiste senior",
+            "location": "Nantes",
+            "companyUrl": "",
+            "startDate": "2022-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Agence de design de marque, 15 personnes, clients agroalimentaires, retail et banque.",
+            "achievements": [
+                {
+                    "text": "Pilotage de la nouvelle identité d'une banque coopérative régionale : logo, typographie, couleurs et signalétique de 14 agences"
+                },
+                {
+                    "text": "Packaging d'une gamme de 22 rillettes et terrines, validé au calage sans réimpression"
+                },
+                {
+                    "text": "Présentation des pistes directement aux clients, en général deux allers-retours au maximum"
+                },
+                {
+                    "text": "Accompagnement de deux graphistes juniors par des revues hebdomadaires de fichiers"
+                }
+            ]
+        },
+        {
+            "company": "Biscuiterie Kerlann",
+            "position": "Graphiste, service communication",
+            "location": "Vannes",
+            "companyUrl": "",
+            "startDate": "2019-03",
+            "endDate": "2022-03",
+            "isPresent": false,
+            "description": "Service communication de trois personnes chez un fabricant de biscuits bretons.",
+            "achievements": [
+                {
+                    "text": "Déclinaison des campagnes saisonnières en presse, affiches magasin, e-mailing et réseaux sociaux"
+                },
+                {
+                    "text": "Réécriture de la charte en guide pratique de 30 pages pour les distributeurs"
+                },
+                {
+                    "text": "Création de gabarits Figma utilisés en autonomie par l'équipe marketing"
+                }
+            ]
+        },
+        {
+            "company": "Imprimerie de l'Erdre",
+            "position": "Graphiste PAO",
+            "location": "Nantes",
+            "companyUrl": "",
+            "startDate": "2017-09",
+            "endDate": "2019-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Préparation des fichiers pour environ 40 commandes par mois : fonds perdus, profils couleur, imposition"
+                },
+                {
+                    "text": "Conception de flyers, cartes de restaurant et signalétique pour des commerces locaux"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "École de design Nantes Atlantique",
+            "degree": "Bachelor Design graphique",
+            "fieldOfStudy": "",
+            "location": "Nantes",
+            "startDate": "2014-09",
+            "endDate": "2017-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Création",
+            "description": "Identité visuelle, typographie, mise en page, packaging, édition"
+        },
+        {
+            "title": "Digital",
+            "description": "Visuels réseaux sociaux, e-mailing, gabarits de présentation"
+        },
+        {
+            "title": "Logiciels",
+            "description": "Adobe Illustrator, InDesign, Photoshop, Figma, After Effects"
+        },
+        {
+            "title": "Fabrication",
+            "description": "Prépresse, gestion de la couleur, Pantone, tracés de découpe, BAT"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "portfolio",
+            "url": "https://example.com/camille-garnier"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Refonte Biscuiterie Kerlann",
+            "description": "Nouvelles boîtes et étiquettes pour quinze références de galettes. Création et suivi d'impression.",
+            "links": [
+                {
+                    "url": "https://example.com/camille-garnier/kerlann",
+                    "label": "Book"
+                }
+            ],
+            "startDate": "2021-01",
+            "endDate": "2021-10",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Rapport annuel Banque alimentaire 44",
+            "description": "Rapport de 48 pages en print et web, réalisé bénévolement avec une rédactrice.",
+            "links": [
+                {
+                    "url": "https://example.com/camille-garnier/rapport",
+                    "label": "Book"
+                }
+            ],
+            "startDate": "2024-03",
+            "endDate": "2024-06",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Français",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Anglais",
+            "proficiency": "Proficient"
+        },
+        {
+            "name": "Espagnol",
+            "proficiency": "Basic"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Adobe Certified Professional in Graphic Design and Illustration Using Adobe Illustrator",
+            "issuer": "Adobe",
+            "date": "2021-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "projects": 2,
+        "education": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "volunteering": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "projects": "Projets choisis"
+    },
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

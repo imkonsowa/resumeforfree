@@ -1,0 +1,188 @@
+{
+    "version": "v1",
+    "firstName": "كريم",
+    "lastName": "السعدني",
+    "email": "karim.elsaadany@example.com",
+    "phone": "+966 55 000 4471",
+    "position": "مهندس ميكانيكا أول",
+    "location": "جدة، السعودية",
+    "summary": "مهندس ميكانيكا بخبرة تسع سنوات في المعدات الهيدروليكية وأنظمة التكييف بين مصر والسعودية. أتولى المنتج من المتطلبات حتى بدء الإنتاج، وأقود فرق تصميم صغيرة، وأهتم برسومات يفهمها الخراط من أول مرة. إقامة سارية وقابلة للنقل.",
+    "experiences": [
+        {
+            "company": "مصانع الروابي للمضخات والمعدات",
+            "position": "مهندس ميكانيكا أول",
+            "location": "جدة، السعودية",
+            "companyUrl": "",
+            "startDate": "2021-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "أقود فريقا من أربعة مهندسين في تصميم منصة جديدة لمضخات نقل المياه، من الفكرة حتى تسليم أول 30 وحدة"
+                },
+                {
+                    "text": "أعدت تصميم قاعدة المضخة من هيكل ملحوم إلى صاج مثني بمسامير، فانخفضت تكلفة الوحدة 18% وقصر زمن التصنيع يومين"
+                },
+                {
+                    "text": "أسست مراجعات تصميم مع الإنتاج وخدمة ما بعد البيع عند كل مرحلة، فقلت التعديلات المتأخرة إلى النصف تقريبا"
+                },
+                {
+                    "text": "أوجه مهندسين حديثي التخرج في أول إصدار كامل لكل منهما"
+                }
+            ]
+        },
+        {
+            "company": "النيل للمعدات الهيدروليكية",
+            "position": "مهندس تصميم ميكانيكي",
+            "location": "مدينة 6 أكتوبر، مصر",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2021-03",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "صممت مشعب توزيع هيدروليكي من الألومنيوم المسبوك انتقل من النموذج الأولي إلى إنتاج 8000 وحدة سنويا"
+                },
+                {
+                    "text": "قدت تحليل أنماط الفشل (DFMEA) لخط أسطوانات جديد وأغلقت 14 خطرا عالي الأولوية قبل تجميد التصميم"
+                },
+                {
+                    "text": "حددت السبب الجذري لتلف موانع التسرب لدى العملاء بالفك وتحليل بيانات الضغط، وأصدرت الحل خلال ستة أسابيع"
+                },
+                {
+                    "text": "حولت حاملا مشغولا إلى قطعة مسبوكة مع مورد محلي، فانخفضت تكلفته 40%"
+                }
+            ]
+        },
+        {
+            "company": "الدلتا لأنظمة التكييف المركزي",
+            "position": "مهندس منتج",
+            "location": "العاشر من رمضان، مصر",
+            "companyUrl": "",
+            "startDate": "2015-09",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "رسمت 60 قطعة صاج ومشغولة على SolidWorks لوحدة تكييف سطحية جديدة"
+                },
+                {
+                    "text": "صممت أداة لقياس اهتزاز المراوح وكتبت إجراء الاختبار الذي ما زال المعمل يستخدمه"
+                },
+                {
+                    "text": "حدثت 120 رسمة قديمة وفق ASME Y14.5 ضمن مشروع توحيد الرسومات"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "جامعة عين شمس، كلية الهندسة",
+            "degree": "بكالوريوس الهندسة، قسم هندسة القوى الميكانيكية",
+            "fieldOfStudy": "",
+            "location": "القاهرة، مصر",
+            "startDate": "2010-09",
+            "endDate": "2015-06",
+            "isPresent": false,
+            "description": "مشروع التخرج: تصميم واختبار وحدة تبريد بالامتصاص تعمل بالطاقة الشمسية.",
+            "graduationScore": "جيد جدا",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "الرسم والتصميم",
+            "description": "SolidWorks، AutoCAD، Inventor، SolidWorks PDM"
+        },
+        {
+            "title": "التحليل",
+            "description": "ANSYS Mechanical، الحسابات اليدوية، تراكم التفاوتات، MATLAB"
+        },
+        {
+            "title": "التصنيع",
+            "description": "تشكيل الصاج، اللحام، التشغيل على CNC، الصب، DFM"
+        },
+        {
+            "title": "الجودة",
+            "description": "GD&T، DFMEA، PFMEA، تحليل السبب الجذري، ISO 9001"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "العربية",
+            "proficiency": "Native"
+        },
+        {
+            "name": "الإنجليزية",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "عضو نقابة المهندسين المصرية، شعبة الهندسة الميكانيكية",
+            "issuer": "نقابة المهندسين",
+            "date": "2015-11",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "اعتماد مهني بدرجة مهندس محترف",
+            "issuer": "الهيئة السعودية للمهندسين",
+            "date": "2022-03",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified SolidWorks Professional (CSWP)",
+            "issuer": "Dassault Systèmes",
+            "date": "2018-09",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Six Sigma Green Belt",
+            "issuer": "ASQ",
+            "date": "2019-11",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 5,
+        "projects": 6,
+        "volunteering": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "العضويات والشهادات المهنية"
+    },
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

@@ -1,0 +1,173 @@
+{
+    "version": "v1",
+    "firstName": "Elif",
+    "lastName": "Yıldız",
+    "email": "elif.yildiz@example.com",
+    "phone": "+90 532 014 22 97",
+    "position": "Müşteri Temsilcisi",
+    "location": "Ataşehir, İstanbul",
+    "summary": "Önce bir telekom firmasının çağrı merkezinde, şimdi bir e-ticaret firmasında olmak üzere altı yıllık müşteri hizmetleri deneyimi. Taleplerin çoğunu ilk temasta çözer, sinirli müşterilerle sakin kalırım. Yeni başlayan arkadaşlara eşlik ediyorum.",
+    "experiences": [
+        {
+            "company": "Lale Ev Tekstili E-Ticaret A.Ş.",
+            "position": "Müşteri Temsilcisi, Canlı Destek ve Telefon",
+            "location": "İstanbul (hibrit)",
+            "companyUrl": "",
+            "startDate": "2023-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Online ev tekstili mağazası için telefon, canlı destek ve e-posta.",
+            "achievements": [
+                {
+                    "text": "Günde yaklaşık 55 sipariş, kargo gecikmesi, iade ve değişim talebini sonuçlandırıyorum"
+                },
+                {
+                    "text": "Pazaryeri mağazalarından gelen müşteri sorularını 24 saat içinde cevaplama hedefini her ay tutturdum"
+                },
+                {
+                    "text": "Ölçü ve beden sorularını içerik ekibine ilettim, dört ürün sayfasına ölçü rehberi eklendi"
+                },
+                {
+                    "text": "Yeni başlayan on temsilciye ilk iki haftalarında eşlik ettim"
+                }
+            ]
+        },
+        {
+            "company": "Marmara Telekom",
+            "position": "Çağrı Merkezi Müşteri Temsilcisi",
+            "location": "Ümraniye, İstanbul",
+            "companyUrl": "",
+            "startDate": "2020-09",
+            "endDate": "2023-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Vardiya başına fatura, arıza ve tarife değişikliği konularında 70 ila 80 çağrı, ilk temasta yüzde 80 çözüm"
+                },
+                {
+                    "text": "Aylık kalite dinlemelerinde altı çeyrek boyunca yüzde 95'in üzerinde puan"
+                },
+                {
+                    "text": "Bir yıl boyunca elde tutma ekibinde iptal taleplerini karşıladım"
+                }
+            ]
+        },
+        {
+            "company": "Boğaziçi Market",
+            "position": "Kasiyer",
+            "location": "Kadıköy, İstanbul",
+            "companyUrl": "",
+            "startDate": "2018-07",
+            "endDate": "2020-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Vardiya başına 150'den fazla müşteriye kasada hizmet, bayram öncesi yoğunluk dahil"
+                },
+                {
+                    "text": "Müşteri geri bildirimleriyle iki kez ayın personeli seçildim"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Anadolu Yakası Meslek Yüksekokulu",
+            "degree": "Önlisans, Çağrı Merkezi Hizmetleri",
+            "fieldOfStudy": "",
+            "location": "İstanbul",
+            "startDate": "2018-09",
+            "endDate": "2020-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "3,12 / 4,00",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Ataşehir Mahalle Dayanışma Derneği",
+            "organizationUrl": "",
+            "position": "Gönüllü",
+            "location": "İstanbul",
+            "startDate": "2021-11",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Ayda iki cumartesi yardım başvurularını karşılama ve yönlendirme.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Kanallar",
+            "description": "Gelen çağrı, canlı destek, e-posta, pazaryeri soru cevap"
+        },
+        {
+            "title": "Programlar",
+            "description": "Salesforce Service Cloud, Zendesk, Genesys, Ticimax, MS Office"
+        },
+        {
+            "title": "Diğer",
+            "description": "Hızlı klavye, şikâyet yönetimi, elde tutma, KVKK"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Türkçe",
+            "proficiency": "Native"
+        },
+        {
+            "name": "İngilizce (YDS 78)",
+            "proficiency": "Proficient"
+        },
+        {
+            "name": "Almanca",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Etkili İletişim ve Diksiyon",
+            "issuer": "İstanbul Halk Eğitim Merkezi",
+            "date": "2021-04",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Şikâyet Yönetimi Eğitimi",
+            "issuer": "Marmara Telekom iç eğitim",
+            "date": "2022-02",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "education": 3,
+        "languages": 4,
+        "certificates": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

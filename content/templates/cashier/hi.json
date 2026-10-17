@@ -1,0 +1,163 @@
+{
+    "version": "v1",
+    "firstName": "प्रिया",
+    "lastName": "शर्मा",
+    "email": "priya.sharma@example.com",
+    "phone": "+91 98290 41877",
+    "position": "कैशियर और सेल्स एसोसिएट",
+    "location": "जयपुर, राजस्थान",
+    "summary": "मालवीय नगर के एक व्यस्त सुपरमार्केट में दो साल से कैशियर हूँ, इससे पहले एक स्टेशनरी दुकान पर स्कूल सीज़न में काम किया। इस साल हर शिफ़्ट के अंत में मेरा कैश मिलान सही रहा है, UPI, कार्ड, रिटर्न और भीड़ में ग्राहकों को संभालना जानती हूँ। शाम की शिफ़्ट, रविवार और दिवाली के सीज़न में उपलब्ध हूँ।",
+    "experiences": [
+        {
+            "company": "सिटी बाज़ार सुपरमार्केट, मालवीय नगर",
+            "position": "कैशियर (फ़ुल टाइम, शिफ़्ट में)",
+            "location": "जयपुर",
+            "companyUrl": "",
+            "startDate": "2024-07",
+            "endDate": "",
+            "isPresent": true,
+            "description": "आठ बिलिंग काउंटर वाला सुपरमार्केट, होम डिलीवरी के साथ।",
+            "achievements": [
+                {
+                    "text": "नकद, डेबिट और क्रेडिट कार्ड, UPI और गिफ़्ट वाउचर से भुगतान लेती हूँ; वीकेंड और त्योहारों में लाइन लगातार चलती है"
+                },
+                {
+                    "text": "जनवरी 2026 से हर शिफ़्ट के अंत में कैश बिना कमी या ज़्यादा के मिला; शाम की शिफ़्ट में कैश सेफ़ में जमा कराने की ज़िम्मेदारी"
+                },
+                {
+                    "text": "होम डिलीवरी के बिल डिलीवरी बॉय की वसूली से मिलाकर शिफ़्ट बंद होने से पहले हिसाब देती हूँ"
+                },
+                {
+                    "text": "तीन नए कैशियर को पहले हफ़्ते में बिलिंग सॉफ़्टवेयर, ऑफ़र के नियम और काउंटर खोलने की सूची सिखाई"
+                }
+            ]
+        },
+        {
+            "company": "कमल स्टेशनरी एंड बुक्स",
+            "position": "सेल्स और बिलिंग (स्कूल सीज़न)",
+            "location": "जयपुर",
+            "companyUrl": "",
+            "startDate": "2023-03",
+            "endDate": "2023-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "नए सत्र में किताबों और कॉपियों की बिक्री और बिलिंग, अभिभावकों की भीड़ में"
+                },
+                {
+                    "text": "हर सुबह आया माल रैक पर लगाया और कीमत के स्टिकर लगाए"
+                },
+                {
+                    "text": "समय की पाबंदी की वजह से मालिक ने अगले सीज़न के लिए फिर बुलाया"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "राजस्थान विश्वविद्यालय (पत्राचार)",
+            "degree": "बी.कॉम., दूसरा वर्ष",
+            "fieldOfStudy": "",
+            "location": "जयपुर",
+            "startDate": "2024-07",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        },
+        {
+            "institution": "राजकीय उच्च माध्यमिक विद्यालय, मालवीय नगर",
+            "degree": "12वीं (कॉमर्स), RBSE",
+            "fieldOfStudy": "",
+            "location": "जयपुर",
+            "startDate": "2022-07",
+            "endDate": "2024-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "78%",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "मोहल्ला सेवा समिति",
+            "organizationUrl": "",
+            "position": "स्वयंसेवक",
+            "location": "जयपुर",
+            "startDate": "2022-10",
+            "endDate": "",
+            "isPresent": true,
+            "description": "हर साल सर्दियों में कपड़े और राशन बाँटने के अभियान में मदद।",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "बिलिंग काउंटर",
+            "description": "नकद और कार्ड भुगतान, UPI, छुट्टे पैसे, कैश मिलान, रिटर्न और कैंसिल, POS बिलिंग सॉफ़्टवेयर"
+        },
+        {
+            "title": "स्टोर",
+            "description": "माल रैक पर लगाना, प्राइस टैग, एक्सपायरी जाँच, स्टॉक गिनती"
+        },
+        {
+            "title": "ग्राहक",
+            "description": "विनम्र सेवा, शिकायत का हल, लॉयल्टी कार्ड और ऑफ़र"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "हिंदी",
+            "proficiency": "Native"
+        },
+        {
+            "name": "अंग्रेज़ी",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "कंप्यूटर बेसिक कोर्स (MS Office और इंटरनेट)",
+            "issuer": "स्थानीय कंप्यूटर प्रशिक्षण केंद्र",
+            "date": "2023-08",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "खाद्य सुरक्षा और स्वच्छता प्रशिक्षण",
+            "issuer": "सिटी बाज़ार सुपरमार्केट",
+            "date": "2024-07",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

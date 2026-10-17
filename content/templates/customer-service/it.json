@@ -1,0 +1,173 @@
+{
+    "version": "v1",
+    "firstName": "Francesca",
+    "lastName": "Greco",
+    "email": "francesca.greco@example.com",
+    "phone": "+39 347 123 4567",
+    "position": "Operatrice customer care",
+    "location": "Bari",
+    "summary": "Operatrice customer care con sei anni di esperienza tra telefono, chat ed email, prima per una società energetica e ora per un e-commerce. Risolvo la maggior parte delle richieste al primo contatto e resto calma con i clienti arrabbiati. Inglese B2, spagnolo fluente.",
+    "experiences": [
+        {
+            "company": "Casa Nardò S.r.l.",
+            "position": "Addetta al servizio clienti, negozio online",
+            "location": "Bari (smart working parziale)",
+            "companyUrl": "",
+            "startDate": "2023-05",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Assistenza via telefono, chat ed email per un e-commerce di arredo casa.",
+            "achievements": [
+                {
+                    "text": "Gestisco circa 50 contatti al giorno su ordini, ritardi di consegna, resi e rimborsi"
+                },
+                {
+                    "text": "Seguo i clienti spagnoli e ho tradotto le principali risposte standard"
+                },
+                {
+                    "text": "Segnalato le domande ricorrenti sulle misure, da cui sono nate guide su quattro schede prodotto"
+                },
+                {
+                    "text": "Affiancato otto nuovi colleghi nelle prime due settimane"
+                }
+            ]
+        },
+        {
+            "company": "Levante Energia S.p.A.",
+            "position": "Operatrice contact center inbound",
+            "location": "Bari",
+            "companyUrl": "",
+            "startDate": "2020-10",
+            "endDate": "2023-04",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Da 60 a 70 chiamate per turno su bollette, letture, volture e cambi di offerta, 80% di risoluzione al primo contatto"
+                },
+                {
+                    "text": "Punteggio superiore al 95% nel monitoraggio qualità per sei trimestri di fila"
+                },
+                {
+                    "text": "Concordato piani di rientro secondo le regole del recupero crediti"
+                }
+            ]
+        },
+        {
+            "company": "Supermercati Adriatici",
+            "position": "Cassiera e addetta al banco servizi",
+            "location": "Modugno",
+            "companyUrl": "",
+            "startDate": "2018-06",
+            "endDate": "2020-09",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Servito oltre 150 clienti per turno, anche il sabato e nei giorni festivi"
+                },
+                {
+                    "text": "Gestito resi, cambi e carte fedeltà al banco servizi"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Istituto Tecnico Economico di Bari",
+            "degree": "Diploma in Amministrazione, Finanza e Marketing",
+            "fieldOfStudy": "",
+            "location": "Bari",
+            "startDate": "2013-09",
+            "endDate": "2018-07",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "88/100",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Associazione Quartiere Solidale",
+            "organizationUrl": "",
+            "position": "Volontaria allo sportello",
+            "location": "Bari",
+            "startDate": "2021-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Accoglienza e orientamento delle famiglie due sabati al mese.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Canali",
+            "description": "Inbound, chat, email, sportello"
+        },
+        {
+            "title": "Programmi",
+            "description": "Salesforce Service Cloud, Zendesk, Genesys, Shopify, pacchetto Office"
+        },
+        {
+            "title": "Altro",
+            "description": "Digitazione veloce, gestione reclami, retention, GDPR"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Italiano",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Spagnolo",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Inglese (B2)",
+            "proficiency": "Proficient"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Gestione dei reclami e dei clienti difficili",
+            "issuer": "Formazione interna Levante Energia",
+            "date": "2021-11",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "DELE Spagnolo, livello C1",
+            "issuer": "Instituto Cervantes",
+            "date": "2022-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "education": 3,
+        "languages": 4,
+        "certificates": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

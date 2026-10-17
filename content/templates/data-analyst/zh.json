@@ -1,0 +1,182 @@
+{
+    "version": "v1",
+    "firstName": "黄嘉怡",
+    "lastName": "",
+    "email": "huang.jiayi@example.com",
+    "phone": "+86 138 0026 5147",
+    "position": "高级数据分析师",
+    "location": "深圳",
+    "summary": "数据分析师，五年零售电商和本地生活行业经验。日常使用 SQL、Python 和 Tableau，负责核心经营指标和看板，擅长把业务方模糊的问题拆成可以追踪的指标，并用结论推动决策。",
+    "experiences": [
+        {
+            "company": "深圳鹏程优选电子商务有限公司",
+            "position": "高级数据分析师",
+            "location": "深圳",
+            "companyUrl": "",
+            "startDate": "2023-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "负责 GMV、复购率等核心指标体系和每周经营看板，看板覆盖运营、商品和财务三个部门约 60 名使用者"
+                },
+                {
+                    "text": "用 SQL 和 Python 重做大促复盘报表，原来需要两天手工整理，现在活动结束次日上午自动生成"
+                },
+                {
+                    "text": "分析约 80 万笔退货订单的原因，发现两个服装品类尺码表有误，推动商品部门更新尺码说明后退货明显减少"
+                },
+                {
+                    "text": "与产品团队一起设计和解读结算页 A/B 实验，并编写团队现在使用的实验分析规范"
+                }
+            ]
+        },
+        {
+            "company": "广州粤味到家网络科技有限公司",
+            "position": "数据分析师",
+            "location": "广州",
+            "companyUrl": "",
+            "startDate": "2021-07",
+            "endDate": "2023-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "搭建用户留存和流失分析模型，按注册月份拆分同期群，为用户运营制定召回策略提供依据"
+                },
+                {
+                    "text": "在 Hive 数仓中梳理并补全 50 张常用表的字段说明，减少业务方重复提问"
+                },
+                {
+                    "text": "用 FineBI 搭建商户经营日报，城市经理每天上午可以自助查看各区域订单和补贴"
+                }
+            ]
+        },
+        {
+            "company": "广州南粤连锁药房有限公司",
+            "position": "数据分析实习生",
+            "location": "广州",
+            "companyUrl": "",
+            "startDate": "2020-07",
+            "endDate": "2020-12",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "整理 120 家门店的周销售数据，用 Excel 数据透视表和 Power Query 制作门店周报"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "暨南大学",
+            "degree": "统计学 学士",
+            "fieldOfStudy": "",
+            "location": "广州",
+            "startDate": "2017-09",
+            "endDate": "2021-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "数据处理",
+            "description": "SQL（MySQL、Hive、ClickHouse）、数据清洗、数仓建模"
+        },
+        {
+            "title": "分析方法",
+            "description": "Python（pandas）、A/B 实验、同期群分析、漏斗分析、用户分层"
+        },
+        {
+            "title": "可视化与报表",
+            "description": "Tableau、FineBI、Excel（数据透视表、Power Query）"
+        },
+        {
+            "title": "工作方式",
+            "description": "需求沟通、指标口径对齐、分析报告撰写"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "深圳地铁客流可视化",
+            "description": "基于城市公开数据制作的 Tableau 看板，按线路、站点和时段展示客流变化，附 SQL 和分析说明。",
+            "links": [
+                {
+                    "url": "https://public.tableau.com/app/profile/example",
+                    "label": "Tableau Public"
+                }
+            ],
+            "startDate": "2024-04",
+            "endDate": "2024-06",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "中文",
+            "proficiency": "Native"
+        },
+        {
+            "name": "粤语",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "英语（CET-6）",
+            "proficiency": "Proficient"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "CDA 数据分析师 二级",
+            "issuer": "CDA 数据科学研究院",
+            "date": "2022-06",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Tableau Certified Data Analyst",
+            "issuer": "Tableau",
+            "date": "2024-09",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "projects": 2,
+        "education": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "volunteering": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

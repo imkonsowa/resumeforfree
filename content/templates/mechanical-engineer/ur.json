@@ -1,0 +1,185 @@
+{
+    "version": "v1",
+    "firstName": "عثمان",
+    "lastName": "رضا",
+    "email": "usman.raza@example.com",
+    "phone": "+92 301 0157720",
+    "position": "سینئر مکینیکل انجینئر، PE (PEC)",
+    "location": "فیصل آباد، پاکستان",
+    "summary": "آٹھ سال کا تجربہ رکھنے والا مکینیکل انجینئر اور PEC میں پروفیشنل انجینئر۔ آٹو پارٹس، ٹیکسٹائل مشینری اور گھریلو پنکھوں کی پروڈکٹ ڈیولپمنٹ سے پروڈکشن لانچ تک کام کیا ہے، اور ایسی ڈرائنگز بناتا ہوں جو مشینسٹ پہلی بار میں سمجھ لے۔",
+    "experiences": [
+        {
+            "company": "نور الیکٹرک فینز",
+            "position": "سینئر مکینیکل انجینئر",
+            "location": "گجرات",
+            "companyUrl": "",
+            "startDate": "2022-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "چار انجینئرز کی ٹیم کے ساتھ نیا انرجی سیور سیلنگ فین ماڈل تصور سے پروڈکشن لانچ تک لے گیا"
+                },
+                {
+                    "text": "فین کی باڈی کو دو کاسٹ پرزوں سے ایک پرزے میں بدلا، فی یونٹ لاگت اور اسمبلی کا وقت دونوں کم ہوئے"
+                },
+                {
+                    "text": "ہر مرحلے پر پروڈکشن اور سروس کے ساتھ ڈیزائن ریویو شروع کیے، لانچ کے بعد کی ڈیزائن تبدیلیاں تقریباً آدھی رہ گئیں"
+                },
+                {
+                    "text": "دو جونیئر انجینئرز کی رہنمائی کی، دونوں نے PEC کا پروفیشنل انجینئر امتحان پاس کیا"
+                }
+            ]
+        },
+        {
+            "company": "لائل پور ٹیکسٹائل مشینری",
+            "position": "ڈیزائن انجینئر",
+            "location": "فیصل آباد",
+            "companyUrl": "",
+            "startDate": "2019-01",
+            "endDate": "2022-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "لوم کے ڈرائیو ہاؤسنگ کو دوبارہ ڈیزائن کیا اور مقامی فاؤنڈری سے بنوایا، درآمدی پرزے کی ضرورت ختم ہوئی"
+                },
+                {
+                    "text": "نئے سائزنگ مشین ماڈل کے لیے DFMEA کی قیادت کی اور ڈیزائن فریز سے پہلے 12 بڑے خطرات بند کیے"
+                },
+                {
+                    "text": "مشینسٹس کے ساتھ فکسچر اور ٹول پاتھ بدل کر مین شافٹ کا CNC سائیکل ٹائم 25 فیصد کم کیا"
+                },
+                {
+                    "text": "AutoCAD کی 150 پرانی ڈرائنگز SolidWorks ماڈلز میں منتقل کیں اور GD&T کے ساتھ دوبارہ جاری کیں"
+                }
+            ]
+        },
+        {
+            "company": "چناب آٹو پارٹس",
+            "position": "پروڈکشن انجینئر",
+            "location": "شیخوپورہ",
+            "companyUrl": "",
+            "startDate": "2017-07",
+            "endDate": "2018-12",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "پریس شاپ کی ڈائیوں میں تبدیلی کر کے موٹر سائیکل کے بریکٹس کا ریجیکشن ریٹ 4 فیصد سے 1.5 فیصد پر لایا"
+                },
+                {
+                    "text": "اسمبلی لائن پر poka-yoke فکسچرز لگائے اور کسٹمر کی غلط اسمبلی کی شکایات بند ہوئیں"
+                },
+                {
+                    "text": "پوری پریس شاپ میں 5S شروع کیا اور ڈائی بدلنے کا وقت کم کیا"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "یونیورسٹی آف انجینئرنگ اینڈ ٹیکنالوجی (UET)",
+            "degree": "بی ایس سی مکینیکل انجینئرنگ",
+            "fieldOfStudy": "",
+            "location": "لاہور",
+            "startDate": "2013-09",
+            "endDate": "2017-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "CAD اور ڈیزائن",
+            "description": "SolidWorks، AutoCAD، SolidWorks PDM، GD&T (ASME Y14.5)"
+        },
+        {
+            "title": "تجزیہ",
+            "description": "ANSYS Mechanical، ہاتھ کی کیلکولیشن، ٹالرینس اسٹیک اپ، MATLAB"
+        },
+        {
+            "title": "مینوفیکچرنگ",
+            "description": "پریس ڈائیز، شیٹ میٹل، کاسٹنگ، CNC مشیننگ، DFM"
+        },
+        {
+            "title": "کوالٹی",
+            "description": "ISO 9001، DFMEA، PFMEA، 8D، 5S، poka-yoke"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "اردو",
+            "proficiency": "Native"
+        },
+        {
+            "name": "پنجابی",
+            "proficiency": "Native"
+        },
+        {
+            "name": "انگریزی",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "پروفیشنل انجینئر (PE)، مکینیکل",
+            "issuer": "پاکستان انجینئرنگ کونسل",
+            "date": "2022-05",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified SolidWorks Professional (CSWP)",
+            "issuer": "Dassault Systèmes",
+            "date": "2020-03",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Six Sigma Green Belt",
+            "issuer": "پاکستان انسٹی ٹیوٹ آف کوالٹی کنٹرول",
+            "date": "2021-08",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 5,
+        "projects": 6,
+        "volunteering": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "رجسٹریشن اور سرٹیفیکیٹس"
+    },
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

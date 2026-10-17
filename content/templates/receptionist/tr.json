@@ -1,0 +1,161 @@
+{
+    "version": "v1",
+    "firstName": "Elif",
+    "lastName": "Demirtaş",
+    "email": "elif.demirtas@example.com",
+    "phone": "+90 532 418 27 64",
+    "position": "Ön Büro Sorumlusu",
+    "location": "İzmir",
+    "summary": "Tıp merkezi, otel ve kurumsal ofislerde sekiz yıllık deneyime sahip ön büro sorumlusu. On iki branşlı bir merkezde hasta kabulü yönetiyor, sigorta onaylarını muayeneden önce kontrol ediyor, yeni banko çalışanlarını yetiştiriyor ve en yoğun günlerde bile bekleme salonunu düzenli tutuyorum. İngilizce ve Almanca biliyorum.",
+    "experiences": [
+        {
+            "company": "Kordon Tıp Merkezi",
+            "position": "Ön Büro Sorumlusu",
+            "location": "İzmir",
+            "companyUrl": "",
+            "startDate": "2021-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "On iki branşlı özel tıp merkezi, günde yaklaşık 180 hasta ve 300 arama.",
+            "achievements": [
+                {
+                    "text": "Dört kişilik banko ekibini yönetiyorum: haftalık vardiya planını hazırlıyor, yoğun saatleri karşılıyor ve zor şikâyetleri çözüyorum"
+                },
+                {
+                    "text": "Yeni hastaları muayeneden iki gün önce arayıp sigorta durumunu kontrol etme düzenini kurdum, kasadaki onay sorunları azaldı"
+                },
+                {
+                    "text": "On iki hekimin randevu, kontrol ve sevk işlemlerini hastane bilgi sisteminde yönetiyor, SGK provizyonlarını takip ediyorum"
+                },
+                {
+                    "text": "Hasta kabul, kasa ve telefon kurallarını anlatan eğitim rehberini yazdım, her yeni çalışanla birlikte kullanılıyor"
+                }
+            ]
+        },
+        {
+            "company": "Körfez Park Otel",
+            "position": "Ön Büro Görevlisi",
+            "location": "Çeşme, İzmir",
+            "companyUrl": "",
+            "startDate": "2018-04",
+            "endDate": "2021-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "180 odalı otelde Opera ile vardiya başına 150 misafire kadar giriş ve çıkış işlemi yaptım"
+                },
+                {
+                    "text": "Yabancı misafirlere İngilizce ve Almanca hizmet verdim, transfer ve tur rezervasyonlarını ayarladım"
+                },
+                {
+                    "text": "Vardiya sonunda kasayı kapattım ve kimlik bildirimlerini zamanında yaptım"
+                }
+            ]
+        },
+        {
+            "company": "Ege Plaza Danışmanlık",
+            "position": "Resepsiyonist",
+            "location": "İzmir",
+            "companyUrl": "",
+            "startDate": "2016-09",
+            "endDate": "2018-03",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Ziyaretçileri karşıladım ve santralden sekiz danışmanın aramalarını yönlendirdim"
+                },
+                {
+                    "text": "Gelen evrak ve kargoları kayda geçirdim, toplantı odası rezervasyonlarını yönettim"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Dokuz Eylül Meslek Yüksekokulu",
+            "degree": "Turizm ve Otel İşletmeciliği, Ön Lisans",
+            "fieldOfStudy": "",
+            "location": "İzmir",
+            "startDate": "2014-09",
+            "endDate": "2016-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Ön büro",
+            "description": "Hasta ve misafir kabul, santral, şikâyet yönetimi, kasa ve POS"
+        },
+        {
+            "title": "Randevu ve kayıt",
+            "description": "Çoklu hekim randevusu, SGK provizyonu, özel sigorta onayları, KVKK"
+        },
+        {
+            "title": "Programlar",
+            "description": "Hastane bilgi yönetim sistemi, Opera, MS Office, santral sistemi"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Türkçe",
+            "proficiency": "Native"
+        },
+        {
+            "name": "İngilizce",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Almanca",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Temel İlk Yardım Eğitimi Sertifikası",
+            "issuer": "Sağlık Bakanlığı onaylı ilk yardım eğitim merkezi",
+            "date": "2024-05",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Sağlık Turizmi Hasta Karşılama Eğitimi",
+            "issuer": "İzmir Ticaret Odası",
+            "date": "2022-10",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "languages": 3,
+        "education": 4,
+        "certificates": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

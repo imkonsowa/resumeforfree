@@ -1,0 +1,203 @@
+{
+    "version": "v1",
+    "firstName": "فاطمہ",
+    "lastName": "قریشی",
+    "email": "fatima.qureshi@example.com",
+    "phone": "+92 321 0154836",
+    "position": "سینئر ڈیٹا اینالسٹ",
+    "location": "کراچی، پاکستان",
+    "summary": "ریٹیل بینکنگ اور ٹیلی کام میں چھ سال کا تجربہ رکھنے والی ڈیٹا اینالسٹ۔ روزانہ SQL لکھتی ہوں، ایسے ڈیش بورڈ بناتی ہوں جو مینیجرز واقعی کھولتے ہیں، اور کسی مبہم سوال کو ایسے نمبر میں بدلنا پسند کرتی ہوں جس پر فیصلہ کیا جا سکے۔",
+    "experiences": [
+        {
+            "company": "مہران کمرشل بینک",
+            "position": "سینئر ڈیٹا اینالسٹ",
+            "location": "کراچی",
+            "companyUrl": "",
+            "startDate": "2023-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "برانچ بینکنگ کے ہفتہ وار ڈیش بورڈز Power BI میں میری ذمہ داری ہیں، جنہیں 60 برانچ مینیجرز اور ریجنل ٹیمیں استعمال کرتی ہیں"
+                },
+                {
+                    "text": "ڈپازٹ گروتھ رپورٹ SQL اور SSIS میں دوبارہ بنائی، جس سے دو دن کا دستی کام ہر پیر کی صبح خودکار رپورٹ بن گیا"
+                },
+                {
+                    "text": "ڈیجیٹل ایپ پر رجسٹریشن کے مراحل کا فنل تجزیہ کیا اور دکھایا کہ زیادہ تر صارفین بائیومیٹرک تصدیق پر رک جاتے ہیں، جس کے بعد یہ مرحلہ آسان کیا گیا"
+                },
+                {
+                    "text": "دو جونیئر اینالسٹس کی رہنمائی کرتی ہوں اور ان کی SQL کو مینجمنٹ تک جانے سے پہلے ریویو کرتی ہوں"
+                }
+            ]
+        },
+        {
+            "company": "سندھ ٹیلی کام سروسز",
+            "position": "ڈیٹا اینالسٹ",
+            "location": "کراچی",
+            "companyUrl": "",
+            "startDate": "2020-08",
+            "endDate": "2023-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "پری پیڈ صارفین کے چھوڑ جانے (churn) کا ماہانہ ماڈل Python میں بنایا، جسے مارکیٹنگ نے ری ٹینشن آفرز کے لیے استعمال کیا"
+                },
+                {
+                    "text": "علاقے اور پیکج کے لحاظ سے کوہورٹ رپورٹس Tableau میں تیار کیں تاکہ سیلز ٹیم دیکھ سکے کون سے پیکج صارفین کو تیسرے مہینے کے بعد بھی رکھتے ہیں"
+                },
+                {
+                    "text": "ڈیٹا ویئر ہاؤس کی 45 بنیادی ٹیبلز صاف اور دستاویزی کیں، جس سے ڈیٹا ٹیم کو آنے والے بار بار کے سوال کم ہوئے"
+                }
+            ]
+        },
+        {
+            "company": "راوی فوڈز لمیٹڈ",
+            "position": "جونیئر ایم آئی ایس اینالسٹ",
+            "location": "لاہور",
+            "companyUrl": "",
+            "startDate": "2019-07",
+            "endDate": "2020-07",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "ڈسٹری بیوٹرز کی ہفتہ وار سیلز رپورٹس Excel اور SQL Server میں تیار کیں، جو 14 شہروں کے ایریا مینیجرز کو جاتی تھیں"
+                },
+                {
+                    "text": "کاپی پیسٹ کے مراحل Power Query سے بدلے اور ہر ہفتے تقریباً چار گھنٹے بچائے"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "یونیورسٹی آف کراچی",
+            "degree": "بی ایس شماریات (Statistics)",
+            "fieldOfStudy": "",
+            "location": "کراچی",
+            "startDate": "2015-01",
+            "endDate": "2019-01",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "ڈیٹا",
+            "description": "SQL (SQL Server، Oracle، PostgreSQL)، SSIS، ڈیٹا ماڈلنگ"
+        },
+        {
+            "title": "تجزیہ",
+            "description": "Python (pandas)، R، A/B ٹیسٹنگ، کوہورٹ اور فنل تجزیہ، فورکاسٹنگ"
+        },
+        {
+            "title": "BI اور رپورٹنگ",
+            "description": "Power BI، Tableau، Excel (پیوٹ ٹیبلز، Power Query)"
+        },
+        {
+            "title": "کام کا انداز",
+            "description": "ضروریات سمجھنا، مینجمنٹ کے سامنے نتائج پیش کرنا، دستاویز سازی"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        },
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "کراچی کی بجلی کی بندش کا تجزیہ",
+            "description": "عوامی اعلانات سے جمع کیے گئے لوڈ شیڈنگ شیڈول پر مبنی Tableau Public ڈیش بورڈ، جو علاقے، مہینے اور گھنٹوں کے لحاظ سے بندش دکھاتا ہے۔ SQL اور مختصر تحریر ساتھ شامل ہے۔",
+            "links": [
+                {
+                    "url": "https://public.tableau.com/app/profile/example",
+                    "label": "Tableau Public"
+                }
+            ],
+            "startDate": "2024-04",
+            "endDate": "2024-06",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "پاکستان سپر لیگ کے میچوں کا ڈیٹا",
+            "description": "Python نوٹ بک جو گزشتہ سیزنز کے اسکور کارڈز سے ٹاس، پچ اور ہدف کے اثرات کا جائزہ لیتی ہے۔ کوڈ اور ڈیٹا GitHub پر موجود ہے۔",
+            "links": [
+                {
+                    "url": "https://github.com/example/psl-analysis",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2023-02",
+            "endDate": "",
+            "isPresent": true,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "اردو",
+            "proficiency": "Native"
+        },
+        {
+            "name": "انگریزی",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "سندھی",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Microsoft Certified: Power BI Data Analyst Associate",
+            "issuer": "Microsoft",
+            "date": "2022-08",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Google Data Analytics Professional Certificate",
+            "issuer": "Google",
+            "date": "2020-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "projects": 2,
+        "education": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "volunteering": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

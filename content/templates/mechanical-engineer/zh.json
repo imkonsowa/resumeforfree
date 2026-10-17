@@ -1,0 +1,167 @@
+{
+    "version": "v1",
+    "firstName": "周明远",
+    "lastName": "",
+    "email": "zhou.mingyuan@example.com",
+    "phone": "+86 137 0062 5518",
+    "position": "高级结构工程师，工程师职称",
+    "location": "苏州",
+    "summary": "九年汽车零部件和自动化设备研发经验，带过四人设计小组。负责产品从需求、方案、出图到量产导入的全过程，熟悉铸造、钣金和机加工工艺，重视图纸质量和与车间、供应商的配合。",
+    "experiences": [
+        {
+            "company": "苏州恒岳汽车零部件有限公司",
+            "position": "高级结构工程师",
+            "location": "苏州",
+            "companyUrl": "",
+            "startDate": "2021-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "带领四名工程师完成新能源车型电驱壳体和悬置支架的设计开发，从样件到批量供货"
+                },
+                {
+                    "text": "支架由焊接结构改为铝合金压铸件，单件成本降低 18%，减重 15% 并通过台架强度试验"
+                },
+                {
+                    "text": "在各开发节点组织制造和质量部门参加设计评审，后期设计变更减少约一半"
+                },
+                {
+                    "text": "牵头分析一起市场失效的根本原因，六周内完成设计更改和客户验证"
+                }
+            ]
+        },
+        {
+            "company": "昆山锐拓自动化设备有限公司",
+            "position": "机械设计工程师",
+            "location": "昆山",
+            "companyUrl": "",
+            "startDate": "2017-07",
+            "endDate": "2021-03",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "用 SolidWorks 设计非标装配线的上料和搬运机构，并到客户现场完成安装调试"
+                },
+                {
+                    "text": "完成三条产线的风险评估和技术文件整理，顺利通过客户验收"
+                },
+                {
+                    "text": "和供应商一起将一个机加工件改为压铸件，零件成本降低 40%"
+                }
+            ]
+        },
+        {
+            "company": "无锡瑞川液压件有限公司",
+            "position": "研发助理工程师",
+            "location": "无锡",
+            "companyUrl": "",
+            "startDate": "2015-07",
+            "endDate": "2017-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "完成液压阀块 60 余个零件的建模和出图，按国标形位公差规范更新 120 张老图纸"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "江苏大学",
+            "degree": "机械设计制造及其自动化 本科",
+            "fieldOfStudy": "",
+            "location": "镇江",
+            "startDate": "2011-09",
+            "endDate": "2015-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "绘图与数据管理",
+            "description": "UG/NX、SolidWorks、AutoCAD、Teamcenter"
+        },
+        {
+            "title": "仿真分析",
+            "description": "ANSYS、HyperMesh、手工校核、尺寸链计算"
+        },
+        {
+            "title": "制造工艺",
+            "description": "压铸、钣金、机加工、焊接、可制造性设计"
+        },
+        {
+            "title": "质量工具",
+            "description": "形位公差、DFMEA、8D、PPAP、IATF 16949"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "中文",
+            "proficiency": "Native"
+        },
+        {
+            "name": "英语",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "工程师（机械设计与制造）",
+            "issuer": "江苏省人力资源和社会保障厅",
+            "date": "2020-12",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "六西格玛绿带",
+            "issuer": "中国质量协会",
+            "date": "2019-10",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "SolidWorks 认证专家（CSWP）",
+            "issuer": "Dassault Systèmes",
+            "date": "2018-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 5,
+        "projects": 6,
+        "volunteering": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "证书与职称"
+    },
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

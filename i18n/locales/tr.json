@@ -1008,10 +1008,13 @@
         },
         "categories": {
             "technology": "Teknoloji",
+            "engineering": "Mühendislik",
             "healthcare": "Sağlık",
             "finance": "Finans",
             "education": "Eğitim",
             "business": "İş",
+            "creative": "Tasarım ve yaratıcılık",
+            "service": "Müşteri hizmetleri ve perakende",
             "students": "Öğrenciler"
         },
         "layouts": {

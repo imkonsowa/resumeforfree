@@ -1,0 +1,181 @@
+{
+    "version": "v1",
+    "firstName": "Ryan",
+    "lastName": "Kowalski",
+    "email": "ryan.kowalski@example.com",
+    "phone": "+1 555 014 7720",
+    "position": "Senior Mechanical Engineer, PE",
+    "location": "Grand Rapids, MI",
+    "summary": "Licensed mechanical engineer with nine years designing hydraulic and packaging equipment. I take products from requirements to production launch, lead small design teams and write drawings a machinist can read the first time.",
+    "experiences": [
+        {
+            "company": "Lakeshore Packaging Machinery",
+            "position": "Senior Mechanical Engineer",
+            "location": "Grand Rapids, MI",
+            "companyUrl": "",
+            "startDate": "2021-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Lead a team of four engineers on a new case packing machine platform, from concept to the first 30 units shipped"
+                },
+                {
+                    "text": "Redesigned the infeed frame from a weldment to bolted sheet metal, cutting cost per machine by $4,200 and build time by two days"
+                },
+                {
+                    "text": "Set up gate reviews with manufacturing and field service, which cut late engineering changes on the platform by about half"
+                },
+                {
+                    "text": "Mentor two junior engineers through their first product releases and their FE exams"
+                }
+            ]
+        },
+        {
+            "company": "Ridgeway Fluid Power",
+            "position": "Mechanical Design Engineer",
+            "location": "Holland, MI",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2021-03",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Designed a cast aluminum hydraulic manifold that went from prototype to 8,000 units a year"
+                },
+                {
+                    "text": "Led the DFMEA for a new cylinder line and closed 14 high-priority risks before design freeze"
+                },
+                {
+                    "text": "Found the root cause of a rod seal failure in the field through teardown and pressure data, and released a fix in six weeks"
+                },
+                {
+                    "text": "Moved a machined bracket to a die casting with the supplier, cutting part cost by 40%"
+                }
+            ]
+        },
+        {
+            "company": "Great Lakes Climate Systems",
+            "position": "Product Engineer",
+            "location": "Grand Rapids, MI",
+            "companyUrl": "",
+            "startDate": "2015-07",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Modeled and detailed 60 sheet metal and machined parts in SolidWorks for a new rooftop HVAC unit"
+                },
+                {
+                    "text": "Built a fan vibration test fixture and wrote the procedure the lab still uses"
+                },
+                {
+                    "text": "Updated 120 legacy drawings to ASME Y14.5 during a drawing cleanup project"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Michigan Technological University",
+            "degree": "B.S. in Mechanical Engineering",
+            "fieldOfStudy": "",
+            "location": "Houghton, MI",
+            "startDate": "2011-08",
+            "endDate": "2015-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "CAD and PLM",
+            "description": "SolidWorks, Creo, Windchill, SolidWorks PDM, AutoCAD"
+        },
+        {
+            "title": "Analysis",
+            "description": "ANSYS Mechanical, hand calculations, tolerance stack-ups, MATLAB"
+        },
+        {
+            "title": "Manufacturing",
+            "description": "Sheet metal, welding, CNC machining, die casting, DFM and DFA"
+        },
+        {
+            "title": "Quality",
+            "description": "GD&T (ASME Y14.5), DFMEA, PFMEA, root cause analysis, 8D"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "English",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Polish",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Professional Engineer (PE), Mechanical",
+            "issuer": "State of Michigan",
+            "date": "2021-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified SolidWorks Professional (CSWP)",
+            "issuer": "Dassault Systèmes",
+            "date": "2018-09",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Six Sigma Green Belt",
+            "issuer": "ASQ",
+            "date": "2019-11",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 5,
+        "projects": 6,
+        "volunteering": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "Licenses and Certifications"
+    },
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

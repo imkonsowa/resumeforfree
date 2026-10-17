@@ -1,0 +1,173 @@
+{
+    "version": "v1",
+    "firstName": "عثمان",
+    "lastName": "قریشی",
+    "email": "usman.qureshi@example.com",
+    "phone": "+92 300 0184471",
+    "position": "سینئر ٹیریٹری سیلز ریپریزنٹیٹو",
+    "location": "فیصل آباد، پاکستان",
+    "summary": "فیلڈ سیلز، ڈسٹری بیوشن اور ریٹیل میں دس سال سے زیادہ کا تجربہ رکھنے والا سیلز ریپریزنٹیٹو۔ فیصل آباد اور جھنگ کے 130 کارخانوں کا پورٹ فولیو سنبھالتا ہوں، پچھلے چار سال ہر سال ہدف سے آگے رہا ہوں اور سب سے اچھا سودا وہاں کرتا ہوں جہاں گاہک اپنی پیکنگ لائن پر مال چلتا دیکھ سکے۔",
+    "experiences": [
+        {
+            "company": "چناب پیکجنگ لمیٹڈ",
+            "position": "سینئر ٹیریٹری سیلز ریپریزنٹیٹو",
+            "location": "فیصل آباد، پاکستان",
+            "companyUrl": "",
+            "startDate": "2020-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "ٹیکسٹائل اور فوڈ کے 130 کارخانوں کا پورٹ فولیو، سالانہ ہدف 18 کروڑ روپے"
+                },
+                {
+                    "text": "2024 میں ہدف کا 110% اور 2025 میں 116% حاصل کیا، ریجن کے 12 نمائندوں میں دوسرا نمبر"
+                },
+                {
+                    "text": "2025 میں 22 نئے اکاؤنٹس کھولے، پہلے سال میں اوسط خریداری 45 لاکھ روپے"
+                },
+                {
+                    "text": "بند ہو جانے والا 2 کروڑ روپے سالانہ کا اکاؤنٹ ان کی پیکنگ لائن پر ٹرائل کر کے اور ضیاع کا مسئلہ حل کر کے واپس لیا"
+                },
+                {
+                    "text": "وزٹ رپورٹس اور سودے Salesforce میں درج کرتا ہوں، چھ سہ ماہیوں سے فورکاسٹ 6% کے اندر"
+                }
+            ]
+        },
+        {
+            "company": "نور ڈسٹری بیوٹرز",
+            "position": "سیلز آفیسر (FMCG)",
+            "location": "فیصل آباد، پاکستان",
+            "companyUrl": "",
+            "startDate": "2017-07",
+            "endDate": "2020-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "220 دکانوں کا روزانہ روٹ، آرڈر بکنگ اور ادائیگیوں کی وصولی"
+                },
+                {
+                    "text": "ماہانہ وصولی کا ہدف مسلسل 95% سے اوپر رکھا"
+                },
+                {
+                    "text": "اپنے روٹ پر 35 نئی دکانیں نیٹ ورک میں شامل کیں"
+                }
+            ]
+        },
+        {
+            "company": "سٹی موبائل مارٹ",
+            "position": "سیلز ایسوسی ایٹ",
+            "location": "فیصل آباد، پاکستان",
+            "companyUrl": "",
+            "startDate": "2015-08",
+            "endDate": "2017-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "موبائل فون اور لوازمات کی فروخت، ماہانہ لوازمات کی فروخت میں اکثر پہلے تین میں"
+                },
+                {
+                    "text": "نئے ملازمین کو POS اور واپسی کا طریقہ سکھایا"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "جی سی یونیورسٹی فیصل آباد",
+            "degree": "بی بی اے (آنرز)، مارکیٹنگ",
+            "fieldOfStudy": "",
+            "location": "فیصل آباد، پاکستان",
+            "startDate": "2011-09",
+            "endDate": "2015-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "سیلز",
+            "description": "علاقے کی منصوبہ بندی، نئے گاہک، ضرورت سمجھنا، مول تول، اکاؤنٹ مینجمنٹ"
+        },
+        {
+            "title": "ٹولز",
+            "description": "Salesforce، SAP Business One، Excel، WhatsApp Business"
+        },
+        {
+            "title": "مصنوعات",
+            "description": "کوروگیٹڈ کارٹن، فلیکسیبل پیکجنگ، لیبل"
+        },
+        {
+            "title": "دیگر",
+            "description": "ڈرائیونگ لائسنس، اپنی گاڑی، سفر میں کوئی رکاوٹ نہیں"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "اردو",
+            "proficiency": "Native"
+        },
+        {
+            "name": "پنجابی",
+            "proficiency": "Native"
+        },
+        {
+            "name": "انگریزی",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "سیلز اور مذاکرات کی تربیت",
+            "issuer": "فیصل آباد چیمبر آف کامرس اینڈ انڈسٹری",
+            "date": "2021-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Salesforce Certified Associate",
+            "issuer": "Salesforce",
+            "date": "2023-09",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "volunteering": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}
