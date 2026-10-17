@@ -11,7 +11,7 @@ keywords:
   - Bewerbung Germania
 faq:
   - q: "Serve la foto nel curriculum tedesco?"
-    a: "No. Dalla legge generale sulla parità di trattamento (AGG) del 2006 un datore di lavoro non può pretenderla. Molti candidati in Germania la mettono comunque, soprattutto con aziende tradizionali. Grandi gruppi internazionali e molte aziende tech preferiscono un CV senza foto."
+    a: "No, non sei obbligato a metterla. La legge generale sulla parità di trattamento (AGG) del 2006 non parla direttamente delle foto, ma vieta la discriminazione per età, sesso o origine etnica, e l'agenzia federale contro le discriminazioni consiglia ai datori di lavoro di non chiederla. Molti candidati in Germania la mettono comunque, soprattutto con aziende tradizionali. Grandi gruppi internazionali e molte aziende tech preferiscono un CV senza foto."
   - q: "Il curriculum deve essere in tedesco?"
     a: "Scrivilo nella lingua dell'annuncio. Se l'annuncio è in tedesco, invia un Lebenslauf in tedesco. Molti ruoli nella tecnologia e nella ricerca sono pubblicati in inglese e accettano un CV in inglese. Un CV in italiano non va quasi mai bene."
   - q: "Quanto deve essere lungo un curriculum tedesco?"
@@ -52,7 +52,7 @@ Indica sempre mese e anno, ad esempio «03/2021 bis heute» (fino a oggi) oppure
 
 Servono solo i recapiti: nome e cognome, telefono con prefisso internazionale, e-mail e almeno la città. Se ti candidi dall'Italia, scrivi città e paese attuali e aggiungi che sei disponibile a trasferirti.
 
-Il resto è facoltativo. La legge tedesca sulla parità di trattamento (Allgemeines Gleichbehandlungsgesetz, AGG) protegge i candidati dalla discriminazione per età, genere, origine etnica, religione, disabilità e identità sessuale. Per questo i datori di lavoro non chiedono più data di nascita, stato civile, religione o foto.
+Il resto è facoltativo. La legge tedesca sulla parità di trattamento (Allgemeines Gleichbehandlungsgesetz, AGG) protegge i candidati dalla discriminazione per origine etnica, sesso, religione o convinzioni personali, disabilità, età e identità sessuale. Per questo molti datori di lavoro non chiedono più data di nascita, stato civile, religione o foto.
 
 | Dato | Prassi attuale |
 | --- | --- |
@@ -66,7 +66,7 @@ Per essere sinceri: l'AGG non ha fatto sparire questi dati. Molti CV tedeschi ri
 
 ### Cittadini UE e candidati extra UE
 
-Con la cittadinanza italiana puoi lavorare in Germania senza visto. Una riga «Cittadinanza: italiana (UE)» toglie ogni dubbio al selezionatore. Se hai un'altra cittadinanza, indica il tuo stato: «Carta blu UE, valida fino al 08/2028», «Idoneo alla Carta blu UE, titolo riconosciuto (anabin H+)» oppure «Carta delle opportunità (Chancenkarte), disponibile dal 01/2027». Non esagerare la tua situazione.
+Con la cittadinanza italiana puoi lavorare in Germania senza visto. Una riga «Cittadinanza: italiana (UE)» toglie ogni dubbio al selezionatore. Se hai un'altra cittadinanza, indica il tuo stato: «Carta blu UE, valida fino al 08/2028», «Idoneo alla Carta blu UE, titolo equivalente secondo anabin» oppure «Carta delle opportunità (Chancenkarte), disponibile dal 01/2027». Non esagerare la tua situazione.
 
 ## La foto
 
@@ -89,7 +89,7 @@ Spiega i titoli italiani con un equivalente comprensibile: «Laurea triennale (B
 
 ### La banca dati anabin
 
-La banca dati anabin, gestita dall'Ufficio centrale per l'istruzione estera (ZAB), mostra come istituti e titoli stranieri si confrontano con quelli tedeschi. Un'università classificata H+ è riconosciuta. Per i titoli italiani di solito basta questo. Se il tuo titolo non è presente o vieni da un paese extra UE, la ZAB rilascia a pagamento una dichiarazione di comparabilità (Zeugnisbewertung), utile sia con i datori di lavoro sia per il visto. Per la Carta blu UE un titolo riconosciuto o comparabile è un requisito centrale.
+La banca dati anabin, gestita dall'Ufficio centrale per l'istruzione estera (ZAB), mostra come istituti e titoli stranieri si confrontano con quelli tedeschi. Un'università classificata H+ è riconosciuta come istituto universitario, ma per il tuo titolo conta anche che sia elencato come equivalente a un titolo tedesco. Con la cittadinanza UE e una professione non regolamentata non serve un riconoscimento formale. Se il tuo titolo non è presente o vieni da un paese extra UE, la ZAB rilascia a pagamento una dichiarazione di comparabilità (Zeugnisbewertung), al massimo in circa tre mesi con documenti completi, utile sia con i datori di lavoro sia per il visto. Per la Carta blu UE la maggior parte dei candidati ha bisogno di un titolo riconosciuto o comparabile e di un'offerta di lavoro sopra uno stipendio minimo fissato ogni anno. Gli specialisti IT possono qualificarsi anche con l'esperienza professionale.
 
 Le professioni regolamentate sono diverse. Infermieri, medici, farmacisti, insegnanti e alcuni titoli di ingegnere richiedono un riconoscimento ufficiale (Anerkennung) da parte di un'autorità tedesca prima di poter lavorare con quel titolo. Per gli infermieri di solito serve anche il tedesco a livello B2. Se la procedura è in corso, scrivilo con la data prevista.
 
@@ -105,9 +105,9 @@ Usa il Quadro comune europeo di riferimento (QCER, in tedesco GER). «Fluente» 
 | --- | --- |
 | A1, A2 | Base |
 | B1 | Autonomo nella vita quotidiana |
-| B2 | Sicuro al lavoro su temi familiari |
+| B2 | Autonomo al lavoro, anche in discussioni tecniche del proprio settore |
 | C1 | Fluente, anche in discussioni complesse |
-| C2 | Quasi madrelingua |
+| C2 | Livello molto alto, capisce senza sforzo praticamente tutto |
 
 Indica il certificato: «Tedesco B2 (Goethe-Zertifikat)», «Tedesco C1 (telc)» oppure «TestDaF livello 4». Se stai ancora studiando, sii preciso: «Tedesco B1, corso B2 in corso, esame 02/2027». Molti lavori in Germania richiedono almeno il B2, anche in aziende dove le riunioni sono in inglese. L'italiano è un vantaggio reale nel commercio, nel turismo e nelle aziende con rapporti con l'Italia: scrivi «Italiano: madrelingua». Evita barre, stelle e percentuali.
 

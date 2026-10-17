@@ -12,7 +12,7 @@ keywords:
   - "Bewerbungsmappe Reihenfolge"
 faq:
   - q: "Muss ein Foto in den Lebenslauf?"
-    a: "Nein. Seit dem Allgemeinen Gleichbehandlungsgesetz (AGG) von 2006 darf ein Arbeitgeber kein Foto verlangen. In der Praxis legen viele Bewerberinnen und Bewerber in Deutschland trotzdem eins bei, vor allem bei klassischen Arbeitgebern. Internationale Firmen und viele Tech-Unternehmen bitten eher darum, es wegzulassen. Wenn Sie ein Foto nutzen, dann ein professionelles."
+    a: "Nein. Sie müssen kein Foto beilegen. Das Allgemeine Gleichbehandlungsgesetz (AGG) von 2006 nennt Fotos zwar nicht ausdrücklich, verbietet aber Benachteiligung etwa wegen Alter, Geschlecht oder ethnischer Herkunft. Die Antidiskriminierungsstelle des Bundes rät Arbeitgebern deshalb, kein Foto zu verlangen. In der Praxis legen viele Bewerberinnen und Bewerber in Deutschland trotzdem eins bei, vor allem bei klassischen Arbeitgebern. Internationale Firmen und viele Tech-Unternehmen bitten eher darum, es wegzulassen. Wenn Sie ein Foto nutzen, dann ein professionelles."
   - q: "Wie lang darf ein tabellarischer Lebenslauf sein?"
     a: "Ein bis zwei Seiten sind üblich. Berufseinsteiger kommen meist mit einer Seite aus, mit mehreren Stationen sind zwei Seiten normal. Mehr als zwei Seiten sind nur in der Wissenschaft mit Publikationsliste üblich."
   - q: "Muss ich den Lebenslauf unterschreiben?"
@@ -25,7 +25,7 @@ faq:
     a: "Für die meisten Stellen in der Privatwirtschaft nicht besonders. Personaler empfinden ihn oft als lang und unpersönlich. Bei EU-Projekten, in der Forschung oder wenn eine Ausschreibung ihn ausdrücklich verlangt, ist er die richtige Wahl."
 ---
 
-Der tabellarische Lebenslauf ist in Deutschland seit Jahrzehnten der Standard, und daran hat sich wenig geändert. Was sich geändert hat, sind die Details: Foto, Geburtsdatum und Unterschrift sind heute freiwillig, Bewerbungen laufen fast nur noch per E-Mail oder Bewerberportal, und viele Unternehmen lesen den Lebenslauf zuerst mit einer Software. Diese Anleitung zeigt, wie ein Lebenslauf 2026 aufgebaut ist, was hineingehört, was Sie weglassen können und wo Österreich und die Schweiz anders ticken.
+Der tabellarische Lebenslauf ist in Deutschland seit Jahrzehnten der Standard, und daran hat sich wenig geändert. Was sich geändert hat, sind die Details: Foto, Geburtsdatum und Unterschrift sind heute freiwillig, Bewerbungen laufen fast nur noch per E-Mail oder Bewerberportal, und viele Unternehmen lesen den Lebenslauf zuerst mit einer Software. Diese Anleitung zeigt, wie ein Lebenslauf 2026 aufgebaut ist, was hineingehört, was Sie weglassen können und worin sich Österreich und die Schweiz unterscheiden.
 
 Wenn Sie direkt loslegen wollen: Im [Lebenslauf-Builder](/de/builder) erstellen Sie einen Lebenslauf kostenlos und ohne Anmeldung, auf Deutsch, mit Foto und als PDF. Ihre Daten bleiben in Ihrem Browser, solange Sie nicht selbst ein Konto anlegen.
 
@@ -45,7 +45,7 @@ Wenn Sie direkt loslegen wollen: Im [Lebenslauf-Builder](/de/builder) erstellen 
 
 ## Der tabellarische Lebenslauf
 
-Tabellarisch heißt: links steht der Zeitraum, rechts die Station. Darunter folgen bei Berufserfahrung zwei bis fünf Stichpunkte zu Aufgaben und Ergebnissen. Fließtext wie im ausführlichen Lebenslauf früherer Jahrzehnte erwartet heute niemand mehr, außer eine Ausschreibung verlangt ausdrücklich einen handschriftlichen oder ausformulierten Lebenslauf. Das kommt praktisch nur noch bei manchen Behörden und kirchlichen Trägern vor.
+Tabellarisch heißt: links steht der Zeitraum, rechts die Station. Darunter folgen bei Berufserfahrung zwei bis fünf Stichpunkte zu Aufgaben und Ergebnissen. Fließtext wie im ausführlichen Lebenslauf früherer Jahrzehnte erwartet heute niemand mehr, außer eine Ausschreibung verlangt ausdrücklich einen handschriftlichen oder ausformulierten Lebenslauf. Das kommt heute nur noch selten vor.
 
 ### Umgekehrt chronologisch
 
@@ -59,13 +59,13 @@ Die neueste Station steht oben. So sieht die Personalabteilung sofort, was Sie a
 
 Pflicht sind nur Angaben, mit denen man Sie erreicht: Vor- und Nachname, Telefonnummer, E-Mail-Adresse und mindestens Ihr Wohnort. Die vollständige Anschrift ist bei Online-Bewerbungen nicht mehr nötig, schadet aber nicht. Ein gepflegtes LinkedIn- oder XING-Profil können Sie verlinken.
 
-Alles andere ist freiwillig. Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet Benachteiligung wegen Alter, Geschlecht, ethnischer Herkunft, Religion, Behinderung und sexueller Identität. Deshalb fragen Arbeitgeber nicht mehr nach Geburtsdatum, Familienstand, Konfession oder Foto, und Sie müssen diese Angaben nicht machen.
+Alles andere ist freiwillig. Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet Benachteiligung wegen der ethnischen Herkunft, des Geschlechts, der Religion oder Weltanschauung, einer Behinderung, des Alters oder der sexuellen Identität. Viele Arbeitgeber fragen deshalb nicht mehr nach Geburtsdatum, Familienstand, Konfession oder Foto, und Sie müssen diese Angaben nicht machen.
 
 | Angabe | Heutige Praxis |
 | --- | --- |
 | Geburtsdatum und Geburtsort | Freiwillig. Viele lassen es weg, bei klassischen Arbeitgebern steht es noch oft im Lebenslauf. |
 | Familienstand und Kinder | Freiwillig und eher unüblich geworden. Nur angeben, wenn Sie es selbst für relevant halten. |
-| Staatsangehörigkeit | Freiwillig. Sinnvoll, wenn Sie keine EU-Staatsangehörigkeit haben und eine Arbeitserlaubnis besitzen, dann lieber den Aufenthaltstitel nennen. |
+| Staatsangehörigkeit | Freiwillig. Ohne EU-Staatsangehörigkeit ist der Aufenthaltstitel aussagekräftiger, zum Beispiel „Aufenthaltserlaubnis, Beschäftigung gestattet“. |
 | Konfession | Nur bei kirchlichen Arbeitgebern üblich, sonst weglassen. |
 | Namen der Eltern, Berufe der Eltern | Gehört nicht mehr in den Lebenslauf. |
 
@@ -110,7 +110,7 @@ Nur der höchste Schulabschluss: Abitur (allgemeine Hochschulreife), Fachabitur 
 
 ## Abschlüsse und Noten
 
-Deutsche Noten reichen von 1,0 (sehr gut) bis 4,0 (ausreichend). Schlechter als 4,0 gilt als nicht bestanden. Geben Sie die Note mit Komma an, zum Beispiel „Abschlussnote 1,7“. Eine Note lohnt sich vor allem beim Berufseinstieg und wenn sie gut ist. Nach einigen Jahren im Beruf interessiert sie kaum noch.
+An Hochschulen reichen deutsche Noten von 1,0 (sehr gut) bis 4,0 (ausreichend). Schlechter als 4,0 gilt als nicht bestanden. In Schulzeugnissen gilt die Skala von 1 (sehr gut) bis 6 (ungenügend). Geben Sie die Note mit Komma an, zum Beispiel „Abschlussnote 1,7“. Eine Note lohnt sich vor allem beim Berufseinstieg und wenn sie gut ist. Nach einigen Jahren im Beruf interessiert sie kaum noch.
 
 Österreich und die Schweiz rechnen anders. In Österreich geht die Skala von 1 (Sehr gut) bis 5 (Nicht genügend), 4 ist die schlechteste bestandene Note. In der Schweiz ist es umgekehrt: 6 ist die Bestnote, 4 ist genügend. Wenn Sie in einem Land studiert haben und im anderen arbeiten wollen, schreiben Sie die Skala dazu, etwa „Note 5,5 (Schweizer Skala, 6 = Bestnote)“.
 
@@ -122,11 +122,11 @@ Sprachkenntnisse geben Sie mit dem Gemeinsamen Europäischen Referenzrahmen (GER
 | --- | --- | --- |
 | A1, A2 | Grundkenntnisse | Grundkenntnisse |
 | B1 | Selbstständige Verwendung im Alltag | Gute Kenntnisse |
-| B2 | Sicher im Beruf in vertrauten Themen | Sehr gute Kenntnisse |
+| B2 | Selbstständig, auch in Fachgesprächen im eigenen Gebiet | Sehr gute Kenntnisse |
 | C1 | Fließend, auch in komplexen Fachgesprächen | Fließend in Wort und Schrift |
-| C2 | Nahezu muttersprachlich | Verhandlungssicher |
+| C2 | Sehr sicher, versteht praktisch alles mühelos | Verhandlungssicher |
 
-Haben Sie ein Zertifikat, nennen Sie es: „Englisch C1 (Cambridge Advanced)“ oder „Deutsch B2 (Goethe-Zertifikat)“. Ihre Muttersprache steht als „Muttersprache“ ohne Niveau. Balken, Sterne oder Prozentangaben lassen Sie weg, weil niemand weiß, was „80 % Französisch“ bedeutet und weil Bewerbermanagementsysteme solche Grafiken nicht lesen können.
+Die Zuordnung der Formulierungen zu den Niveaus ist nicht genormt, deshalb ist das GER-Niveau die eindeutigere Angabe. Haben Sie ein Zertifikat, nennen Sie es: „Englisch C1 (Cambridge Advanced)“ oder „Deutsch B2 (Goethe-Zertifikat)“. Ihre Muttersprache steht als „Muttersprache“ ohne Niveau. Balken, Sterne oder Prozentangaben lassen Sie weg, weil niemand weiß, was „80 % Französisch“ bedeutet und weil Bewerbermanagementsysteme solche Grafiken nicht lesen können.
 
 ## Lücken im Lebenslauf
 
@@ -146,7 +146,7 @@ Für eine Krankheit reicht „Auszeit aus gesundheitlichen Gründen, vollständi
 
 Früher endete jeder Lebenslauf mit Ort, Datum und Unterschrift. Heute ist das freiwillig. Bei Online-Bewerbungen, in der IT und bei internationalen Firmen lassen die meisten es weg. Im öffentlichen Dienst, im Handwerk, bei kleineren Betrieben und bei Bewerbungen um einen Ausbildungsplatz wird die Unterschrift noch häufig erwartet.
 
-Wenn Sie unterschreiben, dann mit einer eingescannten echten Unterschrift, nicht mit einer Schreibschrift-Schriftart. Das Datum sollte aktuell sein und zum Datum im Anschreiben passen. Ein Lebenslauf mit einem Datum von vor drei Monaten wirkt wie eine Massenbewerbung.
+Wenn Sie unterschreiben, dann mit einer eingescannten echten Unterschrift, nicht mit einer Schreibschrift-Schriftart. Das Datum sollte aktuell sein und zum Datum im Anschreiben passen. Ein Lebenslauf, der drei Monate alt ist, wirkt wie eine Massenbewerbung.
 
 ## Länge und Gestaltung
 
@@ -167,9 +167,9 @@ Der Lebenslauf ist nur ein Teil der Bewerbung. Eine vollständige Bewerbungsmapp
 
 ### Arbeitszeugnisse
 
-In Deutschland haben Beschäftigte beim Ausscheiden einen gesetzlichen Anspruch auf ein schriftliches Arbeitszeugnis. Das qualifizierte Zeugnis beurteilt Leistung und Verhalten und muss wohlwollend formuliert sein. Deshalb hat sich eine eigene Zeugnissprache entwickelt, in der „stets zu unserer vollsten Zufriedenheit“ eine sehr gute Bewertung bedeutet. Personaler lesen diese Formulierungen genau. Legen Sie die Zeugnisse der letzten Stationen bei.
+In Deutschland haben Beschäftigte beim Ausscheiden einen gesetzlichen Anspruch auf ein schriftliches Arbeitszeugnis (§ 109 Gewerbeordnung). Das einfache Zeugnis nennt Art und Dauer der Tätigkeit. Auf Wunsch muss der Arbeitgeber ein qualifiziertes Zeugnis ausstellen, das auch Leistung und Verhalten beurteilt. Es muss wahr und nach der Rechtsprechung wohlwollend sein, und das Gesetz verlangt klare Formulierungen ohne versteckte Aussagen. Trotzdem hat sich eine eigene Zeugnissprache entwickelt, in der „stets zu unserer vollsten Zufriedenheit“ eine sehr gute Bewertung bedeutet. Personaler lesen diese Formulierungen genau. Legen Sie die Zeugnisse der letzten Stationen bei.
 
-In der Schweiz sind Arbeitszeugnisse ebenso üblich. In Österreich heißt es Dienstzeugnis und darf keine negativen Aussagen enthalten, eine ausgeprägte Codesprache wie in Deutschland gibt es dort weniger.
+In der Schweiz sind Arbeitszeugnisse ebenso üblich, und Beschäftigte können sie jederzeit verlangen, nicht erst beim Austritt (Art. 330a OR). In Österreich heißt es Dienstzeugnis. Gesetzlich besteht dort nur ein Anspruch auf ein einfaches Dienstzeugnis, und es darf nichts enthalten, was die Suche nach einer neuen Stelle erschwert. Verschlüsselte Formulierungen kommen aber auch dort vor.
 
 ## Europass oder normaler Lebenslauf?
 

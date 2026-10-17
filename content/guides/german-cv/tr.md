@@ -11,7 +11,7 @@ keywords:
   - Bewerbung Almanya
 faq:
   - q: "Almanya'da CV'ye fotoğraf koymak zorunlu mu?"
-    a: "Hayır. 2006 tarihli Genel Eşit Muamele Yasası (AGG) nedeniyle işveren fotoğraf isteyemez. Yine de Almanya'da birçok aday, özellikle geleneksel işverenlere başvururken profesyonel bir fotoğraf ekliyor. Uluslararası şirketler ve birçok teknoloji firması fotoğrafsız CV'yi tercih ediyor."
+    a: "Hayır, fotoğraf eklemek zorunda değilsiniz. 2006 tarihli Genel Eşit Muamele Yasası (AGG) fotoğraftan doğrudan söz etmez, ama yaş, cinsiyet ve etnik köken gibi nedenlerle ayrımcılığı yasaklar. Federal Ayrımcılıkla Mücadele Ajansı da işverenlere fotoğraf istememelerini önerir. Yine de Almanya'da birçok aday, özellikle geleneksel işverenlere başvururken profesyonel bir fotoğraf ekliyor. Uluslararası şirketler ve birçok teknoloji firması fotoğrafsız CV'yi tercih ediyor."
   - q: "CV'm Almanca mı olmalı?"
     a: "İlanın dilinde yazın. İlan Almancaysa Almanca bir Lebenslauf gönderin. Teknoloji ve araştırma alanındaki birçok ilan İngilizce yayımlanır ve İngilizce CV kabul eder. Türkçe CV neredeyse hiçbir zaman uygun değildir."
   - q: "Alman CV'si kaç sayfa olmalı?"
@@ -52,7 +52,7 @@ Her tarihi ay ve yıl olarak yazın, örneğin "03/2021 bis heute" (bugüne kada
 
 Yalnızca iletişim bilgileri gereklidir: ad soyad, ülke koduyla telefon numarası, e-posta adresi ve en azından yaşadığınız şehir. Türkiye'den başvuruyorsanız bulunduğunuz şehri ve ülkeyi yazın, taşınmaya hazır olduğunuzu ekleyin.
 
-Geri kalan her şey isteğe bağlıdır. Almanya'daki Genel Eşit Muamele Yasası (Allgemeines Gleichbehandlungsgesetz, AGG), adayları yaş, cinsiyet, etnik köken, din, engellilik ve cinsel kimlik nedeniyle ayrımcılığa karşı korur. Bu yüzden işverenler artık doğum tarihi, medeni hâl, din veya fotoğraf istemez ve siz de bunları vermek zorunda değilsiniz.
+Geri kalan her şey isteğe bağlıdır. Almanya'daki Genel Eşit Muamele Yasası (Allgemeines Gleichbehandlungsgesetz, AGG), adayları etnik köken, cinsiyet, din veya dünya görüşü, engellilik, yaş ve cinsel kimlik nedeniyle ayrımcılığa karşı korur. Bu yüzden birçok işveren artık doğum tarihi, medeni hâl, din veya fotoğraf istemez ve siz de bunları vermek zorunda değilsiniz.
 
 | Bilgi | Günümüzdeki uygulama |
 | --- | --- |
@@ -66,11 +66,11 @@ Dürüst olmak gerekirse AGG bu bilgileri ortadan kaldırmadı. Birçok Alman CV
 
 ### Vize ve çalışma izni durumu
 
-Türk vatandaşları Almanya'da çalışmak için genellikle bir oturum izni ve çalışma izni gerektirir. İşe alım uzmanları, sizi işe almanın ne kadar gerçekçi olduğunu erkenden bilmek ister. Kişisel bilgilerin altına bir satır ekleyin:
+Türk vatandaşları Almanya'da çalışmak için genellikle çalışmaya izin veren bir oturum iznine ihtiyaç duyar. İşe alım uzmanları, sizi işe almanın ne kadar gerçekçi olduğunu erkenden bilmek ister. Kişisel bilgilerin altına bir satır ekleyin:
 
 - "Arbeitserlaubnis: Blaue Karte EU, gültig bis 08/2028" (AB Mavi Kart, 08/2028'e kadar geçerli)
 - "Aufenthaltserlaubnis mit uneingeschränkter Arbeitserlaubnis" (sınırsız çalışma izinli oturum)
-- "Voraussetzungen für die Blaue Karte EU erfüllt, Abschluss anerkannt (anabin H+)" (Mavi Kart şartlarını karşılıyor, diploma denk)
+- "Voraussetzungen für die Blaue Karte EU erfüllt, Abschluss laut anabin gleichwertig" (Mavi Kart şartlarını karşılıyor, diploma anabin'de denk olarak listeleniyor)
 - "Chancenkarte, verfügbar ab 01/2027" (Fırsat Kartı, 01/2027'den itibaren müsait)
 
 Durumunuzu olduğundan iyi göstermeyin. Henüz vizeniz yoksa diplomanızın tanındığını ve ne zaman başlayabileceğinizi yazın, gerisini işveren sorsun.
@@ -104,11 +104,11 @@ Türk eğitim sistemindeki dereceleri anlaşılır biçimde açıklayın: "Lisan
 
 ### anabin veri tabanı
 
-Yabancı Eğitim Merkezi (ZAB) tarafından yürütülen anabin veri tabanı, yabancı üniversitelerin ve diplomaların Alman diplomalarıyla nasıl karşılaştırıldığını gösterir. H+ olarak işaretlenen bir kurum tanınmış sayılır. Diplomanız da Alman diplomasına denk olarak listelenmişse, CV'de diplomanın yanına "in Deutschland anerkannt (anabin H+)" yazabilirsiniz.
+Yabancı Eğitim Merkezi (ZAB) tarafından yürütülen anabin veri tabanı, yabancı üniversitelerin ve diplomaların Alman diplomalarıyla nasıl karşılaştırıldığını gösterir. H+ olarak işaretlenen bir kurum üniversite olarak tanınır, ancak bu tek başına diplomanızı kapsamaz. Diplomanız da Alman diplomasına denk olarak listelenmişse, CV'de diplomanın yanına "anabin: Hochschule H+, Abschluss gleichwertig" yazabilirsiniz.
 
-Üniversiteniz veya diplomanız listede yoksa ZAB'a başvurarak bir denklik belgesi (Zeugnisbewertung) alabilirsiniz. Ücretlidir ve birkaç hafta sürer, ama hem işverenler hem de vize başvurusu için yararlıdır. AB Mavi Kart için tanınmış veya denk bir diploma temel şartlardan biridir.
+Üniversiteniz veya diplomanız listede yoksa ZAB'a başvurarak bir denklik belgesi (Zeugnisbewertung) alabilirsiniz. Ücretlidir ve belgeler eksiksizse en fazla yaklaşık üç ay sürer, ama hem işverenler hem de vize başvurusu için yararlıdır. AB Mavi Kart için çoğu başvuru sahibinin tanınmış veya denk bir diplomaya ve her yıl belirlenen asgari maaşın üzerinde bir iş teklifine ihtiyacı vardır. BT uzmanları iş deneyimiyle de başvurabilir.
 
-Düzenlenmiş meslekler farklıdır. Hemşireler, doktorlar, eczacılar, öğretmenler ve bazı mühendislik unvanları, o unvanla çalışmadan önce bir Alman makamından resmi tanınma (Anerkennung) gerektirir. Hemşirelikte tanınma için genellikle B2 seviyesinde Almanca da istenir. Süreç devam ediyorsa yazın: "Anerkennung als Pflegefachkraft läuft, voraussichtlich 03/2027".
+Düzenlenmiş meslekler farklıdır. Hemşireler, doktorlar, eczacılar, öğretmenler ve bazı mühendislik unvanları, o unvanla çalışmadan önce bir Alman makamından resmi tanınma (Anerkennung) gerektirir. Hemşirelikte tanınma için genellikle B2 seviyesinde Almanca da istenir. Süreç devam ediyorsa yazın: "Anerkennung als Pflegefachfrau läuft, voraussichtlich 03/2027".
 
 ### Notlar
 
@@ -122,9 +122,9 @@ Her dil için Avrupa Ortak Başvuru Metni'ni (AOBM, Almancası GER) kullanın. "
 | --- | --- |
 | A1, A2 | Temel |
 | B1 | Günlük hayatta bağımsız |
-| B2 | İşte bilinen konularda rahat |
+| B2 | İşte bağımsız, kendi alanındaki teknik konuşmalarda da |
 | C1 | Akıcı, karmaşık mesleki konuşmalarda da |
-| C2 | Anadile yakın |
+| C2 | Çok ileri düzey, neredeyse her şeyi zorlanmadan anlar |
 
 Sertifikanız varsa adını yazın: "Deutsch B2 (Goethe-Zertifikat)", "Deutsch C1 (telc)" veya "TestDaF Niveau 4". Hâlâ öğreniyorsanız net olun: "Deutsch B1, B2-Kurs läuft, Prüfung 02/2027". Almanya'daki birçok iş, toplantılar İngilizce yapılsa bile günlük çalışma için en az B2 Almanca ister. Türkçe, Almanya'daki büyük Türk kökenli nüfus nedeniyle sağlık, sosyal hizmet, müşteri hizmetleri ve satışta gerçek bir avantajdır: "Türkisch: Muttersprache" yazın. Çubuk, yıldız ve yüzde kullanmayın, kimse "yüzde 80 Almanca"nın ne demek olduğunu bilmez ve başvuru takip sistemleri grafikleri okuyamaz.
 

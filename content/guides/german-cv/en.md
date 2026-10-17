@@ -11,7 +11,7 @@ keywords:
   - anabin degree recognition
 faq:
   - q: Do I need a photo on a German CV?
-    a: No. Since the General Equal Treatment Act (AGG) of 2006, employers cannot require one. Many applicants in Germany still add a professional photo, especially for traditional employers. International companies and many tech firms prefer none. If a job ad says no photo, leave it off.
+    a: No, you are not obliged to include one. The General Equal Treatment Act (AGG) of 2006 does not mention photos directly, but it bans discrimination based on age, sex, ethnic origin and other characteristics, and the Federal Anti-Discrimination Agency advises employers not to ask for a photo. Many applicants in Germany still add a professional photo, especially for traditional employers. International companies and many tech firms prefer none. If a job ad says no photo, leave it off.
   - q: Should my CV for Germany be in German or English?
     a: Write it in the language of the job ad. If the ad is in German, send a German CV, even if the team works partly in English. Many tech and research roles advertise in English and accept an English CV.
   - q: How long should a German CV be?
@@ -52,7 +52,7 @@ Use month and year for every date, for example "03/2021 to present" or "since 03
 
 Only contact details are required: full name, phone number with country code, email address and at least your city. If you already live in Germany, a full address is fine. If you are applying from abroad, write your current city and country, and add that you are willing to relocate.
 
-Everything else is optional. Germany's General Equal Treatment Act (Allgemeines Gleichbehandlungsgesetz, AGG) protects applicants against discrimination based on age, gender, ethnic origin, religion, disability and sexual identity. As a result, employers no longer ask for date of birth, marital status, religion or a photo, and you do not have to give them.
+Everything else is optional. Germany's General Equal Treatment Act (Allgemeines Gleichbehandlungsgesetz, AGG) protects applicants against discrimination based on ethnic origin, sex, religion or belief, disability, age and sexual identity. As a result, many employers no longer ask for date of birth, marital status, religion or a photo, and you do not have to give them.
 
 | Detail | Current practice |
 | --- | --- |
@@ -70,7 +70,7 @@ If you need a visa, recruiters want to know early whether hiring you is realisti
 
 - "Work permit: EU Blue Card, valid until 08/2028"
 - "Residence permit with unrestricted work authorisation"
-- "Eligible for the EU Blue Card, degree recognised (anabin H+)"
+- "Eligible for the EU Blue Card, degree listed as equivalent in anabin"
 - "Opportunity Card (Chancenkarte), available from 01/2027"
 
 Do not overstate your status. If you still need a visa, say that your degree is recognised and when you could start, and let the employer ask.
@@ -102,9 +102,9 @@ Germany has two respected paths: vocational training (Ausbildung), which combine
 
 ### Recognition of foreign degrees and anabin
 
-German employers often do not know foreign universities. The anabin database, run by the Central Office for Foreign Education (ZAB), shows how foreign institutions and degrees compare to German ones. An institution rated H+ is recognised. If your degree is also listed as equivalent to a German degree, you can add "recognised in Germany (anabin H+)" next to it.
+German employers often do not know foreign universities. The anabin database, run by the Central Office for Foreign Education (ZAB), shows how foreign institutions and degrees compare to German ones. An institution rated H+ is recognised as a university, but that alone does not cover your degree. If your degree is also listed as equivalent to a German degree, you can add "anabin: institution H+, degree equivalent" next to it.
 
-If your university or degree is not listed, you can apply to the ZAB for a statement of comparability (Zeugnisbewertung). It costs a fee and takes some weeks, but it helps with both employers and visa applications. For the EU Blue Card, a recognised or comparable degree is a key requirement.
+If your university or degree is not listed, you can apply to the ZAB for a statement of comparability (Zeugnisbewertung). It costs a fee and can take up to about three months once your documents are complete, but it helps with both employers and visa applications. For the EU Blue Card, most applicants need a recognised or comparable degree and a job offer above a minimum salary that is set each year. IT specialists can also qualify through work experience.
 
 Regulated professions are different. Nurses, doctors, pharmacists, teachers and some engineering titles need formal recognition (Anerkennung) from a German authority before you can work under that title. Nursing recognition usually also requires German at B2 level. If your recognition is in progress, say so: "Recognition as Pflegefachfrau in progress, expected 03/2027".
 
@@ -120,9 +120,9 @@ Use the Common European Framework of Reference (CEFR, in German GER) for every l
 | --- | --- |
 | A1, A2 | Basic |
 | B1 | Independent in everyday situations |
-| B2 | Confident at work on familiar topics |
+| B2 | Independent at work, including technical discussions in your field |
 | C1 | Fluent, including complex professional discussions |
-| C2 | Near native |
+| C2 | Very high level, understands virtually everything with ease |
 
 Name the certificate if you have one: "German B2 (Goethe-Zertifikat)", "German C1 (telc)" or "German, TestDaF level 4". If you are still learning, be precise: "German B1, B2 course in progress, exam 02/2027". Many jobs in Germany need at least B2 German for daily work, even in companies where meetings are in English. Leave out bars, stars and percentages, because nobody knows what "80 % German" means and applicant tracking systems cannot read graphics.
 
@@ -157,7 +157,7 @@ In Germany, the CV is usually part of a package:
 
 ### Employment references (Arbeitszeugnisse)
 
-In Germany, employees have a legal right to a written reference when they leave. These references use coded language, where "always to our fullest satisfaction" means very good. Recruiters read them closely. If you worked abroad, attach reference letters from previous employers if you have them. Your home country probably has no such tradition, and German recruiters know that.
+In Germany, employees have a legal right to a written reference when they leave (Section 109 of the Trade Regulation Act). A simple reference states the type and length of the job, and on request the employer must issue a qualified one that also rates performance and conduct. These references use coded language, where "always to our fullest satisfaction" means very good. Recruiters read them closely. If you worked abroad, attach reference letters from previous employers if you have them. Your home country probably has no such tradition, and German recruiters know that.
 
 ### Translations
 

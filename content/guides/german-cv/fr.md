@@ -11,7 +11,7 @@ keywords:
   - Bewerbung Allemagne
 faq:
   - q: "Faut-il une photo sur un CV allemand ?"
-    a: "Non. Depuis la loi générale sur l'égalité de traitement (AGG) de 2006, un employeur ne peut pas l'exiger. Beaucoup de candidats en Allemagne en mettent pourtant une, surtout chez les employeurs traditionnels. Les grands groupes internationaux et de nombreuses entreprises tech préfèrent un CV sans photo."
+    a: "Non, vous n'êtes pas obligé d'en mettre une. La loi générale sur l'égalité de traitement (AGG) de 2006 ne parle pas directement des photos, mais elle interdit la discrimination liée à l'âge, au sexe ou à l'origine ethnique, et l'agence fédérale de lutte contre les discriminations conseille aux employeurs de ne pas en demander. Beaucoup de candidats en Allemagne en mettent pourtant une, surtout chez les employeurs traditionnels. Les grands groupes internationaux et de nombreuses entreprises tech préfèrent un CV sans photo."
   - q: "Mon CV doit-il être en allemand ?"
     a: "Écrivez dans la langue de l'offre. Si l'annonce est en allemand, envoyez un Lebenslauf en allemand. Beaucoup de postes dans la tech et la recherche sont publiés en anglais et acceptent un CV en anglais. Un CV en français ne convient presque jamais."
   - q: "Quelle longueur pour un CV allemand ?"
@@ -52,7 +52,7 @@ Indiquez toujours le mois et l'année, par exemple « 03/2021 bis heute » (jusq
 
 Seules les coordonnées sont nécessaires : nom complet, téléphone avec indicatif international, adresse e-mail et au moins votre ville. Si vous postulez depuis la France, la Belgique ou le Maroc, indiquez votre ville et votre pays actuels et précisez que vous êtes prêt à déménager.
 
-Le reste est facultatif. La loi allemande sur l'égalité de traitement (Allgemeines Gleichbehandlungsgesetz, AGG) protège les candidats contre la discrimination liée à l'âge, au sexe, à l'origine ethnique, à la religion, au handicap et à l'identité sexuelle. Les employeurs ne demandent donc plus la date de naissance, la situation familiale, la religion ni la photo.
+Le reste est facultatif. La loi allemande sur l'égalité de traitement (Allgemeines Gleichbehandlungsgesetz, AGG) protège les candidats contre la discrimination liée à l'origine ethnique, au sexe, à la religion ou aux convictions, au handicap, à l'âge et à l'identité sexuelle. Beaucoup d'employeurs ne demandent donc plus la date de naissance, la situation familiale, la religion ni la photo.
 
 | Information | Pratique actuelle |
 | --- | --- |
@@ -68,7 +68,7 @@ Soyons honnêtes : l'AGG n'a pas fait disparaître ces informations. Beaucoup de
 
 Si vous êtes français, belge ou luxembourgeois, vous pouvez travailler en Allemagne sans visa. Une ligne « Nationalité : française (citoyen de l'UE) » rassure un recruteur qui hésiterait. La Suisse fait partie de l'accord sur la libre circulation, la démarche est donc simple aussi.
 
-Si vous venez du Maghreb, d'Afrique de l'Ouest ou du Canada, ajoutez votre statut : « Carte bleue européenne, valable jusqu'au 08/2028 », « Éligible à la carte bleue européenne, diplôme reconnu (anabin H+) » ou « Carte d'opportunité (Chancenkarte), disponible à partir du 01/2027 ». N'exagérez pas votre situation.
+Si vous venez du Maghreb, d'Afrique de l'Ouest ou du Canada, ajoutez votre statut : « Carte bleue européenne, valable jusqu'au 08/2028 », « Éligible à la carte bleue européenne, diplôme listé comme équivalent dans anabin » ou « Carte d'opportunité (Chancenkarte), disponible à partir du 01/2027 ». N'exagérez pas votre situation.
 
 ## La photo
 
@@ -91,13 +91,13 @@ Traduisez les intitulés de manière compréhensible. Un recruteur allemand ne s
 
 ### La base anabin
 
-La base de données anabin, gérée par l'office central pour l'enseignement étranger (ZAB), indique comment les établissements et diplômes étrangers se comparent aux diplômes allemands. Un établissement classé H+ est reconnu. Si votre diplôme y figure aussi comme équivalent, vous pouvez écrire « reconnu en Allemagne (anabin H+) ». Sinon, la ZAB délivre contre paiement une attestation de comparabilité (Zeugnisbewertung), utile pour les employeurs comme pour les démarches de visa. Pour la carte bleue européenne, un diplôme reconnu ou comparable est une condition centrale.
+La base de données anabin, gérée par l'office central pour l'enseignement étranger (ZAB), indique comment les établissements et diplômes étrangers se comparent aux diplômes allemands. Un établissement classé H+ est reconnu comme université, mais cela ne suffit pas pour votre diplôme. Si votre diplôme y figure aussi comme équivalent, vous pouvez écrire « anabin : établissement H+, diplôme équivalent ». Sinon, la ZAB délivre contre paiement une attestation de comparabilité (Zeugnisbewertung), en trois mois environ au maximum une fois le dossier complet, utile pour les employeurs comme pour les démarches de visa. Pour la carte bleue européenne, la plupart des candidats ont besoin d'un diplôme reconnu ou comparable et d'un poste payé au-dessus d'un salaire minimum fixé chaque année. Les spécialistes en informatique peuvent aussi se qualifier par leur expérience professionnelle.
 
 Les professions réglementées sont un cas à part. Infirmiers, médecins, pharmaciens, enseignants et certains titres d'ingénieur exigent une reconnaissance officielle (Anerkennung) auprès d'une autorité allemande. Pour les soins infirmiers, un niveau B2 en allemand est généralement demandé. Si la procédure est en cours, indiquez-le avec la date prévue.
 
 ### Les notes
 
-En Allemagne, les notes vont de 1,0 (très bien) à 4,0 (suffisant), au-delà c'est un échec. Une note française sur 20 ne parle pas aux recruteurs, ajoutez donc l'échelle : « 15,2/20, mention bien ». Ne convertissez pas vous-même sans conversion officielle. En Autriche, l'échelle va de 1 à 5 (4 est la dernière note de réussite), en Suisse 6 est la meilleure note et 4 la moyenne.
+En Allemagne, les notes vont de 1,0 (très bien) à 4,0 (suffisant), au-delà c'est un échec. Une note française sur 20 ne parle pas aux recruteurs, ajoutez donc l'échelle : « 15,2/20, mention bien ». Ne convertissez pas vous-même sans conversion officielle. En Autriche, l'échelle va de 1 à 5 (4 est la dernière note de réussite), en Suisse 6 est la meilleure note et 4 la note suffisante.
 
 ## Niveaux de langue
 
@@ -107,9 +107,9 @@ Utilisez le Cadre européen commun de référence (CECR, GER en allemand). « Co
 | --- | --- |
 | A1, A2 | Notions |
 | B1 | Autonome au quotidien |
-| B2 | À l'aise au travail sur des sujets familiers |
+| B2 | Autonome au travail, y compris dans des échanges techniques de son domaine |
 | C1 | Courant, y compris dans des échanges complexes |
-| C2 | Proche de la langue maternelle |
+| C2 | Très haut niveau, comprend pratiquement tout sans effort |
 
 Citez le certificat : « Allemand B2 (Goethe-Zertifikat) », « Allemand C1 (telc) » ou « TestDaF niveau 4 ». Si vous apprenez encore, soyez précis : « Allemand B1, cours B2 en cours, examen 02/2027 ». Beaucoup de postes en Allemagne demandent au moins un B2, même dans les entreprises où les réunions se tiennent en anglais. Le français est un atout réel, notamment dans le commerce, l'industrie et les relations avec la France : indiquez « Français : langue maternelle ». Évitez les barres, étoiles et pourcentages.
 
