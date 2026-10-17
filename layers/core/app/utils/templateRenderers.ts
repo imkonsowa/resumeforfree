@@ -153,6 +153,7 @@ export const generateVolunteeringContent = (volunteering: Volunteering[], t?: Tr
     });
 };
 export const generateProjectsContent = (projects: Project[], t?: TranslateFunction, locale?: string): SectionContent[] => {
+    const linkLabel = t ? t('common.link') : 'Link';
     return projects
         .filter((project) => {
             const hasLinks = Array.isArray(project.links) && project.links.length > 0;
@@ -165,8 +166,7 @@ export const generateProjectsContent = (projects: Project[], t?: TranslateFuncti
             const linkMarkups = (project.links || [])
                 .map((link) => {
                     const url = link.url?.trim();
-                    const label = link.label?.trim();
-                    return url && label ? convertLink(url, label) : '';
+                    return url ? convertLink(url, link.label?.trim() || linkLabel) : '';
                 })
                 .filter(Boolean);
             const titleContent = [name, ...linkMarkups].filter(Boolean).join(' • ');
