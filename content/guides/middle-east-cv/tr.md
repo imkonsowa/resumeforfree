@@ -83,7 +83,7 @@ Bölümünüzü, üniversitenizi, ülkeyi ve mezuniyet yılını yazın. "Türki
 
 ### Diploma onayı ve denklik
 
-Körfez ülkelerinin çoğu çalışma vizesi veya izni vermeden önce diplomanızın onaylanmasını ister. Bu genellikle diplomanın verildiği ülkedeki resmi makamlardan geçer; ülkeye göre apostil veya konsolosluk onayı, ardından çalışacağınız ülkenin dışişleri veya ilgili bakanlığı gerekebilir. Bazı ülkeler, özellikle sağlık, eğitim ve kamu sektöründe, eğitim bakanlığından denklik belgesi de ister. Adımlar ülkeye ve mesleğe göre değişir ve zaman zaman güncellenir, bu yüzden güncel süreci işvereninize veya ilgili konsoloslukla teyit edin.
+Körfez ülkelerinin çoğu çalışma vizesi veya izni vermeden önce diplomanızın onaylanmasını ister. Bu genellikle diplomanın verildiği ülkedeki resmi makamlardan geçer; ülkeye göre apostil veya konsolosluk onayı, ardından çalışacağınız ülkenin dışişleri veya ilgili bakanlığı gerekebilir. Bazı ülkeler, özellikle sağlık, eğitim ve kamu sektöründe, eğitim bakanlığından denklik belgesi de ister. Türkiye, Lahey Apostil Sözleşmesi'ne taraftır; Suudi Arabistan (Aralık 2022'den beri), Bahreyn ve Umman da taraf olduğu için bu ülkelerde apostil, konsolosluk onayının yerini alabilir. BAE, Katar ve Kuveyt taraf değildir ve konsolosluk onayı zinciri sürer. Adımlar ülkeye ve mesleğe göre değişir ve zaman zaman güncellenir, bu yüzden güncel süreci işvereninize veya ilgili konsoloslukla teyit edin.
 
 Onay tamamlandıysa diplomanın altına kısa bir not yeterlidir: "Degree attested for UAE employment." Bu, işverene evrak yüzünden işe alımın gecikmeyeceğini gösterir. Henüz başlamadıysanız bir şey yazmayın, ama ciddi düşünüyorsanız erken başlayın.
 
@@ -95,7 +95,7 @@ Körfez lisansınız varsa veya sınavı geçtiyseniz bunu CV'nin üst kısmına
 
 ## Suudileştirme ve Emiratileştirme
 
-Tüm Körfez ülkelerinin özel sektörde kendi vatandaşlarının istihdamını artırmaya yönelik politikaları var: Suudi Arabistan'da Suudileştirme (Nitakat), BAE'de Emiratileştirme ve Katar, Kuveyt, Bahreyn ve Umman'da benzer programlar. Suudi Arabistan'da bazı pozisyonlar yalnızca vatandaşlara ayrılmıştır ve şirketler sektörlerine ve büyüklüklerine göre kotalarla çalışır.
+Tüm Körfez ülkelerinin özel sektörde kendi vatandaşlarının istihdamını artırmaya yönelik politikaları var: Suudi Arabistan'da Suudileştirme (Nitakat), BAE'de Emiratileştirme ve Katar, Kuveyt, Bahreyn ve Umman'da benzer programlar. Suudi Arabistan'da bazı pozisyonlar yalnızca vatandaşlara ayrılmıştır ve şirketler faaliyet alanlarına ve büyüklüklerine göre belirlenen, zaman zaman güncellenen yerlileştirme oranlarıyla çalışır.
 
 Pratikte bu, bazı ilanların yalnızca vatandaşlara açık olduğu anlamına gelir. Mühendislik, sağlık, inşaat ve teknik alanlar ise hâlâ yoğun olarak yabancı çalışan alıyor. İlanı dikkatle okuyun ve yalnızca vatandaşlara açık işlere zaman harcamayın.
 

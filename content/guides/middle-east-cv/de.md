@@ -75,11 +75,11 @@ Für deutsche Bewerber ist das Foto vertraut. Viele Arbeitgeber am Golf und in �
 
 ## Abschlüsse, Noten und Beglaubigung
 
-Nennen Sie Abschluss, Fach, Hochschule, Land und Jahr. Recruiter am Golf kennen das deutsche System nicht unbedingt: "Diplom-Ingenieur (equivalent to Master's degree)" oder "Staatlich anerkannte Pflegefachkraft (three-year vocational training)" macht das Niveau verständlich. Die duale Ausbildung ist am Golf wenig bekannt; beschreiben Sie sie kurz mit Dauer und Abschluss. Noten sind nach einigen Berufsjahren freiwillig. Rechnen Sie deutsche Noten nicht selbst in ein GPA um; schreiben Sie "Grade 1.7 (German scale, 1.0 is best)", wenn Sie die Note angeben.
+Nennen Sie Abschluss, Fach, Hochschule, Land und Jahr. Recruiter am Golf kennen das deutsche System nicht unbedingt: "Diplom-Ingenieur (equivalent to Master's degree)" oder "Pflegefachfrau/Pflegefachmann (three-year state-recognised nursing training)" macht das Niveau verständlich. Die duale Ausbildung ist am Golf wenig bekannt; beschreiben Sie sie kurz mit Dauer und Abschluss. Noten sind nach einigen Berufsjahren freiwillig. Rechnen Sie deutsche Noten nicht selbst in ein GPA um; schreiben Sie "Grade 1.7 (German scale, 1.0 is best)", wenn Sie die Note angeben.
 
 ### Beglaubigung und Anerkennung
 
-Die meisten Golfstaaten verlangen die Beglaubigung des Abschlusses, bevor sie ein Arbeitsvisum oder eine Arbeitserlaubnis erteilen. Der Weg führt in der Regel über Stellen im Land, das den Abschluss ausgestellt hat, und dann über die Botschaft oder das Außenministerium des Ziellandes. Je nach Zielland kann eine Apostille genügen oder eine Legalisation nötig sein. Für manche Stellen, besonders in Gesundheit, Bildung und öffentlichem Dienst, verlangen Länder zusätzlich eine Gleichwertigkeitsbescheinigung des Bildungsministeriums. Die Schritte unterscheiden sich nach Land und Beruf und ändern sich von Zeit zu Zeit. Klären Sie den aktuellen Ablauf mit dem Arbeitgeber oder der zuständigen Botschaft.
+Die meisten Golfstaaten verlangen die Beglaubigung des Abschlusses, bevor sie ein Arbeitsvisum oder eine Arbeitserlaubnis erteilen. Der Weg führt in der Regel über Stellen im Land, das den Abschluss ausgestellt hat, und dann über die Botschaft oder das Außenministerium des Ziellandes. Deutschland ist Vertragsstaat des Haager Apostilleübereinkommens, ebenso Saudi-Arabien (seit Dezember 2022), Bahrain und Oman; für diese drei Länder kann die Apostille den Schritt über die Botschaft ersetzen. Die VAE, Katar, Kuwait und Ägypten sind keine Vertragsstaaten, dort ist eine Legalisation nötig. Für manche Stellen, besonders in Gesundheit, Bildung und öffentlichem Dienst, verlangen Länder zusätzlich eine Gleichwertigkeitsbescheinigung des Bildungsministeriums. Die Schritte unterscheiden sich nach Land und Beruf und ändern sich von Zeit zu Zeit. Klären Sie den aktuellen Ablauf mit dem Arbeitgeber oder der zuständigen Botschaft.
 
 Ist die Beglaubigung erledigt, genügt eine kurze Zeile unter dem Abschluss: "Degree attested for UAE employment". Das zeigt dem Arbeitgeber, dass die Einstellung nicht an Papieren hängen wird. Andernfalls erwähnen Sie nichts, beginnen aber früh, wenn Ihr Plan ernst ist.
 
@@ -91,7 +91,7 @@ Haben Sie bereits eine Lizenz am Golf oder die Prüfung bestanden, gehört das n
 
 ## Saudisierung und Emiratisierung
 
-Alle Golfstaaten verfolgen Programme, um mehr eigene Staatsbürger in der Privatwirtschaft zu beschäftigen: die Saudisierung (Nitaqat) in Saudi-Arabien, die Emiratisierung in den VAE und ähnliche Programme in Katar, Kuwait, Bahrain und Oman. In Saudi-Arabien sind einige Berufe Staatsbürgern vorbehalten, und Unternehmen arbeiten mit Quoten, die von Branche und Größe abhängen.
+Alle Golfstaaten verfolgen Programme, um mehr eigene Staatsbürger in der Privatwirtschaft zu beschäftigen: die Saudisierung (Nitaqat) in Saudi-Arabien, die Emiratisierung in den VAE und ähnliche Programme in Katar, Kuwait, Bahrain und Oman. In Saudi-Arabien sind einige Berufe Staatsbürgern vorbehalten, und Unternehmen müssen Saudisierungsquoten erfüllen, die von Tätigkeit und Größe abhängen und regelmäßig angepasst werden.
 
 In der Praxis sind manche Stellen nur für Staatsangehörige offen. Technische Berufe, Ingenieurwesen, Gesundheitswesen und Hotellerie stellen aber weiterhin international ein. Lesen Sie die Anzeige genau.
 
