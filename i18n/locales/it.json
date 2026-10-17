@@ -120,6 +120,24 @@
             "stat2Label": "PDF scaricati",
             "stat3Label": "Costo totale"
         },
+        "noSignup": {
+            "title": "Un creatore di curriculum gratis senza registrazione",
+            "description": "Cosa significa qui, in pratica, «senza registrazione».",
+            "items": {
+                "noEmail": {
+                    "title": "Nessuna email prima del download",
+                    "description": "Apri l'editor e inizia a scrivere. Nessun campo email, password o verifica tra te e il PDF."
+                },
+                "localSave": {
+                    "title": "Salvato nel tuo browser",
+                    "description": "Il curriculum viene salvato in questo browser mentre scrivi. Per spostarlo su un altro dispositivo, esportalo come file e importalo lì."
+                },
+                "optionalAccount": {
+                    "title": "Un account solo se lo vuoi",
+                    "description": "L'account serve solo per sincronizzare fino a 3 curriculum nel cloud o per l'accesso API di un agente. I download PDF illimitati funzionano senza."
+                }
+            }
+        },
         "sampleResume": {
             "alt": "Anteprima del curriculum di esempio",
             "name": "Omar Al-Masry",

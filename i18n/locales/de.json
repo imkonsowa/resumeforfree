@@ -120,6 +120,24 @@
             "stat2Label": "Heruntergeladene PDFs",
             "stat3Label": "Dauerhafte Kosten"
         },
+        "noSignup": {
+            "title": "Lebenslauf erstellen ohne Anmeldung",
+            "description": "Was „ohne Anmeldung“ hier konkret bedeutet.",
+            "items": {
+                "noEmail": {
+                    "title": "Keine E-Mail vor dem Download",
+                    "description": "Öffnen Sie den Editor und legen Sie los. Kein E-Mail-Feld, kein Passwort und keine Bestätigung zwischen Ihnen und dem PDF."
+                },
+                "localSave": {
+                    "title": "Im Browser gespeichert",
+                    "description": "Ihr Lebenslauf wird beim Tippen in diesem Browser gespeichert. Für ein anderes Gerät exportieren Sie ihn als Datei und importieren ihn dort."
+                },
+                "optionalAccount": {
+                    "title": "Ein Konto nur, wenn Sie es wollen",
+                    "description": "Ein Konto brauchen Sie nur für die Cloud-Synchronisierung von bis zu 3 Lebensläufen oder den API-Zugang für einen Agenten. Unbegrenzte PDF-Downloads gehen auch ohne."
+                }
+            }
+        },
         "sampleResume": {
             "alt": "Vorschau des Musterlebenslaufs",
             "name": "Omar Al-Masry",

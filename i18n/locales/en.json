@@ -120,6 +120,24 @@
             "stat2Label": "PDFs downloaded",
             "stat3Label": "Lifetime cost"
         },
+        "noSignup": {
+            "title": "A free resume builder with no sign-up",
+            "description": "What \"no sign-up\" means here, in practice.",
+            "items": {
+                "noEmail": {
+                    "title": "No email before the download",
+                    "description": "Open the builder and start typing. There is no email field, password or verification step between you and the PDF."
+                },
+                "localSave": {
+                    "title": "Saved in your browser",
+                    "description": "Your resume is saved in this browser as you type. To move it to another device, export it as a file and import it there."
+                },
+                "optionalAccount": {
+                    "title": "An account only if you want one",
+                    "description": "Sign up only for cloud sync of up to 3 resumes or API access for an agent. Unlimited PDF downloads work without it."
+                }
+            }
+        },
         "sampleResume": {
             "alt": "Sample resume preview",
             "name": "Omar Al-Masry",

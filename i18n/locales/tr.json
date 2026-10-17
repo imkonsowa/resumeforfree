@@ -120,6 +120,24 @@
             "stat2Label": "İndirilen PDF'ler",
             "stat3Label": "Ömür boyu maliyet"
         },
+        "noSignup": {
+            "title": "Kayıt gerektirmeyen ücretsiz özgeçmiş oluşturucu",
+            "description": "Burada \"kayıtsız\" pratikte ne anlama geliyor.",
+            "items": {
+                "noEmail": {
+                    "title": "İndirmeden önce e-posta yok",
+                    "description": "Editörü açın ve yazmaya başlayın. PDF ile aranızda e-posta alanı, şifre ya da doğrulama adımı yok."
+                },
+                "localSave": {
+                    "title": "Tarayıcınızda kaydedilir",
+                    "description": "Özgeçmişiniz siz yazdıkça bu tarayıcıda kaydedilir. Başka bir cihaza taşımak için dosya olarak dışa aktarıp orada içe aktarın."
+                },
+                "optionalAccount": {
+                    "title": "Hesap yalnızca isterseniz",
+                    "description": "Hesap sadece en fazla 3 özgeçmiş için bulut senkronizasyonu veya bir ajan için API erişimi içindir. Sınırsız PDF indirme hesapsız çalışır."
+                }
+            }
+        },
         "sampleResume": {
             "alt": "Örnek özgeçmiş önizlemesi",
             "name": "Ömer Yılmaz",

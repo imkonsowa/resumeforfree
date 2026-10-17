@@ -87,6 +87,16 @@ const steps = computed(() => [
     { title: t('homepage.howItWorks.step3.title'), body: t('homepage.howItWorks.step3.description') },
 ]);
 
+const noSignupItems = computed(() => [
+    { icon: 'i-lucide-mail-x', key: 'noEmail' },
+    { icon: 'i-lucide-hard-drive', key: 'localSave' },
+    { icon: 'i-lucide-cloud', key: 'optionalAccount' },
+].map(item => ({
+    icon: item.icon,
+    title: t(`homepage.noSignup.items.${item.key}.title`),
+    description: t(`homepage.noSignup.items.${item.key}.description`),
+})));
+
 const featureItems = [
     { icon: 'i-lucide-check', title: t('homepage.features.free.title'), body: t('homepage.features.free.description') },
     { icon: 'i-lucide-lock', title: t('homepage.features.privacy.title'), body: t('homepage.features.privacy.description') },
@@ -283,6 +293,13 @@ useHead(() => {
                 class="w-full max-w-[460px] mx-auto aspect-[596/842] rounded-lg ring ring-default bg-white shadow-2xl pointer-events-none"
             />
         </UPageHero>
+
+        <UPageSection
+            :title="$t('homepage.noSignup.title')"
+            :description="$t('homepage.noSignup.description')"
+            :features="noSignupItems"
+            class="bg-muted border-y border-default"
+        />
 
         <UPageSection
             :title="$t('homepage.features.sectionTitle')"

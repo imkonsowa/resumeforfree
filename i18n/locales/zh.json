@@ -120,6 +120,24 @@
             "stat2Label": "已下载 PDF 份数",
             "stat3Label": "终生使用费用"
         },
+        "noSignup": {
+            "title": "免注册的免费简历生成器",
+            "description": "这里的“免注册”具体指什么。",
+            "items": {
+                "noEmail": {
+                    "title": "下载前无需邮箱",
+                    "description": "打开编辑器直接开始写。在你和PDF之间，没有邮箱、密码或验证步骤。"
+                },
+                "localSave": {
+                    "title": "保存在你的浏览器中",
+                    "description": "简历会在你输入时保存在这个浏览器里。要换到另一台设备，把它导出为文件，再在那台设备上导入。"
+                },
+                "optionalAccount": {
+                    "title": "需要时再注册",
+                    "description": "账户只用于云同步（最多3份简历）或给代理程序提供API访问。无限次下载PDF无需账户。"
+                }
+            }
+        },
         "sampleResume": {
             "alt": "简历范例预览",
             "name": "奥马尔·马斯里 (Omar Al-Masry)",

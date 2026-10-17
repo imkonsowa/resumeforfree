@@ -120,6 +120,24 @@
             "stat2Label": "PDF téléchargés",
             "stat3Label": "Coût à vie"
         },
+        "noSignup": {
+            "title": "Un créateur de CV gratuit sans inscription",
+            "description": "Ce que « sans inscription » veut dire ici, concrètement.",
+            "items": {
+                "noEmail": {
+                    "title": "Pas d'e-mail avant le téléchargement",
+                    "description": "Ouvrez l'éditeur et commencez à écrire. Aucun champ e-mail, mot de passe ou étape de vérification entre vous et le PDF."
+                },
+                "localSave": {
+                    "title": "Enregistré dans votre navigateur",
+                    "description": "Votre CV est enregistré dans ce navigateur pendant que vous écrivez. Pour le passer sur un autre appareil, exportez-le en fichier puis importez-le là-bas."
+                },
+                "optionalAccount": {
+                    "title": "Un compte seulement si vous le voulez",
+                    "description": "Le compte sert uniquement à synchroniser jusqu'à 3 CV dans le cloud ou à donner un accès API à un agent. Les téléchargements PDF illimités fonctionnent sans."
+                }
+            }
+        },
         "sampleResume": {
             "alt": "Aperçu de l'exemple de CV",
             "name": "Omar Al-Masry",
