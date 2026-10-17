@@ -189,6 +189,8 @@ export interface UserSettings {
     showTemplateMenu?: boolean;
 }
 export type PhotoShape = 'circle' | 'rectangle';
+export const LANGUAGES_LAYOUTS = ['stacked', 'inline'] as const;
+export type LanguagesLayout = typeof LANGUAGES_LAYOUTS[number];
 
 export interface ResumeSettings {
     selectedFont: string;
@@ -203,6 +205,7 @@ export interface ResumeSettings {
     headingColor: string;
     accentColor: string;
     showSectionIcons: boolean;
+    languagesLayout: LanguagesLayout;
     sectionCollapsed: Record<string, boolean>;
     isRawMode: boolean;
 }
@@ -268,6 +271,7 @@ export const defaultResumeSettings: ResumeSettings = {
     headingColor: '',
     accentColor: '',
     showSectionIcons: false,
+    languagesLayout: 'stacked',
     isRawMode: false,
     sectionCollapsed: {
         personal: false,
@@ -297,6 +301,7 @@ export const resumeSettingsFromLegacy = (legacy: Partial<ResumeSettings> | null 
         headingColor: src.headingColor ?? defaultResumeSettings.headingColor,
         accentColor: src.accentColor ?? defaultResumeSettings.accentColor,
         showSectionIcons: src.showSectionIcons ?? defaultResumeSettings.showSectionIcons,
+        languagesLayout: src.languagesLayout || defaultResumeSettings.languagesLayout,
         sectionCollapsed: src.sectionCollapsed && Object.keys(src.sectionCollapsed).length
             ? { ...src.sectionCollapsed }
             : { ...defaultResumeSettings.sectionCollapsed },

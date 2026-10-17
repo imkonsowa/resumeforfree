@@ -139,3 +139,19 @@ describe('date colour is unified and readable', () => {
         }
     });
 });
+
+describe('templates follow the languages layout setting', () => {
+    const twoLanguages = { ...data, languages: [{ name: 'English', proficiency: 'Native' }, { name: 'French', proficiency: 'Fluent' }] };
+    const render = (tpl: typeof defaultTemplate, languagesLayout?: string) =>
+        tpl.parse({ data: twoLanguages, settings: { languagesLayout }, locale: 'en', t: (k: string) => k });
+
+    for (const { name, tpl } of TEMPLATES) {
+        it(`${name}: languages share one line when inline`, () => {
+            expect(render(tpl, 'inline')).toContain('*English* - proficiency.native • *French* - proficiency.fluent');
+        });
+
+        it(`${name}: languages are stacked by default`, () => {
+            expect(render(tpl)).not.toContain('proficiency.native • ');
+        });
+    }
+});

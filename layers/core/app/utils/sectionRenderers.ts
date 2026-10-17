@@ -135,7 +135,9 @@ export const renderSharedLanguagesBody = (data: ResumeData, context: RendererCon
     if (!data?.languages || data.languages.length === 0) return '';
     const sectionContent = generateLanguagesContent(data.languages, context.t);
     if (sectionContent.length === 0) return '';
-    return formatSectionItems(sectionContent.map(item => item.content || ''), {
+    const items = sectionContent.map(item => item.content || '');
+    if (context.settings.languagesLayout === 'inline') return items.join(' • ');
+    return formatSectionItems(items, {
         spacing: 'block',
         itemSpacing: ITEMS_SPACING,
         joinSeparator: '',
