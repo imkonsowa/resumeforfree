@@ -71,6 +71,7 @@
         "home": "首页",
         "builder": "编辑器",
         "templates": "模板",
+        "guides": "指南",
         "qa": "问答",
         "help": "帮助",
         "resumes": "我的简历",
@@ -1033,6 +1034,22 @@
             "updated": "更新于 {date}",
             "previewAlt": "{profession}示例简历（{layout}版式）",
             "resumeName": "{profession}简历"
+        }
+    },
+    "guides": {
+        "meta": {
+            "title": "简历写作指南",
+            "description": "免费的简历写作指南：ATS友好的格式、德国简历（Lebenslauf）的写法，以及埃及和海湾国家求职简历。"
+        },
+        "index": {
+            "title": "简历写作指南",
+            "subtitle": "实用的简历写作指南，从通过招聘系统（ATS）筛选，到不同国家的简历惯例。"
+        },
+        "detail": {
+            "templates": "本指南相关模板",
+            "related": "更多指南",
+            "ctaTitle": "现在就写你的简历",
+            "ctaText": "免费，无需注册。简历只保存在你的浏览器中。"
         }
     }
 }

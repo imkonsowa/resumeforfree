@@ -71,6 +71,7 @@
         "home": "Startseite",
         "builder": "Editor",
         "templates": "Vorlagen",
+        "guides": "Ratgeber",
         "qa": "F&A",
         "help": "Hilfe",
         "resumes": "Ihre Lebensläufe",
@@ -1033,6 +1034,22 @@
             "updated": "Aktualisiert am {date}",
             "previewAlt": "Beispiel-Lebenslauf {profession} im Layout {layout}",
             "resumeName": "Lebenslauf {profession}"
+        }
+    },
+    "guides": {
+        "meta": {
+            "title": "Ratgeber zum Lebenslauf",
+            "description": "Kostenlose Ratgeber für einen Lebenslauf, der gelesen wird: ATS-taugliches Format, der deutsche Lebenslauf und CVs für Jobs in Ägypten und am Golf."
+        },
+        "index": {
+            "title": "Ratgeber zum Lebenslauf",
+            "subtitle": "Praktische Anleitungen für Ihren Lebenslauf, vom Weg durch Bewerbermanagementsysteme bis zu den Gepflogenheiten einzelner Länder."
+        },
+        "detail": {
+            "templates": "Vorlagen zu diesem Ratgeber",
+            "related": "Weitere Ratgeber",
+            "ctaTitle": "Jetzt Lebenslauf erstellen",
+            "ctaText": "Kostenlos und ohne Anmeldung. Ihr Lebenslauf bleibt in Ihrem Browser."
         }
     }
 }

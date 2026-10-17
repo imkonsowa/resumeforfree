@@ -1,0 +1,5 @@
+{
+    "updatedAt": "2026-10-17",
+    "templates": ["registered-nurse", "accountant", "mechanical-engineer", "sales-representative"],
+    "related": ["ats-friendly-resume", "german-cv"]
+}

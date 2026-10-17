@@ -71,6 +71,7 @@
         "home": "Home",
         "builder": "Editor",
         "templates": "Modelli",
+        "guides": "Guide",
         "qa": "Domande e risposte",
         "help": "Aiuto",
         "resumes": "I tuoi curriculum",
@@ -1033,6 +1034,22 @@
             "updated": "Aggiornato il {date}",
             "previewAlt": "Curriculum di esempio per {profession} con layout {layout}",
             "resumeName": "Curriculum {profession}"
+        }
+    },
+    "guides": {
+        "meta": {
+            "title": "Guide per scrivere il curriculum",
+            "description": "Guide gratuite per un curriculum che viene letto: formato compatibile ATS, curriculum tedesco (Lebenslauf) e CV per l'Egitto e i Paesi del Golfo."
+        },
+        "index": {
+            "title": "Guide per scrivere il curriculum",
+            "subtitle": "Guide pratiche per scrivere il curriculum, dal superare i sistemi ATS alle consuetudini di ogni Paese."
+        },
+        "detail": {
+            "templates": "Modelli per questa guida",
+            "related": "Altre guide",
+            "ctaTitle": "Scrivi il tuo adesso",
+            "ctaText": "Gratis, senza account. Il tuo curriculum resta nel browser."
         }
     }
 }

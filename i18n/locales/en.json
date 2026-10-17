@@ -71,6 +71,7 @@
         "home": "Home",
         "builder": "Builder",
         "templates": "Templates",
+        "guides": "Guides",
         "qa": "Q&A",
         "help": "Help",
         "resumes": "Your Resumes",
@@ -1033,6 +1034,22 @@
             "updated": "Updated {date}",
             "previewAlt": "{profession} resume sample in the {layout} layout",
             "resumeName": "{profession} Resume"
+        }
+    },
+    "guides": {
+        "meta": {
+            "title": "Resume Writing Guides",
+            "description": "Free guides on writing a resume that gets read: ATS-friendly formatting, German CVs (Lebenslauf) and CVs for jobs in Egypt and the Gulf."
+        },
+        "index": {
+            "title": "Resume writing guides",
+            "subtitle": "Practical guides for writing your resume, from getting past applicant tracking systems to the CV conventions of a specific country."
+        },
+        "detail": {
+            "templates": "Templates for this guide",
+            "related": "More guides",
+            "ctaTitle": "Write yours now",
+            "ctaText": "Free, no account needed. Your resume stays in your browser."
         }
     }
 }

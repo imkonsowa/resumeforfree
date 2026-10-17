@@ -15,6 +15,15 @@ const templateUpdatedAt = (slug: string): string =>
 const templateGalleries = withLocalePrefixes('/templates');
 const templatePages = templateSlugs.flatMap(slug => withLocalePrefixes(`/templates/${slug}`));
 
+const guidesDir = fileURLToPath(new URL('./content/guides', import.meta.url));
+const guideSlugs = readdirSync(guidesDir, { withFileTypes: true })
+    .filter(entry => entry.isDirectory())
+    .map(entry => entry.name);
+const guideUpdatedAt = (slug: string): string =>
+    JSON.parse(readFileSync(`${guidesDir}/${slug}/guide.json`, 'utf8')).updatedAt;
+const guideIndexes = withLocalePrefixes('/guides');
+const guidePages = guideSlugs.flatMap(slug => withLocalePrefixes(`/guides/${slug}`));
+
 export default defineNuxtConfig({
     modules: [
         '@nuxt/ui',
@@ -105,9 +114,12 @@ export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
     nitro: {
         preset: 'cloudflare-module',
-        serverAssets: [{ baseName: 'templates', dir: templatesDir }],
+        serverAssets: [
+            { baseName: 'templates', dir: templatesDir },
+            { baseName: 'guides', dir: guidesDir },
+        ],
         prerender: {
-            routes: [...templateGalleries, ...templatePages],
+            routes: [...templateGalleries, ...templatePages, ...guideIndexes, ...guidePages],
         },
     },
 
@@ -224,6 +236,13 @@ export default defineNuxtConfig({
             ...templateSlugs.flatMap(slug => withLocalePrefixes(`/templates/${slug}`).map(loc => ({
                 loc,
                 lastmod: templateUpdatedAt(slug),
+                priority: 0.8 as const,
+                changefreq: 'monthly' as const,
+            }))),
+            ...guideIndexes.map(loc => ({ loc, priority: 0.8 as const, changefreq: 'weekly' as const })),
+            ...guideSlugs.flatMap(slug => withLocalePrefixes(`/guides/${slug}`).map(loc => ({
+                loc,
+                lastmod: guideUpdatedAt(slug),
                 priority: 0.8 as const,
                 changefreq: 'monthly' as const,
             }))),
