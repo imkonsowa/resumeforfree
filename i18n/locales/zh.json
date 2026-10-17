@@ -602,6 +602,7 @@
             "issuer": "颁发机构",
             "date": "颁发日期",
             "url": "核验网址",
+            "urlLabel": "链接文字",
             "column": "布局栏",
             "deleteConfirm": {
                 "title": "删除证书",

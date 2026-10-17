@@ -602,6 +602,7 @@
             "issuer": "Veren Kurum",
             "date": "Veriliş Tarihi",
             "url": "Sertifika URL'si",
+            "urlLabel": "Bağlantı metni",
             "column": "Sütun",
             "deleteConfirm": {
                 "title": "Sertifikayı Sil",

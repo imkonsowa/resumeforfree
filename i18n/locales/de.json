@@ -602,6 +602,7 @@
             "issuer": "Aussteller",
             "date": "Ausstellungsdatum",
             "url": "Zertifikats-URL",
+            "urlLabel": "Linktext",
             "column": "Spalte",
             "deleteConfirm": {
                 "title": "Zertifikat löschen",

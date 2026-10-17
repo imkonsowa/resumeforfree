@@ -63,15 +63,25 @@
                         />
                     </div>
                 </div>
-                <UFormField :label="t('forms.certificates.url')">
-                    <UInput
-                        :model-value="certificate.url || ''"
-                        :placeholder="t('forms.certificates.url')"
-                        type="url"
-                        class="w-full"
-                        @update:model-value="(value) => resumeStore.updateCertificate(index, 'url', value)"
-                    />
-                </UFormField>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <UFormField :label="t('forms.certificates.url')">
+                        <UInput
+                            :model-value="certificate.url || ''"
+                            :placeholder="t('forms.certificates.url')"
+                            type="url"
+                            class="w-full"
+                            @update:model-value="(value) => resumeStore.updateCertificate(index, 'url', value)"
+                        />
+                    </UFormField>
+                    <UFormField :label="t('forms.certificates.urlLabel')">
+                        <UInput
+                            :model-value="certificate.urlLabel || ''"
+                            :placeholder="t('common.link')"
+                            class="w-full"
+                            @update:model-value="(value) => resumeStore.updateCertificate(index, 'urlLabel', value)"
+                        />
+                    </UFormField>
+                </div>
                 <UFormField :label="t('common.description')">
                     <UTextarea
                         :model-value="certificate.description || ''"

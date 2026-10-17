@@ -280,7 +280,7 @@ export const generateCertificatesContent = (certificates: Certificate[], t?: Tra
         .filter(cert => cert.title.trim() || cert.issuer.trim())
         .map((cert) => {
             const title = `${cert.title}${cert.issuer ? fromLabel + cert.issuer : ''}`;
-            const certLink = cert.url?.trim() ? convertLink(cert.url, linkLabel) : '';
+            const certLink = cert.url?.trim() ? convertLink(cert.url, cert.urlLabel?.trim() || linkLabel) : '';
             const titleContent = certLink
                 ? `${escapeTypstText(title)} · ${certLink}`
                 : undefined;

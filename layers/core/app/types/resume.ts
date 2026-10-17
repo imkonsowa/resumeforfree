@@ -74,6 +74,7 @@ export interface Certificate {
     issuer: string;
     date: string;
     url?: string;
+    urlLabel?: string;
     description?: string;
 }
 export interface Publication {

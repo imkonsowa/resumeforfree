@@ -602,6 +602,7 @@
             "issuer": "Émetteur",
             "date": "Date de Délivrance",
             "url": "URL du Certificat",
+            "urlLabel": "Texte du lien",
             "column": "Colonne",
             "deleteConfirm": {
                 "title": "Supprimer le Certificat",

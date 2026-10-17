@@ -602,6 +602,7 @@
             "issuer": "Issuer",
             "date": "Date Issued",
             "url": "Certificate URL",
+            "urlLabel": "Link text",
             "column": "Column",
             "deleteConfirm": {
                 "title": "Delete Certificate",

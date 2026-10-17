@@ -602,6 +602,7 @@
             "issuer": "Ente emittente",
             "date": "Data di rilascio",
             "url": "URL del certificato",
+            "urlLabel": "Testo del link",
             "column": "Colonna",
             "deleteConfirm": {
                 "title": "Elimina certificato",
