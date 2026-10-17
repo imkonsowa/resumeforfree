@@ -79,19 +79,19 @@ List your degree, subject, university, country and year. If your university is n
 
 ### Certificate attestation
 
-Most Gulf countries ask for your degree to be attested before they issue a work visa or permit. The chain usually runs through authorities in the country that issued the degree and then the embassy or foreign ministry of the country where you will work. Some countries also ask for an equivalency certificate from their ministry of education for certain jobs, especially in government, health and education. The steps differ by country and profession and change from time to time, so check the current process with your employer or the relevant embassy.
+Most Gulf countries ask for your degree to be attested before they issue a work visa or permit. The chain usually runs through authorities in the country that issued the degree and then the embassy or foreign ministry of the country where you will work. Some countries also ask for an equivalency certificate from their ministry of education for certain jobs, especially in government, health and education. Saudi Arabia (since December 2022), Bahrain and Oman are parties to the Hague Apostille Convention, so for a degree issued in another member country an apostille can replace the embassy step. The UAE, Qatar, Kuwait and Egypt are not parties and still use consular legalisation. The steps differ by country and profession and change from time to time, so check the current process with your employer or the relevant embassy.
 
 On the CV, a short note under the degree is enough if it is already done: "Degree attested for UAE employment." It tells the employer your hiring won't be held up by paperwork. If you haven't started, don't mention it, but begin early if you are serious about moving.
 
 ## Professional licenses
 
-Many professions need a local license or registration before you can start work in the Gulf. Health workers usually need a license from the health authority of the country or emirate, often with an exam and verification of your documents with the institutions that issued them. Engineers in Saudi Arabia register with the Saudi Council of Engineers. Accountants and auditors may be asked about recognized qualifications such as ACCA, CMA or CPA.
+Many professions need a local license or registration before you can start work in the Gulf. Health workers usually need a license from the health authority of the country or emirate, often with an exam and verification of your documents with the institutions that issued them. Engineers in Saudi Arabia need professional registration with the Saudi Council of Engineers. Accountants and auditors may be asked about recognized qualifications such as ACCA, CMA or CPA.
 
 If you already hold a Gulf license or have passed the exam, put it near the top of the CV. If an application is in progress, say so honestly: "DHA license application under review." The [registered nurse template](/templates/registered-nurse) has a clear place for license numbers and expiry dates.
 
 ## Saudization and Emiratization
 
-Every Gulf state has policies to increase the number of citizens working in the private sector: Saudization (Nitaqat) in Saudi Arabia, Emiratization in the UAE, and similar programs in Qatar, Kuwait, Bahrain and Oman. In Saudi Arabia some job titles are reserved for citizens, and companies work to localization quotas that depend on their sector and size. In the UAE, private companies above a certain size have targets for hiring Emiratis.
+Every Gulf state has policies to increase the number of citizens working in the private sector: Saudization (Nitaqat) in Saudi Arabia, Emiratization in the UAE, and similar programs in Qatar, Kuwait, Bahrain and Oman. In Saudi Arabia some job titles are reserved for citizens, and companies work to localization rates that depend on their activity and size and are revised from time to time. In the UAE, private companies above a certain size have targets for hiring Emiratis.
 
 In practice, this means some job posts are open only to nationals, while technical, engineering and healthcare roles still recruit internationally in large numbers. Read the post carefully. If you are a Gulf national, put your nationality clearly at the top, since it can be a direct advantage.
 
