@@ -199,6 +199,7 @@ useHead({
                     <UAccordion
                         class="mt-4"
                         type="multiple"
+                        :unmount-on-hide="false"
                         :items="template.faq.map(item => ({ label: item.q, content: item.a }))"
                     />
                 </section>
