@@ -443,7 +443,8 @@
             "resume": "CV",
             "typography": "Typographie",
             "sections": "Sections",
-            "colors": "Couleurs"
+            "colors": "Couleurs",
+            "layout": "Mise en page des sections"
         },
         "sectionOrder": {
             "label": "Ordre des sections",
@@ -480,6 +481,12 @@
         "itemSpacing": {
             "label": "Espace entre les éléments",
             "description": "Espace entre les entrées d'une section, comme deux postes"
+        },
+        "languagesLayout": {
+            "label": "Langues",
+            "description": "En ligne place toutes les langues sur une seule ligne pour gagner de la place",
+            "stacked": "Empilées",
+            "inline": "En ligne"
         }
     },
     "forms": {

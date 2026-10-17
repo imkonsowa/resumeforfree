@@ -443,7 +443,8 @@
             "resume": "简历",
             "typography": "排版",
             "sections": "板块",
-            "colors": "颜色"
+            "colors": "颜色",
+            "layout": "版块布局"
         },
         "sectionOrder": {
             "label": "板块顺序",
@@ -480,6 +481,12 @@
         "itemSpacing": {
             "label": "条目间距",
             "description": "同一板块内条目之间的间距，例如两段工作经历"
+        },
+        "languagesLayout": {
+            "label": "语言",
+            "description": "单行会把所有语言放在同一行，节省空间",
+            "stacked": "逐行",
+            "inline": "单行"
         }
     },
     "forms": {

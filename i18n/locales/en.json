@@ -443,7 +443,8 @@
             "resume": "Resume",
             "typography": "Typography",
             "sections": "Sections",
-            "colors": "Colors"
+            "colors": "Colors",
+            "layout": "Section layout"
         },
         "sectionOrder": {
             "label": "Section order",
@@ -480,6 +481,12 @@
         "itemSpacing": {
             "label": "Space between items",
             "description": "Gap between entries in a section, like two jobs"
+        },
+        "languagesLayout": {
+            "label": "Languages",
+            "description": "Inline puts all languages on one line to save space",
+            "stacked": "Stacked",
+            "inline": "Inline"
         }
     },
     "forms": {

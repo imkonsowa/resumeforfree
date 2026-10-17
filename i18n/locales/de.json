@@ -443,7 +443,8 @@
             "resume": "Lebenslauf",
             "typography": "Typografie",
             "sections": "Abschnitte",
-            "colors": "Farben"
+            "colors": "Farben",
+            "layout": "Abschnittslayout"
         },
         "sectionOrder": {
             "label": "Reihenfolge der Abschnitte",
@@ -480,6 +481,12 @@
         "itemSpacing": {
             "label": "Abstand zwischen Einträgen",
             "description": "Abstand zwischen Einträgen eines Abschnitts, etwa zwei Stellen"
+        },
+        "languagesLayout": {
+            "label": "Sprachen",
+            "description": "Einzeilig zeigt alle Sprachen in einer Zeile und spart Platz",
+            "stacked": "Untereinander",
+            "inline": "Einzeilig"
         }
     },
     "forms": {

@@ -443,7 +443,8 @@
             "resume": "Özgeçmiş",
             "typography": "Tipografi",
             "sections": "Bölümler",
-            "colors": "Renkler"
+            "colors": "Renkler",
+            "layout": "Bölüm düzeni"
         },
         "sectionOrder": {
             "label": "Bölüm sırası",
@@ -480,6 +481,12 @@
         "itemSpacing": {
             "label": "Kayıtlar arası boşluk",
             "description": "Bir bölümdeki kayıtlar arasındaki boşluk, örneğin iki iş"
+        },
+        "languagesLayout": {
+            "label": "Diller",
+            "description": "Tek satır, yer kazanmak için tüm dilleri bir satırda gösterir",
+            "stacked": "Alt alta",
+            "inline": "Tek satır"
         }
     },
     "forms": {

@@ -443,7 +443,8 @@
             "resume": "Curriculum",
             "typography": "Tipografia",
             "sections": "Sezioni",
-            "colors": "Colori"
+            "colors": "Colori",
+            "layout": "Layout delle sezioni"
         },
         "sectionOrder": {
             "label": "Ordine delle sezioni",
@@ -480,6 +481,12 @@
         "itemSpacing": {
             "label": "Spazio tra le voci",
             "description": "Spazio tra le voci di una sezione, come due lavori"
+        },
+        "languagesLayout": {
+            "label": "Lingue",
+            "description": "In linea mostra tutte le lingue su una sola riga per risparmiare spazio",
+            "stacked": "Elenco",
+            "inline": "In linea"
         }
     },
     "forms": {
