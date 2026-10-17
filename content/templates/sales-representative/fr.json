@@ -1,0 +1,185 @@
+{
+    "version": "v1",
+    "firstName": "Mathilde",
+    "lastName": "Roux",
+    "email": "mathilde.roux@example.com",
+    "phone": "+33 6 78 21 45 09",
+    "position": "Commerciale terrain B2B",
+    "location": "Lille",
+    "summary": "Commerciale avec dix ans d'expérience en vente terrain, sédentaire et en boutique. Je gère un portefeuille de 120 clients industriels dans les Hauts-de-France, j'ai dépassé mon objectif chacune des quatre dernières années et je vends mieux sur le site du client, devant sa ligne de production.",
+    "experiences": [
+        {
+            "company": "Nordis Emballages",
+            "position": "Commerciale terrain",
+            "location": "Lille",
+            "companyUrl": "",
+            "startDate": "2021-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Gestion d'un portefeuille de 120 clients industriels et agroalimentaires, objectif annuel de 1,2 M€"
+                },
+                {
+                    "text": "Objectif atteint à 108 % en 2024 et à 115 % en 2025, 2e sur 11 commerciaux de la région Nord"
+                },
+                {
+                    "text": "19 nouveaux comptes ouverts en 2025, avec une première commande moyenne de 32 000 € sur l'année"
+                },
+                {
+                    "text": "Reconquête d'un client perdu (180 000 € par an) après un essai sur sa ligne de conditionnement et un nouveau calendrier de livraison"
+                },
+                {
+                    "text": "Pipeline suivi dans Salesforce, prévisions à moins de 5 % d'écart depuis six trimestres"
+                }
+            ]
+        },
+        {
+            "company": "Bureau Plus Flandres",
+            "position": "Commerciale sédentaire",
+            "location": "Roubaix",
+            "companyUrl": "",
+            "startDate": "2018-09",
+            "endDate": "2020-12",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Prospection téléphonique de TPE et PME pour des solutions d'impression et de fournitures de bureau"
+                },
+                {
+                    "text": "En moyenne 15 rendez-vous qualifiés par mois pour l'équipe terrain"
+                },
+                {
+                    "text": "420 000 € de renouvellements et de montées en gamme signés en 2020"
+                }
+            ]
+        },
+        {
+            "company": "Phonéo",
+            "position": "Conseillère de vente",
+            "location": "Lille",
+            "companyUrl": "",
+            "startDate": "2016-07",
+            "endDate": "2018-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Vente de téléphones, forfaits et accessoires en boutique, souvent dans le top 3 sur 10 conseillers"
+                },
+                {
+                    "text": "Formation de trois nouveaux vendeurs à la caisse et au service après-vente"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Université de Lille",
+            "degree": "Licence professionnelle Commerce et distribution, après un BTS NDRC",
+            "fieldOfStudy": "",
+            "location": "Lille",
+            "startDate": "2013-09",
+            "endDate": "2016-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Banque alimentaire du Nord",
+            "organizationUrl": "",
+            "position": "Bénévole, responsable de collecte",
+            "location": "Lille",
+            "startDate": "2019-11",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Coordination d'une équipe de 12 bénévoles lors des collectes nationales en supermarché.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Vente",
+            "description": "Prospection, découverte des besoins, négociation, gestion de portefeuille"
+        },
+        {
+            "title": "Outils",
+            "description": "Salesforce, Sellsy, LinkedIn Sales Navigator, Excel"
+        },
+        {
+            "title": "Produits",
+            "description": "Carton ondulé, film, étiquetage, lignes de conditionnement"
+        },
+        {
+            "title": "Autre",
+            "description": "Permis B, déplacements trois jours par semaine"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Français",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Anglais",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Néerlandais",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Formation Négociation commerciale",
+            "issuer": "CCI Grand Lille",
+            "date": "2022-04",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Salesforce Certified Associate",
+            "issuer": "Salesforce",
+            "date": "2023-02",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "volunteering": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

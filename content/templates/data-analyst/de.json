@@ -1,0 +1,201 @@
+{
+    "version": "v1",
+    "firstName": "Lea",
+    "lastName": "Hansen",
+    "email": "lea.hansen@example.com",
+    "phone": "+49 172 4410 3387",
+    "position": "Senior Datenanalystin",
+    "location": "Hamburg",
+    "summary": "Datenanalystin mit sechs Jahren Erfahrung in Onlinehandel und Logistik. Ich schreibe täglich SQL, baue Power BI Berichte, die Fachbereiche wirklich nutzen, und übersetze unklare Fragen aus dem Management in Kennzahlen, mit denen man arbeiten kann.",
+    "experiences": [
+        {
+            "company": "Elbkontor Versandhandel GmbH",
+            "position": "Senior Datenanalystin",
+            "location": "Hamburg",
+            "companyUrl": "",
+            "startDate": "2023-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Verantwortlich für das wöchentliche Umsatz- und Retourenreporting in Power BI, genutzt von Einkauf, Vertrieb und Geschäftsführung"
+                },
+                {
+                    "text": "Retourengründe aus rund 900.000 Bestellungen ausgewertet und ein Größenproblem in zwei Sortimenten gefunden, das zu neuen Größentabellen führte"
+                },
+                {
+                    "text": "Manuellen Monatsbericht aus Excel durch SQL und dbt Modelle in Snowflake ersetzt, statt zwei Arbeitstagen läuft er jetzt automatisch"
+                },
+                {
+                    "text": "A/B-Tests im Onlineshop gemeinsam mit dem Produktteam geplant und ausgewertet, inklusive Leitfaden für Stichprobengröße und Auswertung"
+                }
+            ]
+        },
+        {
+            "company": "Nordhafen Logistik AG",
+            "position": "Datenanalystin",
+            "location": "Hamburg",
+            "companyUrl": "",
+            "startDate": "2020-09",
+            "endDate": "2023-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Prognosemodell für Sendungsmengen in Python aufgebaut, das die Schichtplanung in zwei Lagern unterstützt"
+                },
+                {
+                    "text": "Kennzahlen für Liefertreue mit Disposition und Controlling abgestimmt und in einem gemeinsamen Dashboard zusammengeführt"
+                },
+                {
+                    "text": "Datenquellen aus SAP und dem Lagerverwaltungssystem dokumentiert, Rückfragen an das Datenteam spürbar reduziert"
+                }
+            ]
+        },
+        {
+            "company": "Hanse Stadtwerke Service GmbH",
+            "position": "Werkstudentin Reporting",
+            "location": "Hamburg",
+            "companyUrl": "",
+            "startDate": "2018-10",
+            "endDate": "2020-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Monatliche Verbrauchsberichte in Excel und SQL Server für den Kundenservice erstellt"
+                },
+                {
+                    "text": "Kopierschritte durch Power Query ersetzt und so etwa vier Stunden pro Woche gespart"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Universität Hamburg",
+            "degree": "M.Sc. Volkswirtschaftslehre, Schwerpunkt Ökonometrie",
+            "fieldOfStudy": "",
+            "location": "Hamburg",
+            "startDate": "2018-10",
+            "endDate": "2020-09",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        },
+        {
+            "institution": "Christian-Albrechts-Universität zu Kiel",
+            "degree": "B.Sc. Wirtschaftswissenschaften",
+            "fieldOfStudy": "",
+            "location": "Kiel",
+            "startDate": "2015-10",
+            "endDate": "2018-09",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Daten",
+            "description": "SQL (PostgreSQL, Snowflake, SQL Server), dbt, Datenmodellierung"
+        },
+        {
+            "title": "Analyse",
+            "description": "Python (pandas), R, A/B-Tests, Kohortenanalyse, Prognosen"
+        },
+        {
+            "title": "BI und Reporting",
+            "description": "Power BI (DAX), Tableau, Excel (Pivot-Tabellen, Power Query)"
+        },
+        {
+            "title": "Arbeitsweise",
+            "description": "Anforderungsaufnahme, Präsentation von Ergebnissen, Dokumentation, DSGVO-konformer Umgang mit Daten"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        },
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Hamburger Stadtrad im Jahresverlauf",
+            "description": "Öffentliches Dashboard auf Basis offener Daten der Stadt: Fahrten nach Station, Uhrzeit und Wetter, mit dem SQL-Code und einer kurzen Auswertung.",
+            "links": [
+                {
+                    "url": "https://github.com/example/stadtrad-analyse",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2024-03",
+            "endDate": "2024-06",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Deutsch",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Englisch",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Dänisch",
+            "proficiency": "Basic"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Microsoft Certified: Power BI Data Analyst Associate",
+            "issuer": "Microsoft",
+            "date": "2022-05",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Tableau Certified Data Analyst",
+            "issuer": "Tableau",
+            "date": "2024-01",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "projects": 2,
+        "education": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "volunteering": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

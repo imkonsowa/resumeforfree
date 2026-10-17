@@ -1,0 +1,185 @@
+{
+    "version": "v1",
+    "firstName": "Davide",
+    "lastName": "Russo",
+    "email": "davide.russo@example.com",
+    "phone": "+39 345 021 7734",
+    "position": "Funzionario commerciale B2B, area Nord Est",
+    "location": "Verona",
+    "summary": "Commerciale con oltre dieci anni di esperienza tra vendita sul campo, inside sales e punto vendita. Seguo 130 clienti tra cantine e industrie alimentari in Veneto e Trentino, ho superato il budget negli ultimi quattro anni e lavoro meglio in azienda dal cliente, accanto alla sua linea di produzione.",
+    "experiences": [
+        {
+            "company": "Adige Imballaggi S.r.l.",
+            "position": "Funzionario commerciale",
+            "location": "Verona",
+            "companyUrl": "",
+            "startDate": "2020-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Gestione di 130 clienti tra cantine, caseifici e industrie alimentari, budget annuo di 1,1 milioni di euro"
+                },
+                {
+                    "text": "Budget raggiunto al 110% nel 2024 e al 116% nel 2025, secondo su 9 commerciali"
+                },
+                {
+                    "text": "21 nuovi clienti acquisiti in due anni, con un primo ordine medio di 28.000 euro"
+                },
+                {
+                    "text": "Contratto triennale da 190.000 euro l'anno con un consorzio di cantine della Valpolicella, dopo un test sulle loro linee di imbottigliamento"
+                },
+                {
+                    "text": "Visite e trattative registrate in Salesforce, previsioni con scostamento sotto il 6% da sei trimestri"
+                }
+            ]
+        },
+        {
+            "company": "Scaligera Forniture Ufficio S.p.A.",
+            "position": "Inside sales",
+            "location": "Verona",
+            "companyUrl": "",
+            "startDate": "2017-10",
+            "endDate": "2020-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Contatto telefonico con piccole e medie imprese per stampanti, noleggio e contratti di assistenza"
+                },
+                {
+                    "text": "In media 13 appuntamenti qualificati al mese per la rete vendita esterna"
+                },
+                {
+                    "text": "Tasso di rinnovo dei contratti portato dall'80% all'88% richiamando i clienti tre mesi prima della scadenza"
+                }
+            ]
+        },
+        {
+            "company": "MediaCasa Elettronica",
+            "position": "Addetto vendite",
+            "location": "Verona",
+            "companyUrl": "",
+            "startDate": "2015-06",
+            "endDate": "2017-09",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Vendita di elettrodomestici e telefonia, primo del punto vendita per estensioni di garanzia nel 2016"
+                },
+                {
+                    "text": "Affiancamento di quattro nuovi colleghi su cassa e procedure di reso"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Università degli Studi di Verona",
+            "degree": "Laurea triennale in Economia aziendale",
+            "fieldOfStudy": "",
+            "location": "Verona",
+            "startDate": "2012-09",
+            "endDate": "2015-07",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Croce Verde Verona",
+            "organizationUrl": "",
+            "position": "Volontario soccorritore",
+            "location": "Verona",
+            "startDate": "2018-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Due turni serali al mese sulle ambulanze.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Vendita",
+            "description": "Pianificazione della zona, ricerca clienti, trattativa, gestione del portafoglio"
+        },
+        {
+            "title": "Strumenti",
+            "description": "Salesforce, SAP Business One, Excel, LinkedIn Sales Navigator"
+        },
+        {
+            "title": "Settore",
+            "description": "Imballaggi per vino, lattiero caseario e alimentare"
+        },
+        {
+            "title": "Altro",
+            "description": "Patente B, disponibilità a trasferte in Veneto e Trentino"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Italiano",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Inglese",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Tedesco",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Corso di negoziazione commerciale",
+            "issuer": "Camera di Commercio di Verona",
+            "date": "2021-05",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Salesforce Certified Associate",
+            "issuer": "Salesforce",
+            "date": "2022-11",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "volunteering": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

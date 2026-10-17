@@ -1,0 +1,176 @@
+{
+    "version": "v1",
+    "firstName": "Burak",
+    "lastName": "Aydemir",
+    "email": "burak.aydemir@example.com",
+    "phone": "+90 532 418 27 65",
+    "position": "Kıdemli Tasarım Mühendisi",
+    "location": "Bursa",
+    "summary": "Otomotiv yan sanayi ve beyaz eşyada dokuz yıllık makine mühendisi. Küçük tasarım ekiplerini yönetiyor, ürünleri isterlerden seri üretim başlangıcına kadar sahipleniyor, tezgâhtaki ustanın ilk okumada anlayacağı teknik resimlere önem veriyorum. Askerlik: Tamamlandı.",
+    "experiences": [
+        {
+            "company": "Uludağ Otomotiv Parça A.Ş.",
+            "position": "Kıdemli Tasarım Mühendisi",
+            "location": "Bursa, Nilüfer",
+            "companyUrl": "",
+            "startDate": "2021-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Ticari araç fren sistemi için yeni bir kaliper ailesinin tasarımında dört kişilik mühendis ekibine liderlik ediyorum"
+                },
+                {
+                    "text": "Kaliper braketini kaynaklı yapıdan dövme parçaya çevirdim, parça başı maliyet %22 düştü"
+                },
+                {
+                    "text": "Her aşamada üretim ve kaliteyle tasarım gözden geçirmeleri başlattım, geç gelen değişiklikler yaklaşık yarıya indi"
+                },
+                {
+                    "text": "Müşteri iadesine yol açan bir sızdırmazlık sorununun 8D çalışmasını yönettim ve düzeltmeyi altı haftada yayınladım"
+                }
+            ]
+        },
+        {
+            "company": "Nilüfer Beyaz Eşya Sanayi A.Ş.",
+            "position": "Ar-Ge Mühendisi",
+            "location": "Bursa",
+            "companyUrl": "",
+            "startDate": "2017-07",
+            "endDate": "2021-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Bulaşık makinesi için sekiz vidanın yerini alan geçmeli plastik bir kapak tasarladım, montaj süresi 40 saniye kısaldı"
+                },
+                {
+                    "text": "Yeni pompa grubunun DFMEA çalışmasını yürüttüm ve 14 yüksek öncelikli riski tasarım dondurmadan önce kapattım"
+                },
+                {
+                    "text": "Plastik enjeksiyon tedarikçileriyle kalıp akış analizlerini gözden geçirerek ilk numunede onay aldım"
+                }
+            ]
+        },
+        {
+            "company": "Gemlik Hidrolik Makina Ltd. Şti.",
+            "position": "Tasarım Mühendisi",
+            "location": "Bursa, Gemlik",
+            "companyUrl": "",
+            "startDate": "2015-08",
+            "endDate": "2017-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "SolidWorks'te hidrolik güç üniteleri için 60 sac ve talaşlı parçanın modelini ve teknik resimlerini hazırladım"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Bursa Uludağ Üniversitesi",
+            "degree": "Makine Mühendisliği Lisans",
+            "fieldOfStudy": "",
+            "location": "Bursa",
+            "startDate": "2011-09",
+            "endDate": "2015-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "3,21 / 4,00",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "CAD ve PDM",
+            "description": "CATIA, SolidWorks, Teamcenter, AutoCAD"
+        },
+        {
+            "title": "Analiz",
+            "description": "ANSYS Mechanical, el hesabı, tolerans analizi"
+        },
+        {
+            "title": "İmalat",
+            "description": "Dövme, döküm, plastik enjeksiyon, sac metal, DFM"
+        },
+        {
+            "title": "Kalite",
+            "description": "GD&T, DFMEA, 8D, PPAP, IATF 16949"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Türkçe",
+            "proficiency": "Native"
+        },
+        {
+            "name": "İngilizce",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Almanca",
+            "proficiency": "Basic"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Makine Mühendisleri Odası üyeliği",
+            "issuer": "MMO Bursa Şubesi",
+            "date": "2015-09",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Altı Sigma Yeşil Kuşak",
+            "issuer": "KalDer",
+            "date": "2019-04",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certified SolidWorks Professional (CSWP)",
+            "issuer": "Dassault Systèmes",
+            "date": "2017-11",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 5,
+        "projects": 6,
+        "volunteering": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "Belgeler ve Sertifikalar"
+    },
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

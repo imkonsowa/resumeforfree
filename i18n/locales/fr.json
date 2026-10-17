@@ -71,6 +71,7 @@
         "home": "Accueil",
         "builder": "Créateur",
         "templates": "Modèles",
+        "guides": "Guides",
         "qa": "Q&R",
         "help": "Aide",
         "resumes": "Vos CV",
@@ -118,6 +119,24 @@
             "stat1Label": "CV créés",
             "stat2Label": "PDF téléchargés",
             "stat3Label": "Coût à vie"
+        },
+        "noSignup": {
+            "title": "Un créateur de CV gratuit sans inscription",
+            "description": "Ce que « sans inscription » veut dire ici, concrètement.",
+            "items": {
+                "noEmail": {
+                    "title": "Pas d'e-mail avant le téléchargement",
+                    "description": "Ouvrez l'éditeur et commencez à écrire. Aucun champ e-mail, mot de passe ou étape de vérification entre vous et le PDF."
+                },
+                "localSave": {
+                    "title": "Enregistré dans votre navigateur",
+                    "description": "Votre CV est enregistré dans ce navigateur pendant que vous écrivez. Pour le passer sur un autre appareil, exportez-le en fichier puis importez-le là-bas."
+                },
+                "optionalAccount": {
+                    "title": "Un compte seulement si vous le voulez",
+                    "description": "Le compte sert uniquement à synchroniser jusqu'à 3 CV dans le cloud ou à donner un accès API à un agent. Les téléchargements PDF illimités fonctionnent sans."
+                }
+            }
         },
         "sampleResume": {
             "alt": "Aperçu de l'exemple de CV",
@@ -1008,10 +1027,13 @@
         },
         "categories": {
             "technology": "Technologie",
+            "engineering": "Ingénierie",
             "healthcare": "Santé",
             "finance": "Finance",
             "education": "Enseignement",
             "business": "Entreprise",
+            "creative": "Création",
+            "service": "Service client et commerce",
             "students": "Étudiants"
         },
         "layouts": {
@@ -1030,6 +1052,22 @@
             "updated": "Mis à jour le {date}",
             "previewAlt": "Exemple de CV {profession} avec la mise en page {layout}",
             "resumeName": "CV {profession}"
+        }
+    },
+    "guides": {
+        "meta": {
+            "title": "Guides pour rédiger son CV",
+            "description": "Guides gratuits pour un CV qui sera lu : format compatible ATS, CV allemand (Lebenslauf) et CV pour l'Égypte et les pays du Golfe."
+        },
+        "index": {
+            "title": "Guides pour rédiger son CV",
+            "subtitle": "Des guides pratiques pour rédiger votre CV, du passage des logiciels de recrutement (ATS) aux usages propres à chaque pays."
+        },
+        "detail": {
+            "templates": "Modèles liés à ce guide",
+            "related": "Autres guides",
+            "ctaTitle": "Rédigez le vôtre maintenant",
+            "ctaText": "Gratuit, sans compte. Votre CV reste dans votre navigateur."
         }
     }
 }

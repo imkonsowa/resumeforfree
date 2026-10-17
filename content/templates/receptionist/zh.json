@@ -1,0 +1,164 @@
+{
+    "version": "v1",
+    "firstName": "林晓雯",
+    "lastName": "",
+    "email": "lin.xiaowen@example.com",
+    "phone": "+86 139 8012 4476",
+    "position": "前台主管 / 行政前台",
+    "location": "成都",
+    "summary": "前台主管，八年经验，做过酒店前厅、公司行政前台和口腔门诊前台。目前负责一家六位医生门诊的预约、登记和收费，带三人前台小组，擅长处理患者投诉、改进预约流程。普通话标准，英语可日常沟通，一个月内可到岗。",
+    "experiences": [
+        {
+            "company": "成都锦程口腔门诊部",
+            "position": "前台主管",
+            "location": "成都",
+            "companyUrl": "",
+            "startDate": "2021-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "六位医生、十二张牙椅的口腔门诊，每天接诊约八十位患者、接听一百多个来电。",
+            "achievements": [
+                {
+                    "text": "带领三人前台小组，排每周班表，高峰时段补位，处理升级的患者投诉"
+                },
+                {
+                    "text": "初诊患者就诊前一天电话确认并提醒携带资料，初诊爽约明显减少"
+                },
+                {
+                    "text": "在预约系统中为六位医生安排初诊、复诊和洁牙回访，把当天的急诊空档排满"
+                },
+                {
+                    "text": "编写前台新人上手指南，涵盖登记、收费、医保核对和电话礼仪，现用于每位新同事"
+                }
+            ]
+        },
+        {
+            "company": "成都蓉悦酒店",
+            "position": "前厅接待员",
+            "location": "成都",
+            "companyUrl": "",
+            "startDate": "2018-05",
+            "endDate": "2021-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "在一百八十间客房的酒店，每个班次最多办理一百五十间房的入住和退房"
+                },
+                {
+                    "text": "处理换房、延迟退房和账单疑问，安排接送机和叫醒服务"
+                },
+                {
+                    "text": "每班核对现金和押金，处理银行卡、微信和支付宝收款，交班账目清楚"
+                }
+            ]
+        },
+        {
+            "company": "成都云栈科技有限公司",
+            "position": "行政前台",
+            "location": "成都",
+            "companyUrl": "",
+            "startDate": "2016-07",
+            "endDate": "2018-04",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "负责约八十人公司的访客接待、总机电话、快递收发和会议室预订"
+                },
+                {
+                    "text": "在月度预算内采购办公和茶水间用品，用 Excel 记录每笔支出"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "四川蜀南职业技术学院",
+            "degree": "酒店管理 大专",
+            "fieldOfStudy": "",
+            "location": "成都",
+            "startDate": "2013-09",
+            "endDate": "2016-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "接待服务",
+            "description": "访客接待、患者登记、总机电话、投诉处理、现金收银"
+        },
+        {
+            "title": "预约与收费",
+            "description": "预约排班、医保核对、到诊提醒、票据开具、患者隐私保护"
+        },
+        {
+            "title": "办公软件和系统",
+            "description": "门诊预约系统、酒店前台系统、钉钉、企业微信、Excel、打字每分钟 70 字"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "中文（普通话、四川话）",
+            "proficiency": "Native"
+        },
+        {
+            "name": "英语",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "普通话水平测试二级甲等",
+            "issuer": "",
+            "date": "2015-06",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "高等学校英语应用能力考试 A 级",
+            "issuer": "",
+            "date": "2015-12",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "红十字救护员证",
+            "issuer": "",
+            "date": "2024-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "languages": 3,
+        "education": 4,
+        "certificates": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

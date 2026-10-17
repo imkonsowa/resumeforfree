@@ -1,0 +1,169 @@
+{
+    "version": "v1",
+    "firstName": "林佳怡",
+    "lastName": "",
+    "email": "lin.jiayi@example.com",
+    "phone": "+86 138 0512 4476",
+    "position": "大客户销售代表",
+    "location": "苏州",
+    "summary": "销售代表，十一年外勤销售、电话销售和门店销售经验。负责苏州、无锡地区 130 家工业客户，近四年每年都超额完成指标，最擅长在客户的包装线旁边谈生意。",
+    "experiences": [
+        {
+            "company": "苏州恒盛包装材料有限公司",
+            "position": "高级销售代表",
+            "location": "苏州",
+            "companyUrl": "",
+            "startDate": "2020-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "负责 130 家食品、电子和日化企业客户，年度销售指标 1,100 万元"
+                },
+                {
+                    "text": "2024 年完成指标的 111%，2025 年完成 116%，华东区 14 名销售中排名第二"
+                },
+                {
+                    "text": "2025 年新开发客户 23 家，首年平均采购额 26 万元"
+                },
+                {
+                    "text": "在客户包装线上做试机、解决损耗问题，挽回一家年采购额 180 万元的流失客户"
+                },
+                {
+                    "text": "在纷享销客 CRM 中维护商机和拜访记录，连续六个季度销售预测偏差在 6% 以内"
+                }
+            ]
+        },
+        {
+            "company": "苏州博文办公设备有限公司",
+            "position": "电话销售",
+            "location": "苏州",
+            "companyUrl": "",
+            "startDate": "2017-07",
+            "endDate": "2020-03",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "每天拨打 60 到 80 个电话，向中小企业推广复印机、打印机租赁和维保合同"
+                },
+                {
+                    "text": "每月平均为外勤销售约到 14 个有效拜访"
+                },
+                {
+                    "text": "合同到期前三个月主动回访，续约率从 79% 提高到 88%"
+                }
+            ]
+        },
+        {
+            "company": "优品数码连锁",
+            "position": "门店销售顾问",
+            "location": "苏州",
+            "companyUrl": "",
+            "startDate": "2015-07",
+            "endDate": "2017-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "销售手机、家电和延保服务，2016 年门店延保销售额第一"
+                },
+                {
+                    "text": "带教四名新员工，熟悉收银和退换货流程"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "苏州科技大学",
+            "degree": "市场营销，本科",
+            "fieldOfStudy": "",
+            "location": "苏州",
+            "startDate": "2011-09",
+            "endDate": "2015-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "销售能力",
+            "description": "区域规划、客户开发、需求挖掘、商务谈判、大客户维护"
+        },
+        {
+            "title": "常用工具",
+            "description": "纷享销客、钉钉、企业微信、Excel"
+        },
+        {
+            "title": "熟悉产品",
+            "description": "瓦楞纸箱、软包装、标签、包装设备"
+        },
+        {
+            "title": "其他",
+            "description": "C1 驾照，能接受出差"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "中文",
+            "proficiency": "Native"
+        },
+        {
+            "name": "英语（CET-6）",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "商务谈判技巧培训",
+            "issuer": "苏州市商务培训中心",
+            "date": "2021-05",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "全国大学英语六级（CET-6）",
+            "issuer": "教育部考试中心",
+            "date": "2014-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "volunteering": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

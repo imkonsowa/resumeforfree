@@ -1,0 +1,206 @@
+{
+    "version": "v1",
+    "firstName": "Francesca",
+    "lastName": "Bellini",
+    "email": "francesca.bellini@example.com",
+    "phone": "+39 345 018 2264",
+    "position": "Data Analyst Senior",
+    "location": "Bologna",
+    "summary": "Data analyst con sei anni di esperienza nella grande distribuzione e nelle assicurazioni. Scrivo SQL tutti i giorni, costruisco dashboard in Power BI che i responsabili aprono davvero e mi piace trasformare una domanda generica in un numero su cui si può decidere.",
+    "experiences": [
+        {
+            "company": "Coop Emilia Distribuzione S.p.A.",
+            "position": "Data Analyst Senior",
+            "location": "Bologna",
+            "companyUrl": "",
+            "startDate": "2022-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Responsabile delle dashboard settimanali di vendite e scorte in Power BI, usate da 70 capi negozio e dall'ufficio acquisti"
+                },
+                {
+                    "text": "Ricostruito il report sui ribassi in SQL e dbt: due giorni di lavoro manuale sostituiti da un aggiornamento automatico ogni lunedì mattina"
+                },
+                {
+                    "text": "Analizzato i resi di 900.000 ordini online e individuato un problema di taglie su due linee, che ha portato a nuove tabelle taglie"
+                },
+                {
+                    "text": "Progettato e letto i test A/B sul carrello del sito insieme al team prodotto, con una guida ai test che il team usa ancora"
+                }
+            ]
+        },
+        {
+            "company": "Assicurazioni Padane S.p.A.",
+            "position": "Data Analyst",
+            "location": "Milano",
+            "companyUrl": "",
+            "startDate": "2020-03",
+            "endDate": "2022-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Costruito in Python il modello mensile di abbandono delle polizze auto, usato dal controllo di gestione per le previsioni"
+                },
+                {
+                    "text": "Creato report per coorti che mostrano all'area commerciale quali canali portano clienti che rinnovano"
+                },
+                {
+                    "text": "Documentato 50 tabelle del data warehouse, riducendo le richieste ripetute al team dati"
+                }
+            ]
+        },
+        {
+            "company": "Studio Ricerche Ferraresi S.r.l.",
+            "position": "Stage, Analista di Dati",
+            "location": "Bologna",
+            "companyUrl": "",
+            "startDate": "2019-09",
+            "endDate": "2020-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Pulito e analizzato in R i dati di indagini di mercato per clienti del settore alimentare"
+                },
+                {
+                    "text": "Preparato tabelle e grafici in Excel per i report consegnati ai clienti"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Università di Bologna",
+            "degree": "Laurea Magistrale in Scienze Statistiche",
+            "fieldOfStudy": "",
+            "location": "Bologna",
+            "startDate": "2017-09",
+            "endDate": "2019-07",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "110/110",
+            "achievements": []
+        },
+        {
+            "institution": "Università di Padova",
+            "degree": "Laurea Triennale in Statistica per l'Economia e l'Impresa",
+            "fieldOfStudy": "",
+            "location": "Padova",
+            "startDate": "2014-09",
+            "endDate": "2017-07",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Dati",
+            "description": "SQL (PostgreSQL, SQL Server, BigQuery), dbt, modellazione dati"
+        },
+        {
+            "title": "Analisi",
+            "description": "Python (pandas), R, test A/B, analisi per coorti, previsioni"
+        },
+        {
+            "title": "BI e reporting",
+            "description": "Power BI, Tableau, Excel (tabelle pivot, Power Query)"
+        },
+        {
+            "title": "Metodo di lavoro",
+            "description": "Raccolta dei requisiti, presentazione dei risultati, documentazione"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        },
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Qualità dell'aria in Emilia-Romagna",
+            "description": "Dashboard pubblica in Power BI costruita con gli open data regionali: livelli di PM10 per stazione, mese e meteo, con il codice SQL e una breve nota sui risultati.",
+            "links": [
+                {
+                    "url": "https://github.com/example/aria-emilia",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2024-02",
+            "endDate": "2024-04",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Prezzi della spesa",
+            "description": "Notebook Python che raccoglie ogni settimana i prezzi di 40 prodotti di base e ne mostra l'andamento.",
+            "links": [],
+            "startDate": "2023-05",
+            "endDate": "",
+            "isPresent": true,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Italiano",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Inglese",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Microsoft Certified: Power BI Data Analyst Associate",
+            "issuer": "Microsoft",
+            "date": "2023-03",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "IELTS Academic 7.5",
+            "issuer": "British Council",
+            "date": "2019-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "projects": 2,
+        "education": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "volunteering": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

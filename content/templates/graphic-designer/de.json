@@ -1,0 +1,210 @@
+{
+    "version": "v1",
+    "firstName": "Lena",
+    "lastName": "Hoffmann",
+    "email": "lena.hoffmann@example.com",
+    "phone": "+49 160 9876 5432",
+    "position": "Senior Grafikdesignerin",
+    "location": "Hamburg",
+    "summary": "Grafikdesignerin mit acht Jahren Erfahrung in Corporate Design, Verpackung und Print für Lebensmittel, Finanzen und gemeinnützige Organisationen. Ich führe Projekte von der ersten Skizze bis zur Druckabnahme, präsentiere direkt beim Kunden und begleite Juniors im Team.",
+    "experiences": [
+        {
+            "company": "Studio Fleetwerk GmbH",
+            "position": "Senior Grafikdesignerin",
+            "location": "Hamburg",
+            "companyUrl": "",
+            "startDate": "2022-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Inhabergeführte Markenagentur, 15 Mitarbeitende, Kunden aus Food, Handel und Finanzen.",
+            "achievements": [
+                {
+                    "text": "Neues Corporate Design einer Genossenschaftsbank geleitet: Logo, Schrift, Farbsystem und Beschilderung von 14 Filialen"
+                },
+                {
+                    "text": "Verpackungen für 22 Feinkostprodukte nach Stanzkonturen des Herstellers gestaltet, Druckabnahme ohne Nachdruck"
+                },
+                {
+                    "text": "Konzepte direkt beim Kunden präsentiert, Korrekturschleifen meist auf zwei Runden begrenzt"
+                },
+                {
+                    "text": "Zwei Juniors mit wöchentlichen Feedbackrunden und Datenchecks begleitet"
+                }
+            ]
+        },
+        {
+            "company": "Elbtal Getränke GmbH",
+            "position": "Grafikdesignerin, Marketing",
+            "location": "Lüneburg",
+            "companyUrl": "",
+            "startDate": "2019-03",
+            "endDate": "2022-03",
+            "isPresent": false,
+            "description": "Inhouse-Designteam mit drei Personen bei einem regionalen Getränkehersteller.",
+            "achievements": [
+                {
+                    "text": "Saisonkampagnen für Anzeigen, Plakate, Newsletter und Social Ads im Handel umgesetzt"
+                },
+                {
+                    "text": "Styleguide in ein praktisches Handbuch mit 30 Seiten für Handelspartner überführt"
+                },
+                {
+                    "text": "Figma-Vorlagen für Social Media aufgebaut, die das Marketing ohne Grafik-Unterstützung nutzt"
+                }
+            ]
+        },
+        {
+            "company": "Alsterdruck GmbH & Co. KG",
+            "position": "Mediengestalterin Digital und Print",
+            "location": "Hamburg",
+            "companyUrl": "",
+            "startDate": "2017-08",
+            "endDate": "2019-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Druckdaten für rund 40 Aufträge im Monat geprüft und vorbereitet, inklusive Beschnitt und Farbprofil"
+                },
+                {
+                    "text": "Flyer, Speisekarten und Beschilderung für lokale Betriebe gestaltet"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "HAW Hamburg",
+            "degree": "B.A. Kommunikationsdesign (berufsbegleitend)",
+            "fieldOfStudy": "",
+            "location": "Hamburg",
+            "startDate": "2018-10",
+            "endDate": "2022-09",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        },
+        {
+            "institution": "Berufliche Schule für Medien und Kommunikation",
+            "degree": "Ausbildung zur Mediengestalterin Digital und Print",
+            "fieldOfStudy": "",
+            "location": "Hamburg",
+            "startDate": "2014-08",
+            "endDate": "2017-07",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Gestaltung",
+            "description": "Corporate Design, Typografie, Layout, Verpackung, Editorial"
+        },
+        {
+            "title": "Digital",
+            "description": "Social-Media-Grafiken, Newsletter, Präsentationsvorlagen"
+        },
+        {
+            "title": "Werkzeuge",
+            "description": "Adobe Illustrator, InDesign, Photoshop, Figma, After Effects"
+        },
+        {
+            "title": "Produktion",
+            "description": "Druckvorstufe, Farbmanagement, PSO, HKS und Pantone, Stanzkonturen"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "portfolio",
+            "url": "https://example.com/lena-hoffmann"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Relaunch Elbtal Getränke",
+            "description": "Neue Etiketten und Kampagne für zwölf Sorten Apfelschorle. Gestaltung und Druckbegleitung.",
+            "links": [
+                {
+                    "url": "https://example.com/lena-hoffmann/elbtal",
+                    "label": "Projekt"
+                }
+            ],
+            "startDate": "2021-01",
+            "endDate": "2021-09",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Jahresbericht Hamburger Tafelnetz",
+            "description": "Bericht mit 48 Seiten in Print und Web, ehrenamtlich gestaltet mit einer Texterin.",
+            "links": [
+                {
+                    "url": "https://example.com/lena-hoffmann/tafelnetz",
+                    "label": "Projekt"
+                }
+            ],
+            "startDate": "2024-03",
+            "endDate": "2024-06",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Deutsch",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Englisch",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Dänisch",
+            "proficiency": "Basic"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Adobe Certified Professional in Print and Digital Media Publication Using Adobe InDesign",
+            "issuer": "Adobe",
+            "date": "2021-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "projects": 2,
+        "education": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "volunteering": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "projects": "Ausgewählte Projekte"
+    },
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

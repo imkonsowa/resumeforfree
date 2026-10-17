@@ -1,0 +1,163 @@
+{
+    "version": "v1",
+    "firstName": "سلمى",
+    "lastName": "عبد الحميد",
+    "email": "salma.abdelhamid@example.com",
+    "phone": "+20 100 482 3317",
+    "position": "منسقة مكتب أمامي، استقبال عيادات",
+    "location": "القاهرة، مصر",
+    "summary": "منسقة مكتب أمامي بخبرة ثماني سنوات بين المراكز الطبية والفنادق والشركات. أدير استقبال مجموعة عيادات فيها أحد عشر طبيبا، وأراجع موافقات التأمين قبل الكشف، وأدرب موظفي الاستقبال الجدد، وأحافظ على هدوء صالة الانتظار في أكثر الأيام زحاما. أجيد العربية والإنجليزية.",
+    "experiences": [
+        {
+            "company": "مجموعة عيادات الندى التخصصية",
+            "position": "منسقة مكتب أمامي",
+            "location": "القاهرة الجديدة، مصر",
+            "companyUrl": "",
+            "startDate": "2021-10",
+            "endDate": "",
+            "isPresent": true,
+            "description": "مركز طبي فيه أحد عشر طبيبا وعيادات مسائية، بمعدل 160 مريضا و250 مكالمة يوميا.",
+            "achievements": [
+                {
+                    "text": "أشرف على فريق استقبال من أربعة موظفين: أضع جدول الورديات، وأغطي أوقات الذروة، وأتعامل مع شكاوى المرضى"
+                },
+                {
+                    "text": "أتصل بكل مريض جديد قبل موعده بيومين لمراجعة التأمين، فقلت مشكلات الموافقات عند الحساب"
+                },
+                {
+                    "text": "أحجز مواعيد الكشف والمتابعة والتحويلات لأحد عشر طبيبا على البرنامج الطبي وأملأ المواعيد الملغاة"
+                },
+                {
+                    "text": "كتبت دليل تدريب الاستقبال الذي يستخدم مع كل موظف جديد، ويشمل التسجيل والتحصيل وأسلوب الرد على الهاتف"
+                }
+            ]
+        },
+        {
+            "company": "فندق نايل بانوراما",
+            "position": "موظفة استقبال (Front Desk Agent)",
+            "location": "القاهرة، مصر",
+            "companyUrl": "",
+            "startDate": "2018-06",
+            "endDate": "2021-09",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "سجلت دخول وخروج ما يصل إلى 120 نزيلا في الوردية بفندق فيه 200 غرفة على نظام Opera"
+                },
+                {
+                    "text": "تعاملت مع تغيير الغرف وأسئلة الفواتير وشكاوى النزلاء بالعربية والإنجليزية"
+                },
+                {
+                    "text": "سلمت العهدة النقدية في نهاية كل وردية دون فروق غير مفسرة"
+                }
+            ]
+        },
+        {
+            "company": "المروج للاستشارات الهندسية",
+            "position": "موظفة استقبال",
+            "location": "الجيزة، مصر",
+            "companyUrl": "",
+            "startDate": "2016-09",
+            "endDate": "2018-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "استقبلت العملاء وحولت المكالمات لاثني عشر مهندسا وسجلت الرسائل أثناء زيارات المواقع"
+                },
+                {
+                    "text": "سجلت البريد الوارد والصادر وتابعت المستندات التي تنتظر التوقيع"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "جامعة عين شمس",
+            "degree": "بكالوريوس تجارة، شعبة اللغة الإنجليزية",
+            "fieldOfStudy": "",
+            "location": "القاهرة، مصر",
+            "startDate": "2012-09",
+            "endDate": "2016-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "الاستقبال",
+            "description": "تسجيل المرضى والنزلاء، السنترال، التعامل مع الشكاوى، العهدة النقدية"
+        },
+        {
+            "title": "المواعيد والملفات",
+            "description": "حجز المواعيد، موافقات التأمين، التحويلات، خصوصية بيانات المرضى"
+        },
+        {
+            "title": "البرامج",
+            "description": "برامج إدارة العيادات، Opera PMS، Microsoft Office، Outlook"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "العربية",
+            "proficiency": "Native"
+        },
+        {
+            "name": "الإنجليزية",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "الفرنسية",
+            "proficiency": "Basic"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "دبلومة خدمة العملاء وإدارة المكتب الأمامي",
+            "issuer": "معهد القاهرة للتدريب الفندقي",
+            "date": "2018-03",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "الرخصة الدولية لقيادة الحاسب الآلي (ICDL)",
+            "issuer": "ICDL",
+            "date": "2016-11",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "languages": 3,
+        "education": 4,
+        "certificates": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "الشهادات والدورات"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

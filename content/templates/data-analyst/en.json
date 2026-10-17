@@ -1,0 +1,199 @@
+{
+    "version": "v1",
+    "firstName": "Maya",
+    "lastName": "Castellano",
+    "email": "maya.castellano@example.com",
+    "phone": "+1 555 017 4836",
+    "position": "Senior Data Analyst",
+    "location": "Denver, CO",
+    "summary": "Data analyst with six years of experience in retail and subscription businesses. I write SQL every day, build dashboards people actually open, and like turning a vague question from a manager into a number they can act on.",
+    "experiences": [
+        {
+            "company": "Summit Trail Outfitters",
+            "position": "Senior Data Analyst",
+            "location": "Denver, CO",
+            "companyUrl": "",
+            "startDate": "2023-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Own the weekly sales and inventory dashboards in Tableau, used by 40 store managers and the merchandising team"
+                },
+                {
+                    "text": "Rebuilt the markdown report in SQL and dbt, which cut a two-day manual process to an automated run every Monday morning"
+                },
+                {
+                    "text": "Analyzed return reasons across 1.2M orders and found a sizing issue in two product lines, which led to new size charts and fewer returns"
+                },
+                {
+                    "text": "Designed and read out A/B tests on the online checkout with the product team, and wrote the testing guide the team now follows"
+                }
+            ]
+        },
+        {
+            "company": "Brightwell Subscriptions",
+            "position": "Data Analyst",
+            "location": "Boulder, CO",
+            "companyUrl": "",
+            "startDate": "2020-08",
+            "endDate": "2022-12",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Built the monthly churn and retention model in Python, which finance used for revenue forecasts"
+                },
+                {
+                    "text": "Set up cohort reports in Looker so customer success could see which onboarding steps kept customers past month three"
+                },
+                {
+                    "text": "Cleaned and documented 60 core tables in the warehouse, which cut repeat questions to the data team"
+                }
+            ]
+        },
+        {
+            "company": "Front Range Health Partners",
+            "position": "Junior Reporting Analyst",
+            "location": "Denver, CO",
+            "companyUrl": "",
+            "startDate": "2019-06",
+            "endDate": "2020-07",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Produced weekly clinic volume reports in Excel and SQL Server for operations managers at 12 clinics"
+                },
+                {
+                    "text": "Replaced copy-and-paste steps with Power Query, saving about four hours a week"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Colorado State University",
+            "degree": "B.S. Statistics, minor in Economics",
+            "fieldOfStudy": "",
+            "location": "Fort Collins, CO",
+            "startDate": "2015-08",
+            "endDate": "2019-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Data",
+            "description": "SQL (PostgreSQL, Snowflake, BigQuery), dbt, data modeling"
+        },
+        {
+            "title": "Analysis",
+            "description": "Python (pandas), R, A/B testing, cohort and funnel analysis, forecasting"
+        },
+        {
+            "title": "BI and reporting",
+            "description": "Tableau, Looker, Power BI, Excel (pivot tables, Power Query)"
+        },
+        {
+            "title": "Working style",
+            "description": "Requirements gathering, data storytelling, documentation"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        },
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Denver bike share usage",
+            "description": "Public Tableau dashboard built from city open data, showing trips by station, hour and weather. Includes the SQL and a short write-up of what changed after new stations opened.",
+            "links": [
+                {
+                    "url": "https://public.tableau.com/app/profile/example",
+                    "label": "Tableau Public"
+                }
+            ],
+            "startDate": "2024-03",
+            "endDate": "2024-05",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Grocery price tracker",
+            "description": "Python notebook that collects weekly prices for 50 staple items and charts how they move. Code and data on GitHub.",
+            "links": [
+                {
+                    "url": "https://github.com/example/grocery-prices",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2023-06",
+            "endDate": "",
+            "isPresent": true,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "English",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Spanish",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Tableau Certified Data Analyst",
+            "issuer": "Tableau",
+            "date": "2023-09",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Microsoft Certified: Power BI Data Analyst Associate",
+            "issuer": "Microsoft",
+            "date": "2022-04",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "projects": 2,
+        "education": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "volunteering": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

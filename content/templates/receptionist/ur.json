@@ -1,0 +1,163 @@
+{
+    "version": "v1",
+    "firstName": "ماہ نور",
+    "lastName": "اقبال",
+    "email": "mahnoor.iqbal@example.com",
+    "phone": "+92 300 4182276",
+    "position": "فرنٹ ڈیسک کوآرڈینیٹر، کلینک ریسیپشن",
+    "location": "لاہور، پاکستان",
+    "summary": "فرنٹ ڈیسک کوآرڈینیٹر، آٹھ سال میڈیکل سینٹرز، ہوٹلوں اور کارپوریٹ دفاتر میں۔ گیارہ ڈاکٹروں والی فیملی کلینک کی ریسیپشن چلاتی ہوں، پینل مریضوں کی منظوری پہلے سے چیک کرتی ہوں، نئے عملے کو تربیت دیتی ہوں اور رش کے دنوں میں بھی ویٹنگ ایریا کو پرسکون رکھتی ہوں۔ اردو، انگریزی اور پنجابی روانی سے بولتی ہوں۔",
+    "experiences": [
+        {
+            "company": "گلبرگ فیملی کلینکس",
+            "position": "فرنٹ ڈیسک کوآرڈینیٹر",
+            "location": "لاہور، پاکستان",
+            "companyUrl": "",
+            "startDate": "2021-11",
+            "endDate": "",
+            "isPresent": true,
+            "description": "گیارہ ڈاکٹروں والی کلینک، صبح اور شام کی او پی ڈی، روزانہ تقریباً 170 مریض اور 250 کالیں۔",
+            "achievements": [
+                {
+                    "text": "چار افراد کی ریسیپشن ٹیم کی نگرانی: شفٹوں کا شیڈول، رش کے اوقات میں کاؤنٹر سنبھالنا اور مریضوں کی شکایات"
+                },
+                {
+                    "text": "ہر نئے پینل مریض کو اپوائنٹمنٹ سے دو دن پہلے فون کر کے منظوری کنفرم کی، جس سے کاؤنٹر پر بل کے مسائل کم ہوئے"
+                },
+                {
+                    "text": "گیارہ ڈاکٹروں کی اپوائنٹمنٹس، فالو اپ اور ریفرلز کلینک سافٹ ویئر میں لگاتی ہوں اور منسوخ وقت ویٹنگ لسٹ سے بھرتی ہوں"
+                },
+                {
+                    "text": "ریسیپشن کی تربیتی گائیڈ لکھی جو اب ہر نئے ملازم کو دی جاتی ہے: رجسٹریشن، فیس وصولی اور فون آداب"
+                }
+            ]
+        },
+        {
+            "company": "شالیمار گرینڈ ہوٹل",
+            "position": "گیسٹ سروس ایجنٹ",
+            "location": "لاہور، پاکستان",
+            "companyUrl": "",
+            "startDate": "2018-07",
+            "endDate": "2021-10",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "150 کمروں والے ہوٹل میں Opera پر ایک شفٹ میں 100 تک مہمانوں کا چیک ان اور چیک آؤٹ"
+                },
+                {
+                    "text": "کمرہ بدلنے، بل کے سوالات اور مہمانوں کی شکایات اردو اور انگریزی میں سنبھالیں"
+                },
+                {
+                    "text": "ہر شفٹ کے آخر میں کیش اور کارڈ کی ادائیگیاں بغیر کسی غیر واضح فرق کے حوالے کیں"
+                }
+            ]
+        },
+        {
+            "company": "راوی ٹیکسٹائل گروپ، ہیڈ آفس",
+            "position": "ریسیپشنسٹ",
+            "location": "لاہور، پاکستان",
+            "companyUrl": "",
+            "startDate": "2016-09",
+            "endDate": "2018-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "غیر ملکی خریداروں اور کلائنٹس کا استقبال کیا اور بارہ افسران کی کالیں ایکسچینج سے ٹرانسفر کیں"
+                },
+                {
+                    "text": "ڈاک اور کوریئر کا رجسٹر رکھا اور دستخط کے منتظر کاغذات کی پیروی کی"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "پنجاب یونیورسٹی",
+            "degree": "بی کام",
+            "fieldOfStudy": "",
+            "location": "لاہور، پاکستان",
+            "startDate": "2012-09",
+            "endDate": "2016-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "فرنٹ ڈیسک",
+            "description": "مریضوں اور مہمانوں کی رجسٹریشن، پی اے بی ایکس، شکایات، کیش ہینڈلنگ"
+        },
+        {
+            "title": "اپوائنٹمنٹس اور ریکارڈ",
+            "description": "اپوائنٹمنٹ شیڈولنگ، پینل منظوری، ریفرلز، مریض کی رازداری"
+        },
+        {
+            "title": "سافٹ ویئر",
+            "description": "کلینک سافٹ ویئر، Opera PMS، MS Office، Outlook، انگریزی ٹائپنگ 50 الفاظ فی منٹ"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "اردو",
+            "proficiency": "Native"
+        },
+        {
+            "name": "پنجابی",
+            "proficiency": "Native"
+        },
+        {
+            "name": "انگریزی",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "فرنٹ آفس آپریشنز سرٹیفیکیٹ کورس",
+            "issuer": "لاہور انسٹی ٹیوٹ آف ہاسپٹیلٹی",
+            "date": "2018-04",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "فرسٹ ایڈ ٹریننگ",
+            "issuer": "ہلال احمر پاکستان",
+            "date": "2024-08",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "languages": 3,
+        "education": 4,
+        "certificates": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "سرٹیفیکیٹس اور کورسز"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

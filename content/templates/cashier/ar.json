@@ -1,0 +1,151 @@
+{
+    "version": "v1",
+    "firstName": "محمود",
+    "lastName": "سامي",
+    "email": "mahmoud.samy@example.com",
+    "phone": "+20 10 2418 7730",
+    "position": "كاشير وموظف مبيعات تجزئة",
+    "location": "القاهرة، مصر",
+    "summary": "كاشير بخبرة سنتين في سوبر ماركت مزدحم بمدينة نصر، وقبلها موسم دخول المدارس في مكتبة. درج الكاشير عندي يطابق في نهاية كل وردية منذ بداية السنة، وأعرف المرتجعات والدفع الإلكتروني وخدمة العملاء وقت الزحمة. متاح للوردية المسائية والجمعة وأيام المواسم، وأديت الخدمة العسكرية.",
+    "experiences": [
+        {
+            "company": "سوبر ماركت الواحة، فرع مدينة نصر",
+            "position": "كاشير (دوام كامل، ورديات)",
+            "location": "القاهرة",
+            "companyUrl": "",
+            "startDate": "2024-07",
+            "endDate": "",
+            "isPresent": true,
+            "description": "سوبر ماركت بثمانية كاشيرات وخدمة توصيل للمنازل.",
+            "achievements": [
+                {
+                    "text": "تحصيل نقدي وبالفيزا والمحافظ الإلكترونية وإنستاباي، مع طابور لا يتوقف ليالي الخميس وفي رمضان"
+                },
+                {
+                    "text": "مطابقة الدرج في نهاية الوردية دون عجز أو زيادة منذ يناير 2026، ومسؤول عن توريد النقدية للخزنة في الوردية المسائية"
+                },
+                {
+                    "text": "تحصيل طلبات التوصيل من الطيارين ومراجعتها مع الفواتير قبل إغلاق الوردية"
+                },
+                {
+                    "text": "تدريب ثلاثة كاشيرات جدد على السيستم وقواعد العروض والخصومات في أسبوعهم الأول"
+                }
+            ]
+        },
+        {
+            "company": "مكتبة الفجر",
+            "position": "بائع وكاشير (موسم دخول المدارس)",
+            "location": "القاهرة",
+            "companyUrl": "",
+            "startDate": "2023-08",
+            "endDate": "2023-10",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "البيع والتحصيل في موسم الأدوات المدرسية مع زحمة أولياء الأمور"
+                },
+                {
+                    "text": "ترتيب الرفوف وتسعير البضاعة الواردة كل صباح"
+                },
+                {
+                    "text": "طلبني صاحب المكتبة مرة أخرى لموسم الترم الثاني بسبب الالتزام بالمواعيد"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "مدرسة النصر الثانوية التجارية",
+            "degree": "دبلوم المدارس الثانوية التجارية",
+            "fieldOfStudy": "",
+            "location": "القاهرة",
+            "startDate": "2018-09",
+            "endDate": "2021-06",
+            "isPresent": false,
+            "description": "دراسة المحاسبة ومسك الدفاتر والآلة الحاسبة.",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "جمعية شباب الحي الخيرية",
+            "organizationUrl": "",
+            "position": "متطوع",
+            "location": "القاهرة",
+            "startDate": "2022-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "تجهيز وتوزيع كراتين رمضان على الأسر كل عام.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "الكاشير",
+            "description": "التحصيل النقدي والإلكتروني، الفكة، مطابقة الدرج، المرتجعات والإلغاء، أنظمة نقاط البيع"
+        },
+        {
+            "title": "الفرع",
+            "description": "رص البضاعة، التسعير، مراجعة تواريخ الصلاحية، الجرد"
+        },
+        {
+            "title": "العملاء",
+            "description": "استقبال العملاء، حل الشكاوى، بطاقات الولاء والعروض"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "العربية",
+            "proficiency": "Native"
+        },
+        {
+            "name": "الإنجليزية",
+            "proficiency": "Basic"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "شهادة صحية سارية",
+            "issuer": "مكتب الصحة",
+            "date": "2025-07",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "الرخصة الدولية لقيادة الحاسب الآلي ICDL",
+            "issuer": "مركز تدريب معتمد",
+            "date": "2022-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

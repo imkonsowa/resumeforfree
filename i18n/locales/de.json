@@ -71,6 +71,7 @@
         "home": "Startseite",
         "builder": "Editor",
         "templates": "Vorlagen",
+        "guides": "Ratgeber",
         "qa": "F&A",
         "help": "Hilfe",
         "resumes": "Ihre Lebensläufe",
@@ -104,7 +105,7 @@
     "homepage": {
         "title": "Erstellen Sie Ihren Lebenslauf",
         "subtitle": "Kostenlos",
-        "heroTitle": "Kostenloser Lebenslauf-Editor - Ohne Registrierung, ohne Wasserzeichen | Resume For Free",
+        "heroTitle": "Lebenslauf erstellen: kostenlos und ohne Anmeldung | Resume For Free",
         "heroDescription": "Erstellen und laden Sie professionelle Lebensläufe kostenlos herunter. Kein Konto erforderlich, keine Wasserzeichen, keine versteckten Gebühren. Ihre Daten bleiben auf Ihrem Gerät. Unbegrenzte PDF-Downloads.",
         "heroSubheadline": "Kein Konto. Kein Wasserzeichen. Kein „Upgrade zum Herunterladen“. Einfach ein Lebenslauf-Editor, der hält, was er verspricht.",
         "hero": {
@@ -118,6 +119,24 @@
             "stat1Label": "Erstellte Lebensläufe",
             "stat2Label": "Heruntergeladene PDFs",
             "stat3Label": "Dauerhafte Kosten"
+        },
+        "noSignup": {
+            "title": "Lebenslauf erstellen ohne Anmeldung",
+            "description": "Was „ohne Anmeldung“ hier konkret bedeutet.",
+            "items": {
+                "noEmail": {
+                    "title": "Keine E-Mail vor dem Download",
+                    "description": "Öffnen Sie den Editor und legen Sie los. Kein E-Mail-Feld, kein Passwort und keine Bestätigung zwischen Ihnen und dem PDF."
+                },
+                "localSave": {
+                    "title": "Im Browser gespeichert",
+                    "description": "Ihr Lebenslauf wird beim Tippen in diesem Browser gespeichert. Für ein anderes Gerät exportieren Sie ihn als Datei und importieren ihn dort."
+                },
+                "optionalAccount": {
+                    "title": "Ein Konto nur, wenn Sie es wollen",
+                    "description": "Ein Konto brauchen Sie nur für die Cloud-Synchronisierung von bis zu 3 Lebensläufen oder den API-Zugang für einen Agenten. Unbegrenzte PDF-Downloads gehen auch ohne."
+                }
+            }
         },
         "sampleResume": {
             "alt": "Vorschau des Musterlebenslaufs",
@@ -1008,10 +1027,13 @@
         },
         "categories": {
             "technology": "Technik",
+            "engineering": "Ingenieurwesen",
             "healthcare": "Gesundheit",
             "finance": "Finanzen",
             "education": "Bildung",
             "business": "Wirtschaft",
+            "creative": "Kreativ",
+            "service": "Kundenservice und Handel",
             "students": "Studierende"
         },
         "layouts": {
@@ -1030,6 +1052,22 @@
             "updated": "Aktualisiert am {date}",
             "previewAlt": "Beispiel-Lebenslauf {profession} im Layout {layout}",
             "resumeName": "Lebenslauf {profession}"
+        }
+    },
+    "guides": {
+        "meta": {
+            "title": "Ratgeber zum Lebenslauf",
+            "description": "Kostenlose Ratgeber für einen Lebenslauf, der gelesen wird: ATS-taugliches Format, der deutsche Lebenslauf und CVs für Jobs in Ägypten und am Golf."
+        },
+        "index": {
+            "title": "Ratgeber zum Lebenslauf",
+            "subtitle": "Praktische Anleitungen für Ihren Lebenslauf, vom Weg durch Bewerbermanagementsysteme bis zu den Gepflogenheiten einzelner Länder."
+        },
+        "detail": {
+            "templates": "Vorlagen zu diesem Ratgeber",
+            "related": "Weitere Ratgeber",
+            "ctaTitle": "Jetzt Lebenslauf erstellen",
+            "ctaText": "Kostenlos und ohne Anmeldung. Ihr Lebenslauf bleibt in Ihrem Browser."
         }
     }
 }

@@ -1,0 +1,172 @@
+{
+    "version": "v1",
+    "firstName": "Danielle",
+    "lastName": "Brooks",
+    "email": "danielle.brooks@example.com",
+    "phone": "+1 555 014 2297",
+    "position": "Customer Service Representative",
+    "location": "Columbus, OH",
+    "summary": "Customer service representative with five years in phone, chat and in-store service, the last three supporting residential internet customers. Resolve most billing and connection issues on the first contact and stay calm with frustrated callers. Bilingual in English and Spanish.",
+    "experiences": [
+        {
+            "company": "Northfield Home Internet",
+            "position": "Customer Service Representative",
+            "location": "Columbus, OH (hybrid)",
+            "companyUrl": "",
+            "startDate": "2023-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Inbound phone and chat support for residential internet and TV customers.",
+            "achievements": [
+                {
+                    "text": "Handle 60 to 70 calls per shift on billing, outages, plan changes and equipment returns, with a first contact resolution rate of 81%"
+                },
+                {
+                    "text": "Kept a quality score above 95% for six consecutive quarters on monthly call reviews"
+                },
+                {
+                    "text": "Support the Spanish language queue two days a week and translate key help articles for the team"
+                },
+                {
+                    "text": "Mentor new hires during their first two weeks on the phones, 14 agents so far"
+                }
+            ]
+        },
+        {
+            "company": "Brightway Outdoor Supply",
+            "position": "Customer Care Associate, Online Orders",
+            "location": "Remote",
+            "companyUrl": "",
+            "startDate": "2021-06",
+            "endDate": "2023-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Answered up to three live chats at once and around 40 emails per day on orders, shipping delays and returns"
+                },
+                {
+                    "text": "Processed refunds and exchanges in Shopify and Gorgias within the 24 hour response target"
+                },
+                {
+                    "text": "Flagged recurring sizing questions to the content team, which led to new fit guides on four product pages"
+                }
+            ]
+        },
+        {
+            "company": "Lakeview Market",
+            "position": "Cashier and Service Desk Clerk",
+            "location": "Columbus, OH",
+            "companyUrl": "",
+            "startDate": "2019-08",
+            "endDate": "2021-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Served 150 or more customers per shift at the register, including weekend and holiday rushes"
+                },
+                {
+                    "text": "Handled returns, price checks and lottery payouts at the service desk"
+                },
+                {
+                    "text": "Named employee of the month twice based on customer comment cards"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Columbus State Community College",
+            "degree": "Associate of Applied Science, Business Management",
+            "fieldOfStudy": "",
+            "location": "Columbus, OH",
+            "startDate": "2019-08",
+            "endDate": "2021-12",
+            "isPresent": false,
+            "description": "Completed part time while working.",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Eastside Community Pantry",
+            "organizationUrl": "",
+            "position": "Intake Volunteer",
+            "location": "Columbus, OH",
+            "startDate": "2022-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Register visitors and answer questions about pantry hours and programs once a month.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Channels",
+            "description": "Inbound phone, live chat, email, in-person service"
+        },
+        {
+            "title": "Systems",
+            "description": "Salesforce Service Cloud, Genesys, Gorgias, Shopify, Microsoft 365"
+        },
+        {
+            "title": "Other",
+            "description": "Typing 65 WPM, de-escalation, billing adjustments, basic network troubleshooting"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "English",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Spanish",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Customer Service Fundamentals",
+            "issuer": "Columbus State Community College",
+            "date": "2022-05",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Zendesk Support Administrator Training",
+            "issuer": "Zendesk",
+            "date": "2024-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "education": 3,
+        "languages": 4,
+        "certificates": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

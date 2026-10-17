@@ -1,0 +1,151 @@
+{
+    "version": "v1",
+    "firstName": "Lea",
+    "lastName": "Brandt",
+    "email": "lea.brandt@example.com",
+    "phone": "+49 152 3418 7720",
+    "position": "Kassiererin und Verkäuferin im Lebensmitteleinzelhandel",
+    "location": "Dortmund",
+    "summary": "Kassiererin mit zwei Jahren Erfahrung in Teilzeit in einem gut besuchten Supermarkt, davor drei Jahre Minijob in einer Drogerie. Meine Kassenabrechnung stimmt seit Monaten ohne Differenz, ich kenne Rücknahmen, Pfand und Alterskontrolle. Verfügbar für Spät- und Samstagsschichten, gern mit 25 bis 30 Wochenstunden.",
+    "experiences": [
+        {
+            "company": "Marktfrisch Supermarkt Hörde",
+            "position": "Kassiererin (Teilzeit, 20 Stunden)",
+            "location": "Dortmund",
+            "companyUrl": "",
+            "startDate": "2024-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Vollsortimenter mit sechs Kassen und vier SB-Kassen.",
+            "achievements": [
+                {
+                    "text": "Bar-, Karten- und Handyzahlungen an einer der meistbesuchten Kassen, samstags oft durchgehend mit Schlange"
+                },
+                {
+                    "text": "Kassenabrechnung am Schichtende seit Januar 2026 ohne Differenz; seit Frühjahr mit Tresorschlüssel für Abschöpfungen"
+                },
+                {
+                    "text": "Betreuung der SB-Kassen an zwei Abenden pro Woche: Alterskontrolle, Storno-Freigaben, Hilfe bei Obst und Gemüse"
+                },
+                {
+                    "text": "Drei neue Aushilfen an der Kasse und beim Pfandautomaten eingearbeitet"
+                }
+            ]
+        },
+        {
+            "company": "Drogerie Lindenhof",
+            "position": "Aushilfe Kasse und Verkauf (Minijob)",
+            "location": "Dortmund",
+            "companyUrl": "",
+            "startDate": "2021-09",
+            "endDate": "2024-07",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Zweimal pro Woche nach der Schule und samstags an der Kasse, auch im Weihnachtsgeschäft"
+                },
+                {
+                    "text": "Ware verräumt, Preisschilder getauscht und Aktionsflächen nach Plan aufgebaut"
+                },
+                {
+                    "text": "In drei Jahren kein unentschuldigter Fehltag"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Gesamtschule Dortmund Süd",
+            "degree": "Fachoberschulreife (Realschulabschluss)",
+            "fieldOfStudy": "",
+            "location": "Dortmund",
+            "startDate": "2018-08",
+            "endDate": "2024-06",
+            "isPresent": false,
+            "description": "Schülerpraktikum im Lebensmitteleinzelhandel in Klasse 9.",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Tafel Dortmund Süd",
+            "organizationUrl": "",
+            "position": "Ehrenamtliche Helferin",
+            "location": "Dortmund",
+            "startDate": "2023-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Lebensmittelausgabe einmal im Monat am Samstag.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Kasse",
+            "description": "Bargeld und Kartenzahlung, Kassenabrechnung, Storno und Rücknahme, Pfandbons, Gutscheine, SB-Kassen"
+        },
+        {
+            "title": "Markt",
+            "description": "Warenverräumung, MHD-Kontrolle, Preisauszeichnung, Jugendschutz und Alterskontrolle"
+        },
+        {
+            "title": "Kunden",
+            "description": "Freundliche Beratung, Umgang mit Reklamationen, Kundenkarte und App"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Deutsch",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Englisch",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Erste-Hilfe-Kurs",
+            "issuer": "Hilfsorganisation, 9 Unterrichtseinheiten",
+            "date": "2024-03",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Belehrung nach dem Infektionsschutzgesetz",
+            "issuer": "Gesundheitsamt Dortmund",
+            "date": "2024-07",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

@@ -1,0 +1,194 @@
+{
+    "version": "v1",
+    "firstName": "سارة",
+    "lastName": "الشريف",
+    "email": "sara.elsherif@example.com",
+    "phone": "+966 55 000 4472",
+    "position": "مصممة جرافيك أولى",
+    "location": "الرياض، السعودية",
+    "summary": "مصممة جرافيك بخبرة ثماني سنوات في الهوية البصرية والتغليف والمطبوعات لعملاء في الأغذية والقطاع المالي والجمعيات الخيرية. أتابع المشروع من أول اسكتش حتى اعتماد البروفة في المطبعة، وأصمم بالعربية والإنجليزية، وأوجه المصممين الجدد.",
+    "experiences": [
+        {
+            "company": "استوديو نخلة للهوية البصرية",
+            "position": "مصممة جرافيك أولى",
+            "location": "الرياض، السعودية",
+            "companyUrl": "",
+            "startDate": "2022-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "استوديو مستقل للهوية البصرية، 12 شخصا، عملاء في الأغذية والتجزئة والتمويل.",
+            "achievements": [
+                {
+                    "text": "قدت تجديد هوية شركة تمويل إقليمية: الشعار، والخطوط العربية واللاتينية، ونظام الألوان، ولافتات 14 فرعا"
+                },
+                {
+                    "text": "صممت تغليف 22 صنفا من التمور وفق قوالب القص من المصنع، واعتمدت البروفات دون إعادة طباعة"
+                },
+                {
+                    "text": "أعرض المفاهيم على العملاء مباشرة وأنهي معظم المشاريع في جولتي تعديل كحد أقصى"
+                },
+                {
+                    "text": "أوجه مصممتين مبتدئتين عبر جلسات نقد أسبوعية ومراجعة للملفات"
+                }
+            ]
+        },
+        {
+            "company": "مخابز السنبلة الذهبية",
+            "position": "مصممة جرافيك، إدارة التسويق",
+            "location": "جدة، السعودية",
+            "companyUrl": "",
+            "startDate": "2019-03",
+            "endDate": "2022-03",
+            "isPresent": false,
+            "description": "فريق تصميم داخلي من ثلاثة أشخاص في سلسلة مخابز لها أكثر من 60 فرعا.",
+            "achievements": [
+                {
+                    "text": "طوعت حملات رمضان والأعياد للإعلانات المطبوعة وملصقات الفروع والسوشيال ميديا"
+                },
+                {
+                    "text": "أعدت كتابة دليل الهوية في 30 صفحة عملية للفروع والموردين"
+                },
+                {
+                    "text": "بنيت قوالب على Figma يستخدمها فريق التسويق دون مساعدة قسم التصميم"
+                }
+            ]
+        },
+        {
+            "company": "مطبعة النيل الحديثة",
+            "position": "مصممة جرافيك",
+            "location": "القاهرة، مصر",
+            "companyUrl": "",
+            "startDate": "2017-08",
+            "endDate": "2019-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "جهزت ملفات طباعة لنحو 40 طلبا شهريا مع الهوامش وملفات الألوان وملاحظات المونتاج"
+                },
+                {
+                    "text": "صممت المنيوهات والمطويات واللافتات لمحلات ومطاعم محلية"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "كلية الفنون التطبيقية، جامعة حلوان",
+            "degree": "بكالوريوس الفنون التطبيقية، قسم الإعلان",
+            "fieldOfStudy": "",
+            "location": "القاهرة، مصر",
+            "startDate": "2012-09",
+            "endDate": "2017-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "جيد جدا",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "التصميم",
+            "description": "الهوية البصرية، الخطوط، الإخراج، التغليف، المطبوعات"
+        },
+        {
+            "title": "ثنائي اللغة",
+            "description": "إخراج عربي وإنجليزي، اختيار الخطوط العربية واللاتينية"
+        },
+        {
+            "title": "البرامج",
+            "description": "Adobe Illustrator، InDesign، Photoshop، Figma، After Effects"
+        },
+        {
+            "title": "تجهيز الطباعة",
+            "description": "إدارة الألوان، Pantone، قوالب القص، اعتماد البروفات"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "portfolio",
+            "url": "https://example.com/sara-elsherif"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "تجديد هوية مخابز السنبلة",
+            "description": "شعار محدث وأكياس وعلب ولافتات لأكثر من 60 فرعا. التصميم ومتابعة الطباعة.",
+            "links": [
+                {
+                    "url": "https://example.com/sara-elsherif/sunbula",
+                    "label": "معرض الأعمال"
+                }
+            ],
+            "startDate": "2021-01",
+            "endDate": "2021-10",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "التقرير السنوي لجمعية إطعام الخير",
+            "description": "تقرير في 48 صفحة بالعربية والإنجليزية للطباعة والويب، بالتطوع مع كاتبة محتوى.",
+            "links": [
+                {
+                    "url": "https://example.com/sara-elsherif/report",
+                    "label": "معرض الأعمال"
+                }
+            ],
+            "startDate": "2024-03",
+            "endDate": "2024-06",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "العربية",
+            "proficiency": "Native"
+        },
+        {
+            "name": "الإنجليزية",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Adobe Certified Professional in Graphic Design and Illustration Using Adobe Illustrator",
+            "issuer": "Adobe",
+            "date": "2021-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "projects": 2,
+        "education": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "volunteering": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "projects": "أعمال مختارة"
+    },
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

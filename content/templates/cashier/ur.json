@@ -1,0 +1,155 @@
+{
+    "version": "v1",
+    "firstName": "حمزہ",
+    "lastName": "اقبال",
+    "email": "hamza.iqbal@example.com",
+    "phone": "+92 321 4187720",
+    "position": "کیشیئر اور سیلز ایسوسی ایٹ",
+    "location": "لاہور، پاکستان",
+    "summary": "جوہر ٹاؤن کے ایک مصروف سپر مارٹ میں دو سال سے کیشیئر ہوں، اس سے پہلے ایک بک ڈپو پر اسکول سیزن میں کام کیا۔ اس سال ہر شفٹ کے اختتام پر میرا کیش پورا رہا ہے، ریٹرن، کارڈ اور موبائل والٹ کی ادائیگی اور رش میں گاہکوں کو سنبھالنا جانتا ہوں۔ شام اور رات کی شفٹ، ویک اینڈ اور رمضان و عید کے سیزن میں دستیاب ہوں۔",
+    "experiences": [
+        {
+            "company": "سٹی فیملی مارٹ، جوہر ٹاؤن",
+            "position": "کیشیئر (فل ٹائم، شفٹوں میں)",
+            "location": "لاہور",
+            "companyUrl": "",
+            "startDate": "2024-06",
+            "endDate": "",
+            "isPresent": true,
+            "description": "آٹھ کاؤنٹرز والا سپر مارٹ، ہوم ڈیلیوری سروس کے ساتھ۔",
+            "achievements": [
+                {
+                    "text": "نقد، ڈیبٹ کارڈ، موبائل والٹ اور QR کوڈ سے ادائیگی وصول کرتا ہوں؛ رمضان کی راتوں اور عید سے پہلے لائن ختم نہیں ہوتی"
+                },
+                {
+                    "text": "جنوری 2026 سے ہر شفٹ کے اختتام پر کیش بغیر کمی بیشی کے پورا؛ رات کی شفٹ میں سیف میں کیش جمع کرانے کی ذمہ داری"
+                },
+                {
+                    "text": "ڈیلیوری رائیڈرز سے وصولی لے کر بلوں سے ملاتا ہوں اور شفٹ بند ہونے سے پہلے حساب دیتا ہوں"
+                },
+                {
+                    "text": "تین نئے کیشیئرز کو پہلے ہفتے میں سسٹم، ڈسکاؤنٹ کے اصول اور کاؤنٹر کھولنے کی فہرست سکھائی"
+                }
+            ]
+        },
+        {
+            "company": "نور بک ڈپو",
+            "position": "سیلز مین اور کیشیئر (اسکول سیزن)",
+            "location": "لاہور",
+            "companyUrl": "",
+            "startDate": "2023-03",
+            "endDate": "2023-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "نئے تعلیمی سال میں کتابوں اور کاپیوں کی فروخت اور وصولی، والدین کے رش میں"
+                },
+                {
+                    "text": "ہر صبح آنے والا مال شیلف پر لگایا اور قیمتیں لگائیں"
+                },
+                {
+                    "text": "وقت کی پابندی کی وجہ سے مالک نے اگلے سیزن کے لیے دوبارہ بلایا"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "گورنمنٹ ہائر سیکنڈری اسکول اقبال ٹاؤن",
+            "degree": "انٹرمیڈیٹ (آئی کام)",
+            "fieldOfStudy": "",
+            "location": "لاہور",
+            "startDate": "2021-09",
+            "endDate": "2023-06",
+            "isPresent": false,
+            "description": "اکاؤنٹنگ، بزنس میتھ اور کامرس کے مضامین۔",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "محلہ ویلفیئر کمیٹی",
+            "organizationUrl": "",
+            "position": "رضاکار",
+            "location": "لاہور",
+            "startDate": "2022-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "ہر سال رمضان میں راشن بیگ تیار کرنا اور مستحق گھروں تک پہنچانا۔",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "کیش کاؤنٹر",
+            "description": "نقد اور کارڈ ادائیگی، موبائل والٹ، ریزگاری، کیش کا حساب، ریٹرن اور کینسل، POS سسٹم"
+        },
+        {
+            "title": "اسٹور",
+            "description": "مال شیلف پر لگانا، قیمت لگانا، ایکسپائری چیک، اسٹاک گنتی"
+        },
+        {
+            "title": "گاہک",
+            "description": "خوش اخلاقی سے بات، شکایت کا حل، لائلٹی کارڈ اور آفرز"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "اردو",
+            "proficiency": "Native"
+        },
+        {
+            "name": "پنجابی",
+            "proficiency": "Native"
+        },
+        {
+            "name": "انگریزی",
+            "proficiency": "Basic"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "کمپیوٹر کا بنیادی کورس (MS Office)",
+            "issuer": "سرکاری ووکیشنل ٹریننگ سینٹر",
+            "date": "2023-08",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "فوڈ ہینڈلنگ اور حفظان صحت کی تربیت",
+            "issuer": "سٹی فیملی مارٹ",
+            "date": "2024-07",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

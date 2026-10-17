@@ -6,7 +6,7 @@ export type TemplateLocale = typeof TEMPLATE_LOCALES[number];
 export const TEMPLATE_LAYOUTS = ['ats-friendly', 'compact', 'default', 'simple'] as const;
 export type TemplateLayout = typeof TEMPLATE_LAYOUTS[number];
 
-export const TEMPLATE_CATEGORIES = ['technology', 'healthcare', 'finance', 'education', 'business', 'students'] as const;
+export const TEMPLATE_CATEGORIES = ['technology', 'engineering', 'healthcare', 'finance', 'education', 'business', 'creative', 'service', 'students'] as const;
 export type TemplateCategory = typeof TEMPLATE_CATEGORIES[number];
 
 const hexColor = z.string().regex(/^(#[0-9a-f]{6})?$/i);

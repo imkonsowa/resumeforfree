@@ -1,0 +1,151 @@
+{
+    "version": "v1",
+    "firstName": "Camille",
+    "lastName": "Lefèvre",
+    "email": "camille.lefevre@example.com",
+    "phone": "+33 6 42 18 77 30",
+    "position": "Hôtesse de caisse, employée libre-service",
+    "location": "Lille",
+    "summary": "Hôtesse de caisse en CDI à temps partiel depuis deux ans dans un supermarché de quartier très fréquenté, après des jobs d'été en grande surface. Mes comptages de caisse sont justes depuis le début de l'année, je connais les retours, la caisse automatique et le contrôle d'âge. Disponible en soirée et le samedi, ouverte à un 30 heures.",
+    "experiences": [
+        {
+            "company": "Supermarché Le Panier du Nord",
+            "position": "Hôtesse de caisse (CDI, 24 h par semaine)",
+            "location": "Lille",
+            "companyUrl": "",
+            "startDate": "2024-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Supermarché de quartier avec sept caisses et quatre caisses automatiques.",
+            "achievements": [
+                {
+                    "text": "Encaissement en espèces, carte, sans contact et titres-restaurant, avec une file continue le samedi"
+                },
+                {
+                    "text": "Comptage de caisse juste en fin de service depuis janvier 2026 ; chargée des remontées d'espèces au coffre en soirée"
+                },
+                {
+                    "text": "Surveillance des caisses automatiques deux soirs par semaine : contrôle d'âge, annulations, aide pour la pesée des fruits"
+                },
+                {
+                    "text": "Formation de trois nouveaux étudiants à la caisse et aux règles sur les bons de réduction"
+                }
+            ]
+        },
+        {
+            "company": "Hyper Flandres Villeneuve",
+            "position": "Employée libre-service (CDD saisonnier)",
+            "location": "Villeneuve-d'Ascq",
+            "companyUrl": "",
+            "startDate": "2023-07",
+            "endDate": "2023-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Mise en rayon des produits frais le matin et rotation des dates"
+                },
+                {
+                    "text": "Renfort en caisse les jours d'affluence et pendant la rentrée scolaire"
+                },
+                {
+                    "text": "Rappelée pour les vacances de Noël grâce à ma ponctualité"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Lycée professionnel des Weppes",
+            "degree": "Bac pro Métiers du commerce et de la vente",
+            "fieldOfStudy": "",
+            "location": "Lille",
+            "startDate": "2021-09",
+            "endDate": "2024-06",
+            "isPresent": false,
+            "description": "Périodes de formation en milieu professionnel en supérette et en magasin de prêt-à-porter.",
+            "graduationScore": "Mention assez bien",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Restos du quartier Fives",
+            "organizationUrl": "",
+            "position": "Bénévole",
+            "location": "Lille",
+            "startDate": "2023-01",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Accueil des familles et distribution de colis un samedi par mois.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Caisse",
+            "description": "Encaissement, rendu de monnaie, fond de caisse, comptage, retours et avoirs, caisse automatique"
+        },
+        {
+            "title": "Magasin",
+            "description": "Mise en rayon, étiquetage, contrôle des DLC, inventaire, contrôle d'âge"
+        },
+        {
+            "title": "Clients",
+            "description": "Accueil, gestion des réclamations, carte de fidélité"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Français",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Anglais",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "PSC1 (Prévention et secours civiques)",
+            "issuer": "Association de secourisme agréée",
+            "date": "2023-05",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Formation interne à la détection des faux billets",
+            "issuer": "Supermarché Le Panier du Nord",
+            "date": "2025-02",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

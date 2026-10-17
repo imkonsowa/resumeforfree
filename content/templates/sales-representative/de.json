@@ -1,0 +1,185 @@
+{
+    "version": "v1",
+    "firstName": "Jonas",
+    "lastName": "Becker",
+    "email": "jonas.becker@example.com",
+    "phone": "+49 171 4482 3307",
+    "position": "Vertriebsmitarbeiter im Außendienst, Medizinprodukte",
+    "location": "Köln",
+    "summary": "Vertriebsmitarbeiter mit zehn Jahren Erfahrung in Außendienst, Innendienst und Großhandel. Ich betreue 160 Praxen und Pflegeeinrichtungen im Raum Köln/Bonn, habe meine Umsatzziele in den letzten vier Jahren übertroffen und verkaufe am liebsten dort, wo der Kunde das Produkt in die Hand nehmen kann.",
+    "experiences": [
+        {
+            "company": "Domblick Medizinprodukte GmbH",
+            "position": "Außendienstmitarbeiter Medizinprodukte",
+            "location": "Köln",
+            "companyUrl": "",
+            "startDate": "2020-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Betreuung von 160 Arztpraxen, MVZ und Pflegeheimen im Gebiet Köln/Bonn, Jahresziel 1,3 Mio. Euro Umsatz"
+                },
+                {
+                    "text": "Umsatzziel 2024 zu 109 % und 2025 zu 114 % erreicht, Platz 3 von 18 im Außendienst West"
+                },
+                {
+                    "text": "31 Neukunden in zwei Jahren gewonnen, vor allem über Praxisbesuche und Empfehlungen bestehender Kunden"
+                },
+                {
+                    "text": "Rahmenvertrag mit einer Pflegeheimgruppe (12 Häuser) über 240.000 Euro pro Jahr abgeschlossen, nach Produktschulungen für das Pflegepersonal vor Ort"
+                },
+                {
+                    "text": "Besuchsberichte und Pipeline in Salesforce gepflegt, Forecast seit sechs Quartalen mit weniger als 6 % Abweichung"
+                }
+            ]
+        },
+        {
+            "company": "Rheinland Bürotechnik Schmitz GmbH",
+            "position": "Vertriebsmitarbeiter im Innendienst",
+            "location": "Köln",
+            "companyUrl": "",
+            "startDate": "2017-08",
+            "endDate": "2020-03",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Telefonische Betreuung von rund 400 Bestandskunden für Drucker, Kopiersysteme und Wartungsverträge"
+                },
+                {
+                    "text": "Verlängerungsquote der Wartungsverträge von 81 % auf 89 % gesteigert, weil Kunden drei Monate vor Ablauf angerufen wurden"
+                },
+                {
+                    "text": "Im Schnitt 12 qualifizierte Termine pro Monat für den Außendienst vereinbart"
+                }
+            ]
+        },
+        {
+            "company": "Weber & Krämer Großhandel GmbH",
+            "position": "Kaufmann im Verkaufsinnendienst",
+            "location": "Köln",
+            "companyUrl": "",
+            "startDate": "2016-07",
+            "endDate": "2017-07",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Aufträge von Handwerksbetrieben erfasst, Liefertermine abgestimmt und Reklamationen bearbeitet"
+                },
+                {
+                    "text": "Nach der Ausbildung übernommen, Betreuung von 90 Kunden aus dem Sanitärhandwerk"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "IHK Köln, duale Ausbildung bei Weber & Krämer Großhandel GmbH",
+            "degree": "Kaufmann im Groß- und Außenhandelsmanagement (IHK)",
+            "fieldOfStudy": "",
+            "location": "Köln",
+            "startDate": "2013-08",
+            "endDate": "2016-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "SC Rheinblick 1921 e.V.",
+            "organizationUrl": "",
+            "position": "Jugendtrainer U12",
+            "location": "Köln",
+            "startDate": "2019-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Trainiere zweimal pro Woche eine Fußballmannschaft mit 16 Kindern.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Vertrieb",
+            "description": "Gebietsplanung, Neukundengewinnung, Bedarfsanalyse, Verhandlung, Rahmenverträge"
+        },
+        {
+            "title": "Werkzeuge",
+            "description": "Salesforce, MS Dynamics 365, MS Office, Teams"
+        },
+        {
+            "title": "Branche",
+            "description": "Medizinprodukte, Pflegebedarf, Grundlagen MDR und MPDG"
+        },
+        {
+            "title": "Sonstiges",
+            "description": "Führerschein Klasse B, Dienstwagen, Reisebereitschaft"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Deutsch",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Englisch",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Niederländisch",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Medizinprodukteberater nach § 83 MPDG",
+            "issuer": "Rheinische Akademie für Gesundheitsberufe",
+            "date": "2020-06",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Seminar Verhandlungsführung im Vertrieb",
+            "issuer": "IHK Köln",
+            "date": "2022-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "volunteering": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

@@ -1,0 +1,194 @@
+{
+    "version": "v1",
+    "firstName": "Selin",
+    "lastName": "Arslan",
+    "email": "selin.arslan@example.com",
+    "phone": "+90 555 018 46 27",
+    "position": "Kıdemli Veri Analisti",
+    "location": "İstanbul",
+    "summary": "Perakende ve e-ticaret alanında altı yıllık deneyime sahip veri analistiyim. Her gün SQL yazıyor, yöneticilerin gerçekten açtığı Power BI panoları hazırlıyor ve belirsiz bir iş sorusunu karar verilebilecek bir rakama dönüştürmeyi seviyorum.",
+    "experiences": [
+        {
+            "company": "Boğaziçi Market Zinciri A.Ş.",
+            "position": "Kıdemli Veri Analisti",
+            "location": "İstanbul",
+            "companyUrl": "",
+            "startDate": "2022-10",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "65 mağaza müdürü ve satın alma ekibinin kullandığı haftalık satış ve stok panolarının sorumlusuyum (Power BI)"
+                },
+                {
+                    "text": "İndirim raporunu SQL ve dbt ile yeniden kurdum; iki günlük elle yapılan iş her pazartesi sabahı otomatik güncellenen bir rapora dönüştü"
+                },
+                {
+                    "text": "1,1 milyon online siparişteki iade nedenlerini inceleyip iki ürün grubunda beden sorunu buldum, yeni beden tabloları hazırlandı"
+                },
+                {
+                    "text": "Ürün ekibiyle sepet sayfasında A/B testleri tasarladım ve sonuçlarını sundum, ekibin hâlâ kullandığı test rehberini yazdım"
+                }
+            ]
+        },
+        {
+            "company": "Ege Dijital Ödeme Hizmetleri A.Ş.",
+            "position": "Veri Analisti",
+            "location": "İzmir",
+            "companyUrl": "",
+            "startDate": "2020-02",
+            "endDate": "2022-09",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Üye işyeri kaybı için aylık tahmin modelini Python ile kurdum, finans ekibi gelir tahminlerinde bu modeli kullandı"
+                },
+                {
+                    "text": "Satış ekibinin hangi kanalın uzun süre kalan müşteri getirdiğini görebilmesi için kohort raporları hazırladım"
+                },
+                {
+                    "text": "Veri ambarındaki 50 temel tabloyu belgeledim, veri ekibine gelen tekrar eden soruları azalttım"
+                }
+            ]
+        },
+        {
+            "company": "Anadolu Araştırma ve Danışmanlık Ltd. Şti.",
+            "position": "Stajyer Veri Analisti",
+            "location": "Ankara",
+            "companyUrl": "",
+            "startDate": "2019-07",
+            "endDate": "2020-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Pazar araştırması anket verilerini R ile temizleyip analiz ettim"
+                },
+                {
+                    "text": "Müşteri raporları için Excel tabloları ve grafikler hazırladım"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Orta Doğu Teknik Üniversitesi",
+            "degree": "İstatistik Lisans",
+            "fieldOfStudy": "",
+            "location": "Ankara",
+            "startDate": "2015-09",
+            "endDate": "2019-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "3,41 / 4,00",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Veri",
+            "description": "SQL (PostgreSQL, MS SQL Server, BigQuery), dbt, veri modelleme"
+        },
+        {
+            "title": "Analiz",
+            "description": "Python (pandas), R, A/B testi, kohort ve huni analizi, tahminleme"
+        },
+        {
+            "title": "BI ve raporlama",
+            "description": "Power BI, Tableau, Excel (pivot tablo, Power Query)"
+        },
+        {
+            "title": "Çalışma biçimi",
+            "description": "İhtiyaç analizi, bulguları sunma, dokümantasyon"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        },
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "İstanbul toplu taşıma yoğunluğu",
+            "description": "İBB açık veri portalındaki verilerle hazırlanmış herkese açık Power BI panosu: hat, saat ve hava durumuna göre yolculuk sayıları. SQL kodu ve kısa bir değerlendirme notu GitHub'da.",
+            "links": [
+                {
+                    "url": "https://github.com/example/istanbul-ulasim",
+                    "label": "GitHub"
+                }
+            ],
+            "startDate": "2024-01",
+            "endDate": "2024-03",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Mutfak sepeti fiyat takibi",
+            "description": "40 temel gıda ürününün fiyatını her hafta toplayan ve değişimini grafikle gösteren Python not defteri.",
+            "links": [],
+            "startDate": "2023-04",
+            "endDate": "",
+            "isPresent": true,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Türkçe",
+            "proficiency": "Native"
+        },
+        {
+            "name": "İngilizce",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Microsoft Certified: Power BI Data Analyst Associate",
+            "issuer": "Microsoft",
+            "date": "2023-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "YDS İngilizce, 88 puan",
+            "issuer": "ÖSYM",
+            "date": "2021-04",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "projects": 2,
+        "education": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "volunteering": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

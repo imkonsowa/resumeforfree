@@ -11,6 +11,7 @@ import {
 
 const { t, locale } = useI18n();
 const localePath = useLocalePath();
+const appConfig = useAppConfig();
 
 const sampleResumeSrc = computed(() => `/sample-resume-${locale.value}.svg`);
 
@@ -85,6 +86,16 @@ const steps = computed(() => [
     { title: t('homepage.howItWorks.step2.title'), body: t('homepage.howItWorks.step2.description') },
     { title: t('homepage.howItWorks.step3.title'), body: t('homepage.howItWorks.step3.description') },
 ]);
+
+const noSignupItems = computed(() => [
+    { icon: 'i-lucide-mail-x', key: 'noEmail' },
+    { icon: 'i-lucide-hard-drive', key: 'localSave' },
+    { icon: 'i-lucide-cloud', key: 'optionalAccount' },
+].map(item => ({
+    icon: item.icon,
+    title: t(`homepage.noSignup.items.${item.key}.title`),
+    description: t(`homepage.noSignup.items.${item.key}.description`),
+})));
 
 const featureItems = [
     { icon: 'i-lucide-check', title: t('homepage.features.free.title'), body: t('homepage.features.free.description') },
@@ -284,6 +295,13 @@ useHead(() => {
         </UPageHero>
 
         <UPageSection
+            :title="$t('homepage.noSignup.title')"
+            :description="$t('homepage.noSignup.description')"
+            :features="noSignupItems"
+            class="bg-muted border-y border-default"
+        />
+
+        <UPageSection
             :title="$t('homepage.features.sectionTitle')"
             :description="$t('homepage.features.sub')"
             :features="featureItems.map(f => ({ title: f.title, description: f.body, icon: f.icon }))"
@@ -323,7 +341,17 @@ useHead(() => {
                 :tiers="comparisonTiers"
                 :sections="comparisonSections"
                 :caption="$t('homepage.comparison.title')"
-            />
+            >
+                <template #feature-value="{ feature, tier }">
+                    <UIcon
+                        :name="feature.tiers?.[tier.id] ? appConfig.ui.icons.success : appConfig.ui.icons.minus"
+                        class="size-5 shrink-0"
+                        :class="{ 'text-primary': feature.tiers?.[tier.id] }"
+                        aria-hidden="true"
+                    />
+                    <span class="sr-only">{{ feature.tiers?.[tier.id] ? $t('homepage.comparison.values.yes') : $t('homepage.comparison.values.no') }}</span>
+                </template>
+            </UPricingTable>
             <p class="text-xs text-muted mt-4 text-center">
                 {{ $t('homepage.comparison.footnote') }}
             </p>
@@ -366,6 +394,7 @@ useHead(() => {
             <UAccordion
                 :items="faqAccordionItems"
                 :default-value="'0'"
+                :unmount-on-hide="false"
             />
         </UPageSection>
 

@@ -1,0 +1,166 @@
+{
+    "version": "v1",
+    "firstName": "Jasmine",
+    "lastName": "Carter",
+    "email": "jasmine.carter@example.com",
+    "phone": "+1 555 014 2287",
+    "position": "Cashier and Retail Associate",
+    "location": "Columbus, OH",
+    "summary": "Cashier with two years of part-time experience in a busy neighborhood supermarket. My drawer has balanced at close on every shift this year, I know the self-checkout and returns desk, and I stay calm with long lines. Available evenings and weekends, including holidays.",
+    "experiences": [
+        {
+            "company": "FreshWay Market",
+            "position": "Cashier (part time)",
+            "location": "Columbus, OH",
+            "companyUrl": "",
+            "startDate": "2024-06",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Neighborhood supermarket with eight registers and four self-checkout stations. 20 to 25 hours a week.",
+            "achievements": [
+                {
+                    "text": "Ring up about 70 customers an hour during the Saturday rush with cash, card, mobile pay and SNAP EBT"
+                },
+                {
+                    "text": "Drawer balanced at close on every shift in 2026; trusted to do the evening cash pickup and safe drop"
+                },
+                {
+                    "text": "Cover the self-checkout area two evenings a week: clear alerts, check ID for age-restricted items and help with produce codes"
+                },
+                {
+                    "text": "Showed four new cashiers the register, coupon rules and opening checklist during their first week"
+                },
+                {
+                    "text": "Signed up about 150 customers for the store loyalty card in one quarter, the most on the evening team"
+                }
+            ]
+        },
+        {
+            "company": "Northgate Toy & Gift",
+            "position": "Seasonal Sales Associate",
+            "location": "Columbus, OH",
+            "companyUrl": "",
+            "startDate": "2023-11",
+            "endDate": "2024-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Worked the register and gift-wrap counter through the holiday season, including Black Friday weekend"
+                },
+                {
+                    "text": "Restocked shelves from the back room each morning and kept the front displays tidy"
+                },
+                {
+                    "text": "Asked back for the spring break season because of attendance and customer feedback"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Columbus State Community College",
+            "degree": "Business Management classes (part time)",
+            "fieldOfStudy": "",
+            "location": "Columbus, OH",
+            "startDate": "2025-08",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Evening classes in accounting basics and customer relations.",
+            "graduationScore": "",
+            "achievements": []
+        },
+        {
+            "institution": "Westland High School",
+            "degree": "High School Diploma",
+            "fieldOfStudy": "",
+            "location": "Columbus, OH",
+            "startDate": "2020-08",
+            "endDate": "2024-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Hilltop Community Food Pantry",
+            "organizationUrl": "",
+            "position": "Volunteer",
+            "location": "Columbus, OH",
+            "startDate": "2023-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Check in families and pack grocery boxes one Saturday a month.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Register",
+            "description": "Cash handling, card and mobile payments, EBT, returns and exchanges, voids and price overrides, self-checkout support"
+        },
+        {
+            "title": "Store",
+            "description": "Bagging, shelf restocking, price checks, opening and closing checklists, age verification"
+        },
+        {
+            "title": "Customers",
+            "description": "Friendly service, handling complaints, loyalty card sign-ups, bilingual help in Spanish"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "English",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Spanish",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Food Handler Certificate",
+            "issuer": "State-approved online course",
+            "date": "2024-07",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Adult First Aid and CPR",
+            "issuer": "American Red Cross",
+            "date": "2025-03",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

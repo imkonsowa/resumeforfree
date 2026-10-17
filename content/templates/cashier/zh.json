@@ -1,0 +1,163 @@
+{
+    "version": "v1",
+    "firstName": "陈雨欣",
+    "lastName": "",
+    "email": "chenyuxin@example.com",
+    "phone": "+86 138 8204 1773",
+    "position": "超市收银员",
+    "location": "成都",
+    "summary": "在客流量大的社区超市做收银两年，之前做过一个寒假的文具店营业员。今年每班交接对账都没有出现长短款，熟悉现金、扫码支付、退换货和自助收银。可以上晚班和周末班，节假日和店庆期间也能排班，一周内可到岗。",
+    "experiences": [
+        {
+            "company": "惠邻生活超市（玉林店）",
+            "position": "收银员（全职，早晚轮班）",
+            "location": "成都",
+            "companyUrl": "",
+            "startDate": "2024-07",
+            "endDate": "",
+            "isPresent": true,
+            "description": "社区连锁超市，八个人工收银台、四台自助收银机，含线上订单到店自提。",
+            "achievements": [
+                {
+                    "text": "收取现金、银行卡、微信支付、支付宝和购物卡，周末晚高峰和春节前收银台基本不停"
+                },
+                {
+                    "text": "2026 年 1 月起每班交接对账零长短款；晚班负责收银款上缴和备用金清点"
+                },
+                {
+                    "text": "每周两个晚上负责自助收银区：处理称重和扫码异常，核对烟酒类商品的购买年龄"
+                },
+                {
+                    "text": "带教三名新收银员，第一周教会收银系统、会员积分和开班流程"
+                }
+            ]
+        },
+        {
+            "company": "书香文具店",
+            "position": "营业员兼收银（寒假工）",
+            "location": "成都",
+            "companyUrl": "",
+            "startDate": "2024-01",
+            "endDate": "2024-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "开学前高峰期负责收银和打包，家长排队时保持出单速度"
+                },
+                {
+                    "text": "每天早上把到货的文具上架、贴价签"
+                },
+                {
+                    "text": "因为从不迟到，暑假又被老板请回来帮忙"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "成都开放大学",
+            "degree": "大专，市场营销（业余学习）",
+            "fieldOfStudy": "",
+            "location": "成都",
+            "startDate": "2025-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "周末和晚上上课，不影响排班。",
+            "graduationScore": "",
+            "achievements": []
+        },
+        {
+            "institution": "成都锦城商贸职业学校",
+            "degree": "中专，商品经营专业",
+            "fieldOfStudy": "",
+            "location": "成都",
+            "startDate": "2021-09",
+            "endDate": "2024-06",
+            "isPresent": false,
+            "description": "最后一学期在连锁便利店实习。",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "玉林街道社区服务站",
+            "organizationUrl": "",
+            "position": "志愿者",
+            "location": "成都",
+            "startDate": "2023-05",
+            "endDate": "",
+            "isPresent": true,
+            "description": "每月一次协助社区义卖和老人代购活动，负责登记和收款。",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "收银",
+            "description": "现金收付、找零、扫码支付、银行卡、购物卡、交接班对账、退换货、自助收银"
+        },
+        {
+            "title": "门店",
+            "description": "理货上架、价签核对、临期商品检查、盘点、烟酒年龄核验"
+        },
+        {
+            "title": "顾客",
+            "description": "礼貌接待、处理投诉、会员办理和积分兑换"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "中文",
+            "proficiency": "Native"
+        },
+        {
+            "name": "英语",
+            "proficiency": "Basic"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "食品从业人员健康证明",
+            "issuer": "成都市疾病预防控制机构",
+            "date": "2025-06",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "收银员岗位培训结业",
+            "issuer": "惠邻生活超市",
+            "date": "2024-07",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "certificates": 3,
+        "education": 4,
+        "languages": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

@@ -1,0 +1,194 @@
+{
+    "version": "v1",
+    "firstName": "Elif",
+    "lastName": "Aydın",
+    "email": "elif.aydin@example.com",
+    "phone": "+90 532 418 27 63",
+    "position": "Kıdemli Grafik Tasarımcı",
+    "location": "İstanbul",
+    "summary": "Gıda, finans ve sivil toplum müşterileri için kurumsal kimlik, ambalaj ve basılı iş alanında sekiz yıllık deneyime sahip grafik tasarımcıyım. Projeleri ilk eskizden baskı onayına kadar yürütüyor, müşteriye doğrudan sunum yapıyor ve junior tasarımcılara destek oluyorum.",
+    "experiences": [
+        {
+            "company": "Galata Marka Stüdyosu",
+            "position": "Kıdemli Grafik Tasarımcı",
+            "location": "İstanbul",
+            "companyUrl": "",
+            "startDate": "2022-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Bağımsız marka stüdyosu, 12 kişi, gıda, perakende ve finans müşterileri.",
+            "achievements": [
+                {
+                    "text": "Bir katılım bankasının kimlik yenilemesini yönettim: logo, yazı karakterleri, renk sistemi ve 14 şube tabelası"
+                },
+                {
+                    "text": "22 çeşit zeytinyağı ve zeytin ambalajını kesim şablonlarına göre tasarladım, tekrar baskı olmadan onaylandı"
+                },
+                {
+                    "text": "Konseptleri müşteriye doğrudan sunuyor, projelerin çoğunu en fazla iki revizyonda tamamlıyorum"
+                },
+                {
+                    "text": "İki junior tasarımcıya haftalık eleştiri ve dosya kontrolüyle mentorluk yapıyorum"
+                }
+            ]
+        },
+        {
+            "company": "Ege Zeytin Gıda A.Ş.",
+            "position": "Grafik Tasarımcı, Pazarlama",
+            "location": "İzmir",
+            "companyUrl": "",
+            "startDate": "2019-03",
+            "endDate": "2022-03",
+            "isPresent": false,
+            "description": "Ulusal dağıtımı olan bir gıda üreticisinde üç kişilik şirket içi tasarım ekibi.",
+            "achievements": [
+                {
+                    "text": "Sezon kampanyalarını basılı ilan, mağaza afişi, e-bülten ve sosyal medyaya uyarladım"
+                },
+                {
+                    "text": "Kurumsal kimlik kılavuzunu bayiler için 30 sayfalık pratik bir rehbere dönüştürdüm"
+                },
+                {
+                    "text": "Pazarlama ekibinin tasarım desteği olmadan kullandığı Figma şablonlarını hazırladım"
+                }
+            ]
+        },
+        {
+            "company": "Kadıköy Matbaacılık",
+            "position": "Grafiker",
+            "location": "İstanbul",
+            "companyUrl": "",
+            "startDate": "2017-07",
+            "endDate": "2019-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Ayda yaklaşık 40 iş için taşma payı, renk profili ve montaj notlarıyla baskı dosyası hazırladım"
+                },
+                {
+                    "text": "Yerel işletmeler için broşür, menü ve tabela tasarladım"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Mimar Sinan Güzel Sanatlar Üniversitesi",
+            "degree": "Grafik Tasarım Bölümü, Lisans",
+            "fieldOfStudy": "",
+            "location": "İstanbul",
+            "startDate": "2013-09",
+            "endDate": "2017-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Tasarım",
+            "description": "Kurumsal kimlik, tipografi, sayfa düzeni, ambalaj, yayın tasarımı"
+        },
+        {
+            "title": "Dijital",
+            "description": "Sosyal medya görselleri, e-bülten, sunum şablonları"
+        },
+        {
+            "title": "Programlar",
+            "description": "Adobe Illustrator, InDesign, Photoshop, Figma, After Effects"
+        },
+        {
+            "title": "Baskı öncesi",
+            "description": "Renk yönetimi, Pantone, kesim şablonu, makine başı onay"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "portfolio",
+            "url": "https://example.com/elif-aydin"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Ege Zeytin ambalaj yenileme",
+            "description": "Zeytinyağı serisi için yeni şişe etiketleri ve raf materyalleri. Tasarım ve baskı takibi.",
+            "links": [
+                {
+                    "url": "https://example.com/elif-aydin/ege-zeytin",
+                    "label": "Portfolyo"
+                }
+            ],
+            "startDate": "2021-01",
+            "endDate": "2021-10",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Moda Gıda Bankası faaliyet raporu",
+            "description": "Basılı ve web için 48 sayfalık rapor, bir metin yazarıyla gönüllü olarak hazırlandı.",
+            "links": [
+                {
+                    "url": "https://example.com/elif-aydin/gida-bankasi",
+                    "label": "Portfolyo"
+                }
+            ],
+            "startDate": "2024-03",
+            "endDate": "2024-06",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Türkçe",
+            "proficiency": "Native"
+        },
+        {
+            "name": "İngilizce",
+            "proficiency": "Proficient"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Adobe Certified Professional in Graphic Design and Illustration Using Adobe Illustrator",
+            "issuer": "Adobe",
+            "date": "2021-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "projects": 2,
+        "education": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "volunteering": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "projects": "Seçili İşler"
+    },
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

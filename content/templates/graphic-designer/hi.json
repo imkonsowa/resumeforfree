@@ -1,0 +1,198 @@
+{
+    "version": "v1",
+    "firstName": "अनन्या",
+    "lastName": "देशपांडे",
+    "email": "ananya.deshpande@example.com",
+    "phone": "+91 98200 13447",
+    "position": "सीनियर ग्राफ़िक डिज़ाइनर",
+    "location": "मुंबई, महाराष्ट्र",
+    "summary": "फ़ूड, फ़ाइनेंस और NGO क्लाइंट के लिए ब्रांड आइडेंटिटी, पैकेजिंग और प्रिंट में आठ साल का अनुभव। प्रोजेक्ट को पहले स्केच से प्रेस प्रूफ़ की मंज़ूरी तक ले जाती हूँ, हिंदी और अंग्रेज़ी दोनों में डिज़ाइन करती हूँ और नए डिज़ाइनरों को गाइड करती हूँ।",
+    "experiences": [
+        {
+            "company": "कोलाबा ब्रांड स्टूडियो",
+            "position": "सीनियर ग्राफ़िक डिज़ाइनर",
+            "location": "मुंबई, महाराष्ट्र",
+            "companyUrl": "",
+            "startDate": "2022-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "स्वतंत्र ब्रांड स्टूडियो, 12 लोग, फ़ूड, रिटेल और फ़ाइनेंस क्लाइंट।",
+            "achievements": [
+                {
+                    "text": "एक सहकारी बैंक की नई पहचान को लीड किया: लोगो, हिंदी और अंग्रेज़ी फ़ॉन्ट, रंग और 14 शाखाओं के साइनबोर्ड"
+                },
+                {
+                    "text": "डाई लाइन और FSSAI नियमों के हिसाब से 22 स्नैक पैक डिज़ाइन किए, बिना दोबारा प्रिंट के मंज़ूर हुए"
+                },
+                {
+                    "text": "क्लाइंट को कॉन्सेप्ट सीधे प्रेज़ेंट करती हूँ, ज़्यादातर प्रोजेक्ट दो राउंड के बदलाव में पूरे होते हैं"
+                },
+                {
+                    "text": "दो जूनियर डिज़ाइनरों को हर हफ़्ते के क्रिटीक और फ़ाइल रिव्यू से गाइड करती हूँ"
+                }
+            ]
+        },
+        {
+            "company": "अन्नपूर्णा मसाले प्रा. लि.",
+            "position": "ग्राफ़िक डिज़ाइनर, मार्केटिंग",
+            "location": "पुणे, महाराष्ट्र",
+            "companyUrl": "",
+            "startDate": "2019-03",
+            "endDate": "2022-03",
+            "isPresent": false,
+            "description": "देश भर में बिकने वाले मसाला ब्रांड की तीन लोगों की इन हाउस डिज़ाइन टीम।",
+            "achievements": [
+                {
+                    "text": "दिवाली और त्योहारों के कैंपेन को अख़बार, दुकानों के पोस्टर और सोशल मीडिया के लिए ढाला"
+                },
+                {
+                    "text": "ब्रांड गाइडलाइन को डीलरों के लिए 30 पेज की आसान गाइड में बदला"
+                },
+                {
+                    "text": "Figma टेम्पलेट बनाए जिन्हें मार्केटिंग टीम डिज़ाइन की मदद के बिना इस्तेमाल करती है"
+                }
+            ]
+        },
+        {
+            "company": "सह्याद्रि प्रिंटर्स",
+            "position": "जूनियर ग्राफ़िक डिज़ाइनर",
+            "location": "पुणे, महाराष्ट्र",
+            "companyUrl": "",
+            "startDate": "2017-07",
+            "endDate": "2019-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "हर महीने लगभग 40 जॉब की प्रिंट फ़ाइलें ब्लीड और कलर प्रोफ़ाइल के साथ तैयार कीं"
+                },
+                {
+                    "text": "लोकल दुकानों और रेस्टोरेंट के मेन्यू, ब्रोशर और साइनबोर्ड डिज़ाइन किए"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "सर जे. जे. इंस्टिट्यूट ऑफ़ अप्लाइड आर्ट",
+            "degree": "BFA, अप्लाइड आर्ट",
+            "fieldOfStudy": "",
+            "location": "मुंबई, महाराष्ट्र",
+            "startDate": "2013-07",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "डिज़ाइन",
+            "description": "ब्रांड आइडेंटिटी, टाइपोग्राफ़ी, लेआउट, पैकेजिंग, पब्लिकेशन"
+        },
+        {
+            "title": "दो लिपियाँ",
+            "description": "हिंदी और अंग्रेज़ी लेआउट, देवनागरी टाइपोग्राफ़ी"
+        },
+        {
+            "title": "सॉफ़्टवेयर",
+            "description": "Adobe Illustrator, InDesign, Photoshop, Figma, CorelDRAW"
+        },
+        {
+            "title": "प्री प्रेस",
+            "description": "कलर मैनेजमेंट, Pantone, डाई लाइन, प्रेस प्रूफ़"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "portfolio",
+            "url": "https://example.com/ananya-deshpande"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "अन्नपूर्णा मसाले पैकेजिंग रीडिज़ाइन",
+            "description": "18 मसालों के नए पाउच और डिब्बे, साथ में दुकानों का सामान। डिज़ाइन और प्रिंट की निगरानी।",
+            "links": [
+                {
+                    "url": "https://example.com/ananya-deshpande/annapurna",
+                    "label": "पोर्टफ़ोलियो"
+                }
+            ],
+            "startDate": "2021-01",
+            "endDate": "2021-10",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "उजाला फ़ाउंडेशन सालाना रिपोर्ट",
+            "description": "हिंदी और अंग्रेज़ी में 48 पेज की रिपोर्ट, प्रिंट और वेब के लिए, स्वयंसेवा के रूप में।",
+            "links": [
+                {
+                    "url": "https://example.com/ananya-deshpande/ujala",
+                    "label": "पोर्टफ़ोलियो"
+                }
+            ],
+            "startDate": "2024-03",
+            "endDate": "2024-06",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "मराठी",
+            "proficiency": "Native"
+        },
+        {
+            "name": "हिंदी",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "अंग्रेज़ी",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Adobe Certified Professional in Graphic Design and Illustration Using Adobe Illustrator",
+            "issuer": "Adobe",
+            "date": "2021-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "projects": 2,
+        "education": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "volunteering": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "projects": "चुने हुए काम"
+    },
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

@@ -1,0 +1,189 @@
+{
+    "version": "v1",
+    "firstName": "स्नेहा",
+    "lastName": "कुलकर्णी",
+    "email": "sneha.kulkarni@example.com",
+    "phone": "+91 90000 78123",
+    "position": "सीनियर डेटा एनालिस्ट",
+    "location": "पुणे, महाराष्ट्र",
+    "summary": "पाँच साल का अनुभव रखने वाली डेटा एनालिस्ट, रिटेल और फ़िनटेक कंपनियों में काम किया है। रोज़ SQL, Python और Power BI पर काम करती हूँ, ऐसे डैशबोर्ड बनाती हूँ जिन्हें टीमें सच में खोलती हैं, और बिज़नेस के अधूरे सवालों को ऐसे नंबर में बदलना पसंद है जिन पर फ़ैसला लिया जा सके।",
+    "experiences": [
+        {
+            "company": "सह्याद्रि रिटेल प्राइवेट लिमिटेड",
+            "position": "सीनियर डेटा एनालिस्ट",
+            "location": "पुणे, महाराष्ट्र",
+            "companyUrl": "",
+            "startDate": "2023-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "सेल्स और इन्वेंटरी के साप्ताहिक Power BI डैशबोर्ड की ज़िम्मेदारी, जिन्हें 70 स्टोर मैनेजर और मर्चेंडाइज़िंग टीम इस्तेमाल करती है"
+                },
+                {
+                    "text": "त्योहारी सेल की रिपोर्ट SQL और Python में दोबारा बनाई, दो दिन का मैनुअल काम अब हर सोमवार सुबह अपने आप तैयार होता है"
+                },
+                {
+                    "text": "लगभग 6 लाख ऑर्डर के रिटर्न कारणों का विश्लेषण किया और दो कपड़ों की कैटेगरी में साइज़ चार्ट की गलती पकड़ी, जिसके बाद रिटर्न कम हुए"
+                },
+                {
+                    "text": "प्रोडक्ट टीम के साथ चेकआउट पेज के A/B टेस्ट डिज़ाइन किए और नतीजे पढ़े, और टीम के लिए टेस्टिंग गाइड लिखी"
+                }
+            ]
+        },
+        {
+            "company": "दक्कन पे सॉल्यूशंस प्राइवेट लिमिटेड",
+            "position": "डेटा एनालिस्ट",
+            "location": "हैदराबाद, तेलंगाना",
+            "companyUrl": "",
+            "startDate": "2021-07",
+            "endDate": "2023-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "UPI यूज़र्स के लिए कोहोर्ट और रिटेंशन रिपोर्ट बनाई, जिससे मार्केटिंग टीम ने पहले महीने में छोड़ने वाले यूज़र्स पर ध्यान दिया"
+                },
+                {
+                    "text": "BigQuery में 40 मुख्य टेबल की डॉक्युमेंटेशन लिखी, जिससे डेटा टीम से बार-बार पूछे जाने वाले सवाल कम हुए"
+                },
+                {
+                    "text": "Tableau में मर्चेंट ट्रांज़ैक्शन डैशबोर्ड बनाया, जो सेल्स टीम रोज़ सुबह की मीटिंग में देखती है"
+                }
+            ]
+        },
+        {
+            "company": "मावल एनालिटिक्स सर्विसेज़",
+            "position": "जूनियर MIS एनालिस्ट",
+            "location": "पुणे, महाराष्ट्र",
+            "companyUrl": "",
+            "startDate": "2020-08",
+            "endDate": "2021-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "एक बीमा क्लाइंट के लिए Excel और SQL Server में रोज़ और हर हफ़्ते की MIS रिपोर्ट तैयार की"
+                },
+                {
+                    "text": "कॉपी-पेस्ट वाले चरणों को Power Query से बदला, जिससे हर हफ़्ते लगभग चार घंटे बचे"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "सावित्रीबाई फुले पुणे विश्वविद्यालय",
+            "degree": "M.Sc. स्टैटिस्टिक्स",
+            "fieldOfStudy": "",
+            "location": "पुणे, महाराष्ट्र",
+            "startDate": "2018-07",
+            "endDate": "2020-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "डेटा",
+            "description": "SQL (PostgreSQL, BigQuery, SQL Server), डेटा मॉडलिंग, ETL"
+        },
+        {
+            "title": "एनालिसिस",
+            "description": "Python (pandas), A/B टेस्टिंग, कोहोर्ट और फ़नल एनालिसिस, फ़ोरकास्टिंग"
+        },
+        {
+            "title": "BI और रिपोर्टिंग",
+            "description": "Power BI, Tableau, Excel (पिवट टेबल, Power Query)"
+        },
+        {
+            "title": "काम करने का तरीका",
+            "description": "रिक्वायरमेंट समझना, स्टेकहोल्डर से बातचीत, डॉक्युमेंटेशन"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        },
+        {
+            "platform": "github",
+            "url": "https://github.com/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "पुणे बारिश और ट्रैफ़िक",
+            "description": "सरकारी ओपन डेटा से बना Tableau Public डैशबोर्ड, जो दिखाता है कि मानसून में किन इलाकों में ट्रैफ़िक सबसे ज़्यादा धीमा होता है। SQL और एक छोटा लेख साथ में।",
+            "links": [
+                {
+                    "url": "https://public.tableau.com/app/profile/example",
+                    "label": "Tableau Public"
+                }
+            ],
+            "startDate": "2024-06",
+            "endDate": "2024-09",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "मराठी",
+            "proficiency": "Native"
+        },
+        {
+            "name": "हिंदी",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "अंग्रेज़ी",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Microsoft Certified: Power BI Data Analyst Associate",
+            "issuer": "Microsoft",
+            "date": "2022-08",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Tableau Certified Data Analyst",
+            "issuer": "Tableau",
+            "date": "2024-02",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "projects": 2,
+        "education": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "volunteering": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

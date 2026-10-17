@@ -71,6 +71,7 @@
         "home": "Ana Sayfa",
         "builder": "Oluşturucu",
         "templates": "Şablonlar",
+        "guides": "Rehberler",
         "qa": "Soru & Cevap",
         "help": "Yardım",
         "resumes": "Özgeçmişleriniz",
@@ -118,6 +119,24 @@
             "stat1Label": "Oluşturulan özgeçmişler",
             "stat2Label": "İndirilen PDF'ler",
             "stat3Label": "Ömür boyu maliyet"
+        },
+        "noSignup": {
+            "title": "Kayıt gerektirmeyen ücretsiz özgeçmiş oluşturucu",
+            "description": "Burada \"kayıtsız\" pratikte ne anlama geliyor.",
+            "items": {
+                "noEmail": {
+                    "title": "İndirmeden önce e-posta yok",
+                    "description": "Editörü açın ve yazmaya başlayın. PDF ile aranızda e-posta alanı, şifre ya da doğrulama adımı yok."
+                },
+                "localSave": {
+                    "title": "Tarayıcınızda kaydedilir",
+                    "description": "Özgeçmişiniz siz yazdıkça bu tarayıcıda kaydedilir. Başka bir cihaza taşımak için dosya olarak dışa aktarıp orada içe aktarın."
+                },
+                "optionalAccount": {
+                    "title": "Hesap yalnızca isterseniz",
+                    "description": "Hesap sadece en fazla 3 özgeçmiş için bulut senkronizasyonu veya bir ajan için API erişimi içindir. Sınırsız PDF indirme hesapsız çalışır."
+                }
+            }
         },
         "sampleResume": {
             "alt": "Örnek özgeçmiş önizlemesi",
@@ -1008,10 +1027,13 @@
         },
         "categories": {
             "technology": "Teknoloji",
+            "engineering": "Mühendislik",
             "healthcare": "Sağlık",
             "finance": "Finans",
             "education": "Eğitim",
             "business": "İş",
+            "creative": "Tasarım ve yaratıcılık",
+            "service": "Müşteri hizmetleri ve perakende",
             "students": "Öğrenciler"
         },
         "layouts": {
@@ -1030,6 +1052,22 @@
             "updated": "Güncellendi: {date}",
             "previewAlt": "{layout} düzeninde {profession} örnek özgeçmişi",
             "resumeName": "{profession} Özgeçmişi"
+        }
+    },
+    "guides": {
+        "meta": {
+            "title": "Özgeçmiş Yazma Rehberleri",
+            "description": "Okunan bir özgeçmiş için ücretsiz rehberler: ATS uyumlu biçim, Alman tipi CV (Lebenslauf) ve Mısır ile Körfez ülkelerindeki işler için CV."
+        },
+        "index": {
+            "title": "Özgeçmiş yazma rehberleri",
+            "subtitle": "Özgeçmişinizi yazmak için pratik rehberler: aday takip sistemlerini aşmaktan belirli bir ülkenin CV alışkanlıklarına kadar."
+        },
+        "detail": {
+            "templates": "Bu rehberle ilgili şablonlar",
+            "related": "Diğer rehberler",
+            "ctaTitle": "Şimdi kendi özgeçmişinizi yazın",
+            "ctaText": "Ücretsiz, hesap gerekmez. Özgeçmişiniz tarayıcınızda kalır."
         }
     }
 }

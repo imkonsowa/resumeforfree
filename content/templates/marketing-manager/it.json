@@ -1,0 +1,177 @@
+{
+    "version": "v1",
+    "firstName": "Chiara",
+    "lastName": "Ferri",
+    "email": "chiara.ferri@example.com",
+    "phone": "+39 347 218 6604",
+    "position": "Senior Marketing Manager",
+    "location": "Milano",
+    "summary": "Marketing manager con dieci anni tra beni di largo consumo e software B2B. Decido mix di canali e budget, costruisco piccoli team che seguono le campagne dall'inizio alla fine e presento ogni trimestre alla direzione il contributo del marketing al fatturato.",
+    "experiences": [
+        {
+            "company": "Officina del Grano S.r.l.",
+            "position": "Senior Marketing Manager",
+            "location": "Milano",
+            "companyUrl": "",
+            "startDate": "2021-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Produttore di pasta fresca venduta in GDO e online.",
+            "achievements": [
+                {
+                    "text": "Gestisco piano marketing annuale e budget di 1,8 milioni di euro tra social ads, SEM, CRM, stampa e trade marketing"
+                },
+                {
+                    "text": "Spostato un terzo del budget stampa su social ads e CRM; fatturato online cresciuto del 32% in due anni a budget invariato"
+                },
+                {
+                    "text": "Lanciato con CRM e servizio clienti un programma fedeltà che ha raggiunto 110.000 iscritti nel primo anno"
+                },
+                {
+                    "text": "Costruito un team di cinque persone tra performance, contenuti, CRM e grafica"
+                }
+            ]
+        },
+        {
+            "company": "Navigli Software S.p.A.",
+            "position": "Marketing Manager, Lead Generation",
+            "location": "Milano",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2021-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Lead generation della soluzione per PMI con budget annuo di 700.000 euro tra SEM, LinkedIn, webinar e fiere"
+                },
+                {
+                    "text": "Avviato con i product manager un ciclo di webinar mensili, diventato la prima fonte di lead accettati dalle vendite"
+                },
+                {
+                    "text": "Definito il lead scoring con la direzione commerciale, lead scartati scesi di circa la metà"
+                }
+            ]
+        },
+        {
+            "company": "Studio Brera Comunicazione S.r.l.",
+            "position": "Digital Marketing Specialist",
+            "location": "Bergamo",
+            "companyUrl": "",
+            "startDate": "2015-01",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Pianificato e gestito campagne Google Ads e Facebook per otto clienti locali"
+                },
+                {
+                    "text": "Impostato tracciamento delle conversioni e report mensili con costo per lead per canale"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Università Cattolica del Sacro Cuore",
+            "degree": "Laurea magistrale in Marketing",
+            "fieldOfStudy": "",
+            "location": "Milano",
+            "startDate": "2012-09",
+            "endDate": "2014-10",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Canali",
+            "description": "Social ads, SEM, email marketing, SEO, trade marketing"
+        },
+        {
+            "title": "Strategia",
+            "description": "Go-to-market, posizionamento, budget, fidelizzazione"
+        },
+        {
+            "title": "Strumenti",
+            "description": "HubSpot, Salesforce, Google Ads, Meta Business Suite, Semrush"
+        },
+        {
+            "title": "Analisi",
+            "description": "GA4, Looker Studio, test A/B, attribuzione, Excel"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Italiano",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Inglese",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Francese",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Google Ads Search Certification",
+            "issuer": "Google",
+            "date": "2025-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Google Analytics Certification",
+            "issuer": "Google",
+            "date": "2024-09",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Inbound Marketing Certification",
+            "issuer": "HubSpot Academy",
+            "date": "2023-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "projects": 3,
+        "volunteering": 4,
+        "skills": 5,
+        "certificates": 6,
+        "languages": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

@@ -71,6 +71,7 @@
         "home": "Home",
         "builder": "Builder",
         "templates": "Templates",
+        "guides": "Guides",
         "qa": "Q&A",
         "help": "Help",
         "resumes": "Your Resumes",
@@ -118,6 +119,24 @@
             "stat1Label": "Resumes built",
             "stat2Label": "PDFs downloaded",
             "stat3Label": "Lifetime cost"
+        },
+        "noSignup": {
+            "title": "A free resume builder with no sign-up",
+            "description": "What \"no sign-up\" means here, in practice.",
+            "items": {
+                "noEmail": {
+                    "title": "No email before the download",
+                    "description": "Open the builder and start typing. There is no email field, password or verification step between you and the PDF."
+                },
+                "localSave": {
+                    "title": "Saved in your browser",
+                    "description": "Your resume is saved in this browser as you type. To move it to another device, export it as a file and import it there."
+                },
+                "optionalAccount": {
+                    "title": "An account only if you want one",
+                    "description": "Sign up only for cloud sync of up to 3 resumes or API access for an agent. Unlimited PDF downloads work without it."
+                }
+            }
         },
         "sampleResume": {
             "alt": "Sample resume preview",
@@ -1008,10 +1027,13 @@
         },
         "categories": {
             "technology": "Technology",
+            "engineering": "Engineering",
             "healthcare": "Healthcare",
             "finance": "Finance",
             "education": "Education",
             "business": "Business",
+            "creative": "Creative",
+            "service": "Customer service and retail",
             "students": "Students"
         },
         "layouts": {
@@ -1030,6 +1052,22 @@
             "updated": "Updated {date}",
             "previewAlt": "{profession} resume sample in the {layout} layout",
             "resumeName": "{profession} Resume"
+        }
+    },
+    "guides": {
+        "meta": {
+            "title": "Resume Writing Guides",
+            "description": "Free guides on writing a resume that gets read: ATS-friendly formatting, German CVs (Lebenslauf) and CVs for jobs in Egypt and the Gulf."
+        },
+        "index": {
+            "title": "Resume writing guides",
+            "subtitle": "Practical guides for writing your resume, from getting past applicant tracking systems to the CV conventions of a specific country."
+        },
+        "detail": {
+            "templates": "Templates for this guide",
+            "related": "More guides",
+            "ctaTitle": "Write yours now",
+            "ctaText": "Free, no account needed. Your resume stays in your browser."
         }
     }
 }

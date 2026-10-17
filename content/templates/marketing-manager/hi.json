@@ -1,0 +1,177 @@
+{
+    "version": "v1",
+    "firstName": "अनन्या",
+    "lastName": "देशपांडे",
+    "email": "ananya.deshpande@example.com",
+    "phone": "+91 98220 41736",
+    "position": "सीनियर मार्केटिंग मैनेजर",
+    "location": "पुणे, महाराष्ट्र",
+    "summary": "D2C और B2B सॉफ़्टवेयर में दस साल का अनुभव रखने वाली मार्केटिंग लीडर। चैनल मिक्स और बजट तय करती हूँ, कैंपेन शुरू से अंत तक चलाने वाली छोटी टीमें बनाती हूँ, और हर तिमाही मैनेजमेंट को बिक्री में मार्केटिंग का योगदान बताती हूँ। नोटिस पीरियड: 60 दिन।",
+    "experiences": [
+        {
+            "company": "सह्याद्रि होम एसेंशियल्स",
+            "position": "सीनियर मार्केटिंग मैनेजर",
+            "location": "पुणे",
+            "companyUrl": "",
+            "startDate": "2021-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "किचन और होम प्रोडक्ट का D2C ब्रांड, वेबसाइट, Amazon और Flipkart पर बिक्री।",
+            "achievements": [
+                {
+                    "text": "सालाना मार्केटिंग प्लान और ₹9 करोड़ का बजट संभालती हूँ: Meta, Google, YouTube, मार्केटप्लेस विज्ञापन, CRM और इन्फ़्लुएंसर"
+                },
+                {
+                    "text": "प्रिंट और आउटडोर बजट का एक तिहाई डिजिटल और CRM में लगाया; कुल ख़र्च बढ़ाए बिना दो साल में ऑनलाइन बिक्री 40% बढ़ी"
+                },
+                {
+                    "text": "दिवाली सेल के लिए हिंदी, मराठी और तमिल क्रिएटिव के साथ अलग-अलग भाषा की कैंपेन चलाईं"
+                },
+                {
+                    "text": "परफ़ॉर्मेंस, कंटेंट, CRM और डिज़ाइन की पाँच लोगों की टीम बनाई"
+                }
+            ]
+        },
+        {
+            "company": "डेक्कन क्लाउडवर्क्स सॉफ़्टवेयर",
+            "position": "मार्केटिंग मैनेजर, लीड जनरेशन",
+            "location": "पुणे",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2021-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "SME प्रोडक्ट की लीड जनरेशन, ₹1.8 करोड़ सालाना बजट सर्च, LinkedIn, वेबिनार और इवेंट में"
+                },
+                {
+                    "text": "प्रोडक्ट टीम के साथ मासिक वेबिनार सीरीज़ शुरू की, जो सेल्स द्वारा स्वीकार की गई लीड का सबसे बड़ा स्रोत बनी"
+                },
+                {
+                    "text": "सेल्स लीडरशिप के साथ लीड स्कोरिंग तय की, लौटाई जाने वाली कमज़ोर लीड लगभग आधी रह गईं"
+                }
+            ]
+        },
+        {
+            "company": "कोथरूड डिजिटल मीडिया",
+            "position": "डिजिटल मार्केटिंग एग्ज़ीक्यूटिव",
+            "location": "मुंबई",
+            "companyUrl": "",
+            "startDate": "2015-01",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "आठ स्थानीय क्लाइंट के लिए Google Ads और Facebook कैंपेन प्लान किए और चलाए"
+                },
+                {
+                    "text": "कन्वर्ज़न ट्रैकिंग और चैनल के हिसाब से कॉस्ट पर लीड की मासिक रिपोर्ट शुरू की"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "सिम्बायोसिस इंस्टिट्यूट ऑफ़ बिज़नेस मैनेजमेंट",
+            "degree": "MBA, मार्केटिंग",
+            "fieldOfStudy": "",
+            "location": "पुणे",
+            "startDate": "2012-07",
+            "endDate": "2014-04",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "चैनल",
+            "description": "Meta Ads, Google Ads, YouTube, WhatsApp, ईमेल, मार्केटप्लेस"
+        },
+        {
+            "title": "स्ट्रैटेजी",
+            "description": "गो टू मार्केट, पोज़िशनिंग, फ़ेस्टिव प्लानिंग, रिटेंशन"
+        },
+        {
+            "title": "टूल",
+            "description": "HubSpot, MoEngage, Google Ads, Meta Ads Manager, Semrush"
+        },
+        {
+            "title": "एनालिटिक्स",
+            "description": "GA4, Looker Studio, A/B टेस्टिंग, एट्रिब्यूशन, Excel"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "मराठी",
+            "proficiency": "Native"
+        },
+        {
+            "name": "हिंदी",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "अंग्रेज़ी",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Google Ads Search Certification",
+            "issuer": "Google",
+            "date": "2025-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Google Analytics Certification",
+            "issuer": "Google",
+            "date": "2024-09",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Inbound Marketing Certification",
+            "issuer": "HubSpot Academy",
+            "date": "2023-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "projects": 3,
+        "volunteering": 4,
+        "skills": 5,
+        "certificates": 6,
+        "languages": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

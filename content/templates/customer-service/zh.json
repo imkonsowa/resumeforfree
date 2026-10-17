@@ -1,0 +1,173 @@
+{
+    "version": "v1",
+    "firstName": "陈思雨",
+    "lastName": "",
+    "email": "chensiyu@example.com",
+    "phone": "+86 138 0817 2246",
+    "position": "客服专员（售后方向）",
+    "location": "成都",
+    "summary": "六年客服工作经验，先后做过运营商宽带业务的电话客服和电商平台的售后客服。大部分问题能在首次接待时解决，面对情绪激动的客户也能保持耐心。普通话二级甲等，带教过十余名新人。",
+    "experiences": [
+        {
+            "company": "蓉城优选电子商务有限公司",
+            "position": "售后客服专员",
+            "location": "成都",
+            "companyUrl": "",
+            "startDate": "2023-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "负责天猫和抖音店铺的售后咨询，主营家居日用品。",
+            "achievements": [
+                {
+                    "text": "每天处理约 120 个退换货、物流异常和质量投诉会话，平台介入工单按时处理率百分之百"
+                },
+                {
+                    "text": "店铺服务满意度连续五个月保持在类目平均水平以上"
+                },
+                {
+                    "text": "整理尺码和安装类常见问题的快捷回复，并反馈给运营，四个商品详情页补充了说明"
+                },
+                {
+                    "text": "“双十一”和“618”大促期间担任售后小组临时组长，协调六名同事排班"
+                }
+            ]
+        },
+        {
+            "company": "西南融通呼叫中心服务有限公司",
+            "position": "电话客服代表",
+            "location": "成都",
+            "companyUrl": "",
+            "startDate": "2020-07",
+            "endDate": "2023-02",
+            "isPresent": false,
+            "description": "某运营商家庭宽带业务项目，呼入为主。",
+            "achievements": [
+                {
+                    "text": "每班接听七十到八十通来电，处理话费、故障报修和套餐变更，一次解决率约百分之八十"
+                },
+                {
+                    "text": "连续六个季度月度质检平均分在九十五分以上"
+                },
+                {
+                    "text": "带教十一名新员工完成上线前两周的跟听和陪练"
+                }
+            ]
+        },
+        {
+            "company": "锦里生活超市",
+            "position": "收银员",
+            "location": "成都",
+            "companyUrl": "",
+            "startDate": "2018-07",
+            "endDate": "2020-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "每班接待一百五十位以上顾客，在服务台办理退换货"
+                },
+                {
+                    "text": "两次因顾客表扬被评为月度优秀员工"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "四川锦城商务职业学院",
+            "degree": "大专",
+            "fieldOfStudy": "电子商务",
+            "location": "成都",
+            "startDate": "2015-09",
+            "endDate": "2018-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "社区志愿服务站",
+            "organizationUrl": "",
+            "position": "志愿者",
+            "location": "成都",
+            "startDate": "2021-05",
+            "endDate": "",
+            "isPresent": true,
+            "description": "每月一次协助老年居民使用手机挂号和缴费。",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "渠道",
+            "description": "电话呼入、在线客服、平台工单"
+        },
+        {
+            "title": "系统",
+            "description": "千牛工作台、抖店飞鸽、Udesk、聚水潭 ERP、Office"
+        },
+        {
+            "title": "其他",
+            "description": "打字 90 字/分钟、投诉处理、挽留、倒班"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "普通话",
+            "proficiency": "Native"
+        },
+        {
+            "name": "四川话",
+            "proficiency": "Native"
+        },
+        {
+            "name": "英语",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "普通话水平测试二级甲等",
+            "issuer": "国家语言文字工作委员会",
+            "date": "2017-12",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "高等学校英语应用能力考试 A 级",
+            "issuer": "高等学校英语应用能力考试委员会",
+            "date": "2017-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "education": 3,
+        "languages": 4,
+        "certificates": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

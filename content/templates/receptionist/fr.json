@@ -1,0 +1,161 @@
+{
+    "version": "v1",
+    "firstName": "Léa",
+    "lastName": "Garnier",
+    "email": "lea.garnier@example.com",
+    "phone": "+33 6 41 28 73 05",
+    "position": "Coordinatrice d'accueil et secrétaire médicale",
+    "location": "Nantes",
+    "summary": "Coordinatrice d'accueil avec huit ans d'expérience en centre médical, en hôtellerie et en cabinet d'avocats. J'organise l'accueil d'un centre de huit médecins, je vérifie carte Vitale et mutuelle avant les consultations, je forme les nouvelles recrues et je garde une salle d'attente sereine les jours de forte affluence.",
+    "experiences": [
+        {
+            "company": "Centre médical Erdre et Loire",
+            "position": "Coordinatrice d'accueil",
+            "location": "Nantes",
+            "companyUrl": "",
+            "startDate": "2021-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Centre de santé de huit médecins généralistes, environ 160 patients et 250 appels par jour.",
+            "achievements": [
+                {
+                    "text": "Encadrement d'une équipe de quatre agents d'accueil : plannings, relais aux heures de pointe et gestion des situations tendues"
+                },
+                {
+                    "text": "Appel de chaque nouveau patient deux jours avant la consultation pour vérifier ses documents, beaucoup moins de dossiers incomplets au comptoir"
+                },
+                {
+                    "text": "Gestion des agendas de huit médecins sur Doctolib, y compris les rappels et les créneaux d'urgence du jour"
+                },
+                {
+                    "text": "Rédaction du guide d'accueil remis à chaque nouvelle recrue"
+                }
+            ]
+        },
+        {
+            "company": "Hôtel des Quais Nantais",
+            "position": "Réceptionniste",
+            "location": "Nantes",
+            "companyUrl": "",
+            "startDate": "2018-05",
+            "endDate": "2021-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Jusqu'à 150 arrivées et départs par service dans un hôtel de 180 chambres sous Opera"
+                },
+                {
+                    "text": "Changements de chambre, questions de facturation et réclamations traités en français et en anglais"
+                },
+                {
+                    "text": "Clôture de la caisse du service et encaissement des cautions sans écart non justifié"
+                }
+            ]
+        },
+        {
+            "company": "Morel & Guérin Avocats",
+            "position": "Standardiste et hôtesse d'accueil (temps partiel)",
+            "location": "Angers",
+            "companyUrl": "",
+            "startDate": "2016-09",
+            "endDate": "2018-04",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Accueil des clients et filtrage des appels pour huit avocats, avec des messages fiables les jours d'audience"
+                },
+                {
+                    "text": "Enregistrement du courrier et des plis remis par coursier, suivi des documents à signer"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Lycée Jules Verdier",
+            "degree": "BTS Support à l'action managériale (SAM)",
+            "fieldOfStudy": "",
+            "location": "Angers",
+            "startDate": "2014-09",
+            "endDate": "2016-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Accueil",
+            "description": "Accueil physique et téléphonique, enregistrement des patients, gestion des conflits, caisse"
+        },
+        {
+            "title": "Agenda et administratif",
+            "description": "Prise de rendez-vous, carte Vitale et mutuelle, secret médical, classement"
+        },
+        {
+            "title": "Logiciels",
+            "description": "Doctolib, Opera, Pack Office, Outlook, standard 3CX"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Français",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Anglais (C1)",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Espagnol (B1)",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Titre professionnel Secrétaire assistant médico-social",
+            "issuer": "Ministère du Travail",
+            "date": "2022-06",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Sauveteur secouriste du travail (SST)",
+            "issuer": "INRS",
+            "date": "2025-02",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "languages": 3,
+        "education": 4,
+        "certificates": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

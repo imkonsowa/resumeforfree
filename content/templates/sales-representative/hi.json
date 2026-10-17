@@ -1,0 +1,173 @@
+{
+    "version": "v1",
+    "firstName": "नेहा",
+    "lastName": "कुलकर्णी",
+    "email": "neha.kulkarni@example.com",
+    "phone": "+91 90000 78901",
+    "position": "सीनियर सेल्स एग्ज़ीक्यूटिव (B2B)",
+    "location": "पुणे, महाराष्ट्र",
+    "summary": "फ़ील्ड सेल्स, इनसाइड सेल्स और रिटेल में ग्यारह साल का अनुभव। पुणे, चाकण और रांजणगाँव के 150 इंडस्ट्रियल ग्राहकों का पोर्टफ़ोलियो सँभालती हूँ, पिछले चार साल हर साल टारगेट से आगे रही हूँ और सबसे अच्छा सौदा ग्राहक की पैकिंग लाइन के पास खड़े होकर करती हूँ।",
+    "experiences": [
+        {
+            "company": "सह्याद्रि पैकेजिंग प्रा. लि.",
+            "position": "सीनियर टेरिटरी सेल्स एग्ज़ीक्यूटिव",
+            "location": "पुणे, महाराष्ट्र",
+            "companyUrl": "",
+            "startDate": "2020-06",
+            "endDate": "",
+            "isPresent": true,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "ऑटो कंपोनेंट और फ़ूड प्रोसेसिंग के 150 ग्राहक, सालाना टारगेट ₹6.5 करोड़"
+                },
+                {
+                    "text": "FY 2024-25 में टारगेट का 112% और FY 2025-26 में 117% हासिल, वेस्ट ज़ोन के 16 एग्ज़ीक्यूटिव में दूसरा स्थान"
+                },
+                {
+                    "text": "FY 2025-26 में 25 नए अकाउंट खोले, पहले साल का औसत ऑर्डर ₹18 लाख"
+                },
+                {
+                    "text": "बंद हो चुके ₹1.2 करोड़ सालाना के ग्राहक को उनकी पैकिंग लाइन पर ट्रायल करके और वेस्टेज की समस्या सुलझाकर वापस जोड़ा"
+                },
+                {
+                    "text": "Salesforce में विज़िट रिपोर्ट और पाइपलाइन, छह तिमाहियों से फ़ोरकास्ट 6% के भीतर"
+                }
+            ]
+        },
+        {
+            "company": "डेक्कन ऑफ़िस सॉल्यूशंस",
+            "position": "इनसाइड सेल्स एग्ज़ीक्यूटिव",
+            "location": "पुणे, महाराष्ट्र",
+            "companyUrl": "",
+            "startDate": "2017-07",
+            "endDate": "2020-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "छोटे और मझोले कारोबारों को प्रिंटर, कॉपियर और AMC बेचने के लिए रोज़ 60 से 80 कॉल"
+                },
+                {
+                    "text": "फ़ील्ड टीम के लिए हर महीने औसतन 14 क्वालिफ़ाइड मीटिंग तय कीं"
+                },
+                {
+                    "text": "कॉन्ट्रैक्ट ख़त्म होने से तीन महीने पहले कॉल करके AMC रिन्यूअल 79% से 88% तक पहुँचाया"
+                }
+            ]
+        },
+        {
+            "company": "मोबाइल वर्ल्ड रिटेल",
+            "position": "सेल्स एसोसिएट",
+            "location": "पुणे, महाराष्ट्र",
+            "companyUrl": "",
+            "startDate": "2015-06",
+            "endDate": "2017-06",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "फ़ोन, एक्सेसरी और एक्सटेंडेड वारंटी की बिक्री, 2016 में स्टोर में वारंटी बिक्री में पहला स्थान"
+                },
+                {
+                    "text": "चार नए कर्मचारियों को बिलिंग और रिटर्न की प्रक्रिया सिखाई"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "सावित्रीबाई फुले पुणे विश्वविद्यालय",
+            "degree": "BBA (मार्केटिंग)",
+            "fieldOfStudy": "",
+            "location": "पुणे, महाराष्ट्र",
+            "startDate": "2012-07",
+            "endDate": "2015-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "सेल्स",
+            "description": "टेरिटरी प्लानिंग, नए ग्राहक खोजना, ज़रूरत समझना, नेगोशिएशन, की अकाउंट"
+        },
+        {
+            "title": "टूल्स",
+            "description": "Salesforce, Zoho CRM, Tally, Excel"
+        },
+        {
+            "title": "प्रोडक्ट",
+            "description": "कोरुगेटेड बॉक्स, फ़्लेक्सिबल पैकेजिंग, लेबल"
+        },
+        {
+            "title": "अन्य",
+            "description": "ड्राइविंग लाइसेंस, अपना दोपहिया वाहन, यात्रा के लिए तैयार"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "मराठी",
+            "proficiency": "Native"
+        },
+        {
+            "name": "हिंदी",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "अंग्रेज़ी",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "सेल्स और नेगोशिएशन वर्कशॉप",
+            "issuer": "पुणे सेल्स अकादमी",
+            "date": "2021-08",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Salesforce Certified Associate",
+            "issuer": "Salesforce",
+            "date": "2023-01",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "volunteering": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

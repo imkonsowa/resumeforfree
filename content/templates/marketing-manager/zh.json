@@ -1,0 +1,173 @@
+{
+    "version": "v1",
+    "firstName": "陈思雨",
+    "lastName": "",
+    "email": "chen.siyu@example.com",
+    "phone": "+86 138 5712 0486",
+    "position": "高级品牌营销经理",
+    "location": "杭州",
+    "summary": "品牌营销负责人，十年消费品和企业软件经验。决定渠道组合和预算分配，搭建能独立跑完整个项目的小团队，每季度向管理层汇报市场对销售额的贡献。",
+    "experiences": [
+        {
+            "company": "杭州青禾家居用品有限公司",
+            "position": "高级品牌营销经理",
+            "location": "杭州",
+            "companyUrl": "",
+            "startDate": "2021-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "家居用品品牌，主营天猫、京东和抖音店铺，线下 30 家门店。",
+            "achievements": [
+                {
+                    "text": "负责年度营销规划和 3,200 万元预算，覆盖抖音、小红书、天猫站内、私域和门店活动"
+                },
+                {
+                    "text": "把三分之一的线下广告预算转到抖音内容和私域运营，总预算不变，线上销售额两年增长 37%"
+                },
+                {
+                    "text": "搭建企业微信私域体系，第一年沉淀会员 16 万人，复购订单占线上订单的三成左右"
+                },
+                {
+                    "text": "搭建五人团队，覆盖投放、内容、私域和设计"
+                }
+            ]
+        },
+        {
+            "company": "钱塘云科技有限公司",
+            "position": "市场经理（获客方向）",
+            "location": "杭州",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2021-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "负责中小企业产品线的获客，年度预算 600 万元，覆盖搜索广告、行业展会、线上直播和白皮书"
+                },
+                {
+                    "text": "和产品团队一起做月度线上直播课，成为销售认可线索的第一来源"
+                },
+                {
+                    "text": "和销售总监一起定义线索评分规则，被退回的无效线索比例下降约一半"
+                }
+            ]
+        },
+        {
+            "company": "西溪数字营销有限公司",
+            "position": "数字营销专员",
+            "location": "杭州",
+            "companyUrl": "",
+            "startDate": "2015-01",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "为八家本地客户策划和执行百度搜索与微信朋友圈广告"
+                },
+                {
+                    "text": "搭建转化追踪，每月按渠道输出单条线索成本报告"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "浙江工商大学",
+            "degree": "市场营销 本科",
+            "fieldOfStudy": "",
+            "location": "杭州",
+            "startDate": "2010-09",
+            "endDate": "2014-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "渠道",
+            "description": "抖音、小红书、公众号、视频号、天猫、京东"
+        },
+        {
+            "title": "策略",
+            "description": "品牌定位、新品上市、大促规划、会员体系"
+        },
+        {
+            "title": "工具",
+            "description": "巨量引擎、生意参谋、企业微信、有赞、飞书"
+        },
+        {
+            "title": "数据",
+            "description": "神策数据、Excel、对照测试、归因分析"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "中文",
+            "proficiency": "Native"
+        },
+        {
+            "name": "英语",
+            "proficiency": "Proficient"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "巨量引擎营销认证",
+            "issuer": "巨量引擎",
+            "date": "2025-03",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "腾讯广告营销认证",
+            "issuer": "腾讯广告",
+            "date": "2024-08",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Google Analytics Certification",
+            "issuer": "Google",
+            "date": "2023-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "projects": 3,
+        "volunteering": 4,
+        "skills": 5,
+        "certificates": 6,
+        "languages": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

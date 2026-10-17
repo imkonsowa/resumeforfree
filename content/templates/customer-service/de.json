@@ -1,0 +1,187 @@
+{
+    "version": "v1",
+    "firstName": "Julia",
+    "lastName": "Wagner",
+    "email": "julia.wagner@example.com",
+    "phone": "+49 151 2345 6789",
+    "position": "Kundenberaterin im Kundenservice",
+    "location": "Leipzig",
+    "summary": "Kauffrau für Dialogmarketing mit sechs Jahren Erfahrung im Inbound-Service eines Energieversorgers und eines Onlinehändlers. Löst die meisten Anliegen im ersten Kontakt, bleibt freundlich bei verärgerten Anrufern und arbeitet neue Kolleginnen und Kollegen ein.",
+    "experiences": [
+        {
+            "company": "Lindenhof Versand GmbH",
+            "position": "Kundenberaterin, Kundenservice Onlineshop",
+            "location": "Leipzig (hybrid)",
+            "companyUrl": "",
+            "startDate": "2023-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Telefon, Chat und E-Mail für einen Onlinehändler für Haushaltswaren.",
+            "achievements": [
+                {
+                    "text": "Bearbeite pro Tag rund 45 Anrufe und Chats zu Bestellungen, Lieferverzug, Retouren und Gutscheinen"
+                },
+                {
+                    "text": "Im monatlichen Qualitätsmonitoring sechs Quartale in Folge über 95 Prozent erreicht"
+                },
+                {
+                    "text": "Betreue die russischsprachigen Anfragen und habe die wichtigsten Textbausteine übersetzt"
+                },
+                {
+                    "text": "Als Patin elf neue Mitarbeitende in den ersten zwei Wochen begleitet"
+                }
+            ]
+        },
+        {
+            "company": "Muldenland Energie GmbH",
+            "position": "Kundenberaterin, Inbound-Hotline",
+            "location": "Grimma",
+            "companyUrl": "",
+            "startDate": "2020-08",
+            "endDate": "2023-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Pro Schicht 55 bis 65 Anrufe zu Abschlägen, Zählerständen, Umzügen und Tarifwechseln bearbeitet"
+                },
+                {
+                    "text": "Erstlösungsquote von 82 Prozent, über dem Durchschnitt des Teams"
+                },
+                {
+                    "text": "Ratenzahlungen nach den Vorgaben des Forderungsmanagements vereinbart und in SAP dokumentiert"
+                }
+            ]
+        },
+        {
+            "company": "Muldenland Energie GmbH",
+            "position": "Auszubildende Kauffrau für Dialogmarketing",
+            "location": "Grimma",
+            "companyUrl": "",
+            "startDate": "2018-08",
+            "endDate": "2020-07",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Einsätze im Kundenservice, im Forderungsmanagement und im Kundenzentrum vor Ort"
+                },
+                {
+                    "text": "Nach der Ausbildung unbefristet übernommen"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Berufliches Schulzentrum Leipzig",
+            "degree": "Kauffrau für Dialogmarketing (IHK)",
+            "fieldOfStudy": "",
+            "location": "Leipzig",
+            "startDate": "2018-08",
+            "endDate": "2020-07",
+            "isPresent": false,
+            "description": "Duale Ausbildung, verkürzt auf zwei Jahre.",
+            "graduationScore": "Note 1,9",
+            "achievements": []
+        },
+        {
+            "institution": "Gymnasium Grimma",
+            "degree": "Allgemeine Hochschulreife",
+            "fieldOfStudy": "",
+            "location": "Grimma",
+            "startDate": "2010-08",
+            "endDate": "2018-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Nachbarschaftsladen Reudnitz e.V.",
+            "organizationUrl": "",
+            "position": "Ehrenamtliche Helferin an der Ausgabe",
+            "location": "Leipzig",
+            "startDate": "2021-05",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Einmal im Monat Ausgabe und Anmeldung neuer Kundinnen und Kunden.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Kanäle",
+            "description": "Telefon (Inbound), Chat, E-Mail, Kundenzentrum vor Ort"
+        },
+        {
+            "title": "Systeme",
+            "description": "SAP CRM, Zendesk, Genesys Cloud, Shopware, Microsoft 365"
+        },
+        {
+            "title": "Weiteres",
+            "description": "Zehnfingersystem, Deeskalation, Datenschutz nach DSGVO, Reklamationsbearbeitung"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Deutsch",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Englisch (C1)",
+            "proficiency": "Proficient"
+        },
+        {
+            "name": "Russisch",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Seminar Deeskalation im Kundengespräch",
+            "issuer": "IHK zu Leipzig",
+            "date": "2022-04",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Zendesk Support Administrator Training",
+            "issuer": "Zendesk",
+            "date": "2024-02",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "education": 3,
+        "languages": 4,
+        "certificates": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "certificates": "Weiterbildungen"
+    },
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

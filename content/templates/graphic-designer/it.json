@@ -1,0 +1,198 @@
+{
+    "version": "v1",
+    "firstName": "Giulia",
+    "lastName": "Bernardi",
+    "email": "giulia.bernardi@example.com",
+    "phone": "+39 347 218 5590",
+    "position": "Senior Graphic Designer",
+    "location": "Torino",
+    "summary": "Graphic designer con otto anni di esperienza in identità visiva, packaging ed editoria per alimentare, credito e terzo settore. Seguo i progetti dal primo schizzo alla prova di stampa, presento direttamente ai clienti e affianco i junior.",
+    "experiences": [
+        {
+            "company": "Studio Mole Design S.r.l.",
+            "position": "Senior Graphic Designer",
+            "location": "Torino",
+            "companyUrl": "",
+            "startDate": "2022-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Studio di brand design, 14 persone, clienti alimentari, retail e credito.",
+            "achievements": [
+                {
+                    "text": "Guidato la nuova identità di una banca di credito cooperativo: logo, caratteri, colori e insegne per 14 filiali"
+                },
+                {
+                    "text": "Progettato il packaging di 22 sughi pronti sulle fustelle del produttore, approvato in macchina senza ristampe"
+                },
+                {
+                    "text": "Presento le proposte direttamente ai clienti, in genere con al massimo due giri di correzioni"
+                },
+                {
+                    "text": "Affianco due junior con revisioni settimanali di layout e file"
+                }
+            ]
+        },
+        {
+            "company": "Pastificio Valsusa S.p.A.",
+            "position": "Graphic Designer, ufficio marketing",
+            "location": "Pinerolo",
+            "companyUrl": "",
+            "startDate": "2019-03",
+            "endDate": "2022-03",
+            "isPresent": false,
+            "description": "Ufficio grafico interno di tre persone in un pastificio con distribuzione nazionale.",
+            "achievements": [
+                {
+                    "text": "Declinato le campagne stagionali su stampa, materiali punto vendita, newsletter e social"
+                },
+                {
+                    "text": "Riscritto il manuale di immagine coordinata come guida pratica di 30 pagine per i distributori"
+                },
+                {
+                    "text": "Creato modelli Figma che il marketing usa in autonomia per i post settimanali"
+                }
+            ]
+        },
+        {
+            "company": "Tipografia Dora Stampa",
+            "position": "Grafica impaginatrice",
+            "location": "Torino",
+            "companyUrl": "",
+            "startDate": "2017-09",
+            "endDate": "2019-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Preparato i file di stampa per circa 40 lavori al mese, con abbondanze, profili colore e imposizione"
+                },
+                {
+                    "text": "Progettato volantini, menu e insegne per attività commerciali del quartiere"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "ISIA Urbino",
+            "degree": "Diploma accademico di primo livello in Progettazione grafica e comunicazione visiva",
+            "fieldOfStudy": "",
+            "location": "Urbino",
+            "startDate": "2014-10",
+            "endDate": "2017-07",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "110/110",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Progettazione",
+            "description": "Identità visiva, tipografia, impaginazione, packaging, editoria"
+        },
+        {
+            "title": "Digitale",
+            "description": "Grafica social, newsletter, modelli di presentazione"
+        },
+        {
+            "title": "Programmi",
+            "description": "Adobe Illustrator, InDesign, Photoshop, Figma, After Effects"
+        },
+        {
+            "title": "Prestampa",
+            "description": "Gestione del colore, Pantone, fustelle, prove di stampa"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "portfolio",
+            "url": "https://example.com/giulia-bernardi"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Restyling Pastificio Valsusa",
+            "description": "Nuove confezioni per diciotto formati di pasta e campagna di lancio. Progetto grafico e assistenza in stampa.",
+            "links": [
+                {
+                    "url": "https://example.com/giulia-bernardi/valsusa",
+                    "label": "Portfolio"
+                }
+            ],
+            "startDate": "2021-01",
+            "endDate": "2021-10",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "Bilancio sociale Cooperativa Il Granaio",
+            "description": "Documento di 48 pagine in versione stampa e web, realizzato con una copywriter.",
+            "links": [
+                {
+                    "url": "https://example.com/giulia-bernardi/granaio",
+                    "label": "Portfolio"
+                }
+            ],
+            "startDate": "2024-03",
+            "endDate": "2024-06",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "Italiano",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Inglese",
+            "proficiency": "Proficient"
+        },
+        {
+            "name": "Francese",
+            "proficiency": "Basic"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Adobe Certified Professional in Graphic Design and Illustration Using Adobe Illustrator",
+            "issuer": "Adobe",
+            "date": "2021-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "projects": 2,
+        "education": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "volunteering": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "projects": "Progetti selezionati"
+    },
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

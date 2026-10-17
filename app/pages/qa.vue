@@ -113,7 +113,10 @@ useHead(() => {
                     </div>
 
                     <UPageCard variant="subtle">
-                        <UAccordion :items="category.items" />
+                        <UAccordion
+                            :items="category.items"
+                            :unmount-on-hide="false"
+                        />
                     </UPageCard>
                 </section>
             </div>

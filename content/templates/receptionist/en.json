@@ -1,0 +1,157 @@
+{
+    "version": "v1",
+    "firstName": "Danielle",
+    "lastName": "Ortiz",
+    "email": "danielle.ortiz@example.com",
+    "phone": "+1 555 014 2297",
+    "position": "Front Desk Coordinator",
+    "location": "Raleigh, NC",
+    "summary": "Front desk coordinator with eight years in outpatient clinics, hotels and professional offices. I run patient check-in for a twelve-provider practice, verify insurance before visits, train new front desk staff and keep the waiting room calm on the busiest days. Fluent in English and Spanish.",
+    "experiences": [
+        {
+            "company": "Oak Park Family Medicine",
+            "position": "Front Desk Coordinator",
+            "location": "Raleigh, NC",
+            "companyUrl": "",
+            "startDate": "2021-09",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Outpatient practice with twelve providers, about 180 patient visits and 300 calls a day.",
+            "achievements": [
+                {
+                    "text": "Lead a front desk team of four: build the weekly schedule, cover peak hours and handle escalated patient concerns"
+                },
+                {
+                    "text": "Call every new patient two days before the first visit to verify insurance, which cut same-day coverage problems at check-in"
+                },
+                {
+                    "text": "Schedule visits, recalls and referrals for twelve providers in Epic and keep the same-day sick slots filled"
+                },
+                {
+                    "text": "Wrote the front desk training guide now used for every new hire, covering check-in, copays and phone etiquette"
+                }
+            ]
+        },
+        {
+            "company": "The Magnolia Hotel Raleigh",
+            "position": "Guest Services Agent",
+            "location": "Raleigh, NC",
+            "companyUrl": "",
+            "startDate": "2018-05",
+            "endDate": "2021-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Checked in and out up to 150 guests a shift at a 180-room hotel using Opera PMS"
+                },
+                {
+                    "text": "Handled room changes, billing questions and complaints at the desk and on the phone"
+                },
+                {
+                    "text": "Balanced the shift cash drawer and processed deposits with no unresolved discrepancies"
+                }
+            ]
+        },
+        {
+            "company": "Barrett & Lowe Attorneys",
+            "position": "Receptionist (part-time)",
+            "location": "Durham, NC",
+            "companyUrl": "",
+            "startDate": "2016-08",
+            "endDate": "2018-04",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Greeted clients and routed calls for eight attorneys, taking accurate messages during court days"
+                },
+                {
+                    "text": "Logged incoming mail and courier deliveries and tracked documents waiting for signatures"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Wake Valley Community College",
+            "degree": "A.A.S. in Office Administration",
+            "fieldOfStudy": "",
+            "location": "Raleigh, NC",
+            "startDate": "2014-08",
+            "endDate": "2016-05",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Front desk",
+            "description": "Patient and guest check-in, multi-line phones, de-escalation, cash handling"
+        },
+        {
+            "title": "Scheduling and records",
+            "description": "Appointment scheduling, insurance verification, referrals, HIPAA privacy"
+        },
+        {
+            "title": "Software",
+            "description": "Epic, Opera PMS, Microsoft 365, RingCentral, typing 65 wpm"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "English",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Spanish",
+            "proficiency": "Fluent"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Certified Medical Administrative Assistant (CMAA)",
+            "issuer": "National Healthcareer Association",
+            "date": "2022-03",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "CPR and First Aid",
+            "issuer": "American Red Cross",
+            "date": "2025-02",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "languages": 3,
+        "education": 4,
+        "certificates": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

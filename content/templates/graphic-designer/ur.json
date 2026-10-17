@@ -1,0 +1,198 @@
+{
+    "version": "v1",
+    "firstName": "عائشہ",
+    "lastName": "ملک",
+    "email": "ayesha.malik@example.com",
+    "phone": "+92 321 0134472",
+    "position": "سینئر گرافک ڈیزائنر",
+    "location": "کراچی، پاکستان",
+    "summary": "خوراک، مالیاتی اداروں اور فلاحی تنظیموں کے لیے برانڈ آئیڈینٹٹی، پیکیجنگ اور پرنٹ میں آٹھ سال کا تجربہ۔ پروجیکٹ کو پہلے اسکیچ سے پریس پروف کی منظوری تک لے جاتی ہوں، اردو اور انگریزی دونوں میں ڈیزائن کرتی ہوں اور نئے ڈیزائنرز کی رہنمائی کرتی ہوں۔",
+    "experiences": [
+        {
+            "company": "کلفٹن برانڈ اسٹوڈیو",
+            "position": "سینئر گرافک ڈیزائنر",
+            "location": "کراچی",
+            "companyUrl": "",
+            "startDate": "2022-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "آزاد برانڈ اسٹوڈیو، 12 افراد، خوراک، ریٹیل اور مالیاتی کلائنٹس۔",
+            "achievements": [
+                {
+                    "text": "ایک مائیکرو فنانس ادارے کی نئی شناخت کی قیادت کی: لوگو، اردو اور انگریزی فونٹس، رنگ اور 14 برانچوں کے سائن بورڈ"
+                },
+                {
+                    "text": "مصالحوں کی 22 اقسام کی پیکیجنگ ڈائی کٹ کے مطابق ڈیزائن کی، دوبارہ پرنٹنگ کے بغیر منظور ہوئی"
+                },
+                {
+                    "text": "کلائنٹس کو تصورات براہ راست پیش کرتی ہوں، زیادہ تر پروجیکٹس دو راؤنڈ میں مکمل ہوتے ہیں"
+                },
+                {
+                    "text": "دو جونیئر ڈیزائنرز کی ہفتہ وار تنقیدی نشستوں اور فائل ریویو سے رہنمائی کرتی ہوں"
+                }
+            ]
+        },
+        {
+            "company": "مہران فوڈز",
+            "position": "گرافک ڈیزائنر، مارکیٹنگ",
+            "location": "کراچی",
+            "companyUrl": "",
+            "startDate": "2019-03",
+            "endDate": "2022-03",
+            "isPresent": false,
+            "description": "ملک بھر میں تقسیم والی فوڈ کمپنی کی تین افراد پر مشتمل اندرونی ڈیزائن ٹیم۔",
+            "achievements": [
+                {
+                    "text": "رمضان اور عید مہمات کو اخباری اشتہار، دکانوں کے پوسٹر اور سوشل میڈیا کے لیے ڈھالا"
+                },
+                {
+                    "text": "برانڈ گائیڈ لائنز کو ڈیلرز کے لیے 30 صفحات کے عملی کتابچے میں بدلا"
+                },
+                {
+                    "text": "Figma ٹیمپلیٹس بنائے جو مارکیٹنگ ٹیم ڈیزائن کی مدد کے بغیر استعمال کرتی ہے"
+                }
+            ]
+        },
+        {
+            "company": "ریگل پرنٹنگ پریس",
+            "position": "جونیئر گرافک ڈیزائنر",
+            "location": "لاہور",
+            "companyUrl": "",
+            "startDate": "2017-08",
+            "endDate": "2019-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "ہر مہینے تقریباً 40 کاموں کی پرنٹ فائلیں بلیڈ اور کلر پروفائل کے ساتھ تیار کیں"
+                },
+                {
+                    "text": "مقامی دکانوں اور ریستورانوں کے مینیو، بروشر اور سائن بورڈ ڈیزائن کیے"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "نیشنل کالج آف آرٹس",
+            "degree": "بی ایف اے، گرافک ڈیزائن",
+            "fieldOfStudy": "",
+            "location": "لاہور",
+            "startDate": "2013-09",
+            "endDate": "2017-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "ڈیزائن",
+            "description": "برانڈ آئیڈینٹٹی، ٹائپوگرافی، لے آؤٹ، پیکیجنگ، اشاعتی ڈیزائن"
+        },
+        {
+            "title": "دو زبانیں",
+            "description": "اردو اور انگریزی لے آؤٹ، نستعلیق اور نسخ فونٹس"
+        },
+        {
+            "title": "سافٹ ویئر",
+            "description": "Adobe Illustrator، InDesign، Photoshop، Figma، CorelDRAW"
+        },
+        {
+            "title": "پری پریس",
+            "description": "کلر مینجمنٹ، Pantone، ڈائی کٹ، پریس پروف"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "portfolio",
+            "url": "https://example.com/ayesha-malik"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [
+        {
+            "title": "مہران فوڈز پیکیجنگ ری ڈیزائن",
+            "description": "مصالحوں اور اچار کی نئی پیکیجنگ اور دکانوں کا مواد۔ ڈیزائن اور پرنٹ کی نگرانی۔",
+            "links": [
+                {
+                    "url": "https://example.com/ayesha-malik/mehran",
+                    "label": "پورٹ فولیو"
+                }
+            ],
+            "startDate": "2021-01",
+            "endDate": "2021-10",
+            "isPresent": false,
+            "achievements": []
+        },
+        {
+            "title": "روشنی ویلفیئر ٹرسٹ سالانہ رپورٹ",
+            "description": "اردو اور انگریزی میں 48 صفحات کی رپورٹ، پرنٹ اور ویب کے لیے، رضاکارانہ طور پر۔",
+            "links": [
+                {
+                    "url": "https://example.com/ayesha-malik/roshni",
+                    "label": "پورٹ فولیو"
+                }
+            ],
+            "startDate": "2024-03",
+            "endDate": "2024-06",
+            "isPresent": false,
+            "achievements": []
+        }
+    ],
+    "languages": [
+        {
+            "name": "اردو",
+            "proficiency": "Native"
+        },
+        {
+            "name": "انگریزی",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "پنجابی",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Adobe Certified Professional in Graphic Design and Illustration Using Adobe Illustrator",
+            "issuer": "Adobe",
+            "date": "2021-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "projects": 2,
+        "education": 3,
+        "skills": 4,
+        "certificates": 5,
+        "languages": 6,
+        "volunteering": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {
+        "projects": "منتخب کام"
+    },
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

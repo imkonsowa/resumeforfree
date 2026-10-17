@@ -1,0 +1,173 @@
+{
+    "version": "v1",
+    "firstName": "Inès",
+    "lastName": "Lefebvre",
+    "email": "ines.lefebvre@example.com",
+    "phone": "+33 6 12 34 56 78",
+    "position": "Conseillère clientèle",
+    "location": "Lille",
+    "summary": "Conseillère clientèle avec six ans d'expérience au téléphone, par chat et en magasin, dont trois en centre de contact pour un opérateur télécom. Résout la plupart des demandes dès le premier contact et garde son calme face aux clients mécontents. Anglais B2, néerlandais courant.",
+    "experiences": [
+        {
+            "company": "Maison Verdier",
+            "position": "Conseillère service client, vente en ligne",
+            "location": "Roubaix (hybride)",
+            "companyUrl": "",
+            "startDate": "2023-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Service client par téléphone, chat et mail pour un site de linge de maison.",
+            "achievements": [
+                {
+                    "text": "Traitement d'environ 50 contacts par jour sur les commandes, retards de livraison, retours et remboursements"
+                },
+                {
+                    "text": "Prise en charge des clients belges néerlandophones et traduction des réponses types principales"
+                },
+                {
+                    "text": "Remontée des questions récurrentes sur les tailles, à l'origine de guides ajoutés sur quatre fiches produit"
+                },
+                {
+                    "text": "Tutrice de neuf nouveaux conseillers pendant leurs deux premières semaines"
+                }
+            ]
+        },
+        {
+            "company": "Opale Télécom",
+            "position": "Téléconseillère, service abonnés",
+            "location": "Lille",
+            "companyUrl": "",
+            "startDate": "2020-09",
+            "endDate": "2023-03",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "60 à 70 appels entrants par jour sur la facturation, les pannes et les changements d'offre, 80 % de résolution au premier appel"
+                },
+                {
+                    "text": "Note moyenne supérieure à 95 % aux écoutes qualité pendant six trimestres consécutifs"
+                },
+                {
+                    "text": "Rattachée à la cellule fidélisation pendant un an pour traiter les demandes de résiliation"
+                }
+            ]
+        },
+        {
+            "company": "Les Halles du Nord",
+            "position": "Hôtesse de caisse et d'accueil",
+            "location": "Villeneuve d'Ascq",
+            "companyUrl": "",
+            "startDate": "2018-07",
+            "endDate": "2020-08",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Encaissement de plus de 150 clients par jour, y compris le samedi et pendant les fêtes"
+                },
+                {
+                    "text": "Gestion des échanges, remboursements et cartes de fidélité à l'accueil"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Lycée du Vieux Lille",
+            "degree": "BTS Négociation et digitalisation de la relation client (NDRC)",
+            "fieldOfStudy": "",
+            "location": "Lille",
+            "startDate": "2018-09",
+            "endDate": "2020-06",
+            "isPresent": false,
+            "description": "En alternance avec Les Halles du Nord.",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Association Coup de Pouce Wazemmes",
+            "organizationUrl": "",
+            "position": "Bénévole à l'accueil",
+            "location": "Lille",
+            "startDate": "2021-10",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Accueil et orientation des familles deux samedis par mois.",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "Canaux",
+            "description": "Appels entrants, chat, mail, accueil physique"
+        },
+        {
+            "title": "Outils",
+            "description": "Salesforce Service Cloud, Zendesk, Odigo, Shopify, Pack Office"
+        },
+        {
+            "title": "Autres",
+            "description": "Frappe rapide, gestion des réclamations, fidélisation, RGPD"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Français",
+            "proficiency": "Native"
+        },
+        {
+            "name": "Néerlandais",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Anglais (B2)",
+            "proficiency": "Proficient"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Gérer les situations difficiles au téléphone",
+            "issuer": "Formation interne Opale Télécom",
+            "date": "2021-11",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Certificat Voltaire, niveau Professionnel",
+            "issuer": "Projet Voltaire",
+            "date": "2022-06",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "education": 3,
+        "languages": 4,
+        "certificates": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

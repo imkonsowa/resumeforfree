@@ -1,0 +1,177 @@
+{
+    "version": "v1",
+    "firstName": "Elif",
+    "lastName": "Aydın",
+    "email": "elif.aydin@example.com",
+    "phone": "+90 532 418 07 26",
+    "position": "Kıdemli Pazarlama Müdürü",
+    "location": "İstanbul",
+    "summary": "E-ticaret ve B2B yazılımda on yıllık deneyime sahip pazarlama yöneticisi. Kanal karmasını ve bütçeyi belirliyor, kampanyaları baştan sona yürüten küçük ekipler kuruyor ve pazarlamanın ciroya katkısını her çeyrek yönetime sunuyorum.",
+    "experiences": [
+        {
+            "company": "Lale Ev Tekstili A.Ş.",
+            "position": "Kıdemli Pazarlama Müdürü",
+            "location": "İstanbul",
+            "companyUrl": "",
+            "startDate": "2021-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "Yurt içi ve yurt dışına satış yapan ev tekstili e-ticaret markası.",
+            "achievements": [
+                {
+                    "text": "Yıllık pazarlama planını ve 45 milyon TL'lik bütçeyi yönetiyorum: sosyal medya reklamları, SEM, CRM, influencer ve açık hava"
+                },
+                {
+                    "text": "Basılı reklam bütçesinin üçte birini sosyal medya ve CRM'e kaydırdım; toplam bütçe artmadan online satışlar iki yılda yüzde 36 büyüdü"
+                },
+                {
+                    "text": "25 mikro influencer ile indirim kodu bazlı bir iş birliği programı kurdum"
+                },
+                {
+                    "text": "Performans, içerik, CRM ve tasarımdan oluşan beş kişilik ekibi kurdum"
+                }
+            ]
+        },
+        {
+            "company": "Moda Yazılım A.Ş.",
+            "position": "Pazarlama Müdürü, Lead Üretimi",
+            "location": "İstanbul",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2021-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "KOBİ ürününün lead üretimini yıllık 12 milyon TL bütçeyle SEM, LinkedIn, webinar ve fuarlar üzerinden yönettim"
+                },
+                {
+                    "text": "Ürün ekibiyle başlattığım aylık webinar serisi satışın kabul ettiği lead'lerin en büyük kaynağı oldu"
+                },
+                {
+                    "text": "Satış direktörlüğüyle lead puanlama modelini belirledik, geri dönen lead oranı yaklaşık yarıya indi"
+                }
+            ]
+        },
+        {
+            "company": "Kordon Dijital Ajans",
+            "position": "Dijital Pazarlama Uzmanı",
+            "location": "İzmir",
+            "companyUrl": "",
+            "startDate": "2015-01",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "Sekiz yerel müşteri için Google Ads ve Facebook kampanyalarını planlayıp yönettim"
+                },
+                {
+                    "text": "Dönüşüm takibini ve kanal bazında lead başına maliyet gösteren aylık raporları kurdum"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "Marmara Üniversitesi",
+            "degree": "İşletme Lisans",
+            "fieldOfStudy": "",
+            "location": "İstanbul",
+            "startDate": "2010-09",
+            "endDate": "2014-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "Kanallar",
+            "description": "Sosyal medya reklamları, SEM, e-posta, SEO, influencer"
+        },
+        {
+            "title": "Strateji",
+            "description": "Pazara giriş, konumlandırma, bütçe, müşteri bağlılığı"
+        },
+        {
+            "title": "Araçlar",
+            "description": "HubSpot, Insider, Google Ads, Meta Business Suite, Semrush"
+        },
+        {
+            "title": "Analiz",
+            "description": "GA4, Looker Studio, A/B testi, atıflandırma, Excel"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Türkçe",
+            "proficiency": "Native"
+        },
+        {
+            "name": "İngilizce",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "Almanca",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Google Ads Search Certification",
+            "issuer": "Google",
+            "date": "2025-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Google Analytics Certification",
+            "issuer": "Google",
+            "date": "2024-09",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Inbound Marketing Certification",
+            "issuer": "HubSpot Academy",
+            "date": "2023-05",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "projects": 3,
+        "volunteering": 4,
+        "skills": 5,
+        "certificates": 6,
+        "languages": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

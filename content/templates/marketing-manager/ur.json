@@ -1,0 +1,180 @@
+{
+    "version": "v1",
+    "firstName": "سارہ",
+    "lastName": "ملک",
+    "email": "sara.malik@example.com",
+    "phone": "+92 321 4560148",
+    "position": "سینئر مارکیٹنگ مینیجر",
+    "location": "لاہور، پاکستان",
+    "summary": "ای کامرس اور FMCG میں دس سال کا تجربہ رکھنے والی مارکیٹنگ مینیجر۔ چینلز اور بجٹ طے کرتی ہوں، اردو اور انگریزی مہمات چلانے والی چھوٹی ٹیمیں بناتی ہوں، اور ہر سہ ماہی مینجمنٹ کو آمدنی پر اثر کی رپورٹ دیتی ہوں۔",
+    "experiences": [
+        {
+            "company": "راوی فوڈز لمیٹڈ",
+            "position": "سینئر مارکیٹنگ مینیجر",
+            "location": "لاہور",
+            "companyUrl": "",
+            "startDate": "2021-03",
+            "endDate": "",
+            "isPresent": true,
+            "description": "مصالحے اور اسنیکس بنانے والی کمپنی، ملک بھر میں 40,000 دکانوں تک رسائی۔",
+            "achievements": [
+                {
+                    "text": "سالانہ مارکیٹنگ پلان اور 18 کروڑ روپے کا بجٹ سنبھالتی ہوں، ٹی وی، ڈیجیٹل اور دکانوں پر تشہیر سمیت"
+                },
+                {
+                    "text": "ٹی وی بجٹ کا ایک چوتھائی یوٹیوب، ٹک ٹاک اور فیس بک پر منتقل کیا، اسی خرچ میں آن لائن اسٹور کی سیلز دو سال میں 38% بڑھیں"
+                },
+                {
+                    "text": "تین سال رمضان اور عید کی مہمات چلائیں، جن میں افطار کے اوقات کے مطابق اشتہارات اور ریٹیلرز کے لیے خصوصی ڈسپلے شامل تھے"
+                },
+                {
+                    "text": "پرفارمنس، کنٹینٹ، CRM اور ڈیزائن کے لیے پانچ افراد کی ٹیم بنائی اور تین کو خود بھرتی کیا"
+                }
+            ]
+        },
+        {
+            "company": "شاپ سٹی ڈاٹ پی کے",
+            "position": "مارکیٹنگ مینیجر، فیشن کیٹیگری",
+            "location": "کراچی",
+            "companyUrl": "",
+            "startDate": "2017-06",
+            "endDate": "2021-02",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "فیشن کیٹیگری کی مارکیٹنگ سنبھالی، سالانہ بجٹ 6 کروڑ روپے، گوگل، میٹا، ٹک ٹاک اور انفلوئنسرز پر"
+                },
+                {
+                    "text": "11.11 سیل کی منصوبہ بندی سیلرز ٹیم کے ساتھ کی اور ڈیلز، بینرز اور پش نوٹیفکیشنز ایک کیلنڈر پر رکھے"
+                },
+                {
+                    "text": "ہر انفلوئنسر کا الگ کوپن کوڈ متعارف کرایا جس سے ہر کریئیٹر کی سیلز الگ نظر آنے لگیں"
+                },
+                {
+                    "text": "دو اسپیشلسٹس اور ایک بیرونی میڈیا ایجنسی کو فی آرڈر لاگت کے ہدف کے ساتھ سنبھالا"
+                }
+            ]
+        },
+        {
+            "company": "لاہور ڈیجیٹل ورکس",
+            "position": "ڈیجیٹل مارکیٹنگ اسپیشلسٹ",
+            "location": "لاہور",
+            "companyUrl": "",
+            "startDate": "2015-01",
+            "endDate": "2017-05",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "رئیل اسٹیٹ، ریسٹورنٹس اور تعلیمی اداروں کے آٹھ کلائنٹس کے لیے Google Ads اور فیس بک مہمات چلائیں"
+                },
+                {
+                    "text": "کنورژن ٹریکنگ لگائی اور ماہانہ رپورٹس بنائیں جن میں ہر چینل کی فی لیڈ لاگت نظر آتی تھی"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "یونیورسٹی آف دی پنجاب",
+            "degree": "BBA (آنرز)، مارکیٹنگ",
+            "fieldOfStudy": "",
+            "location": "لاہور",
+            "startDate": "2010-09",
+            "endDate": "2014-06",
+            "isPresent": false,
+            "description": "",
+            "graduationScore": "",
+            "achievements": []
+        }
+    ],
+    "volunteering": [],
+    "skills": [
+        {
+            "title": "چینلز",
+            "description": "فیس بک، انسٹاگرام، ٹک ٹاک، یوٹیوب، گوگل سرچ، واٹس ایپ، ای میل"
+        },
+        {
+            "title": "حکمت عملی",
+            "description": "برانڈ پوزیشننگ، میڈیا پلان، بجٹ، پروڈکٹ لانچ، موسمی مہمات"
+        },
+        {
+            "title": "ٹولز",
+            "description": "HubSpot، Google Ads، Meta Ads Manager، TikTok Ads Manager، Canva"
+        },
+        {
+            "title": "تجزیہ",
+            "description": "GA4، Looker Studio، A/B ٹیسٹنگ، اٹریبیوشن، Excel"
+        }
+    ],
+    "socialLinks": [
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/example"
+        }
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "اردو",
+            "proficiency": "Native"
+        },
+        {
+            "name": "انگریزی",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "پنجابی",
+            "proficiency": "Native"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Google Ads Search Certification",
+            "issuer": "Google",
+            "date": "2025-02",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Meta Certified Digital Marketing Associate",
+            "issuer": "Meta",
+            "date": "2024-04",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "Google Analytics Certification",
+            "issuer": "Google",
+            "date": "2023-09",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "education": 2,
+        "projects": 3,
+        "volunteering": 4,
+        "skills": 5,
+        "certificates": 6,
+        "languages": 7,
+        "internships": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "right",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

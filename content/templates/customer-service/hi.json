@@ -1,0 +1,173 @@
+{
+    "version": "v1",
+    "firstName": "नेहा",
+    "lastName": "वर्मा",
+    "email": "neha.verma@example.com",
+    "phone": "+91 98100 45672",
+    "position": "सीनियर कस्टमर सर्विस एग्ज़ीक्यूटिव",
+    "location": "नोएडा, उत्तर प्रदेश",
+    "summary": "छह साल का कस्टमर सर्विस अनुभव, पहले ब्रॉडबैंड कंपनी के डोमेस्टिक वॉइस प्रोसेस में और अब अमेरिकी ग्राहकों के इंटरनेशनल प्रोसेस में। ज़्यादातर समस्याएँ पहली कॉल पर हल करती हूँ और नाराज़ ग्राहक के साथ भी शांत रहती हूँ। नोटिस पीरियड 30 दिन।",
+    "experiences": [
+        {
+            "company": "सारथी कनेक्ट सॉल्यूशंस",
+            "position": "सीनियर कस्टमर सर्विस एग्ज़ीक्यूटिव, इंटरनेशनल वॉइस",
+            "location": "नोएडा",
+            "companyUrl": "",
+            "startDate": "2023-02",
+            "endDate": "",
+            "isPresent": true,
+            "description": "अमेरिकी टेलीकॉम क्लाइंट, इनबाउंड कॉल और चैट, यूएस शिफ़्ट।",
+            "achievements": [
+                {
+                    "text": "हर शिफ़्ट में लगभग 55 कॉल बिल, डिवाइस और प्लान के सवालों पर, अंग्रेज़ी में"
+                },
+                {
+                    "text": "क्लाइंट के मासिक क्वालिटी ऑडिट में लगातार छह तिमाही 95 प्रतिशत से ज़्यादा स्कोर"
+                },
+                {
+                    "text": "टीम लीडर की ग़ैरमौजूदगी में एस्केलेशन कॉल सँभालीं"
+                },
+                {
+                    "text": "13 नए एजेंट के पहले दो हफ़्तों में बडी के तौर पर साथ रही"
+                }
+            ]
+        },
+        {
+            "company": "उजाला ब्रॉडबैंड प्राइवेट लिमिटेड",
+            "position": "कस्टमर केयर एग्ज़ीक्यूटिव, डोमेस्टिक वॉइस",
+            "location": "गुरुग्राम",
+            "companyUrl": "",
+            "startDate": "2020-08",
+            "endDate": "2023-01",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "हर शिफ़्ट में 70 से 80 कॉल बिलिंग, कनेक्शन और प्लान बदलने पर, फ़र्स्ट कॉल रिज़ॉल्यूशन 80 प्रतिशत"
+                },
+                {
+                    "text": "एक साल रिटेंशन टीम में कनेक्शन बंद करने के अनुरोधों पर काम किया"
+                },
+                {
+                    "text": "हिंदी और अंग्रेज़ी दोनों कतारों में ज़रूरत के हिसाब से कॉल लीं"
+                }
+            ]
+        },
+        {
+            "company": "सिटी स्क्वेयर रिटेल",
+            "position": "कैशियर और कस्टमर सर्विस डेस्क",
+            "location": "नोएडा",
+            "companyUrl": "",
+            "startDate": "2018-07",
+            "endDate": "2020-07",
+            "isPresent": false,
+            "description": "",
+            "achievements": [
+                {
+                    "text": "हर शिफ़्ट में 150 से ज़्यादा ग्राहक, दिवाली और सेल की भीड़ भी शामिल"
+                },
+                {
+                    "text": "ग्राहकों की तारीफ़ पर दो बार एम्प्लॉयी ऑफ़ द मंथ"
+                }
+            ]
+        }
+    ],
+    "internships": [],
+    "education": [
+        {
+            "institution": "दिल्ली विश्वविद्यालय (स्कूल ऑफ़ ओपन लर्निंग)",
+            "degree": "बीकॉम",
+            "fieldOfStudy": "",
+            "location": "दिल्ली",
+            "startDate": "2017-07",
+            "endDate": "2020-06",
+            "isPresent": false,
+            "description": "नौकरी के साथ पत्राचार से पढ़ाई।",
+            "graduationScore": "62%",
+            "achievements": []
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "सेक्टर 62 रेज़िडेंट्स वेलफ़ेयर एसोसिएशन",
+            "organizationUrl": "",
+            "position": "स्वयंसेवक",
+            "location": "नोएडा",
+            "startDate": "2021-04",
+            "endDate": "",
+            "isPresent": true,
+            "description": "बुज़ुर्ग निवासियों को ऑनलाइन बिल भुगतान और डिजिटल सेवाएँ सिखाना।",
+            "achievements": []
+        }
+    ],
+    "skills": [
+        {
+            "title": "चैनल",
+            "description": "इनबाउंड वॉइस, चैट, ईमेल"
+        },
+        {
+            "title": "सिस्टम",
+            "description": "Salesforce Service Cloud, Genesys, Freshdesk, MS Excel"
+        },
+        {
+            "title": "अन्य",
+            "description": "टाइपिंग 45 शब्द प्रति मिनट, शिकायत निवारण, रिटेंशन, रोटेशनल शिफ़्ट"
+        }
+    ],
+    "socialLinks": [],
+    "projects": [],
+    "languages": [
+        {
+            "name": "हिंदी",
+            "proficiency": "Native"
+        },
+        {
+            "name": "अंग्रेज़ी",
+            "proficiency": "Fluent"
+        },
+        {
+            "name": "पंजाबी",
+            "proficiency": "Conversational"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "कस्टमर हैंडलिंग और एस्केलेशन मैनेजमेंट",
+            "issuer": "उजाला ब्रॉडबैंड, आंतरिक ट्रेनिंग",
+            "date": "2021-10",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "बिज़नेस इंग्लिश कम्युनिकेशन",
+            "issuer": "नोएडा स्किल सेंटर",
+            "date": "2022-08",
+            "url": "",
+            "description": ""
+        }
+    ],
+    "publications": [],
+    "technicalSkills": "",
+    "sectionOrder": {
+        "summary": 0,
+        "experience": 1,
+        "skills": 2,
+        "education": 3,
+        "languages": 4,
+        "certificates": 5,
+        "volunteering": 6,
+        "internships": 7,
+        "projects": 8,
+        "socialLinks": 9,
+        "publications": 10
+    },
+    "sectionHeaders": {},
+    "sectionPlacement": {
+        "skills": "left",
+        "projects": "left",
+        "volunteering": "left",
+        "languages": "right",
+        "certificates": "right",
+        "publications": "left"
+    }
+}

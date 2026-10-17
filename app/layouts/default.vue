@@ -19,6 +19,7 @@ const handleLogout = async () => {
 
 const navItems = computed<NavigationMenuItem[]>(() => [
     { label: t('navigation.templates'), to: localePath('/templates') },
+    { label: t('navigation.guides'), to: localePath('/guides') },
     { label: t('navigation.resumes', 'Your resumes'), to: localePath('/resumes') },
     { label: t('navigation.builder'), to: localePath('/builder') },
 ]);
@@ -35,6 +36,7 @@ const footerColumns = computed<FooterColumn[]>(() => [
     {
         label: t('footer.resourcesHeading'),
         children: [
+            { label: t('navigation.guides'), to: localePath('/guides') },
             { label: t('navigation.qa'), to: localePath('/qa') },
             { label: 'GitHub', to: REPO_URL, target: '_blank' },
         ],
