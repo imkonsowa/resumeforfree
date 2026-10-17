@@ -39,6 +39,12 @@ const toSummary = (slug: string, locale: TemplateLocale, preset: TemplatePreset,
     return { slug, locale, ...presetMeta, ...page };
 };
 
+export const loadTemplateMarkdownBody = async (slug: string, locale: TemplateLocale): Promise<string> => {
+    const raw = await storage().getItem(`${slug}:${locale}.md`);
+    if (raw === null || raw === undefined) throw notFound();
+    return String(raw).replace(/^---\n[\s\S]*?\n---\n/, '').trim();
+};
+
 export const loadTemplateSummary = async (slug: string, locale: TemplateLocale): Promise<TemplateSummary> => {
     const [preset, { page }] = await Promise.all([loadPreset(slug), loadMarkdown(slug, locale)]);
     return toSummary(slug, locale, preset, page);
