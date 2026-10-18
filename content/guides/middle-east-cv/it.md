@@ -81,7 +81,7 @@ Indicate il titolo, la disciplina, l'università, il paese e l'anno. I seleziona
 
 ### Legalizzazione ed equipollenza
 
-La maggior parte dei paesi del Golfo chiede la legalizzazione del titolo di studio prima di rilasciare un visto o un permesso di lavoro. Il percorso passa di solito per le autorità del paese che ha rilasciato il titolo e poi per l'ambasciata o il ministero degli esteri del paese di destinazione. Secondo il paese può bastare l'apostille oppure servire la legalizzazione consolare. Per alcuni ruoli, soprattutto in sanità, istruzione e settore pubblico, si chiede anche un'equipollenza del ministero dell'istruzione locale. I passaggi cambiano per paese e professione e vengono aggiornati: verificate la procedura attuale con l'azienda o con l'ambasciata competente.
+La maggior parte dei paesi del Golfo chiede la legalizzazione del titolo di studio prima di rilasciare un visto o un permesso di lavoro. Il percorso passa di solito per le autorità del paese che ha rilasciato il titolo e poi per l'ambasciata o il ministero degli esteri del paese di destinazione. L'Italia aderisce alla Convenzione dell'Aja sull'apostille, come l'Arabia Saudita (da dicembre 2022), il Bahrein e l'Oman: per questi tre paesi l'apostille può sostituire il passaggio in ambasciata. Emirati, Qatar, Kuwait ed Egitto non aderiscono e richiedono la legalizzazione consolare. Per alcuni ruoli, soprattutto in sanità, istruzione e settore pubblico, si chiede anche un'equipollenza del ministero dell'istruzione locale. I passaggi cambiano per paese e professione e vengono aggiornati: verificate la procedura attuale con l'azienda o con l'ambasciata competente.
 
 Se è già fatto, basta una riga sotto il titolo: "Degree attested for UAE employment". Il datore di lavoro sa così che l'assunzione non si bloccherà per i documenti. Altrimenti non scrivete nulla, ma iniziate presto se il progetto è serio.
 
@@ -93,7 +93,7 @@ Se avete già una licenza del Golfo o avete superato l'esame, mettetela in alto.
 
 ## Saudizzazione ed emiratizzazione
 
-Tutti i paesi del Golfo hanno politiche per aumentare l'occupazione dei propri cittadini nel settore privato: la saudizzazione (Nitaqat) in Arabia Saudita, l'emiratizzazione negli Emirati e programmi simili in Qatar, Kuwait, Bahrein e Oman. In Arabia Saudita alcune professioni sono riservate ai cittadini, e le aziende lavorano con quote che dipendono dal settore e dalle dimensioni.
+Tutti i paesi del Golfo hanno politiche per aumentare l'occupazione dei propri cittadini nel settore privato: la saudizzazione (Nitaqat) in Arabia Saudita, l'emiratizzazione negli Emirati e programmi simili in Qatar, Kuwait, Bahrein e Oman. In Arabia Saudita alcune professioni sono riservate ai cittadini, e le aziende devono rispettare quote di saudizzazione che dipendono da attività e dimensioni e vengono riviste periodicamente.
 
 In pratica alcuni annunci sono aperti solo ai cittadini. Tecnica, ingegneria, sanità, ospitalità e lusso continuano però ad assumere molto a livello internazionale. Leggete l'annuncio con attenzione.
 

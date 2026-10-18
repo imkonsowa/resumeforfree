@@ -79,7 +79,7 @@ Indiquez le diplôme, la spécialité, l'établissement, le pays et l'année. Le
 
 ### Légalisation et équivalence
 
-La plupart des pays du Golfe demandent la légalisation du diplôme avant de délivrer un visa ou un permis de travail. La chaîne passe en général par les autorités du pays qui a délivré le diplôme, puis par l'ambassade ou le ministère des affaires étrangères du pays d'accueil. Certains pays demandent aussi une équivalence auprès de leur ministère de l'éducation pour certains postes, surtout dans la santé, l'enseignement et le secteur public. Les étapes varient selon le pays et la profession et changent de temps en temps : vérifiez la procédure actuelle auprès de l'employeur ou de l'ambassade concernée.
+La plupart des pays du Golfe demandent la légalisation du diplôme avant de délivrer un visa ou un permis de travail. La chaîne passe en général par les autorités du pays qui a délivré le diplôme, puis par l'ambassade ou le ministère des affaires étrangères du pays d'accueil. Certains pays demandent aussi une équivalence auprès de leur ministère de l'éducation pour certains postes, surtout dans la santé, l'enseignement et le secteur public. La France est partie à la Convention Apostille de La Haye, tout comme l'Arabie saoudite (depuis décembre 2022), Bahreïn et Oman : pour ces trois pays, l'apostille peut remplacer l'étape de l'ambassade. Les Émirats, le Qatar, le Koweït et l'Égypte n'y sont pas parties et passent par la légalisation consulaire. Les étapes varient selon le pays et la profession et changent de temps en temps : vérifiez la procédure actuelle auprès de l'employeur ou de l'ambassade concernée.
 
 Si c'est déjà fait, une courte ligne sous le diplôme suffit : "Degree attested for UAE employment". L'employeur sait alors que l'embauche ne sera pas retardée par les papiers. Sinon, n'en parlez pas, mais commencez tôt si votre projet est sérieux.
 
@@ -91,7 +91,7 @@ Si vous avez déjà une licence du Golfe ou réussi l'examen, placez-la en haut 
 
 ## Saoudisation et émiratisation
 
-Tous les pays du Golfe mènent des politiques pour augmenter l'emploi de leurs citoyens dans le secteur privé : la saoudisation (Nitaqat) en Arabie saoudite, l'émiratisation aux Émirats, et des programmes semblables au Qatar, au Koweït, à Bahreïn et à Oman. En Arabie saoudite, certains postes sont réservés aux citoyens, et les entreprises respectent des quotas qui dépendent de leur secteur et de leur taille.
+Tous les pays du Golfe mènent des politiques pour augmenter l'emploi de leurs citoyens dans le secteur privé : la saoudisation (Nitaqat) en Arabie saoudite, l'émiratisation aux Émirats, et des programmes semblables au Qatar, au Koweït, à Bahreïn et à Oman. En Arabie saoudite, certains postes sont réservés aux citoyens, et les entreprises doivent atteindre des taux de saoudisation qui dépendent de leur activité et de leur taille et sont révisés régulièrement.
 
 Concrètement, certaines offres ne sont ouvertes qu'aux ressortissants. Les métiers techniques, l'ingénierie, la santé et l'hôtellerie recrutent toutefois encore beaucoup à l'international. Lisez l'annonce attentivement.
 
