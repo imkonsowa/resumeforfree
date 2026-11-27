@@ -24,6 +24,9 @@ logs
 .env.*
 !.env.example
 
+# Resumes exported by the MCP server (personal data)
+/output/
+
 *.sqlite
 .wrangler
 .claude
