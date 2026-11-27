@@ -1,0 +1,20 @@
+{
+  "name": "resumeforfree-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "license": "AGPL-3.0-or-later",
+  "type": "module",
+  "description": "MCP server that controls a local Resume For Free instance",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node test/smoke.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@myriaddreamin/typst-ts-node-compiler": "0.7.0",
+    "@resvg/resvg-js": "^2.6.2",
+    "jiti": "^2.7.0",
+    "sharp": "^0.35.5",
+    "zod": "^4.6.7"
+  }
+}
